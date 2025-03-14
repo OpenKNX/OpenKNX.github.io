@@ -21,24 +21,26 @@ jobs:
 
       - name: Fetch release details
         run: |
+          echo '{}' > releases.json
           while read repo url; do
             echo "Fetch release details from '$url' for repo '$repo'"
             response=$(curl -s "$url")
             if echo "$response" | jq empty 2>/dev/null; then
-              echo "$response" | jq -r --arg repo "$repo" '.[] | "\($repo) \(.html_url) \(.tag_name) \(.name)"' >> releases.txt
+              releases=$(echo "$response" | jq -r --arg repo "$repo" '[.[] | {isPrerelease: .prerelease, tag: .tag_name, name: .name, archivUrl: .html_url}]')
+              repo_url=$(curl -s "https://api.github.com/repos/OpenKNX/$repo" | jq -r '.html_url')
+              is_archived=$(curl -s "https://api.github.com/repos/OpenKNX/$repo" | jq -r '.archived')
+              jq --arg repo "$repo" --arg repo_url "$repo_url" --argjson releases "$releases" --argjson is_archived "$is_archived" \
+                '.[$repo] = {repo_url: $repo_url, isDeprecated: $is_archived, releases: $releases}' releases.json > tmp.json && mv tmp.json releases.json
             else
               echo "Warning: No valid JSON response from $url"
             fi
           done < releases_urls.txt
-          cat releases.txt
-        continue-on-error: true
+          cat releases.json
 
       - name: Update HTML
         run: |
           echo '<ul>' > releases.html
-          while read repo url tag name; do
-            echo "<li>$repo: <a href=\"$url\">$name ($tag)</a></li>" >> releases.html
-          done < releases.txt
+          jq -r 'to_entries | .[] | "<li><strong>\(.key)</strong><ul>" + (.value.releases[] | "<li><a href=\"\(.archivUrl)\">\(.name) (\(.tag))</a></li>") + "</ul></li>"' releases.json >> releases.html
           echo '</ul>' >> releases.html
           mv releases.html releases_list.html
 
@@ -46,6 +48,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add releases_list.html
-          git commit -m 'Update releases list'
+          git add releases_list.html releases.json
+          git commit -m 'Update releases list and generate JSON'
           git push

@@ -43,6 +43,8 @@ jobs:
             fi
           done < releases_urls.txt
           cat releases.json
+        # Q&D: just ignore parsing fails. TODO: clean implementation after working demo
+        continue-on-error: true
 
       - name: Update HTML
         run: |

@@ -21,6 +21,7 @@ jobs:
       - name: Fetch release details
         run: |
           while read url; do
+            echo "Fetch release details from '$url'"
             response=$(curl -s "$url")
             if echo "$response" | jq empty 2>/dev/null; then
               echo "$response" | jq -r '.[] | "\(.html_url) \(.tag_name) \(.name)"' >> releases.txt

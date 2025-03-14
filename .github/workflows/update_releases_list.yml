@@ -16,7 +16,7 @@ jobs:
 
       - name: Fetch releases
         run: |
-          curl -s "https://api.github.com/orgs/OpenKNX/repos?per_page=100&type=public" | jq -r '.[] | "\(.name) \(.releases_url)"' | sed 's/{\/id}//' > releases_urls.txt
+          curl -s "https://api.github.com/orgs/OpenKNX/repos?per_page=100&type=public" | jq -r '.[] | "\"\(.name)\" \(.releases_url)"' | sed 's/{\/id}//' > releases_urls.txt
           cat releases_urls.txt
 
       - name: Fetch release details

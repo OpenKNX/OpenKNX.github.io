@@ -2,7 +2,7 @@ name: Update Releases
 
 on:
   schedule:
-    - cron: '29 12 * * *' # Runs every day at 12:28
+    - cron: '29 12 * * *' # Runs every day at 12:29
   push:
     branches:
       - main
@@ -16,32 +16,28 @@ jobs:
 
       - name: Fetch releases
         run: |
-          curl -s "https://api.github.com/orgs/OpenKNX/repos?per_page=100&type=public" | jq -r '.[].releases_url' | sed 's/{\/id}//' > releases_urls.txt
+          curl -s "https://api.github.com/orgs/OpenKNX/repos?per_page=100&type=public" | jq -r '.[] | "\(.name) \(.releases_url)"' | sed 's/{\/id}//' > releases_urls.txt
           cat releases_urls.txt
 
       - name: Fetch release details
         run: |
-          while read url; do
-            echo "Fetch release details from '$url'"
+          while read repo url; do
+            echo "Fetch release details from '$url' for repo '$repo'"
             response=$(curl -s "$url")
             if echo "$response" | jq empty 2>/dev/null; then
-              echo "$response" | jq -r '.[] | "\(.html_url) \(.tag_name) \(.name)"' >> releases.txt
+              echo "$response" | jq -r --arg repo "$repo" '.[] | "\($repo) \(.html_url) \(.tag_name) \(.name)"' >> releases.txt
             else
               echo "Warning: No valid JSON response from $url"
             fi
           done < releases_urls.txt
           cat releases.txt
-        # Q&D: just ignore parsing fails. TODO: clean implementation after working demo
         continue-on-error: true
 
       - name: Update HTML
         run: |
           echo '<ul>' > releases.html
-          while read line; do
-            url=$(echo $line | awk '{print $1}')
-            tag=$(echo $line | awk '{print $2}')
-            name=$(echo $line | awk '{print $3}')
-            echo "<li><a href=\"$url\">$name ($tag)</a></li>" >> releases.html
+          while read repo url tag name; do
+            echo "<li>$repo: <a href=\"$url\">$name ($tag)</a></li>" >> releases.html
           done < releases.txt
           echo '</ul>' >> releases.html
           mv releases.html releases_list.html

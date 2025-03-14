@@ -25,7 +25,7 @@ jobs:
           while read repo url; do
             echo "Fetch release details from '$url' for repo '$repo'"
             response=$(curl -s "$url")
-            if echo "$response" | jq empty 2>/dev/null; then
+            if [ -n "$response" ] && echo "$response" | jq empty 2>/dev/null; then
               releases=$(echo "$response" | jq -r --arg repo "$repo" '[.[] | {isPrerelease: .prerelease, tag: .tag_name, name: .name, archivUrl: .html_url}]')
               repo_url=$(curl -s "https://api.github.com/repos/OpenKNX/$repo" | jq -r '.html_url')
               is_archived=$(curl -s "https://api.github.com/repos/OpenKNX/$repo" | jq -r '.archived')

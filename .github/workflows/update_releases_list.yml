@@ -2,7 +2,7 @@ name: Update Releases
 
 on:
   schedule:
-    - cron: '28 12 * * *' # Runs every day at 12:28
+    - cron: '29 12 * * *' # Runs every day at 12:28
   push:
     branches:
       - main
@@ -16,7 +16,7 @@ jobs:
 
       - name: Fetch releases
         run: |
-          curl -s "https://api.github.com/orgs/OpenKNX/repos?per_page=100" | jq -r '.[].releases_url' | sed 's/{\/id}//' > releases_urls.txt
+          curl -s "https://api.github.com/orgs/OpenKNX/repos?per_page=100&type=public" | jq -r '.[].releases_url' | sed 's/{\/id}//' > releases_urls.txt
 
       - name: Fetch release details
         run: |

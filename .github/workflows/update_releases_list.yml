@@ -30,6 +30,9 @@ jobs:
               echo "Warning: No valid JSON response from $url"
             fi
           done < releases_urls.txt
+          cat releases.txt
+        # Q&D: just ignore parsing fails. TODO: clean implementation after working demo
+        continue-on-error: true
 
       - name: Update HTML
         run: |

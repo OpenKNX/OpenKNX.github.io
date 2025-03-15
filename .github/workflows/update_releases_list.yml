@@ -1,3 +1,6 @@
+# Build OpenKNX Release Overviews for Integration in Pages, Wiki and Toolbox
+# 2025 CK (OpenKNX)
+
 name: Update Releases
 
 on:
@@ -31,6 +34,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add releases_list.html releases.json
+          git add releases_list.html releases.json releases/
           git commit -m 'Update releases list and generate JSON'
           git push

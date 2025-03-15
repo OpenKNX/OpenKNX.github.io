@@ -1,3 +1,6 @@
+# Build OpenKNX Release Overviews for Integration in Pages, Wiki and Toolbox
+# 2025 CK (OpenKNX)
+
 import requests
 import json
 import os
@@ -43,12 +46,36 @@ def fetch_release_details(filtered_releases):
             }
     with open('releases.json', 'w') as outfile:
         json.dump(releases_data, outfile, indent=4)
+    return releases_data
+
+def create_html_for_repo(repo_name, details):
+    os.makedirs('releases', exist_ok=True)
+    with open(f'releases/{repo_name}.html', 'w') as outfile:
+        outfile.write('<ul>\n')
+        latest_release = None
+        latest_prerelease = None
+        for release in details["releases"]:
+            if not release["prerelease"]:
+                if latest_release is None or release["published_at"] > latest_release["published_at"]:
+                    latest_release = release
+            else:
+                if latest_prerelease is None or release["published_at"] > latest_prerelease["published_at"]:
+                    latest_prerelease = release
+
+        if latest_release:
+            outfile.write(f'<li><a href="{latest_release["html_url"]}">Latest Release: {latest_release["name"]} ({latest_release["tag_name"]})</a></li>\n')
+
+        if latest_prerelease:
+            outfile.write(f'<li><a href="{latest_prerelease["html_url"]}">Latest Prerelease: {latest_prerelease["name"]} ({latest_prerelease["tag_name"]})</a></li>\n')
+
+        outfile.write('</ul>\n')
 
 def update_html():
     with open('releases.json', 'r') as infile, open('releases_list.html', 'w') as outfile:
         data = json.load(infile)
         outfile.write('<ul>\n')
         for repo, details in data.items():
+            create_html_for_repo(repo, details)
             outfile.write(f'<li><strong>{repo}</strong><ul>\n')
             for release in details["releases"]:
                 outfile.write(f'<li><a href="{release["html_url"]}">{release["name"]} ({release["tag_name"]})</a></li>\n')
@@ -57,7 +84,7 @@ def update_html():
 
 def main():
     filtered_releases = fetch_and_filter_releases()
-    fetch_release_details(filtered_releases)
+    releases_data = fetch_release_details(filtered_releases)
     update_html()
 
 if __name__ == "__main__":

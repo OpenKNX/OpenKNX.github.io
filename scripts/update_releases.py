@@ -29,11 +29,11 @@ def fetch_release_details(filtered_releases):
             repo_data = get_json_response(f"https://api.github.com/repos/OpenKNX/{name}")
             releases_data[name] = {
                 "repo_url": repo_data.get("html_url"),
-                "isDeprecated": repo_data.get("archived"),
+                "archived": repo_data.get("archived"),
                 "releases": [
                     {
-                        "isPreRelease": release.get("prerelease"),
-                        "tag": release.get("tag_name"),
+                        "prerelease": release.get("prerelease"),
+                        "tag_name": release.get("tag_name"),
                         "name": release.get("name"),
                         "html_url": release.get("html_url")
                     }

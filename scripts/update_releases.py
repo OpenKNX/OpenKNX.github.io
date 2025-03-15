@@ -25,10 +25,11 @@ def fetch_release_details():
         for line in file:
             repo, url = line.strip().split()
             url = url.strip('"')
+            repo = repo.strip('"')
             response = requests.get(url)
             releases = response.json()
-            repo_data = requests.get(f"https://api.github.com/repos/OpenKNX/{repo.strip('\"')}").json()
-            releases_data[repo.strip('"')] = {
+            repo_data = requests.get(f"https://api.github.com/repos/OpenKNX/{repo}").json()
+            releases_data[repo] = {
                 "repo_url": repo_data.get("html_url"),
                 "isDeprecated": repo_data.get("archived"),
                 "releases": [

@@ -24,7 +24,7 @@ def fetch_release_details(filtered_releases):
     for repo in filtered_releases:
         for name, url in repo.items():
             releases = get_json_response(url.strip('"'))
-            repo_data = get_json_response(f"https://api.github.com/repos/OpenKNX/{name.strip('"')}")
+            repo_data = get_json_response(f"https://api.github.com/repos/OpenKNX/{name}")
             releases_data[name] = {
                 "repo_url": repo_data.get("html_url"),
                 "isDeprecated": repo_data.get("archived"),

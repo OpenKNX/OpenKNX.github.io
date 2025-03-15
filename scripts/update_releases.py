@@ -7,15 +7,17 @@ def get_json_response(url):
     return response.json()
 
 def fetch_and_filter_releases():
+    # TODO move repo names to separate place
+    appPrefix = "OAM-"
+    appSpecialNames = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"}
+
     url = "https://api.github.com/orgs/OpenKNX/repos?per_page=100&type=public"
     repos = get_json_response(url)
-    prefix = "OAM-"
-    include_set = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"}
     filtered_releases = []
     for repo in repos:
         repo_name = repo["name"]
         releases_url = repo["releases_url"].replace("{/id}", "")
-        if repo_name.startswith(prefix) or repo_name in include_set:
+        if repo_name.startswith(appPrefix) or repo_name in appSpecialNames:
             filtered_releases.append({repo_name: releases_url})
     return filtered_releases
 

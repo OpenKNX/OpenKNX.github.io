@@ -38,7 +38,7 @@ def fetch_release_details(filtered_releases):
                         "published_at": release.get("published_at"),
                         "html_url": release.get("html_url")
                     }
-                    for release in releases if not release.get("draft")
+                    for release in releases if isinstance(release, dict) and not release.get("draft")
                 ]
             }
     with open('releases.json', 'w') as outfile:

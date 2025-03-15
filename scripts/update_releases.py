@@ -35,6 +35,7 @@ def fetch_release_details(filtered_releases):
                         "prerelease": release.get("prerelease"),
                         "tag_name": release.get("tag_name"),
                         "name": release.get("name"),
+                        "published_at": release.get("published_at"),
                         "html_url": release.get("html_url")
                     }
                     for release in releases if not release.get("draft")

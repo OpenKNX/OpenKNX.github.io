@@ -48,6 +48,8 @@ def fetch_release_details(filtered_releases):
         json.dump(releases_data, outfile, indent=4)
     return releases_data
 
+# Erzeugt zu eine kleine HTML-Datei mit Ausgabe des aktuellsten Release.
+# Ein Pre-Release wird nur dann mit ausgegeben wenn es neuer ist als das neuste Release, oder noch kein reguläres existiert
 def create_html_for_repo(repo_name, details):
     os.makedirs('releases', exist_ok=True)
     with open(f'releases/{repo_name}.html', 'w') as outfile:
@@ -65,7 +67,7 @@ def create_html_for_repo(repo_name, details):
         if latest_release:
             outfile.write(f'<li><a href="{latest_release["html_url"]}">Latest Release: {latest_release["name"]} ({latest_release["tag_name"]})</a></li>\n')
 
-        if latest_prerelease:
+        if latest_prerelease and (latest_release is None or latest_prerelease["published_at"] > latest_release["published_at"]):
             outfile.write(f'<li><a href="{latest_prerelease["html_url"]}">Latest Prerelease: {latest_prerelease["name"]} ({latest_prerelease["tag_name"]})</a></li>\n')
 
         outfile.write('</ul>\n')

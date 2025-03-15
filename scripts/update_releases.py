@@ -14,7 +14,7 @@ def fetch_and_filter_releases():
     appPrefix = "OAM-"
     appSpecialNames = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"}
 
-    url = "https://api.github.com/orgs/OpenKNX/repos?per_page=100&type=public"
+    url = "https://api.github.com/orgs/OpenKNX/repos?per_page=1000&type=public"
     repos = get_json_response(url)
     filtered_releases = []
     for repo in repos:

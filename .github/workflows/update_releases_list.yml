@@ -35,14 +35,9 @@ jobs:
             if [ -n "$response" ] && echo "$response" | jq empty 2>/dev/null; then
               releases=$(echo "$response" | jq -r --arg repo "$repo" '[.[] | {isPrerelease: .prerelease, tag: .tag_name, name: .name, archivUrl: .html_url}]')
               repo_response=$(curl -s "https://api.github.com/repos/OpenKNX/$repo")
-              repo_url=$(echo "$repo_response" | jq -r '.html_url // empty')
               is_archived=$(echo "$repo_response" | jq -r '.archived // empty')
-              if [ -n "$repo_url" ]; then
-                jq --arg repo "$repo" --arg repo_url "$repo_url" --argjson releases "$releases" --argjson is_archived "$is_archived" \
-                  '.[$repo] = {repo_url: $repo_url, isDeprecated: $is_archived, releases: $releases}' releases.json > tmp.json && mv tmp.json releases.json
-              else
-                echo "Warning: repo_url is null for $repo"
-              fi
+              jq --arg repo "$repo" --argjson releases "$releases" --argjson is_archived "$is_archived" \
+                '.[$repo] = {isDeprecated: $is_archived, releases: $releases}' releases.json > tmp.json && mv tmp.json releases.json
             else
               echo "Warning: No valid JSON response from $release_url"
             fi

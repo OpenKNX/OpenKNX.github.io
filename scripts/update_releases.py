@@ -51,7 +51,7 @@ def update_html():
         for repo, details in data.items():
             outfile.write(f'<li><strong>{repo}</strong><ul>\n')
             for release in details["releases"]:
-                outfile.write(f'<li><a href="{release["html_url"]}">{release["name"]} ({release["tag"]})</a></li>\n')
+                outfile.write(f'<li><a href="{release["html_url"]}">{release["name"]} ({release["tag_name"]})</a></li>\n')
             outfile.write('</ul></li>\n')
         outfile.write('</ul>\n')
 

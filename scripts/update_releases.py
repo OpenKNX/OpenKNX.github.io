@@ -32,10 +32,10 @@ def fetch_release_details(filtered_releases):
                 "isDeprecated": repo_data.get("archived"),
                 "releases": [
                     {
-                        "isPrerelease": release.get("prerelease"),
+                        "isPreRelease": release.get("prerelease"),
                         "tag": release.get("tag_name"),
                         "name": release.get("name"),
-                        "archivUrl": release.get("html_url")
+                        "html_url": release.get("html_url")
                     }
                     for release in releases if not release.get("draft")
                 ]
@@ -50,7 +50,7 @@ def update_html():
         for repo, details in data.items():
             outfile.write(f'<li><strong>{repo}</strong><ul>\n')
             for release in details["releases"]:
-                outfile.write(f'<li><a href="{release["archivUrl"]}">{release["name"]} ({release["tag"]})</a></li>\n')
+                outfile.write(f'<li><a href="{release["html_url"]}">{release["name"]} ({release["tag"]})</a></li>\n')
             outfile.write('</ul></li>\n')
         outfile.write('</ul>\n')
 

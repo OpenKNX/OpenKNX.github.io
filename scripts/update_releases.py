@@ -6,19 +6,17 @@ def get_json_response(url):
     response = requests.get(url)
     return response.json()
 
-def fetch_releases():
+def fetch_and_filter_releases():
     url = "https://api.github.com/orgs/OpenKNX/repos?per_page=100&type=public"
     repos = get_json_response(url)
-    return [{repo["name"]: repo["releases_url"].replace("{/id}", "")} for repo in repos]
-
-def filter_releases(releases):
     prefix = "OAM-"
-    include_list = ["SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"]
+    include_set = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"}
     filtered_releases = []
-    for repo in releases:
-        for name, url in repo.items():
-            if any(item in name for item in include_list) or name.startswith(prefix):
-                filtered_releases.append({name: url})
+    for repo in repos:
+        repo_name = repo["name"]
+        releases_url = repo["releases_url"].replace("{/id}", "")
+        if repo_name.startswith(prefix) or repo_name in include_set:
+            filtered_releases.append({repo_name: releases_url})
     return filtered_releases
 
 def fetch_release_details(filtered_releases):
@@ -55,8 +53,7 @@ def update_html():
         outfile.write('</ul>\n')
 
 def main():
-    releases = fetch_releases()
-    filtered_releases = filter_releases(releases)
+    filtered_releases = fetch_and_filter_releases()
     fetch_release_details(filtered_releases)
     update_html()
 

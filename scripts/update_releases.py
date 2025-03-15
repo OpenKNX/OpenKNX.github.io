@@ -37,7 +37,7 @@ def fetch_release_details(filtered_releases):
                         "name": release.get("name"),
                         "archivUrl": release.get("html_url")
                     }
-                    for release in releases
+                    for release in releases if not release.get("draft")
                 ]
             }
     with open('releases.json', 'w') as outfile:

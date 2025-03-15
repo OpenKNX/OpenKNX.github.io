@@ -21,10 +21,8 @@ jobs:
 
       - name: Filter releases URLs
         run: |
-          PREFIX="OAM-"
           # use https://github.com/OpenKNX/OpenKNX.Toolbox/blob/main/Repo-Whitelist
-          INCLUDE_LIST=("SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl")
-          grep -E "^\"($PREFIX|${INCLUDE_LIST[@]})\" " releases_urls.txt > temp_releases_urls.txt
+          grep -E "^\"(OAM-|SOM-UP\"|GW-REG1-Dali\"|SEN-UP1-8xTH\"|BEM-GardenControl\")" releases_urls.txt > temp_releases_urls.txt
           mv temp_releases_urls.txt releases_urls.txt
           cat releases_urls.txt        
 

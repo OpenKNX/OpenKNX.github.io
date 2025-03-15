@@ -14,42 +14,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Fetch releases
-        run: |
-          curl -s "https://api.github.com/orgs/OpenKNX/repos?per_page=100&type=public" | jq -r '.[] | "\"\(.name)\" \(.releases_url)"' | sed 's/{\/id}//' > releases_urls.txt
-          cat releases_urls.txt
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
 
-      - name: Filter releases URLs
+      - name: Install dependencies
         run: |
-          # use https://github.com/OpenKNX/OpenKNX.Toolbox/blob/main/Repo-Whitelist
-          grep -E "^\"(OAM-|SOM-UP\"|GW-REG1-Dali\"|SEN-UP1-8xTH\"|BEM-GardenControl\")" releases_urls.txt > temp_releases_urls.txt
-          mv temp_releases_urls.txt releases_urls.txt
-          cat releases_urls.txt        
+          python -m pip install --upgrade pip
+          pip install requests
 
-      - name: Fetch release details
-        run: |
-          echo '{}' > releases.json
-          while read repo release_url; do
-            echo "Fetch release details from '$release_url' for repo '$repo'"
-            response=$(curl -s "$release_url")
-            if [ -n "$response" ] && echo "$response" | jq empty 2>/dev/null; then
-              releases=$(echo "$response" | jq -r --arg repo "$repo" '[.[] | {isPrerelease: .prerelease, tag: .tag_name, name: .name, archivUrl: .html_url}]')
-              repo_response=$(curl -s "https://api.github.com/repos/OpenKNX/$repo")
-              is_archived=$(echo "$repo_response" | jq -r '.archived // empty')
-              jq --arg repo "$repo" --argjson releases "$releases" --argjson is_archived "$is_archived" \
-                '.[$repo] = {isDeprecated: $is_archived, releases: $releases}' releases.json > tmp.json && mv tmp.json releases.json
-            else
-              echo "Warning: No valid JSON response from $release_url"
-            fi
-          done < releases_urls.txt
-          cat releases.json
-
-      - name: Update HTML
-        run: |
-          echo '<ul>' > releases.html
-          jq -r 'to_entries | .[] | "<li><strong>\(.key)</strong><ul>" + (.value.releases[] | "<li><a href=\"\(.archivUrl)\">\(.name) (\(.tag))</a></li>") + "</ul></li>"' releases.json >> releases.html
-          echo '</ul>' >> releases.html
-          mv releases.html releases_list.html
+      - name: Run update releases script
+        run: python scripts/update_releases.py
 
       - name: Commit and push changes
         run: |

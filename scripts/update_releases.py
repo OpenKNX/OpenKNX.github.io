@@ -2,34 +2,32 @@ import requests
 import json
 import os
 
+def get_json_response(url):
+    response = requests.get(url)
+    return response.json()
+
 def fetch_releases():
     url = "https://api.github.com/orgs/OpenKNX/repos?per_page=100&type=public"
-    response = requests.get(url)
-    repos = response.json()
-    with open('releases_urls.txt', 'w') as file:
-        for repo in repos:
-            file.write(f'"{repo["name"]}" {repo["releases_url"].replace("{/id}", "")}\n')
+    repos = get_json_response(url)
+    return [{repo["name"]: repo["releases_url"].replace("{/id}", "")} for repo in repos]
 
-def filter_releases():
+def filter_releases(releases):
     prefix = "OAM-"
     include_list = ["SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"]
-    with open('releases_urls.txt', 'r') as infile, open('temp_releases_urls.txt', 'w') as outfile:
-        for line in infile:
-            if any(item in line for item in include_list) or line.startswith(f'"{prefix}'):
-                outfile.write(line)
-    os.replace('temp_releases_urls.txt', 'releases_urls.txt')
+    filtered_releases = []
+    for repo in releases:
+        for name, url in repo.items():
+            if any(item in name for item in include_list) or name.startswith(prefix):
+                filtered_releases.append({name: url})
+    return filtered_releases
 
-def fetch_release_details():
+def fetch_release_details(filtered_releases):
     releases_data = {}
-    with open('releases_urls.txt', 'r') as file:
-        for line in file:
-            repo, url = line.strip().split()
-            url = url.strip('"')
-            repo = repo.strip('"')
-            response = requests.get(url)
-            releases = response.json()
-            repo_data = requests.get(f"https://api.github.com/repos/OpenKNX/{repo}").json()
-            releases_data[repo] = {
+    for repo in filtered_releases:
+        for name, url in repo.items():
+            releases = get_json_response(url.strip('"'))
+            repo_data = get_json_response(f"https://api.github.com/repos/OpenKNX/{name.strip('"')}")
+            releases_data[name] = {
                 "repo_url": repo_data.get("html_url"),
                 "isDeprecated": repo_data.get("archived"),
                 "releases": [
@@ -57,9 +55,9 @@ def update_html():
         outfile.write('</ul>\n')
 
 def main():
-    fetch_releases()
-    filter_releases()
-    fetch_release_details()
+    releases = fetch_releases()
+    filtered_releases = filter_releases(releases)
+    fetch_release_details(filtered_releases)
     update_html()
 
 if __name__ == "__main__":

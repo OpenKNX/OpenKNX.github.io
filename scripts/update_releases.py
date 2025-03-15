@@ -78,7 +78,7 @@ def update_html():
         outfile.write('<h1>Releases der OpenKNX-Applikationen</h1>\n')
         for repo, details in data.items():
             create_html_for_repo(repo, details)
-            outfile.write(f'<h2>{repo}<h2>\n')
+            outfile.write(f'<h2>{repo}</h2>\n')
             outfile.write('<ul>\n')
             for release in details["releases"]:
                 prefix = "[PRERELEASE] " if release["prerelease"] else ""

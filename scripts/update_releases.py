@@ -65,24 +65,25 @@ def create_html_for_repo(repo_name, details):
                     latest_prerelease = release
 
         if latest_release:
-            outfile.write(f'<li><a href="{latest_release["html_url"]}">Latest Release: {latest_release["name"]} ({latest_release["tag_name"]})</a></li>\n')
+            outfile.write(f'<li><a href="{latest_release["html_url"]}">Neustes Release: {latest_release["name"]} ({latest_release["tag_name"]})</a></li>\n')
 
         if latest_prerelease and (latest_release is None or latest_prerelease["published_at"] > latest_release["published_at"]):
-            outfile.write(f'<li><a href="{latest_prerelease["html_url"]}">Latest Prerelease: {latest_prerelease["name"]} ({latest_prerelease["tag_name"]})</a></li>\n')
+            outfile.write(f'<li><a href="{latest_prerelease["html_url"]}">[PRERELEASE] Neustes Pre-Release: {latest_prerelease["name"]} ({latest_prerelease["tag_name"]})</a></li>\n')
 
         outfile.write('</ul>\n')
 
 def update_html():
     with open('releases.json', 'r') as infile, open('releases_list.html', 'w') as outfile:
         data = json.load(infile)
-        outfile.write('<ul>\n')
+        outfile.write('<h1>Releases der OpenKNX-Applikationen</h1>\n')
         for repo, details in data.items():
             create_html_for_repo(repo, details)
-            outfile.write(f'<li><strong>{repo}</strong><ul>\n')
+            outfile.write(f'<h2>{repo}<h2>\n')
+            outfile.write('<ul>\n')
             for release in details["releases"]:
-                outfile.write(f'<li><a href="{release["html_url"]}">{release["name"]} ({release["tag_name"]})</a></li>\n')
-            outfile.write('</ul></li>\n')
-        outfile.write('</ul>\n')
+                prefix = "[PRERELEASE] " if release["prerelease"] else ""
+                outfile.write(f'<li>{prefix}<a href="{release["html_url"]}">{release["name"]} ({release["tag_name"]})</a></li>\n')
+            outfile.write('</ul>\n')
 
 def main():
     filtered_releases = fetch_and_filter_releases()

@@ -72,11 +72,10 @@ def create_html_for_repo(repo_name, details):
 
         outfile.write('</ul>\n')
 
-def update_html():
-    with open('releases.json', 'r') as infile, open('releases_list.html', 'w') as outfile:
-        data = json.load(infile)
+def update_html(releases_data):
+    with open('releases_list.html', 'w') as outfile:
         outfile.write('<h1>Releases der OpenKNX-Applikationen</h1>\n')
-        for repo, details in data.items():
+        for repo, details in releases_data.items():
             create_html_for_repo(repo, details)
             outfile.write(f'<h2>{repo}</h2>\n')
             outfile.write('<ul>\n')
@@ -88,7 +87,7 @@ def update_html():
 def main():
     filtered_releases = fetch_and_filter_releases()
     releases_data = fetch_release_details(filtered_releases)
-    update_html()
+    update_html(releases_data)
 
 if __name__ == "__main__":
     main()

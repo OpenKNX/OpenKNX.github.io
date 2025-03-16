@@ -42,19 +42,18 @@ def get_response(url, allowedNotFound = False):
 def get_json_response(url):
     return get_response(url).json()
 
-def fetch_and_filter_releases():
-    url = "https://api.github.com/orgs/OpenKNX/repos?per_page=1000&type=public"
-    repos = get_json_response(url)
-    filtered_releases = [
+def fetch_app_repos():
+    repos_data = get_json_response("https://api.github.com/orgs/OpenKNX/repos?per_page=1000&type=public")
+    app_repos_data = [
         repo
-        for repo in repos
+        for repo in repos_data
         if repo["name"].startswith(appPrefix) or repo["name"] in appSpecialNames
     ]
-    return filtered_releases
+    return app_repos_data
 
-def fetch_release_details(filtered_releases):
+def fetch_apps_releases(repos_data):
     releases_data = {}
-    for repo in filtered_releases:
+    for repo in repos_data:
         name = repo["name"]
         url = repo["releases_url"].replace("{/id}", "")
         logging.info(f"Fetching release data {name} from {url}")
@@ -101,9 +100,9 @@ def fetch_dependencies(repo):
         return {}
     return parse_dependencies(response.text)
 
-def fetch_all_dependencies(filtered_releases):
+def fetch_all_dependencies(repos_data):
     all_dependencies = {}
-    for repo in filtered_releases:
+    for repo in repos_data:
         dependencies = fetch_dependencies(repo)
         if dependencies:
             all_dependencies[repo['name']] = dependencies
@@ -182,12 +181,12 @@ def generate_html_table(dependencies):
     return html_content
 
 def main():
-    filtered_releases = fetch_and_filter_releases()
-    releases_data = fetch_release_details(filtered_releases)
-    update_html(releases_data)
-    all_dependencies = fetch_all_dependencies(filtered_releases)
+    oam_repos = fetch_app_repos()
+    oam_releases_data = fetch_apps_releases(oam_repos)
+    update_html(oam_releases_data)
+    all_oam_dependencies = fetch_all_dependencies(oam_repos)
     # Generate Dependencies Table
-    html_content = generate_html_table(all_dependencies)
+    html_content = generate_html_table(all_oam_dependencies)
 
 if __name__ == "__main__":
     main()

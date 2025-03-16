@@ -15,7 +15,7 @@ appSpecialNames = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"
 # Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_response(url, allowedNotFound = false):
+def get_response(url, allowedNotFound = False):
     try:
         response = requests.get(url)
         if response.status_code == 403 and 'X-RateLimit-Reset' in response.headers:

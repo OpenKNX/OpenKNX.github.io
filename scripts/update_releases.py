@@ -4,10 +4,21 @@
 import requests
 import json
 import os
+import logging
+import sys
+
+# Initialize logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def get_json_response(url):
-    response = requests.get(url)
-    return response.json()
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Error fetching data from {url}: {e}")
+        # hard end on request fail to prevent missing data # TODO improve
+        sys.exit(1)
 
 def fetch_and_filter_releases():
     # TODO move repo names to separate place

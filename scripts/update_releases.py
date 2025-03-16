@@ -15,7 +15,7 @@ appSpecialNames = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"
 # Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_json_response(url):
+def get_response(url):
     try:
         response = requests.get(url)
         if response.status_code == 403 and 'X-RateLimit-Reset' in response.headers:
@@ -25,14 +25,16 @@ def get_json_response(url):
             time.sleep(wait_time + 5)
             response = requests.get(url)
         response.raise_for_status()
-        return response.json()
+        return response
     except requests.exceptions.RequestException as e:
         logging.error(f"Error fetching data from {url}: {e}")
         # hard end on request fail to prevent missing data # TODO improve
         sys.exit(1)
 
-def fetch_and_filter_releases():
+def get_json_response(url):
+    return get_response(url).json()
 
+def fetch_and_filter_releases():
     url = "https://api.github.com/orgs/OpenKNX/repos?per_page=1000&type=public"
     repos = get_json_response(url)
     filtered_releases = [
@@ -48,7 +50,7 @@ def fetch_release_details(filtered_releases):
         name = repo["name"]
         url = repo["releases_url"].replace("{/id}", "")
         logging.info(f"Fetching release data {name} from {url}")
-        releases = get_json_response(url.strip('"'))
+        releases = get_json_response(url)
         releases_data[name] = {
             "repo_url": repo["html_url"],
             "archived": repo["archived"],
@@ -85,14 +87,9 @@ def parse_dependencies(content):
     return dependencies_map
 
 def fetch_dependencies(repo):
-    try:
-        url = f"https://raw.githubusercontent.com/OpenKNX/{repo['name']}/{repo['default_branch']}/dependencies.txt"
-        response = requests.get(url)
-        response.raise_for_status()
-        return parse_dependencies(response.text)
-    except requests.exceptions.RequestException:
-        logging.warning(f"No dependencies.txt found for {repo['name']}")
-        return []
+    url = f"https://raw.githubusercontent.com/OpenKNX/{repo['name']}/{repo['default_branch']}/dependencies.txt"
+    response = get_response(url)
+    return parse_dependencies(response.text)
 
 def fetch_all_dependencies(filtered_releases):
     all_dependencies = {}

@@ -8,6 +8,10 @@ import logging
 import sys
 import time
 
+# names for identification of app repos:
+appPrefix = "OAM-"
+appSpecialNames = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"}
+
 # Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -28,9 +32,6 @@ def get_json_response(url):
         sys.exit(1)
 
 def fetch_and_filter_releases():
-    # TODO move repo names to separate place
-    appPrefix = "OAM-"
-    appSpecialNames = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"}
 
     url = "https://api.github.com/orgs/OpenKNX/repos?per_page=1000&type=public"
     repos = get_json_response(url)

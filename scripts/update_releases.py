@@ -36,12 +36,6 @@ def fetch_and_filter_releases():
     repos = get_json_response(url)
     filtered_releases = [
         repo
-        {
-            "name": repo["name"],
-            "releases_url": repo["releases_url"],
-            "html_url": repo["html_url"],
-            "archived": repo["archived"]
-        }
         for repo in repos
         if repo["name"].startswith(appPrefix) or repo["name"] in appSpecialNames
     ]

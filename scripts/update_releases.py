@@ -34,35 +34,40 @@ def fetch_and_filter_releases():
 
     url = "https://api.github.com/orgs/OpenKNX/repos?per_page=1000&type=public"
     repos = get_json_response(url)
-    filtered_releases = []
-    for repo in repos:
-        repo_name = repo["name"]
-        releases_url = repo["releases_url"].replace("{/id}", "")
-        if repo_name.startswith(appPrefix) or repo_name in appSpecialNames:
-            filtered_releases.append({repo_name: releases_url})
+    filtered_releases = [
+        repo
+        {
+            "name": repo["name"],
+            "releases_url": repo["releases_url"],
+            "html_url": repo["html_url"],
+            "archived": repo["archived"]
+        }
+        for repo in repos
+        if repo["name"].startswith(appPrefix) or repo["name"] in appSpecialNames
+    ]
     return filtered_releases
 
 def fetch_release_details(filtered_releases):
     releases_data = {}
     for repo in filtered_releases:
-        for name, url in repo.items():
-            logging.info(f"Fetching release data {name} from {url}")
-            releases = get_json_response(url.strip('"'))
-            repo_data = get_json_response(f"https://api.github.com/repos/OpenKNX/{name}")
-            releases_data[name] = {
-                "repo_url": repo_data.get("html_url"),
-                "archived": repo_data.get("archived"),
-                "releases": [
-                    {
-                        "prerelease": release.get("prerelease"),
-                        "tag_name": release.get("tag_name"),
-                        "name": release.get("name"),
-                        "published_at": release.get("published_at"),
-                        "html_url": release.get("html_url")
-                    }
-                    for release in releases if isinstance(release, dict) and not release.get("draft")
-                ]
-            }
+        name = repo["name"]
+        url = repo["releases_url"].replace("{/id}", "")
+        logging.info(f"Fetching release data {name} from {url}")
+        releases = get_json_response(url.strip('"'))
+        releases_data[name] = {
+            "repo_url": repo["html_url"],
+            "archived": repo["archived"],
+            "releases": [
+                {
+                    "prerelease": release.get("prerelease"),
+                    "tag_name": release.get("tag_name"),
+                    "name": release.get("name"),
+                    "published_at": release.get("published_at"),
+                    "html_url": release.get("html_url")
+                }
+                for release in releases if isinstance(release, dict) and not release.get("draft")
+            ]
+        }
     with open('releases.json', 'w') as outfile:
         json.dump(releases_data, outfile, indent=4)
     return releases_data

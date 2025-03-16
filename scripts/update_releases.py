@@ -38,8 +38,8 @@ def fetch_and_filter_releases():
 def fetch_release_details(filtered_releases):
     releases_data = {}
     for repo in filtered_releases:
-        logging.info(f"Fetching release data {name}")
         for name, url in repo.items():
+            logging.info(f"Fetching release data {name} from {url}")
             releases = get_json_response(url.strip('"'))
             repo_data = get_json_response(f"https://api.github.com/repos/OpenKNX/{name}")
             releases_data[name] = {

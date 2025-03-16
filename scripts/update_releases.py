@@ -91,6 +91,8 @@ def parse_dependencies(content):
                 "url": url,
                 "depName": repo_name
             }
+        else:
+            logging.warning(f"Invalid line format {line}")
     return dependencies_map
 
 def fetch_dependencies(repo):

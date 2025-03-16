@@ -15,7 +15,7 @@ appSpecialNames = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"
 # Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def get_response(url):
+def get_response(url, allowedNotFound = false):
     try:
         response = requests.get(url)
         if response.status_code == 403 and 'X-RateLimit-Reset' in response.headers:
@@ -26,6 +26,14 @@ def get_response(url):
             response = requests.get(url)
         response.raise_for_status()
         return response
+    # TODO combine both exceptions
+    except requests.exceptions.HTTPError as e:
+        if response.status_code == 404 and not allowedNotFound:
+            logging.warning(f"404 Not Found: {url}")
+            return None
+        logging.error(f"Error fetching data from {url}: {e}")
+        # hard end on request fail to prevent missing data # TODO improve
+        sys.exit(1)
     except requests.exceptions.RequestException as e:
         logging.error(f"Error fetching data from {url}: {e}")
         # hard end on request fail to prevent missing data # TODO improve
@@ -88,7 +96,9 @@ def parse_dependencies(content):
 
 def fetch_dependencies(repo):
     url = f"https://raw.githubusercontent.com/OpenKNX/{repo['name']}/{repo['default_branch']}/dependencies.txt"
-    response = get_response(url)
+    response = get_response(url, true)
+    if response is None:
+        return {}
     return parse_dependencies(response.text)
 
 def fetch_all_dependencies(filtered_releases):

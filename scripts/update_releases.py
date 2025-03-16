@@ -69,7 +69,7 @@ def fetch_release_details(filtered_releases):
 
 def fetch_dependencies(repo):
     try:
-        url = f"https://raw.githubusercontent.com/OpenKNX/{repo['name']}/main/dependencies.txt"
+        url = f"https://raw.githubusercontent.com/OpenKNX/{repo['name']}/{repo['default_branch']}/dependencies.txt"
         response = requests.get(url)
         response.raise_for_status()
         dependencies = response.text.splitlines()

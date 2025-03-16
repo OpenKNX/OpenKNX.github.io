@@ -6,6 +6,7 @@ import json
 import os
 import logging
 import sys
+import time
 
 # Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -13,6 +14,12 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 def get_json_response(url):
     try:
         response = requests.get(url)
+        if response.status_code == 403 and 'X-RateLimit-Reset' in response.headers:
+            # Try again 5 seconds after rate limit end
+            wait_time = int(response.headers['X-RateLimit-Reset']) - int(time.time())
+            logging.warning(f"Rate limit exceeded. Waiting for {wait_time} seconds.")
+            time.sleep(wait_time + 5)
+            response = requests.get(url)
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:

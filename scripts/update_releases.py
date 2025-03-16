@@ -67,13 +67,27 @@ def fetch_release_details(filtered_releases):
         json.dump(releases_data, outfile, indent=4)
     return releases_data
 
+def parse_dependencies(content):
+    dependencies = []
+    lines = content.splitlines()
+    for line in lines[1:]:  # Skip the header
+        parts = line.split()
+        if len(parts) == 4:
+            commit, branch, path, url = parts
+            dependencies.append({
+                "commit": commit,
+                "branch": branch,
+                "path": path,
+                "url": url
+            })
+    return dependencies
+
 def fetch_dependencies(repo):
     try:
         url = f"https://raw.githubusercontent.com/OpenKNX/{repo['name']}/{repo['default_branch']}/dependencies.txt"
         response = requests.get(url)
         response.raise_for_status()
-        dependencies = response.text.splitlines()
-        return [dep.strip() for dep in dependencies if dep.strip()]
+        return parse_dependencies(response.text)
     except requests.exceptions.RequestException:
         logging.warning(f"No dependencies.txt found for {repo['name']}")
         return []

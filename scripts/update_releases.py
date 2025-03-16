@@ -142,12 +142,42 @@ def update_html(releases_data):
                 outfile.write(f'<li>{prefix}<a href="{release["html_url"]}">{release["name"]} ({release["tag_name"]})</a></li>\n')
             outfile.write('</ul>\n')
 
+def generate_html_table(dependencies):
+    all_keys = set()
+    for dep in dependencies.values():
+        all_keys.update(dep.keys())
+
+    all_keys = sorted(all_keys, key=lambda k: sum(1 for dep in dependencies.values() if k in dep), reverse=True)
+
+    html_content = '<html>\n<head>\n<title>Dependencies Table</title>\n</head>\n<body>\n'
+    html_content += '<table border="1">\n<tr><th>Dependency</th>'
+
+    for key in all_keys:
+        html_content += f'<th>{key}</th>'
+    html_content += '</tr>\n'
+
+    for dep_name, dep_details in dependencies.items():
+        html_content += f'<tr><td>{dep_name}</td>'
+        for key in all_keys:
+            if key in dep_details:
+                html_content += '<td>X</td>'
+            else:
+                html_content += '<td></td>'
+        html_content += '</tr>\n'
+
+    html_content += '</table>\n</body>\n</html>'
+    # Write to HTML file
+    with open('dependencies_table.html', 'w') as file:
+        file.write(html_content)
+    return html_content
+
 def main():
     filtered_releases = fetch_and_filter_releases()
     releases_data = fetch_release_details(filtered_releases)
     update_html(releases_data)
     all_dependencies = fetch_all_dependencies(filtered_releases)
-    logging.info(f"Dependencies: {json.dumps(all_dependencies, indent=4)}")
+    # Generate Dependencies Table
+    html_content = generate_html_table(all_dependencies)
 
 if __name__ == "__main__":
     main()

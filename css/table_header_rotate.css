@@ -1,5 +1,23 @@
 
 /*
+minimal format
+TODO move to separate file
+*/
+
+body {
+    font-family: sans-serif;
+}
+
+th {
+    font-weight: normal;
+}
+
+td {
+    text-align: center;
+}
+
+/*
+--------------------------------------------------------------------------
 quick draft, based on https://css-tricks.com/rotated-table-column-headers/
 TODO cleanup and update
 */
@@ -14,7 +32,7 @@ th.rotate > div {
     transform: translate(5px, 51px) rotate(315deg);
     width: 30px;
 
-    transform: translate(5px, 100px) rotate(315deg);
+    transform: translate(0px, 100px) rotate(315deg);
 }
 th.rotate > div > span {
     padding: 5px 10px;

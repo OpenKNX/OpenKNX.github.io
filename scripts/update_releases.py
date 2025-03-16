@@ -157,7 +157,7 @@ def generate_html_table(dependencies):
     html_content += '</tr>\n'
 
     for dep_name, dep_details in dependencies.items():
-        html_content += f'<tr><td>{dep_name}</td>'
+        html_content += f'<tr><th>{dep_name}</th>'
         for key in all_keys:
             if key in dep_details:
                 html_content += '<td>X</td>'

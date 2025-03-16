@@ -28,7 +28,7 @@ def get_response(url, allowedNotFound = False):
         return response
     # TODO combine both exceptions
     except requests.exceptions.HTTPError as e:
-        if response.status_code == 404 and not allowedNotFound:
+        if allowedNotFound and response.status_code == 404:
             logging.warning(f"404 Not Found: {url}")
             return None
         logging.error(f"Error fetching data from {url}: {e}")

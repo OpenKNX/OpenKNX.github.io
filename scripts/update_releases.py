@@ -96,7 +96,7 @@ def parse_dependencies(content):
 
 def fetch_dependencies(repo):
     url = f"https://raw.githubusercontent.com/OpenKNX/{repo['name']}/{repo['default_branch']}/dependencies.txt"
-    response = get_response(url, true)
+    response = get_response(url, True)
     if response is None:
         return {}
     return parse_dependencies(response.text)

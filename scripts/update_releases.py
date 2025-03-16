@@ -68,19 +68,21 @@ def fetch_release_details(filtered_releases):
     return releases_data
 
 def parse_dependencies(content):
-    dependencies = []
+    dependencies_map = {}
     lines = content.splitlines()
     for line in lines[1:]:  # Skip the header
         parts = line.split()
         if len(parts) == 4:
             commit, branch, path, url = parts
-            dependencies.append({
+            repo_name = url.split('/')[-1].replace('.git', '')  # Ableiten des Repo-Namens aus der URL
+            dependencies_map[repo_name] = {
                 "commit": commit,
                 "branch": branch,
                 "path": path,
-                "url": url
-            })
-    return dependencies
+                "url": url,
+                "depName": repo_name
+            }
+    return dependencies_map
 
 def fetch_dependencies(repo):
     try:

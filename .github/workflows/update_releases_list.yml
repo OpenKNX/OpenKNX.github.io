@@ -12,6 +12,7 @@ on:
 
 jobs:
   update-releases:
+    name: Update Releases Data
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

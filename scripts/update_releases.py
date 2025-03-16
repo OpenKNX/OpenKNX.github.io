@@ -38,6 +38,7 @@ def fetch_and_filter_releases():
 def fetch_release_details(filtered_releases):
     releases_data = {}
     for repo in filtered_releases:
+        logging.info(f"Fetching release data {name}")
         for name, url in repo.items():
             releases = get_json_response(url.strip('"'))
             repo_data = get_json_response(f"https://api.github.com/repos/OpenKNX/{name}")
@@ -62,6 +63,7 @@ def fetch_release_details(filtered_releases):
 # Erzeugt zu eine kleine HTML-Datei mit Ausgabe des aktuellsten Release.
 # Ein Pre-Release wird nur dann mit ausgegeben wenn es neuer ist als das neuste Release, oder noch kein reguläres existiert
 def create_html_for_repo(repo_name, details):
+    logging.info(f"Creating HTML for repository {repo_name}")
     os.makedirs('releases', exist_ok=True)
     with open(f'releases/{repo_name}.html', 'w') as outfile:
         outfile.write('<ul>\n')
@@ -84,6 +86,7 @@ def create_html_for_repo(repo_name, details):
         outfile.write('</ul>\n')
 
 def update_html(releases_data):
+    logging.info("Updating HTML with release data")
     with open('releases_list.html', 'w') as outfile:
         outfile.write('<h1>Releases der OpenKNX-Applikationen</h1>\n')
         for repo, details in releases_data.items():

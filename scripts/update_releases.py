@@ -67,6 +67,27 @@ def fetch_release_details(filtered_releases):
         json.dump(releases_data, outfile, indent=4)
     return releases_data
 
+def fetch_dependencies(repo):
+    try:
+        url = f"https://raw.githubusercontent.com/OpenKNX/{repo['name']}/main/dependencies.txt"
+        response = requests.get(url)
+        response.raise_for_status()
+        dependencies = response.text.splitlines()
+        return [dep.strip() for dep in dependencies if dep.strip()]
+    except requests.exceptions.RequestException:
+        logging.warning(f"No dependencies.txt found for {repo['name']}")
+        return []
+
+def fetch_all_dependencies(filtered_releases):
+    all_dependencies = {}
+    for repo in filtered_releases:
+        dependencies = fetch_dependencies(repo)
+        if dependencies:
+            all_dependencies[repo['name']] = dependencies
+    with open('dependencies.json', 'w') as outfile:
+        json.dump(all_dependencies, outfile, indent=4)
+    return all_dependencies
+
 # Erzeugt zu eine kleine HTML-Datei mit Ausgabe des aktuellsten Release.
 # Ein Pre-Release wird nur dann mit ausgegeben wenn es neuer ist als das neuste Release, oder noch kein reguläres existiert
 def create_html_for_repo(repo_name, details):
@@ -109,6 +130,8 @@ def main():
     filtered_releases = fetch_and_filter_releases()
     releases_data = fetch_release_details(filtered_releases)
     update_html(releases_data)
+    all_dependencies = fetch_all_dependencies(filtered_releases)
+    logging.info(f"Dependencies: {json.dumps(all_dependencies, indent=4)}")
 
 if __name__ == "__main__":
     main()

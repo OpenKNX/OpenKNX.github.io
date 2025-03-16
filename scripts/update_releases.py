@@ -149,11 +149,11 @@ def generate_html_table(dependencies):
 
     all_keys = sorted(all_keys, key=lambda k: sum(1 for dep in dependencies.values() if k in dep), reverse=True)
 
-    html_content = '<html>\n<head>\n<title>Dependencies Table</title>\n</head>\n<body>\n'
-    html_content += '<table border="1">\n<tr><th>Dependency</th>'
+    html_content = '<html>\n<head>\n<title>Dependencies Table</title>\n<link rel="stylesheet" href="css/table_header_rotate.css">\n</head>\n<body>\n'
+    html_content += '<table>\n<tr><th>Dependency</th>'
 
     for key in all_keys:
-        html_content += f'<th>{key}</th>'
+        html_content += f'<th class="rotate"><div><span>{key}</span></div></th>'
     html_content += '</tr>\n'
 
     for dep_name, dep_details in dependencies.items():

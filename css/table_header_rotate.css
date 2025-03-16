@@ -1,0 +1,25 @@
+
+/*
+quick draft, based on https://css-tricks.com/rotated-table-column-headers/
+TODO cleanup and update
+*/
+
+th.rotate {
+    height: 140px;
+    white-space: nowrap;
+
+    height: 240px;
+}
+th.rotate > div {
+    transform: translate(5px, 51px) rotate(315deg);
+    width: 30px;
+
+    transform: translate(5px, 100px) rotate(315deg);
+}
+th.rotate > div > span {
+    padding: 5px 10px;
+}
+td {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}

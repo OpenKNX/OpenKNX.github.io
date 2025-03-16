@@ -150,12 +150,14 @@ def generate_html_table(dependencies):
     all_keys = sorted(all_keys, key=lambda k: sum(1 for dep in dependencies.values() if k in dep), reverse=True)
 
     html_content = '<html>\n<head>\n<title>Dependencies Table</title>\n<link rel="stylesheet" href="css/table_header_rotate.css">\n</head>\n<body>\n'
-    html_content += '<table>\n<tr><th>Dependency</th>'
+    html_content += '<table>\n'
 
+    html_content += '<thead><tr><th>Dependency</th>'
     for key in all_keys:
         html_content += f'<th class="rotate"><div><span>{key}</span></div></th>'
-    html_content += '</tr>\n'
+    html_content += '</tr></thead>\n'
 
+    html_content += '<tbody>\n'
     for dep_name, dep_details in dependencies.items():
         html_content += f'<tr><th>{dep_name}</th>'
         for key in all_keys:
@@ -164,6 +166,7 @@ def generate_html_table(dependencies):
             else:
                 html_content += '<td></td>'
         html_content += '</tr>\n'
+    html_content += '</tbody>\n'
 
     html_content += '</table>\n</body>\n</html>'
     # Write to HTML file

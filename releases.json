@@ -723,18 +723,34 @@
         ]
     },
     "OAM-WeatherWN90LP": {
-        "repo_url": null,
-        "archived": null,
-        "releases": []
+        "repo_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP",
+        "archived": false,
+        "releases": [
+            {
+                "prerelease": true,
+                "tag_name": "0.5.0-beta",
+                "name": "0.5.0-beta",
+                "published_at": "2025-03-13T17:32:19Z",
+                "html_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP/releases/tag/0.5.0-beta"
+            }
+        ]
     },
     "OAM-BinaryInput": {
-        "repo_url": null,
-        "archived": null,
-        "releases": []
+        "repo_url": "https://github.com/OpenKNX/OAM-BinaryInput",
+        "archived": false,
+        "releases": [
+            {
+                "prerelease": false,
+                "tag_name": "0.1",
+                "name": "Release 0.1",
+                "published_at": "2025-01-07T11:19:59Z",
+                "html_url": "https://github.com/OpenKNX/OAM-BinaryInput/releases/tag/0.1"
+            }
+        ]
     },
     "OAM-HeatingActuator": {
-        "repo_url": null,
-        "archived": null,
+        "repo_url": "https://github.com/OpenKNX/OAM-HeatingActuator",
+        "archived": false,
         "releases": []
     }
 }

@@ -1,756 +1,1463 @@
 {
-    "SEN-UP1-8xTH": {
-        "repo_url": "https://github.com/OpenKNX/SEN-UP1-8xTH",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": true,
-                "tag_name": "V1.4.1-Beta",
-                "name": "Beta FW / ETS V1.4.1",
-                "published_at": "2025-01-26T15:47:51Z",
-                "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/V1.4.1-Beta"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "V1.4.0-Beta",
-                "name": "Beta FW / ETS V1.4.0",
-                "published_at": "2025-01-25T16:29:11Z",
-                "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/V1.4.0-Beta"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "SEN-UP1-8xTH_V00.10",
-                "name": "",
-                "published_at": "2023-10-30T17:33:06Z",
-                "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/SEN-UP1-8xTH_V00.10"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "V0.1.1-release",
-                "name": "V0.1.1-release",
-                "published_at": "2023-10-27T10:29:07Z",
-                "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/V0.1.1-release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "V0.2.0",
-                "name": "FW / ETS Release V0.2.0",
-                "published_at": "2024-02-18T16:16:46Z",
-                "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/V0.2.0"
-            }
-        ]
-    },
-    "OAM-SensorModule": {
-        "repo_url": "https://github.com/OpenKNX/OAM-SensorModule",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "v4.2.5-Release",
-                "name": "v4.2.5-Release",
-                "published_at": "2025-03-10T21:43:50Z",
-                "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v4.2.5-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "v4.0.2-Release",
-                "name": "4.0.2-Release",
-                "published_at": "2024-12-12T08:29:30Z",
-                "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v4.0.2-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "v3.2.11-Release",
-                "name": "v3.2.11-Release",
-                "published_at": "2024-08-16T15:11:54Z",
-                "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v3.2.11-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "v3.2.10-Release",
-                "name": "v3.2.10-Release",
-                "published_at": "2024-08-03T23:15:47Z",
-                "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v3.2.10-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "v3.1.1-Release",
-                "name": "v3.1.1-Release",
-                "published_at": "2024-07-24T21:36:36Z",
-                "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v3.1.1-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "2.15-Release",
-                "name": "v2.15-Release",
-                "published_at": "2024-07-20T12:27:31Z",
-                "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/2.15-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "v1.6.2",
-                "name": "v1.6.2-Release",
-                "published_at": "2024-07-20T12:09:06Z",
-                "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v1.6.2"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "v1.5.2",
-                "name": "v1.5.2",
-                "published_at": "2023-10-22T23:38:51Z",
-                "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v1.5.2"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "v1.1.3",
-                "name": "v1.1.3",
-                "published_at": "2023-02-19T10:59:16Z",
-                "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v1.1.3"
-            }
-        ]
-    },
-    "OAM-OneWireModule": {
-        "repo_url": "https://github.com/OpenKNX/OAM-OneWireModule",
-        "archived": false,
-        "releases": []
-    },
-    "OAM-LogicModule": {
-        "repo_url": "https://github.com/OpenKNX/OAM-LogicModule",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "3.5.2-Release",
-                "name": "3.5.2-Release",
-                "published_at": "2024-12-12T07:55:24Z",
-                "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.5.2-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "3.3.1-Release",
-                "name": "3.3.1-Release",
-                "published_at": "2024-07-25T15:39:05Z",
-                "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.3.1-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "3.3-Release",
-                "name": "3.3-Release",
-                "published_at": "2024-07-09T23:01:13Z",
-                "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.3-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "3.1.4-release",
-                "name": "3.1.4-Release",
-                "published_at": "2024-02-04T13:56:28Z",
-                "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.1.4-release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.5.3-release",
-                "name": "1.5.3-release",
-                "published_at": "2023-08-31T20:28:26Z",
-                "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/1.5.3-release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.4.2-Release",
-                "name": "1.4.2-Release",
-                "published_at": "2023-02-18T17:23:08Z",
-                "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/1.4.2-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.0-Release",
-                "name": "1.0-Release",
-                "published_at": "2022-12-23T10:03:53Z",
-                "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/1.0-Release"
-            }
-        ]
-    },
-    "OAM-PresenceModule": {
-        "repo_url": "https://github.com/OpenKNX/OAM-PresenceModule",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "3.6.2-Release",
-                "name": "3.6.2-Release",
-                "published_at": "2024-12-12T08:17:11Z",
-                "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/3.6.2-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "3.2-Release",
-                "name": "3.2-Release",
-                "published_at": "2024-07-25T17:51:55Z",
-                "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/3.2-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "3.1-Release",
-                "name": "3.1-Release",
-                "published_at": "2024-07-18T18:20:50Z",
-                "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/3.1-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.12.3-Release",
-                "name": "1.12.3-Release",
-                "published_at": "2024-07-18T18:40:33Z",
-                "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.12.3-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "2.15-Release",
-                "name": "2.15-Release",
-                "published_at": "2024-07-18T18:20:06Z",
-                "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/2.15-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.11.3-Release",
-                "name": "1.11.3-Release",
-                "published_at": "2023-08-31T20:45:33Z",
-                "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.11.3-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.7.6-Release",
-                "name": "1.7.6-Release",
-                "published_at": "2023-02-18T18:35:46Z",
-                "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.7.6-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.5-Release",
-                "name": "1.5-Release",
-                "published_at": "2022-12-23T10:27:09Z",
-                "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.5-Release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.4-Release",
-                "name": "1.4-Release",
-                "published_at": "2022-11-30T13:52:23Z",
-                "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.4-Release"
-            }
-        ]
-    },
-    "OAM-EnoceanGateway": {
-        "repo_url": "https://github.com/OpenKNX/OAM-EnoceanGateway",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "1.9-release",
-                "name": "1.9-release",
-                "published_at": "2023-08-31T20:14:18Z",
-                "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/1.9-release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.6-release",
-                "name": "1.6-release",
-                "published_at": "2023-03-03T20:21:20Z",
-                "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/1.6-release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.4-release",
-                "name": "1.4-release",
-                "published_at": "2022-12-05T21:04:38Z",
-                "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/1.4-release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.2-release",
-                "name": "1.2-release",
-                "published_at": "2022-09-11T20:02:11Z",
-                "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/1.2-release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.1-release",
-                "name": "1.1-release",
-                "published_at": "2022-07-15T19:48:41Z",
-                "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/1.1-release"
-            }
-        ]
-    },
-    "BEM-GardenControl": {
-        "repo_url": "https://github.com/OpenKNX/BEM-GardenControl",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": true,
-                "tag_name": "0.7-pre-release",
-                "name": "0.7-pre-release",
-                "published_at": "2024-10-13T16:29:08Z",
-                "html_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/tag/0.7-pre-release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.4-release",
-                "name": "0.4-release BETA",
-                "published_at": "2023-08-10T17:03:14Z",
-                "html_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/tag/0.4-release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.2-release",
-                "name": "0.2-release BETA",
-                "published_at": "2022-08-29T09:41:02Z",
-                "html_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/tag/0.2-release"
-            }
-        ]
-    },
-    "OAM-ModbusGateway": {
-        "repo_url": "https://github.com/OpenKNX/OAM-ModbusGateway",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "1.4-release",
-                "name": "1.4-release",
-                "published_at": "2024-12-14T14:10:00Z",
-                "html_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/tag/1.4-release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "v1.3",
-                "name": "1.3-release",
-                "published_at": "2023-05-15T12:17:30Z",
-                "html_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/tag/v1.3"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.0.2-release",
-                "name": "1.0.2-release",
-                "published_at": "2022-11-24T19:59:40Z",
-                "html_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/tag/1.0.2-release"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "1.0-release",
-                "name": "1.0.1-release",
-                "published_at": "2022-11-24T08:49:40Z",
-                "html_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/tag/1.0-release"
-            }
-        ]
-    },
-    "SOM-UP": {
-        "repo_url": "https://github.com/OpenKNX/SOM-UP",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "1.0",
-                "name": "Release Version 1.0",
-                "published_at": "2024-07-09T12:25:47Z",
-                "html_url": "https://github.com/OpenKNX/SOM-UP/releases/tag/1.0"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.12",
-                "name": "Zwischenrelease Pre-1.0",
-                "published_at": "2024-07-09T12:22:27Z",
-                "html_url": "https://github.com/OpenKNX/SOM-UP/releases/tag/0.12"
-            }
-        ]
-    },
-    "OAM-InfraredGateway": {
-        "repo_url": "https://github.com/OpenKNX/OAM-InfraredGateway",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "0.2.1",
-                "name": "0.2.1",
-                "published_at": "2024-12-09T19:57:34Z",
-                "html_url": "https://github.com/OpenKNX/OAM-InfraredGateway/releases/tag/0.2.1"
-            }
-        ]
-    },
-    "OAM-VirtualButton": {
-        "repo_url": "https://github.com/OpenKNX/OAM-VirtualButton",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": true,
-                "tag_name": "0.2.0",
-                "name": "Beta 0.2.0",
-                "published_at": "2023-02-06T22:40:59Z",
-                "html_url": "https://github.com/OpenKNX/OAM-VirtualButton/releases/tag/0.2.0"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "0.1.1",
-                "name": "Beta 0.1.1",
-                "published_at": "2023-01-28T10:45:02Z",
-                "html_url": "https://github.com/OpenKNX/OAM-VirtualButton/releases/tag/0.1.1"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "0.1.0",
-                "name": "Beta 0.1.0",
-                "published_at": "2023-01-24T20:08:05Z",
-                "html_url": "https://github.com/OpenKNX/OAM-VirtualButton/releases/tag/0.1.0"
-            }
-        ]
-    },
-    "GW-REG1-Dali": {
-        "repo_url": "https://github.com/OpenKNX/GW-REG1-Dali",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": true,
-                "tag_name": "v0.6.1",
-                "name": "v0.6.1",
-                "published_at": "2025-01-19T18:07:05Z",
-                "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.6.1"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "v0.6.0",
-                "name": "v0.6.0",
-                "published_at": "2024-12-28T10:55:57Z",
-                "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.6.0"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "v0.5.2-beta",
-                "name": "v0.5.2-beta",
-                "published_at": "2024-05-26T16:55:12Z",
-                "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.5.2-beta"
-            }
-        ]
-    },
-    "OAM-SmartHomeBridge": {
-        "repo_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge",
-        "archived": false,
-        "releases": []
-    },
-    "OAM-TestApp": {
-        "repo_url": "https://github.com/OpenKNX/OAM-TestApp",
-        "archived": false,
-        "releases": []
-    },
-    "OAM-StateEngine": {
-        "repo_url": "https://github.com/OpenKNX/OAM-StateEngine",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": true,
-                "tag_name": "DFA16/v0.1-beta",
-                "name": "DFA16 v0.1 Public Beta",
-                "published_at": "2025-03-02T17:40:44Z",
-                "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/DFA16/v0.1-beta"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "v0.2-beta",
-                "name": "(DFA32) v0.2 Beta",
-                "published_at": "2025-02-16T19:14:27Z",
-                "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.2-beta"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "v0.1-beta",
-                "name": "(DFA32) v0.1 Internal Beta",
-                "published_at": "2025-02-16T19:14:08Z",
-                "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.1-beta"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "v0.0-alpha",
-                "name": "v0.0 First Alpha",
-                "published_at": "2023-10-10T20:17:24Z",
-                "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.0-alpha"
-            }
-        ]
-    },
-    "OAM-AccessControl": {
-        "repo_url": "https://github.com/OpenKNX/OAM-AccessControl",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "0.6.13",
-                "name": "Release 0.6.13",
-                "published_at": "2024-10-16T17:59:15Z",
-                "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.13"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.6.7",
-                "name": "Release 0.6.7",
-                "published_at": "2024-10-10T15:12:46Z",
-                "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.7"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.6.6",
-                "name": "Release 0.6.6",
-                "published_at": "2024-08-21T18:47:39Z",
-                "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.6"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.6.3",
-                "name": "Release 0.6.3",
-                "published_at": "2024-08-01T17:51:12Z",
-                "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.3"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.6.2",
-                "name": "Release 0.6.2",
-                "published_at": "2024-07-22T18:22:18Z",
-                "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.2"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.6.1",
-                "name": "Release 0.6.1",
-                "published_at": "2024-07-21T18:20:31Z",
-                "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.1"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.6",
-                "name": "Release 0.6",
-                "published_at": "2024-07-15T20:28:50Z",
-                "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.2.1",
-                "name": "Release 0.2.1",
-                "published_at": "2024-06-02T07:46:37Z",
-                "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.2.1"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.2",
-                "name": "Release 0.2",
-                "published_at": "2024-06-01T08:15:20Z",
-                "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.2"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.1",
-                "name": "Release 0.1",
-                "published_at": "2024-05-18T15:36:47Z",
-                "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.1"
-            }
-        ]
-    },
-    "OAM-IP-Router": {
-        "repo_url": "https://github.com/OpenKNX/OAM-IP-Router",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": true,
-                "tag_name": "5.0.2-Beta",
-                "name": "5.0.2-Beta",
-                "published_at": "2025-02-13T22:43:40Z",
-                "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/5.0.2-Beta"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "5.0.1-Beta",
-                "name": "5.0.1-Beta",
-                "published_at": "2025-01-13T20:58:27Z",
-                "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/5.0.1-Beta"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "2.12.3-Beta",
-                "name": "2.12.3-Beta",
-                "published_at": "2024-02-24T15:32:08Z",
-                "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/2.12.3-Beta"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.1.3",
-                "name": "0.1.3",
-                "published_at": "2024-02-24T15:32:24Z",
-                "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.1.3"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "2.12.2-Beta",
-                "name": "2.12.2-Beta",
-                "published_at": "2024-02-14T11:46:04Z",
-                "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/2.12.2-Beta"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.1.2",
-                "name": "0.1.2",
-                "published_at": "2024-02-14T11:47:29Z",
-                "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.1.2"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "2.12.1-Beta",
-                "name": "Beta 2.12.1",
-                "published_at": "2024-02-08T22:53:53Z",
-                "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/2.12.1-Beta"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.1.1",
-                "name": "0.1.1 Release",
-                "published_at": "2024-02-08T22:52:52Z",
-                "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.1.1"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "2.12.0-Beta",
-                "name": "Beta 2.12.0",
-                "published_at": "2024-01-24T16:03:35Z",
-                "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/2.12.0-Beta"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.1.0",
-                "name": "0.1.0 Release",
-                "published_at": "2024-01-24T16:04:35Z",
-                "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.1.0"
-            }
-        ]
-    },
-    "OAM-Meter": {
-        "repo_url": "https://github.com/OpenKNX/OAM-Meter",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": true,
-                "tag_name": "0.3",
-                "name": "0.3 Beta",
-                "published_at": "2024-12-04T19:20:36Z",
-                "html_url": "https://github.com/OpenKNX/OAM-Meter/releases/tag/0.3"
-            }
-        ]
-    },
-    "OAM-Sonos": {
-        "repo_url": "https://github.com/OpenKNX/OAM-Sonos",
-        "archived": false,
-        "releases": []
-    },
-    "OAM-ElectricDoorDrive": {
-        "repo_url": "https://github.com/OpenKNX/OAM-ElectricDoorDrive",
-        "archived": false,
-        "releases": []
-    },
-    "OAM-BinaryClock": {
-        "repo_url": "https://github.com/OpenKNX/OAM-BinaryClock",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "0.1",
-                "name": "Release 0.1",
-                "published_at": "2024-09-06T08:54:30Z",
-                "html_url": "https://github.com/OpenKNX/OAM-BinaryClock/releases/tag/0.1"
-            }
-        ]
-    },
-    "OAM-TouchRound": {
-        "repo_url": "https://github.com/OpenKNX/OAM-TouchRound",
-        "archived": false,
-        "releases": []
-    },
-    "OAM-Dummy": {
-        "repo_url": "https://github.com/OpenKNX/OAM-Dummy",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "1.0-Release",
-                "name": "1.0-Release",
-                "published_at": "2024-04-09T19:30:43Z",
-                "html_url": "https://github.com/OpenKNX/OAM-Dummy/releases/tag/1.0-Release"
-            }
-        ]
-    },
-    "OAM-SwitchActuator": {
-        "repo_url": "https://github.com/OpenKNX/OAM-SwitchActuator",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "0.2",
-                "name": "Release 0.2",
-                "published_at": "2025-02-11T18:41:10Z",
-                "html_url": "https://github.com/OpenKNX/OAM-SwitchActuator/releases/tag/0.2"
-            },
-            {
-                "prerelease": false,
-                "tag_name": "0.1",
-                "name": "Release 0.1",
-                "published_at": "2024-09-06T07:28:26Z",
-                "html_url": "https://github.com/OpenKNX/OAM-SwitchActuator/releases/tag/0.1"
-            }
-        ]
-    },
-    "OAM-InternetServices": {
-        "repo_url": "https://github.com/OpenKNX/OAM-InternetServices",
-        "archived": false,
-        "releases": []
-    },
-    "OAM-ShutterController": {
-        "repo_url": "https://github.com/OpenKNX/OAM-ShutterController",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "v0.4.1",
-                "name": "Beta 4",
-                "published_at": "2024-12-28T19:12:04Z",
-                "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/v0.4.1"
-            },
-            {
-                "prerelease": true,
-                "tag_name": "v0.1.1",
-                "name": "Beta 0.1",
-                "published_at": "2024-09-30T18:54:29Z",
-                "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/v0.1.1"
-            }
-        ]
-    },
-    "OAM-WeatherWN90LP": {
-        "repo_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": true,
-                "tag_name": "0.5.0-beta",
-                "name": "0.5.0-beta",
-                "published_at": "2025-03-13T17:32:19Z",
-                "html_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP/releases/tag/0.5.0-beta"
-            }
-        ]
-    },
-    "OAM-BinaryInput": {
-        "repo_url": "https://github.com/OpenKNX/OAM-BinaryInput",
-        "archived": false,
-        "releases": [
-            {
-                "prerelease": false,
-                "tag_name": "0.1",
-                "name": "Release 0.1",
-                "published_at": "2025-01-07T11:19:59Z",
-                "html_url": "https://github.com/OpenKNX/OAM-BinaryInput/releases/tag/0.1"
-            }
-        ]
-    },
-    "OAM-HeatingActuator": {
-        "repo_url": "https://github.com/OpenKNX/OAM-HeatingActuator",
-        "archived": false,
-        "releases": []
+    "OpenKnxContentType": "OpenKNX/OAM/Releases",
+    "OpenKnxFormatVersion": "v0.0.0-ALPHA",
+    "data": {
+        "SEN-UP1-8xTH": {
+            "repo_url": "https://github.com/OpenKNX/SEN-UP1-8xTH",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "V1.4.1-Beta",
+                    "name": "Beta FW / ETS V1.4.1",
+                    "published_at": "2025-01-26T15:47:51Z",
+                    "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/V1.4.1-Beta",
+                    "body": "Bugfix Beta Release V1.4.1\r\n\r\n- tempor\u00e4re Deaktierung von mehr als einem DS18B20 Kanal (max. 2 Sensoren m\u00f6glich).",
+                    "assets": [
+                        {
+                            "name": "SEN-UP1-8xTH-Beta-1.4.1.zip",
+                            "updated_at": "2025-01-26T15:47:50Z",
+                            "browser_download_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/download/V1.4.1-Beta/SEN-UP1-8xTH-Beta-1.4.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "V1.4.0-Beta",
+                    "name": "Beta FW / ETS V1.4.0",
+                    "published_at": "2025-01-25T16:29:11Z",
+                    "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/V1.4.0-Beta",
+                    "body": "Beta FW / ETS V1.4.0\r\n\r\nKNX:                     2.1.2\r\n\r\nCommon:                  1.2.0\r\n\r\nVirtualButton:           0.5.0\r\n\r\nTHPSensor:               0.3.0\r\n- Bugfix negative Temps 2ter DS18B20 #5\r\n- Bugfix 49 Tage Problem bei DS18B20 #6\r\n- Bugfix CRC Error DS18B10 #7\r\n- Bugfix: Faktor 100 beim Luftdruck mit BME280 #4\r\n- bei den BI die M\u00f6glichkeit \"nichts\" zu senden (vorher nur 0 oder 1) #3\r\n- Unterst\u00fctzung f\u00fcr den SHT4x #8\r\n\r\nLogic:                   3.5.2\r\n\r\nFileTransfer:            0.1.0\r\n- Resume nach Fehler\r\n\r\njetzt auch mit ConfigTransfer\r\n\r\nAchtung Beta!!\r\nV1.0.0-Release kommt noch (gleicher Inhalt).\r\n\r\nBinaries Offline genommen, aufgrund erheblicher Fehler.",
+                    "assets": []
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "SEN-UP1-8xTH_V00.10",
+                    "name": "",
+                    "published_at": "2023-10-30T17:33:06Z",
+                    "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/SEN-UP1-8xTH_V00.10",
+                    "body": "Hardware V00.10 release",
+                    "assets": [
+                        {
+                            "name": "SEN-UP1-8xTH_V00.10_gerbers.zip",
+                            "updated_at": "2023-10-30T17:32:17Z",
+                            "browser_download_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/download/SEN-UP1-8xTH_V00.10/SEN-UP1-8xTH_V00.10_gerbers.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "V0.1.1-release",
+                    "name": "V0.1.1-release",
+                    "published_at": "2023-10-27T10:29:07Z",
+                    "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/V0.1.1-release",
+                    "body": "[SEN-UP1-8xTH-Release-0.1.1.zip](https://github.com/OpenKNX/SEN-UP1-8xTH/files/13187891/SEN-UP1-8xTH-Release-0.1.1.zip)\r\n\r\nfixed bug that prevented all KOs for absolute humidity, dew point and pressure from beeing sent",
+                    "assets": []
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "V0.2.0",
+                    "name": "FW / ETS Release V0.2.0",
+                    "published_at": "2024-02-18T16:16:46Z",
+                    "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/V0.2.0",
+                    "body": "Fix Bug that 2. DS18B20 is not read\r\nUpdate the newest Common / KNX Stack",
+                    "assets": [
+                        {
+                            "name": "SEN-UP1-8xTH-Release-0.2.zip",
+                            "updated_at": "2024-02-18T16:16:43Z",
+                            "browser_download_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/download/V0.2.0/SEN-UP1-8xTH-Release-0.2.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-SensorModule": {
+            "repo_url": "https://github.com/OpenKNX/OAM-SensorModule",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "v4.2.5-Release",
+                    "name": "v4.2.5-Release",
+                    "published_at": "2025-03-10T21:43:50Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v4.2.5-Release",
+                    "body": "\u00c4nderungen seit dem letzten Release:\r\n\r\n* FIX: Die Ausgabe vom Luftdruck wurde f\u00e4lschlicherweise in hPa ausgegeben, obwohl der DPT Pa ist. Dies ist nun korrigiert.\r\n* NEU: Die Firmware unterst\u00fctzt jetzt auch Analogeing\u00e4nge, verf\u00fcgbar im neusten Sensormodul von Smart-MF\r\n* FIX: Der BMP280 kann nur Temperatur und Luftdruck messen, nicht wie initial angenommen, Temperatur und Luftfeuchte. Das ist jetzt korrigiert\r\n* FIX: Durch einen Konfigurationsfehler beim erstellen der Firmware war das Pr\u00e4senzmodul (VPM) in letzten Release auf folgenden Ger\u00e4ten nicht verf\u00fcgbar, das ist jetzt korrigiert:\r\n  * REG1-Base-V1\r\n  * REG1-Base-V0\r\n  * PiPico-Connector\r\n* NEU: Die Firmware ist jetzt auch f\u00fcr den UP1-PM-HF (UP1-Pr\u00e4senzmelder-Plus) verf\u00fcgbar\r\n* FIX: Externe Werte, f\u00fcr gewichtete Auswertung: Hier war nur 1 Wert m\u00f6glich, wenn man 2 Werte ausgew\u00e4hlt hat, wurde f\u00e4lschlicherweise ein KO deaktiviert.\r\n\r\n* Das enthaltene Pr\u00e4senzmodul hat jetzt die Version 3.6.4\r\n  * FIX: Beim Wechsel der Tagesphase w\u00e4hrend einer Sperre wird jetzt nicht mehr geschaltet\r\n  * FIX: Wenn ein PM-Kanal sp\u00e4ter startet und vorher die Tagesphase an das entsprechende KO gesendet wurde, wird jetzt diese Tagesphase als Startphase genommen (wurde bisher ignoriert)\r\n\r\n* Die enthaltene Logik hat jetzt die Version 3.5.3\r\n  * FIX: Hysterese/Differenzhysterese mit invertiertem Eingang f\u00fchrte beim Schreiben von Werten im Hysteresebereich zu Toggeln des Ausgangs.\r\n\r\nAuch dieses Release ist noch OHNE 1-Wire Implementierung. \r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "SensorModule-Big-4.2.5.zip",
+                            "updated_at": "2025-03-10T21:37:25Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v4.2.5-Release/SensorModule-Big-4.2.5.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "v4.0.2-Release",
+                    "name": "4.0.2-Release",
+                    "published_at": "2024-12-12T08:29:30Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v4.0.2-Release",
+                    "body": "Die neuste Version vom Sensormodul, verf\u00fcgbar auch auf neuer Hardware. \r\n\r\nDas Release 4.0 l\u00f6st direkt das 3.15 ab. Release 3.15 sollte nicht mehr verwendet werden und durch 4.0 aktualisiert werden, da 3.15 einen Fehler in der enthaltenen Logik hat. Des weiteren wurde die Robustheit erh\u00f6ht beim Update \u00fcber den KNX-Bus und das Skript zur Erzeugung der knxpord bei Verwendung der ETS 6.3 wurde aktualisiert.\r\n\r\n>Wichtig: Falls nur die ETS 6.3.0 installiert ist, muss das Update mit der OpenKNX-Toolbox 1.0.3 erfolgen. Bei \u00e4lteren Toolbox-Versionen kommt die Meldung \"knxprod konnte nicht erstellt werden\".\r\n\r\nDas Release 4.0 ist auch f\u00fcr alle NOTWENDIG, die den neuen HLK2420 Pr\u00e4senzsensor verwenden.\r\n\r\n>Anmerkung: F\u00fcr alle, die neu anfangen wollen und dar\u00fcber Nachdenken, nur das Logikmodul oder nur das Pr\u00e4senzmodul zu installieren, ist von mir die Empfehlung, das Sensormodul zu nehmen. Die Teile, die nicht gebraucht werden, muss man nicht nutzen und sie belasten auch das System nicht. Und langfristig besteht der Plan, dass das Pr\u00e4senzmodul komplett im Sensormodul aufgeht. Und dann erspart man sich den Umzug von der einen auf die andere Applikation.\r\n\r\n07.12.2024: Firmware 4.0.2, Applikation 4.0\r\n\r\n* FIX: Fix f\u00fcr das Logikmodul mit Auswirkungen auf das Sensormodul (Das neue Sendeverhalten am Ausgang und der Wiederholungsfilter haben sich leider gegenseitig beeinflusst und zu unerwarteten Ergebnissen gef\u00fchrt, die Logiken kaputt machen konnten. Deswegen ein Hotfix)\r\n* FIX: Die fehlende Kontexthilfe auf der Seite \"Allgemein\" wurde erg\u00e4nzt.\r\n* NEU: Der Sensor BMP280 (ohne Luftdruck) wird jetzt auch unterst\u00fctzt.\r\n* NEU: Firmware-Update \u00fcber den KNX-Bus lastet den Bus weniger aus (weniger Telegrammwiederholungen)\r\n* NEU: Die Erzeugung der ETS-Produktdatenbank (knxprod) funktioniert jetzt auch mit der ETS 6.3\r\n\r\n* Die enthaltene Logik hat jetzt die Version 3.5\r\n* Das enthaltene Pr\u00e4senzmodul hat jetzt die Version 3.6\r\n\r\n01.12.2024: Firmware 3.15, Applikation 3.15\r\n\r\n* NEU: Es wird jetzt auch der REG1-BASE-V1 (und auch der REG1-BASE-V0) von Ing-Dom als Hardware unterst\u00fctzt. Damit k\u00f6nnen auch die vom Sensormodul unterst\u00fctzten I\u00b2C-Sensoren an dem herausgef\u00fchrten I\u00b2C-Kanal ausgewertet werden.\r\n* NEU: Beim AB-Smarthouse Multi Sensor von AB-SmartHouse werden jetzt auch die beiden Bin\u00e4reing\u00e4nge unterst\u00fctzt.\r\n* NEU: Neue Einstellungsseite zum HF-Sensor HLK-LK2420, siehe Applikatonsbeschreibung Pr\u00e4senz\r\n* NEU: Der F\u00fcllstandssensor VL53L1X (auch als TOF400 bekannt) wir jetzt 2 mal pro Sekunde abgefragt und kann deswegen auch als N\u00e4herungssensor oder als Lichtschranke genutzt werden.\r\n* NEU: Alle Firmware-Varianten haben ein neues Skript zum KNX-Firmware-Update bekommen, das einen Upload \u00fcber den KNX-Bus erlaubt.\r\n\r\n* Die enthaltene Logik hat jetzt die Version 3.4\r\n* Das enthaltene Pr\u00e4senz-Modul hat jetzt die Version 3.5\r\n* Der enthaltene Konfigurations-Transfer hat jetzt die Version 0.2\r\n* Das enthaltene Taster-Modul hat jetzt die Version 0.5\r\n\r\n>WICHTIG: Das 1-Wire-Modul ist leider immer noch nicht Re-Implementiert!\r\n\r\n>WICHTIG: Falls man ein Update von der Version 3.2 macht und das KO 27 mit einer GA verbunden ist, muss diese GA vor dem Update der Applikation getrennt werden. Sonst kommt ein Fehler: Das Gruppenobjekt ist nicht aktiv. Gruppenadressen k\u00f6nnen nur aktiven Gruppenobjekten zugewiesen werden.\r\n",
+                    "assets": [
+                        {
+                            "name": "SensorModule-Big-4.0.2.zip",
+                            "updated_at": "2024-12-12T08:29:14Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v4.0.2-Release/SensorModule-Big-4.0.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "v3.2.11-Release",
+                    "name": "v3.2.11-Release",
+                    "published_at": "2024-08-16T15:11:54Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v3.2.11-Release",
+                    "body": "* NEU: Es wird jetzt auch der [SEN-UP1-8xTH](https://github.com/OpenKNX/OpenKNX/wiki/SEN-UP1-8xTH) von [Ing-Dom](https://muster.ing-dom.de) als Hardware unterst\u00fctzt. Kanal E ist dann der I\u00b2C-Eingang und Kanal C und D k\u00f6nnen als 4 Bin\u00e4reing\u00e4nge fungieren. \r\n\r\nDieses Release enth\u00e4lt keinerlei Funktionalit\u00e4sverbesserungen, es macht das Sensormodul auf weiterer Hardware verf\u00fcgbar. Es gibt keinerlei Grund zu aktualisieren, sofern man eine andere Hardware verwendet. Nat\u00fcrlich funktioniert das Release mit jeglicher unterst\u00fctzder Hardware.\r\n\r\nEs gilt weiterhin alles, was unter Release 3.1.1 beschrieben wurde. Unbedingt beachten!!!\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "SensorModule-Big-3.2.11.zip",
+                            "updated_at": "2024-08-16T15:03:59Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v3.2.11-Release/SensorModule-Big-3.2.11.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "v3.2.10-Release",
+                    "name": "v3.2.10-Release",
+                    "published_at": "2024-08-03T23:15:47Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v3.2.10-Release",
+                    "body": "* FIX: Konfigurationstransfer konnte das PM-Modul vom SensorModule-Vpm-1.6.2 nicht importieren.\r\n* NEU: Alle Erkenntnisse aus verschiedenen Tests mit dem neuen HLK-HF-Sensor sind in dessen Implementierung eingeflossen.\r\n* Konfigurationstransfer ist auf Version 0.2 aktualisiert.\r\n\r\nAlle, die von einer \u00e4lteren 1.x -Vpm oder -Wire Version migrieren wollen, sollten diese Version als Zielversion einsetzen.\r\nAlle, die den Presence-Multisensor von AB-SmartHouse.com benutzen, sollten unbedingt auf diese Version aktualisieren.\r\n\r\nWichtig: Es gibt noch immer keiner 1-Wire-Unterst\u00fctzung.\r\n\r\nEs gilt weiterhiin das im Release 3.1.1 gesagte bez\u00fcglich SAMD-Unterst\u00fctzung.\r\n",
+                    "assets": [
+                        {
+                            "name": "SensorModule-Big-3.2.10.zip",
+                            "updated_at": "2024-08-03T23:15:37Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v3.2.10-Release/SensorModule-Big-3.2.10.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "v3.1.1-Release",
+                    "name": "v3.1.1-Release",
+                    "published_at": "2024-07-24T21:36:36Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v3.1.1-Release",
+                    "body": "Das Release 3.1.1 vom Sensormodul ist verf\u00fcgbar. F\u00fcr die Sensormodul-Funktionen ist es gro\u00dfteils ein Bugfix-Release, trotzdem gibt es insgesamt viel neues:\r\n\r\n**ACHTUNG: Diese Firmware enth\u00e4lt noch keine Unterst\u00fctzung f\u00fcr OneWire!**\r\n**Ein Upgrade einer Big-Version, die OneWire verwendet, sollte in der ETS nicht funktionieren. Bitte trotzdem nicht versuchen, da es hier keine Sicherheit gibt. Die Funktionalit\u00e4t von OneWire wird noch nachgereicht. Wer derzeit OneWire nutzt, sollte kein Update machen!**\r\n\r\n* Die Applikation unterst\u00fctzt jetzt unseren neuen Konfigurationstransfer\r\n* Verbesserter knx-Stack: Durch asynchrones Sende- und Empfangshandling werden Botschaften auch bei sehr hoher Buslast sicher \u00fcbertragen\r\n* Das Logikmodul wurde auf die Version 3.3.1 angehoben\r\n* Das Pr\u00e4senzmodul wurde auf die Version 3.2.1 angehoben.\r\n* Das Modul mit virtuellen Tastern wurde zugef\u00fcgt in Version 0.5\r\n* Es werden bis zu 4 Bin\u00e4reing\u00e4nge unterst\u00fctzt (Hardware Sensormodul-4.x von smart-mf.de)\r\n* Update \u00fcber den KNX-Bus ist jetzt m\u00f6glich\r\n* Die M\u00f6glichkeiten der ETS f\u00fcr Icons werden genutzt\r\n* Es wird bei (fast) allen Eingabefeldern eine Kontextsensitive Hilfe angeboten\r\n* Es gibt ein generelles UI-Redesign, dass alle OpenKNX-Applikationen wiedererkennbar macht\r\n* Es wird jetzt auch der Presence-Multisensor von AB-SmartHouse.com unterst\u00fctzt\r\n* Beim SCD41 kann man nun das Messintervall bestimmen\r\n\r\nGenaue \u00c4nderungen/Fixes an der Fimware findet man im Changelog der Applikationsbeschreibung\r\n\r\nUm auf das Release 3.1.1 aktualisieren zu k\u00f6nnen, muss erstmal die ETS auf die Version 2.15 aktualisiert werden. Diese Version ist gleichzeitig verf\u00fcgbar mit der 3.1.1. Der Weg ist 1.5.2 -> 2.15 -> 3.1.1. F\u00fcr die 2.15 gibt es keine Firmware, es ist ein reines ETS-Zwischenrelease. Die Version SensorModule-Big-2.15 ist der einfachheit halber auch diesem Relese beigef\u00fcgt.\r\n\r\nIch habe mich schweren Herzens dazu entschlossen, das Sensormodul nicht mehr auf der SAMD-Firmware weiterzuentwickeln. Deshalb gibt es das Release 3.1.1 nur als Big-Version, die schon immer nur f\u00fcr dei RP2040-Hardware verf\u00fcgbar war.\r\n\r\nWer die (stark abgespeckten) Versionen Vpm und OneWire nutzt und diese auf der RP2040-Hardware verwendet hat, bekommt eine halbautomatische Unterst\u00fctzung f\u00fcr die Migration auf die Big-Version. Dazu muss man die gleichzeitig erscheinende Vpm- bzw OneWire-Version 1.6.2 nutzen. Diese enth\u00e4lt die Version 1.5.2, erg\u00e4nzt um den Konfigurationstransfer. Mit dem kann man dann alle Sensor-, PM- und Logik-Einstellungen auf die Big-Version migrieren, Das geht auf jeden Fall schneller und komfortabler, als alles manuell abzutippen.\r\n\r\nF\u00fcr die SAMD-Benutzer bleibt die Version 1.5.2 weiterhin nutzbar, sie wird aber nicht mehr weiterentwickelt. Der SAMD ist einfach am Limit seiner M\u00f6glichkeiten und kann keine der neuen Funktoinalit\u00e4ten leisten, die OpenKNX mitbringt.",
+                    "assets": [
+                        {
+                            "name": "SensorModule-Big-2.15.zip",
+                            "updated_at": "2024-07-20T14:12:54Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v3.1.1-Release/SensorModule-Big-2.15.zip"
+                        },
+                        {
+                            "name": "SensorModule-Big-3.1.1.zip",
+                            "updated_at": "2024-07-24T21:29:49Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v3.1.1-Release/SensorModule-Big-3.1.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "2.15-Release",
+                    "name": "v2.15-Release",
+                    "published_at": "2024-07-20T12:27:31Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/2.15-Release",
+                    "body": "Spezeilles Release (nicht verwenden, bevor 3.0-Release verf\u00fcgbar ist):\r\n\r\nNotwendiges Zwischenrelease, um die ETS-Kompatibilit\u00e4t von Releases vor 2.15 zu den folgenden Releases 3.0 und sp\u00e4ter zu wahren.\r\nDieses Release hat keine Firmware. Man muss wie \u00fcblich eine knxprod bauen, diese in die ETS importieren und ein Update der alten Applikation machen.\r\n\r\nDanach muss man sofort das N\u00e4chste Update auf das neuste Release 3.0 oder sp\u00e4ter machen. Dieses neue Release enth\u00e4lt dann wieder eine Applikation und eine Firmware, die man wie \u00fcblich aktualisieren kann. Erst danach ist das Ger\u00e4t wieder funktionsf\u00e4hig.\r\n\r\nOhne dieses Zwischenrelease sind die Applikationen 3.0 oder neuer nicht kompatibel zu den Applikationen vor 2.15 und m\u00fcssen manuell neu konfiguriert werden. Da das sehr viel Arbeit sein kann, wird dringend geraten, dieses Zwischen-Release zu machen.\r\n\r\nDieses Release hat keine Funktoinalit\u00e4t, es weist nur die ETS an, Kompatibilit\u00e4tseinstellungen im Projekt vorzunehmen.\r\n\r\nDieses Release ist nur f\u00fcr die Applikation \"SensorModule-Big\" verf\u00fcgbar.\r\n\r\nDie Applikationen \"SensorModule-Vpm\" und \"SensorModule-OneWire\" werden aufgeteilt:\r\n\r\nF\u00fcr alle, die diese Applikation auf RP2040-basierter Hardware nutzen, wird noch ein Migrationspfad auf SensorModule-Big angeboten.\r\nF\u00fcr SAMD-basierte Hardware wird die Applikation und Firmware nicht mehr weiter entwickelt, da der SAMD nicht die Ressourcen hat, die neuen Features der Applikation zu prozessieren. Nat\u00fcrlich funktionieren die SAMD-basierten Ger\u00e4te weiterhin wie bisher.",
+                    "assets": []
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "v1.6.2",
+                    "name": "v1.6.2-Release",
+                    "published_at": "2024-07-20T12:09:06Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v1.6.2",
+                    "body": "Dieses Release ist eine reine ETS-Applikation, die mit der Firmware 1.5.2 funktioniert. Sie hat den vollen Umfang von 1.5.2, erweitert um den neuen OpenKNX-Konfigurationstransfer.\r\n\r\nDie Applikation gibt es in 2 Varianten: SensorModule-Vpm-1.6.2 und SensorModule-OneWire-1.6.2, als Nachfolgeapplikationen f\u00fcr die entsprechenden 1.5.2 Releases.\r\n\r\nMit diesem ist es m\u00f6glich, halbautomatisch von der Release-Applikation auf die Big-Applikation zu migrieren, sofern man die Release-Applikation auf der RP2040-Hardware nutzt und in Zukunft die 3.0-Applikation Big nutzen m\u00f6chte.\r\n\r\nAuch SAMD-Benutzer k\u00f6nnen diese Applikation nutzen, um Funktionen wie Kanalkopie zu nutzen und so die Arbeit mit Logikkan\u00e4len und Pr\u00e4senzkan\u00e4len zu vereinfachen. Und man kann so auch Logiken auf ein anderel Modul migrieren und dort vielleicht neue Logikfunktionen nutzen.\r\n\r\nDiese Applikation wird wie jede andere in der ETS importiert und zum Update der aktuellen 1.5.2 verwendet. Man muss keine Firmware aktualisieren, aber einmal das existierende Ger\u00e4t programmieren.\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "SensorModule-OneWire-1.6.2.zip",
+                            "updated_at": "2024-07-19T21:36:35Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v1.6.2/SensorModule-OneWire-1.6.2.zip"
+                        },
+                        {
+                            "name": "SensorModule-Vpm-1.6.2.zip",
+                            "updated_at": "2024-07-19T21:36:34Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v1.6.2/SensorModule-Vpm-1.6.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "v1.5.2",
+                    "name": "v1.5.2",
+                    "published_at": "2023-10-22T23:38:51Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v1.5.2",
+                    "body": "OpenKNX SensorModul Applikation (as Ersatz f\u00fcr das bisherige [Sensomodul v3.8](https://github.com/mumpf/knx-sensor).\r\n\r\nHier ist die [Produktbeschreibung](https://github.com/OpenKNX/OpenKNX/wiki/Produktinfo-Sensormodul) samt Featureliste und [Applikationsbeschreibung](../main/doc/Applikationsbeschreibung-Sensor.md) samt detailliertem \u00c4nderungsverzeichnis.\r\n\r\nDie Applikation gibt es in 3 Varianten:\r\n- Als Sensor-, 1-Wire- und Logik-Applikation (SensorModule-OneWire)\r\n- Als Sensor-, Vpm- und Logik-Applikation (SensorModule-Vpm)\r\n- Als Sensor-, Vpm-, 1-Wire- und Logik-Applikation (SensorModule-Big)\r\n\r\nDie ersten beiden sind vornehmlich daf\u00fcr da, auf einem SAMD-Sensormodul zu laufen.\r\nSensorModule-Big sollte f\u00fcr alle RP2040-Varianten benutzt werden.\r\n",
+                    "assets": [
+                        {
+                            "name": "SensorModule-Big-1.5.2.zip",
+                            "updated_at": "2023-10-22T23:38:23Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v1.5.2/SensorModule-Big-1.5.2.zip"
+                        },
+                        {
+                            "name": "SensorModule-OneWire-1.5.2.zip",
+                            "updated_at": "2023-10-22T23:38:29Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v1.5.2/SensorModule-OneWire-1.5.2.zip"
+                        },
+                        {
+                            "name": "SensorModule-Vpm-1.5.2.zip",
+                            "updated_at": "2023-10-22T23:38:36Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v1.5.2/SensorModule-Vpm-1.5.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "v1.1.3",
+                    "name": "v1.1.3",
+                    "published_at": "2023-02-19T10:59:16Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v1.1.3",
+                    "body": "OpenKNX SensorModul Applikation (as Ersatz f\u00fcr das bisherige [Sensomodul v3.8](https://github.com/mumpf/knx-sensor).\r\n\r\nHier ist die [Produktbeschreibung](https://github.com/OpenKNX/OpenKNX/wiki/Produktinfo-Sensormodul) samt Featureliste und [Applikationsbeschreibung](../main/doc/Applikationsbeschreibung-Sensor.md) samt detailliertem \u00c4nderungsverzeichnis.\r\n\r\nDie Applikation gibt es in 3 Varianten:\r\n- Als Sensor-, 1-Wire- und Logik-Applikation (SensorModule-OneWire)\r\n- Als Sensor-, Vpm- und Logik-Applikation (SensorModule-Vpm)\r\n- Als Sensor-, Vpm-, 1-Wire- und Logik-Applikation (SensorModule-Big)\r\n\r\nDie ersten beiden sind vornehmlich daf\u00fcr da, auf einem SAMD-Sensormodul zu laufen.\r\nSensorModule-Big sollte f\u00fcr alle RP2040-Varianten benutzt werden.\r\n",
+                    "assets": [
+                        {
+                            "name": "SensorModule-Big-1.1.3.zip",
+                            "updated_at": "2023-09-07T21:20:51Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v1.1.3/SensorModule-Big-1.1.3.zip"
+                        },
+                        {
+                            "name": "SensorModule-OneWire-1.1.3.zip",
+                            "updated_at": "2023-09-07T21:20:53Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v1.1.3/SensorModule-OneWire-1.1.3.zip"
+                        },
+                        {
+                            "name": "SensorModule-Vpm-1.1.3.zip",
+                            "updated_at": "2023-09-07T21:20:55Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SensorModule/releases/download/v1.1.3/SensorModule-Vpm-1.1.3.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-OneWireModule": {
+            "repo_url": "https://github.com/OpenKNX/OAM-OneWireModule",
+            "archived": false,
+            "releases": []
+        },
+        "OAM-LogicModule": {
+            "repo_url": "https://github.com/OpenKNX/OAM-LogicModule",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "3.5.2-Release",
+                    "name": "3.5.2-Release",
+                    "published_at": "2024-12-12T07:55:24Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.5.2-Release",
+                    "body": "Das neuste Logikmodul mit vielen neuen Funktionen und einigen kleinen Bugfixes. Das Release 3.5 l\u00f6st direkt das 3.4 ab. Release 3.4 sollte nicht mehr verwendet werden und durch 3.5 aktualisiert werden, da 3.4 einen Fehler beim Wiederholfilter in der Ausgangspipeline hat, der zu unerwarteten AUS-Wiederholungen f\u00fchren kann. Des weiteren wurde die Robustheit erh\u00f6ht beim Update \u00fcber den KNX-Bus und das Skript zur Erzeugung der knxpord bei Verwendung der ETS 6.3 wurde aktualisiert.\r\n\r\n>Wichtig: Falls nur die ETS 6.3.0 installiert ist, muss das Update mit der OpenKNX-Toolbox 1.0.3 erfolgen. Bei \u00e4lteren Toolbox-Versionen kommt die Meldung \"knxprod konnte nicht erstellt werden\".\r\n\r\n>Anmerkung: F\u00fcr alle, die neu anfangen wollen und dar\u00fcber Nachdenken, nur das Logikmodul oder nur das Pr\u00e4senzmodul zu installieren, ist von mir die Empfehlung, das Sensormodul zu nehmen. Die Teile, die nicht gebraucht werden, muss man nicht nutzen und sie belasten auch das System nicht. Und langfristig besteht der Plan, dass das Pr\u00e4senzmodul komplett im Sensormodul aufgeht. Und dann erspart man sich den Umzug von der einen auf die andere Applikation.\r\n\r\n07.12.2024: Firmware 3.5.2, Applikation 3.5\r\n\r\n* FIX: Das neue Sendeverhalten am Ausgang und der Wiederholungsfilter haben sich leider gegenseitig beeinflusst und zu unerwarteten Ergebnissen gef\u00fchrt, die Logiken kaputt machen konnten. Deswegen ein Hotfix. \r\n* NEU: Firmware-Update \u00fcber den KNX-Bus lastet den Bus weniger aus (weniger Telegrammwiederholungen)\r\n* NEU: Die Erzeugung der ETS-Produktdatenbank (knxprod) funktioniert jetzt auch mit der ETS 6.3\r\n\r\n01.12.2024: Firmware 3.4, Applikation 3.4\r\n\r\n* NEU: Standardfunktion A = ABS(E1) (Betrag von E1) und A = ABS(E2) (Betrag von E2)\r\n* NEU: Standardfunktion A = -E1 (Negiere E1) und A = -E2 (Negiere E2)\r\n* NEU: Sendeverhalten f\u00fcr den Ausgang: Wertwiederholungen k\u00f6nnen jetzt unterdr\u00fcckt werden\r\n* NEU: Alle internen KO-Verkn\u00fcpfungen k\u00f6nnen auch relativ zum eigenen KO angegeben werden\r\n* NEU: Alle internen Eing\u00e4nge k\u00f6nnen auch relativ zum eigenen Kanal angegeben werden\r\n* NEU: Die Feiertage Totensonntag und Schweizer Nationalfeiertag sind neu\r\n* NEU: Zeitschaltuhren k\u00f6nnen jetzt neben einem bin\u00e4ren Wert auch einen Zahlenwert (1 Byte) enthalten, der als \"Wert vom Eingang 1\" im Ausgangskonverter genutzt werden kann \r\n* NEU: Zeitschaltuhren k\u00f6nnen jetzt \u00fcber mehrere Logikkan\u00e4le verbunden werden (sowohl relativ wie auch absolut). Sie werden dann wie eine Zeitschaltuhr behandelt. Das ist vor allem wichtig, wenn man bei Neustart Schaltzeiten nachholen will, erlaubt aber auch mehr als 8 Schaltzeiten pro Zeitschaltuhr \r\n* NEU: Jahres- und Tageszeitschaltuhren k\u00f6nnen verbunden werden und somit wie eine Zeitschaltuhr fungieren. Erm\u00f6glicht eine Kombination von Tages- und Jahresschaltungen in einer Zeitschaltuhr.\r\n* FIX: Zeitschaltuhren mit \"Feiertage wie Sonntage behandeln\" haben (leider) nicht immer zu den Sonntags-Schaltzeiten geschaltet.\r\n* FIX: Zeitschaltuhren (und verbundene Zeitschaltuhren) werden jetzt korrekt in der \"\u00dcbersicht interner Verkn\u00fcpfungen\" angezeigt. \r\n* FIX: Bei Zeitschaltuhren, die im Urlaub schalten sollen, kann man nicht mehr die Einstellung \"Schaltzeiten nachholen\" vornehmen. Das Feld was schon immer funktionslos, da noch nie Urlaubs-Schaltzeiten nachgeholt werden konnten.\r\n* NEU: Interne Eing\u00e4nge k\u00f6nnen jetzt auch als Trigger definiert werden \r\n* NEU: Alle Firmware-Varianten haben ein neues Skript zum KNX-Firmware-Update bekommen, das einen Upload \u00fcber den KNX-Bus erlaubt.\r\n\r\nWie immer ist das Logikmodul Update-F\u00e4hig. Die IP-Variante wird nachgereicht, diese ist noch nicht fertiggestellt.\r\n",
+                    "assets": [
+                        {
+                            "name": "LogicModule-Release-3.5.2.zip",
+                            "updated_at": "2024-12-12T07:52:32Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/download/3.5.2-Release/LogicModule-Release-3.5.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "3.3.1-Release",
+                    "name": "3.3.1-Release",
+                    "published_at": "2024-07-25T15:39:05Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.3.1-Release",
+                    "body": "Kleines Bugfix-Release zu 3.3, alles f\u00fcr 3.3 gesagte ist genauso g\u00fcltig:\r\n\r\n* Der Konfigurationstransfer ist verf\u00fcgbar. Ist kein Teil der Loigk, aber ein Teil der Logik-Applikation. Vereinfacht das Arbeiten mit mehreren Loigkkan\u00e4len und Logiken auf mehreren Ger\u00e4ten.\r\n* Benutzerformeln k\u00f6nnen jezt in der ETS editiert werden und m\u00fcssen nicht mehr in der Firmware implementiert werden.\r\n* Endlosschliefenerkennung durch sich selbst aufrufende Logiken verhindert potentielle \"H\u00e4nger\"\r\n* Es gibt neue Standardfunktionen, die den aktuellen Ausgangswert ber\u00fccksichtigen - erlaubt eine einfachere Definition von z.B. Z\u00e4hlern\r\n* Eine \u00dcbersichtsseite mit allen internen KO-Verkn\u00fcpfungen erlaubt ein einfacheres Arbeiten mit internen KO\r\n* Bevor auf die Version 3.3 aktualisiert werden kann, muss eine Aktualisierung auf die Version 3.1 erfolgen\r\n\r\nEine Regression gibt es allerdings: \r\n\r\n* Wer die in Version 3.1 neu eingef\u00fchrten mehrzeiligen Kommentare verwendet, sollte diese vorher speichern. Durch ein Update auf die 3.3 gehen leider alle Kommentare verloren. Dies wird in Zukunft nicht mehr passieren und ist einmalig.\r\n\r\nDas sind die \u00c4nderungen im Detail:\r\n\r\n24.07.2024: Firmware 3.3.1, Applikation 3.3\r\n\r\n* FIX: Ausgangskonverter Zahl->String (irgendein Zahl-DPT nach DPT16) ist jetzt implementiert.\r\n\r\n02.07.2024: Firmware 3.3, Applikation 3.3\r\n\r\n* NEU: Benutzerformeln sind nun in der ETS-Applikation definierbar, dies l\u00f6st mittelfristig die bisher verf\u00fcgbaren Benutzerfunktionen ab.\r\n* NEU: Es kann nun in der ETS getestet werden, ob die Ergebnisse von Benutzerformeln korrekt sind.\r\n* NEU: Die mathematische Funktion \"Potenz\" ist jetzt bei den Standardformeln auch verf\u00fcgbar.\r\n* NEU: Durch die Logik verursachte Endlosschleifen werden jetzt erkannt und die entsprechenden Logikkan\u00e4le deaktiviert \r\n* NEU: Es sind neue mathematische Funktionen hinzugekommen, die Logikkan\u00e4le vereinfachen k\u00f6nnen \r\n  * Inkrementieren und Dekrementieren, damit der Aufbau von Z\u00e4hlern einfacher wird.\r\n  * Erh\u00f6hen und erniedrigen des Ausgangs um Eingangswerte\r\n  * Bit-Shifts um 1-Bit\r\n  * Min/Max unter Einbeziehung des Ausgangs\r\n\r\n26.03.2024: Firmware 3.2, Applikation 3.2\r\n\r\n* NEU: \u00dcbersichtsseite mit allen internen KO-Verkn\u00fcpfungen hinzugef\u00fcgt\r\n* FIX: TOR wurde nicht korrekt getriggert, wenn nur Eingang 2 als Trigger ausgew\u00e4hlt worden ist\r\n* FIX: Differenzhysterese funktionierte seit der Einf\u00fchrung von DPT12, DPT13 und DPT14 nicht mehr\r\n\r\n* Logik verwendet jetzt den neusten KNX-Stack, der auch bei hoher momentaner Buslast keine Telegramme mehr verpassen kann. Somit ist die Robustheit der Logik nochmal verbessert worden\r\n\r\nUm in der ETS ein Update der Logik von einer Version vor 3.1 auf die 3.2 vornehmen zu k\u00f6nnen, muss man erst ein Update auf die 3.1 machen. Anschlie\u00dfend funktioniert ein Update auf die 3.2. Die Firmware kann gleich auf die 3.3.1 aktualisiert werden.\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "LogicModule-IP-3.3.1.zip",
+                            "updated_at": "2024-07-25T15:39:36Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/download/3.3.1-Release/LogicModule-IP-3.3.1.zip"
+                        },
+                        {
+                            "name": "LogicModule-Release-3.3.1.zip",
+                            "updated_at": "2024-07-25T15:39:38Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/download/3.3.1-Release/LogicModule-Release-3.3.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "3.3-Release",
+                    "name": "3.3-Release",
+                    "published_at": "2024-07-09T23:01:13Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.3-Release",
+                    "body": "Dieses Release enth\u00e4lt Neuerungen, die das Arbeiten vereinfachen und das Logikmodul aufwerten:\r\n\r\n* Der Konfigurationstransfer ist verf\u00fcgbar. Ist kein Teil der Loigk, aber ein Teil der Logik-Applikation. Vereinfacht das Arbeiten mit mehreren Loigkkan\u00e4len und Logiken auf mehreren Ger\u00e4ten.\r\n* Benutzerformeln k\u00f6nnen jezt in der ETS editiert werden und m\u00fcssen nicht mehr in der Firmware implementiert werden.\r\n* Endlosschliefenerkennung durch sich selbst aufrufende Logiken verhindert potentielle \"H\u00e4nger\"\r\n* Es gibt neue Standardfunktionen, die den aktuellen Ausgangswert ber\u00fccksichtigen - erlaubt eine einfachere Definition von z.B. Z\u00e4hlern\r\n* Eine \u00dcbersichtsseite mit allen internen KO-Verkn\u00fcpfungen erlaubt ein einfacheres Arbeiten mit internen KO\r\n* Bevor auf die Version 3.3 aktualisiert werden kann, muss eine Aktualisierung auf die Version 3.1 erfolgen\r\n\r\nEine Regression gibt es allerdings: \r\n\r\n* Wer die in Version 3.1 neu eingef\u00fchrten mehrzeiligen Kommentare verwendet, sollte diese vorher speichern. Durch ein Update auf die 3.3 gehen leider alle Kommentare verloren. Dies wird in Zukunft nicht mehr passieren und ist einmalig.\r\n\r\nDas sind die \u00c4nderungen im Detail:\r\n\r\n02.07.2024: Firmware 3.3, Applikation 3.3\r\n\r\n* NEU: Benutzerformeln sind nun in der ETS-Applikation definierbar, dies l\u00f6st mittelfristig die bisher verf\u00fcgbaren Benutzerfunktionen ab.\r\n* NEU: Es kann nun in der ETS getestet werden, ob die Ergebnisse von Benutzerformeln korrekt sind.\r\n* NEU: Die mathematische Funktion \"Potenz\" ist jetzt bei den Standardformeln auch verf\u00fcgbar.\r\n* NEU: Durch die Logik verursachte Endlosschleifen werden jetzt erkannt und die entsprechenden Logikkan\u00e4le deaktiviert \r\n* NEU: Es sind neue mathematische Funktionen hinzugekommen, die Logikkan\u00e4le vereinfachen k\u00f6nnen \r\n  * Inkrementieren und Dekrementieren, damit der Aufbau von Z\u00e4hlern einfacher wird.\r\n  * Erh\u00f6hen und erniedrigen des Ausgangs um Eingangswerte\r\n  * Bit-Shifts um 1-Bit\r\n  * Min/Max unter Einbeziehung des Ausgangs\r\n\r\n26.03.2024: Firmware 3.2, Applikation 3.2\r\n\r\n* NEU: \u00dcbersichtsseite mit allen internen KO-Verkn\u00fcpfungen hinzugef\u00fcgt\r\n* FIX: TOR wurde nicht korrekt getriggert, wenn nur Eingang 2 als Trigger ausgew\u00e4hlt worden ist\r\n* FIX: Differenzhysterese funktionierte seit der Einf\u00fchrung von DPT12, DPT13 und DPT14 nicht mehr\r\n\r\n* Logik verwendet jetzt den neusten KNX-Stack, der auch bei hoher momentaner Buslast keine Telegramme mehr verpassen kann. Somit ist die Robustheit der Logik nochmal verbessert worden\r\n\r\nUm in der ETS ein Update der Logik von einer Version vor 3.1 auf die 3.2 vornehmen zu k\u00f6nnen, muss man erst ein Update auf die 3.1 machen. Anschlie\u00dfend funktioniert ein Update auf die 3.2. Die Firmware kann gleich auf die 3.2 aktualisiert werden.\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "LogicModule-IP-3.3.zip",
+                            "updated_at": "2024-07-09T23:02:34Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/download/3.3-Release/LogicModule-IP-3.3.zip"
+                        },
+                        {
+                            "name": "LogicModule-Release-3.3.zip",
+                            "updated_at": "2024-07-09T23:02:46Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/download/3.3-Release/LogicModule-Release-3.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "3.1.4-release",
+                    "name": "3.1.4-Release",
+                    "published_at": "2024-02-04T13:56:28Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.1.4-release",
+                    "body": "Dieses Release ist technisch auf eine neue Basis gesetzt. Dadurch sind viele neue M\u00f6glichkeiten in der ETS (Applikationsgestaltung) und in der Firmware (Robustheit) entstanden. Dazu z\u00e4hlen:\r\n\r\n* Kontextsensitive Hilfe in der ETS\r\n* Icons und Bilder in der ETS\r\n* Update \u00fcber den KNX-Bus (nur RP2040)\r\n* Reine KNX-IP-Ger\u00e4te (derzeit noch Beta, hier kann es noch Stabilit\u00e4tsprobleme geben)\r\n\r\nDiese neue Infrastruktur wird auch die Basis sein f\u00fcr zuk\u00fcnftige Module und Releases.\r\n\r\n\r\nKorrekturen und Verbesserungen seit dem letzten Release:\r\n\r\n04.02.2024: Firmware 3.1.4, Applikation 3.1\r\n\r\n* FIX: Zeitschaltuhren haben bei hoher Auslastung des Ger\u00e4tes sporadisch ihre Schaltzeiten \"verpasst\". Das ist korrigiert.\r\n* FIX: Wenn man Befehle im Diagnoseobjekt falsch oder unvollst\u00e4ndig geschrieben hat, konnte das zum Aufh\u00e4ngen des Ger\u00e4tes f\u00fchren.\r\n* NEU: Der Befehl \"logic help\" ist jetzt nicht nur in der Console, sondern auch im Diagnoseobjekt verf\u00fcgbar.\r\n\r\n25.01.2024: Firmware 3.1.3, Applikation 3.1\r\n\r\n* ACHTUNG: Falls ein Update einer fr\u00fcheren Firmware versagt, liegt das daran, dass bei einer internen KO-Verbindung vom Eingang 2 eines Logikkanals auch das \"eigene\" KO des Eingang 2 mit einer GA belegt wurde. Der Eingang 2 ist definiert als: Externe KO-Verkn\u00fcpfung, DPT5.001, Eingangskonverter ist ungleich \"Wertintervall\". \r\n* ACHTUNG: Nach einem Update m\u00fcssen alle Zeitschaltuhren, deren Schaltzeiten durch \"Sonnenauf-/-untergang plus/minus Zeitversatz\" definiert sind, neu definiert werden! Der Stunden-Zeitversatz geht durch das Update verloren und steht auf 0 Stunden.\r\n* NEU: Ein Logikausgang kann jetzt auch seinen Wert zus\u00e4tzlich \u00fcber ein internes KO versenden\r\n* NEU: Jede Logik kann jetzt auch einen mehrzeiligen Langtext (bis 512 Zeichen) als Kommentar enthalten\r\n* NEU: Ein Eingangskonverter f\u00fcr DPT1 erlaubt jetzt auch die Auswertung eines DPT1-Telegramms als Trigger\r\n* NEU: Die Anzahl der verf\u00fcgbaren Kan\u00e4le kann jetzt in der Applikation reduziert werden. Dies dient der \u00dcbersicht.\r\n* FIX: Man kann bei Logiken einstellen, dass sie erst ausgewertet werden, wenn alle Eing\u00e4nge g\u00fcltig sind. Die Pr\u00fcfung, dass ein Eingang g\u00fcltig ist, konnte schon erfolgreich sein, obwohl noch keine Antwort von einem ReadRequest eingegangen ist. Dies war ein seltener Fehler, der jetzt korrigiert ist.\r\n* FIX: Die Pr\u00fcfung, ob ein Eingang einen g\u00fcltigen Wert hat, konnte bei komplexeren Logiken versagen. Auch dies ist jetzt korrigiert.\r\n\r\n27.12.2023: Firmware 3.0.9, Applikation 3.0 (nur zum Betatest genutzt)\r\n\r\n* NEU: Die Firmware kann jetzt \u00fcber den KNX-Bus aktualisiert werden (nur bei RP2040-Prozessor aka Raspberry Pi Pico)\r\n* NEU: Die Firmware kann jetzt auch auf reinen IP-Ger\u00e4ten eingesetzt werden und als Logikmodul-IP genutzt werden\r\n* NEU: Output Converter \"Wert eines KO senden\" eingef\u00fchrt\r\n* NEU: Zus\u00e4tzliche Infoboxen, die erkl\u00e4ren, wie \"nur bei ge\u00e4ndertem Ergebnis\" zu verstehen ist.\r\n* FIX: Textanpassung von \"Kanalausgang X/Y zu Interner Eingang 3/4\"\r\n* FIX: Zeitschaltuhren Sonnenauf-/-untergang mit Zeitversatz erlauben jetzt nur einen Zeitversatz von &pm;6 Stunden und 59 Minuten. Der fr\u00fcher m\u00f6gliche Zeitbereich konnte nicht funktionieren. \r\n* FIX: Bei internen KO-Verkn\u00fcpfungen konnte man immer noch \"Vom Bus zyklisch lesen\" einstellen. Diese Option ist an der stelle falsch und kann nicht mehr ausgew\u00e4hlt werden.\r\n\r\nHier ist die [Produktbeschreibung](https://github.com/OpenKNX/OpenKNX/wiki/Produktinfo-Logikmodul) samt Featureliste und [Applikationsbeschreibung](https://github.com/OpenKNX/OFM-LogicModule/blob/v1/doc/Applikationsbeschreibung-Logik.md) samt detailliertem \u00c4nderungsverzeichnis.\r\n",
+                    "assets": [
+                        {
+                            "name": "LogicModule-IP-3.1.4.zip",
+                            "updated_at": "2024-02-04T13:55:38Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/download/3.1.4-release/LogicModule-IP-3.1.4.zip"
+                        },
+                        {
+                            "name": "LogicModule-Release-3.1.4.zip",
+                            "updated_at": "2024-02-04T13:53:58Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/download/3.1.4-release/LogicModule-Release-3.1.4.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.5.3-release",
+                    "name": "1.5.3-release",
+                    "published_at": "2023-08-31T20:28:26Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/1.5.3-release",
+                    "body": "Korrekturen und Verbesserungen seit dem letzten Release:\r\n\r\n* Der Delta-Input-Converter hat beim Start keinen ReadRequest auf einem Eingang gesendet, wenn auf dem anderen Eingang ein Wert empfangen wurde.\r\n* TOR hat jetzt einen Tri-State-Eingang zum \u00f6ffnen vom Tor: Das Tor ist beim Neustart weder offen noch geschlossen und agiert somit beim ersten Telegramm erwartungskonform\r\n* TOR ist bei Neustart am Ausgang undefiniert und wird mit dem ersten \u00f6ffnen/schlie\u00dfen erst initialisiert.\r\n* Mathematische Funktion \"Gl\u00e4ttung\" von Werten eingef\u00fchrt\r\n* Zeitschaltuhren Sonnenauf-/untergang mit Zeitversatz konnten intern zu ung\u00fcltigen Zeiten f\u00fchren und schalteten dann unerwartet oder gar nicht.\r\n* Beim nachholen von Schaltzeiten wurde die Sommerzeit nicht beachtet.\r\n* Der KNX-Stack ist jetzt wesentlich robuster bei hoch ausgelastetem KNX-Bus. Das hat direkte Auswirkungen auf die Logik, die fr\u00fcher bei Hochlast Telegramme ausgelassen wurden, die dann als Trigger f\u00fcr Logiken fehlten.\r\n* Einige wenige DPT9-Werte ungleich 0 wurden vom KNX-Stack als 0 gesendet. Das ist gel\u00f6st. Es waren Werte der Form \u00b1(2^n)/100 f\u00fcr n>10, also z.B. \u00b120.48, \u00b140.96, \u00b181.92, \u00b1163.84, \u00b1327.68, \u00b1655.36 usw.\r\n\r\nHier ist die [Produktbeschreibung](https://github.com/OpenKNX/OpenKNX/wiki/Produktinfo-Logikmodul) samt Featureliste und [Applikationsbeschreibung](../main/doc/Applikationsbeschreibung-Logik.md) samt detailliertem \u00c4nderungsverzeichnis.\r\n\r\n**Man sollte ein update machen, wenn man DPT9-Werte auf den knx-Bus sendet**",
+                    "assets": [
+                        {
+                            "name": "LogicModule-Release-1.5.3.zip",
+                            "updated_at": "2023-09-06T09:53:59Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/download/1.5.3-release/LogicModule-Release-1.5.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.4.2-Release",
+                    "name": "1.4.2-Release",
+                    "published_at": "2023-02-18T17:23:08Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/1.4.2-Release",
+                    "body": "Weitere Verbesserungen der Logikmodul-Firmware:\r\n\r\n- Das Logikmodul kann jetzt mit 4-Byte-Werten DPT12, DPT13, DPT14 umgehen, sowohl am Eingang wie auch am Ausgang.\r\n- Datum/Zeit kann jetzt auch \u00fcber ein kombiniertes KO empfangen werden (DPT19)\r\n- Berechnung von Sonnenauf- und -untergang ist stark verbessert\r\n- Es werden alle Zeitzonen unterst\u00fctzt\r\n- Zeitschaltuhren k\u00f6nnen jetzt auch anhand des Sonnenstands (Elevation, Winkel \u00fcber dem Horizont) schalten.\r\n\r\nDetailliertes \u00c4nderungsverzeichnis ist wie immer in der [Applikationsbeschreibung](../main/doc/Applikationsbeschreibung-Logik.md) zu finden.",
+                    "assets": [
+                        {
+                            "name": "LogicModule-Release-1.4.2.zip",
+                            "updated_at": "2023-02-18T17:20:35Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/download/1.4.2-Release/LogicModule-Release-1.4.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.0-Release",
+                    "name": "1.0-Release",
+                    "published_at": "2022-12-23T10:03:53Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/tag/1.0-Release",
+                    "body": "Die Version hat viele Detailverbesserungen im internen Datenfluss und einige Fehlerbehebungen. Es wird dringend empfohlen, ein Update auf diese Version zu machen. \r\n\r\nDas speichern der KO-Werte war die letzte noch fehlende Funktionalit\u00e4t zum fr\u00fcheren Logikmodul. Ab sofort wird das alte Logikmodul nicht mehr weiter gewartet.\r\n\r\n\u00c4nderungshistorie:\r\n\r\n* NEU: Kein EEPROM mehr n\u00f6tig, KO-Werte werden im Flash gespeichert\r\n* NEU: Das Logikmodul kann jetzt auch ein \"Ger\u00e4t zur\u00fccksetzen\" an sich selbst senden (also mit der eigenen PA).\r\n* NEU: Technisch ist es notwendig, dass die **minimale** Zeit, bis das Ger\u00e4t nach einem Neustart aktiv wird, auf 1 Sekunde erh\u00f6ht wird (fr\u00fcher 0). Die 0 wurde in der Vergangenheit sowieso nicht erreicht, lag aber bei < 500 ms. \r\n* NEU: Im Flash gespeicherte KO (Eing\u00e4nge) k\u00f6nnen ihre Werte nicht nur \u00fcber einen Ausgang, sondern auch sendend bereitstellen\r\n* FIX: DPT9 in Formeln wird jetzt korrekt berechnet, bisher konnte es passieren, dass der Wert um Faktor 10 oder gar 100 zu gro\u00df wurde.\r\n* FIX: Bin\u00e4rfunktionen (Bit-AND, Bit-OR, ...) rechnen jetzt korrekt. Bisher konnte es durch eine interne Wandlung zu einer Fliesskommazahl zu Rundungsproblemen und damit zu Bitverschiebungen kommen und dadurch zu falschen Ergebnissen.\r\n",
+                    "assets": [
+                        {
+                            "name": "LogicModule-Release-1.0.3.zip",
+                            "updated_at": "2022-12-23T10:02:05Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LogicModule/releases/download/1.0-Release/LogicModule-Release-1.0.3.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-PresenceModule": {
+            "repo_url": "https://github.com/OpenKNX/OAM-PresenceModule",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "3.6.2-Release",
+                    "name": "3.6.2-Release",
+                    "published_at": "2024-12-12T08:17:11Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/3.6.2-Release",
+                    "body": "Hier ein neues Release des Pr\u00e4senzmoduls. Neuerungen sind prim\u00e4r beim neuen HF-Sensor HLK-LD2420. Das Release 3.6 l\u00f6st direkt das 3.5 ab. Release 3.5 sollte nicht mehr verwendet werden und durch 3.6 aktualisiert werden, da 3.5 (auch das leider fehlerhafte Logikmodul 3.4 enth\u00e4lt). Des weiteren wurde die Robustheit erh\u00f6ht beim Update \u00fcber den KNX-Bus und das Skript zur Erzeugung der knxpord bei Verwendung der ETS 6.3 wurde aktualisiert.\r\n\r\n>Wichtig: Falls nur die ETS 6.3.0 installiert ist, muss das Update mit der OpenKNX-Toolbox 1.0.3 erfolgen. Bei \u00e4lteren Toolbox-Versionen kommt die Meldung \"knxprod konnte nicht erstellt werden\".\r\n\r\n>Anmerkung: F\u00fcr alle, die neu anfangen wollen und dar\u00fcber Nachdenken, nur das Logikmodul oder nur das Pr\u00e4senzmodul zu installieren, ist von mir die Empfehlung, das Sensormodul zu nehmen. Die Teile, die nicht gebraucht werden, muss man nicht nutzen und sie belasten auch das System nicht. Und langfristig besteht der Plan, dass das Pr\u00e4senzmodul komplett im Sensormodul aufgeht. Und dann erspart man sich den Umzug von der einen auf die andere Applikation.\r\n\r\n07.12.2024: Firmware 3.6.2, Applikation 3.6\r\n\r\n* FIX: Fix f\u00fcr das Logikmodul mit Auswirkungen auf das Pr\u00e4senzmodul (Das neue Sendeverhalten am Ausgang und der Wiederholungsfilter haben sich leider gegenseitig beeinflusst und zu unerwarteten Ergebnissen gef\u00fchrt, die Logiken kaputt machen konnten. Deswegen ein Hotfix)\r\n* NEU: Firmware-Update \u00fcber den KNX-Bus lastet den Bus weniger aus (weniger Telegrammwiederholungen)\r\n* NEU: Die Erzeugung der ETS-Produktdatenbank (knxprod) funktioniert jetzt auch mit der ETS 6.3\r\n\r\n* Die enthaltene Logik hat jetzt die Version 3.5\r\n\r\n01.12.2024: Firmware 3.5, Applikation 3.5\r\n\r\n* NEU: F\u00fcr den HLK2420 wurde statt der Kalibrierung eine komplett neue Einstellungsseite entwickelt\r\n* NEU: Diagnose f\u00fcr den HLK2420 ber\u00fccksichtigt die neuen Einstellungsm\u00f6glichkeiten\r\n* FIX: Der RealPresence hat bei 2 Usern nicht funktioniert, weil sie eine andere Hardware-Variante hatten, dies ist jetzt korrigiert.\r\n* FIX: Wenn nur PIR aktiviert war, wurde dessen Stromversorgung nicht eingeschaltet.\r\n* NEU: Gro\u00dfe Doku-Erweiterung f\u00fcr die Einstellungsm\u00f6glichkeiten vom HLK-Sensor\r\n* NEU: Alle Firmware-Varianten haben ein neues Skript zum KNX-Firmware-Update bekommen, das einen Upload \u00fcber den KNX-Bus erlaubt.\r\n\r\n* Die enthaltene Logik hat jetzt die Version 3.4\r\n* Der enthaltene Konfigurations-Transfer hat jetzt die Version 0.2\r\n* Das enthaltene Taster-Modul hat jetzt die Version 0.5\r\n\r\nEs gibt noch keine IP-Version, diese wird nachgereicht. ",
+                    "assets": [
+                        {
+                            "name": "PresenceModule-Big-3.6.2.zip",
+                            "updated_at": "2024-12-12T08:16:48Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/3.6.2-Release/PresenceModule-Big-3.6.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "3.2-Release",
+                    "name": "3.2-Release",
+                    "published_at": "2024-07-25T17:51:55Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/3.2-Release",
+                    "body": "Dieses Release ist prim\u00e4r f\u00fcr alle, die aus einem alten Release 1.x per Konfigurationstransfer was auf die neue Applikation \u00fcbertragen wollen, dazu ist ein wichtiger Fix enthalten. Der Rest sind Vorbereitungen auf unseren neuen Pr\u00e4senzsensor. \r\n\r\nAlles f\u00fcr das Release 3.1 gesagte gilt auch f\u00fcr 3.2, siehe dort.\r\n\r\n22.07.2024: Firmware 3.2, Applikation 3.2.1\r\n\r\n* FIX: Wenn mit ConfigTransfer die VPM-Basiskonfiguration von einer \u00e4lteren VPM-Version auf die aktuelle \u00fcbertragen wurde, konnte das interne KO-Referenzen auf falsche KO zeigen lassen.\r\n* FIX: Der PIR-Sensor hat beim Neustart f\u00e4lschlicherweise Pr\u00e4senz-Signale ausgegeben\r\n* NEU: Kalibrierung f\u00fcr den HLK-Sensor wurde komplett neu entwickelt\r\n* NEU: Diagnose f\u00fcr den HKL-Sensor ist komplett neu implementiert\r\n* FIX: Empfindlichkeitskurve f\u00fcr den PIR-Sensor wurden leicht angepasst\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "PresenceModule-Big-3.2.zip",
+                            "updated_at": "2024-07-25T17:47:04Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/3.2-Release/PresenceModule-Big-3.2.zip"
+                        },
+                        {
+                            "name": "PresenceModule-IP-3.2.zip",
+                            "updated_at": "2024-07-25T17:47:06Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/3.2-Release/PresenceModule-IP-3.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "3.1-Release",
+                    "name": "3.1-Release",
+                    "published_at": "2024-07-18T18:20:50Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/3.1-Release",
+                    "body": "Das Release 3.1 vom Pr\u00e4senzmelder ist verf\u00fcgbar. F\u00fcr die Pr\u00e4senzmelder-Funktionen ist es ein reines Bugfix-Release, trotzdem gibt es insgesamt viel neues:\r\n\r\n* Die Applikation unterst\u00fctzt jetzt unseren neuen Konfigurationstransfer\r\n* Verbesserter knx-Stack: Durch asynchrones Sende- und Empfangshandling werden Botschaften auch bei sehr hoher Buslast sicher \u00fcbertragen\r\n* Das Logikmodul wurde auf die Version 3.3 angehoben\r\n* Das Modul mit virtuellen Tastern wurde zugef\u00fcgt in Version 0.5\r\n* Update \u00fcber den KNX-Bus ist jetzt m\u00f6glich\r\n* Die M\u00f6glichkeiten der ETS f\u00fcr Icons werden genutzt\r\n* Es wird bei (fast) allen Eingabefeldern eine Kontextsensitive Hilfe angeboten\r\n* Es gibt ein generelles UI-Redesign, dass alle OpenKNX-Applikationen wiedererkennbar macht\r\n* Genaue \u00c4nderungen/Fixes an der Fimware findet man im Changelog der Applikationsbeschreibung\r\n* F\u00fcr unser REG1-IP-Ger\u00e4t ist die Version 3.1 auch ganz neu als IP-Version verf\u00fcgbar\r\n\r\n**Um auf das Release 3.1 aktualisieren zu k\u00f6nnen, muss erstmal die ETS auf die Version 2.15 aktualisiert werden**. Diese Version ist gleichzeitig verf\u00fcgbar mit der 3.1. Der Weg ist 1.11.3 -> 2.15 -> 3.1. F\u00fcr die 2.15 gibt es keine Firmware, es ist ein reines ETS-Zwischenrelease. Die Version PresenceModule-Big-2.15 ist der einfachheit halber auch diesem Relese beigef\u00fcgt.\r\n\r\nIch habe mich schweren Herzens dazu entschlossen, den Pr\u00e4senzmelder nicht mehr auf der SAMD-Firmware weiterzuentwickeln. Deshalb gibt es das Release 3.1 nur als Big-Version, die schon immer nur f\u00fcr dei RP2040-Hardware verf\u00fcgbar war. \r\n\r\nWer die (stark abgespeckte) Release-Version nutzt und diese auf der RP2040-Hardware verwendet hat, bekommt eine halbautomatische Unterst\u00fctzung f\u00fcr die Migration auf die Big-Version. Dazu muss man die gleichzeitig erscheinende Release-Version 1.12.3 nutzen. Diese enth\u00e4lt die Version 1.11.3, erg\u00e4nzt um den Konfigurationstransfer. Mit dem kann man dann alle PM- und Logik-Einstellungen auf die Big-Version migrieren, Das geht auf jeden Fall schneller und komfortabler, als alles manuell abzutippen.\r\n\r\nF\u00fcr die SAMD-Benutzer bleibt die Version 1.11.3 weiterhin nutzbar, sie wird aber nicht mehr weiterentwickelt. Der SAMD ist einfach am Limit seiner M\u00f6glichkeiten und kann keine der neuen Funktoinalit\u00e4ten leisten, die OpenKNX mitbringt.\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "PresenceModule-Big-2.15.zip",
+                            "updated_at": "2024-07-18T18:50:23Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/3.1-Release/PresenceModule-Big-2.15.zip"
+                        },
+                        {
+                            "name": "PresenceModule-Big-3.1.zip",
+                            "updated_at": "2024-07-18T18:16:16Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/3.1-Release/PresenceModule-Big-3.1.zip"
+                        },
+                        {
+                            "name": "PresenceModule-IP-3.1.zip",
+                            "updated_at": "2024-07-18T18:16:14Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/3.1-Release/PresenceModule-IP-3.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.12.3-Release",
+                    "name": "1.12.3-Release",
+                    "published_at": "2024-07-18T18:40:33Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.12.3-Release",
+                    "body": "Dieses Release ist eine reine ETS-Applikation, die mit der Firmware 1.11.3 funktioniert. Sie hat den vollen Umfang von 1.11.3, erweitert um den neuen OpenKNX-Konfigurationstransfer.\r\n\r\nMit diesem ist es m\u00f6glich, halbautomatisch von der Release-Applikation auf die Big-Applikation zu migrieren, sofern man die Release-Applikation auf der RP2040-Hardware nutzt und in Zukunft die 3.0-Applikation Big nutzen m\u00f6chte.\r\n\r\nAuch SAMD-Benutzer k\u00f6nnen diese Applikation nutzen, um Funktionen wie Kanalkopie zu nutzen und so die Arbeit mit Logikkan\u00e4len und Pr\u00e4senzkan\u00e4len zu vereinfachen. Und man kann so auch Logiken auf ein anderel Modul migrieren und dort vielleicht neue Logikfunktionen nutzen.\r\n\r\nDiese Applikation wird wie jede andere in der ETS importiert und zum Update der aktuellen 1.11.3 verwendet. Man muss keine Firmware aktualisieren, aber einmal das existierende Ger\u00e4t programmieren.\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "PresenceModule-Release-1.12.3.zip",
+                            "updated_at": "2024-07-14T22:22:28Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/1.12.3-Release/PresenceModule-Release-1.12.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "2.15-Release",
+                    "name": "2.15-Release",
+                    "published_at": "2024-07-18T18:20:06Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/2.15-Release",
+                    "body": "Spezeilles Release:\r\n\r\nNotwendiges Zwischenrelease, um die ETS-Kompatibilit\u00e4t von Releases vor 2.15 zu den folgenden Releases 3.0 und sp\u00e4ter zu wahren. \r\nDieses Release hat keine Firmware. Man muss wie \u00fcblich eine knxprod bauen, diese in die ETS importieren und ein Update der alten Applikation machen.\r\n\r\nDanach muss man sofort das N\u00e4chste Update auf das neuste Release 3.0 oder sp\u00e4ter machen. Dieses neue Release enth\u00e4lt dann wieder eine Applikation und eine Firmware, die man wie \u00fcblich aktualisieren kann. Erst danach ist das Ger\u00e4t wieder funktionsf\u00e4hig.\r\n\r\nOhne dieses Zwischenrelease sind die Applikationen 3.0 oder neuer nicht kompatibel zu den Applikationen vor 2.15 und m\u00fcssen manuell neu konfiguriert werden. Da das sehr viel Arbeit sein kann, wird dringend geraten, dieses Zwischen-Release zu machen.\r\n\r\nDieses Release hat keine Funktoinalit\u00e4t, es weist nur die ETS an, Kompatibilit\u00e4tseinstellungen im Projekt vorzunehmen.\r\n\r\nDieses Release ist nur f\u00fcr die Applikation \"PresenceModule-Big\" verf\u00fcgbar. \r\n\r\nDie Applikation \"PresenceModule-Release\" wird aufgeteilt: \r\n\r\n* F\u00fcr alle, die diese Applikation auf RP2040-basierter Hardware nutzen, wird noch ein Migrationspfad auf PresenceModule-Big angeboten.\r\n* F\u00fcr SAMD-basierte Hardware wird die Applikation und Firmware nicht mehr weiter entwickelt, da der SAMD nicht die Ressourcen hat, die neuen Features der Applikation zu prozessieren. Nat\u00fcrlich funktionieren die SAMD-basierten Ger\u00e4te weiterhin wie bisher.\r\n",
+                    "assets": [
+                        {
+                            "name": "PresenceModule-Big-2.15.zip",
+                            "updated_at": "2024-07-12T16:41:46Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/2.15-Release/PresenceModule-Big-2.15.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.11.3-Release",
+                    "name": "1.11.3-Release",
+                    "published_at": "2023-08-31T20:45:33Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.11.3-Release",
+                    "body": "Es gibt einige Detailverbesserungen beim Pr\u00e4senzmelder:\r\n\r\n* Tagesphasenwechsel wertet jetzt erneut Pr\u00e4senz aus, da sonst bei einem Wechsel von einer Tagesphase, die nicht selbst einschaltet in eine Phase, die selbst einschaltet nicht eingeschaltet worden ist.\r\n* Man kann beim Ausschalten \u00fcber Helligkeit als Ausschaltschwelle jetzt auch 0 Lux angeben und es wird bei 0 Lux ausgeschaltet. Bisher musste die Helligkeit > als die Ausschaltschwelle, also gr\u00f6\u00dfer als 0 sein.\r\n* Der KNX-Stack ist jetzt wesentlich robuster bei hoch ausgelastetem KNX-Bus. \r\n* Einige wenige DPT9-Werte ungleich 0 wurden vom KNX-Stack als 0 gesendet. Das ist gel\u00f6st. Es waren Werte der Form &pm;(2<sup>n</sup>)/100 f\u00fcr n>10, also z.B. &pm;20.48, &pm;40.96, &pm;81.92, &pm;163.84, &pm;327.68, &pm;655.36 usw. \r\n* Dieses Release profitiert prim\u00e4r von den Stabilit\u00e4tsverbesserungen des KNX-Stack \r\n\r\nAu\u00dferdem wurde das Logikmodul auf die Version 1.5.3 aktualisiert.\r\n\r\nHier ist die [Produktbeschreibung](https://github.com/OpenKNX/OpenKNX/wiki/Produktinfo-Pr\u00e4senzmodul) samt Featureliste und [Applikationsbeschreibung](../main/doc/Applikationbeschreibung-Praesenz.md) samt detailliertem \u00c4nderungsverzeichnis.\r\n\r\nPresenceModule-Big wird f\u00fcr RP2040 basierte Hardware empfohlen, PresenceModule-Release f\u00fcr SAMD basierte Hardware.",
+                    "assets": [
+                        {
+                            "name": "PresenceModule-Big-1.11.3.zip",
+                            "updated_at": "2023-09-06T10:30:40Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/1.11.3-Release/PresenceModule-Big-1.11.3.zip"
+                        },
+                        {
+                            "name": "PresenceModule-Release-1.11.3.zip",
+                            "updated_at": "2023-09-06T10:30:38Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/1.11.3-Release/PresenceModule-Release-1.11.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.7.6-Release",
+                    "name": "1.7.6-Release",
+                    "published_at": "2023-02-18T18:35:46Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.7.6-Release",
+                    "body": "Dieses Release enth\u00e4lt nur Verbesserungen, die durch das enthaltene Logikmodul 1.4.2 erfolgt sind. Wer keine der neuen Features im Logikmodul braucht, muss kein update machen.\r\n\r\nDas \u00c4nderungsprotokoll ist wie immer in der [Applikationsbeschreibung](../main/doc/Applikationbeschreibung-Praesenz.md) zu finden.",
+                    "assets": [
+                        {
+                            "name": "PresenceModule-Big-1.7.6.zip",
+                            "updated_at": "2023-02-18T18:13:10Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/1.7.6-Release/PresenceModule-Big-1.7.6.zip"
+                        },
+                        {
+                            "name": "PresenceModule-Release-1.7.6.zip",
+                            "updated_at": "2023-02-18T18:13:12Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/1.7.6-Release/PresenceModule-Release-1.7.6.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.5-Release",
+                    "name": "1.5-Release",
+                    "published_at": "2022-12-23T10:27:09Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.5-Release",
+                    "body": "Das aktuelle Release Behebt wie immer einige in der Zwischenzeit gefundene Probleme.\r\n\r\nDieses Release behebt auch ein generelles Problem, das bei einem Stromausfall f\u00fcr das Vergessen der PA sorgen kann. Aus diesem Grunde sollte unbedingt dieses Release verwendet werden.\r\n\r\n* WICHTIG: Die enthaltene Logik hat den Firmware-Stand 1.0.3 und erm\u00f6glicht damit das Speichern der Logikeing\u00e4nge im nichtfl\u00fcchtigen Speicher.\r\n* FIX: Option \"gesperrt (0) / nicht gesperrt (1)\" bei Sperreinstellungen wurde nicht ausgewertet.\r\n* FIX: Option \"Zeit bis das Ger\u00e4t nach einem Neustart aktiv wird\" wurde mit einer falschen Zeitbasis ausgef\u00fchrt (Millisekunden statt Sekunden)\r\n* FIX: Der Schalter \"Automatik \u00fcbersteuern = AUS hei\u00dft Raum verlassen\" wurde nicht ausgewertet. Sobald \"Raum verlassen\" konfiguriert ist, wurde es immer genutzt. Das ist jetzt korrigiert.\r\n* FIX: Die Diagnose f\u00fcr \"Raum verlassen\" gab nicht den Modus aus, der eingestellt war.\r\n* FIX: R\u00fcckfallzeit f\u00fcr Sperre funktionierte nicht, ist jetzt korrigiert.\r\n* NEU: Tagesphasen kann man jetzt auch \u00fcber die Szenensteuerung wechseln,\r\n* NEU: \u00dcber die Szenensteuerung kann man jetzt auch den Manuellmodus aktivieren und deaktivieren (wie bei Eintastensteuerung).\r\n* NEU: \u00dcber die Szenensteuerung kann man jetzt alle Sperrmodi (unabh\u00e4ngig von der Konfiguration der Sperre) setzen und zur\u00fccksetzen.\r\n* FIX: Sperre hat jetzt auch ein \u00dc-Flag\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "PresenceModule-Big-1.5.3.zip",
+                            "updated_at": "2022-12-23T10:09:01Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/1.5-Release/PresenceModule-Big-1.5.3.zip"
+                        },
+                        {
+                            "name": "PresenceModule-Release-1.5.3.zip",
+                            "updated_at": "2022-12-23T10:09:05Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/1.5-Release/PresenceModule-Release-1.5.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.4-Release",
+                    "name": "1.4-Release",
+                    "published_at": "2022-11-30T13:52:23Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.4-Release",
+                    "body": "Ein paar Feature-Abrundungen und Bugfixes\r\n\r\n* FIX: R\u00fcckfallzeit f\u00fcr Sperre funktionierte nicht, ist jetzt korrigiert.\r\n* NEU: Tagesphasen kann man jetzt auch \u00fcber die Szenensteuerung wechseln,\r\n* NEU: \u00dcber die Szenensteuerung kann man jetzt auch den Manuellmodus aktivieren und deaktivieren (wie bei Eintastensteuerung). \r\n* NEU: \u00dcber die Szenensteuerung kann man jetzt alle Sperrmodi (unabh\u00e4ngig von der Konfiguration der Sperre) setzen und zur\u00fccksetzen. \r\n* FIX: Sperre hat jetzt auch ein \u00dc-Flag\r\n\r\nAb diesem Release wird folgende Hardware unterst\u00fctzt:\r\n\r\n* **Smart-MF Sensormodul** [www.smart-mf.de](https://www.smart-mf.de), als virtueller Pr\u00e4senzmelder, um die Applikationen von alten oder unzuverl\u00e4ssigen Pr\u00e4senzmeldern zu verbessern\r\n* **PiPico-BCU-Connector** [OpenKNX-Wiki](https://github.com/OpenKNX/OpenKNX/wiki/PiPico-BCU-Connector), als virtueller Pr\u00e4senzmelder\r\n* **1TE-RP2040-Smart-MF** [www.smart-mf.de](https://www.smart-mf.de), als virtueller Pr\u00e4senzmelder auf allen Varianten lauff\u00e4hig\r\n* **OpenKNX-REG1-System** [OpenKNX-Wiki](https://github.com/OpenKNX/OpenKNX/wiki/OpenKNX-REG1), als virtueller Pr\u00e4senzmelder auf allen Varianten lauff\u00e4hig\r\n* **Smart-MF RealPresence** [www.smart-mf.de](https://www.smart-mf.de), als vollst\u00e4ndiger Pr\u00e4senzmelder, der auch Personen ohne Bewegung zuverl\u00e4ssig erkennt.\r\n\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "PresenceModule-Big-1.4.zip",
+                            "updated_at": "2022-11-30T13:50:05Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/1.4-Release/PresenceModule-Big-1.4.zip"
+                        },
+                        {
+                            "name": "PresenceModule-Release-1.4.zip",
+                            "updated_at": "2022-11-30T13:50:03Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-PresenceModule/releases/download/1.4-Release/PresenceModule-Release-1.4.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-EnoceanGateway": {
+            "repo_url": "https://github.com/OpenKNX/OAM-EnoceanGateway",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "1.9-release",
+                    "name": "1.9-release",
+                    "published_at": "2023-08-31T20:14:18Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/1.9-release",
+                    "body": "* improved robustness of underlying knx-stack\r\n* updated to LogicModule v1.5.1\r\n* FIX: DPT9 was sending a 0 for all numbers of the form 2^n/100, n>10 (i.e. 20,48; 40,96; 163,84; ...)\r\n\r\n**you should upgrade, if you are sending DPT9 values on the knx bus**\r\n",
+                    "assets": [
+                        {
+                            "name": "EnoceanGateway-Release-1.9.zip",
+                            "updated_at": "2023-08-31T20:08:24Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/download/1.9-release/EnoceanGateway-Release-1.9.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.6-release",
+                    "name": "1.6-release",
+                    "published_at": "2023-03-03T20:21:20Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/1.6-release",
+                    "body": "**Big Changes:**\r\n- Logik-Module now up to date \r\n\r\n**Small Changes**\r\n- some bug fixing\r\n\r\n**add new EPP Profils:**\r\n- D2-14-41\r\n- F6-02-03",
+                    "assets": [
+                        {
+                            "name": "EnoceanGateway-Release-1.6.5.zip",
+                            "updated_at": "2023-03-03T20:20:14Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/download/1.6-release/EnoceanGateway-Release-1.6.5.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.4-release",
+                    "name": "1.4-release",
+                    "published_at": "2022-12-05T21:04:38Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/1.4-release",
+                    "body": "Bugfixing A5-04 Profile\r\n\r\nadd A5-12-01\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "EnoceanGateway-Release-1.4.zip",
+                            "updated_at": "2022-12-08T11:54:11Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/download/1.4-release/EnoceanGateway-Release-1.4.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.2-release",
+                    "name": "1.2-release",
+                    "published_at": "2022-09-11T20:02:11Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/1.2-release",
+                    "body": "Add EEP-Profil:  D2-01-0E \r\n\r\ntested with Nodon MSP 2-1-11 ",
+                    "assets": [
+                        {
+                            "name": "EnoceanGateway-Release-1.2.zip",
+                            "updated_at": "2022-09-11T20:06:31Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/download/1.2-release/EnoceanGateway-Release-1.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.1-release",
+                    "name": "1.1-release",
+                    "published_at": "2022-07-15T19:48:41Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/1.1-release",
+                    "body": "- Profile corrections/improvements\r\n- Logic corrections\r\n- Save on Reset/Poweroff (Hardware v2.0 necessary)\r\n- Startup Time removed\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "EnoceanGateway-Release-1.1.zip",
+                            "updated_at": "2022-08-13T14:16:46Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/download/1.1-release/EnoceanGateway-Release-1.1.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "BEM-GardenControl": {
+            "repo_url": "https://github.com/OpenKNX/BEM-GardenControl",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "0.7-pre-release",
+                    "name": "0.7-pre-release",
+                    "published_at": "2024-10-13T16:29:08Z",
+                    "html_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/tag/0.7-pre-release",
+                    "body": "**Support for GardenControl 2.0** \r\n\r\n-> support new Hardware \r\n\r\nnew features:\r\n- add Configtransfer \r\n- GroupValueRead after startup possible\r\n- parameter \"Status senden bei Startup\" now send also the status values from the ventil and relays\r\n\r\nUpdade:\r\n- Logikmodul\r\n\r\n\r\n**--> this pre-release is only for testing**\r\n",
+                    "assets": [
+                        {
+                            "name": "GardenControl-Release-0.7.zip",
+                            "updated_at": "2024-10-13T16:27:26Z",
+                            "browser_download_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/download/0.7-pre-release/GardenControl-Release-0.7.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.4-release",
+                    "name": "0.4-release BETA",
+                    "published_at": "2023-08-10T17:03:14Z",
+                    "html_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/tag/0.4-release",
+                    "body": "Bugfixing:\r\n\r\n- KNXprod: fix DPT-Type (DPT12.12 to DPT12.1200 & DPT12.1201) ",
+                    "assets": [
+                        {
+                            "name": "GardenControl-Release-0.4.zip",
+                            "updated_at": "2023-08-10T17:01:22Z",
+                            "browser_download_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/download/0.4-release/GardenControl-Release-0.4.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.2-release",
+                    "name": "0.2-release BETA",
+                    "published_at": "2022-08-29T09:41:02Z",
+                    "html_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/tag/0.2-release",
+                    "body": "- First Release \r\n\r\n- Maturity level: LOW -> BUGs probably\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "GardenControl-Release-0.2.zip",
+                            "updated_at": "2022-08-29T09:43:37Z",
+                            "browser_download_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/download/0.2-release/GardenControl-Release-0.2.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-ModbusGateway": {
+            "repo_url": "https://github.com/OpenKNX/OAM-ModbusGateway",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "1.4-release",
+                    "name": "1.4-release",
+                    "published_at": "2024-12-14T14:10:00Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/tag/1.4-release",
+                    "body": "Bugfix:\r\n- 0x10 write Multiregister (Hi & Lo changed)\r\n- Senden bei Abs ",
+                    "assets": [
+                        {
+                            "name": "ModbusGateway-Release-1.4.1.zip",
+                            "updated_at": "2024-12-14T14:09:57Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/download/1.4-release/ModbusGateway-Release-1.4.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "v1.3",
+                    "name": "1.3-release",
+                    "published_at": "2023-05-15T12:17:30Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/tag/v1.3",
+                    "body": "**Version 1.3**\r\nBugfix with sending of DPT9-values - Values of the form 2^n/100 for n>10 were send as 0.\r\nMinor bugfixes in LogicModule\r\n**you should upgrade if you are sending DPT9 values to the knx bus** \r\n\r\n**Version 1.2**\r\nEnd of Beta for RP2040\r\nIncreased robustness of underlying KNX-Stack\r\n\r\n**Version 1.1.2**\r\nadded RP2040 hardware support\r\nthis is currently beta, there might be still problems with some RP2040 hardware\r\n\r\n**Version 1.0.2**\r\noptimization Prog Button behavior (no ETS Update necessary, only Firmware)\r\n\r\n**Version 1.0.1**\r\nBug-fixing: Prog-LED / ProgMode (no ETS Update necessary, only Firmware)\r\n\r\n### First official Release\r\n\r\nModbus RTU:\r\n\r\nimplemented:\r\n\r\n0x01 Read Coils\r\n0x02 Read Contacts\r\n0x05 Write Single Coils\r\n0x03 Read holding Redister (16Bit)\r\n0x04 Read Input Registers (16Bit)\r\n0x06 Write Single Register (16Bit)\r\n0x16 Write Multiple Register (16Bit)\r\nS0-Input:\r\n\r\nnot implemented yet: Meter reading will not be saved after a KNX-Bus voltage interruption/collapse\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "ModbusGateway-Release-1.3.zip",
+                            "updated_at": "2023-08-31T20:02:27Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/download/v1.3/ModbusGateway-Release-1.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.0.2-release",
+                    "name": "1.0.2-release",
+                    "published_at": "2022-11-24T19:59:40Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/tag/1.0.2-release",
+                    "body": "**First official Release:**\r\nModbus RTU:\r\n\r\nimplemented:\r\n\r\n- 0x01 Read Coils\r\n- 0x02 Read Contacts\r\n- 0x05 Write Single Coils\r\n- 0x03 Read holding Redister (16Bit)\r\n- 0x04 Read Input Registers (16Bit)\r\n- 0x06 Write Single Register (16Bit)\r\n- 0x16 Write Multiple Register (16Bit)\r\n\r\nS0-Input:\r\n\r\n- not implemented yet: Meter reading will not be saved after a KNX-Bus voltage interruption/collapse\r\n\r\n**Version 1.0.1**\r\nBug-fixing: Prog-LED / ProgMode (no ETS Update necessary, only Firmware)\r\n**Version 1.0.2**\r\noptimization Prog Button behavior  (no ETS Update necessary, only Firmware)",
+                    "assets": [
+                        {
+                            "name": "ModbusGateway-Release-1.0.2.zip",
+                            "updated_at": "2022-11-24T19:56:28Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/download/1.0.2-release/ModbusGateway-Release-1.0.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "1.0-release",
+                    "name": "1.0.1-release",
+                    "published_at": "2022-11-24T08:49:40Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/tag/1.0-release",
+                    "body": "**First official Release:**\r\nModbus RTU:\r\n\r\nimplemented:\r\n\r\n- 0x01 Read Coils\r\n- 0x02 Read Contacts\r\n- 0x05 Write Single Coils\r\n- 0x03 Read holding Redister (16Bit)\r\n- 0x04 Read Input Registers (16Bit)\r\n- 0x06 Write Single Register (16Bit)\r\n- 0x16 Write Multiple Register (16Bit)\r\n\r\nS0-Input:\r\n\r\n- not implemented yet: Meter reading will not be saved after a KNX-Bus voltage interruption/collapse\r\n\r\nVersion 1.0.1\r\nBug-fixing: Prog-LED / ProgMode",
+                    "assets": [
+                        {
+                            "name": "ModbusGateway-Release-1.0.1.zip",
+                            "updated_at": "2022-11-24T08:46:19Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/download/1.0-release/ModbusGateway-Release-1.0.1.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "SOM-UP": {
+            "repo_url": "https://github.com/OpenKNX/SOM-UP",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "1.0",
+                    "name": "Release Version 1.0",
+                    "published_at": "2024-07-09T12:25:47Z",
+                    "html_url": "https://github.com/OpenKNX/SOM-UP/releases/tag/1.0",
+                    "body": "Release der ersten finalen Version.\r\n\r\n- Update der UI\r\n- Updates des OpenKNX-Framework\r\n- Updates aller OpenKNX-Module\r\n- Update auf neuen KNX Stack\r\n- Updates der sonstigen Libraries",
+                    "assets": [
+                        {
+                            "name": "SoundModule-Release-1.0.zip",
+                            "updated_at": "2024-07-09T12:22:59Z",
+                            "browser_download_url": "https://github.com/OpenKNX/SOM-UP/releases/download/1.0/SoundModule-Release-1.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.12",
+                    "name": "Zwischenrelease Pre-1.0",
+                    "published_at": "2024-07-09T12:22:27Z",
+                    "html_url": "https://github.com/OpenKNX/SOM-UP/releases/tag/0.12",
+                    "body": "Zwischenrelease f\u00fcr das Upgrade auf Version 1.0",
+                    "assets": [
+                        {
+                            "name": "Upgrade-Pre-1.0.zip",
+                            "updated_at": "2024-07-09T12:21:40Z",
+                            "browser_download_url": "https://github.com/OpenKNX/SOM-UP/releases/download/0.12/Upgrade-Pre-1.0.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-InfraredGateway": {
+            "repo_url": "https://github.com/OpenKNX/OAM-InfraredGateway",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.2.1",
+                    "name": "0.2.1",
+                    "published_at": "2024-12-09T19:57:34Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-InfraredGateway/releases/tag/0.2.1",
+                    "body": "Diverse Updates",
+                    "assets": [
+                        {
+                            "name": "InfraredGateway-Beta-0.2.1.zip",
+                            "updated_at": "2024-12-09T19:57:18Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-InfraredGateway/releases/download/0.2.1/InfraredGateway-Beta-0.2.1.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-VirtualButton": {
+            "repo_url": "https://github.com/OpenKNX/OAM-VirtualButton",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "0.2.0",
+                    "name": "Beta 0.2.0",
+                    "published_at": "2023-02-06T22:40:59Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-VirtualButton/releases/tag/0.2.0",
+                    "body": "Small optmations on knxprod\r\nFixes processInputKo for channels > 1",
+                    "assets": [
+                        {
+                            "name": "VirtualButtonModule-Beta-0.2.zip",
+                            "updated_at": "2023-02-06T22:40:50Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-VirtualButton/releases/download/0.2.0/VirtualButtonModule-Beta-0.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "0.1.1",
+                    "name": "Beta 0.1.1",
+                    "published_at": "2023-01-28T10:45:02Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-VirtualButton/releases/tag/0.1.1",
+                    "body": "",
+                    "assets": [
+                        {
+                            "name": "VirtualButtonModule-Beta-0.1.1.zip",
+                            "updated_at": "2023-01-28T10:45:00Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-VirtualButton/releases/download/0.1.1/VirtualButtonModule-Beta-0.1.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "0.1.0",
+                    "name": "Beta 0.1.0",
+                    "published_at": "2023-01-24T20:08:05Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-VirtualButton/releases/tag/0.1.0",
+                    "body": "Beta 0.1.0",
+                    "assets": [
+                        {
+                            "name": "VirtualButtonModule-Beta-0.1.zip",
+                            "updated_at": "2023-01-24T20:07:23Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-VirtualButton/releases/download/0.1.0/VirtualButtonModule-Beta-0.1.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "GW-REG1-Dali": {
+            "repo_url": "https://github.com/OpenKNX/GW-REG1-Dali",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "v0.6.1",
+                    "name": "v0.6.1",
+                    "published_at": "2025-01-19T18:07:05Z",
+                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.6.1",
+                    "body": "- fix: relative dimm\r\n- fix: status after broadcast command\r\n- fix: scanning with short adresses in ets",
+                    "assets": [
+                        {
+                            "name": "GW-REG1-Dali-Release-0.6.1.zip",
+                            "updated_at": "2025-01-19T18:04:20Z",
+                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.6.1/GW-REG1-Dali-Release-0.6.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "v0.6.0",
+                    "name": "v0.6.0",
+                    "published_at": "2024-12-28T10:55:57Z",
+                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.6.0",
+                    "body": "- fix: scene handling\r\n- fix: memory leak dali\r\n- fix: scripts for writing/reading evgs\r\n- fix: dimm absolute\r\n\r\nmany other fixes and optimizations.",
+                    "assets": [
+                        {
+                            "name": "GW-REG1-Dali-Release-0.6.zip",
+                            "updated_at": "2024-12-28T10:55:19Z",
+                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.6.0/GW-REG1-Dali-Release-0.6.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "v0.5.2-beta",
+                    "name": "v0.5.2-beta",
+                    "published_at": "2024-05-26T16:55:12Z",
+                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.5.2-beta",
+                    "body": "This Version is beta!\r\nDebug mode is enabled.\r\nTo generate a knxprod use the [Kaenx-Creator in Version 1.8.1](https://github.com/OpenKNX/Kaenx-Creator/releases/tag/v1.8.1)\r\n\r\nDue to major changes to the upcomig 0.6 i cant guarantee update compatibility from 0.5.",
+                    "assets": []
+                }
+            ]
+        },
+        "OAM-SmartHomeBridge": {
+            "repo_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge",
+            "archived": false,
+            "releases": []
+        },
+        "OAM-TestApp": {
+            "repo_url": "https://github.com/OpenKNX/OAM-TestApp",
+            "archived": false,
+            "releases": []
+        },
+        "OAM-StateEngine": {
+            "repo_url": "https://github.com/OpenKNX/OAM-StateEngine",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "DFA16/v0.1-beta",
+                    "name": "DFA16 v0.1 Public Beta",
+                    "published_at": "2025-03-02T17:40:44Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/DFA16/v0.1-beta",
+                    "body": "# Erste \u00f6ffentliche Beta-Version der OpenKNX StateEngine\r\n\r\nAbbildung von zustandsabh\u00e4ngigem Verhalten in KNX, konfigurierbar \u00fcber die ETS, durch das erstmalige Bereitstellung des neue OpenKNX-Moduls f\u00fcr [Zustandsautomaten](https://github.com/OpenKNX/OFM-DFA). Ebenfalls enthalten sind das OpenKNX [Logik-Modul](https://github.com/OpenKNX/OFM-LogicModule), sowie OpenKNX [Konfigurationstansfer](https://github.com/OpenKNX/OFM-ConfigTransfer) und OpenKNX [Dateitransfer](https://github.com/OpenKNX/OFM-FileTransferModule).\r\n\r\nDie enthaltene Firmware ist auf einer Vielzahl von generischen OpenKNX-Ger\u00e4ten ausf\u00fchrbar: [OpenKNX REG1-Base](https://github.com/OpenKNX/OpenKNX/wiki/REG1-Base) (V1), [OpenKNX REG1-Base V0](https://github.com/OpenKNX/OpenKNX/wiki/REG1-Base-V0), [OpenKNX PiPico-BCU-Connector](https://github.com/OpenKNX/OpenKNX/wiki/PiPico-BCU-Connector), OpenKNX REG2 und OpenKNXiao RP2040.\r\n\r\n## Kurzbeschreibung Zustandsautomaten (OAM-DFA / DFA16)\r\n* **16 Zust\u00e4nde**; Ausgabe des aktuellen Zustands \u00fcber KO, optional auch direkter Aufruf des Zustands \u00fcber separates oder gemeinsames KO.\r\n* **8 Eingabesymbole (A bis H)**, die durch bis zu 8 unabh\u00e4ngige DPT1 Eingabe-KOs oder Logikausg\u00e4nge erzeugt werden; bei Eingang von 1 und/oder 0. Durch optionale Konfiguration als Eingabesymbolpaar kann z.B. ohne weiter Vorverarbeitung auf das Auftreten oder den Wegfall von erkannter Pr\u00e4senz reagiert werden.\r\n* Ein **Timeout-Eingabesymbol T** wird erzeugt, wenn innerhalb eines zustands-spezifisch konfigurierten Zeitintervalls keine Eingabe erfolgt (bzw. kein anderes Ereignis eingetreten) ist.\r\n* F\u00fcr jede Kombination aus Zustand und Eingabesymbol/ Ereignis/ kann ein Nachfolgezustand festgelegt werden.\r\n*  **4 Ausgabekan\u00e4le (O1 bis O4)** mit g\u00e4ngigen DPTs, darunter auch ein Kanal mit Text. F\u00fcr jede Kombination aus Zustand und Ausgang kann ein Wert und ein Sendeverhalten definiert werden.\r\n* Eine **Rekonstruktionsfunktion** erm\u00f6glicht auf Wunsch beim Neustart eine Fortsetzung in dem letzten gespeicherten Zustand/Status.\r\n* Optionale **Pausefunktion** zur Unterbrechnung der Ausf\u00fchrung per KO.\r\n\r\n## Neuerungen in diesem Release\r\n* Neue unabh\u00e4ngige Applikation **StateEngine-DFA16 mit 16xDFA16 + 48xLOG**: Reduktion von 32 auf 16 Zust\u00e4nde, und Halbierung Kanal-Anzahl zur Vermeidung sehr langer Programmierzeiten (Bisher >6 Minuten bei jedem 10 Programmiervorgang)\r\n* Update OFM-**DFA** auf 0.4.0-dev (mit Detail-Verbesserungen aus PROD Beta-Test)\r\n* Erweiterung Hardware-Support: Unterst\u00fctzung von *OpenKNXiao Mini* Hardware",
+                    "assets": []
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "v0.2-beta",
+                    "name": "(DFA32) v0.2 Beta",
+                    "published_at": "2025-02-16T19:14:27Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.2-beta",
+                    "body": "",
+                    "assets": []
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "v0.1-beta",
+                    "name": "(DFA32) v0.1 Internal Beta",
+                    "published_at": "2025-02-16T19:14:08Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.1-beta",
+                    "body": "",
+                    "assets": []
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "v0.0-alpha",
+                    "name": "v0.0 First Alpha",
+                    "published_at": "2023-10-10T20:17:24Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.0-alpha",
+                    "body": "Alpha-version for first testing.\r\n\r\nETS v0.0 alpha",
+                    "assets": []
+                }
+            ]
+        },
+        "OAM-AccessControl": {
+            "repo_url": "https://github.com/OpenKNX/OAM-AccessControl",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.6.13",
+                    "name": "Release 0.6.13",
+                    "published_at": "2024-10-16T17:59:15Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.13",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- FIX: Erh\u00f6hung des Timesouts bei der Anlernung.\r\n- FIX: Fehlgeschlagener Anlernvorgang wurde trotzdem mit einem Erfolg im Anlern-KO quittiert.\r\n\r\n**Hinweis:**\r\nBei einem Update von 0.6.x auf 0.6.13 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich.",
+                    "assets": [
+                        {
+                            "name": "FingerprintModule-ReleaseR503-0.6.13.zip",
+                            "updated_at": "2024-10-16T17:59:11Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.6.13/FingerprintModule-ReleaseR503-0.6.13.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.6.7",
+                    "name": "Release 0.6.7",
+                    "published_at": "2024-10-10T15:12:46Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.7",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- HW-SUPPORT: Unterst\u00fctzung f\u00fcr [AB-SmartHouse Fingerprint](https://www.ab-smarthouse.com/produkt/openknx-fingerprint-leser/) Hardware-Revision v1.7 und neuer hinzugef\u00fcgt.\r\n\r\n**Hinweis:**\r\nBei einem Update von 0.6.x auf 0.6.7 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich.",
+                    "assets": [
+                        {
+                            "name": "FingerprintModule-ReleaseR503-0.6.7.zip",
+                            "updated_at": "2024-10-10T15:09:56Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.6.7/FingerprintModule-ReleaseR503-0.6.7.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.6.6",
+                    "name": "Release 0.6.6",
+                    "published_at": "2024-08-21T18:47:39Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.6",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- FIX: Seltener Fall, bei dem der Fingerprint f\u00e4lschlicherweise dachte, er sei gesperrt, ist korrigiert.\r\n- FIX: Diverse interne Verbesserungen im Ablauf der Verarbeitung und KNX-Kommunikation.\r\n- FIX: Einige Standard-KO-Flags wurden korrigiert (wirkt sich nur bei neuen Installationen in er ETS aus).\r\n\r\n**Hinweis:**\r\nBei einem Update von 0.6.x auf 0.6.6 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich.",
+                    "assets": [
+                        {
+                            "name": "FingerprintModule-ReleaseR503-0.6.6.zip",
+                            "updated_at": "2024-08-22T16:33:33Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.6.6/FingerprintModule-ReleaseR503-0.6.6.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.6.3",
+                    "name": "Release 0.6.3",
+                    "published_at": "2024-08-01T17:51:12Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.3",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- CHANGE: Scanner reagiert nun auf externe Farbkontrolle, auch wenn er gerade gesperrt ist.\r\n- CHANGE: Ist der \"Fortlaufend\"-Modus aktiv und bleibt derselbe Finger auf dem Scanner, werden Ereignisse und Aktion nur einmal ausgef\u00fchrt.\r\n- CHANGE: Das KO \"Ber\u00fchrung (sofort, immer)\" wird nun in beiden Modi bei Ber\u00fchrung auf `True` und, nachdem der Finger entfernt wurde, auch wieder auf `False` gesetzt.\r\n\r\n**Hinweis:**\r\nBei einem Update von 0.6.x auf 0.6.3 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich.",
+                    "assets": [
+                        {
+                            "name": "FingerprintModule-ReleaseR503-0.6.3.zip",
+                            "updated_at": "2024-08-01T17:50:31Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.6.3/FingerprintModule-ReleaseR503-0.6.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.6.2",
+                    "name": "Release 0.6.2",
+                    "published_at": "2024-07-22T18:22:18Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.2",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- NEU: Eine aktive Sperre schaltet den Led-Ring nun auf rot.\r\n- FIX: Scannen von Fingern war trotz aktiver Sperre m\u00f6glich.\r\n\r\n**Hinweis:**\r\nBei einem Update von 0.6.x auf 0.6.2 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich.",
+                    "assets": [
+                        {
+                            "name": "FingerprintModule-ReleaseR503-0.6.2.zip",
+                            "updated_at": "2024-07-22T18:21:59Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.6.2/FingerprintModule-ReleaseR503-0.6.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.6.1",
+                    "name": "Release 0.6.1",
+                    "published_at": "2024-07-21T18:20:31Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.1",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n- FIX: Fingerprint wartet nun nicht l\u00e4nger auf weitere Finger, wenn ein Fingerscan fehlgeschlagen ist.\r\n- FIX: Die Schaltung des Relais' der zus\u00e4tzlichen Relais- und Bin\u00e4reingangsplatine war invertiert.\r\n\r\n**Hinweis:**\r\nBei einem Update von 0.6 auf 0.6.1 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich.",
+                    "assets": [
+                        {
+                            "name": "FingerprintModule-ReleaseR503-0.6.1.zip",
+                            "updated_at": "2024-07-21T18:20:07Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.6.1/FingerprintModule-ReleaseR503-0.6.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.6",
+                    "name": "Release 0.6",
+                    "published_at": "2024-07-15T20:28:50Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6",
+                    "body": "Dieses Mal ein etwas gr\u00f6\u00dferes Release mit einigen neuen Funktionen:\r\n\r\n- NEU: Unterst\u00fctzung f\u00fcr kommende Relais- und Bin\u00e4reingangsplatine hinzugef\u00fcgt.\r\n- NEU: Option f\u00fcr kontinuierlichen Scan hinzugef\u00fcgt (unabh\u00e4ngig vom Ber\u00fchrungsereignis).\r\n- NEU: Scanner-Verbindung wird nun \u00fcberwacht und \u00c4nderung als KO ausgegeben.\r\n- NEU: Nach Neustart werden f\u00fcr Aktionen \"Umschalten\" \"GroupValueRead\"-Telegramme gesendet.\r\n- NEU: Konfigurationstransfer hinzugef\u00fcgt.\r\n- FIX: Eingestellte Wartezeit auf Autorisierung wird und korrekt verwendet.\r\n- FIX: Der Fingerprint-LED-Ring leuchtet nun gelb anstatt gr\u00fcn, wenn eine Autorisierungsaktion nicht ausgef\u00fchrt werden konnte.\r\n- Dokumentation aktualisiert.\r\n- UI-Verbesserungen.",
+                    "assets": [
+                        {
+                            "name": "FingerprintModule-ReleaseR503-0.6.zip",
+                            "updated_at": "2024-07-15T20:17:52Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.6/FingerprintModule-ReleaseR503-0.6.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.2.1",
+                    "name": "Release 0.2.1",
+                    "published_at": "2024-06-02T07:46:37Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.2.1",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n- FIX: KO \"Scan: Erfolg\" liefert nun eine \"0\", wenn ein Finger nicht erkannt wurde.\r\n\r\n**Hinweis:**\r\nBei einem Update von 0.2 auf 0.2.1 muss lediglich die Firmware neu hochgeladen werden, in der ETS ist kein Update erforderlich.",
+                    "assets": [
+                        {
+                            "name": "FingerprintModule-ReleaseR503-0.2.1.zip",
+                            "updated_at": "2024-06-02T07:43:24Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.2.1/FingerprintModule-ReleaseR503-0.2.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.2",
+                    "name": "Release 0.2",
+                    "published_at": "2024-06-01T08:15:20Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.2",
+                    "body": "Neben vielen, kleinen Verbesserungen sind die wesentlichen Neuerungen:\r\n\r\n- Es gibt nun eine Personensuche, mit der man nach den zugewiesenen Fingern und Namen suchen kann.\r\n- Die Synchronisation zwischen mehreren Fingerabdrucklesern ist nun vollst\u00e4ndig implementiert. Ist diese aktiviert, erfolgt die Synchronisation automatisch, nachdem ein neuer Finger angelernt wurde. \u00dcber die ETS ist es aber auch m\u00f6glich die Synchronisation einzelner Finger manuell anzusto\u00dfen. Auch das L\u00f6schen eines Fingers wird synchronisiert.\r\n- Die Funktion und Farbe des Fingerprint LED-Rings kann nun \u00fcber Rohdaten-KOs auch extern gesteuert werden.",
+                    "assets": [
+                        {
+                            "name": "FingerprintModule-ReleaseR503-0.2.zip",
+                            "updated_at": "2024-06-01T08:15:41Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.2/FingerprintModule-ReleaseR503-0.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1",
+                    "name": "Release 0.1",
+                    "published_at": "2024-05-18T15:36:47Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.1",
+                    "body": "Initiales Firmware-Release:\r\nNeben dem versprochenen Rohdatenmodus unterst\u00fctzt bereits diese erste Firmware-Version die vollst\u00e4ndige Verwaltung von Fingern und Aktionen innerhalb der ETS. Zudem wurde das \"Passwort-Feature\" implementiert, sodass auf Wunsch \u00fcber die ETS-Anwendung ein Passwort f\u00fcr die Kommunikation zwischen der Firmware und dem Scanner vergeben werden kann (bitte Warnhinweis in der Anwendung beachten).",
+                    "assets": [
+                        {
+                            "name": "FingerprintModule-ReleaseR503-0.1.zip",
+                            "updated_at": "2024-05-18T15:32:03Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.1/FingerprintModule-ReleaseR503-0.1.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-IP-Router": {
+            "repo_url": "https://github.com/OpenKNX/OAM-IP-Router",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "5.0.2-Beta",
+                    "name": "5.0.2-Beta",
+                    "published_at": "2025-02-13T22:43:40Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/5.0.2-Beta",
+                    "body": "- fix bug in Tunneling (wrong port selected)\r\n- for ESP32-based HW (REG1-LAN-TP-Base) [OpenKNXProducer >= V3.6.0](https://github.com/OpenKNX/OpenKNXproducer/releases/tag/v3.6.0) is needed",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Beta-5.0.2.zip",
+                            "updated_at": "2025-02-13T22:44:57Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/5.0.2-Beta/IP-Router-Beta-5.0.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "5.0.1-Beta",
+                    "name": "5.0.1-Beta",
+                    "published_at": "2025-01-13T20:58:27Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/5.0.1-Beta",
+                    "body": "",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Beta-5.0.1.zip",
+                            "updated_at": "2025-01-13T20:57:45Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/5.0.1-Beta/IP-Router-Beta-5.0.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "2.12.3-Beta",
+                    "name": "2.12.3-Beta",
+                    "published_at": "2024-02-24T15:32:08Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/2.12.3-Beta",
+                    "body": "Beta 2.12.3 identisch zu Release 0.1.3\r\n\r\nGefixte Bugs:\r\n#11 \r\n#12 ",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Beta-2.12.3.zip",
+                            "updated_at": "2024-02-24T15:32:06Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/2.12.3-Beta/IP-Router-Beta-2.12.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1.3",
+                    "name": "0.1.3",
+                    "published_at": "2024-02-24T15:32:24Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.1.3",
+                    "body": "Beta 2.12.3 identisch zu Release 0.1.3\r\n\r\nGefixte Bugs:\r\n#11 \r\n#12 ",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Release-0.1.3.zip",
+                            "updated_at": "2024-03-20T08:57:56Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/0.1.3/IP-Router-Release-0.1.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "2.12.2-Beta",
+                    "name": "2.12.2-Beta",
+                    "published_at": "2024-02-14T11:46:04Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/2.12.2-Beta",
+                    "body": "Beta 2.12.2 identisch zu Release 0.1.2\r\n\r\nGefixte Bugs:\r\n#5 \r\n#8 \r\n#9\r\n#10 ",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Beta-2.12.2.zip",
+                            "updated_at": "2024-02-14T11:41:05Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/2.12.2-Beta/IP-Router-Beta-2.12.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1.2",
+                    "name": "0.1.2",
+                    "published_at": "2024-02-14T11:47:29Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.1.2",
+                    "body": "Release 0.1.2 identisch zu 2.12.2-Beta\r\n\r\nGefixte Bugs:\r\n#5 \r\n#8 \r\n#9\r\n#10 ",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Release-0.1.2.zip",
+                            "updated_at": "2024-02-14T11:47:07Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/0.1.2/IP-Router-Release-0.1.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "2.12.1-Beta",
+                    "name": "Beta 2.12.1",
+                    "published_at": "2024-02-08T22:53:53Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/2.12.1-Beta",
+                    "body": "fix #1 ",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Beta-2.12.1.zip",
+                            "updated_at": "2024-02-08T22:53:48Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/2.12.1-Beta/IP-Router-Beta-2.12.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1.1",
+                    "name": "0.1.1 Release",
+                    "published_at": "2024-02-08T22:52:52Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.1.1",
+                    "body": "fix #1 ",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Release-0.1.1.zip",
+                            "updated_at": "2024-02-08T22:52:00Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/0.1.1/IP-Router-Release-0.1.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "2.12.0-Beta",
+                    "name": "Beta 2.12.0",
+                    "published_at": "2024-01-24T16:03:35Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/2.12.0-Beta",
+                    "body": "Beta 2.12.0 identisch zu Release 0.1.0\r\n\r\nBekannte Bugs:\r\n- Tunnelverbindung EXPERIMENTAL\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Beta-2.12.zip",
+                            "updated_at": "2024-01-24T16:00:06Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/2.12.0-Beta/IP-Router-Beta-2.12.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1.0",
+                    "name": "0.1.0 Release",
+                    "published_at": "2024-01-24T16:04:35Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.1.0",
+                    "body": "Release 0.1.0 identisch zu Beta 2.12.0\r\n\r\nBekannte Bugs:\r\n- Tunnelverbindung EXPERIMENTAL",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Release-0.1.zip",
+                            "updated_at": "2024-01-24T16:03:58Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/0.1.0/IP-Router-Release-0.1.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-Meter": {
+            "repo_url": "https://github.com/OpenKNX/OAM-Meter",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "0.3",
+                    "name": "0.3 Beta",
+                    "published_at": "2024-12-04T19:20:36Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Meter/releases/tag/0.3",
+                    "body": "Beta release",
+                    "assets": [
+                        {
+                            "name": "MeterModule-Beta-0.3.zip",
+                            "updated_at": "2024-12-04T19:20:27Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Meter/releases/download/0.3/MeterModule-Beta-0.3.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-Sonos": {
+            "repo_url": "https://github.com/OpenKNX/OAM-Sonos",
+            "archived": false,
+            "releases": []
+        },
+        "OAM-ElectricDoorDrive": {
+            "repo_url": "https://github.com/OpenKNX/OAM-ElectricDoorDrive",
+            "archived": false,
+            "releases": []
+        },
+        "OAM-BinaryClock": {
+            "repo_url": "https://github.com/OpenKNX/OAM-BinaryClock",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1",
+                    "name": "Release 0.1",
+                    "published_at": "2024-09-06T08:54:30Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-BinaryClock/releases/tag/0.1",
+                    "body": "Initiales Firmware-Release.",
+                    "assets": [
+                        {
+                            "name": "BinaryClock-Release-0.1.zip",
+                            "updated_at": "2025-01-04T17:38:58Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-BinaryClock/releases/download/0.1/BinaryClock-Release-0.1.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-TouchRound": {
+            "repo_url": "https://github.com/OpenKNX/OAM-TouchRound",
+            "archived": false,
+            "releases": []
+        },
+        "OAM-Dummy": {
+            "repo_url": "https://github.com/OpenKNX/OAM-Dummy",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "1.0-Release",
+                    "name": "1.0-Release",
+                    "published_at": "2024-04-09T19:30:43Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Dummy/releases/tag/1.0-Release",
+                    "body": "Initiales Release unsererer Dummy Applikation.\r\n\r\nMit dem Release eines OpenKNX-Routers wollten wir auch eine geeignete Dummy-Applikation anbieten.\r\n\r\nEs gibt eine Dummy-Small mit bis zu 99 Kommunikationsobjekten und eine Dummy-Big mit bis zu 999 Kommunikationsobjekten.",
+                    "assets": [
+                        {
+                            "name": "Dummy-Big-1.0.zip",
+                            "updated_at": "2024-04-09T19:30:17Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Dummy/releases/download/1.0-Release/Dummy-Big-1.0.zip"
+                        },
+                        {
+                            "name": "Dummy-Small-1.0.zip",
+                            "updated_at": "2024-04-09T19:30:16Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Dummy/releases/download/1.0-Release/Dummy-Small-1.0.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-SwitchActuator": {
+            "repo_url": "https://github.com/OpenKNX/OAM-SwitchActuator",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.2",
+                    "name": "Release 0.2",
+                    "published_at": "2025-02-11T18:41:10Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SwitchActuator/releases/tag/0.2",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- NEU: Szenensteuerung hinzugef\u00fcgt.\r\n- NEU: Dokumentation und Kontexthilfe in der ETS hinzugef\u00fcgt.\r\n- CHANGE: Logikmodul auf Version 3.5 aktualisiert.\r\n- FIX: Relais-Schalteingang wird nun auch im noch nicht parametrisierten Zustand korrekt gesetzt.",
+                    "assets": [
+                        {
+                            "name": "SwitchActuator-Release-0.2.zip",
+                            "updated_at": "2025-02-11T18:41:05Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SwitchActuator/releases/download/0.2/SwitchActuator-Release-0.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1",
+                    "name": "Release 0.1",
+                    "published_at": "2024-09-06T07:28:26Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SwitchActuator/releases/tag/0.1",
+                    "body": "Initiales Firmware-Release.",
+                    "assets": [
+                        {
+                            "name": "SwitchActuator-Release-0.1.zip",
+                            "updated_at": "2024-09-06T07:28:16Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SwitchActuator/releases/download/0.1/SwitchActuator-Release-0.1.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-InternetServices": {
+            "repo_url": "https://github.com/OpenKNX/OAM-InternetServices",
+            "archived": false,
+            "releases": []
+        },
+        "OAM-ShutterController": {
+            "repo_url": "https://github.com/OpenKNX/OAM-ShutterController",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "v0.4.1",
+                    "name": "Beta 4",
+                    "published_at": "2024-12-28T19:12:04Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/v0.4.1",
+                    "body": "Bugfix Release: Handling of window open and manual usage fixed.",
+                    "assets": [
+                        {
+                            "name": "ShutterController-Release-0.4.1.zip",
+                            "updated_at": "2024-12-28T19:11:54Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/download/v0.4.1/ShutterController-Release-0.4.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
+                    "tag_name": "v0.1.1",
+                    "name": "Beta 0.1",
+                    "published_at": "2024-09-30T18:54:29Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/v0.1.1",
+                    "body": "Erste Beta Version. Bitte unbedingt den Abschnitt [Anschluss der Gruppenadressen](https://github.com/OpenKNX/OFM-ShutterControllerModule/blob/v1/doc/Applikationsbeschreibung-ShutterController.md#anschluss-der-gruppenadressen) in der Anwenderdoku beachten. \r\n\r\nGetestete HW Reg1-Base.",
+                    "assets": []
+                }
+            ]
+        },
+        "OAM-WeatherWN90LP": {
+            "repo_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "0.5.0-beta",
+                    "name": "0.5.0-beta",
+                    "published_at": "2025-03-13T17:32:19Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP/releases/tag/0.5.0-beta",
+                    "body": "",
+                    "assets": [
+                        {
+                            "name": "WeatherWN90LP-Beta-0.5.zip",
+                            "updated_at": "2025-03-13T17:32:16Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP/releases/download/0.5.0-beta/WeatherWN90LP-Beta-0.5.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-BinaryInput": {
+            "repo_url": "https://github.com/OpenKNX/OAM-BinaryInput",
+            "archived": false,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1",
+                    "name": "Release 0.1",
+                    "published_at": "2025-01-07T11:19:59Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-BinaryInput/releases/tag/0.1",
+                    "body": "Initiales Firmware-Release.",
+                    "assets": [
+                        {
+                            "name": "BinaryInputModule-Release-0.1.zip",
+                            "updated_at": "2025-01-07T11:19:55Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-BinaryInput/releases/download/0.1/BinaryInputModule-Release-0.1.zip"
+                        }
+                    ]
+                }
+            ]
+        },
+        "OAM-HeatingActuator": {
+            "repo_url": "https://github.com/OpenKNX/OAM-HeatingActuator",
+            "archived": false,
+            "releases": []
+        }
     }
 }

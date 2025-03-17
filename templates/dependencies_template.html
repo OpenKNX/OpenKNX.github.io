@@ -11,18 +11,24 @@
     <thead>
     <tr>
         <th>Dependency</th>
-        {% for key in all_keys %}
+        {% for key in multiple_occurrence_keys %}
         <th class="rotate"><div><span>{{ key }}</span></div></th>
         {% endfor %}
+        <th>Single Usage</th>
     </tr>
     </thead>
     <tbody>
     {% for dep_name, dep_details in dependencies.items() %}
     <tr>
         <th>{{ dep_name }}</th>
-        {% for key in all_keys %}
+        {% for key in multiple_occurrence_keys %}
         <td>{% if key in dep_details %}X{% else %}{% endif %}</td>
         {% endfor %}
+        <td>
+            {% for key in single_occurrence_keys %}
+                {% if key in dep_details %}{{key}} {% else %}{% endif %}
+            {% endfor %}
+        </td>
     </tr>
     {% endfor %}
     </tbody>

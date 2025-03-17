@@ -156,14 +156,29 @@ def update_html(releases_data):
         create_html_for_repo(repo, details)
 
 def generate_html_table(dependencies):
+    from collections import defaultdict
+
     all_keys = set()
+    key_count = defaultdict(int)
     for dep in dependencies.values():
         all_keys.update(dep.keys())
+        for key in dep.keys():
+            key_count[key] += 1
 
-    all_keys = sorted(all_keys, key=lambda k: sum(1 for dep in dependencies.values() if k in dep), reverse=True)
+    # Sort keys by their occurrence count, then alphabetically
+    sorted_keys = sorted(all_keys, key=lambda k: (-key_count[k], k))
+
+    # Separate single occurrence keys
+    single_occurrence_keys = [k for k in sorted_keys if key_count[k] == 1]
+    multiple_occurrence_keys = [k for k in sorted_keys if key_count[k] > 1]
 
     template = env.get_template('dependencies_template.html')
-    html_content = template.render(dependencies=dependencies, all_keys=all_keys)
+    html_content = template.render(
+        dependencies=dependencies,
+        multiple_occurrence_keys=multiple_occurrence_keys,
+        single_occurrence_keys=single_occurrence_keys,
+        key_count=key_count
+    )
     with open('dependencies_table.html', 'w') as file:
         file.write(html_content)
     return html_content

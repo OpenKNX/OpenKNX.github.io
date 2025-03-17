@@ -206,24 +206,24 @@ def parse_hardware_info(content_xml):
 def build_hardware_mapping(releases_data):
     hardware_mapping = {}
     for oamName, oamData in releases_data.items():
-        logging.info(f"Fetching hardware data for {oamName}")
         oamReleases = oamData["releases"]
-        if not oamReleases or not isinstance(oamReleases, list):
+        if not oamReleases or not isinstance(oamReleases, list) or len(oamReleases) == 0:
             logging.warning(f"No releases found for {oamName}")
             continue
         latest_release = oamReleases[0]
-        if latest_release:
-            for asset in latest_release.get('assets', []):
-                logging.info(f"-> Fetching release archive {asset['browser_download_url']}")
-                try:
-                    content_xml = download_and_extract_content_xml(asset['browser_download_url'])
-                    if content_xml is not None:
-                        hardware_info = parse_hardware_info(content_xml)
-                        hardware_mapping[oamName] = hardware_info
-                        break
-                except ET.ParseError as e:
-                    logging.warning(f"-> content.xml parsing error {e}")
-                    # Ignorieren Sie den Fehler und fahren Sie fort
+        for asset in latest_release.get('assets', []):
+            logging.info(f"Fetching release archive {oamName} from {asset['browser_download_url']}")
+            try:
+                content_xml = download_and_extract_content_xml(asset['browser_download_url'])
+                if content_xml is not None:
+                    hardware_info = parse_hardware_info(content_xml)
+                    hardware_mapping[oamName] = hardware_info
+                    break
+            except ET.ParseError as e:
+                logging.error(f"-> content.xml parsing error {e}")
+                # Ignorieren Sie den Fehler und fahren Sie fort
+        else:
+            logging.warning(f"No assets found for {oamName}")
     return hardware_mapping
 
 

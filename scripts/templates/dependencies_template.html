@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dependencies Table</title>
+    <link rel="stylesheet" href="css/table_header_rotate.css">
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Dependency</th>
+        {% for key in all_keys %}
+        <th class="rotate"><div><span>{{ key }}</span></div></th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for dep_name, dep_details in dependencies.items() %}
+    <tr>
+        <th>{{ dep_name }}</th>
+        {% for key in all_keys %}
+        <td>{% if key in dep_details %}X{% else %}{% endif %}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

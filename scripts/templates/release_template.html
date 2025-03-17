@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Releases der OpenKNX-Applikationen</title>
+</head>
+<body>
+<h1>Releases der OpenKNX-Applikationen</h1>
+{% for repo, details in releases_data.items() %}
+<h2>{{ repo }}</h2>
+<ul>
+    {% for release in details.releases %}
+    <li>
+        {% if release.prerelease %}[PRERELEASE] {% endif %}
+        <a href="{{ release.html_url }}">{{ release.name }} ({{ release.tag_name }})</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endfor %}
+</body>
+</html>

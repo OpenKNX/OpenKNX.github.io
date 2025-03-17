@@ -7,6 +7,10 @@ import os
 import logging
 import sys
 import time
+import zipfile
+from io import BytesIO
+import xml.etree.ElementTree as ET
+from jinja2 import Environment, FileSystemLoader
 
 # names for identification of app repos:
 appPrefix = "OAM-"
@@ -15,29 +19,28 @@ appSpecialNames = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"
 # Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Initialize Jinja2
+env = Environment(loader=FileSystemLoader('templates'))
+
 def get_response(url, allowedNotFound = False):
     try:
         response = requests.get(url)
         if response.status_code == 403 and 'X-RateLimit-Reset' in response.headers:
             # Try again 5 seconds after rate limit end
             wait_time = int(response.headers['X-RateLimit-Reset']) - int(time.time())
+            wait_time = max(wait_time, 0)  # Ensure wait_time is not negative
             logging.warning(f"Rate limit exceeded. Waiting for {wait_time} seconds.")
             time.sleep(wait_time + 5)
             response = requests.get(url)
         response.raise_for_status()
         return response
-    # TODO combine both exceptions
-    except requests.exceptions.HTTPError as e:
+    except requests.exceptions.RequestException as e:
         if allowedNotFound and response.status_code == 404:
             logging.warning(f"404 Not Found: {url}")
             return None
-        logging.error(f"Error fetching data from {url}: {e}")
-        # hard end on request fail to prevent missing data # TODO improve
-        sys.exit(1)
-    except requests.exceptions.RequestException as e:
-        logging.error(f"Error fetching data from {url}: {e}")
-        # hard end on request fail to prevent missing data # TODO improve
-        sys.exit(1)
+        error_message = f"Error fetching data from {url}: {e}"
+        logging.error(error_message)
+        sys.exit(error_message)
 
 def get_json_response(url):
     return get_response(url).json()
@@ -67,32 +70,40 @@ def fetch_apps_releases(repos_data):
                     "tag_name": release.get("tag_name"),
                     "name": release.get("name"),
                     "published_at": release.get("published_at"),
-                    "html_url": release.get("html_url")
+                    "html_url": release.get("html_url"),
+                    "body": release.get("body"),
+                    "assets": [
+                        {
+                            "name": asset.get("name"),
+                            "updated_at": asset.get("updated_at"),
+                            "browser_download_url": asset.get("browser_download_url")
+                        }
+                        for asset in release.get("assets") if asset.get("content_type") == "application/x-zip-compressed"
+                    ]
                 }
                 for release in releases if isinstance(release, dict) and not release.get("draft")
             ]
         }
-    with open('releases.json', 'w') as outfile:
-        json.dump(releases_data, outfile, indent=4)
     return releases_data
 
 def parse_dependencies(content):
     dependencies_map = {}
     lines = content.splitlines()
-    for line in lines[1:]:  # Skip the header
-        parts = line.split()
-        if len(parts) == 4:
-            commit, branch, path, url = parts
-            repo_name = url.split('/')[-1].replace('.git', '')  # Ableiten des Repo-Namens aus der URL
-            dependencies_map[repo_name] = {
-                "commit": commit,
-                "branch": branch,
-                "path": path,
-                "url": url,
-                "depName": repo_name
-            }
-        else:
-            logging.warning(f"Invalid line format {line}")
+    if lines:
+        for line in lines[1:]:  # Skip the header
+            parts = line.split()
+            if len(parts) == 4:
+                commit, branch, path, url = parts
+                repo_name = url.split('/')[-1].replace('.git', '')  # Ableiten des Repo-Namens aus der URL
+                dependencies_map[repo_name] = {
+                    "commit": commit,
+                    "branch": branch,
+                    "path": path,
+                    "url": url,
+                    "depName": repo_name
+                }
+            else:
+                logging.warning(f"Invalid line format {line}")
     return dependencies_map
 
 def fetch_dependencies(repo):
@@ -117,8 +128,7 @@ def fetch_all_dependencies(repos_data):
 def create_html_for_repo(repo_name, details):
     logging.info(f"Creating HTML for repository {repo_name}")
     os.makedirs('releases', exist_ok=True)
-    with open(f'releases/{repo_name}.html', 'w') as outfile:
-        outfile.write('<ul>\n')
+    with open(os.path.join('releases', f'{repo_name}.html'), 'w') as outfile:
         latest_release = None
         latest_prerelease = None
         for release in details["releases"]:
@@ -128,6 +138,8 @@ def create_html_for_repo(repo_name, details):
             else:
                 if latest_prerelease is None or release["published_at"] > latest_prerelease["published_at"]:
                     latest_prerelease = release
+
+        outfile.write('<ul>\n')
 
         if latest_release:
             outfile.write(f'<li><a href="{latest_release["html_url"]}">Neustes Release: {latest_release["name"]} ({latest_release["tag_name"]})</a></li>\n')
@@ -139,16 +151,13 @@ def create_html_for_repo(repo_name, details):
 
 def update_html(releases_data):
     logging.info("Updating HTML with release data")
+    template = env.get_template('release_template.html')
+    rendered_html = template.render(releases_data=releases_data)
     with open('releases_list.html', 'w') as outfile:
-        outfile.write('<h1>Releases der OpenKNX-Applikationen</h1>\n')
-        for repo, details in releases_data.items():
-            create_html_for_repo(repo, details)
-            outfile.write(f'<h2>{repo}</h2>\n')
-            outfile.write('<ul>\n')
-            for release in details["releases"]:
-                prefix = "[PRERELEASE] " if release["prerelease"] else ""
-                outfile.write(f'<li>{prefix}<a href="{release["html_url"]}">{release["name"]} ({release["tag_name"]})</a></li>\n')
-            outfile.write('</ul>\n')
+        outfile.write(rendered_html)
+    # current releases htmls for apps:
+    for repo, details in releases_data.items():
+        create_html_for_repo(repo, details)
 
 def generate_html_table(dependencies):
     all_keys = set()
@@ -157,38 +166,65 @@ def generate_html_table(dependencies):
 
     all_keys = sorted(all_keys, key=lambda k: sum(1 for dep in dependencies.values() if k in dep), reverse=True)
 
-    html_content = '<html>\n<head>\n<title>Dependencies Table</title>\n<link rel="stylesheet" href="css/table_header_rotate.css">\n</head>\n<body>\n'
-    html_content += '<table>\n'
-
-    html_content += '<thead><tr><th>Dependency</th>'
-    for key in all_keys:
-        html_content += f'<th class="rotate"><div><span>{key}</span></div></th>'
-    html_content += '</tr></thead>\n'
-
-    html_content += '<tbody>\n'
-    for dep_name, dep_details in dependencies.items():
-        html_content += f'<tr><th>{dep_name}</th>'
-        for key in all_keys:
-            if key in dep_details:
-                html_content += '<td>X</td>'
-            else:
-                html_content += '<td></td>'
-        html_content += '</tr>\n'
-    html_content += '</tbody>\n'
-
-    html_content += '</table>\n</body>\n</html>'
-    # Write to HTML file
+    template = env.get_template('dependencies_template.html')
+    html_content = template.render(dependencies=dependencies, all_keys=all_keys)
     with open('dependencies_table.html', 'w') as file:
         file.write(html_content)
     return html_content
 
+
+def download_and_extract_content_xml(zip_url):
+    response = get_response(zip_url)
+    zipfile_obj = zipfile.ZipFile(BytesIO(response.content))
+    with zipfile_obj.open('data/content.xml') as xml_file:
+        tree = ET.parse(xml_file)
+        root = tree.getroot()
+        return root
+
+def parse_hardware_info(content_xml):
+    products = content_xml.find('Products')
+    hardware = []
+    for product in products:
+        hardware.append(product.get('Name'))
+    return hardware
+
+def build_hardware_mapping(repos_data):
+    hardware_mapping = {}
+    for repo in repos_data:
+        logging.info(f"Fetching hardware data for {repo['name']}")
+        latest_release = repo["releases"][0] if repo["releases"] else None
+        if latest_release:
+            for asset in latest_release.get('assets', []):
+                logging.info(f"-> Fetching release archive {asset['browser_download_url']}")
+                content_xml = download_and_extract_content_xml(asset['browser_download_url'])
+                hardware_info = parse_hardware_info(content_xml)
+                hardware_mapping[repo['name']] = hardware_info
+                break
+    return hardware_mapping
+
+
 def main():
     oam_repos = fetch_app_repos()
+
     oam_releases_data = fetch_apps_releases(oam_repos)
+    releases_data = {
+        "OpenKnxContentType": "OpenKNX/OAM/Releases",
+        "OpenKnxFormatVersion": "v0.0.0-ALPHA",
+        "data": oam_releases_data
+    }
+    with open('releases.json', 'w') as outfile:
+        json.dump(releases_data, outfile, indent=4)
+
     update_html(oam_releases_data)
     all_oam_dependencies = fetch_all_dependencies(oam_repos)
     # Generate Dependencies Table
     html_content = generate_html_table(all_oam_dependencies)
+
+    hardware_mapping = build_hardware_mapping(oam_repos)
+    with open('hardware_mapping.json', 'w') as outfile:
+        json.dump(hardware_mapping, outfile, indent=4)
+    logging.info(f"Hardware-Support: {json.dumps(hardware_mapping, indent=4)}")
+
 
 if __name__ == "__main__":
     main()

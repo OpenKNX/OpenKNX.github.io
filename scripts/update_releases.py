@@ -205,11 +205,15 @@ def build_hardware_mapping(releases_data):
         if latest_release:
             for asset in latest_release.get('assets', []):
                 logging.info(f"-> Fetching release archive {asset['browser_download_url']}")
-                content_xml = download_and_extract_content_xml(asset['browser_download_url'])
-                if content_xml is not None:
-                    hardware_info = parse_hardware_info(content_xml)
-                    hardware_mapping[oamName] = hardware_info
-                    break
+                try:
+                    content_xml = download_and_extract_content_xml(asset['browser_download_url'])
+                    if content_xml is not None:
+                        hardware_info = parse_hardware_info(content_xml)
+                        hardware_mapping[oamName] = hardware_info
+                        break
+                except ET.ParseError as e:
+                    logging.warning(f"-> content.xml parsing error {e}")
+                    # Ignorieren Sie den Fehler und fahren Sie fort
     return hardware_mapping
 
 
@@ -231,10 +235,10 @@ def main():
     html_content = generate_html_table(all_oam_dependencies)
 
     # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")
-    # hardware_mapping = build_hardware_mapping(oam_releases_data)
-    # with open('hardware_mapping.json', 'w') as outfile:
-    #     json.dump(hardware_mapping, outfile, indent=4)
-    # logging.info(f"Hardware-Support: {json.dumps(hardware_mapping, indent=4)}")
+    hardware_mapping = build_hardware_mapping(oam_releases_data)
+    with open('hardware_mapping.json', 'w') as outfile:
+        json.dump(hardware_mapping, outfile, indent=4)
+    logging.info(f"Hardware-Support: {json.dumps(hardware_mapping, indent=4)}")
 
 
 if __name__ == "__main__":

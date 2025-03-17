@@ -15,6 +15,7 @@ from jinja2 import Environment, FileSystemLoader
 # names for identification of app repos:
 appPrefix = "OAM-"
 appSpecialNames = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"}
+appExclusion = {"OAM-TestApp"}
 
 # Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -50,7 +51,7 @@ def fetch_app_repos():
     app_repos_data = [
         repo
         for repo in repos_data
-        if repo["name"].startswith(appPrefix) or repo["name"] in appSpecialNames
+        if (repo["name"].startswith(appPrefix) or repo["name"] in appSpecialNames) and repo["name"] not in appExclusion
     ]
     return app_repos_data
 

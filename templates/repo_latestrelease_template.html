@@ -9,10 +9,10 @@
 <h1>Neuste Releases von {{repo_name}}</h1>
 <ul>
     {% if latest_release %}
-    <li><a href="{{ latest_release.html_url }}">Neustes Release: {{ latest_release.name }} ({{ latest_release.tag_name }})</a></li>
+    <li>Neustes Release: <a href="{{ latest_release.html_url }}">{{ latest_release.name }} ({{ latest_release.tag_name }})</a></li>
     {% endif %}
     {% if latest_prerelease and (latest_release is none or latest_prerelease.published_at > latest_release.published_at) %}
-    <li><a href="{{ latest_prerelease.html_url }}">[PRERELEASE] Neustes Pre-Release: {{ latest_prerelease.name }} ({{ latest_prerelease.tag_name }})</a></li>
+    <li>[PRERELEASE] Neustes Pre-Release: <a href="{{ latest_prerelease.html_url }}">{{ latest_prerelease.name }} ({{ latest_prerelease.tag_name }})</a></li>
     {% endif %}
 </ul>
 </body>

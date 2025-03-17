@@ -188,17 +188,17 @@ def parse_hardware_info(content_xml):
         hardware.append(product.get('Name'))
     return hardware
 
-def build_hardware_mapping(repos_data):
+def build_hardware_mapping(releases_data):
     hardware_mapping = {}
-    for repo in repos_data:
-        logging.info(f"Fetching hardware data for {repo['name']}")
-        latest_release = repo["releases"][0] if repo["releases"] else None
+    for oamName, oamReleases in releases_data.items():
+        logging.info(f"Fetching hardware data for {oamName}")
+        latest_release = oamReleases[0] if oamReleases else None
         if latest_release:
             for asset in latest_release.get('assets', []):
                 logging.info(f"-> Fetching release archive {asset['browser_download_url']}")
                 content_xml = download_and_extract_content_xml(asset['browser_download_url'])
                 hardware_info = parse_hardware_info(content_xml)
-                hardware_mapping[repo['name']] = hardware_info
+                hardware_mapping[oamName] = hardware_info
                 break
     return hardware_mapping
 
@@ -221,7 +221,7 @@ def main():
     html_content = generate_html_table(all_oam_dependencies)
 
     logging.info(f"OAM Repo Data: {json.dumps(oam_repos, indent=4)}")
-    hardware_mapping = build_hardware_mapping(oam_repos)
+    hardware_mapping = build_hardware_mapping(oam_releases_data)
     with open('hardware_mapping.json', 'w') as outfile:
         json.dump(hardware_mapping, outfile, indent=4)
     logging.info(f"Hardware-Support: {json.dumps(hardware_mapping, indent=4)}")

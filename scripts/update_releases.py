@@ -109,7 +109,7 @@ def fetch_dependencies(repo):
                         "depName": depName
                     }
             else:
-                logging.warning(f"Invalid dependencies.txt line format '{line}' in {repo['name']}")
+                logging.warning(f"Invalid dependencies.txt format in {repo['name']} line '{line}'")
     return dependencies_map
 
 def fetch_all_dependencies(repos_data):

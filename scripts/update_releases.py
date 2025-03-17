@@ -78,7 +78,7 @@ def fetch_apps_releases(repos_data):
                             "updated_at": asset.get("updated_at"),
                             "browser_download_url": asset.get("browser_download_url")
                         }
-                        for asset in release.get("assets") if asset.get("content_type") == "application/x-zip-compressed"
+                        for asset in release.get("assets") if asset.get("name").endswith(".zip") # multiple MIME-Types, at least: if asset.get("content_type") in ["application/x-zip-compressed", "application/zip"]
                     ]
                 }
                 for release in releases if isinstance(release, dict) and not release.get("draft")

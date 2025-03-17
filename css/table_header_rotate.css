@@ -12,6 +12,10 @@ th {
     font-weight: normal;
     text-align: left;
 }
+th.singleModules {
+    text-align: center;
+    vertical-align: bottom;
+}
 
 td {
     text-align: center;

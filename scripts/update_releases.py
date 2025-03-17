@@ -158,26 +158,26 @@ def update_html(releases_data):
 def generate_html_table(dependencies):
     from collections import defaultdict
 
-    all_keys = set()
-    key_count = defaultdict(int)
+    modules = set()
+    modulesUsageCount = defaultdict(int)
     for dep in dependencies.values():
-        all_keys.update(dep.keys())
+        modules.update(dep.keys())
         for key in dep.keys():
-            key_count[key] += 1
+            modulesUsageCount[key] += 1
 
     # Sort keys by their occurrence count, then alphabetically
-    sorted_keys = sorted(all_keys, key=lambda k: (-key_count[k], k))
+    modulesSorted = sorted(modules, key=lambda k: (-modulesUsageCount[k], k))
 
     # Separate single occurrence keys
-    single_occurrence_keys = [k for k in sorted_keys if key_count[k] == 1]
-    multiple_occurrence_keys = [k for k in sorted_keys if key_count[k] > 1]
+    modulesSingleUse = [k for k in modulesSorted if modulesUsageCount[k] == 1]
+    modulesMultiUse = [k for k in modulesSorted if modulesUsageCount[k] > 1]
 
     template = env.get_template('dependencies_template.html')
     html_content = template.render(
         dependencies=dependencies,
-        multiple_occurrence_keys=multiple_occurrence_keys,
-        single_occurrence_keys=single_occurrence_keys,
-        key_count=key_count
+        modulesMultiUse=modulesMultiUse,
+        modulesSingleUse=modulesSingleUse,
+        key_count=modulesUsageCount
     )
     with open('dependencies_table.html', 'w') as file:
         file.write(html_content)

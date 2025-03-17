@@ -11,22 +11,22 @@
     <thead>
     <tr>
         <th>Dependency</th>
-        {% for key in multiple_occurrence_keys %}
-        <th class="rotate"><div><span>{{ key }}</span></div></th>
+        {% for m in modulesMultiUse %}
+        <th class="rotate"><div><span>{{ m }}</span></div></th>
         {% endfor %}
-        <th>Single Usage</th>
+        <th class="singleModules">Single Usage</th>
     </tr>
     </thead>
     <tbody>
-    {% for dep_name, dep_details in dependencies.items() %}
+    {% for oamName, dep_details in dependencies.items() %}
     <tr>
-        <th>{{ dep_name }}</th>
-        {% for key in multiple_occurrence_keys %}
-        <td>{% if key in dep_details %}X{% else %}{% endif %}</td>
+        <th>{{ oamName }}</th>
+        {% for m in modulesMultiUse %}
+        <td>{% if m in dep_details %}X{% else %}{% endif %}</td>
         {% endfor %}
         <td>
-            {% for key in single_occurrence_keys %}
-                {% if key in dep_details %}{{key}} {% else %}{% endif %}
+            {% for m in modulesSingleUse %}
+                {% if m in dep_details %}{{m}} {% else %}{% endif %}
             {% endfor %}
         </td>
     </tr>

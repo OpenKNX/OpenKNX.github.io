@@ -190,9 +190,13 @@ def parse_hardware_info(content_xml):
 
 def build_hardware_mapping(releases_data):
     hardware_mapping = {}
-    for oamName, oamReleases in releases_data.items():
+    for oamName, oamData in releases_data.items():
         logging.info(f"Fetching hardware data for {oamName}")
-        latest_release = oamReleases[0] if oamReleases else None
+        oamReleases = oamData["releases"]
+        if not oamReleases or not isinstance(oamReleases, list):
+            logging.warning(f"No releases found for {oamName}")
+            continue
+        latest_release = oamReleases[0]
         if latest_release:
             for asset in latest_release.get('assets', []):
                 logging.info(f"-> Fetching release archive {asset['browser_download_url']}")

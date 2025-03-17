@@ -86,9 +86,13 @@ def fetch_apps_releases(repos_data):
         }
     return releases_data
 
-def parse_dependencies(content):
+def fetch_dependencies(repo):
+    url = f"https://raw.githubusercontent.com/OpenKNX/{repo['name']}/{repo['default_branch']}/dependencies.txt"
+    response = get_response(url, True)
+    if response is None:
+        return {}
     dependencies_map = {}
-    lines = content.splitlines()
+    lines = response.text.splitlines()
     if lines:
         for line in lines[1:]:  # Skip the header
             parts = line.split()
@@ -103,15 +107,8 @@ def parse_dependencies(content):
                     "depName": repo_name
                 }
             else:
-                logging.warning(f"Invalid line format {line}")
+                logging.warning(f"Invalid dependencies.txt line format '{line}' in {repo['name']}")
     return dependencies_map
-
-def fetch_dependencies(repo):
-    url = f"https://raw.githubusercontent.com/OpenKNX/{repo['name']}/{repo['default_branch']}/dependencies.txt"
-    response = get_response(url, True)
-    if response is None:
-        return {}
-    return parse_dependencies(response.text)
 
 def fetch_all_dependencies(repos_data):
     all_dependencies = {}

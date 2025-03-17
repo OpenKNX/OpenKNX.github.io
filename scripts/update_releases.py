@@ -231,10 +231,10 @@ def main():
     html_content = generate_html_table(all_oam_dependencies)
 
     # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")
-    hardware_mapping = build_hardware_mapping(oam_releases_data)
-    with open('hardware_mapping.json', 'w') as outfile:
-        json.dump(hardware_mapping, outfile, indent=4)
-    logging.info(f"Hardware-Support: {json.dumps(hardware_mapping, indent=4)}")
+    # hardware_mapping = build_hardware_mapping(oam_releases_data)
+    # with open('hardware_mapping.json', 'w') as outfile:
+    #     json.dump(hardware_mapping, outfile, indent=4)
+    # logging.info(f"Hardware-Support: {json.dumps(hardware_mapping, indent=4)}")
 
 
 if __name__ == "__main__":

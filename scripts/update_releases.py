@@ -220,6 +220,7 @@ def main():
     # Generate Dependencies Table
     html_content = generate_html_table(all_oam_dependencies)
 
+    logging.info(f"OAM Repo Data: {json.dumps(oam_repos, indent=4)}")
     hardware_mapping = build_hardware_mapping(oam_repos)
     with open('hardware_mapping.json', 'w') as outfile:
         json.dump(hardware_mapping, outfile, indent=4)

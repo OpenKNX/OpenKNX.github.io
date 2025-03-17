@@ -899,11 +899,6 @@
             "archived": false,
             "releases": []
         },
-        "OAM-TestApp": {
-            "repo_url": "https://github.com/OpenKNX/OAM-TestApp",
-            "archived": false,
-            "releases": []
-        },
         "OAM-StateEngine": {
             "repo_url": "https://github.com/OpenKNX/OAM-StateEngine",
             "archived": false,

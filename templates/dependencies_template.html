@@ -24,11 +24,7 @@
         {% for m in modulesMultiUse %}
         <td>{% if m in dep_details %}X{% else %}{% endif %}</td>
         {% endfor %}
-        <td>
-            {% for m in modulesSingleUse %}
-                {% if m in dep_details %}{{m}} {% else %}{% endif %}
-            {% endfor %}
-        </td>
+        <td>{{ modulesSingleUse | select('in', dep_details) | join(', ') }}</td>
     </tr>
     {% endfor %}
     </tbody>

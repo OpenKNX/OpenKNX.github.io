@@ -915,7 +915,13 @@
                     "published_at": "2025-03-02T17:40:44Z",
                     "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/DFA16/v0.1-beta",
                     "body": "# Erste \u00f6ffentliche Beta-Version der OpenKNX StateEngine\r\n\r\nAbbildung von zustandsabh\u00e4ngigem Verhalten in KNX, konfigurierbar \u00fcber die ETS, durch das erstmalige Bereitstellung des neue OpenKNX-Moduls f\u00fcr [Zustandsautomaten](https://github.com/OpenKNX/OFM-DFA). Ebenfalls enthalten sind das OpenKNX [Logik-Modul](https://github.com/OpenKNX/OFM-LogicModule), sowie OpenKNX [Konfigurationstansfer](https://github.com/OpenKNX/OFM-ConfigTransfer) und OpenKNX [Dateitransfer](https://github.com/OpenKNX/OFM-FileTransferModule).\r\n\r\nDie enthaltene Firmware ist auf einer Vielzahl von generischen OpenKNX-Ger\u00e4ten ausf\u00fchrbar: [OpenKNX REG1-Base](https://github.com/OpenKNX/OpenKNX/wiki/REG1-Base) (V1), [OpenKNX REG1-Base V0](https://github.com/OpenKNX/OpenKNX/wiki/REG1-Base-V0), [OpenKNX PiPico-BCU-Connector](https://github.com/OpenKNX/OpenKNX/wiki/PiPico-BCU-Connector), OpenKNX REG2 und OpenKNXiao RP2040.\r\n\r\n## Kurzbeschreibung Zustandsautomaten (OAM-DFA / DFA16)\r\n* **16 Zust\u00e4nde**; Ausgabe des aktuellen Zustands \u00fcber KO, optional auch direkter Aufruf des Zustands \u00fcber separates oder gemeinsames KO.\r\n* **8 Eingabesymbole (A bis H)**, die durch bis zu 8 unabh\u00e4ngige DPT1 Eingabe-KOs oder Logikausg\u00e4nge erzeugt werden; bei Eingang von 1 und/oder 0. Durch optionale Konfiguration als Eingabesymbolpaar kann z.B. ohne weiter Vorverarbeitung auf das Auftreten oder den Wegfall von erkannter Pr\u00e4senz reagiert werden.\r\n* Ein **Timeout-Eingabesymbol T** wird erzeugt, wenn innerhalb eines zustands-spezifisch konfigurierten Zeitintervalls keine Eingabe erfolgt (bzw. kein anderes Ereignis eingetreten) ist.\r\n* F\u00fcr jede Kombination aus Zustand und Eingabesymbol/ Ereignis/ kann ein Nachfolgezustand festgelegt werden.\r\n*  **4 Ausgabekan\u00e4le (O1 bis O4)** mit g\u00e4ngigen DPTs, darunter auch ein Kanal mit Text. F\u00fcr jede Kombination aus Zustand und Ausgang kann ein Wert und ein Sendeverhalten definiert werden.\r\n* Eine **Rekonstruktionsfunktion** erm\u00f6glicht auf Wunsch beim Neustart eine Fortsetzung in dem letzten gespeicherten Zustand/Status.\r\n* Optionale **Pausefunktion** zur Unterbrechnung der Ausf\u00fchrung per KO.\r\n\r\n## Neuerungen in diesem Release\r\n* Neue unabh\u00e4ngige Applikation **StateEngine-DFA16 mit 16xDFA16 + 48xLOG**: Reduktion von 32 auf 16 Zust\u00e4nde, und Halbierung Kanal-Anzahl zur Vermeidung sehr langer Programmierzeiten (Bisher >6 Minuten bei jedem 10 Programmiervorgang)\r\n* Update OFM-**DFA** auf 0.4.0-dev (mit Detail-Verbesserungen aus PROD Beta-Test)\r\n* Erweiterung Hardware-Support: Unterst\u00fctzung von *OpenKNXiao Mini* Hardware",
-                    "assets": []
+                    "assets": [
+                        {
+                            "name": "StateEngine-DFA16-Release-0.1.BETA.2025-03-01.cc436dfc537b75d31c268103164eb66c.zip",
+                            "updated_at": "2025-03-06T22:27:34Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/download/DFA16/v0.1-beta/StateEngine-DFA16-Release-0.1.BETA.2025-03-01.cc436dfc537b75d31c268103164eb66c.zip"
+                        }
+                    ]
                 },
                 {
                     "prerelease": true,
@@ -1408,7 +1414,13 @@
                     "published_at": "2024-09-30T18:54:29Z",
                     "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/v0.1.1",
                     "body": "Erste Beta Version. Bitte unbedingt den Abschnitt [Anschluss der Gruppenadressen](https://github.com/OpenKNX/OFM-ShutterControllerModule/blob/v1/doc/Applikationsbeschreibung-ShutterController.md#anschluss-der-gruppenadressen) in der Anwenderdoku beachten. \r\n\r\nGetestete HW Reg1-Base.",
-                    "assets": []
+                    "assets": [
+                        {
+                            "name": "ShutterController-Release-0.1.1.zip",
+                            "updated_at": "2024-09-30T18:54:23Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/download/v0.1.1/ShutterController-Release-0.1.1.zip"
+                        }
+                    ]
                 }
             ]
         },

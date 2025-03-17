@@ -98,14 +98,15 @@ def fetch_dependencies(repo):
             parts = line.split()
             if len(parts) == 4:
                 commit, branch, path, url = parts
-                repo_name = url.split('/')[-1].replace('.git', '')  # Ableiten des Repo-Namens aus der URL
-                dependencies_map[repo_name] = {
-                    "commit": commit,
-                    "branch": branch,
-                    "path": path,
-                    "url": url,
-                    "depName": repo_name
-                }
+                depName = url.split('/')[-1].replace('.git', '')  # Ableiten des Repo-Namens aus der URL
+                if url.startswith("https://github.com/OpenKNX/"): # TODO check if the exclusion of external libs here is a clean solution
+                    dependencies_map[depName] = {
+                        "commit": commit,
+                        "branch": branch,
+                        "path": path,
+                        "url": url,
+                        "depName": depName
+                    }
             else:
                 logging.warning(f"Invalid dependencies.txt line format '{line}' in {repo['name']}")
     return dependencies_map

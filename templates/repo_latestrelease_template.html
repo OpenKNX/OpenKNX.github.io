@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuste Releases von {{repo_name}}</title>
+</head>
+<body>
+<h1>Neuste Releases von {{repo_name}}</h1>
+<ul>
+    {% if latest_release %}
+    <li><a href="{{ latest_release.html_url }}">Neustes Release: {{ latest_release.name }} ({{ latest_release.tag_name }})</a></li>
+    {% endif %}
+    {% if latest_prerelease and (latest_release is none or latest_prerelease.published_at > latest_release.published_at) %}
+    <li><a href="{{ latest_prerelease.html_url }}">[PRERELEASE] Neustes Pre-Release: {{ latest_prerelease.name }} ({{ latest_prerelease.tag_name }})</a></li>
+    {% endif %}
+</ul>
+</body>
+</html>
+
+

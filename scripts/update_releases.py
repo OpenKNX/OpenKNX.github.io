@@ -127,27 +127,23 @@ def fetch_all_dependencies(repos_data):
 # Ein Pre-Release wird nur dann mit ausgegeben wenn es neuer ist als das neuste Release, oder noch kein reguläres existiert
 def create_html_for_repo(repo_name, details):
     logging.info(f"Creating HTML for repository {repo_name}")
+
+    latest_release = None
+    latest_prerelease = None
+    for release in details["releases"]:
+        if not release["prerelease"]:
+            if latest_release is None or release["published_at"] > latest_release["published_at"]:
+                latest_release = release
+        else:
+            if latest_prerelease is None or release["published_at"] > latest_prerelease["published_at"]:
+                latest_prerelease = release
+
+    # create release info for this repo
+    template = env.get_template('repo_latestrelease_template.html')
+    rendered_html = template.render(repo_name=repo_name, latest_release=latest_release, latest_prerelease=latest_prerelease)
     os.makedirs('releases', exist_ok=True)
     with open(os.path.join('releases', f'{repo_name}.html'), 'w') as outfile:
-        latest_release = None
-        latest_prerelease = None
-        for release in details["releases"]:
-            if not release["prerelease"]:
-                if latest_release is None or release["published_at"] > latest_release["published_at"]:
-                    latest_release = release
-            else:
-                if latest_prerelease is None or release["published_at"] > latest_prerelease["published_at"]:
-                    latest_prerelease = release
-
-        outfile.write('<ul>\n')
-
-        if latest_release:
-            outfile.write(f'<li><a href="{latest_release["html_url"]}">Neustes Release: {latest_release["name"]} ({latest_release["tag_name"]})</a></li>\n')
-
-        if latest_prerelease and (latest_release is None or latest_prerelease["published_at"] > latest_release["published_at"]):
-            outfile.write(f'<li><a href="{latest_prerelease["html_url"]}">[PRERELEASE] Neustes Pre-Release: {latest_prerelease["name"]} ({latest_prerelease["tag_name"]})</a></li>\n')
-
-        outfile.write('</ul>\n')
+        outfile.write(rendered_html)
 
 def update_html(releases_data):
     logging.info("Updating HTML with release data")

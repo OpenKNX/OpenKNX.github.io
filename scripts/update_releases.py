@@ -154,12 +154,12 @@ def update_html(releases_data):
     for repo, details in releases_data.items():
         create_html_for_repo(repo, details)
 
-def generate_html_table(dependencies):
+def generate_html_table(oam_dependencies, oam_hardware):
     from collections import defaultdict
 
     modules = set()
     modulesUsageCount = defaultdict(int)
-    for dep in dependencies.values():
+    for dep in oam_dependencies.values():
         modules.update(dep.keys())
         for key in dep.keys():
             modulesUsageCount[key] += 1
@@ -173,10 +173,11 @@ def generate_html_table(dependencies):
 
     template = env.get_template('dependencies_template.html')
     html_content = template.render(
-        dependencies=dependencies,
+        oam_dependencies=oam_dependencies,
         modulesMultiUse=modulesMultiUse,
         modulesSingleUse=modulesSingleUse,
-        key_count=modulesUsageCount
+        key_count=modulesUsageCount,
+        oam_hardware=oam_hardware
     )
     with open('dependencies_table.html', 'w') as file:
         file.write(html_content)
@@ -239,16 +240,16 @@ def main():
     with open('releases.json', 'w') as outfile:
         json.dump(releases_data, outfile, indent=4)
 
+    # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")
+    oam_hardware = build_hardware_mapping(oam_releases_data)
+    with open('hardware_mapping.json', 'w') as outfile:
+        json.dump(oam_hardware, outfile, indent=4)
+    logging.info(f"Hardware-Support: {json.dumps(oam_hardware, indent=4)}")
+
     update_html(oam_releases_data)
     all_oam_dependencies = fetch_all_dependencies(oam_repos)
     # Generate Dependencies Table
-    html_content = generate_html_table(all_oam_dependencies)
-
-    # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")
-    hardware_mapping = build_hardware_mapping(oam_releases_data)
-    with open('hardware_mapping.json', 'w') as outfile:
-        json.dump(hardware_mapping, outfile, indent=4)
-    logging.info(f"Hardware-Support: {json.dumps(hardware_mapping, indent=4)}")
+    html_content = generate_html_table(all_oam_dependencies, oam_hardware)
 
 
 if __name__ == "__main__":

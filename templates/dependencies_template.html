@@ -15,16 +15,18 @@
         <th class="rotate"><div><span>{{ m }}</span></div></th>
         {% endfor %}
         <th class="singleModules">Single Usage</th>
+        <th class="singleModules">Hardware</th>
     </tr>
     </thead>
     <tbody>
-    {% for oamName, dep_details in dependencies.items() %}
+    {% for oamName, dep_details in oam_dependencies.items() %}
     <tr>
         <th>{{ oamName }}</th>
         {% for m in modulesMultiUse %}
         <td>{% if m in dep_details %}X{% else %}{% endif %}</td>
         {% endfor %}
         <td>{{ modulesSingleUse | select('in', dep_details) | join(', ') }}</td>
+        <td>{{ oam_hardware[oamName] | join(', ') }}</td>
     </tr>
     {% endfor %}
     </tbody>

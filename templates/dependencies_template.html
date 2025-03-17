@@ -25,8 +25,8 @@
         {% for m in modulesMultiUse %}
         <td>{% if m in dep_details %}X{% else %}{% endif %}</td>
         {% endfor %}
-        <td>{{ modulesSingleUse | select('in', dep_details) | join(', ') }}</td>
-        <td>{{ oam_hardware[oamName] | join(', ') }}</td>
+        <td class="left">{{ modulesSingleUse | select('in', dep_details) | join(', ') }}</td>
+        <td class="left" title="{{ oam_hardware[oamName] | join(', ') }}">{% if len(oam_hardware[oamName]) > 0 %}len(oam_hardware[oamName]){% else %}{% endif %}</td>
     </tr>
     {% endfor %}
     </tbody>

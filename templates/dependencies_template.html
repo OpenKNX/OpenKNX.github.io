@@ -23,7 +23,7 @@
     <tr>
         <th>{{ oamName }}</th>
         {% for m in modulesMultiUse %}
-        <td>{% if m in dep_details %}X{% else %}{% endif %}</td>
+        <td class="isPart">{% if m in dep_details %}&#9632;{% else %}{% endif %}</td>
         {% endfor %}
         <td class="left">{{ modulesSingleUse | select('in', dep_details) | join(', ') }}</td>
         <td class="left" title="{{ oam_hardware[oamName] | join(', ') }}">  {% if oam_hardware[oamName] is defined and oam_hardware[oamName] | length > 0 %}{{ oam_hardware[oamName] | length }}{% else %}{% endif %}</td>

@@ -36,6 +36,9 @@ th.singleModules {
 td {
     text-align: center;
 }
+td.isPart {
+    color: #449841;
+}
 td.left {
     text-align: left;
 }

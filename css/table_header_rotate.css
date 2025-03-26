@@ -13,7 +13,7 @@ simple special title with logo
 TODO clean definition!
 */
 table.openknxTitleTable {
-    background: url('img/openknx-logoline.png') no-repeat top right;
+    background: url('/img/openknx-logoline.png') no-repeat top right;
 }
 table.openknxTitleTable thead th:first-child {
     position: absolute;

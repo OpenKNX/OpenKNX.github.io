@@ -13,18 +13,18 @@ class DependencyManager:
         dependencies_map = {}
         lines = response.text.splitlines()
         if lines:
-            for line in lines[1:]:
+            for line in lines[1:]:  # Skip the header
                 parts = line.split()
                 if len(parts) == 4:
                     commit, branch, path, url = parts
-                    dep_name = url.split('/')[-1].replace('.git', '')
-                    if url.startswith("https://github.com/OpenKNX/"):
-                        dependencies_map[dep_name] = {
+                    depName = url.split('/')[-1].replace('.git', '')  # Ableiten des Repo-Namens aus der URL
+                    if url.startswith("https://github.com/OpenKNX/"): # TODO check if the exclusion of external libs here is a clean solution
+                        dependencies_map[depName] = {
                             "commit": commit,
                             "branch": branch,
                             "path": path,
                             "url": url,
-                            "dep_name": dep_name
+                            "depName": depName
                         }
                 else:
                     logging.warning(f"Invalid dependencies.txt format in {repo['name']} line '{line}'")

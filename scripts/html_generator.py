@@ -6,6 +6,8 @@ class HTMLGenerator:
     def __init__(self):
         self.env = Environment(loader=FileSystemLoader('templates'))
 
+    # Erzeugt zu jedem Repo eine kleine HTML-Datei mit Ausgabe des aktuellsten Release.
+    # Ein Pre-Release wird nur dann mit ausgegeben, wenn es neuer ist als das neuste Release, oder noch kein reguläres existiert
     def create_html_for_repo(self, repo_name, details):
         logging.info(f"Creating HTML for repository {repo_name}")
         latest_release = None
@@ -17,6 +19,8 @@ class HTMLGenerator:
             else:
                 if latest_prerelease is None or release["published_at"] > latest_prerelease["published_at"]:
                     latest_prerelease = release
+
+        # create release info for this repo
         template = self.env.get_template('repo_latestrelease_template.html')
         rendered_html = template.render(repo_name=repo_name, latest_release=latest_release, latest_prerelease=latest_prerelease)
         os.makedirs('releases', exist_ok=True)
@@ -29,26 +33,32 @@ class HTMLGenerator:
         rendered_html = template.render(releases_data=releases_data)
         with open('releases_list.html', 'w') as outfile:
             outfile.write(rendered_html)
+        # current releases htmls for apps:
         for repo, details in releases_data.items():
             self.create_html_for_repo(repo, details)
 
     def generate_html_table(self, oam_dependencies, oam_hardware):
         from collections import defaultdict
         modules = set()
-        modules_usage_count = defaultdict(int)
+        modulesUsageCount = defaultdict(int)
         for dep in oam_dependencies.values():
             modules.update(dep.keys())
             for key in dep.keys():
-                modules_usage_count[key] += 1
-        modules_sorted = sorted(modules, key=lambda k: (-modules_usage_count[k], k))
-        modules_single_use = [k for k in modules_sorted if modules_usage_count[k] == 1]
-        modules_multi_use = [k for k in modules_sorted if modules_usage_count[k] > 1]
+                modulesUsageCount[key] += 1
+
+        # Sort keys by their occurrence count, then alphabetically
+        modulesSorted = sorted(modules, key=lambda k: (-modulesUsageCount[k], k))
+
+        # Separate single occurrence keys
+        modulesSingleUse = [k for k in modulesSorted if modulesUsageCount[k] == 1]
+        modulesMultiUse = [k for k in modulesSorted if modulesUsageCount[k] > 1]
+
         template = self.env.get_template('dependencies_template.html')
         html_content = template.render(
             oam_dependencies=oam_dependencies,
-            modules_multi_use=modules_multi_use,
-            modules_single_use=modules_single_use,
-            key_count=modules_usage_count,
+            modulesMultiUse=modulesMultiUse,
+            modulesSingleUse=modulesSingleUse,
+            key_count=modulesUsageCount,
             oam_hardware=oam_hardware
         )
         with open('dependencies_table.html', 'w') as file:

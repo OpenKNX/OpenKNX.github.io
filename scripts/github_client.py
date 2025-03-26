@@ -11,8 +11,8 @@ class GitHubClient:
         try:
             response = requests.get(url)
             if response.status_code == 403 and 'X-RateLimit-Reset' in response.headers:
-                wait_time = int(response.headers['X-RateLimit-Reset']) - int(time.time())
-                wait_time = max(wait_time, 0)
+                # Try again 5 seconds after rate limit end
+                wait_time = max(0, int(response.headers['X-RateLimit-Reset']) - int(time.time()))
                 logging.warning(f"Rate limit exceeded. Waiting for {wait_time} seconds.")
                 time.sleep(wait_time + 5)
                 response = requests.get(url)

@@ -1,6 +1,7 @@
 # Build OpenKNX Release Overviews for Integration in Pages, Wiki and Toolbox
 # 2025 CK (OpenKNX)
 
+import json
 import logging
 from github_client import GitHubClient
 from release_manager import ReleaseManager

@@ -953,6 +953,21 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.8",
+                    "name": "Release 0.8",
+                    "published_at": "2025-03-25T23:19:55Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.8",
+                    "body": "Neues Release mit einigen Updates:\r\n\r\n* NEU: Die Applikation wurde in \"Zutrittskontrolle\" umbenannt.\r\n* NEU: Die Abfrage von NFC-Tags wird jetzt unterst\u00fctzt.\r\n* NEU: Die Applikation nutzt jetzt das neue Modul AccessControl.\r\n* NEU: Aktionen, die keine Autorisierung erfordern, haben jetzt ein Sperr-KO\r\n\r\nBei diesem Release sind einige Kommunikationsobjekte entfallen. Bevor man in der ETS die Applikation aktualisieren kann, m\u00fcssen jegliche GA von diesen KO entfernt werden. Es geht um folgende KO-Nummern: 23-27, 31-36, 40-41.\r\n\r\nWeitere Details werden im knx-user-forum.de beschrieben.",
+                    "assets": [
+                        {
+                            "name": "AccessControl-ReleaseR503-0.8.zip",
+                            "updated_at": "2025-03-25T23:19:08Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.8/AccessControl-ReleaseR503-0.8.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.6.13",
                     "name": "Release 0.6.13",
                     "published_at": "2024-10-16T17:59:15Z",

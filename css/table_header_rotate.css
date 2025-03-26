@@ -8,6 +8,22 @@ body {
     font-family: sans-serif;
 }
 
+/*
+simple special title with logo
+TODO clean definition!
+*/
+table.openknxTitleTable {
+    background: url('img/openknx-logoline.png') no-repeat top right;
+}
+table.openknxTitleTable thead th:first-child {
+    position: absolute;
+    color: #449841;
+    font-size: 150%;
+    border-top: 3px solid #449841;
+    top: 40px;
+    padding-right: 200px;
+}
+
 th {
     font-weight: normal;
     text-align: left;

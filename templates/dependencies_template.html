@@ -11,7 +11,7 @@
     <thead>
     <tr>
         <th>OpenKnx-Applikationen/-Module und unterstützte Geräte</th>
-        {% for module, count in modules_sorted.items() %}
+        {% for module, count in modules_sorted %}
         {% if count > 1 %}
         <th class="rotate"><div><span>{{ module }}</span></div></th>
         {% endif %}
@@ -24,7 +24,7 @@
     {% for oamName, dep_details in oam_dependencies.items() %}
     <tr>
         <th>{{ oamName }}</th>
-        {% for module, count in modules_sorted.items() %}
+        {% for module, count in modules_sorted %}
         {% if count > 1 %}
         <td class="isPart">{% if module in dep_details %}&#9632;{% else %}{% endif %}</td>
         {% endif %}

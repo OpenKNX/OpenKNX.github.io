@@ -40,25 +40,25 @@ class HTMLGenerator:
     def generate_html_table(self, oam_dependencies, oam_hardware):
         from collections import defaultdict
         modules = set()
-        modulesUsageCount = defaultdict(int)
+        modules_usage_count = defaultdict(int)
         for dep in oam_dependencies.values():
             modules.update(dep.keys())
             for key in dep.keys():
-                modulesUsageCount[key] += 1
+                modules_usage_count[key] += 1
 
         # Sort keys by their occurrence count, then alphabetically
-        modulesSorted = sorted(modules, key=lambda k: (-modulesUsageCount[k], k))
+        modules_sorted = sorted(modules, key=lambda k: (-modules_usage_count[k], k))
 
         # Separate single occurrence keys
-        modulesSingleUse = [k for k in modulesSorted if modulesUsageCount[k] == 1]
-        modulesMultiUse = [k for k in modulesSorted if modulesUsageCount[k] > 1]
+        modules_single_use = [k for k in modules_sorted if modules_usage_count[k] == 1]
+        modules_multi_use = [k for k in modules_sorted if modules_usage_count[k] > 1]
 
         template = self.env.get_template('dependencies_template.html')
         html_content = template.render(
             oam_dependencies=oam_dependencies,
-            modulesMultiUse=modulesMultiUse,
-            modulesSingleUse=modulesSingleUse,
-            key_count=modulesUsageCount,
+            modulesMultiUse=modules_multi_use,
+            modulesSingleUse=modules_single_use,
+            key_count=modules_usage_count,
             oam_hardware=oam_hardware
         )
         with open('dependencies_table.html', 'w') as file:

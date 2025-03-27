@@ -12,7 +12,7 @@
     <tr>
         <th>OpenKnx-Applikationen/-Module und unterstützte Geräte</th>
         {% for module, count in modules_sorted if count > 1 %}
-        <th class="rotate"><div><span>{{ module }}</span></div></th>
+        <th class="rotate"><div><span data-ofm="{{module}}">{{ module }}</span></div></th>
         {% endfor %}
         <th class="singleModules">Einmalig verwendete Module:</th>
         <th class="singleModules">Geräte</th>
@@ -21,9 +21,9 @@
     <tbody>
     {% for oamName, dep_details in oam_dependencies.items() %}
     <tr>
-        <th>{{ oamName }}</th>
+        <th data-oam="{{oamName}}">{{ oamName }}</th>
         {% for module, count in modules_sorted if count > 1 %}
-        <td class="isPart">{% if module in dep_details %}&#9632;{% else %}{% endif %}</td>
+        <td data-oam="{{oamName}}" data-ofm="{{module}}" class="isPart">{% if module in dep_details %}&#9632;{% else %}{% endif %}</td>
         {% endfor %}
         <td class="left">{{ modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', dep_details) | join(', ') }}</td>
         <td class="left" title="{{ oam_hardware[oamName] | join(', ') }}">  {% if oam_hardware[oamName] is defined and oam_hardware[oamName] | length > 0 %}{{ oam_hardware[oamName] | length }}{% endif %}</td>

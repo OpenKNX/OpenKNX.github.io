@@ -66,17 +66,11 @@ class HTMLGenerator:
                 modules_usage_count[key] += 1
 
         # Sort keys by their occurrence count, then alphabetically
-        modules_sorted = sorted(modules_usage_count.keys(), key=lambda k: (-modules_usage_count[k], k))
-
-        # Separate single occurrence keys
-        modules_single_use = [k for k in modules_sorted if modules_usage_count[k] == 1]
-        modules_multi_use = [k for k in modules_sorted if modules_usage_count[k] > 1]
+        modules_sorted = sorted(modules_usage_count.items(), key=lambda item: (-item[1], item[0]))
 
         html_content = self._render_template_to_file('dependencies_template.html', 'dependencies_table.html',
             oam_dependencies=oam_dependencies,
-            modulesMultiUse=modules_multi_use,
-            modulesSingleUse=modules_single_use,
-            key_count=modules_usage_count,
+            modules_sorted=modules_sorted,
             oam_hardware=oam_hardware
         )
         return html_content

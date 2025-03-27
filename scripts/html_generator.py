@@ -6,6 +6,22 @@ class HTMLGenerator:
     def __init__(self):
         self.env = Environment(loader=FileSystemLoader('templates'))
 
+    def _render_template_to_file(self, template_name, output_filename, **context):
+        """
+        Renders a Jinja2 template to an HTML file with the provided context.
+
+        :param template_name: Name of the template file.
+        :param output_filename: Name of the output HTML file.
+        :param context: Additional keyword arguments to be passed as context to the template.
+        """
+        template = self.env.get_template(template_name)
+        html_content = template.render(**context)
+
+        with open(output_filename, 'w') as file:
+            file.write(html_content)
+
+        return html_content
+
     # Erzeugt zu jedem Repo eine kleine HTML-Datei mit Ausgabe des aktuellsten Release.
     # Ein Pre-Release wird nur dann mit ausgegeben, wenn es neuer ist als das neuste Release, oder noch kein reguläres existiert
     def create_html_for_repo(self, repo_name, details):
@@ -21,18 +37,21 @@ class HTMLGenerator:
                     latest_prerelease = release
 
         # create release info for this repo
-        template = self.env.get_template('repo_latestrelease_template.html')
-        rendered_html = template.render(repo_name=repo_name, latest_release=latest_release, latest_prerelease=latest_prerelease)
         os.makedirs('releases', exist_ok=True)
-        with open(os.path.join('releases', f'{repo_name}.html'), 'w') as outfile:
-            outfile.write(rendered_html)
+        output_filename = os.path.join('releases', f'{repo_name}.html')
+        self._render_template_to_file('repo_latestrelease_template.html', output_filename,
+            repo_name=repo_name,
+            latest_release=latest_release,
+            latest_prerelease=latest_prerelease
+        )
 
     def update_html(self, releases_data):
         logging.info("Updating HTML with release data")
-        template = self.env.get_template('release_template.html')
-        rendered_html = template.render(releases_data=releases_data)
-        with open('releases_list.html', 'w') as outfile:
-            outfile.write(rendered_html)
+
+        self._render_template_to_file('release_template.html','releases_list.html',
+            releases_data=releases_data
+        )
+
         # current releases htmls for apps:
         for repo, details in releases_data.items():
             self.create_html_for_repo(repo, details)
@@ -53,14 +72,11 @@ class HTMLGenerator:
         modules_single_use = [k for k in modules_sorted if modules_usage_count[k] == 1]
         modules_multi_use = [k for k in modules_sorted if modules_usage_count[k] > 1]
 
-        template = self.env.get_template('dependencies_template.html')
-        html_content = template.render(
+        html_content = self._render_template_to_file('dependencies_template.html', 'dependencies_table.html',
             oam_dependencies=oam_dependencies,
             modulesMultiUse=modules_multi_use,
             modulesSingleUse=modules_single_use,
             key_count=modules_usage_count,
             oam_hardware=oam_hardware
         )
-        with open('dependencies_table.html', 'w') as file:
-            file.write(html_content)
         return html_content

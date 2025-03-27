@@ -24,6 +24,14 @@ table.openknxTitleTable thead th:first-child {
     padding-right: 200px;
 }
 
+/* row shading */
+tbody tr:nth-child(2n+1) {
+    background-color: #f8f8f8;
+}
+tbody tr:hover {
+    background-color: #eee;
+}
+
 th {
     font-weight: normal;
     text-align: left;
@@ -64,7 +72,7 @@ th.rotate > div {
 th.rotate > div > span {
     padding: 5px 10px;
 }
-td {
+td, tbody th {
     border-right: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }

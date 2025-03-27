@@ -5,6 +5,10 @@ class DependencyManager:
     def __init__(self, client):
         self.client = client
 
+    def _is_openknx_dependency(self, url):
+        # TODO check if the exclusion of external libs here is a clean solution
+        return url.startswith("https://github.com/OpenKNX/")
+
     def fetch_dependencies(self, repo):
         dependencies_url = f"https://raw.githubusercontent.com/OpenKNX/{repo['name']}/{repo['default_branch']}/dependencies.txt"
         response = self.client.get_response(dependencies_url, True)
@@ -18,7 +22,7 @@ class DependencyManager:
                 if len(parts) == 4:
                     commit, branch, path, url = parts
                     dep_name = url.split('/')[-1].replace('.git', '')  # Ableiten des Repo-Namens aus der URL
-                    if url.startswith("https://github.com/OpenKNX/"): # TODO check if the exclusion of external libs here is a clean solution
+                    if self._is_openknx_dependency(url):
                         dependencies_map[dep_name] = {
                             "commit": commit,
                             "branch": branch,

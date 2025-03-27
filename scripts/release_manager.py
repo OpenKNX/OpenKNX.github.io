@@ -2,14 +2,28 @@ from github_client import GitHubClient
 import logging
 
 class ReleaseManager:
-    def __init__(self, client):
+    def __init__(self, client, app_prefix, app_special_names, app_exclusion):
         self.client = client
+        self.app_prefix = app_prefix
+        self.app_special_names = app_special_names
+        self.app_exclusion = app_exclusion
 
-    def fetch_app_repos(self, app_prefix, app_special_names, app_exclusion):
-        repos_data = self.client.get_json_response(f"{self.client.base_url}/orgs/OpenKNX/repos?per_page=1000&type=public")
+    def _check_include_repo(self, repo):
+        rn = repo["name"]
+        return (rn.startswith(self.app_prefix) or rn in self.app_special_names) and rn not in self.app_exclusion
+
+    def fetch_app_repos(self):
+        """
+        Read the info for all public Application Repos (selected by Name) from API and return full data as List.
+
+        :return: list of structured repo data
+        """
+        repos_url = f"{self.client.base_url}/orgs/OpenKNX/repos?per_page=1000&type=public"
+        repos_data = self.client.get_json_response(repos_url)
         app_repos_data = [
-            repo for repo in repos_data
-            if (repo["name"].startswith(app_prefix) or repo["name"] in app_special_names) and repo["name"] not in app_exclusion
+            repo
+            for repo in repos_data
+            if self._check_include_repo(repo)
         ]
         return app_repos_data
 

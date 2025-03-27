@@ -21,7 +21,7 @@ appExclusion = {"OAM-TestApp"}
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 client = GitHubClient()
-release_manager = ReleaseManager(client)
+release_manager = ReleaseManager(client, appPrefix, appSpecialNames, appExclusion)
 dependency_manager = DependencyManager(client)
 html_generator = HTMLGenerator()
 
@@ -73,7 +73,7 @@ def build_hardware_mapping(releases_data):
 
 
 def main():
-    oam_repos = release_manager.fetch_app_repos(appPrefix, appSpecialNames, appExclusion)
+    oam_repos = release_manager.fetch_app_repos()
 
     oam_releases_data = release_manager.fetch_apps_releases(oam_repos)
     releases_data = {

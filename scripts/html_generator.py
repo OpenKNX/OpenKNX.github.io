@@ -57,16 +57,16 @@ class HTMLGenerator:
             self.create_html_for_repo(repo, details)
 
     def generate_html_table(self, oam_dependencies, oam_hardware):
+
+        # module -> usage_count
         from collections import defaultdict
-        modules = set()
         modules_usage_count = defaultdict(int)
         for dep in oam_dependencies.values():
-            modules.update(dep.keys())
             for key in dep.keys():
                 modules_usage_count[key] += 1
 
         # Sort keys by their occurrence count, then alphabetically
-        modules_sorted = sorted(modules, key=lambda k: (-modules_usage_count[k], k))
+        modules_sorted = sorted(modules_usage_count.keys(), key=lambda k: (-modules_usage_count[k], k))
 
         # Separate single occurrence keys
         modules_single_use = [k for k in modules_sorted if modules_usage_count[k] == 1]

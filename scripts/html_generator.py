@@ -113,6 +113,8 @@ class HTMLGenerator:
 
     def _hw_name_mapping(self, oam, hw_text):
         # TODO move, this should not be part of html rendering
+        if oam == "SEN-UP1-8xTH" and hw_text == "firmware":
+            return "OpenKNX-SEN-UP1-8XTH"
         if hw_text in self.device_name_map:
             return self.device_name_map[hw_text]
         else:

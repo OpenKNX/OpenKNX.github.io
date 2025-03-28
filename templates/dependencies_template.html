@@ -15,18 +15,37 @@
         <th class="rotate"><div><span data-ofm="{{module}}">{{ module }}</span></div></th>
         {% endfor %}
         <th class="singleModules">Einmalig verwendete Module:</th>
-        <th class="singleModules">Geräte</th>
+        {% for device, count in devices_sorted if count > 1 %}
+        <th class="rotate"><div><span data-dev="{{device}}">{{ device }}</span></div></th>
+        {% endfor %}
+        <th class="singleModules">Spezielles Gerät:</th>
+        <th class="rotate"><div><span data-dev="*ready*">Geräte mit Schaltplan</span></div></th>
+        <th class="rotate"><div><span data-dev="*other*">Sonstige Geräte</span></div></th>
     </tr>
     </thead>
     <tbody>
     {% for oamName, dep_details in oam_dependencies.items() %}
     <tr>
         <th data-oam="{{oamName}}">{{ oamName }}</th>
+
         {% for module, count in modules_sorted if count > 1 %}
         <td data-oam="{{oamName}}" data-ofm="{{module}}" class="isPart">{% if module in dep_details %}&#9632;{% else %}{% endif %}</td>
         {% endfor %}
         <td class="left">{{ modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', dep_details) | join(', ') }}</td>
+
+        {% for device, count in devices_sorted if count > 1 %}
+        <td data-oam="{{oamName}}" data-dev="{{device}}" class="isPart">{% if device in oam_hardware[oamName] %}&#9632;{% else %}{% endif %}</td>
+        {% endfor %}
+        <td class="left">{{ devices_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oam_hardware[oamName]) | join(', ') }}</td>
+
+        {% set oam_devices_other = devices_other_sorted | map(attribute='0') | select('in', oam_hardware[oamName]) | list %}
+        <td class="left" title=""></td>
+        <td title="{{ oam_devices_other | join(', ') }}">{% if oam_devices_other | length > 0 %}{{ oam_devices_other | length }}{% endif %}</td>
+
+
+        <!--
         <td class="left" title="{{ oam_hardware[oamName] | join(', ') }}">  {% if oam_hardware[oamName] is defined and oam_hardware[oamName] | length > 0 %}{{ oam_hardware[oamName] | length }}{% endif %}</td>
+        -->
     </tr>
     {% endfor %}
     </tbody>

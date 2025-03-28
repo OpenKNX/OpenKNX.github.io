@@ -56,6 +56,10 @@ class HTMLGenerator:
         for repo, details in releases_data.items():
             self.create_html_for_repo(repo, details)
 
+    def _is_open_device(self, device_name):
+        # TODO move, this should not be part of html rendering
+        return "OpenKNX" in device_name
+
     def generate_html_table(self, oam_dependencies, oam_hardware):
 
         # module -> usage_count
@@ -64,13 +68,33 @@ class HTMLGenerator:
         for dep in oam_dependencies.values():
             for key in dep.keys():
                 modules_usage_count[key] += 1
+        hardware_usage_count = defaultdict(int)
+        hardware_other_usage_count = defaultdict(int)
+        for hw_list in oam_hardware.values():
+            logging.info(f"Devices {hw_list}")
+            for hw in hw_list:
+                logging.info(f"-> Device {hw}")
+                if self._is_open_device(hw):
+                    hardware_usage_count[hw] += 1
+                else:
+                    hardware_other_usage_count[hw] += 1
+
+        logging.info(f"Collected Device {hardware_usage_count}")
 
         # Sort keys by their occurrence count, then alphabetically
         modules_sorted = sorted(modules_usage_count.items(), key=lambda item: (-item[1], item[0]))
+        devices_sorted = sorted(hardware_usage_count.items(), key=lambda item: (-item[1], item[0]))
+        devices_other_sorted = sorted(hardware_other_usage_count.items(), key=lambda item: (-item[1], item[0]))
+
+        logging.info(f"Modules sorted {modules_sorted}")
+        logging.info(f"Device sorted {devices_sorted}")
+        logging.info(f"OAM Hardware {oam_hardware}")
 
         html_content = self._render_template_to_file('dependencies_template.html', 'dependencies_table.html',
             oam_dependencies=oam_dependencies,
             modules_sorted=modules_sorted,
+            devices_sorted=devices_sorted,
+            devices_other_sorted=devices_other_sorted,
             oam_hardware=oam_hardware
         )
         return html_content

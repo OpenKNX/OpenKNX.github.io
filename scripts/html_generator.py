@@ -131,8 +131,8 @@ class HTMLGenerator:
         hardware_other_usage_count = defaultdict(int)
         for oam, hw_list in oam_hardware.items():
             logging.info(f"Devices for {oam}: {hw_list}")
-            for hwText in hw_list:
-                hw = self._hw_name_mapping(oam, hwText)
+            for hw_text in hw_list:
+                hw = self._hw_name_mapping(oam, hw_text)
                 logging.info(f"-> Device {hw}")
                 if self._is_open_device(hw):
                     hardware_usage_count[hw] += 1

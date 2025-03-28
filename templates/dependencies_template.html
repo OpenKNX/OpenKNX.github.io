@@ -19,7 +19,6 @@
         <th class="rotate"><div><span data-dev="{{device}}">{{ device }}</span></div></th>
         {% endfor %}
         <th class="singleModules">Spezielle Geräte:</th>
-        <th class="rotate"><div><span data-dev="*ready*">Geräte mit Schaltplan</span></div></th>
         <th class="rotate"><div><span data-dev="*other*">Sonstige Geräte</span></div></th>
     </tr>
     </thead>
@@ -39,7 +38,6 @@
         <td class="left">{{ devices_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oam_hardware[oamName]) | join(', ') }}</td>
 
         {% set oam_devices_other = devices_other_sorted | map(attribute='0') | select('in', oam_hardware[oamName]) | list %}
-        <td class="left" title=""></td>
         <td title="{{ oam_devices_other | join(', ') }}">{% if oam_devices_other | length > 0 %}{{ oam_devices_other | length }}{% endif %}</td>
 
 

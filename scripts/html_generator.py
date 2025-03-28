@@ -129,8 +129,10 @@ class HTMLGenerator:
                 modules_usage_count[key] += 1
         hardware_usage_count = defaultdict(int)
         hardware_other_usage_count = defaultdict(int)
+        oam_hardware_normalized = {} # TODO move normalization out of html generation
         for oam, hw_list in oam_hardware.items():
             logging.info(f"Devices for {oam}: {hw_list}")
+            normalized_list = oam_hardware_normalized[oam] = []
             for hw_text in hw_list:
                 hw = self._hw_name_mapping(oam, hw_text)
                 logging.info(f"-> Device {hw}")
@@ -138,6 +140,7 @@ class HTMLGenerator:
                     hardware_usage_count[hw] += 1
                 else:
                     hardware_other_usage_count[hw] += 1
+                normalized_list.append(hw)
 
         logging.info(f"Collected Device {hardware_usage_count}")
 
@@ -155,6 +158,6 @@ class HTMLGenerator:
             modules_sorted=modules_sorted,
             devices_sorted=devices_sorted,
             devices_other_sorted=devices_other_sorted,
-            oam_hardware=oam_hardware
+            oam_hardware=oam_hardware_normalized
         )
         return html_content

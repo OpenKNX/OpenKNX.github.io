@@ -17,7 +17,7 @@ class HTMLGenerator:
         template = self.env.get_template(template_name)
         html_content = template.render(**context)
 
-        with open(output_filename, 'w') as file:
+        with open(output_filename, 'w', encoding='utf8') as file:
             file.write(html_content)
 
         return html_content

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenKnx-Applikationen/-Module und unterstützte Geräte</title>
+    <title>OpenKNX-Applikationen/-Module und unterstützte Geräte</title>
     <link rel="stylesheet" href="css/table_header_rotate.css">
 </head>
 <body>
 <table class="openknxTitleTable">
     <thead>
     <tr>
-        <th>OpenKnx-Applikationen/-Module und unterstützte Geräte</th>
+        <th>OpenKNX-Applikationen/-Module und unterstützte Geräte</th>
         {% for module, count in modules_sorted if count > 1 %}
         <th class="rotate"><div><span data-ofm="{{module}}">{{ module }}</span></div></th>
         {% endfor %}

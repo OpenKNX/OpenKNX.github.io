@@ -1,3 +1,4 @@
+import json
 import os
 import logging
 from jinja2 import Environment, FileSystemLoader
@@ -122,29 +123,42 @@ class HTMLGenerator:
             return f"(???)-{hw_text}"
 
     def generate_html_table(self, oam_dependencies, oam_hardware):
+        logging.debug(f"OAM Hardware {oam_hardware}")
 
-        # module -> usage_count
+        oam_data = {}
+        for oam, dependencies in oam_dependencies.items():
+            oam_data[oam] = {
+                "modules": dependencies,
+                # TODO Use repo description
+                "description": f"{oam} ermöglicht dieses und jenes. Dazu sind die Module {", ".join(dependencies.keys())} enthalten."
+            }
+        for oam, oam_content_devices in oam_hardware.items():
+            oam_data[oam]["devices"] = devices = []
+            for content_device in oam_content_devices:
+                # TODO move normalization out of html generation:
+                devices.append(self._hw_name_mapping(oam, content_device))
+
+        logging.debug(f"oam_data {json.dumps(oam_data, indent=4)}")
+
+        return self._create_overview_table(oam_data)
+
+    def _create_overview_table(self, oam_data):
+        # module,devices -> usage_count
         from collections import defaultdict
         modules_usage_count = defaultdict(int)
-        for dep in oam_dependencies.values():
-            for key in dep.keys():
-                modules_usage_count[key] += 1
         hardware_usage_count = defaultdict(int)
         hardware_other_usage_count = defaultdict(int)
-        oam_hardware_normalized = {} # TODO move normalization out of html generation
-        for oam, hw_list in oam_hardware.items():
-            logging.info(f"Devices for {oam}: {hw_list}")
-            normalized_list = oam_hardware_normalized[oam] = []
-            for hw_text in hw_list:
-                hw = self._hw_name_mapping(oam, hw_text)
-                logging.info(f"-> Device {hw}")
+        for oam_details in oam_data.values():
+            for module in oam_details["modules"].keys():
+                modules_usage_count[module] += 1
+        for oam, oam_details in oam_data.items():
+            hw_list = oam_details["devices"]
+            logging.debug(f"Devices for {oam}: {hw_list}")
+            for hw in hw_list:
                 if self._is_open_device(hw):
                     hardware_usage_count[hw] += 1
                 else:
                     hardware_other_usage_count[hw] += 1
-                normalized_list.append(hw)
-
-        logging.info(f"Collected Device {hardware_usage_count}")
 
         # Sort keys by their occurrence count, then alphabetically
         modules_sorted = sorted(modules_usage_count.items(), key=lambda item: (-item[1], item[0]))
@@ -152,14 +166,12 @@ class HTMLGenerator:
         devices_other_sorted = sorted(hardware_other_usage_count.items(), key=lambda item: (-item[1], item[0]))
 
         logging.info(f"Modules sorted {modules_sorted}")
-        logging.info(f"Device sorted {devices_sorted}")
-        logging.info(f"OAM Hardware {oam_hardware}")
+        logging.info(f"Device sorted {devices_sorted}  //  {devices_other_sorted}")
 
         html_content = self._render_template_to_file('dependencies_template.html', 'dependencies_table.html',
-            oam_dependencies=oam_dependencies,
-            modules_sorted=modules_sorted,
-            devices_sorted=devices_sorted,
-            devices_other_sorted=devices_other_sorted,
-            oam_hardware=oam_hardware_normalized
-        )
+                                                     modules_sorted=modules_sorted,
+                                                     devices_sorted=devices_sorted,
+                                                     devices_other_sorted=devices_other_sorted,
+                                                     oam_data=oam_data
+                                                     )
         return html_content

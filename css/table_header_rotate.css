@@ -39,8 +39,13 @@ table.openknxTitleTable caption {
 }
 
 /* row shading */
+/* tbody tr:nth-child(2n+1) .oam-details, */
 tbody tr:nth-child(2n+1) {
     background-color: #f8f8f8;
+}
+/* tbody tr:nth-child(2n+0) .oam-details, */
+tbody tr:nth-child(2n+0) {
+    background-color: #fff;
 }
 /* hover highlighting generated in Template; TODO cleanup
 tbody tr:hover {
@@ -93,4 +98,38 @@ td, tbody th {
     /* replaced by rows background shading
     border-bottom: 1px solid #ccc;
     */
+}
+
+/* Details for OAM */
+.oam-details {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	display: none;
+	height: 100%;
+
+	text-overflow: ellipsis;
+	overflow: hidden;
+
+	/* needs distance to hide again on leaving 1st col */
+	margin-left: 0.5em;
+
+    /* show required size */
+	width: fit-content;
+	text-wrap: nowrap;
+
+	background-color: #ffcc;
+
+    /* improve visual result */
+	padding-right: 1em;
+	padding-left: 0.5em;
+
+    /* limit size; TODO check vw */
+	max-width: 50vw;
+}
+th:has(.oam-details) {
+    position:relative;
+}
+table:has(th[data-oam]:hover) .oam-details  {
+    display:block;
 }

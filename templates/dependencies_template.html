@@ -31,26 +31,28 @@
     </tr>
     </thead>
     <tbody>
-    {% for oamName, dep_details in oam_dependencies.items() %}
+    {% for oamName, oam_details in oam_data.items() %}
+    {% set oamModules = oam_details['modules'] %}
+    {% set oamDevices = oam_details['devices'] %}
     <tr>
-        <th data-oam="{{oamName}}">{{ oamName }}</th>
+        <th data-oam="{{oamName}}">{{ oamName }}<div class="oam-details">{{ oam_details['description'] }}</div></th>
 
         {% for module, count in modules_sorted if count > 1 %}
-        <td data-oam="{{oamName}}" data-ofm="{{module}}" class="isPart">{% if module in dep_details %}&#9632;{% else %}{% endif %}</td>
+        <td data-oam="{{oamName}}" data-ofm="{{module}}" class="isPart">{% if module in oamModules %}&#9632;{% else %}{% endif %}</td>
         {% endfor %}
-        <td class="left">{{ modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', dep_details) | join(', ') }}</td>
+        <td class="left">{{ modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamModules) | join(', ') }}</td>
 
         {% for device, count in devices_sorted if count > 1 %}
-        <td data-oam="{{oamName}}" data-dev="{{device}}" class="isPart">{% if device in oam_hardware[oamName] %}&#9632;{% else %}{% endif %}</td>
+        <td data-oam="{{oamName}}" data-dev="{{device}}" class="isPart">{% if device in oamDevices %}&#9632;{% else %}{% endif %}</td>
         {% endfor %}
-        <td class="left">{{ devices_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oam_hardware[oamName]) | join(', ') }}</td>
+        <td class="left">{{ devices_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamDevices) | join(', ') }}</td>
 
-        {% set oam_devices_other = devices_other_sorted | map(attribute='0') | select('in', oam_hardware[oamName]) | list %}
-        <td title="{{ oam_devices_other | join(', ') }}">{% if oam_devices_other | length > 0 %}{{ oam_devices_other | length }}{% endif %}</td>
+        {% set oamDevices_other = devices_other_sorted | map(attribute='0') | select('in', oamDevices) | list %}
+        <td title="{{ oamDevices_other | join(', ') }}">{% if oamDevices_other | length > 0 %}{{ oamDevices_other | length }}{% endif %}</td>
 
 
         <!--
-        <td class="left" title="{{ oam_hardware[oamName] | join(', ') }}">  {% if oam_hardware[oamName] is defined and oam_hardware[oamName] | length > 0 %}{{ oam_hardware[oamName] | length }}{% endif %}</td>
+        <td class="left" title="{{ oamDevices | join(', ') }}">  {% if oamDevices is defined and oamDevices | length > 0 %}{{ oamDevices | length }}{% endif %}</td>
         -->
     </tr>
     {% endfor %}

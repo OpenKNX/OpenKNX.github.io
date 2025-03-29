@@ -28,9 +28,11 @@ table.openknxTitleTable thead th:first-child {
 tbody tr:nth-child(2n+1) {
     background-color: #f8f8f8;
 }
+/* hover highlighting generated in Template; TODO cleanup
 tbody tr:hover {
     background-color: #dfd;
 }
+*/
 
 th {
     font-weight: normal;

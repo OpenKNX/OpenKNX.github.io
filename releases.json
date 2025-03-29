@@ -1,10 +1,11 @@
 {
     "OpenKnxContentType": "OpenKNX/OAM/Releases",
-    "OpenKnxFormatVersion": "v0.0.0-ALPHA",
+    "OpenKnxFormatVersion": "v0.1.0-ALPHA",
     "data": {
         "SEN-UP1-8xTH": {
             "repo_url": "https://github.com/OpenKNX/SEN-UP1-8xTH",
             "archived": false,
+            "description": "OpenKNX 8channel Temperature/Humidity Sensor",
             "releases": [
                 {
                     "prerelease": true,
@@ -74,6 +75,7 @@
         "OAM-SensorModule": {
             "repo_url": "https://github.com/OpenKNX/OAM-SensorModule",
             "archived": false,
+            "description": "Allows sending sensor values to the KNX Bus ",
             "releases": [
                 {
                     "prerelease": false,
@@ -239,11 +241,13 @@
         "OAM-OneWireModule": {
             "repo_url": "https://github.com/OpenKNX/OAM-OneWireModule",
             "archived": false,
+            "description": "Allows interaction of OneWire devices with the KNX Bus ",
             "releases": []
         },
         "OAM-LogicModule": {
             "repo_url": "https://github.com/OpenKNX/OAM-LogicModule",
             "archived": false,
+            "description": "Implements a simple logic engine for KNX Bus",
             "releases": [
                 {
                     "prerelease": false,
@@ -370,6 +374,7 @@
         "OAM-PresenceModule": {
             "repo_url": "https://github.com/OpenKNX/OAM-PresenceModule",
             "archived": false,
+            "description": "Implements a presence detection fimware for KNX Bus",
             "releases": [
                 {
                     "prerelease": false,
@@ -546,6 +551,7 @@
         "OAM-EnoceanGateway": {
             "repo_url": "https://github.com/OpenKNX/OAM-EnoceanGateway",
             "archived": false,
+            "description": "Allows interaction between Enocean and KNX Bus",
             "releases": [
                 {
                     "prerelease": false,
@@ -559,6 +565,21 @@
                             "name": "EnoceanGateway-Release-1.9.zip",
                             "updated_at": "2023-08-31T20:08:24Z",
                             "browser_download_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/download/1.9-release/EnoceanGateway-Release-1.9.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1-release-RP2040",
+                    "name": "0.1-release-RP2040",
+                    "published_at": "2025-03-29T20:26:34Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/0.1-release-RP2040",
+                    "body": "First Enocean Gateway firmware for the new RP2040 Hardware. \r\n\r\nNo Feature update \r\n\r\n ",
+                    "assets": [
+                        {
+                            "name": "EnoceanGateway-Release-RP2040-0.1.zip",
+                            "updated_at": "2025-03-29T20:32:58Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/download/0.1-release-RP2040/EnoceanGateway-Release-RP2040-0.1.zip"
                         }
                     ]
                 },
@@ -627,6 +648,7 @@
         "BEM-GardenControl": {
             "repo_url": "https://github.com/OpenKNX/BEM-GardenControl",
             "archived": false,
+            "description": "KNX based intelligent watering system ",
             "releases": [
                 {
                     "prerelease": true,
@@ -678,6 +700,7 @@
         "OAM-ModbusGateway": {
             "repo_url": "https://github.com/OpenKNX/OAM-ModbusGateway",
             "archived": false,
+            "description": "Implements a KNX Modbus Gateway which can be parametrized with ETS",
             "releases": [
                 {
                     "prerelease": false,
@@ -744,6 +767,7 @@
         "SOM-UP": {
             "repo_url": "https://github.com/OpenKNX/SOM-UP",
             "archived": false,
+            "description": "The Home of the OpenKNX Soundmodule",
             "releases": [
                 {
                     "prerelease": false,
@@ -780,6 +804,7 @@
         "OAM-InfraredGateway": {
             "repo_url": "https://github.com/OpenKNX/OAM-InfraredGateway",
             "archived": false,
+            "description": null,
             "releases": [
                 {
                     "prerelease": false,
@@ -801,6 +826,7 @@
         "OAM-VirtualButton": {
             "repo_url": "https://github.com/OpenKNX/OAM-VirtualButton",
             "archived": false,
+            "description": null,
             "releases": [
                 {
                     "prerelease": true,
@@ -852,6 +878,7 @@
         "GW-REG1-Dali": {
             "repo_url": "https://github.com/OpenKNX/GW-REG1-Dali",
             "archived": false,
+            "description": null,
             "releases": [
                 {
                     "prerelease": true,
@@ -897,11 +924,13 @@
         "OAM-SmartHomeBridge": {
             "repo_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge",
             "archived": false,
+            "description": null,
             "releases": []
         },
         "OAM-StateEngine": {
             "repo_url": "https://github.com/OpenKNX/OAM-StateEngine",
             "archived": false,
+            "description": "State Machines for KNX configurable via ETS",
             "releases": [
                 {
                     "prerelease": true,
@@ -950,6 +979,7 @@
         "OAM-AccessControl": {
             "repo_url": "https://github.com/OpenKNX/OAM-AccessControl",
             "archived": false,
+            "description": "OpenKNX Firmware und Anwendung zur Einbindung von Fingerabdrucklesern.",
             "releases": [
                 {
                     "prerelease": false,
@@ -1121,6 +1151,7 @@
         "OAM-IP-Router": {
             "repo_url": "https://github.com/OpenKNX/OAM-IP-Router",
             "archived": false,
+            "description": "OpenKNX IP-Router Application",
             "releases": [
                 {
                     "prerelease": true,
@@ -1277,6 +1308,7 @@
         "OAM-Meter": {
             "repo_url": "https://github.com/OpenKNX/OAM-Meter",
             "archived": false,
+            "description": null,
             "releases": [
                 {
                     "prerelease": true,
@@ -1298,16 +1330,19 @@
         "OAM-Sonos": {
             "repo_url": "https://github.com/OpenKNX/OAM-Sonos",
             "archived": false,
+            "description": "Sonos Steuerung \u00fcber KNX",
             "releases": []
         },
         "OAM-ElectricDoorDrive": {
             "repo_url": "https://github.com/OpenKNX/OAM-ElectricDoorDrive",
             "archived": false,
+            "description": "OpenKNX Firmware und Anwendung zur Anbindung von elektrischen T\u00fcrantrieben und Sensoren.",
             "releases": []
         },
         "OAM-BinaryClock": {
             "repo_url": "https://github.com/OpenKNX/OAM-BinaryClock",
             "archived": false,
+            "description": "OpenKNX Firmware und Anwendung einer Bin\u00e4r-Wanduhr, die Uhrzeit und Datum anzeigt.",
             "releases": [
                 {
                     "prerelease": false,
@@ -1329,11 +1364,13 @@
         "OAM-TouchRound": {
             "repo_url": "https://github.com/OpenKNX/OAM-TouchRound",
             "archived": false,
+            "description": "OpenKNX Firmware und Anwendung zur Einbindung von runden Touch-Displays.",
             "releases": []
         },
         "OAM-Dummy": {
             "repo_url": "https://github.com/OpenKNX/OAM-Dummy",
             "archived": false,
+            "description": "OpenKNX Dummy Application representing Dummy Devices in ETS",
             "releases": [
                 {
                     "prerelease": false,
@@ -1360,6 +1397,7 @@
         "OAM-SwitchActuator": {
             "repo_url": "https://github.com/OpenKNX/OAM-SwitchActuator",
             "archived": false,
+            "description": null,
             "releases": [
                 {
                     "prerelease": false,
@@ -1396,11 +1434,13 @@
         "OAM-InternetServices": {
             "repo_url": "https://github.com/OpenKNX/OAM-InternetServices",
             "archived": false,
+            "description": null,
             "releases": []
         },
         "OAM-ShutterController": {
             "repo_url": "https://github.com/OpenKNX/OAM-ShutterController",
             "archived": false,
+            "description": null,
             "releases": [
                 {
                     "prerelease": false,
@@ -1437,6 +1477,7 @@
         "OAM-WeatherWN90LP": {
             "repo_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP",
             "archived": false,
+            "description": "OpenKNX Applikation Wetterstation WN90LP",
             "releases": [
                 {
                     "prerelease": true,
@@ -1458,6 +1499,7 @@
         "OAM-BinaryInput": {
             "repo_url": "https://github.com/OpenKNX/OAM-BinaryInput",
             "archived": false,
+            "description": "OpenKNX Firmware und Anwendung f\u00fcr Bin\u00e4reing\u00e4nge.",
             "releases": [
                 {
                     "prerelease": false,
@@ -1479,6 +1521,7 @@
         "OAM-HeatingActuator": {
             "repo_url": "https://github.com/OpenKNX/OAM-HeatingActuator",
             "archived": false,
+            "description": null,
             "releases": []
         }
     }

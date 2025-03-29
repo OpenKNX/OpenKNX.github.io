@@ -15,9 +15,10 @@
 </head>
 <body>
 <table class="openknxTitleTable">
+    <caption>OpenKNX-Applikationen/-Module und unterstützte Geräte</caption>
     <thead>
     <tr>
-        <th>OpenKNX-Applikationen/-Module und unterstützte Geräte</th>
+        <th></th>
         {% for module, count in modules_sorted if count > 1 %}
         <th class="rotate"><div><span data-ofm="{{module}}">{{ module }}</span></div></th>
         {% endfor %}

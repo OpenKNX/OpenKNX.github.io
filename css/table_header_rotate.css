@@ -13,16 +13,29 @@ simple special title with logo
 TODO clean definition!
 */
 table.openknxTitleTable {
-    background: url('/img/openknx-logoline.png') no-repeat top right;
 	border-collapse: collapse;
+	border-top: 3px solid #449841;
 }
-table.openknxTitleTable thead th:first-child {
+table.openknxTitleTable thead tr:first-child th:first-child {
+    /*
     position: absolute;
     color: #449841;
     font-size: 150%;
     border-top: 3px solid #449841;
     top: 40px;
     padding-right: 200px;
+    */
+    background-image: url('https://raw.githubusercontent.com/OpenKNX/.github/main/profile/images/weiss.svg');
+    min-width: 128px;
+    /* TODO use local logo background-image: url('/img/openknx-logoline.png'); */
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: center;
+    background-position-y: center;
+}
+table.openknxTitleTable caption {
+    color: #449841;
+    font-size: 150%;
 }
 
 /* row shading */

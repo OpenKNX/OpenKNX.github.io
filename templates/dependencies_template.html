@@ -6,7 +6,8 @@
     <title>OpenKNX-Applikationen/-Module und unterstützte Geräte</title>
     <link rel="stylesheet" href="css/table_header_rotate.css">
     <style>
-        {% for col in range(1, 101) %}table:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) td:nth-child({{col}}).isPart, {% endfor %}
+        {% for col in range(1, 1 + (modules_sorted | length) + (devices_sorted | length) + 1) %}table:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) td:nth-child({{col}}).isPart,
+        {% endfor %}
         tbody tr:hover {
             background-color: #dfd;
         }

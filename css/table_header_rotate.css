@@ -14,6 +14,7 @@ TODO clean definition!
 */
 table.openknxTitleTable {
     background: url('/img/openknx-logoline.png') no-repeat top right;
+	border-collapse: collapse;
 }
 table.openknxTitleTable thead th:first-child {
     position: absolute;
@@ -76,5 +77,7 @@ th.rotate > div > span {
 }
 td, tbody th {
     border-right: 1px solid #ccc;
+    /* replaced by rows background shading
     border-bottom: 1px solid #ccc;
+    */
 }

@@ -6,28 +6,47 @@
     <title>OpenKNX-Applikationen/-Module und unterstützte Geräte</title>
     <link rel="stylesheet" href="css/table_header_rotate.css">
     <style>
-        {% for col in range(1, 1 + (modules_sorted | length) + (devices_sorted | length) + 1) %}table:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) td:nth-child({{col}}).isPart,
+        {% set col_count = 1 + (modules_sorted | length) + (devices_sorted | length) %}
+        {% for col in range(2, col_count + 1) %}table:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) td:nth-child({{col}}).isPart,
         {% endfor %}
         tbody tr:hover {
             background-color: #dfd;
+        }
+        {% for col in range(2, col_count + 1) %}table:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) thead th.rotate45:nth-child({{col}}) div span,
+        {% endfor %}
+        .DUMMY-DUMMY-DUMMY
+        {
+            border-bottom: 2px solid #9f9;
         }
     </style>
 </head>
 <body>
 <table class="openknxTitleTable">
     <caption>OpenKNX-Applikationen/-Module und unterstützte Geräte</caption>
+    <colgroup>
+        <col class="before-new-cols" />
+        {% for module, count in modules_sorted if count > 1 %}
+        <col data-ofm="{{module}}" />
+        {% endfor %}
+        <col data-ofm="*special*" />
+        {% for device, count in devices_sorted if count > 1 %}
+        <col data-dev="{{device}}" />
+        {% endfor %}
+        <col data-dev="*special*" />
+        <col data-dev="*other*" />
+    </colgroup>
     <thead>
     <tr>
-        <th></th>
+        <th class="before-new-cols"></th>
         {% for module, count in modules_sorted if count > 1 %}
-        <th class="rotate" data-ofm="{{module}}"><div><span>{{ module }}</span></div></th>
+        <th class="rotate45" data-ofm="{{module}}"><div><span>{{ module }}</span></div></th>
         {% endfor %}
-        <th class="singleModules" data-ofm="*special*">Einmalig verwendete Module:</th>
+        <th class="singleModules before-new-cols" data-ofm="*special*">Einmalig verwendete Module:</th>
         {% for device, count in devices_sorted if count > 1 %}
-        <th class="rotate" data-dev="{{device}}"><div><span>{{ device }}</span></div></th>
+        <th class="rotate45" data-dev="{{device}}"><div><span>{{ device }}</span></div></th>
         {% endfor %}
         <th class="singleModules" data-dev="*special*">Spezielle Geräte:</th>
-        <th class="rotate" data-dev="*other*"><div><span>Sonstige Geräte</span></div></th>
+        <th class="rotate90" data-dev="*other*"><div><span>Sonstige Geräte</span></div></th>
     </tr>
     </thead>
     <tbody>
@@ -35,16 +54,16 @@
     {% set oamModules = oam_details['modules'] %}
     {% set oamDevices = oam_details['devices'] %}
     {% set oamDescription = oam_details['description'] %}
-    <tr>
-        <th data-oam="{{oamName}}">{{ oamName }}{% if oamDescription %}<div class="oam-details">{{ oamDescription }}</div>{% endif %}</th>
+    <tr data-oam="{{oamName}}">
+        <th class="before-new-cols">{{ oamName }}{% if oamDescription %}<div class="oam-details">{{ oamDescription }}</div>{% endif %}</th>
 
         {% for module, count in modules_sorted if count > 1 %}
-        <td data-oam="{{oamName}}" data-ofm="{{module}}" class="isPart">{% if module in oamModules %}&#9632;{% else %}{% endif %}</td>
+        <td data-ofm="{{module}}" class="isPart">{% if module in oamModules %}&#9632;{% endif %}</td>
         {% endfor %}
-        <td class="left">{{ modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamModules) | join(', ') }}</td>
+        <td class="left before-new-cols" data-ofm="*special*">{{ modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamModules) | join(', ') }}</td>
 
         {% for device, count in devices_sorted if count > 1 %}
-        <td data-oam="{{oamName}}" data-dev="{{device}}" class="isPart">{% if device in oamDevices %}&#9632;{% else %}{% endif %}</td>
+        <td data-dev="{{device}}" class="isPart">{% if device in oamDevices %}&#9632;{% endif %}</td>
         {% endfor %}
         <td class="left">{{ devices_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamDevices) | join(', ') }}</td>
 

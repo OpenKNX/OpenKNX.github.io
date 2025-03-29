@@ -78,26 +78,38 @@ quick draft, based on https://css-tricks.com/rotated-table-column-headers/
 TODO cleanup and update
 */
 
-th.rotate {
-    height: 140px;
+th.rotate45,
+th.rotate90 {
     white-space: nowrap;
-
     height: 240px;
 }
-th.rotate > div {
-    transform: translate(5px, 51px) rotate(315deg);
+th.rotate45 > div,
+th.rotate90 > div {
     width: 30px;
-
+}
+th.rotate45 > div {
     transform: translate(0px, 100px) rotate(315deg);
 }
-th.rotate > div > span {
+th.rotate90 > div {
+    transform: translate(0px, 100px) rotate(270deg);
+}
+th.rotate45 > div > span,
+th.rotate90 > div > span {
     padding: 5px 10px;
+    padding: 3px 1ex;
+    /* col-header highlight */
+    /*
+    border-bottom: 2px solid #9f9;
+    */
 }
 td, tbody th {
     border-right: 1px solid #ccc;
     /* replaced by rows background shading
     border-bottom: 1px solid #ccc;
     */
+}
+td.before-new-cols, th.before-new-cols {
+    border-right: 1px solid #999;
 }
 
 /* Details for OAM */

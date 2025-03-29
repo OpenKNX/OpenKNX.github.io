@@ -37,6 +37,7 @@ class ReleaseManager:
             releases_data[name] = {
                 "repo_url": repo["html_url"],
                 "archived": repo["archived"],
+                "description": repo["description"],
                 "releases": [
                     {
                         "prerelease": release.get("prerelease"),

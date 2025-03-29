@@ -78,7 +78,7 @@ def main():
     oam_releases_data = release_manager.fetch_apps_releases(oam_repos)
     releases_data = {
         "OpenKnxContentType": "OpenKNX/OAM/Releases",
-        "OpenKnxFormatVersion": "v0.0.0-ALPHA",
+        "OpenKnxFormatVersion": "v0.1.0-ALPHA",
         "data": oam_releases_data
     }
     with open('releases.json', 'w') as outfile:
@@ -93,7 +93,7 @@ def main():
     html_generator.update_html(oam_releases_data)
     all_oam_dependencies = dependency_manager.fetch_all_dependencies(oam_repos)
     # Generate Dependencies Table
-    html_content = html_generator.generate_html_table(all_oam_dependencies, oam_hardware, oam_repos)
+    html_content = html_generator.generate_html_table(all_oam_dependencies, oam_hardware, oam_releases_data)
 
 
 if __name__ == "__main__":

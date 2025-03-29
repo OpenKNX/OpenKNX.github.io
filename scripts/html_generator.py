@@ -122,7 +122,7 @@ class HTMLGenerator:
             logging.warning(f"Unknown Device Name in '{oam}': {hw_text}")
             return f"(???)-{hw_text}"
 
-    def generate_html_table(self, oam_dependencies, oam_hardware, oam_repos):
+    def generate_html_table(self, oam_dependencies, oam_hardware, oam_data):
         logging.debug(f"OAM Hardware {oam_hardware}")
 
         oam_data = {}
@@ -130,7 +130,7 @@ class HTMLGenerator:
             oam_data[oam] = {
                 "modules": dependencies,
                 # TODO Use repo description
-                "description": oam_repos[oam].get("description", "(keine Kurzbeschreibung")
+                "description": oam_data[oam].get("description", "(keine Kurzbeschreibung")
             }
         for oam, oam_content_devices in oam_hardware.items():
             oam_data[oam]["devices"] = devices = []

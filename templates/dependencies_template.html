@@ -20,14 +20,14 @@
     <tr>
         <th></th>
         {% for module, count in modules_sorted if count > 1 %}
-        <th class="rotate"><div><span data-ofm="{{module}}">{{ module }}</span></div></th>
+        <th class="rotate" data-ofm="{{module}}"><div><span>{{ module }}</span></div></th>
         {% endfor %}
-        <th class="singleModules">Einmalig verwendete Module:</th>
+        <th class="singleModules" data-ofm="*special*">Einmalig verwendete Module:</th>
         {% for device, count in devices_sorted if count > 1 %}
-        <th class="rotate"><div><span data-dev="{{device}}">{{ device }}</span></div></th>
+        <th class="rotate" data-dev="{{device}}"><div><span>{{ device }}</span></div></th>
         {% endfor %}
-        <th class="singleModules">Spezielle Geräte:</th>
-        <th class="rotate"><div><span data-dev="*other*">Sonstige Geräte</span></div></th>
+        <th class="singleModules" data-dev="*special*">Spezielle Geräte:</th>
+        <th class="rotate" data-dev="*other*"><div><span>Sonstige Geräte</span></div></th>
     </tr>
     </thead>
     <tbody>

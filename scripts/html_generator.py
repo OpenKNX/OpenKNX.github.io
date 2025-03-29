@@ -129,8 +129,10 @@ class HTMLGenerator:
         for oam, dependencies in oam_dependencies.items():
             oam_data[oam] = {
                 "modules": dependencies,
-                "description": oam_details[oam].get("description", "(keine Kurzbeschreibung)"),
+                "description": oam_details.get(oam, {}).get("description", "(keine Kurzbeschreibung)"),
             }
+            if oam not in oam_details:
+                logging.warning(f"Missing {oam} in oam_details, present only {oam_details.keys()}")
         for oam, oam_content_devices in oam_hardware.items():
             oam_data[oam]["devices"] = devices = []
             for content_device in oam_content_devices:

@@ -134,6 +134,10 @@ class HTMLGenerator:
             if oam not in oam_details:
                 logging.warning(f"Missing {oam} in oam_details, present only {oam_details.keys()}")
         for oam, oam_content_devices in oam_hardware.items():
+            if oam not in oam_data:
+                # TODO use same base for oam-list
+                logging.warning(f"Missing {oam} in oam_data, present only {oam_data.keys()}")
+                continue
             oam_data[oam]["devices"] = devices = []
             for content_device in oam_content_devices:
                 # TODO move normalization out of html generation:

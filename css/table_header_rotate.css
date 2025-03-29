@@ -106,7 +106,6 @@ td, tbody th {
 	top: 0;
 	left: 100%;
 	display: none;
-	height: 100%;
 
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -118,7 +117,11 @@ td, tbody th {
 	width: fit-content;
 	text-wrap: nowrap;
 
+	/* show tooltop-like note with thin border */
 	background-color: #ffcc;
+    height: calc(100% + 1px);
+    border: 1px solid #ccc9;
+    box-sizing: border-box;
 
     /* improve visual result */
 	padding-right: 1em;

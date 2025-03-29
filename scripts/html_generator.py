@@ -87,7 +87,7 @@ class HTMLGenerator:
         "OpenKNX-REG1-Basismodul": "OpenKNX-REG1-Base-V1",
         "OpenKNX-REG1-Basismodul-V0": "OpenKNX-REG1-Base-V0",
         "OpenKNX-REG1-MultiSensor": "OpenKNX-REG1-MultiSensor",
-        "OpenKNX-UP1-8xSensor": "OpenKNX-UP1-8xSensor",
+        "OpenKNX-UP1-8xSensor": "OpenKNX-SEN-UP1-8XTH",
         "PiPico_BCU_Connector": "OpenKNX-PiPico-BCU-Connector",
         "PiPico-BCU-Connector": "OpenKNX-PiPico-BCU-Connector",
         # "PiPico-BCU-Connector": "OpenKNX-PiPico-BCU-Connector",

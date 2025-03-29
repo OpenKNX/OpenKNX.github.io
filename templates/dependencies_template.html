@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenKNX-Applikationen/-Module und unterstützte Geräte</title>
     <link rel="stylesheet" href="css/table_header_rotate.css">
+    <style>
+        {% for col in range(1, 101) %}
+        table:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) td:nth-child({{col}}) {
+            background-color: #dfd;
+        }
+        {% endfor %}
+    </style>
 </head>
 <body>
 <table class="openknxTitleTable">

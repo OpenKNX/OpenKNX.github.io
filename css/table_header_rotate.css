@@ -145,6 +145,6 @@ td.before-new-cols, th.before-new-cols {
 th:has(.oam-details) {
     position:relative;
 }
-table:has(th[data-oam]:hover) .oam-details  {
+table:has([data-oam] th:hover) .oam-details  {
     display:block;
 }

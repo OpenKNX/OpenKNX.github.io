@@ -93,7 +93,7 @@ def main():
     html_generator.update_html(oam_releases_data)
     all_oam_dependencies = dependency_manager.fetch_all_dependencies(oam_repos)
     # Generate Dependencies Table
-    html_content = html_generator.generate_html_table(all_oam_dependencies, oam_hardware, oam_releases_data)
+    html_generator.generate_html_table(all_oam_dependencies, oam_hardware, oam_releases_data)
 
 
 if __name__ == "__main__":

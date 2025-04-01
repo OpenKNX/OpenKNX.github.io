@@ -3,6 +3,7 @@ import os
 import logging
 from jinja2 import Environment, FileSystemLoader
 
+
 class HTMLGenerator:
     def __init__(self):
         self.env = Environment(loader=FileSystemLoader('templates'))
@@ -146,7 +147,7 @@ class HTMLGenerator:
 
         logging.debug(f"oam_data {json.dumps(oam_data, indent=4)}")
 
-        return self._create_overview_table(oam_data)
+        self._create_overview_table(oam_data)
 
     def _create_overview_table(self, oam_data):
         # module,devices -> usage_count
@@ -174,10 +175,23 @@ class HTMLGenerator:
         logging.info(f"Modules sorted {modules_sorted}")
         logging.info(f"Device sorted {devices_sorted}  //  {devices_other_sorted}")
 
-        html_content = self._render_template_to_file('dependencies_template.html', 'dependencies_table.html',
-                                                     modules_sorted=modules_sorted,
-                                                     devices_sorted=devices_sorted,
-                                                     devices_other_sorted=devices_other_sorted,
-                                                     oam_data=oam_data
-                                                     )
-        return html_content
+        self._render_template_to_file('dependencies_template.html', 'dependencies_table.html',
+                                      modules_sorted=modules_sorted,
+                                      devices_sorted=devices_sorted,
+                                      devices_other_sorted=devices_other_sorted,
+                                      oam_data=oam_data
+                                      )
+
+        self._render_template_to_file('dependencies_template.html', 'oam2ofm.html',
+                                      modules_sorted=modules_sorted,
+                                      # devices_sorted=devices_sorted,
+                                      # devices_other_sorted=devices_other_sorted,
+                                      oam_data=oam_data
+                                      )
+
+        self._render_template_to_file('dependencies_template.html', 'oam2dev.html',
+                                      # modules_sorted=modules_sorted,
+                                      devices_sorted=devices_sorted,
+                                      devices_other_sorted=devices_other_sorted,
+                                      oam_data=oam_data
+                                      )

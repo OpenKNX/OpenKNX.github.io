@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% set showModules = 'modules_sorted' in context %}
+{% set showDevices = 'devices_sorted' in context %}
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +8,7 @@
     <title>OpenKNX-Applikationen/-Module und unterstützte Geräte</title>
     <link rel="stylesheet" href="css/table_header_rotate.css">
     <style>
-        {% set col_count = 1 + (modules_sorted | length) + (devices_sorted | length) %}
+        {% set col_count = 1 + (modules_sorted | default([]) | length) + (devices_sorted | default([]) | length) %}
         {% for col in range(2, col_count + 1) %}table:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) td:nth-child({{col}}).isPart,
         {% endfor %}
         tbody tr:hover {
@@ -25,28 +27,41 @@
     <caption>OpenKNX-Applikationen/-Module und unterstützte Geräte</caption>
     <colgroup>
         <col class="before-new-cols" />
+
+       {% showModules %}
         {% for module, count in modules_sorted if count > 1 %}
         <col data-ofm="{{module}}" />
         {% endfor %}
         <col data-ofm="*special*" />
+       {% endif %}
+
+       {% showDevices %}
         {% for device, count in devices_sorted if count > 1 %}
         <col data-dev="{{device}}" />
         {% endfor %}
         <col data-dev="*special*" />
         <col data-dev="*other*" />
+       {% endif %}
     </colgroup>
     <thead>
     <tr>
         <th class="before-new-cols"></th>
+
+       {% showModules %}
         {% for module, count in modules_sorted if count > 1 %}{% set ofmUrl = "https://github.com/OpenKNX/" ~ module %}
         <th class="rotate45" data-ofm="{{module}}"><div><span><a href="{{ofmUrl}}">{{ module }}</a></span></div></th>
         {% endfor %}
         <th class="singleModules before-new-cols" data-ofm="*special*">Einmalig verwendete Module:</th>
+       {% endif %}
+
+       {% showDevices %}
         {% for device, count in devices_sorted if count > 1 %}
         <th class="rotate45" data-dev="{{device}}"><div><span>{{ device }}</span></div></th>
         {% endfor %}
         <th class="singleModules" data-dev="*special*">Spezielle Geräte:</th>
         <th class="rotate90" data-dev="*other*"><div><span>Sonstige Geräte</span></div></th>
+       {% endif %}
+
     </tr>
     </thead>
     <tbody>
@@ -58,11 +73,14 @@
     <tr data-oam="{{oamName}}">
         <th class="before-new-cols"><a href="{{oamUrl}}">{{ oamName }}</a>{% if oamDescription %}<div class="oam-details">{{ oamDescription }}</div>{% endif %}</th>
 
+       {% showModules %}
         {% for module, count in modules_sorted if count > 1 %}
         <td data-ofm="{{module}}" class="isPart">{% if module in oamModules %}&#9632;{% endif %}</td>
         {% endfor %}
         <td class="left before-new-cols" data-ofm="*special*">{{ modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamModules) | join(', ') }}</td>
+       {% endif %}
 
+       {% showDevices %}
         {% for device, count in devices_sorted if count > 1 %}
         <td data-dev="{{device}}" class="isPart">{% if device in oamDevices %}&#9632;{% endif %}</td>
         {% endfor %}
@@ -70,7 +88,7 @@
 
         {% set oamDevices_other = devices_other_sorted | map(attribute='0') | select('in', oamDevices) | list %}
         <td title="{{ oamDevices_other | join(', ') }}">{% if oamDevices_other | length > 0 %}{{ oamDevices_other | length }}{% endif %}</td>
-
+       {% endif %}
 
         <!--
         <td class="left" title="{{ oamDevices | join(', ') }}">  {% if oamDevices is defined and oamDevices | length > 0 %}{{ oamDevices | length }}{% endif %}</td>

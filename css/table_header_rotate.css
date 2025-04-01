@@ -54,8 +54,8 @@ tbody tr:hover {
 */
 
 /* extended padding for regular text-cells only */
-tbody tr > :not(.isPart) {
-  padding: 1px 3px;
+tbody tr > * {
+	padding: 2px 3px;
 }
 
 th {

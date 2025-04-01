@@ -36,8 +36,13 @@ def download_and_extract_content_xml(zip_url):
             tree = ET.parse(xml_file)
             root = tree.getroot()
             return root
+    elif 'data/content.xml' in zipfile_obj.namelist():
+        with zipfile_obj.open('data/content.xml') as xml_file:
+            tree = ET.parse(xml_file)
+            root = tree.getroot()
+            return root
     else:
-        logging.warning(f"No 'data\\content.xml' found in the archive {zip_url}")
+        logging.warning(f"No 'data\\content.xml' or 'data/content.xml' found in the archive {zip_url}")
         return None
 
 def parse_hardware_info(content_xml):

@@ -57,7 +57,7 @@ th {
     font-weight: normal;
     text-align: left;
 }
-tr[data-oam] th:first-child
+tr[data-oam] th:first-child {
     /* prevent wrapping of OAM-Name */
 	white-space: nowrap;
 }

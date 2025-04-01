@@ -38,8 +38,8 @@
     <thead>
     <tr>
         <th class="before-new-cols"></th>
-        {% for module, count in modules_sorted if count > 1 %}
-        <th class="rotate45" data-ofm="{{module}}"><div><span>{{ module }}</span></div></th>
+        {% for module, count in modules_sorted if count > 1 %}{% set ofmUrl = "https://github.com/OpenKNX/" ~ module %}
+        <th class="rotate45" data-ofm="{{module}}"><div><span><a href="{{ofmUrl}}">{{ module }}</a></span></div></th>
         {% endfor %}
         <th class="singleModules before-new-cols" data-ofm="*special*">Einmalig verwendete Module:</th>
         {% for device, count in devices_sorted if count > 1 %}
@@ -54,8 +54,9 @@
     {% set oamModules = oam_details['modules'] %}
     {% set oamDevices = oam_details['devices'] %}
     {% set oamDescription = oam_details['description'] %}
+    {% set oamUrl = "https://github.com/OpenKNX/" ~ oamName %}
     <tr data-oam="{{oamName}}">
-        <th class="before-new-cols">{{ oamName }}{% if oamDescription %}<div class="oam-details">{{ oamDescription }}</div>{% endif %}</th>
+        <th class="before-new-cols"><a href="{{oamUrl}}">{{ oamName }}</a>{% if oamDescription %}<div class="oam-details">{{ oamDescription }}</div>{% endif %}</th>
 
         {% for module, count in modules_sorted if count > 1 %}
         <td data-ofm="{{module}}" class="isPart">{% if module in oamModules %}&#9632;{% endif %}</td>

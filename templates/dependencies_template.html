@@ -28,14 +28,14 @@
     <colgroup>
         <col class="before-new-cols" />
 
-       {% showModules %}
+       {% if showModules %}
         {% for module, count in modules_sorted if count > 1 %}
         <col data-ofm="{{module}}" />
         {% endfor %}
         <col data-ofm="*special*" />
        {% endif %}
 
-       {% showDevices %}
+       {% if showDevices %}
         {% for device, count in devices_sorted if count > 1 %}
         <col data-dev="{{device}}" />
         {% endfor %}
@@ -47,14 +47,14 @@
     <tr>
         <th class="before-new-cols"></th>
 
-       {% showModules %}
+       {% if showModules %}
         {% for module, count in modules_sorted if count > 1 %}{% set ofmUrl = "https://github.com/OpenKNX/" ~ module %}
         <th class="rotate45" data-ofm="{{module}}"><div><span><a href="{{ofmUrl}}">{{ module }}</a></span></div></th>
         {% endfor %}
         <th class="singleModules before-new-cols" data-ofm="*special*">Einmalig verwendete Module:</th>
        {% endif %}
 
-       {% showDevices %}
+       {% if showDevices %}
         {% for device, count in devices_sorted if count > 1 %}
         <th class="rotate45" data-dev="{{device}}"><div><span>{{ device }}</span></div></th>
         {% endfor %}
@@ -73,14 +73,14 @@
     <tr data-oam="{{oamName}}">
         <th class="before-new-cols"><a href="{{oamUrl}}">{{ oamName }}</a>{% if oamDescription %}<div class="oam-details">{{ oamDescription }}</div>{% endif %}</th>
 
-       {% showModules %}
+       {% if showModules %}
         {% for module, count in modules_sorted if count > 1 %}
         <td data-ofm="{{module}}" class="isPart">{% if module in oamModules %}&#9632;{% endif %}</td>
         {% endfor %}
         <td class="left before-new-cols" data-ofm="*special*">{{ modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamModules) | join(', ') }}</td>
        {% endif %}
 
-       {% showDevices %}
+       {% if showDevices %}
         {% for device, count in devices_sorted if count > 1 %}
         <td data-dev="{{device}}" class="isPart">{% if device in oamDevices %}&#9632;{% endif %}</td>
         {% endfor %}

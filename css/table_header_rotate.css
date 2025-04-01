@@ -53,6 +53,11 @@ tbody tr:hover {
 }
 */
 
+/* extended padding for regular text-cells only */
+tbody tr > :not(.isPart) {
+  padding: 1px 3px;
+}
+
 th {
     font-weight: normal;
     text-align: left;

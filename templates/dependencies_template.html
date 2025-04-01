@@ -75,7 +75,11 @@
         {% for module, count in modules_sorted if count > 1 %}
         <td data-ofm="{{module}}" class="isPart">{% if module in oamModules %}&#9632;{% endif %}</td>
         {% endfor %}
-        <td class="left before-new-cols" data-ofm="*special*">{{ modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamModules) | join(', ') }}</td>
+        <td class="left before-new-cols" data-ofm="*special*">
+            {% for module in modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamModules) %}
+                <a href="https://github.com/OpenKNX/{{ module }}">{{ module }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+        </td>
        {% endif %}
 
        {% if showDevices %}

@@ -65,7 +65,6 @@ class HTMLGenerator:
     # TODO move, this should not be part of html rendering
     device_name_map = {
         "1TE-RP2040-SmartMF": "SmartMF-1TE-RP2040",
-        # "1TE-RP2040-SmartMF": "SmartMF-1TE-RP2040",
         "AB-SmartHouse-BinaryClock": "AB-SmartHouse-BinaryClock",
         "ABSmartHouse-BinaryInput": "AB-SmartHouse-BinaryInput",
         "AB-SmartHouse-PresenceMR16": "AB-SmartHouse-PresenceMR16",
@@ -94,6 +93,11 @@ class HTMLGenerator:
         "RealPresence_v2.0": "?-RealPresence_v2.0",
         "REG1_BASE_V0": "OpenKNX REG1 Basismodul V0",
         "REG1_BASE_V1": "OpenKNX REG1 Basismodul",
+
+        # oam=="GW-REG1-Dali"
+        "REG1-v0": "OpenKNX REG1 Dali Gateway V0",
+        "REG1-v1": "OpenKNX REG1 Dali Gateway",
+
         "REG2_PIPICO_V1": "OpenKNX REG2 PiPico2 V1",
         "Sensormodul-v3.0-SAMD": "SmartMF-Sensormodul-v3.0-SAMD",
         "Sensormodul-v3.1-SAMD": "SmartMF-Sensormodul-v3.1-SAMD",

@@ -36,7 +36,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add releases_list.html releases.json releases/ dependencies_table.html
+          git add releases_list.html releases.json releases/ dependencies_table.html oam2ofm.html oam2dev.html
          
           if git diff-index --quiet HEAD; then
             echo "No changes to commit"

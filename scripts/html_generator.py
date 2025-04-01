@@ -179,19 +179,25 @@ class HTMLGenerator:
                                       modules_sorted=modules_sorted,
                                       devices_sorted=devices_sorted,
                                       devices_other_sorted=devices_other_sorted,
-                                      oam_data=oam_data
+                                      oam_data=oam_data,
+                                      showModules=True,
+                                      showDevices=True,
                                       )
 
         self._render_template_to_file('dependencies_template.html', 'oam2ofm.html',
                                       modules_sorted=modules_sorted,
                                       # devices_sorted=devices_sorted,
                                       # devices_other_sorted=devices_other_sorted,
-                                      oam_data=oam_data
+                                      oam_data=oam_data,
+                                      showModules=True,
+                                      showDevices=False,
                                       )
 
         self._render_template_to_file('dependencies_template.html', 'oam2dev.html',
                                       # modules_sorted=modules_sorted,
                                       devices_sorted=devices_sorted,
                                       devices_other_sorted=devices_other_sorted,
-                                      oam_data=oam_data
+                                      oam_data=oam_data,
+                                      showModules=False,
+                                      showDevices=True,
                                       )

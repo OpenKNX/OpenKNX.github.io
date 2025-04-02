@@ -17,7 +17,7 @@
 <h2>Enthaltene Module</h2>
 <ul>
     {% for module, count in modules_sorted if module in oamModules%}
-    <li data-ofm="{{module}}"><a href="https://github.com/OpenKNX/{{ module }}">{{ module }}</a></li>
+    <li data-ofm="{{module}}"><a href="../../ofm/{{ module }}/">{{ module }}</a> <a href="https://github.com/OpenKNX/{{ module }}">(GitHub)</a></li>
     {% endfor %}
 </ul>
 

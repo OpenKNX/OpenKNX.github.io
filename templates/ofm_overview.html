@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ ofmName }}</title>
+</head>
+<body>
+
+<h1>{{ ofmName }}</h1>
+<p>{# TODO description #}</p>
+<h2>Verfügbar in Applikationen</h2>
+<ul>
+    {% for oamName, oam_details in oam_data.items() if ofmName in oam_details.modules %}
+    <li data-oam="{{oamName}}"><a href="../../oam/{{oamName}}/">{{ oamName }}</a> <a href="https://github.com/OpenKNX/{{oamName}}">(GitHub)</a></li>
+    {% endfor %}
+</ul>
+
+<h2>Unterstützte Geräte</h2>
+<h3>OpenKNX</h3>
+<ul>
+    {# TODO devices #}
+</ul>
+<h3>Andere Geräte</h3>
+<ul>
+</ul>
+
+</body>
+</html>

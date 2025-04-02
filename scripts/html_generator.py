@@ -137,3 +137,14 @@ class HTMLGenerator:
                                           devices_sorted=devices_sorted,
                                           devices_other_sorted=devices_other_sorted,
                                           )
+
+        for ofmName, ofm_usage_count in modules_sorted:
+            path = os.path.join("ofm", ofmName)
+            os.makedirs(os.path.join("docs", path), exist_ok=True)
+            file = os.path.join(path, "index.html")
+            logging.debug(f"Create OFM Overview in {file}")
+            self._render_template_to_file('ofm_overview.html', file,
+                                          ofmName=ofmName,
+                                          oam_data=oam_data,
+                                          # TODO devices_data
+                                          )

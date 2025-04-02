@@ -79,8 +79,8 @@ class HTMLGenerator:
         # OAM-InfraredGateway
         "GW-UP1-IR": "OpenKNX UP1 8xSensor",
 
-        "IP-Router-REG1-Eth": "OpenKNX-IP-Router-REG1-Eth",
-        "IP-Router-REG1-LAN-TP-Base": "OpenKNX-IP-Router-REG1-LAN-TP-Base",
+        "IP-Router-REG1-Eth": "OpenKNX REG1 Basismodul IP",
+        "IP-Router-REG1-LAN-TP-Base": "OpenKNX REG1 Basismodul LAN+TP",
         "OpenKNX-PiPico-BCU-Connector": "OpenKNX PiPico BCU Connector",
         "OpenKNX-REG1-Base-V0": "OpenKNX REG1 Basismodul V0",
         "OpenKNX-REG1-BASE-V0": "OpenKNX REG1 Basismodul V0",

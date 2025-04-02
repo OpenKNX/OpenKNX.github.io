@@ -179,6 +179,7 @@ class HTMLGenerator:
         logging.debug(f"Devices (other) sorted: {devices_other_sorted}")
 
         self._render_template_to_file('dependencies_template.html', 'dependencies_table.html',
+                                      title="OpenKNX-Applikationen/-Module und unterstützte Geräte",
                                       modules_sorted=modules_sorted,
                                       devices_sorted=devices_sorted,
                                       devices_other_sorted=devices_other_sorted,
@@ -188,6 +189,7 @@ class HTMLGenerator:
                                       )
 
         self._render_template_to_file('dependencies_template.html', 'oam2ofm.html',
+                                      title="OpenKNX-Applikationen und Module",
                                       modules_sorted=modules_sorted,
                                       # devices_sorted=devices_sorted,
                                       # devices_other_sorted=devices_other_sorted,
@@ -198,6 +200,7 @@ class HTMLGenerator:
 
         self._render_template_to_file('dependencies_template.html', 'oam2dev.html',
                                       # modules_sorted=modules_sorted,
+                                      title="OpenKNX-Applikationen und unterstützte Geräte",
                                       devices_sorted=devices_sorted,
                                       devices_other_sorted=devices_other_sorted,
                                       oam_data=oam_data,

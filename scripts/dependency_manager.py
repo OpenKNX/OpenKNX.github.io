@@ -1,6 +1,7 @@
 import json
 import logging
 
+
 class DependencyManager:
     def __init__(self, client):
         self.client = client

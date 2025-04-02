@@ -26,7 +26,6 @@ dependency_manager = DependencyManager(client)
 html_generator = HTMLGenerator()
 
 
-
 def download_and_extract_content_xml(zip_url):
     response = client.get_response(zip_url)
     zipfile_obj = zipfile.ZipFile(BytesIO(response.content))
@@ -45,12 +44,14 @@ def download_and_extract_content_xml(zip_url):
         logging.warning(f"No 'data\\content.xml' or 'data/content.xml' found in the archive {zip_url}")
         return None
 
+
 def parse_hardware_info(content_xml):
     products = content_xml.find('Products')
     hardware = []
     for product in products:
         hardware.append(product.get('Name'))
     return hardware
+
 
 def build_hardware_mapping(releases_data):
     hardware_mapping = {}
@@ -74,7 +75,6 @@ def build_hardware_mapping(releases_data):
         else:
             logging.warning(f"No assets found for {oamName}")
     return hardware_mapping
-
 
 
 def main():

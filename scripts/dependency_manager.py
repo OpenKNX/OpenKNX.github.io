@@ -38,9 +38,10 @@ class DependencyManager:
                         }
                 elif len(parts) == 3:
                     commit, branch, path = parts
-                    # # use part after 'lib/'
+                    # use part after 'lib/'
                     dep_name = path.split('/')[-1]
-                    if dep_name.startswith('OFM-'):
+                    # special: detect by name only
+                    if dep_name.startswith('OFM-') or dep_name.startswith('OGM-') or dep_name == 'knx':
                         dependencies_map[dep_name] = {
                             "commit": commit,
                             "branch": branch,
@@ -49,6 +50,7 @@ class DependencyManager:
                             # TODO rename to dep_name
                             "depName": dep_name
                         }
+                        logging.warning(f"Expect module '{dep_name}' by lib-Path only in {repo['name']}: ")
                     else:
                         logging.warning(f"Unexpected lib in incomplete dependencies.txt of {repo['name']}: {dep_name}")
                     incomplete_lines_count += 1

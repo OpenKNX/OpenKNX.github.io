@@ -16,12 +16,16 @@ class DependencyManager:
             return {}
         dependencies_map = {}
         lines = response.text.splitlines()
+        invalid_lines_count = 0
+        incomplete_lines_count = 0
+
         if lines:
             for line in lines[1:]:  # Skip the header
                 parts = line.split()
                 if len(parts) == 4:
                     commit, branch, path, url = parts
-                    dep_name = url.split('/')[-1].replace('.git', '')  # Ableiten des Repo-Namens aus der URL
+                    # use part of https://github.com/OpenKNX/{dep_name}.git :
+                    dep_name = url.split('/')[-1].replace('.git', '')
                     if self._is_openknx_dependency(url):
                         dependencies_map[dep_name] = {
                             "commit": commit,
@@ -31,8 +35,30 @@ class DependencyManager:
                             # TODO rename to dep_name
                             "depName": dep_name
                         }
+                elif len(parts) == 3:
+                    commit, branch, path = parts
+                    # # use part after 'lib/'
+                    dep_name = path.split('/')[-1]
+                    if dep_name.startswith('OFM-'):
+                        dependencies_map[dep_name] = {
+                            "commit": commit,
+                            "branch": branch,
+                            "path": path,
+                            "url": "https://github.com/OpenKNX/{dep_name}.git",
+                            # TODO rename to dep_name
+                            "depName": dep_name
+                        }
+                    else:
+                        logging.warning(f"Unexpected lib in incomplete dependencies.txt of {repo['name']}: {dep_name}")
+                    incomplete_lines_count += 1
                 else:
-                    logging.warning(f"Invalid dependencies.txt format in {repo['name']} line '{line}'")
+                    invalid_lines_count += 1
+
+        if incomplete_lines_count > 0:
+            logging.warning(f"Incomplete dependencies.txt format in {repo['name']} ({incomplete_lines_count} of {len(lines)} lines)")
+        if invalid_lines_count > 0:
+            logging.error(f"Invalid dependencies.txt format in {repo['name']} ({invalid_lines_count} of {len(lines)} lines)")
+
         return dependencies_map
 
     def fetch_all_dependencies(self, repos_data):

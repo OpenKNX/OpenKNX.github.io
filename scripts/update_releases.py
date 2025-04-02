@@ -3,6 +3,7 @@
 
 import json
 import logging
+import os
 import zipfile
 from io import BytesIO
 import xml.etree.ElementTree as ET
@@ -86,7 +87,7 @@ def main():
         "OpenKnxFormatVersion": "v0.1.0-ALPHA",
         "data": oam_releases_data
     }
-    with open('releases.json', 'w') as outfile:
+    with open(os.path.join("docs", 'releases.json'), 'w') as outfile:
         json.dump(releases_data, outfile, indent=4)
 
     # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")

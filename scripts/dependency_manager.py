@@ -55,9 +55,9 @@ class DependencyManager:
                     invalid_lines_count += 1
 
         if incomplete_lines_count > 0:
-            logging.warning(f"Incomplete dependencies.txt format in {repo['name']} ({incomplete_lines_count} of {len(lines)} lines)")
+            logging.warning(f"Incomplete dependencies.txt format in {repo['name']} ({incomplete_lines_count} of {len(lines)-1} lines)")
         if invalid_lines_count > 0:
-            logging.error(f"Invalid dependencies.txt format in {repo['name']} ({invalid_lines_count} of {len(lines)} lines)")
+            logging.error(f"Invalid dependencies.txt format in {repo['name']} ({invalid_lines_count} of {len(lines)-1} lines)")
 
         return dependencies_map
 

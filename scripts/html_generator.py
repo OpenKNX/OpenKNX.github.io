@@ -174,8 +174,9 @@ class HTMLGenerator:
         devices_sorted = sorted(hardware_usage_count.items(), key=lambda item: (-item[1], item[0]))
         devices_other_sorted = sorted(hardware_other_usage_count.items(), key=lambda item: (-item[1], item[0]))
 
-        logging.info(f"Modules sorted {modules_sorted}")
-        logging.info(f"Device sorted {devices_sorted}  //  {devices_other_sorted}")
+        logging.debug(f"Modules sorted: {modules_sorted}")
+        logging.debug(f"Devices (OpenKNX) sorted: {devices_sorted}")
+        logging.debug(f"Devices (other) sorted: {devices_other_sorted}")
 
         self._render_template_to_file('dependencies_template.html', 'dependencies_table.html',
                                       modules_sorted=modules_sorted,

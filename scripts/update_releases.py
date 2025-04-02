@@ -11,6 +11,7 @@ import xml.etree.ElementTree as ET
 from github_client import GitHubClient
 from release_manager import ReleaseManager
 from dependency_manager import DependencyManager
+from devices_helper import DeviceHelper
 from html_generator import HTMLGenerator
 
 # names for identification of app repos:
@@ -24,7 +25,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 client = GitHubClient()
 release_manager = ReleaseManager(client, appPrefix, appSpecialNames, appExclusion)
 dependency_manager = DependencyManager(client)
-html_generator = HTMLGenerator()
+device_helper = DeviceHelper()
+html_generator = HTMLGenerator(device_helper)
 
 
 def download_and_extract_content_xml(zip_url):
@@ -78,6 +80,33 @@ def build_hardware_mapping(releases_data):
     return hardware_mapping
 
 
+def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
+    logging.debug(f"OAM Hardware {oam_hardware}")
+
+    oam_data = {}
+    for oam, dependencies in oam_dependencies.items():
+        oam_data[oam] = {
+            "description": oam_details.get(oam, {}).get("description", "(keine Kurzbeschreibung)"),
+            "modules": dependencies,
+            "devices": [],  # set empty list for OAMs without releases # TODO check cleanup of data-collection
+        }
+        if oam not in oam_details:
+            logging.warning(f"Missing {oam} in oam_details, present only {oam_details.keys()}")
+    for oam, oam_content_devices in oam_hardware.items():
+        if oam not in oam_data:
+            # TODO use same base for oam-list
+            logging.warning(f"Missing {oam} in oam_data, present only {oam_data.keys()}")
+            continue
+        oam_data[oam]["devices"] = devices = []
+        for content_device in oam_content_devices:
+            # TODO move normalization out of html generation:
+            devices.append(device_helper.hw_name_mapping(oam, content_device))
+
+    logging.debug(f"oam_data {json.dumps(oam_data, indent=4)}")
+
+    return oam_data
+
+
 def main():
     oam_repos = release_manager.fetch_app_repos()
 
@@ -98,8 +127,10 @@ def main():
 
     html_generator.update_html(oam_releases_data)
     all_oam_dependencies = dependency_manager.fetch_all_dependencies(oam_repos)
+
     # Generate Dependencies Table
-    html_generator.generate_html_table(all_oam_dependencies, oam_hardware, oam_releases_data)
+    oam_data = generate_oam_data(all_oam_dependencies, oam_hardware, oam_releases_data)
+    html_generator.update_overview_tables(oam_data)
 
 
 if __name__ == "__main__":

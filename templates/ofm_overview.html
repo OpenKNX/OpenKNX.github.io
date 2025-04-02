@@ -22,7 +22,11 @@
 <h2>Unterstützte Geräte</h2>
 <h3>OpenKNX</h3>
 <ul>
-    {# TODO devices #}
+    {% for device, count in devs_sorted %}
+    <li data-dev="{{device}}">
+        {{ device }}
+    </li>
+    {% endfor %}
 </ul>
 <h3>Andere Geräte</h3>
 <ul>

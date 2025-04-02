@@ -139,6 +139,16 @@ class HTMLGenerator:
                                           )
 
         for ofmName, ofm_usage_count in modules_sorted:
+
+            from collections import defaultdict
+            dev_usage_count = defaultdict(int)
+            for oam, oam_details in oam_data.items():
+                # use supported devices of all oams with this module:
+                if ofmName in oam_details["modules"]:
+                    for dev in oam_details["devices"]:
+                        dev_usage_count[dev] += 1
+            devs_sorted = sorted(dev_usage_count.items(), key=lambda item: (-item[1], item[0]))
+
             path = os.path.join("ofm", ofmName)
             os.makedirs(os.path.join("docs", path), exist_ok=True)
             file = os.path.join(path, "index.html")
@@ -147,4 +157,5 @@ class HTMLGenerator:
                                           ofmName=ofmName,
                                           oam_data=oam_data,
                                           # TODO devices_data
+                                          devs_sorted=devs_sorted,
                                           )

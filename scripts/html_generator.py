@@ -75,7 +75,10 @@ class HTMLGenerator:
         "DeveloperBoard-JustForTesters": "?-DeveloperBoard-JustForTesters",
         "firmware_UP1-GW-RS485": "OpenKNX UP1 RS485 Gateway",
         "GardenControl": "SmartMF-GardenControl",
-        "GW-UP1-IR": "?-GW-UP1-IR",
+
+        # OAM-InfraredGateway
+        "GW-UP1-IR": "OpenKNX UP1 8xSensor",
+
         "IP-Router-REG1-Eth": "OpenKNX-IP-Router-REG1-Eth",
         "IP-Router-REG1-LAN-TP-Base": "OpenKNX-IP-Router-REG1-LAN-TP-Base",
         "OpenKNX-PiPico-BCU-Connector": "OpenKNX PiPico BCU Connector",

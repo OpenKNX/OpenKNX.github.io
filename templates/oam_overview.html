@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+
+{% set oamModules = oam_details['modules'] %}
+{% set oamDevices = oam_details['devices'] %}
+{% set oamDescription = oam_details['description'] %}
+{% set oamUrl = "https://github.com/OpenKNX/" ~ oamName %}
+
+<h1>{{ oamName }}</h1>
+<p>{{ oam_details.description }}</p>
+<h2>Enthaltene Module</h2>
+<ul>
+    {% for module, count in modules_sorted if module in oamModules%}
+    <li data-ofm="{{module}}"><a href="https://github.com/OpenKNX/{{ module }}">{{ module }}</a></li>
+    {% endfor %}
+</ul>
+
+<h2>Unterstützte Geräte</h2>
+<h3>OpenKNX</h3>
+<ul>
+    {% for device, count in devices_sorted if device in oamDevices %}
+    <li data-dev="{{device}}">{{device}}</li>
+    {% endfor %}
+</ul>
+<h3>Andere Geräte</h3>
+<ul>
+    {% for device, count in devices_other_sorted if device in oamDevices %}
+    <li data-dev="{{device}}">{{device}}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

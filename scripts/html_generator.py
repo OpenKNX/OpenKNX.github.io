@@ -48,7 +48,6 @@ class HTMLGenerator:
                     latest_prerelease = release
 
         # create release info for this repo
-        os.makedirs('releases', exist_ok=True)
         output_filename = os.path.join('releases', f'{repo_name}.html')
         self._render_template_to_file('repo_latestrelease_template.html', output_filename,
                                       repo_name=repo_name,
@@ -124,3 +123,17 @@ class HTMLGenerator:
                                       showModules=False,
                                       showDevices=True,
                                       )
+
+        for oamName, oam_details in oam_data.items():
+            path = os.path.join("oam", oamName)
+            os.makedirs(os.path.join("docs", path), exist_ok=True)
+            file = os.path.join(path, "index.html")
+            logging.debug(f"Create OAM Overview in {file}")
+            self._render_template_to_file('oam_overview.html', file,
+                                          oamName=oamName,
+                                          oam_details=oam_details,
+                                          # same order as in large overview table. TODO Reversed might be better for modules
+                                          modules_sorted=modules_sorted,
+                                          devices_sorted=devices_sorted,
+                                          devices_other_sorted=devices_other_sorted,
+                                          )

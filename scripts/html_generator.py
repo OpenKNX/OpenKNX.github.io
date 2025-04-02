@@ -158,4 +158,6 @@ class HTMLGenerator:
                                           oam_data=oam_data,
                                           # TODO devices_data
                                           devs_sorted=devs_sorted,
+                                          devices_sorted=devices_sorted,
+                                          devices_other_sorted=devices_other_sorted,
                                           )

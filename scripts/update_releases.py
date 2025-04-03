@@ -44,12 +44,13 @@ def download_and_extract_content_xml(zip_url):
     else:
         logging.warning(f"No 'data\\content.xml' or 'data/content.xml' found in the archive {zip_url}")
         return None
+
     # quick-fix for older releases with broken XML:
-    xml_str = xml_content.replace('<Products>\n</Content>\n', '</Products>\n</Content>\n')
+    xml_str = xml_content.replace('<Products>\r\n</Content>', '</Products>\r\n</Content>')
     if xml_str != xml_content:
         logging.warning(f"Quick-Fixed broken XML in 'content.xml' found in the archive {zip_url}")
 
-    return ET.parse(xml_str).getroot()
+    return ET.fromstring(xml_str)
 
 
 def parse_hardware_info(content_xml):

@@ -36,7 +36,8 @@ def download_and_extract_content_xml(zip_url):
     # Check for app xml to read parameter-memory-size
     xml_files = [name for name in zipfile_obj.namelist() if name.endswith('.xml') and not name.endswith('content.xml')]
     if len(xml_files) == 1:
-        logging.info(f"Found possible app XML file {xml_files[0]} in the archive {zip_url}")
+        app_xml = xml_files[0]
+        logging.info(f"Found possible app XML: {app_xml}")
     else:
         logging.warning(f"Found {len(xml_files)} other XML files in the archive {zip_url}")
 

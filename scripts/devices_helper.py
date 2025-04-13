@@ -33,8 +33,13 @@ class DeviceHelper:
             "RealPresence_v2.0": "?-RealPresence_v2.0",
             "REG1_BASE_V0": "OpenKNX REG1 Basismodul V0",
             "REG1_BASE_V1": "OpenKNX REG1 Basismodul",
+
+            # DALI-Devices
             "REG1-v0": "OpenKNX REG1 Dali Gateway V0",
             "REG1-v1": "OpenKNX REG1 Dali Gateway",
+            "REG1-rp2040-v1": "OpenKNX REG1 Dali Gateway",
+            "REG1-esp32": "OpenKNX REG1 Basismodul LAN+TP Devboard V00.02 (ESP32)",
+
             "REG2_PIPICO_V1": "OpenKNX REG2 PiPico2 V1",
             "Sensormodul-v3.0-SAMD": "SmartMF-Sensormodul-v3.0-SAMD",
             "Sensormodul-v3.1-SAMD": "SmartMF-Sensormodul-v3.1-SAMD",

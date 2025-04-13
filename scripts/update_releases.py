@@ -42,7 +42,7 @@ def download_and_extract_content_xml(zip_url):
             tree = ET.parse(xml_file)
             root = tree.getroot()
             total_size = 0
-            for segment in root.findall(".//Static/Code/RelativeSegment[@Size]"):
+            for segment in root.findall(".//{*}Static/{*}Code/{*}RelativeSegment[@Size]"):
                 total_size += int(segment.get('Size'))
             logging.info(f"Total Size of Parameter-Memory in '{app_xml}': {total_size}")
     else:

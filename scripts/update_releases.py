@@ -30,10 +30,13 @@ device_helper = DeviceHelper()
 html_generator = HTMLGenerator(device_helper)
 
 
-def download_and_extract_content_xml(zip_url):
+def process_release_zip(zip_url):
     response = client.get_response(zip_url)
     zipfile_obj = zipfile.ZipFile(BytesIO(response.content))
-
+    
+    app_stat = None
+    hardware_info = None
+    
     # Check for app xml to read parameter-memory-size
     xml_files = [name for name in zipfile_obj.namelist() if name.endswith('.xml') and not name.endswith('content.xml')]
     if len(xml_files) == 1:
@@ -49,11 +52,13 @@ def download_and_extract_content_xml(zip_url):
     for path in ['data\\content.xml', 'data/content.xml']:
         if path in zipfile_obj.namelist():
             with zipfile_obj.open(path) as xml_file:
-                tree = ET.parse(xml_file)
-                root = tree.getroot()
-                return root
-    logging.warning(f"No 'data\\content.xml' or 'data/content.xml' found in the archive {zip_url}")
-    return None
+                root = ET.parse(xml_file).getroot()
+                hardware_info = parse_hardware_info(root)
+                
+    if hardware_info is None:
+        logging.warning(f"No 'data\\content.xml' or 'data/content.xml' found in the archive {zip_url}")
+    
+    return hardware_info, app_stat
 
 
 def parse_hardware_info(content_xml):
@@ -66,6 +71,7 @@ def parse_hardware_info(content_xml):
 
 def build_hardware_mapping(releases_data):
     hardware_mapping = {}
+    oam_stat = {}
     for oamName, oamData in releases_data.items():
         oamReleases = oamData["releases"]
         if not oamReleases or not isinstance(oamReleases, list) or len(oamReleases) == 0:
@@ -75,9 +81,10 @@ def build_hardware_mapping(releases_data):
         for asset in latest_release.get('assets', []):
             logging.info(f"Fetching release archive {oamName} from {asset['browser_download_url']}")
             try:
-                content_xml = download_and_extract_content_xml(asset['browser_download_url'])
-                if content_xml is not None:
-                    hardware_info = parse_hardware_info(content_xml)
+                hardware_info, app_stat = process_release_zip(asset['browser_download_url'])
+                if app_stat is not None:
+                    oam_stat[oamName] = app_stat
+                if hardware_info is not None:
                     hardware_mapping[oamName] = hardware_info
                     break
             except ET.ParseError as e:
@@ -85,7 +92,7 @@ def build_hardware_mapping(releases_data):
                 # Ignorieren Sie den Fehler und fahren Sie fort
         else:
             logging.warning(f"No assets found for {oamName}")
-    return hardware_mapping
+    return hardware_mapping, oam_stat
 
 
 def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
@@ -128,10 +135,12 @@ def main():
         json.dump(releases_data, outfile, indent=4)
 
     # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")
-    oam_hardware = build_hardware_mapping(oam_releases_data)
+    oam_hardware, oam_stat = build_hardware_mapping(oam_releases_data)
     with open('hardware_mapping.json', 'w') as outfile:
         json.dump(oam_hardware, outfile, indent=4)
     logging.info(f"Hardware-Support: {json.dumps(oam_hardware, indent=4)}")
+    for oamName, oamStat in oam_stat.items():
+        logging.info(f"App-Sizing-Stat for {oamName}: {oamStat}")
 
     html_generator.update_html(oam_releases_data)
     all_oam_dependencies = dependency_manager.fetch_all_dependencies(oam_repos)

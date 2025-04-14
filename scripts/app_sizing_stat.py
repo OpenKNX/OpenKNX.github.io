@@ -100,7 +100,7 @@ class AppSizingStat:
             self.module_def_count = len(root.findall(".//{*}ModuleDefs/{*}ModuleDef"))
             
             # Count elements inside <Dynamic>
-            dynamic = root.find(".//{*}Dynamic")
+            dynamic = root.find(".//{*}ApplicationProgram/{*}Dynamic")
             if dynamic is not None:
                 self.dynamic_element_count = len(dynamic.findall(".//*"))
                 self.choose_element_count = len(dynamic.findall(".//{*}Choose"))

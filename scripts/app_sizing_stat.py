@@ -107,7 +107,7 @@ class AppSizingStat:
                 self.assign_element_count = len(dynamic.findall(".//{*}Assign"))
             
                 # Count ParameterBlock with Inline!="true"
-                parameter_blocks = dynamic.findall(".//{*}ParameterBlock[@Inline!='true']")
+                parameter_blocks = dynamic.findall('.//{*}ParameterBlock[@Inline!="true"]')
                 self.parameter_block_count = len(parameter_blocks)
 
                 # Determine the maximum number of ParamRefRef elements within such ParameterBlock

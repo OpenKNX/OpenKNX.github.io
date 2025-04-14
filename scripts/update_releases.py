@@ -13,6 +13,7 @@ from release_manager import ReleaseManager
 from dependency_manager import DependencyManager
 from devices_helper import DeviceHelper
 from html_generator import HTMLGenerator
+from app_sizing_stat import AppSizingStat  # Add this import
 
 # names for identification of app repos:
 appPrefix = "OAM-"
@@ -39,12 +40,8 @@ def download_and_extract_content_xml(zip_url):
         app_xml = xml_files[0]
         logging.info(f"Found possible app XML: {app_xml}")
         with zipfile_obj.open(app_xml) as xml_file:
-            tree = ET.parse(xml_file)
-            root = tree.getroot()
-            total_size = 0
-            for segment in root.findall(".//{*}Static/{*}Code/{*}RelativeSegment[@Size]"):
-                total_size += int(segment.get('Size'))
-            logging.info(f"Total Size of Parameter-Memory in '{app_xml}': {total_size}")
+            app_stat = AppSizingStat(xml_file)
+            logging.info(f"Sizing in '{app_xml}': {app_stat}")
     else:
         logging.warning(f"Found {len(xml_files)} other XML files in the archive {zip_url}")
 

@@ -18,7 +18,7 @@
 <ul>
     {% for module, count in modules_sorted if module in oamModules%}
     <li data-ofm="{{module}}">
-        <a href="https://github.com/OpenKNX/{{ module }}">(GitHub)</a>
+        (<a href="https://github.com/OpenKNX/{{ module }}">GitHub</a>)
         <a href="../../ofm/{{ module }}/">{{ module }}</a>
     </li>
     {% endfor %}

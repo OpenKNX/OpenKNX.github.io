@@ -13,7 +13,7 @@
 <ul>
     {% for oamName, oam_details in oam_data.items() if ofmName in oam_details.modules %}
     <li data-oam="{{oamName}}">
-        <a href="https://github.com/OpenKNX/{{oamName}}">(GitHub)</a>
+        (<a href="https://github.com/OpenKNX/{{oamName}}">GitHub</a>)
         <a href="../../oam/{{oamName}}/">{{ oamName }}</a>
     </li>
     {% endfor %}

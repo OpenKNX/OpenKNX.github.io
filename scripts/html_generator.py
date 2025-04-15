@@ -105,35 +105,23 @@ class HTMLGenerator:
         logging.debug(f"Devices (OpenKNX) sorted: {devices_sorted}")
         logging.debug(f"Devices (other) sorted: {devices_other_sorted}")
 
-        self._render_template_to_file('dependencies_template.html', 'dependencies_table.html',
-                                      title="OpenKNX-Applikationen, enthaltene Module und unterstützte Geräte",
-                                      modules_sorted=modules_sorted,
-                                      devices_sorted=devices_sorted,
-                                      devices_other_sorted=devices_other_sorted,
-                                      oam_data=oam_data,
-                                      showModules=True,
-                                      showDevices=True,
-                                      )
-
-        self._render_template_to_file('dependencies_template.html', 'oam2ofm.html',
-                                      title="OpenKNX-Applikationen und enthaltene Module",
-                                      modules_sorted=modules_sorted,
-                                      # devices_sorted=devices_sorted,
-                                      # devices_other_sorted=devices_other_sorted,
-                                      oam_data=oam_data,
-                                      showModules=True,
-                                      showDevices=False,
-                                      )
-
-        self._render_template_to_file('dependencies_template.html', 'oam2dev.html',
-                                      # modules_sorted=modules_sorted,
-                                      title="OpenKNX-Applikationen und unterstützte Geräte",
-                                      devices_sorted=devices_sorted,
-                                      devices_other_sorted=devices_other_sorted,
-                                      oam_data=oam_data,
-                                      showModules=False,
-                                      showDevices=True,
-                                      )
+        render_configs = [
+            (True, True, "dependencies_table.html", "OpenKNX-Applikationen, enthaltene Module und unterstützte Geräte"),
+            (True, False, "oam2ofm.html", "OpenKNX-Applikationen und enthaltene Module"),
+            (False, True, "oam2dev.html", "OpenKNX-Applikationen und unterstützte Geräte"),
+        ]
+        for showModules, showDevices, output_file, title in render_configs:
+            self._render_template_to_file(
+                'dependencies_template.html',
+                output_file,
+                title=title,
+                modules_sorted=modules_sorted if showModules else None,
+                devices_sorted=devices_sorted if showDevices else None,
+                devices_other_sorted=devices_other_sorted if showDevices else None,
+                oam_data=oam_data,
+                showModules=showModules,
+                showDevices=showDevices,
+            )
 
         for oamName, oam_details in oam_data.items():
             path = os.path.join("oam", oamName)

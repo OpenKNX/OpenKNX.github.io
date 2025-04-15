@@ -27,7 +27,7 @@ class DependencyManager:
                     commit, branch, path, url = parts
                     # use part of https://github.com/OpenKNX/{dep_name}.git :
                     dep_name = url.split('/')[-1].replace('.git', '')
-                    if self._is_openknx_dependency(url):
+                    if self._is_openknx_dependency(url) and self._is_module_to_include(dep_name):
                         dependencies_map[dep_name] = {
                             "commit": commit,
                             "branch": branch,
@@ -41,7 +41,7 @@ class DependencyManager:
                     # use part after 'lib/'
                     dep_name = path.split('/')[-1]
                     # special: detect by name only
-                    if dep_name.startswith('OFM-') or dep_name.startswith('OGM-') or dep_name == 'knx':
+                    if self._is_module_to_include(dep_name):
                         dependencies_map[dep_name] = {
                             "commit": commit,
                             "branch": branch,
@@ -63,6 +63,11 @@ class DependencyManager:
             logging.error(f"Invalid dependencies.txt format in {repo['name']} ({invalid_lines_count} of {len(lines)-1} lines)")
 
         return dependencies_map
+
+    def _is_module_to_include(self, dep_name):
+        if dep_name == 'OFM-SmartMF':  ## ignore this module, no function for user
+            return False
+        return dep_name.startswith('OFM-') or dep_name.startswith('OGM-') or dep_name == 'knx'
 
     def fetch_all_dependencies(self, repos_data):
         all_dependencies = {}

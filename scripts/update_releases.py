@@ -29,6 +29,51 @@ dependency_manager = DependencyManager(client)
 device_helper = DeviceHelper()
 html_generator = HTMLGenerator(device_helper)
 
+oam_order = [
+
+    # virtual
+    "OAM-LogicModule",
+    "OAM-StateEngine",
+    "OAM-VirtualButton",
+    "OAM-ShutterController",
+
+    # virtual with optional hardware
+    "OAM-PresenceModule",
+    "OAM-Meter",
+
+    # hardware
+    "OAM-SensorModule",
+    "SOM-UP",
+    "GW-REG1-Dali",
+
+    "SEN-UP1-8xTH",
+
+    "OAM-OneWireModule",
+    "OAM-EnoceanGateway",
+    "OAM-ModbusGateway",
+    "OAM-InfraredGateway",
+
+    # network
+    "OAM-IP-Router",
+    "OAM-InternetService",
+    "OAM-SmartHomeBridge",
+
+    "OAM-Dummy",
+
+    "OAM-AccessControl",
+    "OAM-WeatherWN90LP",
+
+    "BEM-GardenControl",
+    "OAM-TouchRound",
+
+    "OAM-SwitchActuator",
+    "OAM-BinaryInput",
+    "OAM-HeatingActuator",
+
+    # spezial
+    "OAM-ElectricDoorDrive",
+    "OAM-BinaryClock",
+]
 
 def process_release_zip(zip_url):
     response = client.get_response(zip_url)
@@ -119,7 +164,10 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
 
     logging.debug(f"oam_data {json.dumps(oam_data, indent=4)}")
 
-    return oam_data
+    # Sort based on given order, all others at end
+    oam_data_sorted = {oam: oam_data[oam] for oam in oam_order if oam in oam_data}
+    oam_data_unsorted = {oam: oam_data[oam] for oam in oam_data if oam not in oam_order}
+    return {**oam_data_sorted, **oam_data_unsorted}
 
 
 def main():

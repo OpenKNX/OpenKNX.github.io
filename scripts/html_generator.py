@@ -196,13 +196,23 @@ class HTMLGenerator:
                                           ofm_sorted=devs_sorted
                                           )
 
+            oam_data_of_device = {
+                oam_name: oam_details
+                for oam_name, oam_details in oam_data.items() if device_name in oam_details['devices']
+            }
+            modules_of_device = {
+                module
+                for oam_details in oam_data_of_device.values()
+                for module in oam_details["modules"]
+            }
+            modules_sorted_of_device = [module for module in modules_sorted if module[0] in modules_of_device]
             self._render_template_to_file('dependencies_template.html',
                                           os.path.join("devices", to_device_pathname(device_name), 'functions.html'),
                                           title=f"OpenKNX-Applikationen und enthaltene Module für {device_name}",
-                                          modules_sorted=modules_sorted,  # TODO reduce!
+                                          modules_sorted=modules_sorted_of_device,
                                           # devices_sorted=devices_sorted,
                                           # devices_other_sorted=devices_other_sorted,
-                                          oam_data={oam_name:oam_details for oam_name, oam_details in oam_data.items() if device_name in oam_details['devices']},
+                                          oam_data=oam_data_of_device,
                                           showModules=True,
                                           showDevices=False,
                                           )

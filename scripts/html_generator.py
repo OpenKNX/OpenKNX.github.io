@@ -147,6 +147,7 @@ class HTMLGenerator:
                                           modules_sorted=modules_sorted,
                                           devices_sorted=devices_sorted,
                                           devices_other_sorted=devices_other_sorted,
+                                          function_device_to_pathname=to_device_pathname,
                                           )
 
         for ofmName, ofm_usage_count in modules_sorted:
@@ -171,6 +172,7 @@ class HTMLGenerator:
                                           devs_sorted=dev_usage_count,
                                           devices_sorted=devices_sorted,
                                           devices_other_sorted=devices_other_sorted,
+                                          function_device_to_pathname=to_device_pathname,
                                           )
 
         for device_name, usageCount in devices_sorted:

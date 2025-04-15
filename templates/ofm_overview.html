@@ -23,7 +23,7 @@
 <h3>OpenKNX</h3>
 <ul>
     {%- for device, count in devices_sorted if device in devs_sorted %}
-    <li data-dev="{{device}}">{{device}}</li>
+    <li data-dev="{{device}}"><a href="../../devices/{{ function_device_to_pathname(device) }}/">{{ device }}</a></li>
     {%- endfor %}
 </ul>
 <h3>Andere Geräte</h3>

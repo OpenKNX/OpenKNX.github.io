@@ -9,8 +9,12 @@ from devices_helper import DeviceHelper
 
 
 def to_device_pathname(device_name):
+    umlauts = {'ä': 'ae', 'ö': 'oe', 'ü': 'ue', 'ß': 'ss', 'Ä': 'Ae', 'Ö': 'Oe', 'Ü': 'Ue'}
+    for umlaut, replacement in umlauts.items():
+        device_name = device_name.replace(umlaut, replacement)
+
     # allow alphanumeric, _ and - characters only
-    return re.sub(r'[^\w\-]', '_', device_name)
+    return re.sub(r'[^A-Za-z0-9_-]', '_', device_name)
 
 
 class HTMLGenerator:

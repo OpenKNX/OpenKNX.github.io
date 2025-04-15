@@ -7,7 +7,6 @@ import re
 from devices_helper import DeviceHelper
 
 
-
 def to_device_pathname(device_name):
     umlauts = {'ä': 'ae', 'ö': 'oe', 'ü': 'ue', 'ß': 'ss', 'Ä': 'Ae', 'Ö': 'Oe', 'Ü': 'Ue'}
     for umlaut, replacement in umlauts.items():
@@ -76,7 +75,6 @@ class HTMLGenerator:
         # current releases htmls for apps:
         for repo, details in releases_data.items():
             self.create_html_for_repo(repo, details)
-
 
     def update_overview_tables(self, oam_data):
         # module,devices -> usage_count

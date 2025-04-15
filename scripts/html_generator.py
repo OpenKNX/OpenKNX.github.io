@@ -2,8 +2,15 @@ import json
 import os
 import logging
 from jinja2 import Environment, FileSystemLoader
+import re
 
 from devices_helper import DeviceHelper
+
+
+
+def to_device_pathname(device_name):
+    # allow alphanumeric, _ and - characters only
+    return re.sub(r'[^\w\-]', '_', device_name)
 
 
 class HTMLGenerator:
@@ -160,4 +167,25 @@ class HTMLGenerator:
                                           devs_sorted=dev_usage_count,
                                           devices_sorted=devices_sorted,
                                           devices_other_sorted=devices_other_sorted,
+                                          )
+
+        for device_name, usageCount in devices_sorted:
+
+            from collections import defaultdict
+            ofm_usage_count = defaultdict(int)
+            for oam, oam_details in oam_data.items():
+                # use supported devices of all oams with this module:
+                if device_name in oam_details["devices"]:
+                    for ofm in oam_details["modules"]:
+                        ofm_usage_count[ofm] += 1
+            devs_sorted = sorted(ofm_usage_count.items(), key=lambda item: (-item[1], item[0]))
+            # TODO use device-id?
+            path = os.path.join("devices", to_device_pathname(device_name))
+            os.makedirs(os.path.join("docs", path), exist_ok=True)
+            file = os.path.join(path, "index.html")
+            logging.debug(f"Create Device Overview in {file}")
+            self._render_template_to_file('device_overview.html', file,
+                                          name=device_name,
+                                          oam_data=oam_data,
+                                          ofm_sorted=devs_sorted
                                           )

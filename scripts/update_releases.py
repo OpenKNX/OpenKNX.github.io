@@ -43,10 +43,9 @@ oam_order = [
 
     # hardware
     "OAM-SensorModule",
+    "SEN-UP1-8xTH",
     "SOM-UP",
     "GW-REG1-Dali",
-
-    "SEN-UP1-8xTH",
 
     "OAM-OneWireModule",
     "OAM-EnoceanGateway",
@@ -55,7 +54,7 @@ oam_order = [
 
     # network
     "OAM-IP-Router",
-    "OAM-InternetService",
+    "OAM-InternetServices",
     "OAM-SmartHomeBridge",
 
     "OAM-Dummy",

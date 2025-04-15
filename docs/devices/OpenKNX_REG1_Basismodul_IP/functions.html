@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenKNX-Applikationen und enthaltene Module für OpenKNX REG1 Basismodul IP</title>
+    <link rel="stylesheet" href="css/table_header_rotate.css">
+    <style>
+        
+        table:has(td:nth-child(2):hover, th:nth-child(2):hover) td:nth-child(2).isPart,
+        table:has(td:nth-child(3):hover, th:nth-child(3):hover) td:nth-child(3).isPart,
+        table:has(td:nth-child(4):hover, th:nth-child(4):hover) td:nth-child(4).isPart,
+        table:has(td:nth-child(5):hover, th:nth-child(5):hover) td:nth-child(5).isPart,
+        table:has(td:nth-child(6):hover, th:nth-child(6):hover) td:nth-child(6).isPart,
+        table:has(td:nth-child(7):hover, th:nth-child(7):hover) td:nth-child(7).isPart,
+        table:has(td:nth-child(8):hover, th:nth-child(8):hover) td:nth-child(8).isPart,
+        table:has(td:nth-child(9):hover, th:nth-child(9):hover) td:nth-child(9).isPart,
+        table:has(td:nth-child(10):hover, th:nth-child(10):hover) td:nth-child(10).isPart,
+        table:has(td:nth-child(11):hover, th:nth-child(11):hover) td:nth-child(11).isPart,
+        table:has(td:nth-child(12):hover, th:nth-child(12):hover) td:nth-child(12).isPart,
+        table:has(td:nth-child(13):hover, th:nth-child(13):hover) td:nth-child(13).isPart,
+        table:has(td:nth-child(14):hover, th:nth-child(14):hover) td:nth-child(14).isPart,
+        table:has(td:nth-child(15):hover, th:nth-child(15):hover) td:nth-child(15).isPart,
+        table:has(td:nth-child(16):hover, th:nth-child(16):hover) td:nth-child(16).isPart,
+        table:has(td:nth-child(17):hover, th:nth-child(17):hover) td:nth-child(17).isPart,
+        table:has(td:nth-child(18):hover, th:nth-child(18):hover) td:nth-child(18).isPart,
+        table:has(td:nth-child(19):hover, th:nth-child(19):hover) td:nth-child(19).isPart,
+        table:has(td:nth-child(20):hover, th:nth-child(20):hover) td:nth-child(20).isPart,
+        table:has(td:nth-child(21):hover, th:nth-child(21):hover) td:nth-child(21).isPart,
+        table:has(td:nth-child(22):hover, th:nth-child(22):hover) td:nth-child(22).isPart,
+        table:has(td:nth-child(23):hover, th:nth-child(23):hover) td:nth-child(23).isPart,
+        table:has(td:nth-child(24):hover, th:nth-child(24):hover) td:nth-child(24).isPart,
+        table:has(td:nth-child(25):hover, th:nth-child(25):hover) td:nth-child(25).isPart,
+        table:has(td:nth-child(26):hover, th:nth-child(26):hover) td:nth-child(26).isPart,
+        table:has(td:nth-child(27):hover, th:nth-child(27):hover) td:nth-child(27).isPart,
+        table:has(td:nth-child(28):hover, th:nth-child(28):hover) td:nth-child(28).isPart,
+        table:has(td:nth-child(29):hover, th:nth-child(29):hover) td:nth-child(29).isPart,
+        table:has(td:nth-child(30):hover, th:nth-child(30):hover) td:nth-child(30).isPart,
+        table:has(td:nth-child(31):hover, th:nth-child(31):hover) td:nth-child(31).isPart,
+        table:has(td:nth-child(32):hover, th:nth-child(32):hover) td:nth-child(32).isPart,
+        
+        tbody tr:hover {
+            background-color: #dfd;
+        }
+        table:has(td:nth-child(2):hover, th:nth-child(2):hover) thead th.rotate45:nth-child(2) div span,
+        table:has(td:nth-child(3):hover, th:nth-child(3):hover) thead th.rotate45:nth-child(3) div span,
+        table:has(td:nth-child(4):hover, th:nth-child(4):hover) thead th.rotate45:nth-child(4) div span,
+        table:has(td:nth-child(5):hover, th:nth-child(5):hover) thead th.rotate45:nth-child(5) div span,
+        table:has(td:nth-child(6):hover, th:nth-child(6):hover) thead th.rotate45:nth-child(6) div span,
+        table:has(td:nth-child(7):hover, th:nth-child(7):hover) thead th.rotate45:nth-child(7) div span,
+        table:has(td:nth-child(8):hover, th:nth-child(8):hover) thead th.rotate45:nth-child(8) div span,
+        table:has(td:nth-child(9):hover, th:nth-child(9):hover) thead th.rotate45:nth-child(9) div span,
+        table:has(td:nth-child(10):hover, th:nth-child(10):hover) thead th.rotate45:nth-child(10) div span,
+        table:has(td:nth-child(11):hover, th:nth-child(11):hover) thead th.rotate45:nth-child(11) div span,
+        table:has(td:nth-child(12):hover, th:nth-child(12):hover) thead th.rotate45:nth-child(12) div span,
+        table:has(td:nth-child(13):hover, th:nth-child(13):hover) thead th.rotate45:nth-child(13) div span,
+        table:has(td:nth-child(14):hover, th:nth-child(14):hover) thead th.rotate45:nth-child(14) div span,
+        table:has(td:nth-child(15):hover, th:nth-child(15):hover) thead th.rotate45:nth-child(15) div span,
+        table:has(td:nth-child(16):hover, th:nth-child(16):hover) thead th.rotate45:nth-child(16) div span,
+        table:has(td:nth-child(17):hover, th:nth-child(17):hover) thead th.rotate45:nth-child(17) div span,
+        table:has(td:nth-child(18):hover, th:nth-child(18):hover) thead th.rotate45:nth-child(18) div span,
+        table:has(td:nth-child(19):hover, th:nth-child(19):hover) thead th.rotate45:nth-child(19) div span,
+        table:has(td:nth-child(20):hover, th:nth-child(20):hover) thead th.rotate45:nth-child(20) div span,
+        table:has(td:nth-child(21):hover, th:nth-child(21):hover) thead th.rotate45:nth-child(21) div span,
+        table:has(td:nth-child(22):hover, th:nth-child(22):hover) thead th.rotate45:nth-child(22) div span,
+        table:has(td:nth-child(23):hover, th:nth-child(23):hover) thead th.rotate45:nth-child(23) div span,
+        table:has(td:nth-child(24):hover, th:nth-child(24):hover) thead th.rotate45:nth-child(24) div span,
+        table:has(td:nth-child(25):hover, th:nth-child(25):hover) thead th.rotate45:nth-child(25) div span,
+        table:has(td:nth-child(26):hover, th:nth-child(26):hover) thead th.rotate45:nth-child(26) div span,
+        table:has(td:nth-child(27):hover, th:nth-child(27):hover) thead th.rotate45:nth-child(27) div span,
+        table:has(td:nth-child(28):hover, th:nth-child(28):hover) thead th.rotate45:nth-child(28) div span,
+        table:has(td:nth-child(29):hover, th:nth-child(29):hover) thead th.rotate45:nth-child(29) div span,
+        table:has(td:nth-child(30):hover, th:nth-child(30):hover) thead th.rotate45:nth-child(30) div span,
+        table:has(td:nth-child(31):hover, th:nth-child(31):hover) thead th.rotate45:nth-child(31) div span,
+        table:has(td:nth-child(32):hover, th:nth-child(32):hover) thead th.rotate45:nth-child(32) div span,
+        
+        .DUMMY-DUMMY-DUMMY
+        {
+            border-bottom: 2px solid #9f9;
+        }
+    </style>
+</head>
+<body>
+<table class="openknxTitleTable">
+    <caption>OpenKNX-Applikationen und enthaltene Module für OpenKNX REG1 Basismodul IP</caption>
+    <colgroup>
+        <col class="before-new-cols" />
+
+       
+        
+        <col data-ofm="OGM-Common" />
+        
+        <col data-ofm="knx" />
+        
+        <col data-ofm="OFM-FileTransferModule" />
+        
+        <col data-ofm="OFM-LogicModule" />
+        
+        <col data-ofm="OFM-ConfigTransfer" />
+        
+        <col data-ofm="OFM-VirtualButton" />
+        
+        <col data-ofm="OFM-UsbExchange" />
+        
+        <col data-ofm="OGM-HardwareConfig" />
+        
+        <col data-ofm="OFM-BinaryInput" />
+        
+        <col data-ofm="OFM-Network" />
+        
+        <col data-ofm="OFM-FunctionBlocks" />
+        
+        <col data-ofm="OFM-SmartMF" />
+        
+        <col data-ofm="OGM-SensorDevices" />
+        
+        <col data-ofm="OFM-GPIOModule" />
+        
+        <col data-ofm="OFM-OneWireModule" />
+        
+        <col data-ofm="OFM-PresenceModule" />
+        
+        <col data-ofm="OFM-SmartHomeBridge" />
+        
+        <col data-ofm="OFM-SwitchActuator" />
+        
+        <col data-ofm="*special*" />
+       
+
+       
+    </colgroup>
+    <thead>
+    <tr>
+        <th class="before-new-cols"></th>
+
+       
+        
+        <th class="rotate45" data-ofm="OGM-Common"><div><span><a href="https://github.com/OpenKNX/OGM-Common">OGM-Common</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="knx"><div><span><a href="https://github.com/OpenKNX/knx">knx</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-FileTransferModule"><div><span><a href="https://github.com/OpenKNX/OFM-FileTransferModule">OFM-FileTransferModule</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-LogicModule"><div><span><a href="https://github.com/OpenKNX/OFM-LogicModule">OFM-LogicModule</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-ConfigTransfer"><div><span><a href="https://github.com/OpenKNX/OFM-ConfigTransfer">OFM-ConfigTransfer</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-VirtualButton"><div><span><a href="https://github.com/OpenKNX/OFM-VirtualButton">OFM-VirtualButton</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-UsbExchange"><div><span><a href="https://github.com/OpenKNX/OFM-UsbExchange">OFM-UsbExchange</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OGM-HardwareConfig"><div><span><a href="https://github.com/OpenKNX/OGM-HardwareConfig">OGM-HardwareConfig</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-BinaryInput"><div><span><a href="https://github.com/OpenKNX/OFM-BinaryInput">OFM-BinaryInput</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-Network"><div><span><a href="https://github.com/OpenKNX/OFM-Network">OFM-Network</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-FunctionBlocks"><div><span><a href="https://github.com/OpenKNX/OFM-FunctionBlocks">OFM-FunctionBlocks</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-SmartMF"><div><span><a href="https://github.com/OpenKNX/OFM-SmartMF">OFM-SmartMF</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OGM-SensorDevices"><div><span><a href="https://github.com/OpenKNX/OGM-SensorDevices">OGM-SensorDevices</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-GPIOModule"><div><span><a href="https://github.com/OpenKNX/OFM-GPIOModule">OFM-GPIOModule</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-OneWireModule"><div><span><a href="https://github.com/OpenKNX/OFM-OneWireModule">OFM-OneWireModule</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-PresenceModule"><div><span><a href="https://github.com/OpenKNX/OFM-PresenceModule">OFM-PresenceModule</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-SmartHomeBridge"><div><span><a href="https://github.com/OpenKNX/OFM-SmartHomeBridge">OFM-SmartHomeBridge</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-SwitchActuator"><div><span><a href="https://github.com/OpenKNX/OFM-SwitchActuator">OFM-SwitchActuator</a></span></div></th>
+        
+        <th class="singleModules before-new-cols" data-ofm="*special*">Einmalig verwendete Module:</th>
+       
+
+       
+
+    </tr>
+    </thead>
+    <tbody>
+    
+    
+    
+    
+    
+    <tr data-oam="OAM-IP-Router">
+        <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-IP-Router">OAM-IP-Router</a><div class="oam-details">OpenKNX IP-Router Application</div></th>
+
+       
+        
+        <td data-ofm="OGM-Common" class="isPart">&#9632;</td>
+        
+        <td data-ofm="knx" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-FileTransferModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-LogicModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-ConfigTransfer" class="isPart"></td>
+        
+        <td data-ofm="OFM-VirtualButton" class="isPart"></td>
+        
+        <td data-ofm="OFM-UsbExchange" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OGM-HardwareConfig" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
+        
+        <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-SmartMF" class="isPart"></td>
+        
+        <td data-ofm="OGM-SensorDevices" class="isPart"></td>
+        
+        <td data-ofm="OFM-GPIOModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-OneWireModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-PresenceModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-SmartHomeBridge" class="isPart"></td>
+        
+        <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
+        
+        <td class="left before-new-cols" data-ofm="*special*">
+            
+        </td>
+       
+
+       
+
+        <!--
+        <td class="left" title="OpenKNX REG1 Basismodul IP, OpenKNX REG1 Basismodul LAN+TP">  2</td>
+        -->
+    </tr>
+    
+    </tbody>
+</table>
+</body>
+</html>

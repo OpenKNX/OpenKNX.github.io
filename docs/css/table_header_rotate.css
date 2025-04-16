@@ -10,24 +10,15 @@ body {
 
 /*
 simple special title with logo
-TODO clean definition!
 */
 table.openknxTitleTable {
 	border-collapse: collapse;
 	border-top: 3px solid #449841;
 }
 table.openknxTitleTable thead tr:first-child th:first-child {
-    /*
-    position: absolute;
-    color: #449841;
-    font-size: 150%;
-    border-top: 3px solid #449841;
-    top: 40px;
-    padding-right: 200px;
-    */
-    background-image: url('https://raw.githubusercontent.com/OpenKNX/.github/main/profile/images/weiss.svg');
     min-width: 128px;
     /* TODO use local logo background-image: url('/img/openknx-logoline.png'); */
+    background-image: url('https://raw.githubusercontent.com/OpenKNX/.github/main/profile/images/weiss.svg');
     background-repeat: no-repeat;
     background-size: 50%;
     background-position-x: center;
@@ -39,45 +30,38 @@ table.openknxTitleTable caption {
 }
 
 /* row shading */
-/* tbody tr:nth-child(2n+1) .oam-details, */
-tbody tr:nth-child(2n+1) {
+table.openknxTitleTable tbody tr:nth-child(2n+1) {
     background-color: #f8f8f8;
 }
-/* tbody tr:nth-child(2n+0) .oam-details, */
-tbody tr:nth-child(2n+0) {
+table.openknxTitleTable tbody tr:nth-child(2n+0) {
     background-color: #fff;
 }
-/* hover highlighting generated in Template; TODO cleanup
-tbody tr:hover {
-    background-color: #dfd;
-}
-*/
+/* note: hover highlighting is generated in Template, combined with column hover */
 
 /* extended padding for regular text-cells only */
-tbody tr > * {
+table.openknxTitleTable tbody tr > * {
 	padding: 2px 3px;
 }
 
-th {
+table.openknxTitleTable th {
     font-weight: normal;
     text-align: left;
 }
-tr[data-oam] th:first-child {
+table.openknxTitleTable tr[data-oam] th:first-child {
     /* prevent wrapping of OAM-Name */
 	white-space: nowrap;
 }
-th.singleModules {
+table.openknxTitleTable th.singleModules {
     text-align: center;
     vertical-align: bottom;
 }
 
-td {
+table.openknxTitleTable td.isPart {
+    color: #449841;
     text-align: center;
 }
-td.isPart {
-    color: #449841;
-}
-td.left {
+/* TODO remove td.left */
+table.openknxTitleTable td.left {
     text-align: left;
 }
 
@@ -113,9 +97,6 @@ th.rotate90 > div > span {
 }
 td, tbody th {
     border-right: 1px solid #ccc;
-    /* replaced by rows background shading
-    border-bottom: 1px solid #ccc;
-    */
 }
 td.before-new-cols, th.before-new-cols {
     border-right: 1px solid #999;
@@ -138,7 +119,7 @@ td.before-new-cols, th.before-new-cols {
 	width: fit-content;
 	text-wrap: nowrap;
 
-	/* show tooltop-like note with thin border */
+	/* show tooltip-like note with thin border */
 	background-color: #ffcc;
     height: calc(100% + 1px);
     border: 1px solid #ccc9;

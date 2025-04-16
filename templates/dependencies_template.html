@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="/css/table_header_rotate.css">
     <style>
         {% set col_count = 1 + (modules_sorted | default([]) | length) + (devices_sorted | default([]) | length) %}
-        {% for col in range(2, col_count + 1) %}table:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) td:nth-child({{col}}).isPart,
+        {% for col in range(2, col_count + 1) %}table.openknxTitleTable :has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) td:nth-child({{col}}).isPart,
         {% endfor %}
-        tbody tr:hover {
+        table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
         }
-        {% for col in range(2, col_count + 1) %}table:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) thead th.rotate45:nth-child({{col}}) div span,
+        {% for col in range(2, col_count + 1) %}table.openknxTitleTable:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) thead th.rotate45:nth-child({{col}}) div span{% if not forloop.last %},{% endif %}
         {% endfor %}
-        .DUMMY-DUMMY-DUMMY
         {
             border-bottom: 2px solid #9f9;
         }

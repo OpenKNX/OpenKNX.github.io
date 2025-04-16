@@ -15,13 +15,20 @@ from devices_helper import DeviceHelper
 from html_generator import HTMLGenerator
 from app_sizing_stat import AppSizingStat  # Add this import
 
+# Initialize logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Enable caching for requests if the directory exists
+cache_path = 'github_cache'
+if os.path.isdir(cache_path):
+    import requests_cache
+    # logging.getLogger("requests_cache").setLevel(logging.DEBUG)
+    requests_cache.install_cache(cache_path, backend='filesystem', expire_after=3*24*60*60)
+
 # names for identification of app repos:
 appPrefix = "OAM-"
 appSpecialNames = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"}
 appExclusion = {"OAM-TestApp"}
-
-# Initialize logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 client = GitHubClient()
 release_manager = ReleaseManager(client, appPrefix, appSpecialNames, appExclusion)

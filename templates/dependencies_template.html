@@ -91,9 +91,6 @@
         <td title="{{ oamDevices_other | join(', ') }}">{% if oamDevices_other | length > 0 %}{{ oamDevices_other | length }}{% endif %}</td>
        {% endif %}
 
-        <!--
-        <td class="left" title="{{ oamDevices | join(', ') }}">  {% if oamDevices is defined and oamDevices | length > 0 %}{{ oamDevices | length }}{% endif %}</td>
-        -->
     </tr>
     {% endfor %}
     </tbody>

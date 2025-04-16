@@ -12,7 +12,7 @@
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
         }
-        {% for col in range(2, col_count + 1) %}table.openknxTitleTable:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) thead th.rotate45:nth-child({{col}}) div span{% if not forloop.last %},{% endif %}
+        {% for col in range(2, col_count + 1) %}table.openknxTitleTable:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) thead th.rotate45:nth-child({{col}}) div span{% if not loop.last %},{% endif %}
         {% endfor %}
         {
             border-bottom: 2px solid #9f9;

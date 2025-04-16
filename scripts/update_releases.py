@@ -19,7 +19,7 @@ from app_sizing_stat import AppSizingStat  # Add this import
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Enable caching for requests if the directory exists
-cache_path = 'github_cache'
+cache_path = '.github_cache'
 if os.path.isdir(cache_path):
     import requests_cache
     # logging.getLogger("requests_cache").setLevel(logging.DEBUG)

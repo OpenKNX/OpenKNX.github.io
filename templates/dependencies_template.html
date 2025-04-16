@@ -48,7 +48,7 @@
         {% for module, count in modules_sorted if count > 1 %}{% set ofmUrl = "https://github.com/OpenKNX/" ~ module %}
         <th class="rotate45" data-ofm="{{module}}"><div><span><a href="{{ofmUrl}}">{{ module }}</a></span></div></th>
         {% endfor %}
-        <th class="singleModules before-new-cols" data-ofm="*special*">Einmalig verwendete Module:</th>
+        <th class="singleModules before-new-cols" data-ofm="*special*">Exklusiv verfügbare Module:</th>
        {% endif %}
 
        {% if showDevices %}

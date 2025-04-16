@@ -882,21 +882,6 @@
             "releases": [
                 {
                     "prerelease": true,
-                    "tag_name": "v0.8.0",
-                    "name": "v0.8.0",
-                    "published_at": "2025-04-12T14:52:47Z",
-                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.8.0",
-                    "body": "- fix: ets scripts\r\n- fix: scene go\r\n\r\n**new dali lib used:** [dali](https://github.com/OpenKNX/dali) uses rmt and pio which promises better performance",
-                    "assets": [
-                        {
-                            "name": "GW-REG1-Dali-Release-0.8.zip",
-                            "updated_at": "2025-04-12T14:52:43Z",
-                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.8.0/GW-REG1-Dali-Release-0.8.zip"
-                        }
-                    ]
-                },
-                {
-                    "prerelease": true,
                     "tag_name": "v0.6.1",
                     "name": "v0.6.1",
                     "published_at": "2025-01-19T18:07:05Z",

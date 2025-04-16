@@ -14,6 +14,7 @@ class DeviceHelper:
             "AccessControl": "AB-AccessControl",
             "DeveloperBoard-JustForTesters": "?-DeveloperBoard-JustForTesters",
             "firmware_UP1-GW-RS485": "OpenKNX UP1 RS485 Gateway",
+            "firmware_SOM_UP": "Smart-MF Soundmodul",
             "GardenControl": "SmartMF-GardenControl",
             "GW-UP1-IR": "OpenKNX UP1 8xSensor",
             "IP-Router-REG1-Eth": "OpenKNX REG1 Basismodul IP",

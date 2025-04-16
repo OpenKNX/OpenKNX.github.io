@@ -88,7 +88,7 @@ def process_release_zip(zip_url):
         logging.info(f"Found possible app XML: {app_xml}")
         with zipfile_obj.open(app_xml) as xml_file:
             app_stat = AppSizingStat(xml_file)
-            logging.info(f"Sizing in '{app_xml}': {app_stat}")
+            logging.debug(f"Sizing in '{app_xml}': {app_stat}")
     else:
         logging.warning(f"Found {len(xml_files)} other XML files in the archive {zip_url}")
 
@@ -185,7 +185,6 @@ def main():
     oam_hardware, oam_stat = build_hardware_mapping(oam_releases_data)
     with open('hardware_mapping.json', 'w') as outfile:
         json.dump(oam_hardware, outfile, indent=4)
-    logging.info(f"Hardware-Support: {json.dumps(oam_hardware, indent=4)}")
     for oamName, oamStat in oam_stat.items():
         logging.info(f"App-Sizing-Stat for {oamName}: {oamStat}")
 

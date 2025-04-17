@@ -37,19 +37,19 @@ class HTMLGenerator:
 
         return html_content
 
-    def create_html_for_repo(self, repo_name, details):
+    def create_html_for_repo(self, oam, oam_releases):
         """
         Erzeugt zu jedem Repo eine kleine HTML-Datei mit Ausgabe des aktuellsten Release.
         Ein Pre-Release wird nur dann mit ausgegeben, wenn es neuer ist als das neuste Release, oder noch kein reguläres existiert
 
-        :param repo_name:
-        :param details:
+        :param oam:
+        :param oam_releases:
         :return:
         """
-        logging.info(f"Creating HTML for repository {repo_name}")
+        logging.info(f"Creating HTML for repository {oam}")
         latest_release = None
         latest_prerelease = None
-        for release in details["releases"]:
+        for release in oam_releases:
             if not release["prerelease"]:
                 if latest_release is None or release["published_at"] > latest_release["published_at"]:
                     latest_release = release
@@ -58,9 +58,10 @@ class HTMLGenerator:
                     latest_prerelease = release
 
         # create release info for this repo
-        output_filename = os.path.join('releases', f'{repo_name}.html')
+        output_filename = os.path.join('oam', oam, 'releases_latest.html')
+        os.makedirs(os.path.join("docs", 'oam', oam), exist_ok=True)
         self._render_template_to_file('repo_latestrelease_template.html', output_filename,
-                                      repo_name=repo_name,
+                                      repo_name=oam,
                                       latest_release=latest_release,
                                       latest_prerelease=latest_prerelease
                                       )
@@ -74,7 +75,7 @@ class HTMLGenerator:
 
         # current releases htmls for apps:
         for repo, details in releases_data.items():
-            self.create_html_for_repo(repo, details)
+            self.create_html_for_repo(repo, details["releases"])
 
     def update_overview_tables(self, oam_data):
         # module,devices -> usage_count

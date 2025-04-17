@@ -38,45 +38,50 @@ html_generator = HTMLGenerator(device_helper)
 
 oam_order = [
 
-    # virtual
+    # virtual only modules
     "OAM-LogicModule",
     "OAM-StateEngine",
-    "OAM-VirtualButton",
     "OAM-ShutterController",
 
     # virtual with optional hardware
     "OAM-PresenceModule",
+    "OAM-VirtualButton",
     "OAM-Meter",
 
-    # hardware
+    # universal sensor hardware
     "OAM-SensorModule",
     "SEN-UP1-8xTH",
-    "SOM-UP",
-    "GW-REG1-Dali",
 
+    # gateways to other systems
+    "GW-REG1-Dali",
+    "OAM-InfraredGateway",
     "OAM-OneWireModule",
     "OAM-EnoceanGateway",
     "OAM-ModbusGateway",
-    "OAM-InfraredGateway",
 
     # network
     "OAM-IP-Router",
     "OAM-InternetServices",
     "OAM-SmartHomeBridge",
 
+    # dummy-app only
     "OAM-Dummy",
 
+    # special hardware
+    "SOM-UP",
     "OAM-AccessControl",
+    "BEM-GardenControl",
     "OAM-WeatherWN90LP",
 
-    "BEM-GardenControl",
-    "OAM-TouchRound",
-
+    # "boring" hardware
     "OAM-SwitchActuator",
     "OAM-BinaryInput",
     "OAM-HeatingActuator",
 
-    # spezial
+    # very special
+    "OAM-TouchRound",
+
+    # very very special
     "OAM-ElectricDoorDrive",
     "OAM-BinaryClock",
 ]

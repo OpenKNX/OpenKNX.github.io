@@ -106,21 +106,21 @@ def process_release_zip(zip_url):
     if len(content_xmls) == 0:
         logging.warning(f"No 'data\\content.xml' or 'data/content.xml' found in the archive {zip_url}")
     else:
-        # try to fix for wrong encoding, some releases contains utf-16le:
+        # [[WORK-AROUND]] try to fix for wrong encoding, some releases contains utf-16le:
         try:
             with zipfile_obj.open(content_xmls[0]) as xml_file:
                 xml_content = xml_file.read().decode('utf-8')
                 # logging.info(f"XML[utf-8]={xml_content}")
         except UnicodeDecodeError:
             with zipfile_obj.open(content_xmls[0]) as xml_file:
-                logging.warning(f"File is not UTF-8 encoded, try fall-back to wrong UTF-16LE conversion: {zip_url}")
+                logging.warning(f"***WORKAROUND*** 'content.xml' not UTF-8 encoded, try fall-back to wrong UTF-16LE: {zip_url}")
                 xml_content = xml_file.read().decode('utf-16le')
-                logging.info(f"XML[utf-16le]={xml_content}")
+                # logging.info(f"XML[utf-16le]={xml_content}")
 
-        # quick-fix for older releases with broken XML:
+        # [[WORK-AROUND]] quick-fix for older releases with broken XML:
         xml_str = xml_content.replace('<Products>\r\n</Content>', '</Products>\r\n</Content>')
         if xml_str != xml_content:
-            logging.warning(f"Quick-Fixed broken XML in 'content.xml' found in the archive {zip_url}")
+            logging.warning(f"***WORKAROUND*** Quick-Fixed broken XML in 'content.xml' found in the archive {zip_url}")
 
         try:
             root = ET.fromstring(xml_str)

@@ -570,21 +570,6 @@
                 },
                 {
                     "prerelease": false,
-                    "tag_name": "0.1-release-RP2040",
-                    "name": "0.1-release-RP2040",
-                    "published_at": "2025-03-29T20:26:34Z",
-                    "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/0.1-release-RP2040",
-                    "body": "First Enocean Gateway firmware for the new RP2040 Hardware. \r\n\r\nNo Feature update \r\n\r\n ",
-                    "assets": [
-                        {
-                            "name": "EnoceanGateway-Release-RP2040-0.1.zip",
-                            "updated_at": "2025-03-29T20:32:58Z",
-                            "browser_download_url": "https://github.com/OpenKNX/OAM-EnoceanGateway/releases/download/0.1-release-RP2040/EnoceanGateway-Release-RP2040-0.1.zip"
-                        }
-                    ]
-                },
-                {
-                    "prerelease": false,
                     "tag_name": "1.6-release",
                     "name": "1.6-release",
                     "published_at": "2023-03-03T20:21:20Z",
@@ -1538,6 +1523,28 @@
             "archived": false,
             "description": null,
             "releases": []
+        },
+        "OAM-EnoceanGateway_V2": {
+            "repo_url": "https://github.com/OpenKNX/OAM-EnoceanGateway_V2",
+            "archived": false,
+            "description": "Version RP2040",
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1-release",
+                    "name": "0.1-release",
+                    "published_at": "2025-04-17T20:59:06Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-EnoceanGateway_V2/releases/tag/0.1-release",
+                    "body": "first release for the RP2040 Hardware version\r\n\r\nonly take over from the SAMD HW-version with no changes ",
+                    "assets": [
+                        {
+                            "name": "EnoceanGateway-Release-0.1.zip",
+                            "updated_at": "2025-04-17T20:59:24Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-EnoceanGateway_V2/releases/download/0.1-release/EnoceanGateway-Release-0.1.zip"
+                        }
+                    ]
+                }
+            ]
         }
     }
 }

@@ -22,6 +22,7 @@ class DeviceHelper:
             "OpenKNX-PiPico-BCU-Connector": "OpenKNX PiPico BCU Connector",
             "OpenKNX-REG1-Base-V0": "OpenKNX REG1 Basismodul V0",
             "OpenKNX-REG1-BASE-V0": "OpenKNX REG1 Basismodul V0",
+            "OpenKNX-REG1-Base": "OpenKNX REG1 Basismodul",
             "OpenKNX-REG1-Base-V1": "OpenKNX REG1 Basismodul",
             "OpenKNX-REG1-BASE-V1": "OpenKNX REG1 Basismodul",
             "OpenKNX-REG1-Basismodul": "OpenKNX REG1 Basismodul",

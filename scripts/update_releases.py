@@ -110,12 +110,10 @@ def process_release_zip(zip_url):
         try:
             with zipfile_obj.open(content_xmls[0]) as xml_file:
                 xml_content = xml_file.read().decode('utf-8')
-                # logging.info(f"XML[utf-8]={xml_content}")
         except UnicodeDecodeError:
             with zipfile_obj.open(content_xmls[0]) as xml_file:
                 logging.warning(f"***WORKAROUND*** 'content.xml' not UTF-8 encoded, try fall-back to wrong UTF-16LE: {zip_url}")
                 xml_content = xml_file.read().decode('utf-16le')
-                # logging.info(f"XML[utf-16le]={xml_content}")
 
         # [[WORK-AROUND]] quick-fix for older releases with broken XML:
         xml_str = xml_content.replace('<Products>\r\n</Content>', '</Products>\r\n</Content>')
@@ -124,19 +122,12 @@ def process_release_zip(zip_url):
 
         try:
             root = ET.fromstring(xml_str)
-            hardware_info = parse_hardware_info(root)
+            hardware_info = [product.get('Name') for product in root.find('Products')]
         except ET.ParseError as e:
-            logging.error(f"-> content.xml parsing error {e}\nXML={xml_str}")
+            logging.error(f"'content.xml' parsing failed in the archive {zip_url}")
+            # TODO check hard ending?!
 
     return hardware_info, app_stat
-
-
-def parse_hardware_info(content_xml):
-    products = content_xml.find('Products')
-    hardware = []
-    for product in products:
-        hardware.append(product.get('Name'))
-    return hardware
 
 
 def build_hardware_mapping(releases_data):
@@ -175,15 +166,11 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
         }
         if oam not in oam_details:
             logging.warning(f"Missing {oam} in oam_details, present only {oam_details.keys()}")
-    for oam, oam_content_devices in oam_hardware.items():
-        if oam not in oam_data:
-            # TODO use same base for oam-list
+    for oam, oam_device_list in oam_hardware.items():
+        if oam in oam_data:
+            oam_data[oam]["devices"] = [device_helper.hw_name_mapping(oam, d) for d in oam_device_list]
+        else:
             logging.warning(f"Missing {oam} in oam_data, present only {oam_data.keys()}")
-            continue
-        oam_data[oam]["devices"] = devices = []
-        for content_device in oam_content_devices:
-            # TODO move normalization out of html generation:
-            devices.append(device_helper.hw_name_mapping(oam, content_device))
 
     logging.debug(f"oam_data {json.dumps(oam_data, indent=4)}")
 

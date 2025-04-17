@@ -46,7 +46,7 @@ class DependencyManager:
                             "commit": commit,
                             "branch": branch,
                             "path": path,
-                            "url": "https://github.com/OpenKNX/{dep_name}.git",
+                            "url": f"https://github.com/OpenKNX/{dep_name}.git",
                             # TODO rename to dep_name
                             "depName": dep_name
                         }

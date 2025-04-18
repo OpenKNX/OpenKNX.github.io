@@ -1,3 +1,6 @@
+# Handling/Mapping of Devíce Names Used by Firmware in Releases
+# (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
+
 import logging
 
 

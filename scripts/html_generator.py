@@ -1,8 +1,12 @@
+# Create HTML-Files from Collected Data Using Jinja2-Templates
+# (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
+
 import json
 import os
 import logging
-from jinja2 import Environment, FileSystemLoader
 import re
+
+from jinja2 import Environment, FileSystemLoader
 
 from devices_helper import DeviceHelper
 

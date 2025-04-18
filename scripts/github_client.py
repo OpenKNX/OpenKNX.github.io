@@ -1,7 +1,12 @@
-import requests
+# Quick and Dirty Wrapper for Access to GitHub API with Minimalistic Error Handling
+# (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
+
 import logging
-import time
 import sys
+import time
+
+import requests
+
 
 class GitHubClient:
     def __init__(self, base_url="https://api.github.com"):

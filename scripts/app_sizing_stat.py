@@ -1,9 +1,13 @@
+# Collect Statistic Data from App-XML of OpenKNX-Releas
+# (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
+
 import xml.etree.ElementTree as ET
 from io import BytesIO
 
+
 class AppSizingStat:
     """Class to extract and store application sizing information from ETS app XML files."""
-    
+
     def __init__(self, xml_file):
         """
         Initialize AppSizingStat with XML file data.
@@ -36,10 +40,10 @@ class AppSizingStat:
         # ParameterBlock and ParamRefRef
         self.parameter_block_count = 0
         self.max_param_ref_ref_count = 0
-        
+
         # Process the file
         self._process_file(xml_file)
-    
+
     def _process_file(self, xml_file):
         """Process the XML file to extract statistics"""
         try:
@@ -47,28 +51,28 @@ class AppSizingStat:
             content = self._read_content(xml_file)
             if not content:
                 return
-            
+
             # Get content size
             self.file_size = len(content)
-            
+
             # Count lines
             if isinstance(content, bytes):
                 self.line_count = content.count(b'\n') + 1
             else:
                 self.line_count = content.count('\n') + 1
-            
+
             # Create BytesIO for parsing
             if isinstance(content, str):
                 content = content.encode('utf-8')
-            
+
             xml_data = BytesIO(content)
             tree = ET.parse(xml_data)
             root = tree.getroot()
-            
+
             # Extract parameter memory size
             for segment in root.findall(".//{*}Static/{*}Code/{*}RelativeSegment[@Size]"):
                 self.parameter_memory_size += int(segment.get('Size'))
-            
+
             # Count XML elements
             self.parameter_count = len(root.findall(".//{*}Parameter"))
             self.parameter_ref_count = len(root.findall(".//{*}ParameterRef"))
@@ -89,23 +93,23 @@ class AppSizingStat:
             association_table = root.find(".//{*}AssociationTable[@MaxEntries]")
             if association_table is not None:
                 self.association_table_max_entries = int(association_table.get("MaxEntries"))
-            
+
             # Calculate the length of the text content in <Script> elements
             for script in root.findall(".//{*}Script"):
                 if script.text:
                     self.script_size += len(script.text)
                     self.script_lines += script.text.count('\n') + 1
-            
+
             # Count <ModuleDef> elements within <ModuleDefs>
             self.module_def_count = len(root.findall(".//{*}ModuleDefs/{*}ModuleDef"))
-            
+
             # Count elements inside <Dynamic>
             dynamic = root.find(".//{*}ApplicationProgram/{*}Dynamic")
             if dynamic is not None:
                 self.dynamic_element_count = len(dynamic.findall(".//*"))
                 self.choose_element_count = len(dynamic.findall(".//{*}choose"))
                 self.assign_element_count = len(dynamic.findall(".//{*}Assign"))
-            
+
                 # Count ParameterBlock with Inline!="true"
                 parameter_blocks = dynamic.findall('.//{*}ParameterBlock[@Inline!="true"]')
                 self.parameter_block_count = len(parameter_blocks)
@@ -115,10 +119,10 @@ class AppSizingStat:
                 for block in parameter_blocks:
                     param_ref_refs = block.findall(".//{*}ParamRefRef")
                     self.max_param_ref_ref_count = max(self.max_param_ref_ref_count, len(param_ref_refs))
-                
+
         except Exception as e:
             print(f"Error processing XML: {e}")
-    
+
     def _read_content(self, file_obj):
         """Read content from file object or path"""
         try:
@@ -126,11 +130,11 @@ class AppSizingStat:
             if isinstance(file_obj, str):
                 with open(file_obj, 'rb') as f:
                     return f.read()
-            
+
             # If it's a file-like object
             elif hasattr(file_obj, 'read'):
                 return file_obj.read()
-            
+
             return None
         except Exception as e:
             print(f"Error reading file: {e}")

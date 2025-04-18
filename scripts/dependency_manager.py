@@ -1,3 +1,6 @@
+# Collect OFMs used by OAMs
+# (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
+
 import json
 import logging
 

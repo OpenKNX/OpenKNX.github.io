@@ -1,19 +1,19 @@
 # Build OpenKNX Release Overviews for Integration in Pages, Wiki and Toolbox
-# 2025 CK (OpenKNX)
+# (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
 
 import json
 import logging
 import os
+import xml.etree.ElementTree as ET
 import zipfile
 from io import BytesIO
-import xml.etree.ElementTree as ET
 
-from github_client import GitHubClient
-from release_manager import ReleaseManager
+from app_sizing_stat import AppSizingStat  # Add this import
 from dependency_manager import DependencyManager
 from devices_helper import DeviceHelper
+from github_client import GitHubClient
 from html_generator import HTMLGenerator
-from app_sizing_stat import AppSizingStat  # Add this import
+from release_manager import ReleaseManager
 
 # Initialize logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -22,8 +22,9 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 cache_path = '.github_cache'
 if os.path.isdir(cache_path):
     import requests_cache
+
     # logging.getLogger("requests_cache").setLevel(logging.DEBUG)
-    requests_cache.install_cache(cache_path, backend='filesystem', expire_after=3*24*60*60)
+    requests_cache.install_cache(cache_path, backend='filesystem', expire_after=3 * 24 * 60 * 60)
 
 # names for identification of app repos:
 appPrefix = "OAM-"
@@ -86,15 +87,16 @@ oam_order = [
     "OAM-BinaryClock",
 ]
 
+
 def process_release_zip(zip_url):
     content_xml_paths = ['data\\content.xml', 'data/content.xml']
 
     response = client.get_response(zip_url)
     zipfile_obj = zipfile.ZipFile(BytesIO(response.content))
-    
+
     app_stat = None
     hardware_info = None
-    
+
     # Check for app xml to read parameter-memory-size
     xml_files = [name for name in zipfile_obj.namelist() if name.endswith('.xml') and name not in content_xml_paths]
     if len(xml_files) != 1:

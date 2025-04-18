@@ -1,5 +1,8 @@
-from github_client import GitHubClient
+# Collect OAM-Repos, Releases-Info and Release-Archive-Assets
+# (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
+
 import logging
+
 
 class ReleaseManager:
     def __init__(self, client, app_prefix, app_special_names, app_exclusion):

@@ -1,29 +1,18 @@
 # Create HTML-Files from Collected Data Using Jinja2-Templates
 # (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
 
-import json
-import os
 import logging
-import re
 
 from jinja2 import Environment, FileSystemLoader
 
-from devices_helper import DeviceHelper
-
-
-def to_device_pathname(device_name):
-    umlauts = {'ä': 'ae', 'ö': 'oe', 'ü': 'ue', 'ß': 'ss', 'Ä': 'Ae', 'Ö': 'Oe', 'Ü': 'Ue'}
-    for umlaut, replacement in umlauts.items():
-        device_name = device_name.replace(umlaut, replacement)
-
-    # allow alphanumeric, _ and - characters only
-    return re.sub(r'[^A-Za-z0-9_-]', '_', device_name)
+from path_manager import PathManager
 
 
 class HTMLGenerator:
     def __init__(self, device_helper):
         self.env = Environment(loader=FileSystemLoader('templates'))
         self.device_helper = device_helper
+        self.path_manager = PathManager()  # Instanz von PathManager
 
     def _render_template_to_file(self, template_name, output_filename, **context):
         """
@@ -36,7 +25,7 @@ class HTMLGenerator:
         template = self.env.get_template(template_name)
         html_content = template.render(**context)
 
-        with open(os.path.join("docs", output_filename), 'w', encoding='utf8') as file:
+        with open(output_filename, 'w', encoding='utf8') as file:
             file.write(html_content)
 
         return html_content
@@ -62,8 +51,7 @@ class HTMLGenerator:
                     latest_prerelease = release
 
         # create release info for this repo
-        output_filename = os.path.join('oam', oam, 'releases_latest.html')
-        os.makedirs(os.path.join("docs", 'oam', oam), exist_ok=True)
+        output_filename = self.path_manager.get_oam_path(oam, filename='releases_latest.html')
         self._render_template_to_file('repo_latestrelease_template.html', output_filename,
                                       repo_name=oam,
                                       latest_release=latest_release,
@@ -127,10 +115,8 @@ class HTMLGenerator:
             )
 
         for oamName, oam_details in oam_data.items():
-            path = os.path.join("oam", oamName)
-            os.makedirs(os.path.join("docs", path), exist_ok=True)
-            file = os.path.join(path, "index.html")
-            logging.debug(f"Create OAM Overview in {file}")
+            file = self.path_manager.get_oam_path(oamName, filename='index.html')
+            logging.info(f"Create OAM Overview in {file}")
             self._render_template_to_file('oam_overview.html', file,
                                           oamName=oamName,
                                           oam_details=oam_details,
@@ -138,7 +124,7 @@ class HTMLGenerator:
                                           modules_sorted=modules_sorted,
                                           devices_sorted=devices_sorted,
                                           devices_other_sorted=devices_other_sorted,
-                                          function_device_to_pathname=to_device_pathname,
+                                          function_device_to_pathname=PathManager.to_device_pathname,
                                           )
 
         for ofmName, ofm_usage_count in modules_sorted:
@@ -152,10 +138,8 @@ class HTMLGenerator:
                         dev_usage_count[dev] += 1
             devs_sorted = sorted(dev_usage_count.items(), key=lambda item: (-item[1], item[0]))
 
-            path = os.path.join("ofm", ofmName)
-            os.makedirs(os.path.join("docs", path), exist_ok=True)
-            file = os.path.join(path, "index.html")
-            logging.debug(f"Create OFM Overview in {file}")
+            file = self.path_manager.get_ofm_path(ofmName, filename='index.html')
+            logging.info(f"Create OFM Overview in {file}")
             self._render_template_to_file('ofm_overview.html', file,
                                           ofmName=ofmName,
                                           oam_data=oam_data,
@@ -163,7 +147,7 @@ class HTMLGenerator:
                                           devs_sorted=dev_usage_count,
                                           devices_sorted=devices_sorted,
                                           devices_other_sorted=devices_other_sorted,
-                                          function_device_to_pathname=to_device_pathname,
+                                          function_device_to_pathname=PathManager.to_device_pathname,
                                           )
 
         for device_name, usageCount in devices_sorted:
@@ -177,9 +161,7 @@ class HTMLGenerator:
                         ofm_usage_count[ofm] += 1
             devs_sorted = sorted(ofm_usage_count.items(), key=lambda item: (-item[1], item[0]))
             # TODO use device-id?
-            path = os.path.join("devices", to_device_pathname(device_name))
-            os.makedirs(os.path.join("docs", path), exist_ok=True)
-            file = os.path.join(path, "index.html")
+            file = self.path_manager.get_device_path(device_name, filename="index.html")
             logging.debug(f"Create Device Overview in {file}")
             self._render_template_to_file('device_overview.html', file,
                                           name=device_name,
@@ -198,7 +180,7 @@ class HTMLGenerator:
             }
             modules_sorted_of_device = [module for module in modules_sorted if module[0] in modules_of_device]
             self._render_template_to_file('dependencies_template.html',
-                                          os.path.join("devices", to_device_pathname(device_name), 'functions.html'),
+                                          self.path_manager.get_device_path(device_name, 'functions.html'),
                                           title=f"OpenKNX-Applikationen und enthaltene Module für {device_name}",
                                           modules_sorted=modules_sorted_of_device,
                                           # devices_sorted=devices_sorted,

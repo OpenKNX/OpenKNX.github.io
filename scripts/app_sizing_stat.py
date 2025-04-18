@@ -125,15 +125,15 @@ class AppSizingStat:
                 self.choose_element_count = len(dynamic.findall(".//{*}choose"))
                 self.assign_element_count = len(dynamic.findall(".//{*}Assign"))
 
-                # Count ParameterBlock with Inline!="true"
-                parameter_blocks = dynamic.findall('.//{*}ParameterBlock[@Inline!="true"]')
-                self.parameter_block_count = len(parameter_blocks)
-
-                # Determine the maximum number of ParamRefRef elements within such ParameterBlock
+                self.parameter_block_count = 0
                 self.max_param_ref_ref_count = 0
-                for block in parameter_blocks:
-                    param_ref_refs = block.findall(".//{*}ParamRefRef")
-                    self.max_param_ref_ref_count = max(self.max_param_ref_ref_count, len(param_ref_refs))
+                for block in dynamic.findall('.//{*}ParameterBlock'):
+                    if block.get('Inline') != "true":
+                        # Count Non-Inline ParameterBlocks
+                        self.parameter_block_count += 1
+                        # Determine the maximum number of ParamRefRef elements within such ParameterBlock
+                        param_ref_refs = block.findall(".//{*}ParameterRefRef")
+                        self.max_param_ref_ref_count = max(self.max_param_ref_ref_count, len(param_ref_refs))
 
         except Exception as e:
             print(f"Error processing XML: {e}")

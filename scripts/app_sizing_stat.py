@@ -103,7 +103,7 @@ class AppSizingStat:
             dynamic = root.find(".//{*}ApplicationProgram/{*}Dynamic")
             if dynamic is not None:
                 self.dynamic_element_count = len(dynamic.findall(".//*"))
-                self.choose_element_count = len(dynamic.findall(".//{*}Choose"))
+                self.choose_element_count = len(dynamic.findall(".//{*}choose"))
                 self.assign_element_count = len(dynamic.findall(".//{*}Assign"))
             
                 # Count ParameterBlock with Inline!="true"

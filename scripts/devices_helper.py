@@ -62,8 +62,10 @@ class DeviceHelper:
 
     def hw_name_mapping(self, oam, hw_text):
         if oam == "SEN-UP1-8xTH" and hw_text == "firmware":
+            logging.warning(f"((>>WORKAROUND<<)) OAM-specific mapping of device-name for '{hw_text}' in '{oam}'")
             return "OpenKNX UP1 8xSensor"
         if oam == "OAM-EnoceanGateway" and hw_text == "firmware":
+            logging.warning(f"((>>WORKAROUND<<)) OAM-specific mapping of device-name for '{hw_text}' in '{oam}'")
             return "Smart-MF Enocean Gateway (SAMD)"
         if hw_text in self.device_name_map:
             return self.device_name_map[hw_text]

@@ -117,13 +117,13 @@ def process_release_zip(zip_url):
                 xml_content = xml_file.read().decode('utf-8')
         except UnicodeDecodeError:
             with zipfile_obj.open(content_xmls[0]) as xml_file:
-                logging.warning(f"***WORKAROUND*** 'content.xml' not UTF-8 encoded, try fall-back to wrong UTF-16LE: {zip_url}")
+                logging.warning(f"((>>WORKAROUND<<)) 'content.xml' not UTF-8 encoded, try fall-back to wrong UTF-16LE: {zip_url}")
                 xml_content = xml_file.read().decode('utf-16le')
 
         # [[WORK-AROUND]] quick-fix for older releases with broken XML:
         xml_str = xml_content.replace('<Products>\r\n</Content>', '</Products>\r\n</Content>')
         if xml_str != xml_content:
-            logging.warning(f"***WORKAROUND*** Quick-Fixed broken XML in 'content.xml' found in the archive {zip_url}")
+            logging.warning(f"((>>WORKAROUND<<)) Quick-Fixed broken XML in 'content.xml' found in the archive {zip_url}")
 
         try:
             root = ET.fromstring(xml_str)

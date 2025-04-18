@@ -50,7 +50,7 @@ class DependencyManager:
                             # TODO rename to dep_name
                             "depName": dep_name
                         }
-                        logging.warning(f"***WORKAROUND*** Expect module in {repo['name']} by lib-path only: '{dep_name}'")
+                        logging.warning(f"((>>WORKAROUND<<)) Expect module in {repo['name']} by lib-path only: '{dep_name}'")
                     else:
                         logging.warning(f"Unexpected lib in incomplete dependencies.txt of {repo['name']}: {dep_name}")
                     incomplete_lines_count += 1

@@ -15,6 +15,12 @@ class AppSizingStat:
         Args:
             xml_file: File-like object containing the XML data
         """
+        self.application_number = 0
+        self.application_version = 0
+        self.replaces_version = []
+        self.application_name = ""
+        self.application_id = ""
+
         # Initialize properties
         self.parameter_memory_size = 0
         self.file_size = 0
@@ -68,6 +74,15 @@ class AppSizingStat:
             xml_data = BytesIO(content)
             tree = ET.parse(xml_data)
             root = tree.getroot()
+
+            # Erfasse die Attribute des Elements ApplicationProgram
+            application_program = root.find(".//{*}ApplicationProgram")
+            if application_program is not None:
+                self.application_number = application_program.get("ApplicationNumber", -1)
+                self.application_version = application_program.get("ApplicationVersion", -1)
+                self.replaces_version = application_program.get("ReplacesVersions", "").split(" ")
+                self.application_name = application_program.get("Name", "")
+                self.application_id = application_program.get("Id", "")
 
             # Extract parameter memory size
             for segment in root.findall(".//{*}Static/{*}Code/{*}RelativeSegment[@Size]"):
@@ -147,7 +162,10 @@ class AppSizingStat:
         Returns:
             String with formatted information about parameter memory, file size, and line count
         """
-        return f"<App Statistics>:[Parameter Memory={self.parameter_memory_size} bytes, " \
+        return f"<App Statistics>:[ApplicationNumber={self.application_number}, " \
+               f"ApplicationVersion={self.application_version}, ReplacesVersion={self.replaces_version}, " \
+               f"Name={self.application_name}, Id={self.application_id}, " \
+               f"Parameter Memory={self.parameter_memory_size} bytes, " \
                f"File Size={self.file_size} bytes, Lines={self.line_count}, " \
                f"Parameters={self.parameter_count}, ParameterRefs={self.parameter_ref_count}, " \
                f"ParameterCalculations={self.parameter_calculation_count}, ComObjects={self.com_object_count}, " \

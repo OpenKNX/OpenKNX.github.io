@@ -13,6 +13,7 @@ class DeviceHelper:
             "AB-SmartHouse-SwitchActuator-REG6-8CH": "AB-SmartHouse-SwitchActuator-REG6-8CH",
             "AccessControl": "AB-AccessControl",
             "DeveloperBoard-JustForTesters": "?-DeveloperBoard-JustForTesters",
+            "EnoceanGateway_RP2040": "Smart-MF Enocean Gateway RP2040",
             "firmware_UP1-GW-RS485": "OpenKNX UP1 RS485 Gateway",
             "firmware_SOM_UP": "Smart-MF Soundmodul",
             "GardenControl": "SmartMF-GardenControl",
@@ -62,6 +63,8 @@ class DeviceHelper:
     def hw_name_mapping(self, oam, hw_text):
         if oam == "SEN-UP1-8xTH" and hw_text == "firmware":
             return "OpenKNX UP1 8xSensor"
+        if oam == "OAM-EnoceanGateway" and hw_text == "firmware":
+            return "Smart-MF Enocean Gateway (SAMD)"
         if hw_text in self.device_name_map:
             return self.device_name_map[hw_text]
         else:

@@ -114,6 +114,7 @@ class HTMLGenerator:
                 showDevices=showDevices,
             )
 
+        # create overview-page for each OAM
         for oamName, oam_details in oam_data.items():
             file = self.path_manager.get_oam_path(oamName, filename='index.html')
             logging.info(f"Create OAM Overview in {file}")
@@ -127,6 +128,7 @@ class HTMLGenerator:
                                           function_device_to_pathname=PathManager.to_device_pathname,
                                           )
 
+        # create overview-page for each OFM
         for ofmName, ofm_usage_count in modules_sorted:
 
             from collections import defaultdict
@@ -150,6 +152,27 @@ class HTMLGenerator:
                                           function_device_to_pathname=PathManager.to_device_pathname,
                                           )
 
+            oam_data_of_ofm = {
+                oam_name: oam_details
+                for oam_name, oam_details in oam_data.items() if ofmName in oam_details['modules']
+            }
+            modules_of_device = {
+                module
+                for oam_details in oam_data_of_ofm.values()
+                for module in oam_details["modules"]
+            }
+            self._render_template_to_file('dependencies_template.html',
+                                          self.path_manager.get_ofm_path(ofmName, 'functions.html'),
+                                          title=f"OpenKNX-Applikationen und Geräte mit Nutzungsmöglichkeit von {ofmName}",
+                                          # modules_sorted=modules_sorted_of_device,
+                                          devices_sorted=devices_sorted,
+                                          devices_other_sorted=devices_other_sorted,
+                                          oam_data=oam_data_of_ofm,
+                                          showModules=False,
+                                          showDevices=True,
+                                          )
+
+        # create overview- and function-page for each device
         for device_name, usageCount in devices_sorted:
 
             from collections import defaultdict

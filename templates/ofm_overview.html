@@ -9,6 +9,7 @@
 
 <h1>{{ ofmName }}</h1>
 <p>{# TODO description #}</p>
+<p><a href="functions.html">Übersichtstabelle mit verfügbaren OpenKNX-Applikationen und unterstützten Geräten</a></p>
 <h2>Verfügbar in Applikationen</h2>
 <ul>
     {% for oamName, oam_details in oam_data.items() if ofmName in oam_details.modules %}

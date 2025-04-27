@@ -56,7 +56,7 @@ table.openknxTitleTable th.singleModules {
     vertical-align: bottom;
 }
 
-table.openknxTitleTable td.isPart {
+table.openknxTitleTable .isPart {
     color: #449841;
     text-align: center;
 }

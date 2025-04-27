@@ -76,7 +76,9 @@
         {% endfor %}
         <td class="left before-new-cols" data-ofm="*special*">
             {% for module in modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamModules) %}
-                <a href="https://github.com/OpenKNX/{{ module }}">{{ module }}</a>{% if not loop.last %}, {% endif %}
+                <span data-ofm="{{module}}">
+                    <span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/{{ module }}">{{ module }}</a>
+                </span>{% if not loop.last %}, {% endif %}
             {% endfor %}
         </td>
        {% endif %}
@@ -85,7 +87,11 @@
         {% for device, count in devices_sorted if count > 1 %}
         <td data-dev="{{device}}" class="isPart">{% if device in oamDevices %}&#9632;{% endif %}</td>
         {% endfor %}
-        <td class="left">{{ devices_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamDevices) | join(', ') }}</td>
+        <td class="left">
+            {% for device in devices_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamDevices) %}
+                <span data-dev="{{deviceSingle}}"><span class="isPart">&#9632;</span>&nbsp;{{ device }}</span>{% if not loop.last %}, {% endif %}
+            {% endfor %}
+        </td>
 
         {% set oamDevices_other = devices_other_sorted | map(attribute='0') | select('in', oamDevices) | list %}
         <td title="{{ oamDevices_other | join(', ') }}">{% if oamDevices_other | length > 0 %}{{ oamDevices_other | length }}{% endif %}</td>

@@ -102,6 +102,7 @@ class HTMLGenerator:
             (False, True, "oam2dev.html", "OpenKNX-Applikationen und unterstützte Geräte"),
         ]
         for showModules, showDevices, output_file, title in render_configs:
+            logging.info(f"Create Overview Table \"{title}\" in {output_file}")
             self._render_template_to_file(
                 'dependencies_template.html',
                 output_file,
@@ -115,6 +116,7 @@ class HTMLGenerator:
             )
 
         # create overview-page for each OAM
+        logging.info(f"Create OAM Overviews...")
         for oamName, oam_details in oam_data.items():
             file = self.path_manager.get_oam_path(oamName, filename='index.html')
             logging.info(f"Create OAM Overview in {file}")
@@ -129,6 +131,7 @@ class HTMLGenerator:
                                           )
 
         # create overview-page for each OFM
+        logging.info(f"Create OFM Overviews...")
         for ofmName, ofm_usage_count in modules_sorted:
 
             from collections import defaultdict
@@ -173,6 +176,7 @@ class HTMLGenerator:
                                           )
 
         # create overview- and function-page for each device
+        logging.info(f"Create Devices Overviews...")
         for device_name, usageCount in devices_sorted:
 
             from collections import defaultdict

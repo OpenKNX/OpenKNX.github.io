@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/css/table_header_rotate.css">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
         {% set col_count = 1 + (modules_sorted | default([]) | length) + (devices_sorted | default([]) | length) %}
         {% for col in range(2, col_count + 1) %}table.openknxTitleTable:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) td:nth-child({{col}}).isPart,

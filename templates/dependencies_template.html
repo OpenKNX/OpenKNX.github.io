@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/table_header_rotate.css">
     <style>
         {% set col_count = 1 + (modules_sorted | default([]) | length) + (devices_sorted | default([]) | length) %}
-        {% for col in range(2, col_count + 1) %}table.openknxTitleTable :has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) td:nth-child({{col}}).isPart,
+        {% for col in range(2, col_count + 1) %}table.openknxTitleTable:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) td:nth-child({{col}}).isPart,
         {% endfor %}
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;

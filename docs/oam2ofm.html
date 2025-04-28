@@ -4,38 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenKNX-Applikationen und enthaltene Module</title>
-    <link rel="stylesheet" href="/css/table_header_rotate.css">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
         
-        table.openknxTitleTable :has(td:nth-child(2):hover, th:nth-child(2):hover) td:nth-child(2).isPart,
-        table.openknxTitleTable :has(td:nth-child(3):hover, th:nth-child(3):hover) td:nth-child(3).isPart,
-        table.openknxTitleTable :has(td:nth-child(4):hover, th:nth-child(4):hover) td:nth-child(4).isPart,
-        table.openknxTitleTable :has(td:nth-child(5):hover, th:nth-child(5):hover) td:nth-child(5).isPart,
-        table.openknxTitleTable :has(td:nth-child(6):hover, th:nth-child(6):hover) td:nth-child(6).isPart,
-        table.openknxTitleTable :has(td:nth-child(7):hover, th:nth-child(7):hover) td:nth-child(7).isPart,
-        table.openknxTitleTable :has(td:nth-child(8):hover, th:nth-child(8):hover) td:nth-child(8).isPart,
-        table.openknxTitleTable :has(td:nth-child(9):hover, th:nth-child(9):hover) td:nth-child(9).isPart,
-        table.openknxTitleTable :has(td:nth-child(10):hover, th:nth-child(10):hover) td:nth-child(10).isPart,
-        table.openknxTitleTable :has(td:nth-child(11):hover, th:nth-child(11):hover) td:nth-child(11).isPart,
-        table.openknxTitleTable :has(td:nth-child(12):hover, th:nth-child(12):hover) td:nth-child(12).isPart,
-        table.openknxTitleTable :has(td:nth-child(13):hover, th:nth-child(13):hover) td:nth-child(13).isPart,
-        table.openknxTitleTable :has(td:nth-child(14):hover, th:nth-child(14):hover) td:nth-child(14).isPart,
-        table.openknxTitleTable :has(td:nth-child(15):hover, th:nth-child(15):hover) td:nth-child(15).isPart,
-        table.openknxTitleTable :has(td:nth-child(16):hover, th:nth-child(16):hover) td:nth-child(16).isPart,
-        table.openknxTitleTable :has(td:nth-child(17):hover, th:nth-child(17):hover) td:nth-child(17).isPart,
-        table.openknxTitleTable :has(td:nth-child(18):hover, th:nth-child(18):hover) td:nth-child(18).isPart,
-        table.openknxTitleTable :has(td:nth-child(19):hover, th:nth-child(19):hover) td:nth-child(19).isPart,
-        table.openknxTitleTable :has(td:nth-child(20):hover, th:nth-child(20):hover) td:nth-child(20).isPart,
-        table.openknxTitleTable :has(td:nth-child(21):hover, th:nth-child(21):hover) td:nth-child(21).isPart,
-        table.openknxTitleTable :has(td:nth-child(22):hover, th:nth-child(22):hover) td:nth-child(22).isPart,
-        table.openknxTitleTable :has(td:nth-child(23):hover, th:nth-child(23):hover) td:nth-child(23).isPart,
-        table.openknxTitleTable :has(td:nth-child(24):hover, th:nth-child(24):hover) td:nth-child(24).isPart,
-        table.openknxTitleTable :has(td:nth-child(25):hover, th:nth-child(25):hover) td:nth-child(25).isPart,
-        table.openknxTitleTable :has(td:nth-child(26):hover, th:nth-child(26):hover) td:nth-child(26).isPart,
-        table.openknxTitleTable :has(td:nth-child(27):hover, th:nth-child(27):hover) td:nth-child(27).isPart,
-        table.openknxTitleTable :has(td:nth-child(28):hover, th:nth-child(28):hover) td:nth-child(28).isPart,
-        table.openknxTitleTable :has(td:nth-child(29):hover, th:nth-child(29):hover) td:nth-child(29).isPart,
-        table.openknxTitleTable :has(td:nth-child(30):hover, th:nth-child(30):hover) td:nth-child(30).isPart,
+        table.openknxTitleTable:has(td:nth-child(2):hover, th:nth-child(2):hover) td:nth-child(2).isPart,
+        table.openknxTitleTable:has(td:nth-child(3):hover, th:nth-child(3):hover) td:nth-child(3).isPart,
+        table.openknxTitleTable:has(td:nth-child(4):hover, th:nth-child(4):hover) td:nth-child(4).isPart,
+        table.openknxTitleTable:has(td:nth-child(5):hover, th:nth-child(5):hover) td:nth-child(5).isPart,
+        table.openknxTitleTable:has(td:nth-child(6):hover, th:nth-child(6):hover) td:nth-child(6).isPart,
+        table.openknxTitleTable:has(td:nth-child(7):hover, th:nth-child(7):hover) td:nth-child(7).isPart,
+        table.openknxTitleTable:has(td:nth-child(8):hover, th:nth-child(8):hover) td:nth-child(8).isPart,
+        table.openknxTitleTable:has(td:nth-child(9):hover, th:nth-child(9):hover) td:nth-child(9).isPart,
+        table.openknxTitleTable:has(td:nth-child(10):hover, th:nth-child(10):hover) td:nth-child(10).isPart,
+        table.openknxTitleTable:has(td:nth-child(11):hover, th:nth-child(11):hover) td:nth-child(11).isPart,
+        table.openknxTitleTable:has(td:nth-child(12):hover, th:nth-child(12):hover) td:nth-child(12).isPart,
+        table.openknxTitleTable:has(td:nth-child(13):hover, th:nth-child(13):hover) td:nth-child(13).isPart,
+        table.openknxTitleTable:has(td:nth-child(14):hover, th:nth-child(14):hover) td:nth-child(14).isPart,
+        table.openknxTitleTable:has(td:nth-child(15):hover, th:nth-child(15):hover) td:nth-child(15).isPart,
+        table.openknxTitleTable:has(td:nth-child(16):hover, th:nth-child(16):hover) td:nth-child(16).isPart,
+        table.openknxTitleTable:has(td:nth-child(17):hover, th:nth-child(17):hover) td:nth-child(17).isPart,
+        table.openknxTitleTable:has(td:nth-child(18):hover, th:nth-child(18):hover) td:nth-child(18).isPart,
+        table.openknxTitleTable:has(td:nth-child(19):hover, th:nth-child(19):hover) td:nth-child(19).isPart,
+        table.openknxTitleTable:has(td:nth-child(20):hover, th:nth-child(20):hover) td:nth-child(20).isPart,
+        table.openknxTitleTable:has(td:nth-child(21):hover, th:nth-child(21):hover) td:nth-child(21).isPart,
+        table.openknxTitleTable:has(td:nth-child(22):hover, th:nth-child(22):hover) td:nth-child(22).isPart,
+        table.openknxTitleTable:has(td:nth-child(23):hover, th:nth-child(23):hover) td:nth-child(23).isPart,
+        table.openknxTitleTable:has(td:nth-child(24):hover, th:nth-child(24):hover) td:nth-child(24).isPart,
+        table.openknxTitleTable:has(td:nth-child(25):hover, th:nth-child(25):hover) td:nth-child(25).isPart,
+        table.openknxTitleTable:has(td:nth-child(26):hover, th:nth-child(26):hover) td:nth-child(26).isPart,
+        table.openknxTitleTable:has(td:nth-child(27):hover, th:nth-child(27):hover) td:nth-child(27).isPart,
+        table.openknxTitleTable:has(td:nth-child(28):hover, th:nth-child(28):hover) td:nth-child(28).isPart,
+        table.openknxTitleTable:has(td:nth-child(29):hover, th:nth-child(29):hover) td:nth-child(29).isPart,
+        table.openknxTitleTable:has(td:nth-child(30):hover, th:nth-child(30):hover) td:nth-child(30).isPart,
+        table.openknxTitleTable:has(td:nth-child(31):hover, th:nth-child(31):hover) td:nth-child(31).isPart,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
@@ -68,7 +69,8 @@
         table.openknxTitleTable:has(td:nth-child(27):hover, th:nth-child(27):hover) thead th.rotate45:nth-child(27) div span,
         table.openknxTitleTable:has(td:nth-child(28):hover, th:nth-child(28):hover) thead th.rotate45:nth-child(28) div span,
         table.openknxTitleTable:has(td:nth-child(29):hover, th:nth-child(29):hover) thead th.rotate45:nth-child(29) div span,
-        table.openknxTitleTable:has(td:nth-child(30):hover, th:nth-child(30):hover) thead th.rotate45:nth-child(30) div span
+        table.openknxTitleTable:has(td:nth-child(30):hover, th:nth-child(30):hover) thead th.rotate45:nth-child(30) div span,
+        table.openknxTitleTable:has(td:nth-child(31):hover, th:nth-child(31):hover) thead th.rotate45:nth-child(31) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -221,7 +223,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -275,9 +276,7 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
-                <a href="https://github.com/OpenKNX/OFM-DFA">OFM-DFA</a>
-            
+                <span data-ofm="OFM-DFA"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-DFA">OFM-DFA</a></span>
         </td>
        
 
@@ -331,9 +330,7 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
-                <a href="https://github.com/OpenKNX/OFM-ShutterControllerModule">OFM-ShutterControllerModule</a>
-            
+                <span data-ofm="OFM-ShutterControllerModule"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-ShutterControllerModule">OFM-ShutterControllerModule</a></span>
         </td>
        
 
@@ -387,7 +384,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -441,7 +437,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -495,11 +490,8 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
-                <a href="https://github.com/OpenKNX/OFM-Meter">OFM-Meter</a>, 
-            
-                <a href="https://github.com/OpenKNX/OFM-SML">OFM-SML</a>
-            
+                <span data-ofm="OFM-Meter"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-Meter">OFM-Meter</a></span>, 
+                <span data-ofm="OFM-SML"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-SML">OFM-SML</a></span>
         </td>
        
 
@@ -553,9 +545,7 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
-                <a href="https://github.com/OpenKNX/OFM-ADCInput">OFM-ADCInput</a>
-            
+                <span data-ofm="OFM-ADCInput"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-ADCInput">OFM-ADCInput</a></span>
         </td>
        
 
@@ -609,9 +599,7 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
-                <a href="https://github.com/OpenKNX/OFM-THPSensorModule">OFM-THPSensorModule</a>
-            
+                <span data-ofm="OFM-THPSensorModule"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-THPSensorModule">OFM-THPSensorModule</a></span>
         </td>
        
 
@@ -665,7 +653,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -719,9 +706,7 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
-                <a href="https://github.com/OpenKNX/OFM-Infrared">OFM-Infrared</a>
-            
+                <span data-ofm="OFM-Infrared"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-Infrared">OFM-Infrared</a></span>
         </td>
        
 
@@ -775,7 +760,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -829,7 +813,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -883,7 +866,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -937,7 +919,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -991,11 +972,8 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
-                <a href="https://github.com/OpenKNX/OFM-InternetWeatherModule">OFM-InternetWeatherModule</a>, 
-            
-                <a href="https://github.com/OpenKNX/OFM-SIPClientModule">OFM-SIPClientModule</a>
-            
+                <span data-ofm="OFM-InternetWeatherModule"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-InternetWeatherModule">OFM-InternetWeatherModule</a></span>, 
+                <span data-ofm="OFM-SIPClientModule"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-SIPClientModule">OFM-SIPClientModule</a></span>
         </td>
        
 
@@ -1049,7 +1027,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -1103,7 +1080,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -1157,7 +1133,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -1211,9 +1186,7 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart">&#9632;</td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
-                <a href="https://github.com/OpenKNX/OFM-AccessControl">OFM-AccessControl</a>
-            
+                <span data-ofm="OFM-AccessControl"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-AccessControl">OFM-AccessControl</a></span>
         </td>
        
 
@@ -1267,7 +1240,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -1321,7 +1293,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -1375,7 +1346,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart">&#9632;</td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -1429,7 +1399,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -1483,9 +1452,7 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
-                <a href="https://github.com/OpenKNX/OFM-HeatingActuator">OFM-HeatingActuator</a>
-            
+                <span data-ofm="OFM-HeatingActuator"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-HeatingActuator">OFM-HeatingActuator</a></span>
         </td>
        
 
@@ -1539,7 +1506,7 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
+                <span data-ofm="OFM-TouchDisplay"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-TouchDisplay">OFM-TouchDisplay</a></span>
         </td>
        
 
@@ -1593,7 +1560,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -1647,7 +1613,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 
@@ -1701,7 +1666,6 @@
         <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-            
         </td>
        
 

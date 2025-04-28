@@ -102,10 +102,10 @@ class HTMLGenerator:
             (False, True, "oam2dev.html", "OpenKNX-Applikationen und unterstützte Geräte"),
         ]
         for showModules, showDevices, output_file, title in render_configs:
-            logging.info(f"Create Overview Table \"{title}\" in {output_file}")
+            file = self.path_manager.create_path(filename=output_file)
+            logging.info(f"Create Overview Table \"{title}\" in {file}")
             self._render_template_to_file(
-                'dependencies_template.html',
-                output_file,
+                'dependencies_template.html', file,
                 title=title,
                 modules_sorted=modules_sorted if showModules else [],
                 devices_sorted=devices_sorted if showDevices else [],

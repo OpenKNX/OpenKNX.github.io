@@ -793,8 +793,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.3.2",
+                    "name": "0.3.2 Beta",
+                    "published_at": "2025-04-29T19:59:07Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-InfraredGateway/releases/tag/0.3.2",
+                    "body": "**Full Changelog**: https://github.com/OpenKNX/OAM-InfraredGateway/compare/0.2.1...0.3.2",
+                    "assets": [
+                        {
+                            "name": "InfraredGateway-Beta-0.3.2.zip",
+                            "updated_at": "2025-04-29T19:58:58Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-InfraredGateway/releases/download/0.3.2/InfraredGateway-Beta-0.3.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.2.1",
-                    "name": "0.2.1",
+                    "name": "0.2.1 Beta",
                     "published_at": "2024-12-09T19:57:34Z",
                     "html_url": "https://github.com/OpenKNX/OAM-InfraredGateway/releases/tag/0.2.1",
                     "body": "Diverse Updates",

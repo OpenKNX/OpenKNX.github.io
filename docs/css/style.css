@@ -56,8 +56,9 @@ table.openknxTitleTable th {
     font-weight: normal;
     text-align: left;
 }
-table.openknxTitleTable tr[data-oam] th:first-child {
-    /* prevent wrapping of OAM-Name */
+table.openknxTitleTable tr[data-oam] th:first-child,
+span[data-ofm], span[data-dev] {
+    /* prevent wrapping of OAM-Name, OFM-Name, Device-Name */
 	white-space: nowrap;
 }
 table.openknxTitleTable th.singleModules {

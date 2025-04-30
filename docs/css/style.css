@@ -15,6 +15,15 @@ table.openknxTitleTable {
 	border-collapse: collapse;
 	border-top: 3px solid #449841;
 }
+table.openknxTitleTable tr.colGroupTitle th {
+    /*
+    background-color: #449841;
+    color: #fff;
+    */
+    color: #449841;
+    text-align: center;
+    font-size: 150%;
+}
 table.openknxTitleTable thead tr:first-child th:first-child {
     min-width: 128px;
     /* TODO use local logo background-image: url('/img/openknx-logoline.png'); */

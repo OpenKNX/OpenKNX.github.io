@@ -43,12 +43,8 @@
     <thead>
     <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
-       {%- if showModules -%}
-        <th class="before-new-cols" colspan="{{ modules_sorted | selectattr('1', 'gt', 1) | list | length + 1 }}">Enthaltene Module</th>
-       {%- endif -%}
-       {%- if showDevices -%}
-        <th class="before-new-cols" colspan="{{ devices_sorted | selectattr('1', 'gt', 1) | list | length + 1 + 1}}">Unterstützte Geräte</th>
-       {%- endif -%}
+        {% if showModules %}<th class="before-new-cols" colspan="{{ modules_sorted | selectattr('1', 'gt', 1) | list | length + 1 }}">Enthaltene Module</th>{% endif %}
+        {% if showDevices %}<th class="before-new-cols" colspan="{{ devices_sorted | selectattr('1', 'gt', 1) | list | length + 1 + 1}}">Unterstützte Geräte</th>{% endif %}
     </tr>
     <tr>
         <th class="before-new-cols"></th>

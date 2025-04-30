@@ -20,7 +20,7 @@ class DeviceHelper:
             "firmware_UP1-GW-RS485": "OpenKNX UP1 RS485 Gateway",
             "firmware_SOM_UP": "Smart-MF Soundmodul",
             "GardenControl": "SmartMF-GardenControl",
-            "GW-UP1-IR": "OpenKNX UP1 8xSensor",
+            "GW-UP1-IR": "OpenKNX UP1 8xSensor",  # TODO: deprecated
             "IP-Router-REG1-Eth": "OpenKNX REG1 Basismodul IP",
             "IP-Router-REG1-LAN-TP-Base": "OpenKNX REG1 Basismodul LAN+TP",
             "OpenKNX-PiPico-BCU-Connector": "OpenKNX PiPico BCU Connector",
@@ -56,6 +56,7 @@ class DeviceHelper:
             "Smart-MF-eHZ-Schnittstelle": "Smart-MF-eHZ-Schnittstelle",
             "Smart-MF-S0-Zaehlermodul": "Smart-MF-S0-Zaehlermodul",
             "SmartMF-Sensormodul-RP2040": "SmartMF-Sensormodul-v4.x-RP2040",
+            "UP1-GW-IR": "OpenKNX UP1 8xSensor",  # TODO: check
             "UP1-PM-HF": "OpenKNX UP1 Präsenzmelder+",
             "XIAO_MINI_V1": "OpenKNXiao V1",
         }

@@ -24,7 +24,7 @@ table.openknxTitleTable tr.colGroupTitle th {
     text-align: center;
     font-size: 150%;
 }
-table.openknxTitleTable thead tr:first-child th:first-child {
+table.openknxTitleTable thead tr:nth-child(2) th:first-child {
     min-width: 128px;
     /* TODO use local logo background-image: url('/img/openknx-logoline.png'); */
     background-image: url('https://raw.githubusercontent.com/OpenKNX/.github/main/profile/images/weiss.svg');

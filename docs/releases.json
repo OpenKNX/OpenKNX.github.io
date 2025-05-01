@@ -1326,7 +1326,22 @@
             "description": null,
             "releases": [
                 {
-                    "prerelease": true,
+                    "prerelease": false,
+                    "tag_name": "0.5",
+                    "name": "0.5 Beta",
+                    "published_at": "2025-04-30T22:25:12Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Meter/releases/tag/0.5",
+                    "body": "* Generelle Updates der Libs\r\n* Umstellung auf neuen KNX Stack\r\n* Support f\u00fcr IP Ger\u00e4te\r\n\r\n**Achtung an alle mit OpenKNX REG1 Multisensor**\r\nDie Eingangszuordnung hat sich ge\u00e4ndert! Die Onboard-Schnittstelle ist nun Kanal C. Die RJ11-Eing\u00e4nge sind daf\u00fcr nun A+B.\r\n\r\n**Full Changelog**: https://github.com/OpenKNX/OAM-Meter/compare/0.3...0.5",
+                    "assets": [
+                        {
+                            "name": "MeterModule-Beta-0.5.zip",
+                            "updated_at": "2025-05-01T07:24:44Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Meter/releases/download/0.5/MeterModule-Beta-0.5.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.3",
                     "name": "0.3 Beta",
                     "published_at": "2024-12-04T19:20:36Z",

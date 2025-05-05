@@ -92,7 +92,7 @@
         {% endfor %}
         <td class="left">
             {%- for device in devices_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamDevices) %}
-                <span data-dev="{{deviceSingle}}"><span class="isPart">&#9632;</span>&nbsp;{{ device }}</span>{% if not loop.last %}, {% endif %}
+                <span data-dev="{{device}}"><span class="isPart">&#9632;</span>&nbsp;{{device}}</span>{% if not loop.last %}, {% endif %}
             {%- endfor %}
         </td>
 

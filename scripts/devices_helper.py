@@ -22,6 +22,7 @@ class DeviceHelper:
             "GardenControl": "SmartMF-GardenControl",
             "GW-UP1-IR": "OpenKNX UP1 8xSensor",  # TODO: deprecated
             "IP-Router-REG1-Eth": "OpenKNX REG1 Basismodul IP",
+            "OpenKNX-REG1-Basismodul-IP": "OpenKNX REG1 Basismodul IP",
             "IP-Router-REG1-LAN-TP-Base": "OpenKNX REG1 Basismodul LAN+TP",
             "OpenKNX-PiPico-BCU-Connector": "OpenKNX PiPico BCU Connector",
             "OpenKNX-REG1-Base-V0": "OpenKNX REG1 Basismodul V0",
@@ -47,6 +48,8 @@ class DeviceHelper:
             "REG1-esp32": "OpenKNX REG1 Basismodul LAN+TP Devboard V00.02 (ESP32)",
 
             "REG2_PIPICO_V1": "OpenKNX REG2 PiPico2 V1",
+            "OpenKNX-REG2-PiPico-V1-DeviceDisplay-Meter": "OpenKNX REG2 PiPico V1 DeviceDisplay Meter",
+
             "Sensormodul-v3.0-SAMD": "SmartMF-Sensormodul-v3.0-SAMD",
             "Sensormodul-v3.1-SAMD": "SmartMF-Sensormodul-v3.1-SAMD",
             "Sensormodul-v4.x-RP2040": "SmartMF-Sensormodul-v4.x-RP2040",

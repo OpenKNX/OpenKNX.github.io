@@ -1575,6 +1575,12 @@
                     ]
                 }
             ]
+        },
+        "OAM-LedDimmer-AB": {
+            "repo_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB",
+            "archived": false,
+            "description": null,
+            "releases": []
         }
     }
 }

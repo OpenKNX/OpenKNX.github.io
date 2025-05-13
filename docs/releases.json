@@ -1,6 +1,6 @@
 {
     "OpenKnxContentType": "OpenKNX/OAM/Releases",
-    "OpenKnxFormatVersion": "v0.1.0-ALPHA",
+    "OpenKnxFormatVersion": "v0.1.0",
     "data": {
         "SEN-UP1-8xTH": {
             "repo_url": "https://github.com/OpenKNX/SEN-UP1-8xTH",

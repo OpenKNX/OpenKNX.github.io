@@ -15,10 +15,10 @@ class DeviceHelper:
             "AB-SmartHouse-PresenceWall": "AB-SmartHouse-PresenceWall",
             "AB-SmartHouse-SwitchActuator-REG6-8CH": "AB-SmartHouse-SwitchActuator-REG6-8CH",
             "AccessControl": "AB-AccessControl",
-            "DeveloperBoard-JustForTesters": "?-DeveloperBoard-JustForTesters",
-            "EnoceanGateway_RP2040": "Smart-MF Enocean Gateway RP2040",
+            "DeveloperBoard-JustForTesters": "SmartMF Entwicklerboard",
+            "EnoceanGateway_RP2040": "SmartMF Enocean Gateway RP2040",
             "firmware_UP1-GW-RS485": "OpenKNX UP1 RS485 Gateway",
-            "firmware_SOM_UP": "Smart-MF Soundmodul",
+            "firmware_SOM_UP": "SmartMF Soundmodul",
             "GardenControl": "SmartMF-GardenControl",
             "GW-UP1-IR": "OpenKNX UP1 8xSensor",  # TODO: deprecated
             "IP-Router-REG1-Eth": "OpenKNX REG1 Basismodul IP",
@@ -36,8 +36,8 @@ class DeviceHelper:
             "OpenKNX-UP1-8xSensor": "OpenKNX UP1 8xSensor",
             "PiPico_BCU_Connector": "OpenKNX PiPico BCU Connector",
             "PiPico-BCU-Connector": "OpenKNX PiPico BCU Connector",
-            "RealPresence": "?-RealPresence",
-            "RealPresence_v2.0": "?-RealPresence_v2.0",
+            "RealPresence": "SmartMF RealPresence",
+            "RealPresence_v2.0": "SmartMF RealPresence_v2.0",
             "REG1_BASE_V0": "OpenKNX REG1 Basismodul V0",
             "REG1_BASE_V1": "OpenKNX REG1 Basismodul",
 
@@ -56,8 +56,8 @@ class DeviceHelper:
             "Sensormodul-v4x-RP2040": "SmartMF-Sensormodul-v4.x-RP2040",
             "SEN-UP1-8XTH": "OpenKNX UP1 8xSensor",
             "SmartMF-1TE-RP2040": "SmartMF-1TE-RP2040",
-            "Smart-MF-eHZ-Schnittstelle": "Smart-MF-eHZ-Schnittstelle",
-            "Smart-MF-S0-Zaehlermodul": "Smart-MF-S0-Zaehlermodul",
+            "Smart-MF-eHZ-Schnittstelle": "SmartMF-eHZ-Schnittstelle",
+            "Smart-MF-S0-Zaehlermodul": "SmartMF-S0-Zaehlermodul",
             "SmartMF-Sensormodul-RP2040": "SmartMF-Sensormodul-v4.x-RP2040",
             "UP1-GW-IR": "OpenKNX UP1 8xSensor",  # TODO: check
             "UP1-PM-HF": "OpenKNX UP1 Präsenzmelder+",
@@ -73,7 +73,7 @@ class DeviceHelper:
             return "OpenKNX UP1 8xSensor"
         if oam == "OAM-EnoceanGateway" and hw_text == "firmware":
             logging.warning(f"((>>WORKAROUND<<)) OAM-specific mapping of device-name for '{hw_text}' in '{oam}'")
-            return "Smart-MF Enocean Gateway (SAMD)"
+            return "SmartMF Enocean Gateway (SAMD)"
         if hw_text in self.device_name_map:
             return self.device_name_map[hw_text]
         else:

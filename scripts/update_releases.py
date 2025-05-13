@@ -194,7 +194,7 @@ def main():
     oam_releases_data = release_manager.fetch_apps_releases(oam_repos)
     releases_data = {
         "OpenKnxContentType": "OpenKNX/OAM/Releases",
-        "OpenKnxFormatVersion": "v0.1.0-ALPHA",
+        "OpenKnxFormatVersion": "v0.1.0",
         "data": oam_releases_data
     }
     with open(os.path.join("docs", 'releases.json'), 'w') as outfile:

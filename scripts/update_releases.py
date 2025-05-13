@@ -175,7 +175,7 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
             logging.warning(f"Missing {oam} in oam_details, present only {oam_details.keys()}")
     for oam, oam_device_list in oam_hardware.items():
         if oam in oam_data:
-            oam_data[oam]["devices"] = [device_helper.hw_name_mapping(oam, d) for d in oam_device_list]
+            oam_data[oam]["devices"] = oam_device_list
         else:
             logging.warning(f"Missing {oam} in oam_data, present only {oam_data.keys()}")
 
@@ -201,7 +201,14 @@ def main():
         json.dump(releases_data, outfile, indent=4)
 
     # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")
-    oam_hardware, oam_stat = process_releases(oam_releases_data)
+    oam_hardware_raw, oam_stat = process_releases(oam_releases_data)
+    with open('hardware_mapping_raw.json', 'w') as outfile:
+        json.dump(oam_hardware_raw, outfile, indent=4)
+
+    oam_hardware = {
+        oam: [device_helper.hw_name_mapping(oam, d) for d in oam_device_list]
+        for oam, oam_device_list in oam_hardware_raw.items()
+    }
     with open('hardware_mapping.json', 'w') as outfile:
         json.dump(oam_hardware, outfile, indent=4)
     for oamName, oamStat in oam_stat.items():

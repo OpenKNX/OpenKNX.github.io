@@ -13,6 +13,7 @@ class GitHubClient:
         self.base_url = base_url
 
     def get_response(self, url, allowed_not_found=False):
+        response = None
         try:
             response = requests.get(url)
             if response.status_code == 403 and 'X-RateLimit-Reset' in response.headers:
@@ -24,7 +25,7 @@ class GitHubClient:
             response.raise_for_status()
             return response
         except requests.exceptions.RequestException as e:
-            if allowed_not_found and response.status_code == 404:
+            if allowed_not_found and response is not None and response.status_code == 404:
                 logging.warning(f"404 Not Found: {url}")
                 return None
             error_message = f"Error fetching data from {url}: {e}"

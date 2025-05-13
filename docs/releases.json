@@ -1580,7 +1580,23 @@
             "repo_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB",
             "archived": false,
             "description": null,
-            "releases": []
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "0.1",
+                    "name": "Pre-Release 0.1",
+                    "published_at": "2025-05-13T20:34:22Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.1",
+                    "body": "Initiales Firmware-Release.\r\n\r\nHierbei handelt es sich noch um ein Pre-Release, welches noch nicht alle Features beinhaltet und noch den ein oder anderen Bugs enthalten kann, aber bereits einsetzbar ist - alle wesentlichen Funktionen eines LED-Dimmers sind vorhanden.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.1.zip",
+                            "updated_at": "2025-05-13T20:34:08Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.1/LedDimmerAB-Release-0.1.zip"
+                        }
+                    ]
+                }
+            ]
         }
     }
 }

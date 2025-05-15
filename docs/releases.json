@@ -636,6 +636,21 @@
             "description": "KNX based intelligent watering system ",
             "releases": [
                 {
+                    "prerelease": false,
+                    "tag_name": "0.9-release-BETA",
+                    "name": "0.9-release-BETA",
+                    "published_at": "2025-05-14T20:10:15Z",
+                    "html_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/tag/0.9-release-BETA",
+                    "body": "Es ist geschafft :-) Release 0.9 steht\r\n\r\nIch lasse Ihn noch als Beta laufen, da es doch zum letzten offiziellen Release 0.4 sich einiges ge\u00e4ndert hat. \r\nErste Tests zeigen, dass das soweit mal tut, aber es ist unm\u00f6gliche alle m\u00f6glichen Anwendungsf\u00e4lle und Kombinationen zu testen.\r\nSollte es noch zu Auff\u00e4lligkeiten kommen, dann lasst es mich wissen. \r\nKNX-Forum: User = Masifi\r\nMAIL: info @ smart-mf.de \r\n\r\nNEU: \r\n- Integration des Zustandsautomaten (DFA) \r\n- Beim SMT50 Feuchte-Sensor hat man jetzt wie Wahl zwischen DPT5 und DPT9\r\n\r\nINFO: Die Version ist ETS Updatef\u00e4hig\r\n",
+                    "assets": [
+                        {
+                            "name": "GardenControl-Release-0.9.zip",
+                            "updated_at": "2025-05-14T19:57:45Z",
+                            "browser_download_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/download/0.9-release-BETA/GardenControl-Release-0.9.zip"
+                        }
+                    ]
+                },
+                {
                     "prerelease": true,
                     "tag_name": "0.7-pre-release",
                     "name": "0.7-pre-release",

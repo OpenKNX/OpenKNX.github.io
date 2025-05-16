@@ -1,4 +1,4 @@
-# Collect Statistic Data from App-XML of OpenKNX-Releas
+# Collect Statistic Data from App-XML of OpenKNX-Release
 # (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
 
 import defusedxml.ElementTree as ET  # secure replacement for  import xml.etree.ElementTree as ET
@@ -94,7 +94,8 @@ class AppSizingStat:
             self.parameter_calculation_count = len(root.findall(".//{*}ParameterCalculation"))
             self.com_object_count = len(root.findall(".//{*}ComObject"))
             """ TODO 
-                Ermittle die Gesamtgröße der KOs, durch Nutzung des Attribus ObjectSize in den Elementen ComObject. Dieser kann folgende Arten von Werten enthalten:
+                Ermittle die Gesamtgröße der KOs, durch Nutzung des Attribus ObjectSize in den Elementen ComObject. 
+                Dieser kann folgende Arten von Werten enthalten:
                 * "1 Bit"
                 * "2 Bits"
                 * "1 Byte"

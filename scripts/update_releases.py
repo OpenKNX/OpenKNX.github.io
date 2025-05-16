@@ -4,7 +4,7 @@
 import json
 import logging
 import os
-import xml.etree.ElementTree as ET
+import defusedxml.ElementTree as ET  # secure replacement for  import xml.etree.ElementTree as ET
 import zipfile
 from io import BytesIO
 

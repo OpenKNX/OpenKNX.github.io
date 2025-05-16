@@ -1,7 +1,7 @@
 # Collect Statistic Data from App-XML of OpenKNX-Releas
 # (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
 
-import xml.etree.ElementTree as ET
+import defusedxml.ElementTree as ET  # secure replacement for  import xml.etree.ElementTree as ET
 from io import BytesIO
 
 

@@ -30,14 +30,7 @@ if os.path.isdir(cache_path):
 appPrefix = "OAM-"
 appSpecialNames = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"}
 appExclusion = {"OAM-TestApp"}
-
-client = GitHubClient()
-release_manager = ReleaseManager(client, appPrefix, appSpecialNames, appExclusion)
-dependency_manager = DependencyManager(client)
-device_helper = DeviceHelper()
-html_generator = HTMLGenerator(device_helper)
-
-oam_order = [
+appOrder = [
 
     # virtual only modules
     "OAM-LogicModule",
@@ -69,23 +62,29 @@ oam_order = [
     "OAM-Dummy",
 
     # special hardware
+    "OAM-WeatherWN90LP",
     "SOM-UP",
     "OAM-AccessControl",
     "BEM-GardenControl",
-    "OAM-WeatherWN90LP",
+    "OAM-TouchRound",
 
     # "boring" hardware
     "OAM-SwitchActuator",
     "OAM-BinaryInput",
     "OAM-HeatingActuator",
 
-    # very special
-    "OAM-TouchRound",
-
-    # very very special
+    # very, very special
     "OAM-ElectricDoorDrive",
     "OAM-BinaryClock",
 ]
+
+client = GitHubClient()
+release_manager = ReleaseManager(client, appPrefix, appSpecialNames, appExclusion)
+dependency_manager = DependencyManager(client)
+device_helper = DeviceHelper()
+html_generator = HTMLGenerator(device_helper)
+
+
 
 
 def process_release_zip(zip_url):
@@ -147,6 +146,7 @@ def process_releases(releases_data):
             continue
         latest_release = oam_releases[0]
         for asset in latest_release.get('assets', []):
+            ## TODO check all?
             logging.info(f"Fetching release archive {oam} from {asset['browser_download_url']}")
 
             hardware_info, app_stat = process_release_zip(asset['browser_download_url'])
@@ -154,7 +154,7 @@ def process_releases(releases_data):
                 oam_stat[oam] = app_stat
             if hardware_info is not None:
                 hardware_mapping[oam] = hardware_info
-                break
+                break ## TODO check
 
         else:
             logging.warning(f"No assets found for {oam}")
@@ -182,25 +182,17 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
     logging.debug(f"oam_data {json.dumps(oam_data, indent=4)}")
 
     # Sort based on given order, all others at end
-    oam_data_sorted = {oam: oam_data[oam] for oam in oam_order if oam in oam_data}
-    oam_data_unsorted = {oam: oam_data[oam] for oam in oam_data if oam not in oam_order}
+    oam_data_sorted = {oam: oam_data[oam] for oam in appOrder if oam in oam_data}
+    oam_data_unsorted = {oam: oam_data[oam] for oam in oam_data if oam not in appOrder}
     return {**oam_data_sorted, **oam_data_unsorted}
 
 
 def main():
     oam_repos = release_manager.fetch_app_repos()
 
-    # release-data for usage in openknx-toolbox
+    # release-data (base) for usage in openknx-toolbox
     oam_releases_data = release_manager.fetch_apps_releases(oam_repos)
-    releases_data = {
-        "OpenKnxContentType": "OpenKNX/OAM/Releases",
-        "OpenKnxFormatVersion": "v0.1.0",
-        "data": oam_releases_data
-    }
-    with open(os.path.join("docs", 'releases.json'), 'w') as outfile:
-        json.dump(releases_data, outfile, indent=4)
 
-    # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")
     oam_hardware_raw, oam_stat = process_releases(oam_releases_data)
     with open('hardware_mapping_raw.json', 'w') as outfile:
         json.dump(oam_hardware_raw, outfile, indent=4)
@@ -211,6 +203,20 @@ def main():
     }
     with open('hardware_mapping.json', 'w') as outfile:
         json.dump(oam_hardware, outfile, indent=4)
+
+    for oam, oam_data in oam_releases_data.items():
+        oam_data["hw_avail_open"] = sum(1 for name in oam_hardware.get(oam, []) if device_helper.is_open_device(name))
+
+    releases_data = {
+        "OpenKnxContentType": "OpenKNX/OAM/Releases",
+        "OpenKnxFormatVersion": "v0.2.0",
+        "data": oam_releases_data
+    }
+    with open(os.path.join("docs", 'releases.json'), 'w') as outfile:
+        json.dump(releases_data, outfile, indent=4)
+    # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")
+
+    # app statistics
     for oamName, oamStat in oam_stat.items():
         logging.info(f"App-Sizing-Stat for {oamName}: {oamStat}")
 

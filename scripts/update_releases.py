@@ -301,9 +301,22 @@ def main(force_update=False):
     html_generator.update_html(oam_releases_data)
     all_oam_dependencies = dependency_manager.fetch_all_dependencies(oam_repos)
 
+    # read ofm_data from ofms.json
+    with open(os.path.join("data", 'ofms.json'), 'r', encoding='utf-8') as f:
+        ofm_data = {ofm["name"]: ofm for ofm in json.load(f)}
+    for ofm_name, ofm in ofm_data.items():
+        if 'icon' in ofm:
+            icon = ofm['icon'].split('@')
+            icon_name = icon[0]
+            icon_repo_def = (icon[1] if len(icon) == 2 else "OGM-Common").split('#')
+            icon_repo = icon_repo_def[0]
+            icon_repo_ref = icon_repo_def[1] if len(icon_repo_def)==2 else "v1"
+            ofm["icon_url"] = f"https://raw.githubusercontent.com/OpenKNX/{icon_repo}/refs/heads/{icon_repo_ref}/src/Baggages/Icons/{icon_name}.png"
+    logging.info(ofm_data)
+
     # Generate Dependencies Table
     oam_data = generate_oam_data(all_oam_dependencies, oam_hardware, oam_releases_data)
-    html_generator.update_overview_tables(oam_data)
+    html_generator.update_overview_tables(oam_data, ofm_data)
 
 
 if __name__ == "__main__":

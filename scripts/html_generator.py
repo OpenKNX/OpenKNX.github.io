@@ -79,7 +79,7 @@ class HTMLGenerator:
         for repo, details in releases_data.items():
             self.create_html_for_repo(repo, details["releases"])
 
-    def update_overview_tables(self, oam_data):
+    def update_overview_tables(self, oam_data, ofm_data):
         # module,devices -> usage_count
         from collections import defaultdict
         modules_usage_count = defaultdict(int)
@@ -121,6 +121,7 @@ class HTMLGenerator:
                 devices_sorted=devices_sorted if showDevices else [],
                 devices_other_sorted=devices_other_sorted if showDevices else [],
                 oam_data=oam_data,
+                ofm_data=ofm_data,
                 showModules=showModules,
                 showDevices=showDevices,
             )
@@ -187,6 +188,7 @@ class HTMLGenerator:
                                           devices_sorted=devices_sorted,
                                           devices_other_sorted=devices_other_sorted,
                                           oam_data=oam_data_of_ofm,
+                                          ofm_data=ofm_data,
                                           showModules=False,
                                           showDevices=True,
                                           )
@@ -235,6 +237,7 @@ class HTMLGenerator:
                                           # devices_sorted=devices_sorted,
                                           # devices_other_sorted=devices_other_sorted,
                                           oam_data=oam_data_of_device,
+                                          ofm_data=ofm_data,
                                           showModules=True,
                                           showDevices=False,
                                           )

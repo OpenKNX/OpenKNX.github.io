@@ -38,6 +38,19 @@ table.openknxTitleTable caption {
     font-size: 150%;
 }
 
+table.openknxTitleTable thead tr.iconRow th {
+    vertical-align: middle;
+    text-align: center;
+}
+table.openknxTitleTable thead tr.iconRow th img {
+    width: 24px;
+    height: 24px;
+}
+table.openknxTitleTable tbody tr td img {
+    width: 20px;
+    height: 20px;
+}
+
 /* row shading */
 table.openknxTitleTable tbody tr:nth-child(2n+1) {
     background-color: #f8f8f8;

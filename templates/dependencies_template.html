@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="/css/style.css">
     <style>
         {% set col_count = 1 + (modules_sorted | default([]) | length) + (devices_sorted | default([]) | length) %}
-        {% for col in range(2, col_count + 1) %}table.openknxTitleTable:has(td:nth-child({{col}}):hover, thead > tr:nth-child(2) > th:nth-child({{col}}):hover) td:nth-child({{col}}).isPart,
+        {% for col in range(2, col_count + 1) %}table.openknxTitleTable:has(tr.hoverTrigger > :nth-child({{col}}):hover) tr > :nth-child({{col}}).colHover,
         {% endfor %}
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
         }
-        {% for col in range(2, col_count + 1) %}table.openknxTitleTable:has(td:nth-child({{col}}):hover, th:nth-child({{col}}):hover) thead th.rotate45:nth-child({{col}}) div span{% if not loop.last %},{% endif %}
+        {% for col in range(2, col_count + 1) %}table.openknxTitleTable:has(tr.hoverTrigger > :nth-child({{col}}):hover) thead th.rotate45:nth-child({{col}}) div span{% if not loop.last %},{% endif %}
         {% endfor %}
         {
             border-bottom: 2px solid #9f9;
@@ -41,12 +41,12 @@
        {% endif %}
     </colgroup>
     <thead>
-    <tr class="colGroupTitle">
+      <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
         {% if showModules %}<th class="before-new-cols" colspan="{{ modules_sorted | selectattr('1', 'gt', 1) | list | length + 1 }}">Enthaltene Module</th>{% endif %}
         {% if showDevices %}<th class="before-new-cols" colspan="{{ devices_sorted | selectattr('1', 'gt', 1) | list | length + 1 + 1}}">Unterstützte Geräte</th>{% endif %}
-    </tr>
-    <tr>
+      </tr>
+      <tr class="hoverTrigger">
         <th class="before-new-cols"></th>
 
        {% if showModules %}
@@ -64,7 +64,28 @@
         <th class="rotate90" data-dev="*other*"><div><span>Sonstige Geräte</span></div></th>
        {% endif %}
 
-    </tr>
+      </tr>
+      <tr class="iconRow hoverTrigger">
+        <th class="before-new-cols"></th>
+
+       {% if showModules %}
+        {% for module, count in modules_sorted if count > 1 %}
+          {%- set ofmIconUrl = ofm_data[module]['icon_url'] if ofm_data[module] else "" -%}
+          {%- set ofmDescripton = ofm_data[module]['description'] if ofm_data[module] else "" -%}
+        <th data-ofm="{{module}}" class="colHover" title="{{ofmDescripton}}">{% if ofmIconUrl %}<img src="{{ofmIconUrl}}" />{% else %}|{% endif %}</th>
+        {% endfor %}
+        <th class="before-new-cols" data-ofm="*special*"></th>
+       {% endif %}
+
+       {% if showDevices %}
+        {% for device, count in devices_sorted if count > 1 %}
+        <th data-dev="{{device}}" class="colHover"></th>
+        {% endfor %}
+        <th data-dev="*special*"></th>
+        <th data-dev="*other*"></th>
+       {% endif %}
+
+      </tr>
     </thead>
     <tbody>
     {% for oamName, oam_details in oam_data.items() %}
@@ -73,16 +94,18 @@
     {% set oamDevices = oam_details['devices'] %}
     {% set oamDescription = oam_details['description'] %}
     {% set oamUrl = "https://github.com/OpenKNX/" ~ oamName %}
-    <tr data-oam="{{oamName}}">
+    <tr data-oam="{{oamName}}" class="hoverTrigger">
         <th class="before-new-cols"><a href="{{oamUrl}}">{{ oamName }}</a>{% if oamDescription %}<div class="oam-details">{{ oamDescription }}</div>{% endif %}</th>
 
        {% if showModules %}
         {% for module, count in modules_sorted if count > 1 %}
-        <td data-ofm="{{module}}" class="isPart">{% if module in oamModules %}&#9632;{% endif %}</td>
+        <td data-ofm="{{module}}" class="isPart colHover">{% if module in oamModules %}&#9632;{% endif %}</td>
         {% endfor %}
         <td class="left before-new-cols" data-ofm="*special*">
             {%- for module in modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamModules) %}
-                <span data-ofm="{{module}}"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/{{ module }}">{{ module }}</a></span>{% if not loop.last or ((oamInternalModules | length) > 0)  %}, {% endif %}
+                {% set ofmIconUrl = ofm_data[module]['icon_url'] if ofm_data[module] else "" %}
+                {%- set ofmDescripton = ofm_data[module]['description'] if ofm_data[module] else "" -%}
+                <span data-ofm="{{module}}"><span class="isPart">&#9632;</span>&nbsp;{% if ofmIconUrl %}<img src="{{ofmIconUrl}}" title="{{ofmDescripton}}" />&nbsp;{% endif %}<a href="https://github.com/OpenKNX/{{ module }}">{{ module }}</a></span>{% if not loop.last or ((oamInternalModules | length) > 0)  %}, {% endif %}
             {%- endfor %}
             {%- for module in oamInternalModules %}
                 <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9632;</span>&nbsp;{{ module }}</span>{% if not loop.last %}, {% endif %}
@@ -92,7 +115,7 @@
 
        {% if showDevices %}
         {% for device, count in devices_sorted if count > 1 %}
-        <td data-dev="{{device}}" class="isPart">{% if device in oamDevices %}&#9632;{% endif %}</td>
+        <td data-dev="{{device}}" class="isPart colHover">{% if device in oamDevices %}&#9632;{% endif %}</td>
         {% endfor %}
         <td class="left">
             {%- for device in devices_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamDevices) %}

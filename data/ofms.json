@@ -1,0 +1,230 @@
+[
+  {
+    "name": "OGM-Common",
+    "title": "OpenKNX",
+    "icon": "openknx",
+    "description": "OpenKNX Common (Basisfunktionen)",
+    "type": "basic",
+    "prefix": "BASE"
+  },
+  {
+    "name": "OFM-ConfigTransfer",
+    "title": "Konfigurationstransfer",
+    "icon": "ofm-configtransfer@OFM-ConfigTransfer",
+    "description": "Kopieren, Import, Export von ETS-Einstellungen",
+    "type": "basic",
+    "prefix": "UCT"
+  },
+  {
+    "name": "OFM-LogicModule",
+    "title": "Logiken",
+    "icon": "blur",
+    "##DEPRECATED##ref_oam": "OAM-LogigModule",
+    "description": "Logikfunktionen, Wertekonvertierung und Zeitschaltuhren",
+    "type": "universal-logic",
+    "prefix": "LOG"
+  },
+  {
+    "name": "OFM-VirtualButton",
+    "title": "Virtuelle Taster",
+    "icon": "button-pointer",
+    "##DEPRECATED##ref_oam": "OAM-VirtualButton",
+    "description": "Virtuelle Taster",
+    "type": "virtual-control",
+    "prefix": "BTN"
+  },
+  {
+    "name": "OFM-BinaryInput",
+    "title": "Binäreingänge",
+    "icon": "arrow-right-circle-outline",
+    "description": "Binäreingänge",
+    "type": "sensor",
+    "prefix": "BIN"
+  },
+  {
+    "name": "OFM-Network",
+    "title": "Netzwerk",
+    "icon": "ethernet",
+    "description": "Netzwerkeinstellungen",
+    "type": "network",
+    "prefix": "NET"
+  },
+  {
+    "name": "OFM-FunctionBlocks",
+    "title": "Funktionsblöcke",
+    "icon": "texture-box@OFM-FunctionBlocks",
+    "description": "Bausteine mit verschiedenen Standardfunktionen",
+    "type": "universal-logic",
+    "prefix": "FCB"
+  },
+  {
+    "name": "OFM-PresenceModule",
+    "title": "Präsenzmelder",
+    "icon": "panorama-sphere-outline",
+    "ref_oam": "OAM-RaumController",
+    "description": "Virtueller Präsenzmelder",
+    "type": "virtual-control",
+    "prefix": "VPM"
+  },
+  {
+    "name": "OFM-SensorModule",
+    "title": "Sensoren",
+    "icon": "gauge",
+    "##DEPRECATED##ref_oam": "OAM-SensorModule",
+    "ref_oam": "OAM-RaumController",
+    "description": "Hardware-Umweltsensoren",
+    "type": "sensor",
+    "prefix": "SENS"
+  },
+  {
+    "name": "OFM-SwitchActuator",
+    "title": "Schaltaktor",
+    "icon": "electric-switch@OFM-SwitchActuator#main",
+    "description": "Ausgänge zum Schalten von Verbrauchern",
+    "type": "hardware-control",
+    "prefix": "SWA"
+  },
+  {
+    "name": "OFM-OneWireModule",
+    "title": "1-Wire",
+    "icon": "vector-polyline@OFM-OneWireModule",
+    "description": "Kommunikation mit 1-Wire-Geräten",
+    "type": "gateway",
+    "prefix": "WIRE"
+  },
+  {
+    "name": "OFM-ADCInput",
+    "title": "Analogeingänge",
+    "icon": "alpha-v-circle-outline@OFM-ADCInput",
+    "description": "Eingänge für analoge Signale",
+    "type": "sensor",
+    "prefix": "ADC"
+  },
+  {
+    "name": "OFM-InternetWeatherModule",
+    "title": "Internet Wetter",
+    "icon": "weather-partly-cloudy@OFM-InternetWeatherModule",
+    "ref_oam": "OAM-InternetServices",
+    "description": "Wetterdaten von Internetdiensten",
+    "dependencies": [
+      "OFM-Network"
+    ],
+    "type": "network",
+    "prefix": "IW"
+  },
+  {
+    "name": "OFM-Meter",
+    "title": "Zähler",
+    "icon": "counter",
+    "ref_oam": "OAM-Meter",
+    "description": "Auswertung von Zählern",
+    "type": "virtual",
+    "prefix": "MTR"
+  },
+  {
+    "name": "OFM-ShutterControllerModule",
+    "title": "Jalousiensteuerung",
+    "icon": "blinds-horizontal@OFM-ShutterControllerModule",
+    "ref_oam": "OAM-ShutterController",
+    "description": "Steuerung von Rollläden und Jalousien",
+    "type": "virtual-control",
+    "prefix": "JAL"
+  },
+  {
+    "name": "OFM-SmartHomeBridge",
+    "title": "Bridge",
+    "icon": "shape",
+    "ref_oam": "OAM-SmartHomeBridge",
+    "description": "SmartHomeBridge",
+    "dependencies": [
+      "OFM-Network"
+    ],
+    "type": "gateway",
+    "prefix": "BRI"
+  },
+  {
+    "name": "OFM-DFA",
+    "title": "Zustandsautomaten",
+    "icon": "ofm-dfa@OFM-DFA",
+    "ref_oam": "OAM-StateEngine",
+    "description": "Determninistische Endliche Automaten",
+    "dependencies": [
+      "OFM-LogicModule"
+    ],
+    "type": "universal-logic",
+    "prefix": "DFA"
+  },
+  {
+    "name": "OFM-SML",
+    "title": "Smartmeter (SML)",
+    "icon": "meter-electric-outline@OFM-SML",
+    "ref_oam": "OAM-Meter",
+    "description": "Auslesen von Smartmetern mit SML-Schnittstelle",
+    "type": "sensor",
+    "prefix": "SML"
+  },
+  {
+    "##TODO##": "** TODO check **",
+    "name": "OFM-THPSensorModule",
+    "title": "Sensor",
+    "##icon": "",
+    "##ref_oam": "OAM-Meter",
+    "description": "",
+    "type": "sensor",
+    "prefix": "THP"
+  },
+  {
+    "name": "OFM-Infrared",
+    "title": "Infrarot",
+    "icon": "led-on@OFM-Infrared",
+    "ref_oam": "OAM-InfraredGateway",
+    "description": "",
+    "type": "hardware",
+    "prefix": "IR"
+  },
+  {
+    "name": "OFM-Homematic",
+    "title": "Homematic",
+    "icon": "crop-square--square-medium@OFM-Homematic",
+    "ref_oam": "OAM-Homematic",
+    "description": "Gateway zur Anbindung von Homematic-Geräten",
+    "type": "gateway",
+    "prefix": "HMG"
+  },
+  {
+    "name": "OFM-Sonos",
+    "title": "Sonos Tonquellen",
+    "icon": "waveform@OFM-Sonos",
+    "ref_oam": "OAM-Sonos",
+    "description": "Steuerung von Sonos-Lautsprechern",
+    "type": "gateway",
+    "prefix": "SON"
+  },
+  {
+    "name": "OFM-Nuki",
+    "title": "Nuki",
+    "icon": "lock-outline@OFM-Nuki",
+    "ref_oam": "OAM-Nuki",
+    "description": "Steuerung von bis zu 10 Nuki Smart Locks oder Nuki Openern in Bluetooth-Reichweite",
+    "type": "gateway",
+    "prefix": "NUK"
+  },
+  {
+    "name": "OFM-LedModule",
+    "title": "LED-Dimmer",
+    "icon": "ceiling-light-multiple@OFM-LedModule",
+    "##TODO##ref_oam": "OAM-Nuki",
+    "description": "Multi-Kanal LED-Dimmer",
+    "type": "hardware",
+    "prefix": "LED"
+  },
+  {
+    "name": "OFM-SIPClientModule",
+    "title": "SIP Client",
+    "icon": "phone-forward-outline@OFM-SIPClientModule",
+    "ref_oam": "OAM-InternetServices",
+    "description": "Anrufe über SIP starten",
+    "type": "gateway",
+    "prefix": "SIP"
+  }
+]

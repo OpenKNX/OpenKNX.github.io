@@ -1489,6 +1489,21 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "v1",
+                    "name": "Release 1.0",
+                    "published_at": "2025-05-22T18:25:00Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/v1",
+                    "body": "Bitte vor Verwendung die Anwendungsbeschreibung lesen. Insbesondere das Kapitel [Handbetriebseinstellung](https://github.com/OpenKNX/OFM-ShutterControllerModule/blob/v1/doc/Applikationsbeschreibung-ShutterController.md#handbetriebseinstellung). \r\nDieses enth\u00e4lt wichtige Informationen \u00fcber die notwendigen Verbindungen der Gruppen Adressen.",
+                    "assets": [
+                        {
+                            "name": "ShutterController-Release-1.0.zip",
+                            "updated_at": "2025-05-22T18:24:18Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/download/v1/ShutterController-Release-1.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "v0.4.1",
                     "name": "Beta 4",
                     "published_at": "2024-12-28T19:12:04Z",

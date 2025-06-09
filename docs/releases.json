@@ -918,6 +918,21 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "v0.9",
+                    "name": "v0.9",
+                    "published_at": "2025-06-09T08:20:25Z",
+                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.9",
+                    "body": "Many changes",
+                    "assets": [
+                        {
+                            "name": "GW-REG1-Dali-Release-0.9.zip",
+                            "updated_at": "2025-06-09T08:19:38Z",
+                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.9/GW-REG1-Dali-Release-0.9.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "v0.6.1",
                     "name": "v0.6.1",
                     "published_at": "2025-01-19T18:07:05Z",

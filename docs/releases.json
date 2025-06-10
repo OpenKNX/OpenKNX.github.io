@@ -1667,6 +1667,21 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "02",
+                    "name": "Pre-Release 0.2",
+                    "published_at": "2025-06-09T17:03:39Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/02",
+                    "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- FIX: Eingestellte PWM-Frequenz aus ETS-Anwendung wurde nicht korrekt \u00fcbernommen.\r\n- FIX: Eingestellte Min./Max. Helligkeit wird nun korrekt ber\u00fccksichtigt.\r\n- FIX: Einige kleine Textverbesserungen in der ETS-Anwendung.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.2.zip",
+                            "updated_at": "2025-06-09T17:03:31Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/02/LedDimmerAB-Release-0.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "0.1",
                     "name": "Pre-Release 0.1",
                     "published_at": "2025-05-13T20:34:22Z",

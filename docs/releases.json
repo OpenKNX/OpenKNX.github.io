@@ -932,6 +932,21 @@
                     ]
                 },
                 {
+                    "prerelease": false,
+                    "tag_name": "v0.9.1",
+                    "name": "v0.9.1",
+                    "published_at": "2025-06-15T12:47:03Z",
+                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.9.1",
+                    "body": "- fix: turning evg off when dimming relative up\r\n- fix: turning evg not off when dimmin relative down",
+                    "assets": [
+                        {
+                            "name": "GW-REG1-Dali-Release-0.9.1.zip",
+                            "updated_at": "2025-06-15T12:45:10Z",
+                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.9.1/GW-REG1-Dali-Release-0.9.1.zip"
+                        }
+                    ]
+                },
+                {
                     "prerelease": true,
                     "tag_name": "v0.6.1",
                     "name": "v0.6.1",

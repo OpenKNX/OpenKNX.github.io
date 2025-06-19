@@ -1682,6 +1682,21 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "0.3",
+                    "name": "Pre-Release 0.3",
+                    "published_at": "2025-06-19T10:42:35Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.3",
+                    "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- CHANGE: KO-Helligkeitswerte sind nun 0-100 % anstatt 0-255 %.\r\n- FIX: Tunable White warm-wei\u00dfer und kalt-weiser Kanal waren vertauscht.\r\n- FIX: Sperrfunktion korrigiert und zus\u00e4tzliches Status-KO hinzugef\u00fcgt.\r\n- FIX: Nicht ben\u00f6tigte Auswahl bei Treppenlicht entfernt.\r\n- FIX: Szenen-KOs werden nun nur angezeigt, wenn Szenen aktiviert sind.\r\n- FIX: Szenen A-H haben nun die Szenennummern 1-8 als Vorauswahl.\r\n- FIX: Szenen-Status KO entfernt, da nicht ben\u00f6tigt.\r\n- FIX: Szenentyp ist nun ein Drop-Down.\r\n- FIX: Inkorrekte Szenennummer (um eins versetzt) wurde bei Tunable White genutzt.\r\n\r\nHinweis: Aufgrund einer erforderlichen KO-Datentyp\u00e4nderung ist dieses Pre-Release in der ETS nicht Update kompatibel.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.3.zip",
+                            "updated_at": "2025-06-19T10:39:45Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.3/LedDimmerAB-Release-0.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "02",
                     "name": "Pre-Release 0.2",
                     "published_at": "2025-06-09T17:03:39Z",

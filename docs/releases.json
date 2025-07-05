@@ -1398,6 +1398,21 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.6.0",
+                    "name": "0.6 Beta",
+                    "published_at": "2025-07-04T21:59:12Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Meter/releases/tag/0.6.0",
+                    "body": "Diverse Updates der verwendeten Libraries:\r\n\r\n* OGM-Common 1.4.0\r\n* OFM-Network 0.5\r\n* OGM-Logkmodul 3.7.0\r\n* OFM-ConfigTransfer 0.4.0\r\n\r\nAu\u00dferdem wurde der KNXIP-Support integriert, so dass zuk\u00fcnfitge Ger\u00e4te auch \u00fcber IP statt TP angebunden werden k\u00f6nnen.",
+                    "assets": [
+                        {
+                            "name": "MeterModule-Beta-0.6.zip",
+                            "updated_at": "2025-07-04T21:58:13Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Meter/releases/download/0.6.0/MeterModule-Beta-0.6.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.5",
                     "name": "0.5 Beta",
                     "published_at": "2025-04-30T22:25:12Z",

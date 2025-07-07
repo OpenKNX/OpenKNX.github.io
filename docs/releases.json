@@ -789,6 +789,21 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.1",
+                    "name": "Release Version 1.1",
+                    "published_at": "2025-07-06T19:06:06Z",
+                    "html_url": "https://github.com/OpenKNX/SOM-UP/releases/tag/1.1",
+                    "body": "**Achtung: Aufgrund des neuen KNX-Stack kann es sein, dass die PA neu programmiert werden muss!**\r\n\r\nDiverse Updates der verwendeten Libraries:\r\n\r\n* OGM-Common 1.4.0\r\n* OFM-Network 0.5\r\n* OGM-Logkmodul 3.7.0\r\n* OFM-ConfigTransfer 0.4.0\r\n\r\nAu\u00dferdem wurde der KNXIP-Support integriert, so dass zuk\u00fcnfitge Ger\u00e4te auch \u00fcber IP statt TP angebunden werden k\u00f6nnen.",
+                    "assets": [
+                        {
+                            "name": "SoundModule-Release-1.1.zip",
+                            "updated_at": "2025-07-06T19:05:59Z",
+                            "browser_download_url": "https://github.com/OpenKNX/SOM-UP/releases/download/1.1/SoundModule-Release-1.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "1.0",
                     "name": "Release Version 1.0",
                     "published_at": "2024-07-09T12:25:47Z",
@@ -1402,7 +1417,7 @@
                     "name": "0.6 Beta",
                     "published_at": "2025-07-04T21:59:12Z",
                     "html_url": "https://github.com/OpenKNX/OAM-Meter/releases/tag/0.6.0",
-                    "body": "Diverse Updates der verwendeten Libraries:\r\n\r\n* OGM-Common 1.4.0\r\n* OFM-Network 0.5\r\n* OGM-Logkmodul 3.7.0\r\n* OFM-ConfigTransfer 0.4.0\r\n\r\nAu\u00dferdem wurde der KNXIP-Support integriert, so dass zuk\u00fcnfitge Ger\u00e4te auch \u00fcber IP statt TP angebunden werden k\u00f6nnen.",
+                    "body": "**Achtung: Aufgrund des neuen KNX-Stack kann es sein, dass die PA neu programmiert werden muss!**\r\n\r\nDiverse Updates der verwendeten Libraries:\r\n\r\n* OGM-Common 1.4.0\r\n* OFM-Network 0.5\r\n* OGM-Logkmodul 3.7.0\r\n* OFM-ConfigTransfer 0.4.0\r\n\r\nAu\u00dferdem wurde der KNXIP-Support integriert, so dass zuk\u00fcnfitge Ger\u00e4te auch \u00fcber IP statt TP angebunden werden k\u00f6nnen.",
                     "assets": [
                         {
                             "name": "MeterModule-Beta-0.6.zip",
@@ -1756,6 +1771,13 @@
                     ]
                 }
             ],
+            "hw_avail_open": 0
+        },
+        "OAM-Aircondition": {
+            "repo_url": "https://github.com/OpenKNX/OAM-Aircondition",
+            "archived": false,
+            "description": null,
+            "releases": [],
             "hw_avail_open": 0
         }
     }

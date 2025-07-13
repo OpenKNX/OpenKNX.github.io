@@ -1255,6 +1255,36 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "5.2.0-Beta",
+                    "name": "5.2.0-Beta",
+                    "published_at": "2025-07-12T14:23:18Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/5.2.0-Beta",
+                    "body": "- usage of new DataLinkLayer Library OpenKNX/TPUart\r\n- usage of OpenKNX Common V1.4.1",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Beta-5.2.zip",
+                            "updated_at": "2025-07-12T14:22:19Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/5.2.0-Beta/IP-Router-Beta-5.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "0.3.0",
+                    "name": "0.3.0",
+                    "published_at": "2025-07-12T14:26:25Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.3.0",
+                    "body": "Changes compared to 0.1.3:\r\n- Support new Device; REG1-LAN-TP-Base (ESP32-based)\r\n- support up to 16 Tunnels\r\n- ip based tunnel reservation feature\r\n- a lot of minor bugfixes and improvements\r\n",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Release-0.3.zip",
+                            "updated_at": "2025-07-12T15:51:39Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/0.3.0/IP-Router-Release-0.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "5.0.2-Beta",
                     "name": "5.0.2-Beta",
                     "published_at": "2025-02-13T22:43:40Z",

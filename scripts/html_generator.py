@@ -61,7 +61,8 @@ class HTMLGenerator:
     def update_html(self, releases_data):
         logging.info("Updating HTML with release data")
 
-        self._render_template_to_file('release_template.html', 'releases_list.html',
+        output_filename = self.path_manager.create_path(filename='releases_list.html')
+        self._render_template_to_file('release_template.html', output_filename,
                                       releases_data=releases_data
                                       )
 

@@ -24,7 +24,9 @@ if os.path.isdir(cache_path):
     import requests_cache
 
     # logging.getLogger("requests_cache").setLevel(logging.DEBUG)
-    requests_cache.install_cache(cache_path, backend='filesystem', expire_after=3 * 24 * 60 * 60)
+    expire_after = 3 * 24 * 60 * 60
+    logging.info(f"Local DEV using .github_cache (expire_after={expire_after/60/60}h)")
+    requests_cache.install_cache(cache_path, backend='filesystem', expire_after=expire_after)
 
 # names for identification of app repos:
 appPrefix = "OAM-"

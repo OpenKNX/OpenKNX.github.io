@@ -1675,6 +1675,13 @@
             ],
             "hw_avail_open": 3
         },
+        "OAM-Homematic": {
+            "repo_url": "https://github.com/OpenKNX/OAM-Homematic",
+            "archived": false,
+            "description": "Homematic-Gateway zur Integration in KNX",
+            "releases": [],
+            "hw_avail_open": 0
+        },
         "OAM-WeatherWN90LP": {
             "repo_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP",
             "archived": false,
@@ -1821,13 +1828,6 @@
         },
         "OAM-Aircondition": {
             "repo_url": "https://github.com/OpenKNX/OAM-Aircondition",
-            "archived": false,
-            "description": null,
-            "releases": [],
-            "hw_avail_open": 0
-        },
-        "OAM-REG1-Schaltaktor-4x": {
-            "repo_url": "https://github.com/OpenKNX/OAM-REG1-Schaltaktor-4x",
             "archived": false,
             "description": null,
             "releases": [],

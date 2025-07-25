@@ -1765,6 +1765,21 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "0.5",
+                    "name": "Pre-Release 0.5",
+                    "published_at": "2025-07-24T20:26:15Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.5",
+                    "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- FIX: Dimmung hatte leichte \"Spr\u00fcnge\", nicht gleichm\u00e4\u00dfig.\r\n- FIX: Seltsame Effekte im oberen Dimmbereich aufgrund einer fehlenden \u00c4nderung zur Dimmbereichsanpassung auf 0-100 %.\r\n\r\n_Hinweis:_\r\nDiese \u00c4nderung ist in der ETS update-f\u00e4hig, aber nach dem Update bitte \u00fcberpr\u00fcfen, dass in allen Kan\u00e4len die maximalen Helligkeitswerte <= 100 % sind und keine h\u00f6heren Werte in der ETS eingetragen sind. Ansonsten diese manuell auf <= 100 % \u00e4ndern. In jedem Fall die ETS-Anwendung danach nochmal neu parametrisieren bevor der Dimmer mit Firmware 0.5 oder h\u00f6her eingesetzt wird.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.5.zip",
+                            "updated_at": "2025-07-24T20:25:40Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.5/LedDimmerAB-Release-0.5.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "0.4",
                     "name": "Pre-Release 0.4",
                     "published_at": "2025-06-21T14:07:38Z",

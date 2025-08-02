@@ -1765,6 +1765,21 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "0.7",
+                    "name": "Pre-Release 0.7",
+                    "published_at": "2025-08-02T10:11:33Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.7",
+                    "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- FIX: Ein/Aus Status-KO wird nun auch bei Neustart zur\u00fcckgesetzt.\r\n- FIX: Zul\u00e4ssige Helligkeitsfeldwerte in ETS korrigiert.\r\n- FIX: Treppenlicht Timeout bei TW- und RGB-Kan\u00e4len korrigiert.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.7.zip",
+                            "updated_at": "2025-08-02T10:11:23Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.7/LedDimmerAB-Release-0.7.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "0.6",
                     "name": "Pre-Release 0.6",
                     "published_at": "2025-07-28T20:08:09Z",

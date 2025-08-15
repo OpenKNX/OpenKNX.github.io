@@ -1286,6 +1286,21 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "5.2.2-Beta",
+                    "name": "5.2.2-Beta",
+                    "published_at": "2025-08-15T11:41:40Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/5.2.2-Beta",
+                    "body": "- fixes error in PA assignment over TP (and unicast handling in unconfigured state in general)\r\n- fixes repeat flag set falsely in KNX-IP and Tunneling telegrams",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Beta-5.2.2.zip",
+                            "updated_at": "2025-08-15T11:43:46Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/5.2.2-Beta/IP-Router-Beta-5.2.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "5.2.0-Beta",
                     "name": "5.2.0-Beta",
                     "published_at": "2025-07-12T14:23:18Z",

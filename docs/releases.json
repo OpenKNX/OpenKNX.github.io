@@ -933,16 +933,16 @@
             "releases": [
                 {
                     "prerelease": true,
-                    "tag_name": "v0.9",
-                    "name": "v0.9.0",
-                    "published_at": "2025-06-09T08:20:25Z",
-                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.9",
-                    "body": "Many changes",
+                    "tag_name": "v0.9.5",
+                    "name": "v0.9.5",
+                    "published_at": "2025-08-18T18:47:03Z",
+                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.9.5",
+                    "body": "- fix: ignore temp or bri if it is not activated in hcl curve",
                     "assets": [
                         {
-                            "name": "GW-REG1-Dali-Release-0.9.zip",
-                            "updated_at": "2025-06-09T08:19:38Z",
-                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.9/GW-REG1-Dali-Release-0.9.zip"
+                            "name": "GW-REG1-Dali-Release-0.9.5.zip",
+                            "updated_at": "2025-08-18T18:46:25Z",
+                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.9.5/GW-REG1-Dali-Release-0.9.5.zip"
                         }
                     ]
                 },
@@ -977,7 +977,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 2
+            "hw_avail_open": 0
         },
         "OAM-SmartHomeBridge": {
             "repo_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge",

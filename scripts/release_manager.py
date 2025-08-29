@@ -15,34 +15,13 @@ class ReleaseManager:
         rn = repo["name"]
         return (rn.startswith(self.app_prefix) or rn in self.app_special_names) and rn not in self.app_exclusion
 
-    def fetch_all_repos(self):
-        page = 1
-        all_repos = []
-        while True:
-            logging.info(f"Abrufe Seite {page}...")
-            repos_url = f"{self.client.base_url}/orgs/OpenKNX/repos?per_page=100&type=public&page={page}"
-            repos_data = self.client.get_json_response(repos_url)
-    
-            if not repos_data:
-                logging.info("Keine Daten empfangen – Abbruch.")
-                return all_repos
-    
-            all_repos.extend(repos_data)
-    
-            if len(repos_data) < 100:
-                logging.info(f"Seite {page} enthält weniger als 100 Einträge – letzte Seite erreicht.")
-                return all_repos
-    
-            page += 1
-
     def fetch_app_repos(self):
         """
         Read the info for all public Application Repos (selected by Name) from API and return full data as List.
 
         :return: list of structured repo data
         """
-        # repos_url = f"{self.client.base_url}/orgs/OpenKNX/repos?per_page=1000&type=public"
-        repos_data = self.fetch_all_repos()
+        repos_data = self.client.get_org_repos()
         app_repos_data = [
             repo
             for repo in repos_data

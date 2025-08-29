@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenKNX-Applikationen und enthaltene Module für OpenKNX REG1 Basismodul LAN+TP</title>
+    <title>OpenKNX-Applikationen und enthaltene Module für OpenKNX REG1 4xSELV Schaltaktor</title>
     <link rel="stylesheet" href="/css/style.css">
     <style>
         
@@ -14,9 +14,6 @@
         table.openknxTitleTable:has(td:nth-child(6):hover, thead > tr:nth-child(2) > th:nth-child(6):hover) td:nth-child(6).isPart,
         table.openknxTitleTable:has(td:nth-child(7):hover, thead > tr:nth-child(2) > th:nth-child(7):hover) td:nth-child(7).isPart,
         table.openknxTitleTable:has(td:nth-child(8):hover, thead > tr:nth-child(2) > th:nth-child(8):hover) td:nth-child(8).isPart,
-        table.openknxTitleTable:has(td:nth-child(9):hover, thead > tr:nth-child(2) > th:nth-child(9):hover) td:nth-child(9).isPart,
-        table.openknxTitleTable:has(td:nth-child(10):hover, thead > tr:nth-child(2) > th:nth-child(10):hover) td:nth-child(10).isPart,
-        table.openknxTitleTable:has(td:nth-child(11):hover, thead > tr:nth-child(2) > th:nth-child(11):hover) td:nth-child(11).isPart,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
@@ -27,10 +24,7 @@
         table.openknxTitleTable:has(td:nth-child(5):hover, th:nth-child(5):hover) thead th.rotate45:nth-child(5) div span,
         table.openknxTitleTable:has(td:nth-child(6):hover, th:nth-child(6):hover) thead th.rotate45:nth-child(6) div span,
         table.openknxTitleTable:has(td:nth-child(7):hover, th:nth-child(7):hover) thead th.rotate45:nth-child(7) div span,
-        table.openknxTitleTable:has(td:nth-child(8):hover, th:nth-child(8):hover) thead th.rotate45:nth-child(8) div span,
-        table.openknxTitleTable:has(td:nth-child(9):hover, th:nth-child(9):hover) thead th.rotate45:nth-child(9) div span,
-        table.openknxTitleTable:has(td:nth-child(10):hover, th:nth-child(10):hover) thead th.rotate45:nth-child(10) div span,
-        table.openknxTitleTable:has(td:nth-child(11):hover, th:nth-child(11):hover) thead th.rotate45:nth-child(11) div span
+        table.openknxTitleTable:has(td:nth-child(8):hover, th:nth-child(8):hover) thead th.rotate45:nth-child(8) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -39,7 +33,7 @@
 </head>
 <body>
 <table class="openknxTitleTable">
-    <caption>OpenKNX-Applikationen und enthaltene Module für OpenKNX REG1 Basismodul LAN+TP</caption>
+    <caption>OpenKNX-Applikationen und enthaltene Module für OpenKNX REG1 4xSELV Schaltaktor</caption>
     <colgroup>
         <col class="before-new-cols" />
 
@@ -57,13 +51,7 @@
         
         <col data-ofm="OGM-HardwareConfig" />
         
-        <col data-ofm="OFM-UsbExchange" />
-        
-        <col data-ofm="OFM-Network" />
-        
-        <col data-ofm="OFM-FunctionBlocks" />
-        
-        <col data-ofm="OFM-SmartHomeBridge" />
+        <col data-ofm="OFM-SwitchActuator" />
         
         <col data-ofm="*special*" />
        
@@ -73,7 +61,7 @@
     <thead>
     <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
-        <th class="before-new-cols" colspan="11">Enthaltene Module</th>
+        <th class="before-new-cols" colspan="8">Enthaltene Module</th>
         
     </tr>
     <tr>
@@ -93,13 +81,7 @@
         
         <th class="rotate45" data-ofm="OGM-HardwareConfig"><div><span><a href="https://github.com/OpenKNX/OGM-HardwareConfig">OGM-HardwareConfig</a></span></div></th>
         
-        <th class="rotate45" data-ofm="OFM-UsbExchange"><div><span><a href="https://github.com/OpenKNX/OFM-UsbExchange">OFM-UsbExchange</a></span></div></th>
-        
-        <th class="rotate45" data-ofm="OFM-Network"><div><span><a href="https://github.com/OpenKNX/OFM-Network">OFM-Network</a></span></div></th>
-        
-        <th class="rotate45" data-ofm="OFM-FunctionBlocks"><div><span><a href="https://github.com/OpenKNX/OFM-FunctionBlocks">OFM-FunctionBlocks</a></span></div></th>
-        
-        <th class="rotate45" data-ofm="OFM-SmartHomeBridge"><div><span><a href="https://github.com/OpenKNX/OFM-SmartHomeBridge">OFM-SmartHomeBridge</a></span></div></th>
+        <th class="rotate45" data-ofm="OFM-SwitchActuator"><div><span><a href="https://github.com/OpenKNX/OFM-SwitchActuator">OFM-SwitchActuator</a></span></div></th>
         
         <th class="singleModules before-new-cols" data-ofm="*special*">Nur in dieser Applikation:</th>
        
@@ -114,45 +96,8 @@
     
     
     
-    <tr data-oam="OAM-IP-Router">
-        <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-IP-Router">OAM-IP-Router</a><div class="oam-details">OpenKNX IP-Router Application</div></th>
-
-       
-        
-        <td data-ofm="OGM-Common" class="isPart">&#9632;</td>
-        
-        <td data-ofm="knx" class="isPart">&#9632;</td>
-        
-        <td data-ofm="OFM-FileTransferModule" class="isPart">&#9632;</td>
-        
-        <td data-ofm="OFM-LogicModule" class="isPart"></td>
-        
-        <td data-ofm="OFM-ConfigTransfer" class="isPart"></td>
-        
-        <td data-ofm="OGM-HardwareConfig" class="isPart">&#9632;</td>
-        
-        <td data-ofm="OFM-UsbExchange" class="isPart">&#9632;</td>
-        
-        <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
-        
-        <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
-        
-        <td data-ofm="OFM-SmartHomeBridge" class="isPart"></td>
-        
-        <td class="left before-new-cols" data-ofm="*special*">
-        </td>
-       
-
-       
-
-    </tr>
-    
-    
-    
-    
-    
-    <tr data-oam="OAM-SmartHomeBridge">
-        <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-SmartHomeBridge">OAM-SmartHomeBridge</a></th>
+    <tr data-oam="OAM-REG1-Schaltaktor-4x">
+        <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-REG1-Schaltaktor-4x">OAM-REG1-Schaltaktor-4x</a></th>
 
        
         
@@ -168,13 +113,7 @@
         
         <td data-ofm="OGM-HardwareConfig" class="isPart">&#9632;</td>
         
-        <td data-ofm="OFM-UsbExchange" class="isPart"></td>
-        
-        <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
-        
-        <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
-        
-        <td data-ofm="OFM-SmartHomeBridge" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-SwitchActuator" class="isPart">&#9632;</td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>

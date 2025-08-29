@@ -977,7 +977,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 0
+            "hw_avail_open": 2
         },
         "OAM-SmartHomeBridge": {
             "repo_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge",
@@ -1015,7 +1015,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 0
+            "hw_avail_open": 4
         },
         "OAM-StateEngine": {
             "repo_url": "https://github.com/OpenKNX/OAM-StateEngine",
@@ -1952,7 +1952,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 0
+            "hw_avail_open": 1
         }
     }
 }

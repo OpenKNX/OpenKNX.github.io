@@ -1929,7 +1929,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 0
+            "hw_avail_open": 4
         },
         "OAM-REG1-Schaltaktor-4x": {
             "repo_url": "https://github.com/OpenKNX/OAM-REG1-Schaltaktor-4x",

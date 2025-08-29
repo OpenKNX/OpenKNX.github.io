@@ -17,6 +17,7 @@ class DeviceHelper:
             "AccessControl": "AB-AccessControl",
             "DeveloperBoard-JustForTesters": "SmartMF Entwicklerboard",
             "EnoceanGateway_RP2040": "SmartMF Enocean Gateway RP2040",
+            "firmware_REG1-SA-4xSELV": "OpenKNX REG1 4xSELV Schaltaktor",
             "firmware_UP1-GW-RS485": "OpenKNX UP1 RS485 Gateway",
             "firmware_SOM_UP": "SmartMF Soundmodul",
             "GardenControl": "SmartMF-GardenControl",
@@ -41,11 +42,18 @@ class DeviceHelper:
             "REG1_BASE_V0": "OpenKNX REG1 Basismodul V0",
             "REG1_BASE_V1": "OpenKNX REG1 Basismodul",
 
+            "SmartHomeBridge-Adafruit_Feather_ESP32_V2_IP": "OpenKNX Adafruit ESP32 Feather V2",
+            "SmartHomeBridge-Adafruit_Feather_ESP32_V2_TP": "OpenKNX Adafruit ESP32 Feather V2 (TP)",
+            "SmartHomeBridge-REG1-LAN-Base": "OpenKNX REG1 Basismodul IP",
+            "SmartHomeBridge-REG1-LAN-TP-Base": "OpenKNX REG1 Basismodul LAN+TP",
+
             # DALI-Devices
             "REG1-v0": "OpenKNX REG1 Dali Gateway V0",
             "REG1-v1": "OpenKNX REG1 Dali Gateway",
             "REG1-rp2040-v1": "OpenKNX REG1 Dali Gateway",
             "REG1-esp32": "OpenKNX REG1 Basismodul LAN+TP Devboard V00.02 (ESP32)",
+            "REG1-Dali": "OpenKNX REG1 Dali Gateway",
+            "REG1-LAN-TP-2xDali": "OpenKNX REG1 2x DALI LAN Gateway",
 
             "REG2_PIPICO_V1": "OpenKNX REG2 PiPico2 V1",
             "OpenKNX-REG2-PiPico-V1-DeviceDisplay-Meter": "OpenKNX REG2 PiPico V1 DeviceDisplay Meter",

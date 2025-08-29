@@ -53,7 +53,13 @@ appOrder = [
     "OAM-InfraredGateway",
     "OAM-OneWireModule",
     "OAM-EnoceanGateway",
+    # "OAM-EnoceanGateway_V2"
     "OAM-ModbusGateway",
+    "OAM-Aircondition",
+
+    # gateways with ip
+    "OAM-Sonos",
+    "OAM-Homematic",
 
     # network
     "OAM-IP-Router",
@@ -71,9 +77,11 @@ appOrder = [
     "OAM-TouchRound",
 
     # "boring" hardware
+    "OAM-REG1-Schaltaktor-4x",
     "OAM-SwitchActuator",
     "OAM-BinaryInput",
     "OAM-HeatingActuator",
+    "OAM-LedDimmer-AB",
 
     # very, very special
     "OAM-ElectricDoorDrive",

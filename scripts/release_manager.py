@@ -19,18 +19,18 @@ class ReleaseManager:
         page = 1
         all_repos = []
         while True:
-            print(f"[DEBUG] Abrufe Seite {page}...")
+            logging.info(f"Abrufe Seite {page}...")
             repos_url = f"{self.client.base_url}/orgs/OpenKNX/repos?per_page=100&type=public&page={page}"
             repos_data = self.client.get_json_response(repos_url)
     
             if not repos_data:
-                print("[DEBUG] Keine Daten empfangen – Abbruch.")
+                logging.info("Keine Daten empfangen – Abbruch.")
                 return all_repos
     
             all_repos.extend(repos_data)
     
             if len(repos_data) < 100:
-                print(f"[DEBUG] Seite {page} enthält weniger als 100 Einträge – letzte Seite erreicht.")
+                logging.info(f"[DEBUG] Seite {page} enthält weniger als 100 Einträge – letzte Seite erreicht.")
                 return all_repos
     
             page += 1

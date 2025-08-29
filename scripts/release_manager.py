@@ -15,22 +15,6 @@ class ReleaseManager:
         rn = repo["name"]
         return (rn.startswith(self.app_prefix) or rn in self.app_special_names) and rn not in self.app_exclusion
 
-    def fetch_app_repos(self):
-        """
-        Read the info for all public Application Repos (selected by Name) from API and return full data as List.
-
-        :return: list of structured repo data
-        """
-        # repos_url = f"{self.client.base_url}/orgs/OpenKNX/repos?per_page=1000&type=public"
-        # repos_data = self.client.get_json_response(repos_url)
-        app_repos_data = [
-            repo
-            for repo in fetch_all_repos()
-            if self._check_include_repo(repo)
-        ]
-        return app_repos_data
-
-
     def fetch_all_repos(self):
         page = 1
         all_repos = []
@@ -50,6 +34,21 @@ class ReleaseManager:
                 return all_repos
     
             page += 1
+
+    def fetch_app_repos(self):
+        """
+        Read the info for all public Application Repos (selected by Name) from API and return full data as List.
+
+        :return: list of structured repo data
+        """
+        # repos_url = f"{self.client.base_url}/orgs/OpenKNX/repos?per_page=1000&type=public"
+        # repos_data = self.client.get_json_response(repos_url)
+        app_repos_data = [
+            repo
+            for repo in fetch_all_repos()
+            if self._check_include_repo(repo)
+        ]
+        return app_repos_data
 
     def fetch_apps_releases(self, repos_data):
         releases_data = {}

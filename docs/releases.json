@@ -1930,6 +1930,29 @@
                 }
             ],
             "hw_avail_open": 0
+        },
+        "OAM-REG1-Schaltaktor-4x": {
+            "repo_url": "https://github.com/OpenKNX/OAM-REG1-Schaltaktor-4x",
+            "archived": false,
+            "description": null,
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "0.2.0-Beta",
+                    "name": "",
+                    "published_at": "2025-08-23T08:59:47Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-REG1-Schaltaktor-4x/releases/tag/0.2.0-Beta",
+                    "body": "Erstes Beta Release - ETS-Applikation updatebar in der ETS auf sp\u00e4tere Release Versionen.",
+                    "assets": [
+                        {
+                            "name": "REG1-Schaltaktor-4x-Release-0.2.zip",
+                            "updated_at": "2025-08-23T08:58:20Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-REG1-Schaltaktor-4x/releases/download/0.2.0-Beta/REG1-Schaltaktor-4x-Release-0.2.zip"
+                        }
+                    ]
+                }
+            ],
+            "hw_avail_open": 0
         }
     }
 }

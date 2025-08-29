@@ -47,6 +47,11 @@ class DeviceHelper:
             "SmartHomeBridge-REG1-LAN-Base": "OpenKNX REG1 Basismodul IP",
             "SmartHomeBridge-REG1-LAN-TP-Base": "OpenKNX REG1 Basismodul LAN+TP",
 
+            "Aircondition-AZDelivery_DevKit_C_V4_IP": "OpenKNX AZDelivery ESP32 Board Dev Kit C V4 (IP)",
+            "Aircondition-AZDelivery_DevKit_C_V4_TP": "OpenKNX AZDelivery ESP32 Board Dev Kit C V4 (TP)",
+            "Aircondition-Adafruit_Feather_ESP32_V2_IP": "OpenKNX Adafruit ESP32 Feather V2",
+            "Aircondition-Adafruit_Feather_ESP32_V2_TP": "OpenKNX Adafruit ESP32 Feather V2 (TP)",
+
             # DALI-Devices
             "REG1-v0": "OpenKNX REG1 Dali Gateway V0",
             "REG1-v1": "OpenKNX REG1 Dali Gateway",

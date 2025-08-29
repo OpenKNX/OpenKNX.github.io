@@ -42,10 +42,10 @@ class ReleaseManager:
         :return: list of structured repo data
         """
         # repos_url = f"{self.client.base_url}/orgs/OpenKNX/repos?per_page=1000&type=public"
-        # repos_data = self.client.get_json_response(repos_url)
+        repos_data = self.fetch_all_repos()
         app_repos_data = [
             repo
-            for repo in fetch_all_repos()
+            for repo in repos_data
             if self._check_include_repo(repo)
         ]
         return app_repos_data

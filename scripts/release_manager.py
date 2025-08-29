@@ -21,14 +21,35 @@ class ReleaseManager:
 
         :return: list of structured repo data
         """
-        repos_url = f"{self.client.base_url}/orgs/OpenKNX/repos?per_page=1000&type=public"
-        repos_data = self.client.get_json_response(repos_url)
+        # repos_url = f"{self.client.base_url}/orgs/OpenKNX/repos?per_page=1000&type=public"
+        # repos_data = self.client.get_json_response(repos_url)
         app_repos_data = [
             repo
-            for repo in repos_data
+            for repo in fetch_all_repos()
             if self._check_include_repo(repo)
         ]
         return app_repos_data
+
+
+    def fetch_all_repos(self):
+        page = 1
+        all_repos = []
+        while True:
+            print(f"[DEBUG] Abrufe Seite {page}...")
+            repos_url = f"{self.client.base_url}/orgs/OpenKNX/repos?per_page=100&type=public&page={page}"
+            repos_data = self.client.get_json_response(repos_url)
+    
+            if not repos_data:
+                print("[DEBUG] Keine Daten empfangen – Abbruch.")
+                return all_repos
+    
+            all_repos.extend(repos_data)
+    
+            if len(repos_data) < 100:
+                print(f"[DEBUG] Seite {page} enthält weniger als 100 Einträge – letzte Seite erreicht.")
+                return all_repos
+    
+            page += 1
 
     def fetch_apps_releases(self, repos_data):
         releases_data = {}

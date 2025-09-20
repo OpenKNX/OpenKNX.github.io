@@ -1074,15 +1074,30 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.10.1",
+                    "name": "Release 0.10.1",
+                    "published_at": "2025-09-19T13:09:04Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.10.1",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- FIX: Die optionalen Zutrittsdaten werden nun wieder korrekt \u00fcber KO 24 ausgegeben.\r\n\r\n**Hinweis:**\r\nBei einem Update von 0.10.x auf 0.10.1 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich.",
+                    "assets": [
+                        {
+                            "name": "AccessControl-ReleaseR503-0.10.1.zip",
+                            "updated_at": "2025-09-19T13:08:55Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.10.1/AccessControl-ReleaseR503-0.10.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.10",
-                    "name": "Release 0.10",
-                    "published_at": "2025-09-18T20:33:13Z",
+                    "name": " Release 0.10",
+                    "published_at": "2025-09-20T08:06:38Z",
                     "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.10",
-                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n* FIX: Rot/Gr\u00fcne LED sowie Touch-Tasten wurden beim Schaltereinsatz ohne NFC nicht erkannt.\r\n* FIX: Partielle Parameter\u00fcberlagerung in ETS konnte zu Problemen bei aktivierten Zusatzfunktionsoptionen in der ETS f\u00fchren.\r\n* FIX: Die Fingerprint-Scanner-Passwortl\u00e4nge ist nun in der ETS auf 15 Zeichen (statt wie bisher 16) beschr\u00e4nkt, konsistent mit der firmware-seitigen Beschr\u00e4nkung auf 15 Zeichen.",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- FIX: Rot/Gr\u00fcne LED sowie Touch-Tasten wurden beim Schaltereinsatz ohne NFC nicht erkannt.\r\n- FIX: Partielle Parameter\u00fcberlagerung in ETS konnte zu Problemen bei aktivierten Zusatzfunktionsoptionen in der ETS f\u00fchren.\r\n- FIX: Die Fingerprint-Scanner-Passwortl\u00e4nge ist nun in der ETS auf 15 Zeichen (statt wie bisher 16) beschr\u00e4nkt, konsistent mit der firmware-seitigen Beschr\u00e4nkung auf 15 Zeichen.",
                     "assets": [
                         {
                             "name": "AccessControl-ReleaseR503-0.10.zip",
-                            "updated_at": "2025-09-18T20:32:27Z",
+                            "updated_at": "2025-09-20T08:06:33Z",
                             "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.10/AccessControl-ReleaseR503-0.10.zip"
                         }
                     ]
@@ -1802,6 +1817,21 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "0.9",
+                    "name": "Pre-Release 0.9",
+                    "published_at": "2025-09-19T17:28:30Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.9",
+                    "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- ADD: Der manuelle Modus \u00fcber die Frontplatine von REG-Ger\u00e4ten wird nun unterst\u00fctzt.\r\n- FIX: Deutliche Verbesserung des Dimmverhaltens durch kleinere Steps/h\u00f6here Aufl\u00f6sung.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.9.zip",
+                            "updated_at": "2025-09-19T17:28:22Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.9/LedDimmerAB-Release-0.9.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "0.8",
                     "name": "Pre-Release 0.8",
                     "published_at": "2025-08-03T19:10:16Z",
@@ -1892,16 +1922,16 @@
                 },
                 {
                     "prerelease": true,
-                    "tag_name": "02",
+                    "tag_name": "0.2",
                     "name": "Pre-Release 0.2",
-                    "published_at": "2025-06-09T17:03:39Z",
-                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/02",
+                    "published_at": "2025-09-20T07:56:36Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.2",
                     "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- FIX: Eingestellte PWM-Frequenz aus ETS-Anwendung wurde nicht korrekt \u00fcbernommen.\r\n- FIX: Eingestellte Min./Max. Helligkeit wird nun korrekt ber\u00fccksichtigt.\r\n- FIX: Einige kleine Textverbesserungen in der ETS-Anwendung.",
                     "assets": [
                         {
                             "name": "LedDimmerAB-Release-0.2.zip",
-                            "updated_at": "2025-06-09T17:03:31Z",
-                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/02/LedDimmerAB-Release-0.2.zip"
+                            "updated_at": "2025-09-20T07:56:31Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.2/LedDimmerAB-Release-0.2.zip"
                         }
                     ]
                 },

@@ -26,6 +26,8 @@
         table.openknxTitleTable:has(td:nth-child(18):hover, thead > tr:nth-child(2) > th:nth-child(18):hover) td:nth-child(18).isPart,
         table.openknxTitleTable:has(td:nth-child(19):hover, thead > tr:nth-child(2) > th:nth-child(19):hover) td:nth-child(19).isPart,
         table.openknxTitleTable:has(td:nth-child(20):hover, thead > tr:nth-child(2) > th:nth-child(20):hover) td:nth-child(20).isPart,
+        table.openknxTitleTable:has(td:nth-child(21):hover, thead > tr:nth-child(2) > th:nth-child(21):hover) td:nth-child(21).isPart,
+        table.openknxTitleTable:has(td:nth-child(22):hover, thead > tr:nth-child(2) > th:nth-child(22):hover) td:nth-child(22).isPart,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
@@ -48,7 +50,9 @@
         table.openknxTitleTable:has(td:nth-child(17):hover, th:nth-child(17):hover) thead th.rotate45:nth-child(17) div span,
         table.openknxTitleTable:has(td:nth-child(18):hover, th:nth-child(18):hover) thead th.rotate45:nth-child(18) div span,
         table.openknxTitleTable:has(td:nth-child(19):hover, th:nth-child(19):hover) thead th.rotate45:nth-child(19) div span,
-        table.openknxTitleTable:has(td:nth-child(20):hover, th:nth-child(20):hover) thead th.rotate45:nth-child(20) div span
+        table.openknxTitleTable:has(td:nth-child(20):hover, th:nth-child(20):hover) thead th.rotate45:nth-child(20) div span,
+        table.openknxTitleTable:has(td:nth-child(21):hover, th:nth-child(21):hover) thead th.rotate45:nth-child(21) div span,
+        table.openknxTitleTable:has(td:nth-child(22):hover, th:nth-child(22):hover) thead th.rotate45:nth-child(22) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -85,6 +89,8 @@
         
         <col data-ofm="OGM-SensorDevices" />
         
+        <col data-ofm="OFM-SwitchActuator" />
+        
         <col data-ofm="OFM-PresenceModule" />
         
         <col data-ofm="OFM-SensorModule" />
@@ -99,7 +105,7 @@
     <thead>
     <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
-        <th class="before-new-cols" colspan="15">Enthaltene Module</th>
+        <th class="before-new-cols" colspan="16">Enthaltene Module</th>
         
     </tr>
     <tr>
@@ -128,6 +134,8 @@
         <th class="rotate45" data-ofm="OFM-BinaryInput"><div><span><a href="https://github.com/OpenKNX/OFM-BinaryInput">OFM-BinaryInput</a></span></div></th>
         
         <th class="rotate45" data-ofm="OGM-SensorDevices"><div><span><a href="https://github.com/OpenKNX/OGM-SensorDevices">OGM-SensorDevices</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-SwitchActuator"><div><span><a href="https://github.com/OpenKNX/OFM-SwitchActuator">OFM-SwitchActuator</a></span></div></th>
         
         <th class="rotate45" data-ofm="OFM-PresenceModule"><div><span><a href="https://github.com/OpenKNX/OFM-PresenceModule">OFM-PresenceModule</a></span></div></th>
         
@@ -174,6 +182,8 @@
         <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
+        
+        <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td data-ofm="OFM-PresenceModule" class="isPart"></td>
         
@@ -222,6 +232,8 @@
         
         <td data-ofm="OGM-SensorDevices" class="isPart">&#9632;</td>
         
+        <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
+        
         <td data-ofm="OFM-PresenceModule" class="isPart">&#9632;</td>
         
         <td data-ofm="OFM-SensorModule" class="isPart">&#9632;</td>
@@ -267,6 +279,8 @@
         <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
+        
+        <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
         
         <td data-ofm="OFM-PresenceModule" class="isPart"></td>
         
@@ -314,6 +328,8 @@
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
+        <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
+        
         <td data-ofm="OFM-PresenceModule" class="isPart"></td>
         
         <td data-ofm="OFM-SensorModule" class="isPart"></td>
@@ -322,6 +338,54 @@
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-Infrared"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-Infrared">OFM-Infrared</a></span>
+        </td>
+       
+
+       
+
+    </tr>
+    
+    
+    
+    
+    
+    <tr data-oam="OAM-AccessControl">
+        <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-AccessControl">OAM-AccessControl</a><div class="oam-details">OpenKNX Firmware und Anwendung zur Einbindung von Fingerabdrucklesern.</div></th>
+
+       
+        
+        <td data-ofm="OGM-Common" class="isPart">&#9632;</td>
+        
+        <td data-ofm="knx" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-FileTransferModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-LogicModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-ConfigTransfer" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OGM-HardwareConfig" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-VirtualButton" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-UsbExchange" class="isPart"></td>
+        
+        <td data-ofm="OFM-Network" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OGM-SensorDevices" class="isPart"></td>
+        
+        <td data-ofm="OFM-SwitchActuator" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-PresenceModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-SensorModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-OneWireModule" class="isPart"></td>
+        
+        <td class="left before-new-cols" data-ofm="*special*">
+                <span data-ofm="OFM-AccessControl"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-AccessControl">OFM-AccessControl</a></span>
         </td>
        
 

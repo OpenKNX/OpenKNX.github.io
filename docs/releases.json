@@ -2013,6 +2013,13 @@
                 }
             ],
             "hw_avail_open": 1
+        },
+        "OAM-Nuki": {
+            "repo_url": "https://github.com/OpenKNX/OAM-Nuki",
+            "archived": false,
+            "description": null,
+            "releases": [],
+            "hw_avail_open": 0
         }
     }
 }

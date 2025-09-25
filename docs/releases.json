@@ -986,31 +986,31 @@
             "releases": [
                 {
                     "prerelease": false,
-                    "tag_name": "release-v14.3",
+                    "tag_name": "release-v0.14.3",
                     "name": "Release v0.14.3",
                     "published_at": "2025-08-03T06:51:01Z",
-                    "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/release-v14.3",
+                    "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/release-v0.14.3",
                     "body": "Changes since last version:\r\n- Bugfix cooling mode in Thermostat\r\n\r\nSupported HW:\r\n- [REG1-LAN-TP-Base](http://device.openknx.de/REG1-LAN-TP-Base)\r\n- [Adafruit ESP32 Feather V2](https://github.com/OpenKNX/OpenKNX/wiki/Adafruit-ESP32-Feather-V2)",
                     "assets": [
                         {
                             "name": "SmartHomeBridge-Release-0.14.3.zip",
                             "updated_at": "2025-08-03T06:49:22Z",
-                            "browser_download_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/download/release-v14.3/SmartHomeBridge-Release-0.14.3.zip"
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/download/release-v0.14.3/SmartHomeBridge-Release-0.14.3.zip"
                         }
                     ]
                 },
                 {
                     "prerelease": false,
-                    "tag_name": "release-v14.2",
+                    "tag_name": "release-v0.14.2",
                     "name": "Release 0.14.2",
                     "published_at": "2025-08-02T16:08:14Z",
-                    "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/release-v14.2",
+                    "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/release-v0.14.2",
                     "body": "First public release\r\n\r\nSupported HW:\r\n- [REG1-LAN-TP-Base](http://device.openknx.de/REG1-LAN-TP-Base)\r\n- [Adafruit ESP32 Feather V2](https://github.com/OpenKNX/OpenKNX/wiki/Adafruit-ESP32-Feather-V2)",
                     "assets": [
                         {
                             "name": "SmartHomeBridge-Release-0.14.2.zip",
                             "updated_at": "2025-08-01T17:08:11Z",
-                            "browser_download_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/download/release-v14.2/SmartHomeBridge-Release-0.14.2.zip"
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/download/release-v0.14.2/SmartHomeBridge-Release-0.14.2.zip"
                         }
                     ]
                 }

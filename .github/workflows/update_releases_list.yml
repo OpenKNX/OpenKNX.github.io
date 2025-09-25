@@ -5,7 +5,7 @@ name: Update Releases
 
 on:
   schedule:
-    - cron: '29 */6 * * *' # Runs every 6 hours at h:29 (UTC)
+    - cron: '29 */3 * * *' # Runs every 3 hours at h:29 (UTC)
   push:
     branches:
       - main

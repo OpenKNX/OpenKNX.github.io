@@ -1,6 +1,6 @@
 # Build OpenKNX Release Overviews for Integration in Pages, Wiki and Toolbox
 # (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
-
+from datetime import datetime, timedelta, timezone
 import json
 import logging
 import os
@@ -199,6 +199,18 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
 
 def main():
     oam_repos = release_manager.fetch_app_repos()
+
+    delta = timedelta(hours=6, minutes=10)
+    now = datetime.now(timezone.utc)
+    oam_updated = {
+        repo["name"]: repo["updated_at"]
+        for repo in oam_repos
+        if (now - datetime.strptime(repo["updated_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)) <= delta
+    }
+    if len(oam_updated) == 0:
+        logging.info(f"No repos have been updated in the last {delta} => NO need for updates!")
+        return # no need to update for unchanged OAM-repos
+    logging.info(f"The {len(oam_updated)} following repos have been updated in the last {delta}: {oam_updated}")
 
     # release-data (base) for usage in openknx-toolbox
     oam_releases_data = release_manager.fetch_apps_releases(oam_repos)

@@ -29,6 +29,11 @@ class DeviceHelper:
             "OpenKNX-REG1-Base-V0": "OpenKNX REG1 Basismodul V0",
             "OpenKNX-REG1-BASE-V0": "OpenKNX REG1 Basismodul V0",
             "OpenKNX-REG1-Base": "OpenKNX REG1 Basismodul",
+
+            # TODO check removal of '___' before mapping to handle special case of firmware variants
+            "OpenKNX-REG1-Base___no-time-led": "OpenKNX REG1 Basismodul",
+            "OpenKNX-REG1-Base___time-led3": "OpenKNX REG1 Basismodul",
+
             "OpenKNX-REG1-Base-V1": "OpenKNX REG1 Basismodul",
             "OpenKNX-REG1-BASE-V1": "OpenKNX REG1 Basismodul",
             "OpenKNX-REG1-Basismodul": "OpenKNX REG1 Basismodul",
@@ -60,7 +65,8 @@ class DeviceHelper:
             "REG1-Dali": "OpenKNX REG1 Dali Gateway",
             "REG1-LAN-TP-2xDali": "OpenKNX REG1 2x DALI LAN Gateway",
 
-            "REG2_PIPICO_V1": "OpenKNX REG2 PiPico2 V1",
+            "REG2_PIPICO_V1":         "OpenKNX REG2 PiPico V1",  # old, # TODO check removal
+            "OpenKNX-REG2-PiPico-V1": "OpenKNX REG2 PiPico V1",
             "OpenKNX-REG2-PiPico-V1-DeviceDisplay-Meter": "OpenKNX REG2 PiPico V1 DeviceDisplay Meter",
 
             "Sensormodul-v3.0-SAMD": "SmartMF-Sensormodul-v3.0-SAMD",
@@ -75,7 +81,10 @@ class DeviceHelper:
             "SmartMF-Sensormodul-RP2040": "SmartMF-Sensormodul-v4.x-RP2040",
             "UP1-GW-IR": "OpenKNX UP1 8xSensor",  # TODO: check
             "UP1-PM-HF": "OpenKNX UP1 Präsenzmelder+",
-            "XIAO_MINI_V1": "OpenKNXiao V1",
+
+            "XIAO_MINI_V1": "OpenKNXiao V1",  # old, # TODO check removal
+            "OpenKNX-OpenKNXiao-V1-Mini-RP2040": "OpenKNXiao V1 Mini RP2040",
+            "OpenKNX-OpenKNXiao-V1-Mini-ESP32": "OpenKNXiao V1 Mini ESP32",
         }
 
     def is_open_device(self, device_name):

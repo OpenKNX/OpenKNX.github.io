@@ -986,31 +986,31 @@
             "releases": [
                 {
                     "prerelease": false,
-                    "tag_name": "release-v0.14.3",
-                    "name": "Release v0.14.3",
-                    "published_at": "2025-08-03T06:51:01Z",
-                    "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/release-v0.14.3",
+                    "tag_name": "0.14.3",
+                    "name": "Release 0.14.3",
+                    "published_at": "2025-09-26T16:47:10Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/0.14.3",
                     "body": "Changes since last version:\r\n- Bugfix cooling mode in Thermostat\r\n\r\nSupported HW:\r\n- [REG1-LAN-TP-Base](http://device.openknx.de/REG1-LAN-TP-Base)\r\n- [Adafruit ESP32 Feather V2](https://github.com/OpenKNX/OpenKNX/wiki/Adafruit-ESP32-Feather-V2)",
                     "assets": [
                         {
                             "name": "SmartHomeBridge-Release-0.14.3.zip",
                             "updated_at": "2025-08-03T06:49:22Z",
-                            "browser_download_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/download/release-v0.14.3/SmartHomeBridge-Release-0.14.3.zip"
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/download/0.14.3/SmartHomeBridge-Release-0.14.3.zip"
                         }
                     ]
                 },
                 {
                     "prerelease": false,
-                    "tag_name": "release-v0.14.2",
+                    "tag_name": "0.14.2",
                     "name": "Release 0.14.2",
-                    "published_at": "2025-08-02T16:08:14Z",
-                    "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/release-v0.14.2",
+                    "published_at": "2025-09-26T16:46:33Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/0.14.2",
                     "body": "First public release\r\n\r\nSupported HW:\r\n- [REG1-LAN-TP-Base](http://device.openknx.de/REG1-LAN-TP-Base)\r\n- [Adafruit ESP32 Feather V2](https://github.com/OpenKNX/OpenKNX/wiki/Adafruit-ESP32-Feather-V2)",
                     "assets": [
                         {
                             "name": "SmartHomeBridge-Release-0.14.2.zip",
                             "updated_at": "2025-08-01T17:08:11Z",
-                            "browser_download_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/download/release-v0.14.2/SmartHomeBridge-Release-0.14.2.zip"
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/download/0.14.2/SmartHomeBridge-Release-0.14.2.zip"
                         }
                     ]
                 }
@@ -1600,6 +1600,15 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.1.2",
+                    "name": "Release 1.1.2",
+                    "published_at": "2025-09-26T17:29:04Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-TouchRound/releases/tag/1.1.2",
+                    "body": "**Ger\u00e4tedefinition:**\r\n- 0.2 ISO-8859-15 Support for KO's\r\n- 0.2 ISO-8859-15 Support for Parameter\r\n- 0.2 Das Thermostat kann nun auch mit HVAC Ein- bzw. Ausgang umgehen\r\n- 0.2 Das Thermostat kann nun auch den aktuellen Heiz- bzw. K\u00fchlstatus anhand der Soll-, Ist-Temperatur und dem Betriebsmodus berechnen.\r\n- 0.2 Bugfix: Thermostat falsche Statusanzeigen\r\n**Touch Display:**\r\n- 0.2 Neues Stil \"Wei\u00df\"\r\n- 0.2 Hinweise zum USB-Bild Upload in Applikationsberschreibung\r\n- 0.2 Neue Bilder f\u00fcr ge\u00f6ffnete Jalousien, Rolladen, Markise, Fenster, T\u00fcre, Gargagentor\r\n- 0.2 Neue Schrift \"NotoSans-Regular\"\r\n- 0.2 Gr\u00f6\u00dfere Schriften\r\n- 0.2 Einstellung ob Telegramme zu \"Gehe zur Seite\" und \"Standardseite\" die Anzeige einschalten\r\n- 0.2 Thermostat: Haupticon zeigt den aktuellen Heizung und K\u00fchlstatus an\r\n- 0.2 Libary aktualisierung auf LVGL Version 9.3\r\n- 0.2 Bugfix: Kurze Anzeige der alten Seite beim Seitenumschalten \u00fcber Telegramme\r\n- 0.2 Bugfix: Fehlende Icons bei manchen Ger\u00e4tetypen\r\nFunktionsbbl\u00f6cke:\r\n- 0.6 Eing\u00e4nge k\u00f6nnen benannt werden\r\n- 0.6 Text Input is now ISO-8859-1\r\n**Logik;**\r\n- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine \u00c4nderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt. (bearbeitet) \r\n",
+                    "assets": []
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "v1.0",
                     "name": "Release 1.0",
                     "published_at": "2025-07-11T19:25:46Z",
@@ -1694,6 +1703,21 @@
             "archived": false,
             "description": null,
             "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "1.2",
+                    "name": "Release 1.2",
+                    "published_at": "2025-09-26T16:58:51Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.2",
+                    "body": "Bugfix Release\r\n\r\nBitte vor Verwendung die Anwendungsbeschreibung lesen. Insbesondere das Kapitel [Handbetriebseinstellung](https://github.com/OpenKNX/OFM-ShutterControllerModule/blob/v1/doc/Applikationsbeschreibung-ShutterController.md#handbetriebseinstellung). \r\nDieses enth\u00e4lt wichtige Informationen \u00fcber die notwendigen Verbindungen der Gruppen Adressen.",
+                    "assets": [
+                        {
+                            "name": "ShutterController-Release-1.2.zip",
+                            "updated_at": "2025-09-26T16:57:16Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/download/1.2/ShutterController-Release-1.2.zip"
+                        }
+                    ]
+                },
                 {
                     "prerelease": false,
                     "tag_name": "v1",
@@ -1830,6 +1854,21 @@
             "archived": false,
             "description": null,
             "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "0.10.1",
+                    "name": "Pre-Release 0.10.1",
+                    "published_at": "2025-09-26T15:56:47Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.10.1",
+                    "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- ADD: Funktionalit\u00e4t zur Steuerung eines externen Schaltrelais' inkl. Dimmstart erst ab bestimmter Eingangsspannung.\r\n- ADD: KO-Ausgabe von gemessener Spannung und Temperatur.\r\n- ADD: LED-Ausgabe der Frontplatine kann nun abgeschaltet werden (nur REG).\r\n- CHANGE: LED-Ausgabe der Frontplatine ist nun deutlich vereinfacht und verbessert (nur REG).\r\n- CHANGE: Manueller Modus der Frontplatine schaltet nun auf Ebene des Hardwarekanals und nicht mehr des Lichtkanals. Somit sind nun auch Einstellungen zum manuellen Modus (wie Helligkeit bei \"an\") global und nicht mehr pro Lichtkanal (nur REG).\r\n- FIX: Es konnte vorkommen, dass nicht immer alle Lichtkan\u00e4le \"bedient\" wurden, sodass ein Kanal nicht oder nur verz\u00f6gert eine Aktion ausgef\u00fchrt hat.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.10.1.zip",
+                            "updated_at": "2025-09-26T15:51:17Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.10.1/LedDimmerAB-Release-0.10.1.zip"
+                        }
+                    ]
+                },
                 {
                     "prerelease": true,
                     "tag_name": "0.9",
@@ -1973,6 +2012,21 @@
             "archived": false,
             "description": null,
             "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.5.0",
+                    "name": "Release 0.5.0",
+                    "published_at": "2025-09-26T18:34:31Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Aircondition/releases/tag/0.5.0",
+                    "body": "**Klimaanlage**\r\n\r\n- Fix: Ventilator Geschwindigkeit KO Rundungsfehler\r\n- Fix: OTA Update bei 4MB Flash Boards\r\n\r\n**Funktionsbl\u00f6cke**\r\n\r\n- generische Eing\u00e4nge k\u00f6nnen benannt werden",
+                    "assets": [
+                        {
+                            "name": "Aircondition-Release-0.5.zip",
+                            "updated_at": "2025-09-26T18:34:28Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Aircondition/releases/download/0.5.0/Aircondition-Release-0.5.zip"
+                        }
+                    ]
+                },
                 {
                     "prerelease": false,
                     "tag_name": "0.4.0",

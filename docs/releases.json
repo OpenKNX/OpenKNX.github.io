@@ -1024,6 +1024,21 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "v0.6.0",
+                    "name": "v0.6 (Fix Ausg\u00e4nge + Hardware-Support + Updates/Fixes)",
+                    "published_at": "2025-09-26T20:05:15Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.6.0",
+                    "body": "## v0.6: 2025-09-18 (Fix Outputs + OpenKNX Updates)\r\n\r\n> **Wichtige Update-Hinweise<!-- f\u00fcr Nutzer der Version v0.1 Public Beta \"StateEngineDFA16\"-->:**\r\n> 1. Die Ger\u00e4teadresse (PA) muss erneut zugewiesen werden, da sich das interne Speicherformat im Stack ver\u00e4ndert hat.\r\n> 2. Eine Rekonstruktion wird u.U. nicht funktionieren, beim Update von \u00e4lteren Versionen (<v0.4)\r\n> 3. KO-Nummern im Bereich 2 bis 19 haben sich ver\u00e4ndert.\r\n>    Ggf. vorhandene interne Referenzen m\u00fcssen manuell angepasst werde.\r\n>    Zur \u00dcbersicht siehe Tabelle [\u00c4nderung von zentralen Kommunikationsobjekten](#\u00e4nderung-von-zentralen-kommunikationsobjekten) unten.\r\n\r\n* Fixes/Update: OFM-DFA auf 0.6\r\n  * Behebt Fehler bei Ausg\u00e4ngen mit DPT 8,9,13,14\r\n  * Fix: Diagnose-Kommandos im Modul wurden auch angezeigt und verarbeitet, wenn das Ger\u00e4t nicht konfiguriert ist\r\n  * Details siehe [Changelog](https://github.com/OpenKNX/OFM-DFA/blob/v1/CHANGELOG.md)\r\n* Unterst\u00fctzung von Status-Anzeige f\u00fcr neue Zeitimplementierung f\u00fcr REG1-Base.<br />Die Firmware wird in zwei Varianten bereitstellt:\r\n  * `firmware-OpenKNX-REG1-Base___time-led3` - mit dauerhaft blinkender LED bei bekannter Zeit\r\n  * `firmware-OpenKNX-REG1-Base___no-time-led` - ohne LED f\u00fcr Zeit\r\n* Fix f\u00fcr abweichendes Projekt-Encoding:\r\n  Bisher wurden Sonderzeichen wie Umlaute fehlerhaft auf dem Bus ausgegeben, \r\n  falls das Projekt-Encoding in der ETS auf UTF-8 eingestellt wurde (wie von manchen Herstellern gefordert).\r\n  Durch explizite Angabe des Encodings f\u00fcr die Applikation mit Nutzung des Producers v3.9 tritt dieses Problem nicht mehr auf. \r\n* Update auf den neuen stabilen Stand 2025-08 (einschli\u00dflich Fixes f\u00fcr neue Zeitimplementierung):\r\n  * **knx** auf auf 2.2.1\r\n  * OGM-**Common** auf 1.4.3\r\n  * OFM-**ConfigTransfer** auf 0.4\r\n  * OFM-**Logic**Module auf 3.7.2\r\n  * OFM-**FileTransferModule** auf 0.1.1\r\n  * OGM-**HardwareConfig** auf Stand 2025-08-01 (7dad5ab82a44ab893d6df64f79f39f9d0a76ece2)\r\n* Fix #8: Falsches Speicherlayout (16MiB statt 2MiB) war f\u00fcr einige Ger\u00e4te definiert.<br />Betroffene Ger\u00e4te:\r\n  * *OpenKNX REG2 PiPico V1*\r\n  * *OpenKNXiao Mini V1*\r\n* Erweiterte Hardware-Unterst\u00fctzung:\r\n  * *SmartMF 1TE REG*\r\n  * Experimentell: *OpenKNXiao Mini ESP32 V1*\r\n* Dokumentation erweitert\r\n<!--\r\n* Erweiterungen in Entwicklungsumgebung\r\n  * Build-Action to Check Full Project \r\n  * Add Tasks for Git-Updates\r\n-->\r\n\r\n<!--\r\n## v0.5 2025-08 (nicht ver\u00f6ffentlicht)\r\n## v0.4: 2025-07-11 (kein \u00f6ffentliches Release)\r\n-->\r\n\r\n\r\n### \u00c4nderung von zentralen Kommunikationsobjekten\r\n\r\n| KO                           | alt | neu | Kommentar                                |\r\n|------------------------------|-----|-----|------------------------------------------|\r\n| In Betrieb                   | 1   | 1   | (unver\u00e4ndert)                            |\r\n| Uhrzeit                      | 2 * | 2   | KO war bislang geteilt mit Uhrzeit/Datum |\r\n| Datum                        | 3   | 3   | (unver\u00e4ndert)                            |\r\n| Uhrzeit/Datum                | 2 * | 4   | Separiert von KO 2 Uhrzeit.              |\r\n| Sommerzeit aktiv             | 10  | 5   |                                          |\r\n| Speichern                    | 11  | 6   |                                          |\r\n| Diagnose                     | 7   | 7   | (unver\u00e4ndert)                            |\r\n| Urlaub                       | 4   | 15  |                                          |\r\n| Welcher Feiertag ist heute?  | 5   | 16  |                                          |\r\n| Welcher Feiertag ist morgen? | 6   | 17  |                                          |\r\n<!--\r\n| LED sperren                  | 8   | 18  | (nicht in State-Engine enthalten)        |\r\n| Buzzer sperren               | 9   | 19  | (nicht in State-Engine enthalten)        |\r\n-->\r\n\r\n\\*: Doppelbelegung der KO-Nummer. Einblendung war abh\u00e4ngig von Konfiguration. \r\n\r\n<!-- 368ec839e345da067f9dfd225b1431884033d5080d2ada36063f785df30fd1d6 *StateEngine-DFA16-Release-0.6.zip -->",
+                    "assets": [
+                        {
+                            "name": "StateEngine-DFA16-Release-0.6.zip",
+                            "updated_at": "2025-09-26T18:36:47Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/download/v0.6.0/StateEngine-DFA16-Release-0.6.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "DFA16/v0.1-beta",
                     "name": "DFA16 v0.1 Public Beta",
                     "published_at": "2025-03-02T17:40:44Z",
@@ -1065,7 +1080,7 @@
                     "assets": []
                 }
             ],
-            "hw_avail_open": 5
+            "hw_avail_open": 7
         },
         "OAM-AccessControl": {
             "repo_url": "https://github.com/OpenKNX/OAM-AccessControl",

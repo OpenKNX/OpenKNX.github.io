@@ -59,6 +59,10 @@
         table.openknxTitleTable:has(td:nth-child(51):hover, thead > tr:nth-child(2) > th:nth-child(51):hover) td:nth-child(51).isPart,
         table.openknxTitleTable:has(td:nth-child(52):hover, thead > tr:nth-child(2) > th:nth-child(52):hover) td:nth-child(52).isPart,
         table.openknxTitleTable:has(td:nth-child(53):hover, thead > tr:nth-child(2) > th:nth-child(53):hover) td:nth-child(53).isPart,
+        table.openknxTitleTable:has(td:nth-child(54):hover, thead > tr:nth-child(2) > th:nth-child(54):hover) td:nth-child(54).isPart,
+        table.openknxTitleTable:has(td:nth-child(55):hover, thead > tr:nth-child(2) > th:nth-child(55):hover) td:nth-child(55).isPart,
+        table.openknxTitleTable:has(td:nth-child(56):hover, thead > tr:nth-child(2) > th:nth-child(56):hover) td:nth-child(56).isPart,
+        table.openknxTitleTable:has(td:nth-child(57):hover, thead > tr:nth-child(2) > th:nth-child(57):hover) td:nth-child(57).isPart,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
@@ -114,7 +118,11 @@
         table.openknxTitleTable:has(td:nth-child(50):hover, th:nth-child(50):hover) thead th.rotate45:nth-child(50) div span,
         table.openknxTitleTable:has(td:nth-child(51):hover, th:nth-child(51):hover) thead th.rotate45:nth-child(51) div span,
         table.openknxTitleTable:has(td:nth-child(52):hover, th:nth-child(52):hover) thead th.rotate45:nth-child(52) div span,
-        table.openknxTitleTable:has(td:nth-child(53):hover, th:nth-child(53):hover) thead th.rotate45:nth-child(53) div span
+        table.openknxTitleTable:has(td:nth-child(53):hover, th:nth-child(53):hover) thead th.rotate45:nth-child(53) div span,
+        table.openknxTitleTable:has(td:nth-child(54):hover, th:nth-child(54):hover) thead th.rotate45:nth-child(54) div span,
+        table.openknxTitleTable:has(td:nth-child(55):hover, th:nth-child(55):hover) thead th.rotate45:nth-child(55) div span,
+        table.openknxTitleTable:has(td:nth-child(56):hover, th:nth-child(56):hover) thead th.rotate45:nth-child(56) div span,
+        table.openknxTitleTable:has(td:nth-child(57):hover, th:nth-child(57):hover) thead th.rotate45:nth-child(57) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -147,9 +155,9 @@
         
         <col data-ofm="OFM-Network" />
         
-        <col data-ofm="OFM-BinaryInput" />
-        
         <col data-ofm="OFM-FunctionBlocks" />
+        
+        <col data-ofm="OFM-BinaryInput" />
         
         <col data-ofm="OGM-SensorDevices" />
         
@@ -221,9 +229,9 @@
         
         <th class="rotate45" data-ofm="OFM-Network"><div><span><a href="https://github.com/OpenKNX/OFM-Network">OFM-Network</a></span></div></th>
         
-        <th class="rotate45" data-ofm="OFM-BinaryInput"><div><span><a href="https://github.com/OpenKNX/OFM-BinaryInput">OFM-BinaryInput</a></span></div></th>
-        
         <th class="rotate45" data-ofm="OFM-FunctionBlocks"><div><span><a href="https://github.com/OpenKNX/OFM-FunctionBlocks">OFM-FunctionBlocks</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-BinaryInput"><div><span><a href="https://github.com/OpenKNX/OFM-BinaryInput">OFM-BinaryInput</a></span></div></th>
         
         <th class="rotate45" data-ofm="OGM-SensorDevices"><div><span><a href="https://github.com/OpenKNX/OGM-SensorDevices">OGM-SensorDevices</a></span></div></th>
         
@@ -297,9 +305,9 @@
         
         <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -375,9 +383,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -404,7 +412,7 @@
         
         <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
         
-        <td data-dev="OpenKNX REG1 Basismodul" class="isPart">&#9632;</td>
+        <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart">&#9632;</td>
         
@@ -419,12 +427,15 @@
         <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
         
         <td class="left">
-                <span data-dev="OpenKNX REG2 PiPico2 V1"><span class="isPart">&#9632;</span>&nbsp;OpenKNX REG2 PiPico2 V1</span>, 
-                <span data-dev="OpenKNXiao V1"><span class="isPart">&#9632;</span>&nbsp;OpenKNXiao V1</span>
+                <span data-dev="(???)-OpenKNX-OpenKNXiao-V1-Mini-ESP32"><span class="isPart">&#9632;</span>&nbsp;(???)-OpenKNX-OpenKNXiao-V1-Mini-ESP32</span>, 
+                <span data-dev="(???)-OpenKNX-OpenKNXiao-V1-Mini-RP2040"><span class="isPart">&#9632;</span>&nbsp;(???)-OpenKNX-OpenKNXiao-V1-Mini-RP2040</span>, 
+                <span data-dev="(???)-OpenKNX-REG1-Base___no-time-led"><span class="isPart">&#9632;</span>&nbsp;(???)-OpenKNX-REG1-Base___no-time-led</span>, 
+                <span data-dev="(???)-OpenKNX-REG1-Base___time-led3"><span class="isPart">&#9632;</span>&nbsp;(???)-OpenKNX-REG1-Base___time-led3</span>, 
+                <span data-dev="(???)-OpenKNX-REG2-PiPico-V1"><span class="isPart">&#9632;</span>&nbsp;(???)-OpenKNX-REG2-PiPico-V1</span>
         </td>
 
         
-        <td title=""></td>
+        <td title="(???)-SmartMF-1TE-REG">1</td>
        
 
     </tr>
@@ -456,9 +467,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -535,9 +546,9 @@
         
         <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart">&#9632;</td>
         
@@ -613,9 +624,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -691,9 +702,9 @@
         
         <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -773,9 +784,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart">&#9632;</td>
         
@@ -853,9 +864,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -932,9 +943,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -1012,9 +1023,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -1091,9 +1102,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart">&#9632;</td>
         
@@ -1169,9 +1180,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -1247,9 +1258,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -1325,9 +1336,9 @@
         
         <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -1405,9 +1416,9 @@
         
         <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -1484,9 +1495,9 @@
         
         <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -1563,9 +1574,9 @@
         
         <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -1641,9 +1652,9 @@
         
         <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -1720,9 +1731,9 @@
         
         <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -1798,9 +1809,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -1876,9 +1887,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -1955,9 +1966,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -2033,9 +2044,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -2112,9 +2123,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -2190,9 +2201,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart">&#9632;</td>
         
@@ -2269,9 +2280,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -2348,9 +2359,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -2426,9 +2437,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -2504,9 +2515,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart">&#9632;</td>
         
@@ -2583,9 +2594,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart">&#9632;</td>
         
@@ -2662,9 +2673,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -2740,9 +2751,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -2818,9 +2829,9 @@
         
         <td data-ofm="OFM-Network" class="isPart"></td>
         
-        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
-        
         <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart"></td>
         
@@ -2865,6 +2876,85 @@
 
         
         <td title="SmartMF Enocean Gateway RP2040">1</td>
+       
+
+    </tr>
+    
+    
+    
+    
+    
+    <tr data-oam="OAM-Nuki">
+        <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-Nuki">OAM-Nuki</a></th>
+
+       
+        
+        <td data-ofm="OGM-Common" class="isPart">&#9632;</td>
+        
+        <td data-ofm="knx" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-FileTransferModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-LogicModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-ConfigTransfer" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OGM-HardwareConfig" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-VirtualButton" class="isPart"></td>
+        
+        <td data-ofm="OFM-UsbExchange" class="isPart"></td>
+        
+        <td data-ofm="OFM-Network" class="isPart"></td>
+        
+        <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
+        
+        <td data-ofm="OGM-SensorDevices" class="isPart"></td>
+        
+        <td data-ofm="OFM-SwitchActuator" class="isPart"></td>
+        
+        <td data-ofm="OFM-PresenceModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-SensorModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-GPIOModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-OneWireModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-SmartHomeBridge" class="isPart"></td>
+        
+        <td class="left before-new-cols" data-ofm="*special*">
+                <span data-ofm="OFM-Nuki"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-Nuki">OFM-Nuki</a></span>
+        </td>
+       
+
+       
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX Adafruit ESP32 Feather V2" class="isPart"></td>
+        
+        <td data-dev="OpenKNX Adafruit ESP32 Feather V2 (TP)" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td class="left">
+        </td>
+
+        
+        <td title=""></td>
        
 
     </tr>

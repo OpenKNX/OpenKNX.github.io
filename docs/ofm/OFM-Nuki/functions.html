@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenKNX-Applikationen und Geräte mit Nutzungsmöglichkeit von OFM-Nuki</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        
+        table.openknxTitleTable:has(td:nth-child(2):hover, thead > tr:nth-child(2) > th:nth-child(2):hover) td:nth-child(2).isPart,
+        table.openknxTitleTable:has(td:nth-child(3):hover, thead > tr:nth-child(2) > th:nth-child(3):hover) td:nth-child(3).isPart,
+        table.openknxTitleTable:has(td:nth-child(4):hover, thead > tr:nth-child(2) > th:nth-child(4):hover) td:nth-child(4).isPart,
+        table.openknxTitleTable:has(td:nth-child(5):hover, thead > tr:nth-child(2) > th:nth-child(5):hover) td:nth-child(5).isPart,
+        table.openknxTitleTable:has(td:nth-child(6):hover, thead > tr:nth-child(2) > th:nth-child(6):hover) td:nth-child(6).isPart,
+        table.openknxTitleTable:has(td:nth-child(7):hover, thead > tr:nth-child(2) > th:nth-child(7):hover) td:nth-child(7).isPart,
+        table.openknxTitleTable:has(td:nth-child(8):hover, thead > tr:nth-child(2) > th:nth-child(8):hover) td:nth-child(8).isPart,
+        table.openknxTitleTable:has(td:nth-child(9):hover, thead > tr:nth-child(2) > th:nth-child(9):hover) td:nth-child(9).isPart,
+        table.openknxTitleTable:has(td:nth-child(10):hover, thead > tr:nth-child(2) > th:nth-child(10):hover) td:nth-child(10).isPart,
+        table.openknxTitleTable:has(td:nth-child(11):hover, thead > tr:nth-child(2) > th:nth-child(11):hover) td:nth-child(11).isPart,
+        table.openknxTitleTable:has(td:nth-child(12):hover, thead > tr:nth-child(2) > th:nth-child(12):hover) td:nth-child(12).isPart,
+        table.openknxTitleTable:has(td:nth-child(13):hover, thead > tr:nth-child(2) > th:nth-child(13):hover) td:nth-child(13).isPart,
+        table.openknxTitleTable:has(td:nth-child(14):hover, thead > tr:nth-child(2) > th:nth-child(14):hover) td:nth-child(14).isPart,
+        table.openknxTitleTable:has(td:nth-child(15):hover, thead > tr:nth-child(2) > th:nth-child(15):hover) td:nth-child(15).isPart,
+        table.openknxTitleTable:has(td:nth-child(16):hover, thead > tr:nth-child(2) > th:nth-child(16):hover) td:nth-child(16).isPart,
+        table.openknxTitleTable:has(td:nth-child(17):hover, thead > tr:nth-child(2) > th:nth-child(17):hover) td:nth-child(17).isPart,
+        table.openknxTitleTable:has(td:nth-child(18):hover, thead > tr:nth-child(2) > th:nth-child(18):hover) td:nth-child(18).isPart,
+        table.openknxTitleTable:has(td:nth-child(19):hover, thead > tr:nth-child(2) > th:nth-child(19):hover) td:nth-child(19).isPart,
+        table.openknxTitleTable:has(td:nth-child(20):hover, thead > tr:nth-child(2) > th:nth-child(20):hover) td:nth-child(20).isPart,
+        table.openknxTitleTable:has(td:nth-child(21):hover, thead > tr:nth-child(2) > th:nth-child(21):hover) td:nth-child(21).isPart,
+        table.openknxTitleTable:has(td:nth-child(22):hover, thead > tr:nth-child(2) > th:nth-child(22):hover) td:nth-child(22).isPart,
+        table.openknxTitleTable:has(td:nth-child(23):hover, thead > tr:nth-child(2) > th:nth-child(23):hover) td:nth-child(23).isPart,
+        
+        table.openknxTitleTable tbody tr:hover {
+            background-color: #dfd;
+        }
+        table.openknxTitleTable:has(td:nth-child(2):hover, th:nth-child(2):hover) thead th.rotate45:nth-child(2) div span,
+        table.openknxTitleTable:has(td:nth-child(3):hover, th:nth-child(3):hover) thead th.rotate45:nth-child(3) div span,
+        table.openknxTitleTable:has(td:nth-child(4):hover, th:nth-child(4):hover) thead th.rotate45:nth-child(4) div span,
+        table.openknxTitleTable:has(td:nth-child(5):hover, th:nth-child(5):hover) thead th.rotate45:nth-child(5) div span,
+        table.openknxTitleTable:has(td:nth-child(6):hover, th:nth-child(6):hover) thead th.rotate45:nth-child(6) div span,
+        table.openknxTitleTable:has(td:nth-child(7):hover, th:nth-child(7):hover) thead th.rotate45:nth-child(7) div span,
+        table.openknxTitleTable:has(td:nth-child(8):hover, th:nth-child(8):hover) thead th.rotate45:nth-child(8) div span,
+        table.openknxTitleTable:has(td:nth-child(9):hover, th:nth-child(9):hover) thead th.rotate45:nth-child(9) div span,
+        table.openknxTitleTable:has(td:nth-child(10):hover, th:nth-child(10):hover) thead th.rotate45:nth-child(10) div span,
+        table.openknxTitleTable:has(td:nth-child(11):hover, th:nth-child(11):hover) thead th.rotate45:nth-child(11) div span,
+        table.openknxTitleTable:has(td:nth-child(12):hover, th:nth-child(12):hover) thead th.rotate45:nth-child(12) div span,
+        table.openknxTitleTable:has(td:nth-child(13):hover, th:nth-child(13):hover) thead th.rotate45:nth-child(13) div span,
+        table.openknxTitleTable:has(td:nth-child(14):hover, th:nth-child(14):hover) thead th.rotate45:nth-child(14) div span,
+        table.openknxTitleTable:has(td:nth-child(15):hover, th:nth-child(15):hover) thead th.rotate45:nth-child(15) div span,
+        table.openknxTitleTable:has(td:nth-child(16):hover, th:nth-child(16):hover) thead th.rotate45:nth-child(16) div span,
+        table.openknxTitleTable:has(td:nth-child(17):hover, th:nth-child(17):hover) thead th.rotate45:nth-child(17) div span,
+        table.openknxTitleTable:has(td:nth-child(18):hover, th:nth-child(18):hover) thead th.rotate45:nth-child(18) div span,
+        table.openknxTitleTable:has(td:nth-child(19):hover, th:nth-child(19):hover) thead th.rotate45:nth-child(19) div span,
+        table.openknxTitleTable:has(td:nth-child(20):hover, th:nth-child(20):hover) thead th.rotate45:nth-child(20) div span,
+        table.openknxTitleTable:has(td:nth-child(21):hover, th:nth-child(21):hover) thead th.rotate45:nth-child(21) div span,
+        table.openknxTitleTable:has(td:nth-child(22):hover, th:nth-child(22):hover) thead th.rotate45:nth-child(22) div span,
+        table.openknxTitleTable:has(td:nth-child(23):hover, th:nth-child(23):hover) thead th.rotate45:nth-child(23) div span
+        
+        {
+            border-bottom: 2px solid #9f9;
+        }
+    </style>
+</head>
+<body>
+<table class="openknxTitleTable">
+    <caption>OpenKNX-Applikationen und Geräte mit Nutzungsmöglichkeit von OFM-Nuki</caption>
+    <colgroup>
+        <col class="before-new-cols" />
+
+       
+
+       
+        
+        <col data-dev="OpenKNX PiPico BCU Connector" />
+        
+        <col data-dev="OpenKNX REG1 Basismodul" />
+        
+        <col data-dev="OpenKNX REG1 Basismodul V0" />
+        
+        <col data-dev="OpenKNX UP1 8xSensor" />
+        
+        <col data-dev="OpenKNX REG1 Basismodul IP" />
+        
+        <col data-dev="OpenKNX Adafruit ESP32 Feather V2" />
+        
+        <col data-dev="OpenKNX Adafruit ESP32 Feather V2 (TP)" />
+        
+        <col data-dev="OpenKNX REG1 Basismodul LAN+TP" />
+        
+        <col data-dev="*special*" />
+        <col data-dev="*other*" />
+       
+    </colgroup>
+    <thead>
+    <tr class="colGroupTitle">
+        <th class="before-new-cols">Applikation</th>
+        
+        <th class="before-new-cols" colspan="10">Unterstützte Geräte</th>
+    </tr>
+    <tr>
+        <th class="before-new-cols"></th>
+
+       
+
+       
+        
+        <th class="rotate45" data-dev="OpenKNX PiPico BCU Connector"><div><span>OpenKNX PiPico BCU Connector</span></div></th>
+        
+        <th class="rotate45" data-dev="OpenKNX REG1 Basismodul"><div><span>OpenKNX REG1 Basismodul</span></div></th>
+        
+        <th class="rotate45" data-dev="OpenKNX REG1 Basismodul V0"><div><span>OpenKNX REG1 Basismodul V0</span></div></th>
+        
+        <th class="rotate45" data-dev="OpenKNX UP1 8xSensor"><div><span>OpenKNX UP1 8xSensor</span></div></th>
+        
+        <th class="rotate45" data-dev="OpenKNX REG1 Basismodul IP"><div><span>OpenKNX REG1 Basismodul IP</span></div></th>
+        
+        <th class="rotate45" data-dev="OpenKNX Adafruit ESP32 Feather V2"><div><span>OpenKNX Adafruit ESP32 Feather V2</span></div></th>
+        
+        <th class="rotate45" data-dev="OpenKNX Adafruit ESP32 Feather V2 (TP)"><div><span>OpenKNX Adafruit ESP32 Feather V2 (TP)</span></div></th>
+        
+        <th class="rotate45" data-dev="OpenKNX REG1 Basismodul LAN+TP"><div><span>OpenKNX REG1 Basismodul LAN+TP</span></div></th>
+        
+        <th class="singleModules" data-dev="*special*">Spezielle Geräte:</th>
+        <th class="rotate90" data-dev="*other*"><div><span>Sonstige Geräte</span></div></th>
+       
+
+    </tr>
+    </thead>
+    <tbody>
+    
+    
+    
+    
+    
+    <tr data-oam="OAM-Nuki">
+        <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-Nuki">OAM-Nuki</a></th>
+
+       
+
+       
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX Adafruit ESP32 Feather V2" class="isPart"></td>
+        
+        <td data-dev="OpenKNX Adafruit ESP32 Feather V2 (TP)" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td class="left">
+        </td>
+
+        
+        <td title=""></td>
+       
+
+    </tr>
+    
+    </tbody>
+</table>
+</body>
+</html>

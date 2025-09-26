@@ -56,6 +56,7 @@ appOrder = [
     # "OAM-EnoceanGateway_V2"
     "OAM-ModbusGateway",
     "OAM-Aircondition",
+    "OAM-Nuki",
 
     # gateways with ip
     "OAM-Sonos",

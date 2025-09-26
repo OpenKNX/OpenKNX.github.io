@@ -200,7 +200,7 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
 def main():
     oam_repos = release_manager.fetch_app_repos()
 
-    delta = timedelta(hours=6, minutes=10)
+    delta = timedelta(hours=4, minutes=45)
     now = datetime.now(timezone.utc)
     oam_updated = {
         repo["name"]: repo["updated_at"]

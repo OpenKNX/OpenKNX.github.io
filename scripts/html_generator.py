@@ -58,6 +58,15 @@ class HTMLGenerator:
                                       latest_prerelease=latest_prerelease
                                       )
 
+        output_filename = self.path_manager.get_oam_path(oam, filename='releases_latest.wiki_iframe.html')
+        self._render_template_to_file('repo_latestrelease_template.html', output_filename,
+                                      style_filename="wiki_iframe",
+                                      h_level=2,
+                                      repo_name=oam,
+                                      latest_release=latest_release,
+                                      latest_prerelease=latest_prerelease
+                                      )
+
     def update_html(self, releases_data):
         logging.info("Updating HTML with release data")
 

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neuste Releases von {{repo_name}}</title>
+    {% if style_filename %}<link rel="stylesheet" href="/css/{{ style_filename }}.css">{% endif %}
 </head>
 <body>
-<h1>Neuste Releases von {{repo_name}}</h1>
+<h{{ h_level | default(1) }}>Neuste Releases von {{repo_name}}</h{{ h_level | default(1) }}>
 <ul>
     {% if latest_release %}
     <li>Neustes Release: <a href="{{ latest_release.html_url }}">{{ latest_release.name }} ({{ latest_release.tag_name }})</a></li>

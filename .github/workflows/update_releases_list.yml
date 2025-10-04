@@ -34,7 +34,12 @@ jobs:
           pip install defusedxml
 
       - name: Run update releases script
-        run: python scripts/update_releases.py
+        run: |
+          if [[ "${{ github.event_name }}" == "push" || "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            python scripts/update_releases.py --force
+          else
+            python scripts/update_releases.py
+          fi
 
       - name: Commit and push changes
         run: |

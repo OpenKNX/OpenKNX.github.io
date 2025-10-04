@@ -198,7 +198,7 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
     return {**oam_data_sorted, **oam_data_unsorted}
 
 
-def main():
+def main(force_update=False):
     oam_repos = release_manager.fetch_app_repos()
 
     delta = timedelta(hours=4, minutes=45)
@@ -208,9 +208,9 @@ def main():
         for repo in oam_repos
         if (now - datetime.strptime(repo["updated_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)) <= delta
     }
-    if len(oam_updated) == 0:
+    if not force_update and len(oam_updated) == 0:
         logging.info(f"No repos have been updated in the last {delta} => NO need for updates!")
-        return # no need to update for unchanged OAM-repos
+        return  # no need to update for unchanged OAM-repos
     logging.info(f"The {len(oam_updated)} following repos have been updated in the last {delta}: {oam_updated}")
 
     # release-data (base) for usage in openknx-toolbox
@@ -252,4 +252,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+
+    main('--force' in sys.argv)

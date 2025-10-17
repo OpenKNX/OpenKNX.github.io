@@ -1871,6 +1871,21 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "0.11",
+                    "name": "Pre-Release 0.11",
+                    "published_at": "2025-10-17T17:03:31Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.11",
+                    "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- ADD: Szenendeaktivierung bei Nachtumschaltung ist nun parametrisierbar.\r\n- ADD: KO f\u00fcr relative Farbtemperatur\u00e4nderung hinzugef\u00fcgt.\r\n- ADD: Boost-KO f\u00fcr TW-Kan\u00e4le hinzugef\u00fcgt.\r\n- ADD: Statusausgabe nun deutlich mehr parametrisierbar (ob und wie h\u00e4ufig).\r\n- ADD: PWM Duty-Cyle ist nun zwischen benachbarten Kan\u00e4len invertiert, was insbesondere bei TW zu einer Reduzierung der Belastung des Netzteils f\u00fchrt.\r\n- CHANGE: Benennung von Parameter und KOs sowie KO-Nummerierung aufger\u00e4umt.\r\n- CHANGE: OpenKNX OGM-Common auf Version 1.5 aktualisiert.\r\n- FIX: Status-KOs f\u00fcr Netzteilspannung und Temperatur werden nun auch ohne Senden intern f\u00fcr Abfragen aktualisiert.\r\n- FIX: Sperre hatte bei TW-Kan\u00e4len keine Wirkung.\r\n- FIX: Sperre-Status wurde bei Einzelkan\u00e4len nicht ausgegeben.\r\n- NOTE: Umrechnung RGB<->Farbtemperatur ist aktuell noch nicht korrekt (wird mit dem n\u00e4chsten Update gefixt).\r\n\r\n_Hinweis:_\r\nAufgrund gr\u00f6\u00dferer \"Aufr\u00e4umarbeiten\" in Vorbereitung eines ersten Releases ist dieses Pre-Release-Update leider in der ETS nicht update-f\u00e4hig. W\u00e4hrend Pre-Releases kann dies hin und wieder vorkommen. Nach einem ersten, finalen Release werden alle Updates selbstverst\u00e4ndlich auch in der ETS update-f\u00e4hig bleiben.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.11.0.zip",
+                            "updated_at": "2025-10-17T17:03:05Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.11/LedDimmerAB-Release-0.11.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "0.10.1",
                     "name": "Pre-Release 0.10.1",
                     "published_at": "2025-09-26T15:56:47Z",

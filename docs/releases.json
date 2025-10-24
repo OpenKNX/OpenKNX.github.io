@@ -789,8 +789,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.2.3",
+                    "name": "Release Version 1.2.3",
+                    "published_at": "2025-10-24T21:08:47Z",
+                    "html_url": "https://github.com/OpenKNX/SOM-UP/releases/tag/1.2.3",
+                    "body": "Es wurde auf die neust Common 1.5.1 und die neue ESP8266Audio geupdated.\r\n\r\nRelevante \u00c4nderungen aus den Libraries\r\n\r\n* Daten\u00fcbertragen per KNX deutlich stabilder\r\n* Verbessertes Abspielen von MP3\r\n\r\nAu\u00dferdem wurden die Hilfe etwas \u00fcberarbeitet. ",
+                    "assets": [
+                        {
+                            "name": "SoundModule-Release-1.2.3.zip",
+                            "updated_at": "2025-10-24T21:08:37Z",
+                            "browser_download_url": "https://github.com/OpenKNX/SOM-UP/releases/download/1.2.3/SoundModule-Release-1.2.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "1.1",
-                    "name": "Release Version 1.1",
+                    "name": "Release Version 1.1.0",
                     "published_at": "2025-07-06T19:06:06Z",
                     "html_url": "https://github.com/OpenKNX/SOM-UP/releases/tag/1.1",
                     "body": "**Achtung: Aufgrund des neuen KNX-Stack kann es sein, dass die PA neu programmiert werden muss!**\r\n\r\nDiverse Updates der verwendeten Libraries:\r\n\r\n* OGM-Common 1.4.0\r\n* OFM-Network 0.5\r\n* OGM-Logkmodul 3.7.0\r\n* OFM-ConfigTransfer 0.4.0\r\n\r\nAu\u00dferdem wurde der KNXIP-Support integriert, so dass zuk\u00fcnfitge Ger\u00e4te auch \u00fcber IP statt TP angebunden werden k\u00f6nnen.",
@@ -805,7 +820,7 @@
                 {
                     "prerelease": false,
                     "tag_name": "1.0",
-                    "name": "Release Version 1.0",
+                    "name": "Release Version 1.0.0",
                     "published_at": "2024-07-09T12:25:47Z",
                     "html_url": "https://github.com/OpenKNX/SOM-UP/releases/tag/1.0",
                     "body": "Release der ersten finalen Version.\r\n\r\n- Update der UI\r\n- Updates des OpenKNX-Framework\r\n- Updates aller OpenKNX-Module\r\n- Update auf neuen KNX Stack\r\n- Updates der sonstigen Libraries",
@@ -823,7 +838,7 @@
                     "name": "Zwischenrelease Pre-1.0",
                     "published_at": "2024-07-09T12:22:27Z",
                     "html_url": "https://github.com/OpenKNX/SOM-UP/releases/tag/0.12",
-                    "body": "Zwischenrelease f\u00fcr das Upgrade auf Version 1.0",
+                    "body": "Zwischenrelease f\u00fcr das Upgrade auf Version 1.0.\r\nWird ben\u00f6tigt falls man von einer \u00e4lteren Produktdatenbank (ETS) auf 1.0 updaten m\u00f6chte ohne die Ger\u00e4te neu einzurichten.",
                     "assets": [
                         {
                             "name": "Upgrade-Pre-1.0.zip",

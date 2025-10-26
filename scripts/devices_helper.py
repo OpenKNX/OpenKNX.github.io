@@ -24,11 +24,14 @@ class DeviceHelper:
             "GW-UP1-IR": "OpenKNX UP1 8xSensor",  # TODO: deprecated
             "IP-Router-REG1-Eth": "OpenKNX REG1 Basismodul IP",
             "OpenKNX-REG1-Basismodul-IP": "OpenKNX REG1 Basismodul IP",
+            "OpenKNX-REG1-LAN-BASE": "OpenKNX REG1 Basismodul IP",
             "IP-Router-REG1-LAN-TP-Base": "OpenKNX REG1 Basismodul LAN+TP",
+            "OpenKNX-REG1-LAN-TP-BASE": "OpenKNX REG1 Basismodul LAN+TP",
             "OpenKNX-PiPico-BCU-Connector": "OpenKNX PiPico BCU Connector",
             "OpenKNX-REG1-Base-V0": "OpenKNX REG1 Basismodul V0",
             "OpenKNX-REG1-BASE-V0": "OpenKNX REG1 Basismodul V0",
             "OpenKNX-REG1-Base": "OpenKNX REG1 Basismodul",
+            "OpenKNX-REG1-BASE": "OpenKNX REG1 Basismodul",
 
             # TODO check removal of '___' before mapping to handle special case of firmware variants
             "OpenKNX-REG1-Base___no-time-led": "OpenKNX REG1 Basismodul",
@@ -40,6 +43,7 @@ class DeviceHelper:
             "OpenKNX-REG1-Basismodul-V0": "OpenKNX REG1 Basismodul V0",
             "OpenKNX-REG1-MultiSensor": "OpenKNX REG1 Multisensor",
             "OpenKNX-UP1-8xSensor": "OpenKNX UP1 8xSensor",
+            "OpenKNX-UP1-SEN-8x": "OpenKNX UP1 8xSensor",
             "PiPico_BCU_Connector": "OpenKNX PiPico BCU Connector",
             "PiPico-BCU-Connector": "OpenKNX PiPico BCU Connector",
             "RealPresence": "SmartMF RealPresence",
@@ -81,6 +85,7 @@ class DeviceHelper:
             "SmartMF-Sensormodul-RP2040": "SmartMF-Sensormodul-v4.x-RP2040",
             "UP1-GW-IR": "OpenKNX UP1 8xSensor",  # TODO: check
             "UP1-PM-HF": "OpenKNX UP1 Präsenzmelder+",
+            "OpenKNX-UP1-PM-HF": "OpenKNX UP1 Präsenzmelder+",
 
             "XIAO_MINI_V1": "OpenKNXiao V1",  # old, # TODO check removal
             "OpenKNX-OpenKNXiao-V1-Mini-RP2040": "OpenKNXiao V1 Mini RP2040",

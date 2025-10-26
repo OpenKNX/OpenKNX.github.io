@@ -61,11 +61,6 @@
         table.openknxTitleTable:has(td:nth-child(53):hover, thead > tr:nth-child(2) > th:nth-child(53):hover) td:nth-child(53).isPart,
         table.openknxTitleTable:has(td:nth-child(54):hover, thead > tr:nth-child(2) > th:nth-child(54):hover) td:nth-child(54).isPart,
         table.openknxTitleTable:has(td:nth-child(55):hover, thead > tr:nth-child(2) > th:nth-child(55):hover) td:nth-child(55).isPart,
-        table.openknxTitleTable:has(td:nth-child(56):hover, thead > tr:nth-child(2) > th:nth-child(56):hover) td:nth-child(56).isPart,
-        table.openknxTitleTable:has(td:nth-child(57):hover, thead > tr:nth-child(2) > th:nth-child(57):hover) td:nth-child(57).isPart,
-        table.openknxTitleTable:has(td:nth-child(58):hover, thead > tr:nth-child(2) > th:nth-child(58):hover) td:nth-child(58).isPart,
-        table.openknxTitleTable:has(td:nth-child(59):hover, thead > tr:nth-child(2) > th:nth-child(59):hover) td:nth-child(59).isPart,
-        table.openknxTitleTable:has(td:nth-child(60):hover, thead > tr:nth-child(2) > th:nth-child(60):hover) td:nth-child(60).isPart,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
@@ -123,12 +118,7 @@
         table.openknxTitleTable:has(td:nth-child(52):hover, th:nth-child(52):hover) thead th.rotate45:nth-child(52) div span,
         table.openknxTitleTable:has(td:nth-child(53):hover, th:nth-child(53):hover) thead th.rotate45:nth-child(53) div span,
         table.openknxTitleTable:has(td:nth-child(54):hover, th:nth-child(54):hover) thead th.rotate45:nth-child(54) div span,
-        table.openknxTitleTable:has(td:nth-child(55):hover, th:nth-child(55):hover) thead th.rotate45:nth-child(55) div span,
-        table.openknxTitleTable:has(td:nth-child(56):hover, th:nth-child(56):hover) thead th.rotate45:nth-child(56) div span,
-        table.openknxTitleTable:has(td:nth-child(57):hover, th:nth-child(57):hover) thead th.rotate45:nth-child(57) div span,
-        table.openknxTitleTable:has(td:nth-child(58):hover, th:nth-child(58):hover) thead th.rotate45:nth-child(58) div span,
-        table.openknxTitleTable:has(td:nth-child(59):hover, th:nth-child(59):hover) thead th.rotate45:nth-child(59) div span,
-        table.openknxTitleTable:has(td:nth-child(60):hover, th:nth-child(60):hover) thead th.rotate45:nth-child(60) div span
+        table.openknxTitleTable:has(td:nth-child(55):hover, th:nth-child(55):hover) thead th.rotate45:nth-child(55) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -194,15 +184,19 @@
 
        
         
-        <col data-dev="OpenKNX PiPico BCU Connector" />
-        
         <col data-dev="OpenKNX REG1 Basismodul" />
+        
+        <col data-dev="OpenKNX PiPico BCU Connector" />
         
         <col data-dev="OpenKNX REG1 Basismodul V0" />
         
         <col data-dev="OpenKNX UP1 8xSensor" />
         
         <col data-dev="OpenKNX REG1 Basismodul IP" />
+        
+        <col data-dev="OpenKNX REG1 Basismodul LAN+TP" />
+        
+        <col data-dev="OpenKNX UP1 Präsenzmelder+" />
         
         <col data-dev="*special*" />
         <col data-dev="*other*" />
@@ -212,7 +206,7 @@
     <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
         <th class="before-new-cols" colspan="24">Enthaltene Module</th>
-        <th class="before-new-cols" colspan="7">Unterstützte Geräte</th>
+        <th class="before-new-cols" colspan="9">Unterstützte Geräte</th>
     </tr>
     <tr>
         <th class="before-new-cols"></th>
@@ -270,15 +264,19 @@
 
        
         
-        <th class="rotate45" data-dev="OpenKNX PiPico BCU Connector"><div><span>OpenKNX PiPico BCU Connector</span></div></th>
-        
         <th class="rotate45" data-dev="OpenKNX REG1 Basismodul"><div><span>OpenKNX REG1 Basismodul</span></div></th>
+        
+        <th class="rotate45" data-dev="OpenKNX PiPico BCU Connector"><div><span>OpenKNX PiPico BCU Connector</span></div></th>
         
         <th class="rotate45" data-dev="OpenKNX REG1 Basismodul V0"><div><span>OpenKNX REG1 Basismodul V0</span></div></th>
         
         <th class="rotate45" data-dev="OpenKNX UP1 8xSensor"><div><span>OpenKNX UP1 8xSensor</span></div></th>
         
         <th class="rotate45" data-dev="OpenKNX REG1 Basismodul IP"><div><span>OpenKNX REG1 Basismodul IP</span></div></th>
+        
+        <th class="rotate45" data-dev="OpenKNX REG1 Basismodul LAN+TP"><div><span>OpenKNX REG1 Basismodul LAN+TP</span></div></th>
+        
+        <th class="rotate45" data-dev="OpenKNX UP1 Präsenzmelder+"><div><span>OpenKNX UP1 Präsenzmelder+</span></div></th>
         
         <th class="singleModules" data-dev="*special*">Spezielle Geräte:</th>
         <th class="rotate90" data-dev="*other*"><div><span>Sonstige Geräte</span></div></th>
@@ -349,15 +347,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart">&#9632;</td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -429,15 +431,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart">&#9632;</td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
                 <span data-dev="OpenKNX REG2 PiPico V1"><span class="isPart">&#9632;</span>&nbsp;OpenKNX REG2 PiPico V1</span>, 
@@ -512,15 +518,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart">&#9632;</td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -592,22 +602,21 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
+        <td data-dev="OpenKNX REG1 Basismodul" class="isPart">&#9632;</td>
         
-        <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart">&#9632;</td>
         
-        <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
+        <td data-dev="OpenKNX UP1 8xSensor" class="isPart">&#9632;</td>
         
-        <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart">&#9632;</td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart">&#9632;</td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart">&#9632;</td>
         
         <td class="left">
-                <span data-dev="(???)-OpenKNX-REG1-BASE"><span class="isPart">&#9632;</span>&nbsp;(???)-OpenKNX-REG1-BASE</span>, 
-                <span data-dev="(???)-OpenKNX-REG1-LAN-BASE"><span class="isPart">&#9632;</span>&nbsp;(???)-OpenKNX-REG1-LAN-BASE</span>, 
-                <span data-dev="(???)-OpenKNX-REG1-LAN-TP-BASE"><span class="isPart">&#9632;</span>&nbsp;(???)-OpenKNX-REG1-LAN-TP-BASE</span>, 
-                <span data-dev="(???)-OpenKNX-UP1-PM-HF"><span class="isPart">&#9632;</span>&nbsp;(???)-OpenKNX-UP1-PM-HF</span>, 
-                <span data-dev="(???)-OpenKNX-UP1-SEN-8x"><span class="isPart">&#9632;</span>&nbsp;(???)-OpenKNX-UP1-SEN-8x</span>
         </td>
 
         
@@ -677,15 +686,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart">&#9632;</td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -757,15 +770,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart">&#9632;</td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -838,15 +855,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart">&#9632;</td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart">&#9632;</td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
                 <span data-dev="OpenKNX REG1 Multisensor"><span class="isPart">&#9632;</span>&nbsp;OpenKNX REG1 Multisensor</span>, 
@@ -920,9 +941,9 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart">&#9632;</td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart">&#9632;</td>
         
@@ -930,8 +951,11 @@
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
         
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart">&#9632;</td>
+        
         <td class="left">
-                <span data-dev="OpenKNX UP1 Präsenzmelder+"><span class="isPart">&#9632;</span>&nbsp;OpenKNX UP1 Präsenzmelder+</span>
         </td>
 
         
@@ -1002,15 +1026,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -1082,15 +1110,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
                 <span data-dev="OpenKNX REG1 2x DALI LAN Gateway"><span class="isPart">&#9632;</span>&nbsp;OpenKNX REG1 2x DALI LAN Gateway</span>, 
@@ -1165,15 +1197,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -1245,15 +1281,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -1325,15 +1365,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -1405,15 +1449,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -1485,15 +1533,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -1565,15 +1617,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
                 <span data-dev="OpenKNX AZDelivery ESP32 Board Dev Kit C V4 (IP)"><span class="isPart">&#9632;</span>&nbsp;OpenKNX AZDelivery ESP32 Board Dev Kit C V4 (IP)</span>, 
@@ -1650,15 +1706,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -1731,15 +1791,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -1812,15 +1876,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -1892,15 +1960,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart">&#9632;</td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -1973,15 +2045,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -2053,9 +2129,9 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
@@ -2063,8 +2139,11 @@
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart">&#9632;</td>
         
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart">&#9632;</td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
+        
         <td class="left">
-                <span data-dev="OpenKNX REG1 Basismodul LAN+TP"><span class="isPart">&#9632;</span>&nbsp;OpenKNX REG1 Basismodul LAN+TP</span>
         </td>
 
         
@@ -2134,15 +2213,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -2214,15 +2297,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
                 <span data-dev="OpenKNX UP1 RS485 Gateway"><span class="isPart">&#9632;</span>&nbsp;OpenKNX UP1 RS485 Gateway</span>
@@ -2295,15 +2382,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -2376,15 +2467,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart">&#9632;</td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -2456,15 +2551,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -2537,15 +2636,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -2617,15 +2720,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
                 <span data-dev="OpenKNX REG1 4xSELV Schaltaktor"><span class="isPart">&#9632;</span>&nbsp;OpenKNX REG1 4xSELV Schaltaktor</span>
@@ -2698,15 +2805,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -2778,15 +2889,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -2859,15 +2974,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -2940,15 +3059,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -3020,15 +3143,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>
@@ -3100,15 +3227,19 @@
 
        
         
-        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
-        
         <td data-dev="OpenKNX REG1 Basismodul" class="isPart"></td>
+        
+        <td data-dev="OpenKNX PiPico BCU Connector" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul V0" class="isPart"></td>
         
         <td data-dev="OpenKNX UP1 8xSensor" class="isPart"></td>
         
         <td data-dev="OpenKNX REG1 Basismodul IP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX REG1 Basismodul LAN+TP" class="isPart"></td>
+        
+        <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart"></td>
         
         <td class="left">
         </td>

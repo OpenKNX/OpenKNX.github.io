@@ -19,6 +19,13 @@
         table.openknxTitleTable:has(td:nth-child(11):hover, thead > tr:nth-child(2) > th:nth-child(11):hover) td:nth-child(11).isPart,
         table.openknxTitleTable:has(td:nth-child(12):hover, thead > tr:nth-child(2) > th:nth-child(12):hover) td:nth-child(12).isPart,
         table.openknxTitleTable:has(td:nth-child(13):hover, thead > tr:nth-child(2) > th:nth-child(13):hover) td:nth-child(13).isPart,
+        table.openknxTitleTable:has(td:nth-child(14):hover, thead > tr:nth-child(2) > th:nth-child(14):hover) td:nth-child(14).isPart,
+        table.openknxTitleTable:has(td:nth-child(15):hover, thead > tr:nth-child(2) > th:nth-child(15):hover) td:nth-child(15).isPart,
+        table.openknxTitleTable:has(td:nth-child(16):hover, thead > tr:nth-child(2) > th:nth-child(16):hover) td:nth-child(16).isPart,
+        table.openknxTitleTable:has(td:nth-child(17):hover, thead > tr:nth-child(2) > th:nth-child(17):hover) td:nth-child(17).isPart,
+        table.openknxTitleTable:has(td:nth-child(18):hover, thead > tr:nth-child(2) > th:nth-child(18):hover) td:nth-child(18).isPart,
+        table.openknxTitleTable:has(td:nth-child(19):hover, thead > tr:nth-child(2) > th:nth-child(19):hover) td:nth-child(19).isPart,
+        table.openknxTitleTable:has(td:nth-child(20):hover, thead > tr:nth-child(2) > th:nth-child(20):hover) td:nth-child(20).isPart,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
@@ -34,7 +41,14 @@
         table.openknxTitleTable:has(td:nth-child(10):hover, th:nth-child(10):hover) thead th.rotate45:nth-child(10) div span,
         table.openknxTitleTable:has(td:nth-child(11):hover, th:nth-child(11):hover) thead th.rotate45:nth-child(11) div span,
         table.openknxTitleTable:has(td:nth-child(12):hover, th:nth-child(12):hover) thead th.rotate45:nth-child(12) div span,
-        table.openknxTitleTable:has(td:nth-child(13):hover, th:nth-child(13):hover) thead th.rotate45:nth-child(13) div span
+        table.openknxTitleTable:has(td:nth-child(13):hover, th:nth-child(13):hover) thead th.rotate45:nth-child(13) div span,
+        table.openknxTitleTable:has(td:nth-child(14):hover, th:nth-child(14):hover) thead th.rotate45:nth-child(14) div span,
+        table.openknxTitleTable:has(td:nth-child(15):hover, th:nth-child(15):hover) thead th.rotate45:nth-child(15) div span,
+        table.openknxTitleTable:has(td:nth-child(16):hover, th:nth-child(16):hover) thead th.rotate45:nth-child(16) div span,
+        table.openknxTitleTable:has(td:nth-child(17):hover, th:nth-child(17):hover) thead th.rotate45:nth-child(17) div span,
+        table.openknxTitleTable:has(td:nth-child(18):hover, th:nth-child(18):hover) thead th.rotate45:nth-child(18) div span,
+        table.openknxTitleTable:has(td:nth-child(19):hover, th:nth-child(19):hover) thead th.rotate45:nth-child(19) div span,
+        table.openknxTitleTable:has(td:nth-child(20):hover, th:nth-child(20):hover) thead th.rotate45:nth-child(20) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -59,9 +73,17 @@
         
         <col data-ofm="OFM-ConfigTransfer" />
         
+        <col data-ofm="OGM-HardwareConfig" />
+        
         <col data-ofm="OFM-VirtualButton" />
         
         <col data-ofm="OFM-BinaryInput" />
+        
+        <col data-ofm="OFM-FunctionBlocks" />
+        
+        <col data-ofm="OFM-Network" />
+        
+        <col data-ofm="OFM-UsbExchange" />
         
         <col data-ofm="OGM-SensorDevices" />
         
@@ -73,6 +95,12 @@
         
         <col data-ofm="OFM-ADCInput" />
         
+        <col data-ofm="OFM-DFA" />
+        
+        <col data-ofm="OFM-Meter" />
+        
+        <col data-ofm="OFM-ShutterControllerModule" />
+        
         <col data-ofm="*special*" />
        
 
@@ -81,7 +109,7 @@
     <thead>
     <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
-        <th class="before-new-cols" colspan="13">Enthaltene Module</th>
+        <th class="before-new-cols" colspan="20">Enthaltene Module</th>
         
     </tr>
     <tr>
@@ -99,9 +127,17 @@
         
         <th class="rotate45" data-ofm="OFM-ConfigTransfer"><div><span><a href="https://github.com/OpenKNX/OFM-ConfigTransfer">OFM-ConfigTransfer</a></span></div></th>
         
+        <th class="rotate45" data-ofm="OGM-HardwareConfig"><div><span><a href="https://github.com/OpenKNX/OGM-HardwareConfig">OGM-HardwareConfig</a></span></div></th>
+        
         <th class="rotate45" data-ofm="OFM-VirtualButton"><div><span><a href="https://github.com/OpenKNX/OFM-VirtualButton">OFM-VirtualButton</a></span></div></th>
         
         <th class="rotate45" data-ofm="OFM-BinaryInput"><div><span><a href="https://github.com/OpenKNX/OFM-BinaryInput">OFM-BinaryInput</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-FunctionBlocks"><div><span><a href="https://github.com/OpenKNX/OFM-FunctionBlocks">OFM-FunctionBlocks</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-Network"><div><span><a href="https://github.com/OpenKNX/OFM-Network">OFM-Network</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-UsbExchange"><div><span><a href="https://github.com/OpenKNX/OFM-UsbExchange">OFM-UsbExchange</a></span></div></th>
         
         <th class="rotate45" data-ofm="OGM-SensorDevices"><div><span><a href="https://github.com/OpenKNX/OGM-SensorDevices">OGM-SensorDevices</a></span></div></th>
         
@@ -113,6 +149,12 @@
         
         <th class="rotate45" data-ofm="OFM-ADCInput"><div><span><a href="https://github.com/OpenKNX/OFM-ADCInput">OFM-ADCInput</a></span></div></th>
         
+        <th class="rotate45" data-ofm="OFM-DFA"><div><span><a href="https://github.com/OpenKNX/OFM-DFA">OFM-DFA</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-Meter"><div><span><a href="https://github.com/OpenKNX/OFM-Meter">OFM-Meter</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-ShutterControllerModule"><div><span><a href="https://github.com/OpenKNX/OFM-ShutterControllerModule">OFM-ShutterControllerModule</a></span></div></th>
+        
         <th class="singleModules before-new-cols" data-ofm="*special*">Nur in dieser Applikation:</th>
        
 
@@ -121,6 +163,61 @@
     </tr>
     </thead>
     <tbody>
+    
+    
+    
+    
+    
+    <tr data-oam="OAM-RaumController">
+        <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-RaumController">OAM-RaumController</a><div class="oam-details">OpenKNX Applikation mit allen notwendigen Modulen, um einen Raum in einem Haus zu automatisieren</div></th>
+
+       
+        
+        <td data-ofm="OGM-Common" class="isPart">&#9632;</td>
+        
+        <td data-ofm="knx" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-FileTransferModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-LogicModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-ConfigTransfer" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OGM-HardwareConfig" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-VirtualButton" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-UsbExchange" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OGM-SensorDevices" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-SensorModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-OneWireModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-PresenceModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-ADCInput" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-DFA" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-Meter" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart">&#9632;</td>
+        
+        <td class="left before-new-cols" data-ofm="*special*">
+        </td>
+       
+
+       
+
+    </tr>
     
     
     
@@ -141,9 +238,17 @@
         
         <td data-ofm="OFM-ConfigTransfer" class="isPart">&#9632;</td>
         
+        <td data-ofm="OGM-HardwareConfig" class="isPart"></td>
+        
         <td data-ofm="OFM-VirtualButton" class="isPart">&#9632;</td>
         
         <td data-ofm="OFM-BinaryInput" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-FunctionBlocks" class="isPart"></td>
+        
+        <td data-ofm="OFM-Network" class="isPart"></td>
+        
+        <td data-ofm="OFM-UsbExchange" class="isPart"></td>
         
         <td data-ofm="OGM-SensorDevices" class="isPart">&#9632;</td>
         
@@ -154,6 +259,12 @@
         <td data-ofm="OFM-PresenceModule" class="isPart">&#9632;</td>
         
         <td data-ofm="OFM-ADCInput" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-DFA" class="isPart"></td>
+        
+        <td data-ofm="OFM-Meter" class="isPart"></td>
+        
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>

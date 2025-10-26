@@ -1755,7 +1755,23 @@
             "repo_url": "https://github.com/OpenKNX/OAM-InternetServices",
             "archived": false,
             "description": null,
-            "releases": [],
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "1.1.0",
+                    "name": "Release 1.1.0",
+                    "published_at": "2025-10-26T20:30:33Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-InternetServices/releases/tag/1.1.0",
+                    "body": "Erste \u00f6ffentliche Release.\r\n\r\n### Wetterdienst\r\n\r\n- Wetterabfrage \u00fcber OpenMeteo oder OpenWeatherMap\r\n- Aktuelle Werte\r\n- Prognose Heute\r\n- Prognose Morgen\r\n- Prognose Umschaltbar Heute/Morgen\r\n- Prognose n\u00e4chste Stunde\r\n- Prognose \u00fcbern\u00e4chste Stunde\r\n- Wetterbeschreibung\r\n- Tagestemperatur\r\n- Nachttemperatur\r\n- Fr\u00fchtemperatur\r\n- Abendtemperatur\r\n- Minimum Temperatur\r\n- Maximum Temperatur\r\n- Gef\u00fchlte Tagestemperatur\r\n- Gef\u00fchlte Nachtemperatur\r\n- Gef\u00fchlte Fr\u00fchtemperatur\r\n- Gef\u00fchlte Abendtemperatur\r\n- Luftdruck\r\n- Luftfeuchte\r\n- Wind\r\n- Windb\u00f6en\r\n- Windrichtung\r\n- Regen\r\n- Schnee\r\n- Niederschlagswahrscheinlichkeit\r\n- UV-Index\r\n- Wolken\r\n\r\n### SIP\r\n\r\n- IP Anruf zur Steuerung von Garagentoren",
+                    "assets": [
+                        {
+                            "name": "InternetServices-Release-1.1.0.zip",
+                            "updated_at": "2025-10-26T20:15:00Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-InternetServices/releases/download/1.1.0/InternetServices-Release-1.1.0.zip"
+                        }
+                    ]
+                }
+            ],
             "hw_avail_open": 0
         },
         "OAM-ShutterController": {
@@ -1765,11 +1781,26 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.4.0",
+                    "name": "Release 1.4.0",
+                    "published_at": "2025-10-26T19:48:48Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.4.0",
+                    "body": "Feature: Kanalanzahl auf 32 erh\u00f6ht\r\nFeature: Invertieren der Fensterkontakt KO\r\nFeature: Auswahl verhalten der Fensterkontakte\r\nFeature: Wartezeit f\u00fcr Fensterkontaktauswertung\r\nFix: Das setzen einer Sperre f\u00fchrte zum H\u00e4nger des gesamten Ger\u00e4tes\r\nFix: die KOs f\u00fcr offen und kipp waren vertauscht\r\nFix: Wenn man mehrmals zwischen kipp und offen wechselt, f\u00e4hrt der Rollladen beim Schlie\u00dfen nicht in die Position vor dem \u00f6ffnen, sondern in eine der kipp- oder offen-Positionen.\r\nFix: Gruppe offen / gekippt in der ETS Baumansicht vertauscht",
+                    "assets": [
+                        {
+                            "name": "ShutterController-Release-1.4.0.zip",
+                            "updated_at": "2025-10-26T19:48:25Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/download/1.4.0/ShutterController-Release-1.4.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "1.3.0",
                     "name": "Release 1.3.0",
                     "published_at": "2025-10-26T15:45:46Z",
                     "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.3.0",
-                    "body": "Feature: Invertieren der Fensterkontakt KO\r\nFeature: Auswahl verhalten der Fensterkontakte\r\nFeature: Wartezeit f\u00fcr Fensterkontaktauswertung\r\nFix: Das setzen einer Sperre f\u00fchrte zum H\u00e4nger des gesamten Ger\u00e4tes, das ist raus, aber wahrscheinlich geht es besser, ich steige nur nicht durch, was zu machen w\u00e4re.\r\nFix: die KOs f\u00fcr offen und kipp waren vertauscht\r\nFix: Wenn man mehrmals zwischen kipp und offen wechselt, f\u00e4hrt der Rollladen beim Schlie\u00dfen nicht in die Position vor dem \u00f6ffnen, sondern in eine der kipp- oder offen-Positionen.\r\nFix: Gruppe offen / gekippt in der ETS Baumansicht vertauscht\r\n",
+                    "body": "Feature: Invertieren der Fensterkontakt KO\r\nFeature: Auswahl verhalten der Fensterkontakte\r\nFeature: Wartezeit f\u00fcr Fensterkontaktauswertung\r\nFix: Das setzen einer Sperre f\u00fchrte zum H\u00e4nger des gesamten Ger\u00e4tes\r\nFix: die KOs f\u00fcr offen und kipp waren vertauscht\r\nFix: Wenn man mehrmals zwischen kipp und offen wechselt, f\u00e4hrt der Rollladen beim Schlie\u00dfen nicht in die Position vor dem \u00f6ffnen, sondern in eine der kipp- oder offen-Positionen.\r\nFix: Gruppe offen / gekippt in der ETS Baumansicht vertauscht\r\n",
                     "assets": [
                         {
                             "name": "ShutterController-Release-1.3.0.zip",

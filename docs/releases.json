@@ -1735,6 +1735,21 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.3.0",
+                    "name": "Release 1.3.0",
+                    "published_at": "2025-10-26T15:45:46Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.3.0",
+                    "body": "Feature: Invertieren der Fensterkontakt KO\r\nFeature: Auswahl verhalten der Fensterkontakte\r\nFeature: Wartezeit f\u00fcr Fensterkontaktauswertung\r\nFix: Das setzen einer Sperre f\u00fchrte zum H\u00e4nger des gesamten Ger\u00e4tes, das ist raus, aber wahrscheinlich geht es besser, ich steige nur nicht durch, was zu machen w\u00e4re.\r\nFix: die KOs f\u00fcr offen und kipp waren vertauscht\r\nFix: Wenn man mehrmals zwischen kipp und offen wechselt, f\u00e4hrt der Rollladen beim Schlie\u00dfen nicht in die Position vor dem \u00f6ffnen, sondern in eine der kipp- oder offen-Positionen.\r\nFix: Gruppe offen / gekippt in der ETS Baumansicht vertauscht\r\n",
+                    "assets": [
+                        {
+                            "name": "ShutterController-Release-1.3.0.zip",
+                            "updated_at": "2025-10-26T15:45:39Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/download/1.3.0/ShutterController-Release-1.3.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "1.2",
                     "name": "Release 1.2",
                     "published_at": "2025-09-26T16:58:51Z",

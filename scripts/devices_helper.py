@@ -48,6 +48,7 @@ class DeviceHelper:
             "PiPico-BCU-Connector": "OpenKNX PiPico BCU Connector",
             "RealPresence": "SmartMF RealPresence",
             "RealPresence_v2.0": "SmartMF RealPresence_v2.0",
+            "SmartMF-RealPresence-V2": "SmartMF RealPresence_v2.0",
             "REG1_BASE_V0": "OpenKNX REG1 Basismodul V0",
             "REG1_BASE_V1": "OpenKNX REG1 Basismodul",
 
@@ -80,6 +81,7 @@ class DeviceHelper:
             "SEN-UP1-8XTH": "OpenKNX UP1 8xSensor",
             "UP1-SEN-8x": "OpenKNX UP1 8xSensor",
             "SmartMF-1TE-RP2040": "SmartMF-1TE-RP2040",
+            "SmartMF-1TE-REG": "SmartMF-1TE-RP2040",
             "Smart-MF-eHZ-Schnittstelle": "SmartMF-eHZ-Schnittstelle",
             "Smart-MF-S0-Zaehlermodul": "SmartMF-S0-Zaehlermodul",
             "SmartMF-Sensormodul-RP2040": "SmartMF-Sensormodul-v4.x-RP2040",

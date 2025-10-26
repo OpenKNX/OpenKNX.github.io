@@ -40,6 +40,7 @@ appOrder = [
     "OAM-ShutterController",
 
     # virtual with optional hardware
+    "OAM-RaumController",
     "OAM-PresenceModule",
     "OAM-VirtualButton",
     "OAM-Meter",
@@ -53,7 +54,7 @@ appOrder = [
     "OAM-InfraredGateway",
     "OAM-OneWireModule",
     "OAM-EnoceanGateway",
-    # "OAM-EnoceanGateway_V2"
+    "OAM-EnoceanGateway_V2",
     "OAM-ModbusGateway",
     "OAM-Aircondition",
     "OAM-Nuki",
@@ -61,11 +62,11 @@ appOrder = [
     # gateways with ip
     "OAM-Sonos",
     "OAM-Homematic",
+    "OAM-SmartHomeBridge",
 
     # network
-    "OAM-IP-Router",
     "OAM-InternetServices",
-    "OAM-SmartHomeBridge",
+    "OAM-IP-Router",
 
     # dummy-app only
     "OAM-Dummy",

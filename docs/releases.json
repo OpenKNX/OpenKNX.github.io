@@ -2200,8 +2200,24 @@
             "repo_url": "https://github.com/OpenKNX/OAM-RaumController",
             "archived": false,
             "description": "OpenKNX Applikation mit allen notwendigen Modulen, um einen Raum in einem Haus zu automatisieren",
-            "releases": [],
-            "hw_avail_open": 0
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "5.1.0",
+                    "name": "5.1.0",
+                    "published_at": "2025-10-26T21:23:08Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-RaumController/releases/tag/5.1.0",
+                    "body": "Das ist ein update-kompatibler Nachfolger vom [OAM-SensorModule](https://github.com/OpenKNX/OAM-SensorModule), die Version 5.0.0 folgt unmittelbar auf die bisher verf\u00fcgbare Version 4.2.5 vom [OAM-SensorModule](https://github.com/OpenKNX/OAM-SensorModule). **Vor einem Update bitte die Update-Informationen in der [Applikationsbeschreibung](https://github.com/OpenKNX/OAM-RaumController/blob/v1/doc/Applikationsbeschreibung-RaumController.md#update-vom-sensormodul-4x) lesen!**\r\n\r\nWas ist neu?\r\n\r\nDer RaumController vereint viele OpenKNX-Module, die f\u00fcr die Sensorik und die Steuerung eines Raumes verantwortlich sind, in einem Ger\u00e4t. Er beinhaltet - wie bisher:\r\n* die Sensoren zur Messung vom Raumklima\r\n* den Pr\u00e4senzmelder zur Anwesenheitserkennung\r\n* die Taster f\u00fcr haptische Aktionen\r\n* das Logikmodul zur L\u00f6sung von einfachen Steueraufgaben\r\n* die Bin\u00e4r- und Analogeing\u00e4nge zur Verarbeitung externer Signale\r\n\r\nErg\u00e4nzt wurde noch:\r\n* eine Jalousie- und Rollladensteuerung mit Beschattungsoption\r\n* Zustandsautomaten zur L\u00f6sung von komplexen Steueraufgaben\r\n* einige Z\u00e4hler, um lokale Verbr\u00e4uche zu erfassen\r\n* Funktionsbl\u00f6cke als Erg\u00e4nzung zum Logikmodul\r\n* 1-Wire zur alternativen Messung vom Raumklima\r\n\r\nDas Ziel ist es, ein KNX-Ger\u00e4t zu schaffen, dass pro Raum die Daten erfassen, auswerten und zur Steuerung dieses Raumes nutzen kann, ohne auf eine zentrale Logikengine angewiesen zu sein.\r\n\r\nWeitere Details im Support-Thread im [KNX-User-Forum](https://knx-user-forum.de/forum/projektforen/openknx/2060692-openknx-raumcontroller-release-oder-aus-dem-sensormodul-wird-ein-raumcontroller)\r\n",
+                    "assets": [
+                        {
+                            "name": "RaumController-Release-5.1.0.zip",
+                            "updated_at": "2025-10-26T21:12:56Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-RaumController/releases/download/5.1.0/RaumController-Release-5.1.0.zip"
+                        }
+                    ]
+                }
+            ],
+            "hw_avail_open": 7
         }
     }
 }

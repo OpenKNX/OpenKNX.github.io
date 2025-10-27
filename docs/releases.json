@@ -1590,7 +1590,23 @@
             "repo_url": "https://github.com/OpenKNX/OAM-Sonos",
             "archived": false,
             "description": "Sonos Steuerung \u00fcber KNX",
-            "releases": [],
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.6.0-beta",
+                    "name": "Beta 0.6.0",
+                    "published_at": "2025-10-27T18:54:14Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Sonos/releases/tag/0.6.0-beta",
+                    "body": "Diese Version ist stabil f\u00fcr 4 Sonos Speaker. F\u00fcr mehr Sonos Speaker ist die Version als Beta eingestuft.\r\n\r\nDies Firmware erlaubt die Steuerung von Sonos \u00fcber das nicht offizielle lokale API.\r\nDas bedeutet, dass in Zukunft Sonos das API abschalten kann und die Steuerung dann nicht mehr funktioniert.\r\nIn diesem Fall, wird jedoch versucht ein Update mit \u00e4hnlicher Funktionalit\u00e4t \u00fcber das offizielle Sonos Cloud API zur Verf\u00fcgung zu stellen.\r\n\r\nFunktionen:\r\n\r\n- Gruppieren / Gruppierung aufheben\r\n- Zum n\u00e4chsten aktiven Wiedergabe-Gruppe wechseln\r\n- Lautst\u00e4rke \u00e4ndern\r\n- Stummschalten\r\n- Wiedergabe / Pause\r\n- Radio, Mediendateien usw. abspielen\r\n- Benachrichtigungston \u00fcber der aktuell laufenden Musik wiedergeben",
+                    "assets": [
+                        {
+                            "name": "Sonos-Beta-0.6.0.zip",
+                            "updated_at": "2025-10-26T21:06:55Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Sonos/releases/download/0.6.0-beta/Sonos-Beta-0.6.0.zip"
+                        }
+                    ]
+                }
+            ],
             "hw_avail_open": 0
         },
         "OAM-ElectricDoorDrive": {

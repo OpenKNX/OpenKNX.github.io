@@ -1773,7 +1773,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 0
+            "hw_avail_open": 5
         },
         "OAM-ShutterController": {
             "repo_url": "https://github.com/OpenKNX/OAM-ShutterController",

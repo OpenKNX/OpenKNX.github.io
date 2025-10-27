@@ -29,6 +29,8 @@
         table.openknxTitleTable:has(td:nth-child(21):hover, thead > tr:nth-child(2) > th:nth-child(21):hover) td:nth-child(21).isPart,
         table.openknxTitleTable:has(td:nth-child(22):hover, thead > tr:nth-child(2) > th:nth-child(22):hover) td:nth-child(22).isPart,
         table.openknxTitleTable:has(td:nth-child(23):hover, thead > tr:nth-child(2) > th:nth-child(23):hover) td:nth-child(23).isPart,
+        table.openknxTitleTable:has(td:nth-child(24):hover, thead > tr:nth-child(2) > th:nth-child(24):hover) td:nth-child(24).isPart,
+        table.openknxTitleTable:has(td:nth-child(25):hover, thead > tr:nth-child(2) > th:nth-child(25):hover) td:nth-child(25).isPart,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
@@ -54,7 +56,9 @@
         table.openknxTitleTable:has(td:nth-child(20):hover, th:nth-child(20):hover) thead th.rotate45:nth-child(20) div span,
         table.openknxTitleTable:has(td:nth-child(21):hover, th:nth-child(21):hover) thead th.rotate45:nth-child(21) div span,
         table.openknxTitleTable:has(td:nth-child(22):hover, th:nth-child(22):hover) thead th.rotate45:nth-child(22) div span,
-        table.openknxTitleTable:has(td:nth-child(23):hover, th:nth-child(23):hover) thead th.rotate45:nth-child(23) div span
+        table.openknxTitleTable:has(td:nth-child(23):hover, th:nth-child(23):hover) thead th.rotate45:nth-child(23) div span,
+        table.openknxTitleTable:has(td:nth-child(24):hover, th:nth-child(24):hover) thead th.rotate45:nth-child(24) div span,
+        table.openknxTitleTable:has(td:nth-child(25):hover, th:nth-child(25):hover) thead th.rotate45:nth-child(25) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -103,6 +107,8 @@
         
         <col data-ofm="OFM-DFA" />
         
+        <col data-ofm="OFM-InternetWeatherModule" />
+        
         <col data-ofm="OFM-Meter" />
         
         <col data-ofm="OFM-ShutterControllerModule" />
@@ -117,7 +123,7 @@
     <thead>
     <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
-        <th class="before-new-cols" colspan="21">Enthaltene Module</th>
+        <th class="before-new-cols" colspan="22">Enthaltene Module</th>
         
     </tr>
     <tr>
@@ -158,6 +164,8 @@
         <th class="rotate45" data-ofm="OFM-ADCInput"><div><span><a href="https://github.com/OpenKNX/OFM-ADCInput">OFM-ADCInput</a></span></div></th>
         
         <th class="rotate45" data-ofm="OFM-DFA"><div><span><a href="https://github.com/OpenKNX/OFM-DFA">OFM-DFA</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-InternetWeatherModule"><div><span><a href="https://github.com/OpenKNX/OFM-InternetWeatherModule">OFM-InternetWeatherModule</a></span></div></th>
         
         <th class="rotate45" data-ofm="OFM-Meter"><div><span><a href="https://github.com/OpenKNX/OFM-Meter">OFM-Meter</a></span></div></th>
         
@@ -217,6 +225,8 @@
         
         <td data-ofm="OFM-DFA" class="isPart">&#9632;</td>
         
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart"></td>
+        
         <td data-ofm="OFM-Meter" class="isPart">&#9632;</td>
         
         <td data-ofm="OFM-ShutterControllerModule" class="isPart">&#9632;</td>
@@ -273,6 +283,8 @@
         <td data-ofm="OFM-ADCInput" class="isPart"></td>
         
         <td data-ofm="OFM-DFA" class="isPart"></td>
+        
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart"></td>
         
         <td data-ofm="OFM-Meter" class="isPart">&#9632;</td>
         
@@ -332,6 +344,8 @@
         
         <td data-ofm="OFM-DFA" class="isPart"></td>
         
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart"></td>
+        
         <td data-ofm="OFM-Meter" class="isPart"></td>
         
         <td data-ofm="OFM-ShutterControllerModule" class="isPart"></td>
@@ -390,6 +404,8 @@
         
         <td data-ofm="OFM-DFA" class="isPart"></td>
         
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart"></td>
+        
         <td data-ofm="OFM-Meter" class="isPart"></td>
         
         <td data-ofm="OFM-ShutterControllerModule" class="isPart"></td>
@@ -397,6 +413,66 @@
         <td data-ofm="OFM-SmartHomeBridge" class="isPart">&#9632;</td>
         
         <td class="left before-new-cols" data-ofm="*special*">
+        </td>
+       
+
+       
+
+    </tr>
+    
+    
+    
+    
+    
+    <tr data-oam="OAM-InternetServices">
+        <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-InternetServices">OAM-InternetServices</a></th>
+
+       
+        
+        <td data-ofm="OGM-Common" class="isPart">&#9632;</td>
+        
+        <td data-ofm="knx" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-FileTransferModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-LogicModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-ConfigTransfer" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OGM-HardwareConfig" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-VirtualButton" class="isPart"></td>
+        
+        <td data-ofm="OFM-BinaryInput" class="isPart"></td>
+        
+        <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-UsbExchange" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OGM-SensorDevices" class="isPart"></td>
+        
+        <td data-ofm="OFM-SensorModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-OneWireModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-PresenceModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-ADCInput" class="isPart"></td>
+        
+        <td data-ofm="OFM-DFA" class="isPart"></td>
+        
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-Meter" class="isPart"></td>
+        
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart"></td>
+        
+        <td data-ofm="OFM-SmartHomeBridge" class="isPart"></td>
+        
+        <td class="left before-new-cols" data-ofm="*special*">
+                <span data-ofm="OFM-SIPClientModule"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-SIPClientModule">OFM-SIPClientModule</a></span>
         </td>
        
 
@@ -446,6 +522,8 @@
         <td data-ofm="OFM-ADCInput" class="isPart"></td>
         
         <td data-ofm="OFM-DFA" class="isPart"></td>
+        
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart"></td>
         
         <td data-ofm="OFM-Meter" class="isPart"></td>
         

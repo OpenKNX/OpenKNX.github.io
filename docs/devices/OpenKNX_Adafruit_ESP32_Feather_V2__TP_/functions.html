@@ -17,6 +17,9 @@
         table.openknxTitleTable:has(td:nth-child(9):hover, thead > tr:nth-child(2) > th:nth-child(9):hover) td:nth-child(9).isPart,
         table.openknxTitleTable:has(td:nth-child(10):hover, thead > tr:nth-child(2) > th:nth-child(10):hover) td:nth-child(10).isPart,
         table.openknxTitleTable:has(td:nth-child(11):hover, thead > tr:nth-child(2) > th:nth-child(11):hover) td:nth-child(11).isPart,
+        table.openknxTitleTable:has(td:nth-child(12):hover, thead > tr:nth-child(2) > th:nth-child(12):hover) td:nth-child(12).isPart,
+        table.openknxTitleTable:has(td:nth-child(13):hover, thead > tr:nth-child(2) > th:nth-child(13):hover) td:nth-child(13).isPart,
+        table.openknxTitleTable:has(td:nth-child(14):hover, thead > tr:nth-child(2) > th:nth-child(14):hover) td:nth-child(14).isPart,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
@@ -30,7 +33,10 @@
         table.openknxTitleTable:has(td:nth-child(8):hover, th:nth-child(8):hover) thead th.rotate45:nth-child(8) div span,
         table.openknxTitleTable:has(td:nth-child(9):hover, th:nth-child(9):hover) thead th.rotate45:nth-child(9) div span,
         table.openknxTitleTable:has(td:nth-child(10):hover, th:nth-child(10):hover) thead th.rotate45:nth-child(10) div span,
-        table.openknxTitleTable:has(td:nth-child(11):hover, th:nth-child(11):hover) thead th.rotate45:nth-child(11) div span
+        table.openknxTitleTable:has(td:nth-child(11):hover, th:nth-child(11):hover) thead th.rotate45:nth-child(11) div span,
+        table.openknxTitleTable:has(td:nth-child(12):hover, th:nth-child(12):hover) thead th.rotate45:nth-child(12) div span,
+        table.openknxTitleTable:has(td:nth-child(13):hover, th:nth-child(13):hover) thead th.rotate45:nth-child(13) div span,
+        table.openknxTitleTable:has(td:nth-child(14):hover, th:nth-child(14):hover) thead th.rotate45:nth-child(14) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -61,6 +67,10 @@
         
         <col data-ofm="OFM-Network" />
         
+        <col data-ofm="OFM-UsbExchange" />
+        
+        <col data-ofm="OFM-InternetWeatherModule" />
+        
         <col data-ofm="OFM-SmartHomeBridge" />
         
         <col data-ofm="*special*" />
@@ -71,7 +81,7 @@
     <thead>
     <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
-        <th class="before-new-cols" colspan="10">Enthaltene Module</th>
+        <th class="before-new-cols" colspan="12">Enthaltene Module</th>
         
     </tr>
     <tr>
@@ -94,6 +104,10 @@
         <th class="rotate45" data-ofm="OFM-FunctionBlocks"><div><span><a href="https://github.com/OpenKNX/OFM-FunctionBlocks">OFM-FunctionBlocks</a></span></div></th>
         
         <th class="rotate45" data-ofm="OFM-Network"><div><span><a href="https://github.com/OpenKNX/OFM-Network">OFM-Network</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-UsbExchange"><div><span><a href="https://github.com/OpenKNX/OFM-UsbExchange">OFM-UsbExchange</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-InternetWeatherModule"><div><span><a href="https://github.com/OpenKNX/OFM-InternetWeatherModule">OFM-InternetWeatherModule</a></span></div></th>
         
         <th class="rotate45" data-ofm="OFM-SmartHomeBridge"><div><span><a href="https://github.com/OpenKNX/OFM-SmartHomeBridge">OFM-SmartHomeBridge</a></span></div></th>
         
@@ -131,6 +145,10 @@
         
         <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
         
+        <td data-ofm="OFM-UsbExchange" class="isPart"></td>
+        
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart"></td>
+        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
@@ -165,6 +183,10 @@
         <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
         
         <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-UsbExchange" class="isPart"></td>
+        
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart"></td>
         
         <td data-ofm="OFM-SmartHomeBridge" class="isPart"></td>
         
@@ -202,9 +224,53 @@
         
         <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
         
+        <td data-ofm="OFM-UsbExchange" class="isPart"></td>
+        
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart"></td>
+        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart">&#9632;</td>
         
         <td class="left before-new-cols" data-ofm="*special*">
+        </td>
+       
+
+       
+
+    </tr>
+    
+    
+    
+    
+    
+    <tr data-oam="OAM-InternetServices">
+        <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-InternetServices">OAM-InternetServices</a></th>
+
+       
+        
+        <td data-ofm="OGM-Common" class="isPart">&#9632;</td>
+        
+        <td data-ofm="knx" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-FileTransferModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-LogicModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-ConfigTransfer" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OGM-HardwareConfig" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-UsbExchange" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart">&#9632;</td>
+        
+        <td data-ofm="OFM-SmartHomeBridge" class="isPart"></td>
+        
+        <td class="left before-new-cols" data-ofm="*special*">
+                <span data-ofm="OFM-SIPClientModule"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-SIPClientModule">OFM-SIPClientModule</a></span>
         </td>
        
 

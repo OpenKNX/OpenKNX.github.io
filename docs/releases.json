@@ -1607,7 +1607,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 0
+            "hw_avail_open": 4
         },
         "OAM-ElectricDoorDrive": {
             "repo_url": "https://github.com/OpenKNX/OAM-ElectricDoorDrive",

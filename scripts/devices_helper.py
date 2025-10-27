@@ -67,6 +67,12 @@ class DeviceHelper:
             "Sonos-REG1-LAN-Base": "OpenKNX REG1 Basismodul IP",
             "Sonos-REG1-LAN-TP-Base": "OpenKNX REG1 Basismodul LAN+TP",
 
+            "InternetServices-REG1-ETH": "OpenKNX REG1 Basismodul IP",
+            "InternetServices-Adafruit_Feather_ESP32_V2_IP": "OpenKNX Adafruit ESP32 Feather V2",
+            "InternetServices-Adafruit_Feather_ESP32_V2_TP": "OpenKNX Adafruit ESP32 Feather V2 (TP)",
+            "InternetServices-REG1-LAN-Base": "OpenKNX REG1 Basismodul IP",
+            "InternetServices-REG1-LAN-TP-Base": "OpenKNX REG1 Basismodul LAN+TP",
+
             # DALI-Devices
             "REG1-v0": "OpenKNX REG1 Dali Gateway V0",
             "REG1-v1": "OpenKNX REG1 Dali Gateway",

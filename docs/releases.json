@@ -1001,21 +1001,6 @@
             "releases": [
                 {
                     "prerelease": false,
-                    "tag_name": "0.15.0",
-                    "name": "Release 0.15.0",
-                    "published_at": "2025-10-26T16:43:49Z",
-                    "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/0.15.0",
-                    "body": "- Feature: Thermostat Heizung/Klimager\u00e4t \u00fcber HVAC steuern\r\n- Feature: Bei den Funktionsbl\u00f6cken k\u00f6nnen die Eing\u00e4nge benannt werden\r\n- Feature: Nicht ben\u00f6tigte Module k\u00f6nnen in der ETS ausgeblendet werden\r\n",
-                    "assets": [
-                        {
-                            "name": "ShutterController-Release-1.3.0.zip",
-                            "updated_at": "2025-10-26T16:43:45Z",
-                            "browser_download_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/download/0.15.0/ShutterController-Release-1.3.0.zip"
-                        }
-                    ]
-                },
-                {
-                    "prerelease": false,
                     "tag_name": "0.14.3",
                     "name": "Release 0.14.3",
                     "published_at": "2025-09-26T16:47:10Z",
@@ -1045,7 +1030,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 3
+            "hw_avail_open": 4
         },
         "OAM-StateEngine": {
             "repo_url": "https://github.com/OpenKNX/OAM-StateEngine",
@@ -2201,6 +2186,21 @@
             "archived": false,
             "description": "OpenKNX Applikation mit allen notwendigen Modulen, um einen Raum in einem Haus zu automatisieren",
             "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "5.1.3",
+                    "name": "5.1.3",
+                    "published_at": "2025-10-27T17:47:28Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-RaumController/releases/tag/5.1.3",
+                    "body": "Nach dem Release ist vor dem Release...\r\n\r\nKleine Verbesserung beim FileTransferModule: Jetzt ist auch eine Wiederaufnahme der Firmware\u00fcbertragung m\u00f6glich, ohne mindestens 30 Sekunden zu warten.\r\n\r\nAnsonsten gilt alles zum Release 5.1.0 gesagte.",
+                    "assets": [
+                        {
+                            "name": "RaumController-Release-5.1.3.zip",
+                            "updated_at": "2025-10-27T17:47:22Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-RaumController/releases/download/5.1.3/RaumController-Release-5.1.3.zip"
+                        }
+                    ]
+                },
                 {
                     "prerelease": false,
                     "tag_name": "5.1.0",

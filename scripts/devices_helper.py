@@ -22,7 +22,7 @@ class DeviceHelper:
             "firmware_SOM_UP": "SmartMF Soundmodul",
             "GardenControl": "SmartMF-GardenControl",
             "GW-UP1-IR": "OpenKNX UP1 8xSensor",  # TODO: deprecated
-            "IP-Router-REG1-Eth": "OpenKNX REG1 Basismodul IP",
+            "IP-Router-REG1-Eth": "OpenKNX REG1 LAN Gateway",
             "OpenKNX-REG1-Basismodul-IP": "OpenKNX REG1 Basismodul IP",
             "OpenKNX-REG1-LAN-BASE": "OpenKNX REG1 Basismodul IP",
             "IP-Router-REG1-LAN-TP-Base": "OpenKNX REG1 Basismodul LAN+TP",
@@ -67,7 +67,7 @@ class DeviceHelper:
             "Sonos-REG1-LAN-Base": "OpenKNX REG1 Basismodul IP",
             "Sonos-REG1-LAN-TP-Base": "OpenKNX REG1 Basismodul LAN+TP",
 
-            "InternetServices-REG1-ETH": "OpenKNX REG1 Basismodul IP",
+            "InternetServices-REG1-ETH": "OpenKNX REG1 LAN Gateway",
             "InternetServices-Adafruit_Feather_ESP32_V2_IP": "OpenKNX Adafruit ESP32 Feather V2",
             "InternetServices-Adafruit_Feather_ESP32_V2_TP": "OpenKNX Adafruit ESP32 Feather V2 (TP)",
             "InternetServices-REG1-LAN-Base": "OpenKNX REG1 Basismodul IP",

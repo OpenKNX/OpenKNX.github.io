@@ -1001,6 +1001,21 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.15.0",
+                    "name": "Release 0.15.0",
+                    "published_at": "2025-10-29T20:01:51Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/0.15.0",
+                    "body": "Feature: HVAC KO f\u00fcr Thermostate\r\nFeature: Nicht benutzte Module ausblendbar\r\nFeature: Bei den Funktionsbl\u00f6cken k\u00f6nnen Eing\u00e4nge benannt werden",
+                    "assets": [
+                        {
+                            "name": "SmartHomeBridge-Release-0.15.0.zip",
+                            "updated_at": "2025-10-29T19:58:55Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/download/0.15.0/SmartHomeBridge-Release-0.15.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.14.3",
                     "name": "Release 0.14.3",
                     "published_at": "2025-09-26T16:47:10Z",

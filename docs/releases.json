@@ -1681,7 +1681,13 @@
                     "published_at": "2025-10-29T20:59:49Z",
                     "html_url": "https://github.com/OpenKNX/OAM-TouchRound/releases/tag/1.2.2",
                     "body": "Fix: Absturz bei Ger\u00e4ten die f\u00fcr Testzwecke deaktiviert wurden",
-                    "assets": []
+                    "assets": [
+                        {
+                            "name": "TouchRound-Release-1.2.2.zip",
+                            "updated_at": "2025-10-30T05:36:39Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-TouchRound/releases/download/1.2.2/TouchRound-Release-1.2.2.zip"
+                        }
+                    ]
                 },
                 {
                     "prerelease": false,

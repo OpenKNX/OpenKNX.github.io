@@ -19,7 +19,10 @@ class DeviceHelper:
             "EnoceanGateway_RP2040": "SmartMF Enocean Gateway RP2040",
             "firmware_REG1-SA-4xSELV": "OpenKNX REG1 4xSELV Schaltaktor",
             "firmware_UP1-GW-RS485": "OpenKNX UP1 RS485 Gateway",
-            "firmware_SOM_UP": "SmartMF Soundmodul",
+            "firmware_SOM_UP": "Smart-MF Soundmodul UP",
+            "SmartMF-Soundmodul-UP": "Smart-MF Soundmodul UP",
+            "SmartMF-Soundmodul-UP-EXT-PWR": "Smart-MF Soundmodul UP (Ext-Power)",
+            "SmartMF-Soundmodul-REG: "Smart-MF Soundmodul REG",
             "GardenControl": "SmartMF-GardenControl",
             "GW-UP1-IR": "OpenKNX UP1 8xSensor",  # TODO: deprecated
             "IP-Router-REG1-Eth": "OpenKNX REG1 LAN Gateway",
@@ -93,6 +96,7 @@ class DeviceHelper:
             "UP1-SEN-8x": "OpenKNX UP1 8xSensor",
             "SmartMF-1TE-RP2040": "SmartMF-1TE-RP2040",
             "SmartMF-1TE-REG": "SmartMF-1TE-RP2040",
+            "firmware_SMARTMF_1TE_REG": "SmartMF-1TE-RP2040",
             "Smart-MF-eHZ-Schnittstelle": "SmartMF-eHZ-Schnittstelle",
             "Smart-MF-S0-Zaehlermodul": "SmartMF-S0-Zaehlermodul",
             "SmartMF-Sensormodul-RP2040": "SmartMF-Sensormodul-v4.x-RP2040",
@@ -103,6 +107,8 @@ class DeviceHelper:
             "XIAO_MINI_V1": "OpenKNXiao V1",  # old, # TODO check removal
             "OpenKNX-OpenKNXiao-V1-Mini-RP2040": "OpenKNXiao V1 Mini RP2040",
             "OpenKNX-OpenKNXiao-V1-Mini-ESP32": "OpenKNXiao V1 Mini ESP32",
+
+            "AB-TouchRound-RP2350": "AB-SmartHouse-TouchRound-RP2350",
         }
 
     def is_open_device(self, device_name):

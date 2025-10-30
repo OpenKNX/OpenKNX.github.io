@@ -51,6 +51,8 @@ class ReleaseManager:
                         "assets": [
                             {
                                 "name": asset.get("name"),
+                                "size": asset.get("size"),
+                                "digest": asset.get("digest"),
                                 "updated_at": asset.get("updated_at"),
                                 "browser_download_url": asset.get("browser_download_url")
                             }

@@ -161,7 +161,41 @@ def process_releases(releases_data):
             ## TODO check all?
             logging.info(f"Fetching release archive {oam} from {asset['browser_download_url']}")
 
-            hardware_info, app_stat = process_release_zip(asset['browser_download_url'])
+            # cache results of process_release_zip: use filename as key inside of oam-directory:
+
+            app_stat = None
+            hardware_info = None
+
+            # hardware_info, app_stat = process_release_zip(asset['browser_download_url'])
+            out_dir = os.path.join("releases_data", oam)
+            os.makedirs(out_dir, exist_ok=True)
+            filename = asset.get('digest')
+            if not filename:
+                logging.warning(f"No digest found for asset {asset['name']} in {oam}!")
+                # logging.warning(f"asset: {json.dumps(asset, indent=4)}")
+                if asset.get("name", False) and asset.get("updated_at", False) and asset.get("size", False):
+                    filename = f"{asset.get('name')}__{asset.get('updated_at')}__{asset.get('size')}"
+                else:
+                    logging.info("+++")
+                    continue
+
+            out_path = os.path.join(out_dir, f"{filename.replace(":", "_")}.json")
+            if os.path.exists(out_path):
+                with open(out_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                hardware_info = data.get("hardware_info")
+                app_stat = data.get("app_stat")
+            else:
+                hardware_info, app_stat = process_release_zip(asset['browser_download_url'])
+                data = {}
+                if hardware_info:
+                    data["hardware_info"] = hardware_info
+                if app_stat and False:
+                    data["app_stat"] = app_stat
+
+                with open(out_path, "w", encoding="utf-8") as f:
+                    json.dump(data, f, ensure_ascii=False, indent=4)
+
             if app_stat is not None:
                 oam_stat[oam] = app_stat
             if hardware_info is not None:
@@ -214,6 +248,17 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
     return {**oam_data_sorted, **oam_data_unsorted}
 
 
+def write_releases_json(oam_releases_data):
+    releases_data = {
+        "OpenKnxContentType": "OpenKNX/OAM/Releases",
+        "OpenKnxFormatVersion": "v0.3.0",
+        "data": oam_releases_data
+    }
+    with open(os.path.join("docs", 'releases.json'), 'w') as outfile:
+        json.dump(releases_data, outfile, indent=4)
+    # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")
+
+
 def main(force_update=False):
     oam_repos = release_manager.fetch_app_repos()
 
@@ -246,14 +291,8 @@ def main(force_update=False):
     for oam, oam_data in oam_releases_data.items():
         oam_data["hw_avail_open"] = sum(1 for name in oam_hardware.get(oam, []) if device_helper.is_open_device(name))
 
-    releases_data = {
-        "OpenKnxContentType": "OpenKNX/OAM/Releases",
-        "OpenKnxFormatVersion": "v0.2.0",
-        "data": oam_releases_data
-    }
-    with open(os.path.join("docs", 'releases.json'), 'w') as outfile:
-        json.dump(releases_data, outfile, indent=4)
-    # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")
+    # write releases.json for openknx-toolbox
+    write_releases_json(oam_releases_data)
 
     # app statistics
     for oamName, oamStat in oam_stat.items():

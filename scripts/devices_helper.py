@@ -22,7 +22,7 @@ class DeviceHelper:
             "firmware_SOM_UP": "Smart-MF Soundmodul UP",
             "SmartMF-Soundmodul-UP": "Smart-MF Soundmodul UP",
             "SmartMF-Soundmodul-UP-EXT-PWR": "Smart-MF Soundmodul UP (Ext-Power)",
-            "SmartMF-Soundmodul-REG: "Smart-MF Soundmodul REG",
+            "SmartMF-Soundmodul-REG": "Smart-MF Soundmodul REG",
             "GardenControl": "SmartMF-GardenControl",
             "GW-UP1-IR": "OpenKNX UP1 8xSensor",  # TODO: deprecated
             "IP-Router-REG1-Eth": "OpenKNX REG1 LAN Gateway",

@@ -1,0 +1,243 @@
+{
+    "Repositories": [
+        {
+            "Repository": "OAM-RaumController",
+            "HelpThread": "https://knx-user-forum.de/forum/projektforen/openknx/2060692-openknx-raumcontroller-release-oder-aus-dem-sensormodul-wird-ein-raumcontroller",
+            "Description": "RaumController zur Realisierung von Raumregelungsfunktionen auf KNX Basis.",
+            "Apps": [
+                {
+                    "AppId": "$A011",
+                    "Label": "dev"
+                },
+                {
+                    "AppId": "$A012",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "OAM-LogicModule",
+            "HelpThread": "https://knx-user-forum.de/forum/projektforen/openknx/1765082-openknx-logikmodul-release",
+            "Description": "LogicModule zur Realisierung von Logikfunktionen auf KNX Basis.",
+            "Apps": [
+                {
+                    "AppId": "$A031",
+                    "Label": "dev"
+                },
+                {
+                    "AppId": "$A030",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "OAM-SEN-UP1-8xTH",
+            "HelpThread": "",
+            "Description": "SensorModule zur Realisierung von Sensorfunktionen auf KNX Basis.",
+            "Apps": [
+                {
+                    "AppId": "$A102",
+                    "Label": "release"
+                },
+                {
+                    "AppId": "$A103",
+                    "Label": "beta"
+                }
+            ]
+        },
+        {
+            "Repository": "OAM-IP-Router",
+            "HelpThread": "",
+            "Description": "IP-Router zur Realisierung von KNXnet/IP Kommunikation auf KNX Basis.",
+            "Apps": [
+                {
+                    "AppId": "$A11E",
+                    "Label": "beta"
+                },
+                {
+                    "AppId": "$A11F",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "SOM-UP",
+            "HelpThread": "",
+            "Description": "SoundModule zur Realisierung von Audiofunktionen auf KNX Basis.",
+            "Apps": [
+                {
+                    "AppId": "$A228",
+                    "Label": "release"
+                },
+                {
+                    "AppId": "$A229",
+                    "Label": "dev"
+                }
+            ]
+        },
+        {
+            "Repository": "OAM-InfraredGateway",
+            "HelpThread": "",
+            "Description": "Infrarot-Gateway zur Realisierung von Infrarot-Kommunikation auf KNX Basis.",
+            "Apps": [
+                {
+                    "AppId": "$A400",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "GW-REG1-Dali",
+            "HelpThread": "",
+            "Description": "Gateway zur Realisierung von DALI-Kommunikation auf KNX Basis.",
+            "Apps": [
+                {
+                    "AppId": "$A401",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "Omote",
+            "HelpThread": "",
+            "Description": "Omote zur Realisierung von KNX Bedienfunktionen.",
+            "Apps": [
+                {
+                    "AppId": "$A402",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "VirtualButtonModule",
+            "HelpThread": "",
+            "Description": "",
+            "Apps": [
+                {
+                    "AppId": "$A302",
+                    "Label": "release"
+                },
+                {
+                    "AppId": "$A303",
+                    "Label": "beta"
+                }
+            ]
+        },
+        {
+            "Repository": "OAM-TouchRound",
+            "HelpThread": "",
+            "Description": "",
+            "Apps": [
+                {
+                    "AppId": "$A604",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "OAM-SmartHomeBridge",
+            "HelpThread": "",
+            "Description": "",
+            "Apps": [
+                {
+                    "AppId": "$AE29",
+                    "Label": "dev"
+                },
+                {
+                    "AppId": "$AE2A",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "OAM-Sonos",
+            "HelpThread": "",
+            "Description": "",
+            "Apps": [
+                {
+                    "AppId": "$AE2B",
+                    "Label": "dev"
+                },
+                {
+                    "AppId": "$AE2C",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "OAM-InternetServices",
+            "HelpThread": "",
+            "Description": "",
+            "Apps": [
+                {
+                    "AppId": "$AE2D",
+                    "Label": "dev"
+                },
+                {
+                    "AppId": "$AE2E",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "OAM-ShutterControl",
+            "HelpThread": "",
+            "Description": "",
+            "Apps": [
+                {
+                    "AppId": "$AE31",
+                    "Label": "dev"
+                },
+                {
+                    "AppId": "$AE32",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "OAM-TouchDisplay",
+            "HelpThread": "",
+            "Description": "",
+            "Apps": [
+                {
+                    "AppId": "$AE33",
+                    "Label": "dev"
+                },
+                {
+                    "AppId": "$AE34",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "OAM-Aircondition",
+            "HelpThread": "",
+            "Description": "",
+            "Apps": [
+                {
+                    "AppId": "$AE33",
+                    "Label": "dev"
+                },
+                {
+                    "AppId": "$AE34",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
+            "Repository": "OAM-Nuki",
+            "HelpThread": "",
+            "Description": "",
+            "Apps": [
+                {
+                    "AppId": "$AE37",
+                    "Label": "dev"
+                },
+                {
+                    "AppId": "$AE38",
+                    "Label": "release"
+                }
+            ]
+        }
+    ]
+}

@@ -1053,6 +1053,21 @@
             "description": "State Machines for KNX configurable via ETS",
             "releases": [
                 {
+                    "prerelease": true,
+                    "tag_name": "v0.7.1",
+                    "name": "v0.7.1 (Bedingte Zustands\u00fcberg\u00e4nge)",
+                    "published_at": "2025-11-14T21:30:47Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.7.1",
+                    "body": "> *Anmerkung:* Das Versions-Schema weicht vom Konzept der semantischen Versionierung ([SemVer](https://semver.org/)) ab!\r\n> Dies ist aufgrund von technischen Limitationen der ETS erforderlich.\r\n\r\n> Wichtige Update-Hinweise **f\u00fcr Nutzer der Version v0.1 Public Beta \"StateEngineDFA16\"**:\r\n>\r\n> Wie bereits f\u00fcr v0.5, v0.6 und v0.7:\r\n>> 1. Die Ger\u00e4teadresse (PA) muss erneut zugewiesen werden, da sich das interne Speicherformat im Stack ver\u00e4ndert hat.\r\n>> 2. KO-Nummern im Bereich 2 bis 19 haben sich ver\u00e4ndert.\r\n      >>    Ggf. vorhandene interne Referenzen m\u00fcssen manuell angepasst werde.\r\n      >>    Zur \u00dcbersicht siehe Tabelle [\u00c4nderung von zentralen Kommunikationsobjekten](#\u00e4nderung-von-zentralen-kommunikationsobjekten) unten.\r\n\r\n\r\n## v0.7.1: 2025-11-09 (Bedingte Zust\u00e4nde + Updates + FAQs)\r\n\r\n* Update OFM-**DFA** auf Fix-Version 0.7.1:\r\n  * Fix: Kommando-Verarbeitung `history` und `*TEST*`\r\n  * Refactor: Kommando-Vorverarbeitung\r\n\r\n\r\n## v0.7.0: 2025-11-02 (Bedingte Zust\u00e4nde + OpenKNX Updates)\r\n\r\n* Update OFM-**DFA** auf 0.7 mit u.A.:\r\n  * Feature (Umfangreiche Funktionserweiterung): **Bedingte Zust\u00e4nde**\r\n  * Feature: Direktes Ausl\u00f6sen von Timeouts \u00fcber KO\r\n  * Diverse Detail-Verbesserungen in der ETS-App und Kommandos f\u00fcr Diagnose.\r\n* Update anderer OpenKNX-Module:\r\n  * **knx** auf 2.2.2\r\n  * OGM-**Common** auf 1.5.1\r\n    * Hinweis: Synchronisation von Modul-Support wurde deaktiviert, da keine hardwareabh\u00e4ngigkeit vorhanden\r\n  * OFM-**LogicModule** auf 3.7.3\r\n  * OFM-**FileTransfer**Module auf 0.1.4\r\n  * OGM-HardwareConfig auf Stand 2025-10-24\r\n* Update auf OpenKNXproducer 3.12.2 mit Anpassung Versionskonfiguration",
+                    "assets": [
+                        {
+                            "name": "StateEngine-DFA16-Release-0.7.1.zip",
+                            "updated_at": "2025-11-12T22:50:43Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/download/v0.7.1/StateEngine-DFA16-Release-0.7.1.zip"
+                        }
+                    ]
+                },
+                {
                     "prerelease": false,
                     "tag_name": "v0.6",
                     "name": "v0.6 (Fix Ausg\u00e4nge + Hardware-Support + Updates/Fixes)",

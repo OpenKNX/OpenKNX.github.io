@@ -1970,6 +1970,21 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.2",
+                    "name": "Release 0.2",
+                    "published_at": "2025-11-20T21:06:14Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-BinaryInput/releases/tag/0.2",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n- ADD: Z\u00e4hlermodul (16 Kan\u00e4le) hinzugef\u00fcgt.\r\n- ADD: Funktionsbl\u00f6cke (25 Kan\u00e4le) hinzugef\u00fcgt.\r\n- CHANGE: OpenKNX OGM-Common auf Version 1.5.1 aktualisiert.",
+                    "assets": [
+                        {
+                            "name": "BinaryInputModule-Release-0.2.0.zip",
+                            "updated_at": "2025-11-20T21:02:52Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-BinaryInput/releases/download/0.2/BinaryInputModule-Release-0.2.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.1",
                     "name": "Release 0.1",
                     "published_at": "2025-01-07T11:19:59Z",

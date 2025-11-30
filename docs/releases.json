@@ -2038,6 +2038,21 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "0.12",
+                    "name": "Pre-Release 0.12",
+                    "published_at": "2025-11-30T21:27:12Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.12",
+                    "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- ADD: Unterst\u00fctzung f\u00fcr strom-messenden UP x6 und REG x12 LED-Dimmer von AB-SmartHouse hinzugef\u00fcgt.\r\n- ADD: F\u00fcr strom-messende Ger\u00e4te kann nun auch Netzteil-, Ger\u00e4te- und Leuchtmittelschutz parametrisiert werden.\r\n- CHANGE: Verbesserung der Kanalzuordnungstabelle.\r\n- CHANGE: Benennung von KOs weiter aufger\u00e4umt.\r\n- FIX: Frontbedienung von REG-Ger\u00e4ten hatte Ausgang nicht eingeschaltet.\r\n- FIX: Umrechnung RGB<->Farbtemperatur korrigiert.\r\n\r\n_Hinweis:_\r\nAufgrund gr\u00f6\u00dferer \"Aufr\u00e4umarbeiten\" in Vorbereitung eines ersten Releases ist dieses Pre-Release-Update leider in der ETS nicht update-f\u00e4hig. W\u00e4hrend Pre-Releases kann dies hin und wieder vorkommen. Nach einem ersten, finalen Release werden alle Updates selbstverst\u00e4ndlich auch in der ETS update-f\u00e4hig bleiben.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.12.0.zip",
+                            "updated_at": "2025-11-30T21:26:08Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.12/LedDimmerAB-Release-0.12.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "0.11",
                     "name": "Pre-Release 0.11",
                     "published_at": "2025-10-17T17:03:31Z",

@@ -1367,6 +1367,21 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.6.0",
+                    "name": "",
+                    "published_at": "2025-12-05T07:30:27Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.6.0",
+                    "body": "Changes compared to 0.4.0:\r\n- new Feature: configurable StatusLEDs\r\n- optimized tunnel handling: Device Managament Connections do not anymore consume one of the 16 Tunnel Connections and their PA\r\n- fix bug in network stack that caused crashes at high load (RP2040)\r\n\r\nfunctional identical to 6.0.0-Dev\r\n",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Release-0.6.0.zip",
+                            "updated_at": "2025-12-04T15:48:15Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/0.6.0/IP-Router-Release-0.6.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.4.0",
                     "name": "0.4.0",
                     "published_at": "2025-10-28T21:29:58Z",

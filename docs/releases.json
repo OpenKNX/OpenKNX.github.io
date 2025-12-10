@@ -2053,6 +2053,21 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "0.12.1",
+                    "name": "Pre-Release 0.12.1",
+                    "published_at": "2025-12-10T10:43:03Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.12.1",
+                    "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- FIX: KO-Ausgabe der gemessenen Netzteilspannung korrigiert.\r\n\r\n_Hinweis:_\r\nBei einem Update von 0.12 auf 0.12.1 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich. Alle Einstellungen bleiben erhalten.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.12.1.zip",
+                            "updated_at": "2025-12-10T10:43:00Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.12.1/LedDimmerAB-Release-0.12.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "0.12",
                     "name": "Pre-Release 0.12",
                     "published_at": "2025-11-30T21:27:12Z",

@@ -69,6 +69,7 @@
     <tbody>
     {% for oamName, oam_details in oam_data.items() %}
     {% set oamModules = oam_details['modules'] %}
+    {%- set oamInternalModules = oam_details['modules_internal'] %}
     {% set oamDevices = oam_details['devices'] %}
     {% set oamDescription = oam_details['description'] %}
     {% set oamUrl = "https://github.com/OpenKNX/" ~ oamName %}
@@ -81,7 +82,10 @@
         {% endfor %}
         <td class="left before-new-cols" data-ofm="*special*">
             {%- for module in modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamModules) %}
-                <span data-ofm="{{module}}"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/{{ module }}">{{ module }}</a></span>{% if not loop.last %}, {% endif %}
+                <span data-ofm="{{module}}"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/{{ module }}">{{ module }}</a></span>{% if not loop.last or ((oamInternalModules | length) > 0)  %}, {% endif %}
+            {%- endfor %}
+            {%- for module in oamInternalModules %}
+                <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9632;</span>&nbsp;{{ module }}</span>{% if not loop.last %}, {% endif %}
             {%- endfor %}
         </td>
        {% endif %}

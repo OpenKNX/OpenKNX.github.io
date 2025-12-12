@@ -70,6 +70,10 @@ table.openknxTitleTable .isPart {
     color: #449841;
     text-align: center;
 }
+table.openknxTitleTable .isInternalModule {
+    color: #666;
+    text-align: center;
+}
 /* TODO remove td.left */
 table.openknxTitleTable td.left {
     text-align: left;

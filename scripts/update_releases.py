@@ -176,11 +176,26 @@ def process_releases(releases_data):
 def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
     logging.debug(f"OAM Hardware {oam_hardware}")
 
+    # TODO find better place to define, as long not extracted from OAMs
+    internal_modules = {
+        "GW-REG1-Dali"         : ["DaliModule"],
+        "OAM-Aircondition"     : ["AirconditionModule"],
+        "OAM-BinaryClock"      : ["BinaryClockModule"],
+        "OAM-BinaryInput"      : ["BinaryInputModule"],
+        "OAM-ElectricDoorDrive": ["DoorControllerModule"],
+        "OAM-EnoceanGateway_V2": ["EnOcean"],
+        "OAM-TestApp"          : ["DummyModule"],
+        "OAM-WeatherWN90LP"    : ["WN90LPModule"],
+        "SOM-UP"               : ["SoundModule"],
+        "TAS-UP-8xLJ"          : ["HardwareModule"],
+    }
+
     oam_data = {}
     for oam, dependencies in oam_dependencies.items():
         oam_data[oam] = {
             "description": oam_details.get(oam, {}).get("description", "(keine Kurzbeschreibung)"),
             "modules": dependencies,
+            "modules_internal": internal_modules.get(oam, []),
             "devices": [],  # set empty list for OAMs without releases # TODO check cleanup of data-collection
         }
         if oam not in oam_details:

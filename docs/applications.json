@@ -238,6 +238,17 @@
                     "Label": "release"
                 }
             ]
+        },
+        {
+            "Repository": "OAM-AccessControl",
+            "HelpThread": "",
+            "Description": "",
+            "Apps": [
+                {
+                    "AppId": "$A601",
+                    "Label": "release"
+                }
+            ]
         }
     ]
 }

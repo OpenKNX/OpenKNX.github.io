@@ -245,7 +245,7 @@
             "Description": "",
             "Apps": [
                 {
-                    "AppId": "$A601",
+                    "AppId": "$A600",
                     "Label": "release"
                 }
             ]

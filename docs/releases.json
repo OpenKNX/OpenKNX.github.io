@@ -1962,6 +1962,21 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "v0.2.0",
+                    "name": "v0.2.0-Beta",
+                    "published_at": "2025-12-14T10:43:09Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP/releases/tag/v0.2.0",
+                    "body": "- New (updateable) knxprod 0.2 due to update of OpenKNX common (Info Leds)\r\n- reduced polling intervall of wind data from 20s to 5s",
+                    "assets": [
+                        {
+                            "name": "WeatherWN90LP-Release-0.2.0.zip",
+                            "updated_at": "2025-12-14T10:42:56Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP/releases/download/v0.2.0/WeatherWN90LP-Release-0.2.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "v0.1.0",
                     "name": "v0.1.0-Beta",
                     "published_at": "2025-10-28T21:00:50Z",

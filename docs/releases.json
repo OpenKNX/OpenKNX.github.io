@@ -1991,7 +1991,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 1
+            "hw_avail_open": 2
         },
         "OAM-BinaryInput": {
             "repo_url": "https://github.com/OpenKNX/OAM-BinaryInput",

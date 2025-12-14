@@ -19,6 +19,7 @@ class DeviceHelper:
             "EnoceanGateway_RP2040": "SmartMF Enocean Gateway RP2040",
             "firmware_REG1-SA-4xSELV": "OpenKNX REG1 4xSELV Schaltaktor",
             "firmware_UP1-GW-RS485": "OpenKNX UP1 RS485 Gateway",
+            "firmware_REG1-GW-RS485": "OpenKNX REG1 RS485 Gateway",
             "firmware_SOM_UP": "Smart-MF Soundmodul UP",
             "SmartMF-Soundmodul-UP": "Smart-MF Soundmodul UP",
             "SmartMF-Soundmodul-UP-EXT-PWR": "Smart-MF Soundmodul UP (Ext-Power)",

@@ -31,6 +31,21 @@
             ]
         },
         {
+            "Repository": "OAM-StateEngine",
+            "HelpThread": "https://knx-user-forum.de/forum/projektforen/openknx/2024474-openknx-stateengine-universelle-zustandsautomaten-in-knx",
+            "Description": "Abbildung von zustandsabhängigem Verhalten in KNX",
+            "Apps": [
+                {
+                    "AppId": "$AC0E",
+                    "Label": "dev"
+                },
+                {
+                    "AppId": "$AC0D",
+                    "Label": "release-DFA16"
+                }
+            ]
+        },
+        {
             "Repository": "OAM-SEN-UP1-8xTH",
             "HelpThread": "",
             "Description": "SensorModule zur Realisierung von Sensorfunktionen auf KNX Basis.",

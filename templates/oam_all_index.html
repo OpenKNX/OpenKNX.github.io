@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenKNX Applikationen</title>
+</head>
+<body>
+
+<h1>OpenKNX Applikationen</h1>
+<p>{# TODO description #}</p>
+
+<ul>
+    {% for oamName, oam_details in oam_data_items %}
+    <li data-ofm="{{module}}">
+        (<a href="https://github.com/OpenKNX/{{ oamName }}">GitHub</a>)
+        <a href="{{ oamName }}/">{{ oamName }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

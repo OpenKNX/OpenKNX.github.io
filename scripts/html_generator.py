@@ -184,7 +184,8 @@ class HTMLGenerator:
                                           showModules=False,
                                           showDevices=True,
                                           )
-        # create ofm-list
+        # create ofm index-list
+        logging.info(f"Create OFM Index")
         self._render_template_to_file('ofm_all_index.html',
                                       self.path_manager.get_ofm_path(None, 'index.html'),
                                       modules_sorted=modules_sorted,

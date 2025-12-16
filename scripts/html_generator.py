@@ -176,7 +176,7 @@ class HTMLGenerator:
             }
             self._render_template_to_file('dependencies_template.html',
                                           self.path_manager.get_ofm_path(ofmName, 'functions.html'),
-                                          title=f"OpenKNX-Applikationen und Geräte mit Nutzungsmöglichkeit von {ofmName}",
+                                          title=f"{ofmName}: Verfügbarkeit",
                                           # modules_sorted=modules_sorted_of_device,
                                           devices_sorted=devices_sorted,
                                           devices_other_sorted=devices_other_sorted,
@@ -218,7 +218,7 @@ class HTMLGenerator:
             modules_sorted_of_device = [module for module in modules_sorted if module[0] in modules_of_device]
             self._render_template_to_file('dependencies_template.html',
                                           self.path_manager.get_device_path(device_name, 'functions.html'),
-                                          title=f"OpenKNX-Applikationen und enthaltene Module für {device_name}",
+                                          title=f"{device_name}: Nutzungsmöglichkeiten",
                                           modules_sorted=modules_sorted_of_device,
                                           # devices_sorted=devices_sorted,
                                           # devices_other_sorted=devices_other_sorted,

@@ -139,6 +139,12 @@ class HTMLGenerator:
                                           devices_other_sorted=devices_other_sorted,
                                           function_device_to_pathname=PathManager.to_device_pathname,
                                           )
+        # create oam index-list
+        logging.info(f"Create OAM Index")
+        self._render_template_to_file('oam_all_index.html',
+                                      self.path_manager.get_oam_path(None, 'index.html'),
+                                      oam_data_items=oam_data.items(),
+                                      )
 
         # create overview-page for each OFM
         logging.info(f"Create OFM Overviews...")
@@ -205,7 +211,7 @@ class HTMLGenerator:
             devs_sorted = sorted(ofm_usage_count.items(), key=lambda item: (-item[1], item[0]))
             # TODO use device-id?
             file = self.path_manager.get_device_path(device_name, filename="index.html")
-            logging.debug(f"Create Device Overview in {file}")
+            logging.info(f"Create Device Overview in {file}")
             self._render_template_to_file('device_overview.html', file,
                                           name=device_name,
                                           oam_data=oam_data,
@@ -232,3 +238,10 @@ class HTMLGenerator:
                                           showModules=True,
                                           showDevices=False,
                                           )
+        # create devices index-list
+        logging.info(f"Create Devices Index")
+        self._render_template_to_file('device_all_index.html',
+                                      self.path_manager.get_device_path(None, 'index.html'),
+                                      devices_sorted=devices_sorted,
+                                      function_device_to_pathname=PathManager.to_device_pathname,
+                                      )

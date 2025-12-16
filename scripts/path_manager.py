@@ -47,9 +47,11 @@ class PathManager:
         """
         Gibt den Pfad für ein spezifisches OFM zurück.
 
-        :param ofm_name: Der Name des OFM.
+        :param ofm_name: Der Name des OFM | `None` für Übersicht.
         :return: Der Pfad für das OFM.
         """
+        if ofm_name is None:
+            return self.create_path("ofm", filename=filename)
         return self.create_path("ofm", ofm_name, filename=filename)
 
     def get_device_path(self, device_name, filename=""):

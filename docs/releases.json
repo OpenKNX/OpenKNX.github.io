@@ -17,23 +17,10 @@
                     "assets": [
                         {
                             "name": "SEN-UP1-8xTH-Dev-1.5.0.zip",
+                            "size": 1940996,
+                            "digest": "sha256:34105069dbc3e22feb0a2df502189277d257a1e90f63e08eeee893ca496f5400",
                             "updated_at": "2025-12-19T07:15:53Z",
                             "browser_download_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/download/v1.5.0-Dev/SEN-UP1-8xTH-Dev-1.5.0.zip"
-                        }
-                    ]
-                },
-                {
-                    "prerelease": true,
-                    "tag_name": "Dev-v1.5.0",
-                    "name": "Dev-v1.5.0",
-                    "published_at": "2025-12-18T20:09:43Z",
-                    "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/Dev-v1.5.0",
-                    "body": "Dev-Release (formerly called Beta)\r\n- fix of OneWire Sensors (DS18B20)\r\n- update to current OpenKNX Framework",
-                    "assets": [
-                        {
-                            "name": "SEN-UP1-8xTH-Dev-1.5.0.zip",
-                            "updated_at": "2025-12-18T20:08:46Z",
-                            "browser_download_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/download/Dev-v1.5.0/SEN-UP1-8xTH-Dev-1.5.0.zip"
                         }
                     ]
                 },

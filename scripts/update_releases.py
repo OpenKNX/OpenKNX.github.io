@@ -179,7 +179,7 @@ def process_releases(releases_data):
                     logging.info("+++")
                     continue
 
-            out_path = os.path.join(out_dir, f"{filename.replace(":", "_")}.json")
+            out_path = os.path.join(out_dir, f"{filename.replace(':', '_')}.json")
             if os.path.exists(out_path):
                 with open(out_path, "r", encoding="utf-8") as f:
                     data = json.load(f)

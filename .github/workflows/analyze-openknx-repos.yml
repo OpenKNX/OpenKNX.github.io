@@ -1,0 +1,153 @@
+name: Analyze OpenKNX Repositories
+
+on:
+  workflow_dispatch:  # Allow manual trigger
+  schedule:
+    # Run weekly on Monday at 00:00 UTC
+    - cron: '0 0 * * 1'
+
+jobs:
+  analyze-repos:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read  # Required to checkout the repository
+    
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      
+      - name: Fetch OpenKNX organization repositories
+        id: fetch-repos
+        run: |
+          # Fetch all repositories from OpenKNX organization
+          echo "Fetching repositories from OpenKNX organization..."
+          
+          # Create repos directory
+          mkdir -p repos
+          
+          # Get list of all repositories in the OpenKNX organization
+          # Using GitHub API with pagination
+          page=1
+          per_page=100
+          
+          while true; do
+            http_code=$(curl -s -w '%{http_code}' -o response.json \
+              -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/orgs/OpenKNX/repos?type=all&per_page=${per_page}&page=${page}")
+            
+            # Check HTTP status code
+            if [ "$http_code" != "200" ]; then
+              echo "Error: GitHub API returned HTTP status $http_code"
+              cat response.json
+              exit 1
+            fi
+            
+            # Check for API errors in response
+            if jq -e '.message' response.json > /dev/null 2>&1; then
+              echo "Error: GitHub API returned an error: $(jq -r '.message' response.json)"
+              exit 1
+            fi
+            
+            # Extract repository names and check if result is valid
+            if ! repos=$(jq -r '.[].name' response.json 2>&1); then
+              echo "Error: Failed to parse API response"
+              cat response.json
+              exit 1
+            fi
+            
+            if [ -z "$repos" ]; then
+              break
+            fi
+            
+            echo "$repos" >> repos_list.txt
+            page=$((page + 1))
+          done
+          
+          # Count total repositories
+          if [ -f repos_list.txt ]; then
+            total_repos=$(cat repos_list.txt | wc -l)
+            echo "Found $total_repos repositories"
+            echo "total_repos=$total_repos" >> $GITHUB_OUTPUT
+          else
+            echo "Error: No repositories found"
+            exit 1
+          fi
+      
+      - name: Clone all OpenKNX repositories
+        run: |
+          echo "Cloning repositories into repos/ directory..."
+          
+          # Read each repository name and clone it
+          while IFS= read -r repo; do
+            if [ -n "$repo" ]; then
+              echo "Cloning $repo..."
+              git clone --depth 1 "https://github.com/OpenKNX/$repo.git" "repos/$repo" || echo "Failed to clone $repo"
+            fi
+          done < repos_list.txt
+          
+          echo "Repository cloning completed"
+          ls -la repos/
+      
+      - name: Run analysis script
+        run: |
+          echo "Running appids.py analysis..."
+          # The script outputs 3 JSON objects, we capture all output and extract the last one
+          python scripts/appids.py > full-output.txt
+          
+          # Extract the last JSON object (the final appid2repo mapping)
+          # Find the line number of the last occurrence of '{' at the beginning of a line
+          last_json_line=$(awk '/^{/ {line=NR} END {print line}' full-output.txt)
+          
+          if [ -z "$last_json_line" ]; then
+            echo "Error: No JSON object found in script output"
+            cat full-output.txt
+            exit 1
+          fi
+          
+          # Extract from that line to the end
+          tail -n +${last_json_line} full-output.txt > analysis-results.json
+          
+          # Verify the extracted JSON is valid
+          if ! jq empty analysis-results.json 2>/dev/null; then
+            echo "Error: Failed to extract valid JSON from script output"
+            echo "Full output:"
+            cat full-output.txt
+            exit 1
+          fi
+          
+          echo "Analysis completed. Final result:"
+          cat analysis-results.json
+      
+      - name: Upload analysis results
+        uses: actions/upload-artifact@v4
+        with:
+          name: openknx-analysis-results
+          path: analysis-results.json
+          retention-days: 90
+      
+      - name: Display summary
+        run: |
+          echo "## Analysis Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Analyzed ${{ steps.fetch-repos.outputs.total_repos }} repositories from OpenKNX organization" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Results Preview" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Count the number of AppIDs found
+          appid_count=$(jq '.data | length' analysis-results.json)
+          echo "Found **${appid_count}** unique Application IDs" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # Display first few entries
+          echo "#### First 10 AppID Mappings:" >> $GITHUB_STEP_SUMMARY
+          echo '```json' >> $GITHUB_STEP_SUMMARY
+          jq '.data | to_entries | .[0:10] | from_entries' analysis-results.json >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📦 Download the full analysis results from the workflow artifacts." >> $GITHUB_STEP_SUMMARY

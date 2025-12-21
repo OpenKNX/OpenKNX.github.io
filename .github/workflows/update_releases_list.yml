@@ -51,6 +51,6 @@ jobs:
             echo "No changes to commit"
           else
             histlen=$(git rev-list --count HEAD)
-            git commit -m "Update ~ $histlen"
+            git commit -m "Update ~ $histlen: Releases"
             git push
           fi

@@ -1,4 +1,7 @@
-name: Analyze OpenKNX Repositories
+# Build OpenKNX Release Application ID Overview
+# 2025 CK (OpenKNX)
+
+name: Update AppID-List
 
 on:
   workflow_dispatch:  # Allow manual trigger
@@ -15,7 +18,9 @@ jobs:
     steps:
       - name: Checkout this repository
         uses: actions/checkout@v4
-      
+        with:
+          fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -129,6 +134,6 @@ jobs:
             echo "No changes to commit"
           else
             histlen=$(git rev-list --count HEAD)
-            git commit -m "Update ~ $histlen"
+            git commit -m "Update ~ $histlen: App-IDs"
             git push
           fi

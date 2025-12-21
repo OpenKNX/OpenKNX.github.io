@@ -1,6 +1,6 @@
 # Collect AppIDs used by OAMs
 # (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
-
+import os
 import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -99,3 +99,7 @@ if __name__ == "__main__":
         "data": appid_to_repo
     }
     print(json.dumps(appid2repo, indent=2, ensure_ascii=False, sort_keys=True))
+
+    # Write appid-mapping to file
+    with open(os.path.join("docs", 'appid2repo.json'), "w", encoding="utf-8") as f:
+        json.dump(appid2repo, f, indent=2, ensure_ascii=False, sort_keys=True)

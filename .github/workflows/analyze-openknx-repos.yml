@@ -96,39 +96,7 @@ jobs:
       - name: Run analysis script
         run: |
           echo "Running appids.py analysis..."
-          # The script outputs 3 JSON objects, we capture all output and extract the last one
-          python scripts/appids.py > full-output.txt
-          
-          # Extract the last JSON object (the final appid2repo mapping)
-          # Find the line number of the last occurrence of '{' at the beginning of a line
-          last_json_line=$(awk '/^{/ {line=NR} END {print line}' full-output.txt)
-          
-          if [ -z "$last_json_line" ]; then
-            echo "Error: No JSON object found in script output"
-            cat full-output.txt
-            exit 1
-          fi
-          
-          # Extract from that line to the end
-          tail -n +${last_json_line} full-output.txt > analysis-results.json
-          
-          # Verify the extracted JSON is valid
-          if ! jq empty analysis-results.json 2>/dev/null; then
-            echo "Error: Failed to extract valid JSON from script output"
-            echo "Full output:"
-            cat full-output.txt
-            exit 1
-          fi
-          
-          echo "Analysis completed. Final result:"
-          cat analysis-results.json
-      
-      - name: Upload analysis results
-        uses: actions/upload-artifact@v4
-        with:
-          name: openknx-analysis-results
-          path: analysis-results.json
-          retention-days: 90
+          python scripts/appids.py
       
       - name: Display summary
         run: |
@@ -150,4 +118,17 @@ jobs:
           jq '.data | to_entries | .[0:10] | from_entries' analysis-results.json >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "📦 Download the full analysis results from the workflow artifacts." >> $GITHUB_STEP_SUMMARY
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add docs/
+         
+          if git diff-index --quiet HEAD; then
+            echo "No changes to commit"
+          else
+            histlen=$(git rev-list --count HEAD)
+            git commit -m "Update ~ $histlen"
+            git push
+          fi

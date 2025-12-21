@@ -29,7 +29,9 @@ def extract_attributes_from_xml_tree(root_dir):
 
             # Suche nach Element `op:ETS` (Namespace-aware)
             # Für `op:ETS` als namespaced Element
-            element = root.find('.//{*}ETS') or root.find('. //op:ETS', {'op': ''})
+            element = root.find('.//{*}ETS')
+            if element is None:
+                element = root.find('. //op:ETS', {'op': ''})
 
             # Alternative: Wenn `op:ETS` ein einfacher Tag-Name ist
             if element is None:

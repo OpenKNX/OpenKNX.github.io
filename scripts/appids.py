@@ -80,7 +80,7 @@ if __name__ == "__main__":
     for app, info in results.items():
         for file, info2 in info.items():
             appref = app + " / " + file.split("/")[-1]
-            id_app_to_repo.setdefault(info2['OpenKnxId'], {}).setdefault(info2['ApplicationNumber'], []).append(re.sub("\.xml$", "", appref))
+            id_app_to_repo.setdefault(info2['OpenKnxId'], {}).setdefault(info2['ApplicationNumber'], []).append(re.sub(r"\.xml$", "", appref))
 
     appid_to_repo = OrderedDict()
     for app_id, info in id_app_to_repo.items():

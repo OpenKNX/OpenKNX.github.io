@@ -1,0 +1,102 @@
+{
+  "OpenKnxContentType": "OpenKNX/OAMs/Id2Repo",
+  "OpenKnxFormatVersion": "v0.1.0",
+  "data": {
+    "0xA000": "OAM-PresenceModule / PMmodul-Release",
+    "0xA001": "OAM-PresenceModule / PMmodul",
+    "0xA002": "OAM-PresenceModule / PMmodul-Big",
+    "0xA003": "OAM-PresenceModule / PMmodul-IP",
+    "0xA004": "OAM-Dummy / Dummy",
+    "0xA005": "OAM-Dummy / Dummy-Small",
+    "0xA006": "OAM-Dummy / Dummy-Big",
+    "0xA010": "OAM-SensorModule / Sensormodul-OneWire",
+    "0xA011": [
+      "OAM-RaumController / RaumController",
+      "OAM-SensorModule / Sensormodul"
+    ],
+    "0xA012": [
+      "OAM-RaumController / RaumController-Release",
+      "OAM-SensorModule / Sensormodul-Big"
+    ],
+    "0xA030": "OAM-LogicModule / Logikmodul-Release",
+    "0xA031": "OAM-LogicModule / Logikmodul",
+    "0xA032": "OAM-LogicModule / Logikmodul-IP",
+    "0xA033": "OAM-LogicModule / Logikmodul-IP-dev",
+    "0xA040": "OAM-SensorModule / Sensormodul-Vpm",
+    "0xA102": "SEN-UP1-8xTH / SEN-UP1-8xTH-Release",
+    "0xA103": "SEN-UP1-8xTH / SEN-UP1-8xTH",
+    "0xA11E": "OAM-IP-Router / IP-Router",
+    "0xA11F": "OAM-IP-Router / IP-Router-Release",
+    "0xA128": "OAM-WeatherWN90LP / WeatherWN90LP-Release",
+    "0xA129": "OAM-WeatherWN90LP / WeatherWN90LP-Dev",
+    "0xA13C": "OAM-REG1-Schaltaktor-4x / REG1-Schaltaktor-4x-Release",
+    "0xA13D": "OAM-REG1-Schaltaktor-4x / REG1-Schaltaktor-4x",
+    "0xA201": "OAM-EnoceanGateway_V2 / EnoceanGateway",
+    "0xA228": "SOM-UP / SoundModule-Release",
+    "0xA229": "SOM-UP / SoundModule-Dev",
+    "0xA304": "OAM-Meter / MeterModule",
+    "0xA363": "TAS-UP-8xLJ / TAS-UP-8xLJ",
+    "0xA400": "OAM-InfraredGateway / InfraredGateway",
+    "0xA600": [
+      "OAM-AccessControl / AccessControl-ReleaseR503",
+      "OAM-AccessControl / AccessControl-ReleaseR503Pro",
+      "OAM-ElectricDoorDrive / DoorControllerModule"
+    ],
+    "0xA601": "OAM-AccessControl / AccessControl",
+    "0xA602": "OAM-SwitchActuator / SwitchActuator-Release",
+    "0xA604": [
+      "OAM-TouchRound / TouchRound-Release",
+      "OAM-TouchRound / TouchRound"
+    ],
+    "0xA605": "OAM-BinaryInput / BinaryInputModule-Release",
+    "0xA606": "OAM-HeatingActuator / HeatingActuator-Release",
+    "0xA607": "OAM-LedDimmer-AB / LedDimmerAB-Release",
+    "0xAC0D": "OAM-StateEngine / StateEngine-DFA16-Release",
+    "0xAC0E": "OAM-StateEngine / StateEngine",
+    "0xAC50": "OAM-Homematic / HomematicGW-Release",
+    "0xAE29": "OAM-SmartHomeBridge / SmartHomeBridge-Dev",
+    "0xAE2A": [
+      "OAM-SmartHomeBridge / SmartHomeBridge-Release",
+      "OAM-SmartHomeBridge / SmartHomeBridge"
+    ],
+    "0xAE2B": "OAM-Sonos / Sonos-Dev",
+    "0xAE2C": [
+      "OAM-Sonos / Sonos-Release",
+      "OAM-Sonos / Sonos"
+    ],
+    "0xAE2D": "OAM-InternetServices / InternetServices-Dev",
+    "0xAE2E": [
+      "OAM-InternetServices / InternetServices-Release",
+      "OAM-InternetServices / InternetServices"
+    ],
+    "0xAE31": "OAM-ShutterController / ShutterController-Dev",
+    "0xAE32": [
+      "OAM-ShutterController / ShutterController-Release",
+      "OAM-ShutterController / ShutterController"
+    ],
+    "0xAE35": "OAM-Aircondition / Aircondition-Dev",
+    "0xAE36": [
+      "OAM-Aircondition / Aircondition-Release",
+      "OAM-Aircondition / Aircondition"
+    ],
+    "0xAE37": "OAM-Nuki / Nuki-Dev",
+    "0xAE38": [
+      "OAM-Nuki / Nuki-Release",
+      "OAM-Nuki / Nuki"
+    ],
+    "0xAF02": "OAM-SwitchActuator / SwitchActuator",
+    "0xAF03": [
+      "OAM-BinaryClock / BinaryClock-Release",
+      "OAM-BinaryClock / BinaryClock"
+    ],
+    "0xAF04": "OAM-TouchRound / TouchRound-Dev",
+    "0xAF05": [
+      "OAM-BinaryInput / BinaryInputModule",
+      "OAM-Meter / MeterModule-Dev"
+    ],
+    "0xAF06": "OAM-HeatingActuator / HeatingActuator",
+    "0xAF07": "OAM-LedDimmer-AB / LedDimmerAB",
+    "0xAFC0": "OAM-Homematic / HomematicGW",
+    "0xAFFF": "OAM-TestApp / TestApp"
+  }
+}

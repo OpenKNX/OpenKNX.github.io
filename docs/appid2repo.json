@@ -38,8 +38,8 @@
     "0xA363": "TAS-UP-8xLJ / TAS-UP-8xLJ",
     "0xA400": "OAM-InfraredGateway / InfraredGateway",
     "0xA600": [
-      "OAM-AccessControl / AccessControl-ReleaseR503",
       "OAM-AccessControl / AccessControl-ReleaseR503Pro",
+      "OAM-AccessControl / AccessControl-ReleaseR503",
       "OAM-ElectricDoorDrive / DoorControllerModule"
     ],
     "0xA601": "OAM-AccessControl / AccessControl",
@@ -81,8 +81,8 @@
     ],
     "0xAE37": "OAM-Nuki / Nuki-Dev",
     "0xAE38": [
-      "OAM-Nuki / Nuki-Release",
-      "OAM-Nuki / Nuki"
+      "OAM-Nuki / Nuki",
+      "OAM-Nuki / Nuki-Release"
     ],
     "0xAF02": "OAM-SwitchActuator / SwitchActuator",
     "0xAF03": [

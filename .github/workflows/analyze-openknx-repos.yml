@@ -10,7 +10,7 @@ jobs:
   analyze-repos:
     runs-on: ubuntu-latest
     permissions:
-      contents: read  # Required to checkout the repository
+      contents: write  # Required to commit and push results
     
     steps:
       - name: Checkout this repository
@@ -108,14 +108,14 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           
           # Count the number of AppIDs found
-          appid_count=$(jq '.data | length' analysis-results.json)
+          appid_count=$(jq '.data | length' docs/appid2repo.json)
           echo "Found **${appid_count}** unique Application IDs" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           
           # Display first few entries
           echo "#### First 10 AppID Mappings:" >> $GITHUB_STEP_SUMMARY
           echo '```json' >> $GITHUB_STEP_SUMMARY
-          jq '.data | to_entries | .[0:10] | from_entries' analysis-results.json >> $GITHUB_STEP_SUMMARY
+          jq '.data | to_entries | .[0:10] | from_entries' docs/appid2repo.json >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 

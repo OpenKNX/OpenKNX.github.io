@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="/css/style.css">
     <style>
         
-        table.openknxTitleTable:has(td:nth-child(2):hover, thead > tr:nth-child(2) > th:nth-child(2):hover) td:nth-child(2).isPart,
-        table.openknxTitleTable:has(td:nth-child(3):hover, thead > tr:nth-child(2) > th:nth-child(3):hover) td:nth-child(3).isPart,
-        table.openknxTitleTable:has(td:nth-child(4):hover, thead > tr:nth-child(2) > th:nth-child(4):hover) td:nth-child(4).isPart,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(2):hover) tr > :nth-child(2).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(3):hover) tr > :nth-child(3).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(4):hover) tr > :nth-child(4).colHover,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
         }
-        table.openknxTitleTable:has(td:nth-child(2):hover, th:nth-child(2):hover) thead th.rotate45:nth-child(2) div span,
-        table.openknxTitleTable:has(td:nth-child(3):hover, th:nth-child(3):hover) thead th.rotate45:nth-child(3) div span,
-        table.openknxTitleTable:has(td:nth-child(4):hover, th:nth-child(4):hover) thead th.rotate45:nth-child(4) div span
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(2):hover) thead th.rotate45:nth-child(2) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(3):hover) thead th.rotate45:nth-child(3) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(4):hover) thead th.rotate45:nth-child(4) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -43,12 +43,12 @@
        
     </colgroup>
     <thead>
-    <tr class="colGroupTitle">
+      <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
         <th class="before-new-cols" colspan="4">Enthaltene Module</th>
         
-    </tr>
-    <tr>
+      </tr>
+      <tr class="hoverTrigger">
         <th class="before-new-cols"></th>
 
        
@@ -64,7 +64,21 @@
 
        
 
-    </tr>
+      </tr>
+      <tr class="iconRow hoverTrigger">
+        <th class="before-new-cols"></th>
+
+       
+        <th data-ofm="OGM-Common" class="colHover" title="OpenKNX Common (Basisfunktionen)"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/openknx.png" /></th>
+        <th data-ofm="knx" class="colHover" title="">|</th>
+        <th data-ofm="OFM-FileTransferModule" class="colHover" title="">|</th>
+        
+        <th class="before-new-cols" data-ofm="*special*"></th>
+       
+
+       
+
+      </tr>
     </thead>
     <tbody>
     
@@ -72,16 +86,16 @@
     
     
     
-    <tr data-oam="GW-REG1-Dali">
+    <tr data-oam="GW-REG1-Dali" class="hoverTrigger">
         <th class="before-new-cols"><a href="https://github.com/OpenKNX/GW-REG1-Dali">GW-REG1-Dali</a></th>
 
        
         
-        <td data-ofm="OGM-Common" class="isPart">&#9632;</td>
+        <td data-ofm="OGM-Common" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="knx" class="isPart">&#9632;</td>
+        <td data-ofm="knx" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-FileTransferModule" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-FileTransferModule" class="isPart colHover">&#9632;</td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9632;</span>&nbsp;DaliModule</span>

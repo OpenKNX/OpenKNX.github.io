@@ -7,36 +7,36 @@
     <link rel="stylesheet" href="/css/style.css">
     <style>
         
-        table.openknxTitleTable:has(td:nth-child(2):hover, thead > tr:nth-child(2) > th:nth-child(2):hover) td:nth-child(2).isPart,
-        table.openknxTitleTable:has(td:nth-child(3):hover, thead > tr:nth-child(2) > th:nth-child(3):hover) td:nth-child(3).isPart,
-        table.openknxTitleTable:has(td:nth-child(4):hover, thead > tr:nth-child(2) > th:nth-child(4):hover) td:nth-child(4).isPart,
-        table.openknxTitleTable:has(td:nth-child(5):hover, thead > tr:nth-child(2) > th:nth-child(5):hover) td:nth-child(5).isPart,
-        table.openknxTitleTable:has(td:nth-child(6):hover, thead > tr:nth-child(2) > th:nth-child(6):hover) td:nth-child(6).isPart,
-        table.openknxTitleTable:has(td:nth-child(7):hover, thead > tr:nth-child(2) > th:nth-child(7):hover) td:nth-child(7).isPart,
-        table.openknxTitleTable:has(td:nth-child(8):hover, thead > tr:nth-child(2) > th:nth-child(8):hover) td:nth-child(8).isPart,
-        table.openknxTitleTable:has(td:nth-child(9):hover, thead > tr:nth-child(2) > th:nth-child(9):hover) td:nth-child(9).isPart,
-        table.openknxTitleTable:has(td:nth-child(10):hover, thead > tr:nth-child(2) > th:nth-child(10):hover) td:nth-child(10).isPart,
-        table.openknxTitleTable:has(td:nth-child(11):hover, thead > tr:nth-child(2) > th:nth-child(11):hover) td:nth-child(11).isPart,
-        table.openknxTitleTable:has(td:nth-child(12):hover, thead > tr:nth-child(2) > th:nth-child(12):hover) td:nth-child(12).isPart,
-        table.openknxTitleTable:has(td:nth-child(13):hover, thead > tr:nth-child(2) > th:nth-child(13):hover) td:nth-child(13).isPart,
-        table.openknxTitleTable:has(td:nth-child(14):hover, thead > tr:nth-child(2) > th:nth-child(14):hover) td:nth-child(14).isPart,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(2):hover) tr > :nth-child(2).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(3):hover) tr > :nth-child(3).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(4):hover) tr > :nth-child(4).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(5):hover) tr > :nth-child(5).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(6):hover) tr > :nth-child(6).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(7):hover) tr > :nth-child(7).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(8):hover) tr > :nth-child(8).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(9):hover) tr > :nth-child(9).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(10):hover) tr > :nth-child(10).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(11):hover) tr > :nth-child(11).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(12):hover) tr > :nth-child(12).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(13):hover) tr > :nth-child(13).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(14):hover) tr > :nth-child(14).colHover,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
         }
-        table.openknxTitleTable:has(td:nth-child(2):hover, th:nth-child(2):hover) thead th.rotate45:nth-child(2) div span,
-        table.openknxTitleTable:has(td:nth-child(3):hover, th:nth-child(3):hover) thead th.rotate45:nth-child(3) div span,
-        table.openknxTitleTable:has(td:nth-child(4):hover, th:nth-child(4):hover) thead th.rotate45:nth-child(4) div span,
-        table.openknxTitleTable:has(td:nth-child(5):hover, th:nth-child(5):hover) thead th.rotate45:nth-child(5) div span,
-        table.openknxTitleTable:has(td:nth-child(6):hover, th:nth-child(6):hover) thead th.rotate45:nth-child(6) div span,
-        table.openknxTitleTable:has(td:nth-child(7):hover, th:nth-child(7):hover) thead th.rotate45:nth-child(7) div span,
-        table.openknxTitleTable:has(td:nth-child(8):hover, th:nth-child(8):hover) thead th.rotate45:nth-child(8) div span,
-        table.openknxTitleTable:has(td:nth-child(9):hover, th:nth-child(9):hover) thead th.rotate45:nth-child(9) div span,
-        table.openknxTitleTable:has(td:nth-child(10):hover, th:nth-child(10):hover) thead th.rotate45:nth-child(10) div span,
-        table.openknxTitleTable:has(td:nth-child(11):hover, th:nth-child(11):hover) thead th.rotate45:nth-child(11) div span,
-        table.openknxTitleTable:has(td:nth-child(12):hover, th:nth-child(12):hover) thead th.rotate45:nth-child(12) div span,
-        table.openknxTitleTable:has(td:nth-child(13):hover, th:nth-child(13):hover) thead th.rotate45:nth-child(13) div span,
-        table.openknxTitleTable:has(td:nth-child(14):hover, th:nth-child(14):hover) thead th.rotate45:nth-child(14) div span
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(2):hover) thead th.rotate45:nth-child(2) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(3):hover) thead th.rotate45:nth-child(3) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(4):hover) thead th.rotate45:nth-child(4) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(5):hover) thead th.rotate45:nth-child(5) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(6):hover) thead th.rotate45:nth-child(6) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(7):hover) thead th.rotate45:nth-child(7) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(8):hover) thead th.rotate45:nth-child(8) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(9):hover) thead th.rotate45:nth-child(9) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(10):hover) thead th.rotate45:nth-child(10) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(11):hover) thead th.rotate45:nth-child(11) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(12):hover) thead th.rotate45:nth-child(12) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(13):hover) thead th.rotate45:nth-child(13) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(14):hover) thead th.rotate45:nth-child(14) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -79,12 +79,12 @@
        
     </colgroup>
     <thead>
-    <tr class="colGroupTitle">
+      <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
         <th class="before-new-cols" colspan="12">Enthaltene Module</th>
         
-    </tr>
-    <tr>
+      </tr>
+      <tr class="hoverTrigger">
         <th class="before-new-cols"></th>
 
        
@@ -116,7 +116,29 @@
 
        
 
-    </tr>
+      </tr>
+      <tr class="iconRow hoverTrigger">
+        <th class="before-new-cols"></th>
+
+       
+        <th data-ofm="OGM-Common" class="colHover" title="OpenKNX Common (Basisfunktionen)"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/openknx.png" /></th>
+        <th data-ofm="knx" class="colHover" title="">|</th>
+        <th data-ofm="OFM-FileTransferModule" class="colHover" title="">|</th>
+        <th data-ofm="OFM-LogicModule" class="colHover" title="Logikfunktionen, Wertekonvertierung und Zeitschaltuhren"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/blur.png" /></th>
+        <th data-ofm="OFM-ConfigTransfer" class="colHover" title="Kopieren, Import, Export von ETS-Einstellungen"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ConfigTransfer/refs/heads/v1/src/Baggages/Icons/ofm-configtransfer.png" /></th>
+        <th data-ofm="OGM-HardwareConfig" class="colHover" title="">|</th>
+        <th data-ofm="OFM-FunctionBlocks" class="colHover" title="Bausteine mit verschiedenen Standardfunktionen"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-FunctionBlocks/refs/heads/v1/src/Baggages/Icons/texture-box.png" /></th>
+        <th data-ofm="OFM-Network" class="colHover" title="Netzwerkeinstellungen"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/ethernet.png" /></th>
+        <th data-ofm="OFM-UsbExchange" class="colHover" title="">|</th>
+        <th data-ofm="OFM-InternetWeatherModule" class="colHover" title="Wetterdaten von Internetdiensten"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-InternetWeatherModule/refs/heads/v1/src/Baggages/Icons/weather-partly-cloudy.png" /></th>
+        <th data-ofm="OFM-SmartHomeBridge" class="colHover" title="SmartHomeBridge"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/shape.png" /></th>
+        
+        <th class="before-new-cols" data-ofm="*special*"></th>
+       
+
+       
+
+      </tr>
     </thead>
     <tbody>
     
@@ -124,32 +146,32 @@
     
     
     
-    <tr data-oam="OAM-Aircondition">
+    <tr data-oam="OAM-Aircondition" class="hoverTrigger">
         <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-Aircondition">OAM-Aircondition</a></th>
 
        
         
-        <td data-ofm="OGM-Common" class="isPart">&#9632;</td>
+        <td data-ofm="OGM-Common" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="knx" class="isPart">&#9632;</td>
+        <td data-ofm="knx" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-FileTransferModule" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-FileTransferModule" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-LogicModule" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-LogicModule" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-ConfigTransfer" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-ConfigTransfer" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OGM-HardwareConfig" class="isPart">&#9632;</td>
+        <td data-ofm="OGM-HardwareConfig" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-Network" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-UsbExchange" class="isPart"></td>
+        <td data-ofm="OFM-UsbExchange" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-InternetWeatherModule" class="isPart"></td>
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-SmartHomeBridge" class="isPart"></td>
+        <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9632;</span>&nbsp;AirconditionModule</span>
@@ -164,35 +186,35 @@
     
     
     
-    <tr data-oam="OAM-Sonos">
+    <tr data-oam="OAM-Sonos" class="hoverTrigger">
         <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-Sonos">OAM-Sonos</a><div class="oam-details">Sonos Steuerung über KNX</div></th>
 
        
         
-        <td data-ofm="OGM-Common" class="isPart">&#9632;</td>
+        <td data-ofm="OGM-Common" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="knx" class="isPart">&#9632;</td>
+        <td data-ofm="knx" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-FileTransferModule" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-FileTransferModule" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-LogicModule" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-LogicModule" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-ConfigTransfer" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-ConfigTransfer" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OGM-HardwareConfig" class="isPart">&#9632;</td>
+        <td data-ofm="OGM-HardwareConfig" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-Network" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-UsbExchange" class="isPart"></td>
+        <td data-ofm="OFM-UsbExchange" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-InternetWeatherModule" class="isPart"></td>
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-SmartHomeBridge" class="isPart"></td>
+        <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-                <span data-ofm="OFM-Sonos"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-Sonos">OFM-Sonos</a></span>
+                <span data-ofm="OFM-Sonos"><span class="isPart">&#9632;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OFM-Sonos/refs/heads/v1/src/Baggages/Icons/waveform.png" title="Steuerung von Sonos-Lautsprechern" />&nbsp;<a href="https://github.com/OpenKNX/OFM-Sonos">OFM-Sonos</a></span>
         </td>
        
 
@@ -204,32 +226,32 @@
     
     
     
-    <tr data-oam="OAM-SmartHomeBridge">
+    <tr data-oam="OAM-SmartHomeBridge" class="hoverTrigger">
         <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-SmartHomeBridge">OAM-SmartHomeBridge</a></th>
 
        
         
-        <td data-ofm="OGM-Common" class="isPart">&#9632;</td>
+        <td data-ofm="OGM-Common" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="knx" class="isPart">&#9632;</td>
+        <td data-ofm="knx" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-FileTransferModule" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-FileTransferModule" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-LogicModule" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-LogicModule" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-ConfigTransfer" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-ConfigTransfer" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OGM-HardwareConfig" class="isPart">&#9632;</td>
+        <td data-ofm="OGM-HardwareConfig" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-Network" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-UsbExchange" class="isPart"></td>
+        <td data-ofm="OFM-UsbExchange" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-InternetWeatherModule" class="isPart"></td>
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-SmartHomeBridge" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover">&#9632;</td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -243,35 +265,35 @@
     
     
     
-    <tr data-oam="OAM-InternetServices">
+    <tr data-oam="OAM-InternetServices" class="hoverTrigger">
         <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-InternetServices">OAM-InternetServices</a></th>
 
        
         
-        <td data-ofm="OGM-Common" class="isPart">&#9632;</td>
+        <td data-ofm="OGM-Common" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="knx" class="isPart">&#9632;</td>
+        <td data-ofm="knx" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-FileTransferModule" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-FileTransferModule" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-LogicModule" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-LogicModule" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-ConfigTransfer" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-ConfigTransfer" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OGM-HardwareConfig" class="isPart">&#9632;</td>
+        <td data-ofm="OGM-HardwareConfig" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-FunctionBlocks" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-Network" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-Network" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-UsbExchange" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-UsbExchange" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-InternetWeatherModule" class="isPart">&#9632;</td>
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover">&#9632;</td>
         
-        <td data-ofm="OFM-SmartHomeBridge" class="isPart"></td>
+        <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
-                <span data-ofm="OFM-SIPClientModule"><span class="isPart">&#9632;</span>&nbsp;<a href="https://github.com/OpenKNX/OFM-SIPClientModule">OFM-SIPClientModule</a></span>
+                <span data-ofm="OFM-SIPClientModule"><span class="isPart">&#9632;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OFM-SIPClientModule/refs/heads/v1/src/Baggages/Icons/phone-forward-outline.png" title="Anrufe über SIP starten" />&nbsp;<a href="https://github.com/OpenKNX/OFM-SIPClientModule">OFM-SIPClientModule</a></span>
         </td>
        
 

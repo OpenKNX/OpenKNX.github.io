@@ -101,7 +101,7 @@ class HTMLGenerator:
         for oam, oam_details in oam_data.items():
             hw_list = oam_details["devices"]
             logging.debug(f"Devices for {oam}: {hw_list}")
-            for hw in hw_list:
+            for hw in set(hw_list):
                 if self.device_helper.is_open_device(hw):
                     hardware_usage_count[hw] += 1
                 else:

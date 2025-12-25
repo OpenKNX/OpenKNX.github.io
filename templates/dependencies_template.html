@@ -61,7 +61,7 @@
         <th class="rotate45" data-dev="{{device}}"><div><span>{{ device }}</span></div></th>
         {% endfor %}
         <th class="singleModules" data-dev="*special*">Spezielle Geräte:</th>
-        <th class="rotate90" data-dev="*other*"><div><span>Sonstige Geräte</span></div></th>
+        <th class="rotate90 before-new-cols" data-dev="*other*"><div><span>Sonstige Geräte</span></div></th>
        {% endif %}
 
       </tr>
@@ -82,7 +82,7 @@
         <th data-dev="{{device}}" class="colHover"></th>
         {% endfor %}
         <th data-dev="*special*"></th>
-        <th data-dev="*other*"></th>
+        <th data-dev="*other*" class="before-new-cols"></th>
        {% endif %}
 
       </tr>

@@ -10,7 +10,7 @@
   {
     "name": "OFM-ConfigTransfer",
     "title": "Konfigurationstransfer",
-    "icon": "ofm-configtransfer@OFM-ConfigTransfer",
+    "icon": "ofm-configtransfer@.",
     "description": "Kopieren, Import, Export von ETS-Einstellungen",
     "type": "basic",
     "prefix": "UCT"
@@ -52,7 +52,7 @@
   {
     "name": "OFM-FunctionBlocks",
     "title": "Funktionsblöcke",
-    "icon": "texture-box@OFM-FunctionBlocks",
+    "icon": "texture-box@.",
     "description": "Bausteine mit verschiedenen Standardfunktionen",
     "type": "universal-logic",
     "prefix": "FCB"
@@ -79,7 +79,7 @@
   {
     "name": "OFM-SwitchActuator",
     "title": "Schaltaktor",
-    "icon": "electric-switch@OFM-SwitchActuator#main",
+    "icon": "electric-switch@.#main",
     "description": "Ausgänge zum Schalten von Verbrauchern",
     "type": "hardware-control",
     "prefix": "SWA"
@@ -87,7 +87,7 @@
   {
     "name": "OFM-OneWireModule",
     "title": "1-Wire",
-    "icon": "vector-polyline@OFM-OneWireModule",
+    "icon": "vector-polyline@.",
     "description": "Kommunikation mit 1-Wire-Geräten",
     "type": "gateway",
     "prefix": "WIRE"
@@ -95,7 +95,7 @@
   {
     "name": "OFM-ADCInput",
     "title": "Analogeingänge",
-    "icon": "alpha-v-circle-outline@OFM-ADCInput",
+    "icon": "alpha-v-circle-outline@.",
     "description": "Eingänge für analoge Signale",
     "type": "sensor",
     "prefix": "ADC"
@@ -103,7 +103,7 @@
   {
     "name": "OFM-InternetWeatherModule",
     "title": "Internet Wetter",
-    "icon": "weather-partly-cloudy@OFM-InternetWeatherModule",
+    "icon": "weather-partly-cloudy@.",
     "ref_oam": "OAM-InternetServices",
     "description": "Wetterdaten von Internetdiensten",
     "dependencies": [
@@ -124,7 +124,7 @@
   {
     "name": "OFM-ShutterControllerModule",
     "title": "Jalousiensteuerung",
-    "icon": "blinds-horizontal@OFM-ShutterControllerModule",
+    "icon": "blinds-horizontal@.",
     "ref_oam": "OAM-ShutterController",
     "description": "Steuerung von Rollläden und Jalousien",
     "type": "virtual-control",
@@ -145,7 +145,7 @@
   {
     "name": "OFM-DFA",
     "title": "Zustandsautomaten",
-    "icon": "ofm-dfa@OFM-DFA",
+    "icon": "ofm-dfa@.",
     "ref_oam": "OAM-StateEngine",
     "description": "Determninistische Endliche Automaten",
     "dependencies": [
@@ -157,7 +157,7 @@
   {
     "name": "OFM-SML",
     "title": "Smartmeter (SML)",
-    "icon": "meter-electric-outline@OFM-SML",
+    "icon": "meter-electric-outline@.",
     "ref_oam": "OAM-Meter",
     "description": "Auslesen von Smartmetern mit SML-Schnittstelle",
     "type": "sensor",
@@ -176,7 +176,7 @@
   {
     "name": "OFM-Infrared",
     "title": "Infrarot",
-    "icon": "led-on@OFM-Infrared",
+    "icon": "led-on@.",
     "ref_oam": "OAM-InfraredGateway",
     "description": "",
     "type": "hardware",
@@ -185,7 +185,7 @@
   {
     "name": "OFM-Homematic",
     "title": "Homematic",
-    "icon": "crop-square--square-medium@OFM-Homematic",
+    "icon": "crop-square--square-medium@.",
     "ref_oam": "OAM-Homematic",
     "description": "Gateway zur Anbindung von Homematic-Geräten",
     "type": "gateway",
@@ -194,7 +194,7 @@
   {
     "name": "OFM-Sonos",
     "title": "Sonos Tonquellen",
-    "icon": "waveform@OFM-Sonos",
+    "icon": "waveform@.",
     "ref_oam": "OAM-Sonos",
     "description": "Steuerung von Sonos-Lautsprechern",
     "type": "gateway",
@@ -203,7 +203,7 @@
   {
     "name": "OFM-Nuki",
     "title": "Nuki",
-    "icon": "lock-outline@OFM-Nuki",
+    "icon": "lock-outline@.",
     "ref_oam": "OAM-Nuki",
     "description": "Steuerung von bis zu 10 Nuki Smart Locks oder Nuki Openern in Bluetooth-Reichweite",
     "type": "gateway",
@@ -212,7 +212,7 @@
   {
     "name": "OFM-LedModule",
     "title": "LED-Dimmer",
-    "icon": "ceiling-light-multiple@OFM-LedModule",
+    "icon": "ceiling-light-multiple@.",
     "##TODO##ref_oam": "OAM-Nuki",
     "description": "Multi-Kanal LED-Dimmer",
     "type": "hardware",
@@ -221,7 +221,7 @@
   {
     "name": "OFM-SIPClientModule",
     "title": "SIP Client",
-    "icon": "phone-forward-outline@OFM-SIPClientModule",
+    "icon": "phone-forward-outline@.",
     "ref_oam": "OAM-InternetServices",
     "description": "Anrufe über SIP starten",
     "type": "gateway",

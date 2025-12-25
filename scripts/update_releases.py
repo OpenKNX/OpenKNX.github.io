@@ -310,6 +310,8 @@ def main(force_update=False):
             icon_name = icon[0]
             icon_repo_def = (icon[1] if len(icon) == 2 else "OGM-Common").split('#')
             icon_repo = icon_repo_def[0]
+            if icon_repo == '.':
+                icon_repo = ofm_name
             icon_repo_ref = icon_repo_def[1] if len(icon_repo_def)==2 else "v1"
             ofm["icon_url"] = f"https://raw.githubusercontent.com/OpenKNX/{icon_repo}/refs/heads/{icon_repo_ref}/src/Baggages/Icons/{icon_name}.png"
     logging.info(ofm_data)

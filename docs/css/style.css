@@ -31,7 +31,7 @@ table.openknxTitleTable thead tr:nth-child(2) th:first-child {
     background-repeat: no-repeat;
     background-size: 50%;
     background-position-x: center;
-    background-position-y: center;
+    background-position-y: 65%;
 }
 table.openknxTitleTable caption {
     color: #449841;
@@ -175,6 +175,7 @@ table:has([data-oam] th:hover) .oam-details  {
 table.openknxTitleTable > thead {
   position: sticky;
   top: -100px;
+  z-index: 100;
   background-color: #fff;
 }
 
@@ -184,18 +185,18 @@ table.openknxTitleTable thead tr:first-child th:first-child {
   background-color: #fff;
 }
  */
-/* Element | https://openknx.github.io/dependencies_table.html */
+/* Element | https://openknx.github.io/dependencies_table.html
 
 table.openknxTitleTable > thead > tr {
   background-color: #fff;
 }
-
+ */
 /* Element | https://openknx.github.io/dependencies_table.html */
 
 table.openknxTitleTable > caption {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 200;
   background-color: #fffe;
 }
 

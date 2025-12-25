@@ -99,27 +99,27 @@
 
        {% if showModules %}
         {% for module, count in modules_sorted if count > 1 %}
-        <td data-ofm="{{module}}" class="isPart colHover">{% if module in oamModules %}&#9632;{% endif %}</td>
+        <td data-ofm="{{module}}" class="isPart colHover">{% if module in oamModules %}&#9724;{% endif %}</td>
         {% endfor %}
         <td class="left before-new-cols" data-ofm="*special*">
             {%- for module in modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamModules) %}
                 {% set ofmIconUrl = ofm_data[module]['icon_url'] if ofm_data[module] else "" %}
                 {%- set ofmDescripton = ofm_data[module]['description'] if ofm_data[module] else "" -%}
-                <span data-ofm="{{module}}"><span class="isPart">&#9632;</span>&nbsp;{% if ofmIconUrl %}<img src="{{ofmIconUrl}}" title="{{ofmDescripton}}" />&nbsp;{% endif %}<a href="https://github.com/OpenKNX/{{ module }}">{{ module }}</a></span>{% if not loop.last or ((oamInternalModules | length) > 0)  %}, {% endif %}
+                <span data-ofm="{{module}}"><span class="isPart">&#9724;</span>&nbsp;{% if ofmIconUrl %}<img src="{{ofmIconUrl}}" title="{{ofmDescripton}}" />&nbsp;{% endif %}<a href="https://github.com/OpenKNX/{{ module }}">{{ module }}</a></span>{% if not loop.last or ((oamInternalModules | length) > 0)  %}, {% endif %}
             {%- endfor %}
             {%- for module in oamInternalModules %}
-                <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9632;</span>&nbsp;{{ module }}</span>{% if not loop.last %}, {% endif %}
+                <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9724;</span>&nbsp;{{ module }}</span>{% if not loop.last %}, {% endif %}
             {%- endfor %}
         </td>
        {% endif %}
 
        {% if showDevices %}
         {% for device, count in devices_sorted if count > 1 %}
-        <td data-dev="{{device}}" class="isPart colHover">{% if device in oamDevices %}&#9632;{% endif %}</td>
+        <td data-dev="{{device}}" class="isPart colHover">{% if device in oamDevices %}&#9724;{% endif %}</td>
         {% endfor %}
         <td class="left">
             {%- for device in devices_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamDevices) %}
-                <span data-dev="{{device}}"><span class="isPart">&#9632;</span>&nbsp;{{device | device_without_openknx }}</span>{% if not loop.last %}, {% endif %}
+                <span data-dev="{{device}}"><span class="isPart">&#9724;</span>&nbsp;{{device | device_without_openknx }}</span>{% if not loop.last %}, {% endif %}
             {%- endfor %}
         </td>
 

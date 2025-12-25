@@ -14,6 +14,16 @@ class HTMLGenerator:
         self.device_helper = device_helper
         self.path_manager = PathManager()  # Instanz von PathManager
 
+        def remove_openknx_from_devicename(value):
+            """Remove prefix from string if it exists."""
+            prefix = "OpenKNX "
+            if value.startswith(prefix):
+                return value[len(prefix):]
+            return value
+
+        # Register the filter
+        self.env.filters['device_without_openknx'] = remove_openknx_from_devicename
+
     def _render_template_to_file(self, template_name, output_filename, **context):
         """
         Renders a Jinja2 template to an HTML file with the provided context.

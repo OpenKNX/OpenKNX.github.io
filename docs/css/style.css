@@ -166,3 +166,37 @@ th:has(.oam-details) {
 table:has([data-oam] th:hover) .oam-details  {
     display:block;
 }
+
+
+/* <--- Sticky Table Headers ---> */
+
+/* Element | https://openknx.github.io/dependencies_table.html */
+
+table.openknxTitleTable > thead {
+  position: sticky;
+  top: -100px;
+  background-color: #fff;
+}
+
+/* table_header_rotate.css | https://openknx.github.io/css/table_header_rotate.css
+
+table.openknxTitleTable thead tr:first-child th:first-child {
+  background-color: #fff;
+}
+ */
+/* Element | https://openknx.github.io/dependencies_table.html */
+
+table.openknxTitleTable > thead > tr {
+  background-color: #fff;
+}
+
+/* Element | https://openknx.github.io/dependencies_table.html */
+
+table.openknxTitleTable > caption {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fffe;
+}
+
+/* <//--- Sticky Table Headers ---> */

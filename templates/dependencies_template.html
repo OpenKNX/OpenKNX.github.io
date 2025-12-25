@@ -71,8 +71,10 @@
        {% if showModules %}
         {% for module, count in modules_sorted if count > 1 %}
           {%- set ofmIconUrl = ofm_data[module]['icon_url'] if ofm_data[module] else "" -%}
-          {%- set ofmDescripton = ofm_data[module]['description'] if ofm_data[module] else "" -%}
-        <th data-ofm="{{module}}" class="colHover" title="{{ofmDescripton}}">{% if ofmIconUrl %}<img src="{{ofmIconUrl}}" />{% else %}|{% endif %}</th>
+          {%- set ofmTitle = ofm_data[module]['title'] if ofm_data[module] else "" -%}
+          {%- set ofmDescription = ofm_data[module]['description'] if ofm_data[module] else "" -%}
+          {%- set ofmHint = (ofmTitle + ": " if ofmTitle else "") + ofmDescription -%}
+        <th data-ofm="{{module}}" class="colHover" title="{{ofmHint}}">{% if ofmIconUrl %}<img src="{{ofmIconUrl}}" />{% else %}|{% endif %}</th>
         {% endfor %}
         <th class="before-new-cols" data-ofm="*special*"></th>
        {% endif %}

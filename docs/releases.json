@@ -2045,7 +2045,7 @@
                     "name": "Release 0.2",
                     "published_at": "2025-02-11T18:41:10Z",
                     "html_url": "https://github.com/OpenKNX/OAM-SwitchActuator/releases/tag/0.2",
-                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- NEU: Szenensteuerung hinzugef\u00fcgt.\r\n- NEU: Dokumentation und Kontexthilfe in der ETS hinzugef\u00fcgt.\r\n- CHANGE: Logikmodul auf Version 3.5 aktualisiert.\r\n- FIX: Relais-Schalteingang wird nun auch im noch nicht parametrisierten Zustand korrekt gesetzt.",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- NEU: Szenensteuerung hinzugef\u00fcgt.\r\n- NEU: Dokumentation und Kontexthilfe in der ETS hinzugef\u00fcgt.\r\n- CHANGE: Logikmodul auf Version 3.5 aktualisiert.\r\n- FIX: Relais-Schalteingang wird nun auch im noch nicht parametrisierten Zustand korrekt gesetzt.\r\n\r\n**Hinweis:**\r\nDie Firmware Version 0.2 enth\u00e4lt noch keine Unterst\u00fctzung f\u00fcr den strom-messenden Schaltaktor. Dies folgt bald mit Version 0.3. Eine Beta-Firmware steht aber bereits jetzt zur Verf\u00fcgung, dazu bitte eine kurze [E-Mail](mailto:andreas@ab-smarthouse.com) schreiben.",
                     "assets": [
                         {
                             "name": "SwitchActuator-Release-0.2.zip",
@@ -2687,6 +2687,13 @@
                 }
             ],
             "hw_avail_open": 7
+        },
+        "OAM-SonosNFCPlayer": {
+            "repo_url": "https://github.com/OpenKNX/OAM-SonosNFCPlayer",
+            "archived": false,
+            "description": null,
+            "releases": [],
+            "hw_avail_open": 0
         }
     }
 }

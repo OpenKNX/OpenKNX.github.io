@@ -59,6 +59,8 @@ appOrder = [
     "OAM-Aircondition",
     "OAM-Nuki",
 
+    # gateway with ip + direct hardware control
+    "OAM-SonosNFCPlayer",
     # gateways with ip
     "OAM-Sonos",
     "OAM-Homematic",
@@ -218,6 +220,7 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
         "OAM-BinaryInput"      : ["BinaryInputModule"],
         "OAM-ElectricDoorDrive": ["DoorControllerModule"],
         "OAM-EnoceanGateway_V2": ["EnOcean"],
+        "OAM-SonosNFCPlayer":    ["OAM-SonosNFCPlayer"],
         "OAM-TestApp"          : ["DummyModule"],
         "OAM-WeatherWN90LP"    : ["WN90LPModule"],
         "SOM-UP"               : ["SoundModule"],

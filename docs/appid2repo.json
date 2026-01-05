@@ -32,6 +32,7 @@
     "0xA13C": "OAM-REG1-Schaltaktor-4x / REG1-Schaltaktor-4x-Release",
     "0xA13D": "OAM-REG1-Schaltaktor-4x / REG1-Schaltaktor-4x",
     "0xA201": "OAM-EnoceanGateway_V2 / EnoceanGateway",
+    "0xA210": "BEM-GardenControl / GardenControl",
     "0xA228": "SOM-UP / SoundModule-Release",
     "0xA229": "SOM-UP / SoundModule-Dev",
     "0xA304": "OAM-Meter / MeterModule",
@@ -68,6 +69,11 @@
     "0xAE2E": [
       "OAM-InternetServices / InternetServices-Release",
       "OAM-InternetServices / InternetServices"
+    ],
+    "0xAE2F": "OAM-SonosNFCPlayer / SonosNFCPlayer-Dev",
+    "0xAE30": [
+      "OAM-SonosNFCPlayer / SonosNFCPlayer-Release",
+      "OAM-SonosNFCPlayer / SonosNFCPlayer"
     ],
     "0xAE31": "OAM-ShutterController / ShutterController-Dev",
     "0xAE32": [

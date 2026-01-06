@@ -2692,7 +2692,25 @@
             "repo_url": "https://github.com/OpenKNX/OAM-SonosNFCPlayer",
             "archived": false,
             "description": null,
-            "releases": [],
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "0.1.0",
+                    "name": "0.1.0 Beta",
+                    "published_at": "2026-01-06T19:29:44Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SonosNFCPlayer/releases/tag/0.1.0",
+                    "body": "First beta release",
+                    "assets": [
+                        {
+                            "name": "SonosNFCPlayer-Beta-0.1.0.zip",
+                            "size": 3474120,
+                            "digest": "sha256:d0f37d1c083ceea442efaaa30911a379e625ab6f343336164217584f55d6af06",
+                            "updated_at": "2026-01-06T19:29:36Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SonosNFCPlayer/releases/download/0.1.0/SonosNFCPlayer-Beta-0.1.0.zip"
+                        }
+                    ]
+                }
+            ],
             "hw_avail_open": 0
         }
     }

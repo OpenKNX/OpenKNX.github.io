@@ -2695,6 +2695,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.2.0",
+                    "name": "0.2.0",
+                    "published_at": "2026-01-13T19:54:03Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SonosNFCPlayer/releases/tag/0.2.0",
+                    "body": "- Add ETS configuration for the rotary controls\r\n- Add NFC command ProgMode",
+                    "assets": [
+                        {
+                            "name": "SonosNFCPlayer-Beta-0.2.0.zip",
+                            "size": 3483389,
+                            "digest": "sha256:ee56b325383af2a8274266e8f3c343e2377fda2b5410e1b3fecb72e1cbcfee3e",
+                            "updated_at": "2026-01-13T19:54:00Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SonosNFCPlayer/releases/download/0.2.0/SonosNFCPlayer-Beta-0.2.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.1.2",
                     "name": "0.1.2",
                     "published_at": "2026-01-09T20:46:49Z",

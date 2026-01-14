@@ -2634,7 +2634,25 @@
             "repo_url": "https://github.com/OpenKNX/OAM-Nuki",
             "archived": false,
             "description": null,
-            "releases": [],
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.8.4",
+                    "name": "0.8.4 Beta",
+                    "published_at": "2026-01-14T18:40:32Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Nuki/releases/tag/0.8.4",
+                    "body": "- Beta version for Adfruit-FeatherV2 board",
+                    "assets": [
+                        {
+                            "name": "Nuki-Beta-0.8.4.zip",
+                            "size": 6635728,
+                            "digest": "sha256:d399e91f6e6ea1841e8e4aefd0024b7fafd09899b4aed2f3d7cc9f7b2d79b327",
+                            "updated_at": "2026-01-14T18:40:07Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Nuki/releases/download/0.8.4/Nuki-Beta-0.8.4.zip"
+                        }
+                    ]
+                }
+            ],
             "hw_avail_open": 0
         },
         "OAM-RaumController": {

@@ -220,7 +220,7 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
         "OAM-BinaryInput"      : ["BinaryInputModule"],
         "OAM-ElectricDoorDrive": ["DoorControllerModule"],
         "OAM-EnoceanGateway_V2": ["EnOcean"],
-        "OAM-SonosNFCPlayer":    ["OAM-SonosNFCPlayer"],
+        "OAM-SonosNFCPlayer":    ["SonosNFCPlayerModule"],
         "OAM-TestApp"          : ["DummyModule"],
         "OAM-WeatherWN90LP"    : ["WN90LPModule"],
         "SOM-UP"               : ["SoundModule"],

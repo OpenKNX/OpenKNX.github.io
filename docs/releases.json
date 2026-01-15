@@ -2653,7 +2653,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 0
+            "hw_avail_open": 2
         },
         "OAM-RaumController": {
             "repo_url": "https://github.com/OpenKNX/OAM-RaumController",

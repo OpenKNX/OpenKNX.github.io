@@ -14,6 +14,8 @@
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(6):hover) tr > :nth-child(6).colHover,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(7):hover) tr > :nth-child(7).colHover,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(8):hover) tr > :nth-child(8).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(9):hover) tr > :nth-child(9).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(10):hover) tr > :nth-child(10).colHover,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
@@ -24,7 +26,9 @@
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(5):hover) thead th.rotate45:nth-child(5) div span,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(6):hover) thead th.rotate45:nth-child(6) div span,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(7):hover) thead th.rotate45:nth-child(7) div span,
-        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(8):hover) thead th.rotate45:nth-child(8) div span
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(8):hover) thead th.rotate45:nth-child(8) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(9):hover) thead th.rotate45:nth-child(9) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(10):hover) thead th.rotate45:nth-child(10) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -51,6 +55,8 @@
         
         <col data-ofm="OGM-HardwareConfig" />
         
+        <col data-ofm="OFM-FunctionBlocks" />
+        
         <col data-ofm="OFM-DFA" />
         
         <col data-ofm="*special*" />
@@ -61,7 +67,7 @@
     <thead>
       <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
-        <th class="before-new-cols" colspan="8">Enthaltene Module</th>
+        <th class="before-new-cols" colspan="9">Enthaltene Module</th>
         
       </tr>
       <tr class="hoverTrigger">
@@ -81,6 +87,8 @@
         
         <th class="rotate45" data-ofm="OGM-HardwareConfig"><div><span><a href="https://github.com/OpenKNX/OGM-HardwareConfig">OGM-HardwareConfig</a></span></div></th>
         
+        <th class="rotate45" data-ofm="OFM-FunctionBlocks"><div><span><a href="https://github.com/OpenKNX/OFM-FunctionBlocks">OFM-FunctionBlocks</a></span></div></th>
+        
         <th class="rotate45" data-ofm="OFM-DFA"><div><span><a href="https://github.com/OpenKNX/OFM-DFA">OFM-DFA</a></span></div></th>
         
         <th class="singleModules before-new-cols" data-ofm="*special*">Nur in dieser Applikation:</th>
@@ -99,6 +107,7 @@
         <th data-ofm="OFM-LogicModule" class="colHover" title="Logiken: Logikfunktionen, Wertekonvertierung und Zeitschaltuhren"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/blur.png" /></th>
         <th data-ofm="OFM-ConfigTransfer" class="colHover" title="Konfigurationstransfer: Kopieren, Import, Export von ETS-Einstellungen"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ConfigTransfer/refs/heads/v1/src/Baggages/Icons/ofm-configtransfer.png" /></th>
         <th data-ofm="OGM-HardwareConfig" class="colHover" title="">|</th>
+        <th data-ofm="OFM-FunctionBlocks" class="colHover" title="Funktionsblöcke: Bausteine mit verschiedenen Standardfunktionen"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-FunctionBlocks/refs/heads/v1/src/Baggages/Icons/texture-box.png" /></th>
         <th data-ofm="OFM-DFA" class="colHover" title="Zustandsautomaten: Determninistische Endliche Automaten"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-DFA/refs/heads/v1/src/Baggages/Icons/ofm-dfa.png" /></th>
         
         <th class="before-new-cols" data-ofm="*special*"></th>
@@ -131,9 +140,45 @@
         
         <td data-ofm="OGM-HardwareConfig" class="isPart colHover">&#9724;</td>
         
+        <td data-ofm="OFM-FunctionBlocks" class="isPart colHover"></td>
+        
         <td data-ofm="OFM-DFA" class="isPart colHover">&#9724;</td>
         
         <td class="left before-new-cols" data-ofm="*special*">
+        </td>
+       
+
+       
+
+    </tr>
+    
+    
+    
+    
+    
+    <tr data-oam="OAM-Nuki" class="hoverTrigger">
+        <th class="before-new-cols"><a href="https://github.com/OpenKNX/OAM-Nuki">OAM-Nuki</a></th>
+
+       
+        
+        <td data-ofm="OGM-Common" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="knx" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-FileTransferModule" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-LogicModule" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-ConfigTransfer" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OGM-HardwareConfig" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-DFA" class="isPart colHover"></td>
+        
+        <td class="left before-new-cols" data-ofm="*special*">
+                <span data-ofm="OFM-Nuki"><span class="isPart">&#9724;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OFM-Nuki/refs/heads/v1/src/Baggages/Icons/lock-outline.png" title="Steuerung von bis zu 10 Nuki Smart Locks oder Nuki Openern in Bluetooth-Reichweite" />&nbsp;<a href="https://github.com/OpenKNX/OFM-Nuki">OFM-Nuki</a></span>
         </td>
        
 

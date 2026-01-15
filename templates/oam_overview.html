@@ -17,6 +17,12 @@
 <p>{{ oam_details.description }}</p>
 <h2>Enthaltene Module</h2>
 <ul>
+    {% for module in oam_details['modules_internal'] %}
+    <li data-ofm="{{module}}">
+        (integriert)
+        {{ module }}
+    </li>
+    {% endfor -%}
     {% for module, count in modules_sorted if module in oamModules%}
     <li data-ofm="{{module}}">
         (<a href="https://github.com/OpenKNX/{{ module }}">GitHub</a>)

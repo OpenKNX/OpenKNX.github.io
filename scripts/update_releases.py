@@ -306,7 +306,10 @@ def main(force_update=False):
 
     # read ofm_data from ofms.json
     with open(os.path.join("data", 'ofms.json'), 'r', encoding='utf-8') as f:
-        ofm_data = {ofm["name"]: ofm for ofm in json.load(f)}
+        ofm_data = {
+            f'{(ofm["parent_oam"]+"/" if "parent_oam" in ofm else "")}{ofm["name"]}': ofm
+            for ofm in json.load(f)
+        }
     for ofm_name, ofm in ofm_data.items():
         if 'icon' in ofm:
             icon = ofm['icon'].split('@')
@@ -314,7 +317,7 @@ def main(force_update=False):
             icon_repo_def = (icon[1] if len(icon) == 2 else "OGM-Common").split('#')
             icon_repo = icon_repo_def[0]
             if icon_repo == '.':
-                icon_repo = ofm_name
+                icon_repo = ofm_name.split('/')[0] # for internal modules the format is OAM/module
             icon_repo_ref = icon_repo_def[1] if len(icon_repo_def)==2 else "v1"
             ofm["icon_url"] = f"https://raw.githubusercontent.com/OpenKNX/{icon_repo}/refs/heads/{icon_repo_ref}/src/Baggages/Icons/{icon_name}.png"
     logging.info(ofm_data)

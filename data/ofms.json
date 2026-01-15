@@ -226,5 +226,16 @@
     "description": "Anrufe über SIP starten",
     "type": "gateway",
     "prefix": "SIP"
-  }
+  },
+  { "parent_oam":"GW-REG1-Dali"         , "name": "DaliModule"                                                                                                                                                                                      },
+  { "parent_oam":"OAM-Aircondition"     , "name": "AirconditionModule"  , "title": "Klimaanlage"    , "icon": "air-conditioner@."         , "description": "Internes Modul zur Steuerung von Klimaanlagen"        , "type": "???", "prefix": "AIR"  },
+  { "parent_oam":"OAM-BinaryClock"      , "name": "BinaryClockModule"                                                                                                                                                                               },
+  { "parent_oam":"OAM-BinaryInput"      , "name": "BinaryInputModule"                                                                                                                                                                               },
+  { "parent_oam":"OAM-ElectricDoorDrive", "name": "DoorControllerModule"                                                                                                                                                                            },
+  { "parent_oam":"OAM-EnoceanGateway_V2", "name": "EnOcean"                                                                                                                                                                                         },
+  { "parent_oam":"OAM-SonosNFCPlayer"   , "name": "SonosNFCPlayerModule", "title": "Player"         , "icon": "disc-player@.#v1dev"       , "description": "Internes Modul zur Auswahl einer Audio-Quelle via NFC", "type": "???", "prefix": "PLY"  },
+  { "parent_oam":"OAM-TestApp"          , "name": "DummyModule"                                                                                                                                                                                     },
+  { "parent_oam":"OAM-WeatherWN90LP"    , "name": "WN90LPModule"        , "title": "Wetterstationen", "icon": "weather-partly-snowy-rainy", "description": "Internes Modul zur Nutzung der Wetterstation"         , "type": "???", "prefix": "W90"  },
+  { "parent_oam":"SOM-UP"               , "name": "SoundModule"         , "title": "Tonausgabe"     , "icon": "speaker"                   , "description": "Internes Modul zur Soundausgabe"                      , "type": "???", "prefix": "SOM"  },
+  { "parent_oam":"TAS-UP-8xLJ"          , "name": "HardwareModule"                                                                                                                                                                                  }
 ]

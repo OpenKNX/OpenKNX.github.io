@@ -19,7 +19,7 @@
     "name": "OFM-LogicModule",
     "title": "Logiken",
     "icon": "blur",
-    "##DEPRECATED##ref_oam": "OAM-LogigModule",
+    "##DEPRECATED##ref_oam": "OAM-LogicModule",
     "description": "Logikfunktionen, Wertekonvertierung und Zeitschaltuhren",
     "type": "universal-logic",
     "prefix": "LOG"
@@ -147,7 +147,7 @@
     "title": "Zustandsautomaten",
     "icon": "ofm-dfa@.",
     "ref_oam": "OAM-StateEngine",
-    "description": "Determninistische Endliche Automaten",
+    "description": "Deterministische Endliche Automaten",
     "dependencies": [
       "OFM-LogicModule"
     ],

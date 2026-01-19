@@ -1562,6 +1562,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.6.1",
+                    "name": "",
+                    "published_at": "2026-01-18T22:05:19Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.6.1",
+                    "body": "functional identical to 6.0.1-Dev",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Release-0.6.1.zip",
+                            "size": 2373504,
+                            "digest": "sha256:3bcd417a18e7fd6a5284b7c345cd16cbfd4b158d05e70acd42964d886f6501f6",
+                            "updated_at": "2026-01-18T22:05:11Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/0.6.1/IP-Router-Release-0.6.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.6.0",
                     "name": "",
                     "published_at": "2025-12-05T07:30:27Z",

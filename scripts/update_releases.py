@@ -257,7 +257,7 @@ def write_releases_json(oam_releases_data):
         "OpenKnxFormatVersion": "v0.3.0",
         "data": oam_releases_data
     }
-    with open(os.path.join("docs", 'releases.json'), 'w') as outfile:
+    with open(os.path.join("docs", 'releases.json'), 'w', encoding='utf-8') as outfile:
         json.dump(releases_data, outfile, indent=4)
     # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")
 
@@ -281,14 +281,14 @@ def main(force_update=False):
     oam_releases_data = release_manager.fetch_apps_releases(oam_repos)
 
     oam_hardware_raw, oam_stat = process_releases(oam_releases_data)
-    with open('hardware_mapping_raw.json', 'w') as outfile:
+    with open('hardware_mapping_raw.json', 'w', encoding='utf-8') as outfile:
         json.dump(oam_hardware_raw, outfile, indent=4)
 
     oam_hardware = {
         oam: [device_helper.hw_name_mapping(oam, d) for d in oam_device_list]
         for oam, oam_device_list in oam_hardware_raw.items()
     }
-    with open('hardware_mapping.json', 'w') as outfile:
+    with open('hardware_mapping.json', 'w', encoding='utf-8') as outfile:
         json.dump(oam_hardware, outfile, indent=4)
 
     for oam, oam_data in oam_releases_data.items():

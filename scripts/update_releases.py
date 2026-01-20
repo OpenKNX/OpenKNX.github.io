@@ -1,5 +1,5 @@
 # Build OpenKNX Release Overviews for Integration in Pages, Wiki and Toolbox
-# (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
+# (C) 2025-2026 Cornelius Köpp; For Usage in OpenKNX-Project only
 from datetime import datetime, timedelta, timezone
 import json
 import logging
@@ -251,14 +251,18 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
     return {**oam_data_sorted, **oam_data_unsorted}
 
 
+def _write_json_file(filename, data):
+    with open(filename, 'w', encoding='utf-8') as outfile:
+        json.dump(data, outfile, indent=4)
+
+
 def write_releases_json(oam_releases_data):
     releases_data = {
         "OpenKnxContentType": "OpenKNX/OAM/Releases",
         "OpenKnxFormatVersion": "v0.3.0",
         "data": oam_releases_data
     }
-    with open(os.path.join("docs", 'releases.json'), 'w', encoding='utf-8') as outfile:
-        json.dump(releases_data, outfile, indent=4)
+    _write_json_file(os.path.join("docs", 'releases.json'), releases_data)
     # logging.info(f"OAM Release Data: {json.dumps(oam_releases_data, indent=4)}")
 
 
@@ -281,15 +285,13 @@ def main(force_update=False):
     oam_releases_data = release_manager.fetch_apps_releases(oam_repos)
 
     oam_hardware_raw, oam_stat = process_releases(oam_releases_data)
-    with open('hardware_mapping_raw.json', 'w', encoding='utf-8') as outfile:
-        json.dump(oam_hardware_raw, outfile, indent=4)
+    _write_json_file('hardware_mapping_raw.json', oam_hardware_raw)
 
     oam_hardware = {
         oam: [device_helper.hw_name_mapping(oam, d) for d in oam_device_list]
         for oam, oam_device_list in oam_hardware_raw.items()
     }
-    with open('hardware_mapping.json', 'w', encoding='utf-8') as outfile:
-        json.dump(oam_hardware, outfile, indent=4)
+    _write_json_file('hardware_mapping.json', oam_hardware)
 
     for oam, oam_data in oam_releases_data.items():
         oam_data["hw_avail_open"] = sum(1 for name in oam_hardware.get(oam, []) if device_helper.is_open_device(name))

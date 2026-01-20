@@ -2679,6 +2679,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "v5.1.13",
+                    "name": "v5.1.13",
+                    "published_at": "2026-01-20T13:49:20Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-RaumController/releases/tag/v5.1.13",
+                    "body": "Dies ist ein Hotfix-Release, das Fehlfunktionen beim CO2-Sensor SCD4x behebt. Ferner sind 2 Kleinigkeiten beim Pr\u00e4senzmelder korrigiert.\r\n\r\n- HOTFIX: Der Sensor SCD4x konnte bei einem Neustart in einen Zustand geraten, bei dem er keine Werte sendet (sporadisch h\u00e4ufig). In ganz seltenen F\u00e4llen konnte das dazu f\u00fchren, dass kein Sensor mehr seine Werte senden konnte.\r\n- FIX: Im Durchgangsmodus (\"Erst nach Kurzzeitpr\u00e4senz schalten\") wird jetzt helligkeitsabh\u00e4ngig geschaltet\r\n- FIX: \"Manuelles schalten verhindert Ausschalten \u00fcber Helligkeit\" funktioniert jetzt auch direkt nach einem Neustart des Ger\u00e4tes\r\n\r\nDiesen Hotfix sollten unbedingt alle installieren, die den SCD4x-Sensor nutzen. Es ist ein reines Firmware-Update, wer die ETS-Applikation 5.1 bereits in der ETS hat, muss hier nichts aktualisieren.\r\n\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "RaumController-Release-5.1.13.zip",
+                            "size": 13025015,
+                            "digest": "sha256:60c6e63c46e99cf76349030381a54ebe30f8c2f68eaafcd06acb04679b3413d2",
+                            "updated_at": "2026-01-20T13:49:09Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-RaumController/releases/download/v5.1.13/RaumController-Release-5.1.13.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "v5.1.5",
                     "name": "v5.1.5",
                     "published_at": "2025-10-31T08:27:03Z",

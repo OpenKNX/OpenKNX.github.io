@@ -270,7 +270,7 @@ def main(force_update=False):
     oam_updated = {
         repo["name"]: repo["updated_at"]
         for repo in oam_repos
-        if (now - datetime.strptime(repo["updated_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)) <= delta
+        if (now - datetime.strptime(repo["updated_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)) <= delta or (now - datetime.strptime(repo["pushed_at"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)) <= delta
     }
     if not force_update and len(oam_updated) == 0:
         logging.info(f"No repos have been updated in the last {delta} => NO need for updates!")

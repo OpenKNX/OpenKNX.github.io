@@ -2654,6 +2654,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.9.0",
+                    "name": "0.9.0 Beta",
+                    "published_at": "2026-01-25T13:25:51Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Nuki/releases/tag/0.9.0",
+                    "body": "- Release based on Common v1dev\r\n- Only supported HW: \"OpenKNXiao V1 Mini ESP32S3\"\r\n- Adafruit Feather V2 not linkable (to less interrupt memory)\r\n- Breaking Change: Changed behavior of Lock/Unlock. Use Unlock=1 , Lock = 0 telegrams",
+                    "assets": [
+                        {
+                            "name": "Nuki-Beta-0.9.0.zip",
+                            "size": 4509598,
+                            "digest": "sha256:9041f3964b724ef379e8cfe50f00549175ffd9e899a913d6fb51cfc42474229d",
+                            "updated_at": "2026-01-25T13:24:42Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Nuki/releases/download/0.9.0/Nuki-Beta-0.9.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.8.4",
                     "name": "0.8.4 Beta",
                     "published_at": "2026-01-14T18:40:32Z",
@@ -2670,7 +2687,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 2
+            "hw_avail_open": 1
         },
         "OAM-RaumController": {
             "repo_url": "https://github.com/OpenKNX/OAM-RaumController",

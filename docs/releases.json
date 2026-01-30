@@ -2,8 +2,8 @@
     "OpenKnxContentType": "OpenKNX/OAM/Releases",
     "OpenKnxFormatVersion": "v0.3.0",
     "data": {
-        "SEN-UP1-8xTH": {
-            "repo_url": "https://github.com/OpenKNX/SEN-UP1-8xTH",
+        "OAM-UP1-8xSensor": {
+            "repo_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor",
             "archived": false,
             "description": "OpenKNX 8channel Temperature/Humidity Sensor",
             "releases": [
@@ -12,7 +12,7 @@
                     "tag_name": "v1.5.0-Dev",
                     "name": "v1.5.0-Dev",
                     "published_at": "2025-12-19T07:17:08Z",
-                    "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/v1.5.0-Dev",
+                    "html_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/tag/v1.5.0-Dev",
                     "body": "Dev-Release (formerly called Beta) v1.5.0\r\n\r\n- fix of OneWire Sensors (DS18B20)\r\n- update to current OpenKNX Framework",
                     "assets": [
                         {
@@ -20,7 +20,7 @@
                             "size": 1940996,
                             "digest": "sha256:34105069dbc3e22feb0a2df502189277d257a1e90f63e08eeee893ca496f5400",
                             "updated_at": "2025-12-19T07:15:53Z",
-                            "browser_download_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/download/v1.5.0-Dev/SEN-UP1-8xTH-Dev-1.5.0.zip"
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/download/v1.5.0-Dev/SEN-UP1-8xTH-Dev-1.5.0.zip"
                         }
                     ]
                 },
@@ -29,7 +29,7 @@
                     "tag_name": "V1.4.1-Beta",
                     "name": "Beta FW / ETS V1.4.1",
                     "published_at": "2025-01-26T15:47:51Z",
-                    "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/V1.4.1-Beta",
+                    "html_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/tag/V1.4.1-Beta",
                     "body": "Bugfix Beta Release V1.4.1\r\n\r\n- tempor\u00e4re Deaktierung von mehr als einem DS18B20 Kanal (max. 2 Sensoren m\u00f6glich).",
                     "assets": [
                         {
@@ -37,7 +37,7 @@
                             "size": 1816359,
                             "digest": null,
                             "updated_at": "2025-01-26T15:47:50Z",
-                            "browser_download_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/download/V1.4.1-Beta/SEN-UP1-8xTH-Beta-1.4.1.zip"
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/download/V1.4.1-Beta/SEN-UP1-8xTH-Beta-1.4.1.zip"
                         }
                     ]
                 },
@@ -46,7 +46,7 @@
                     "tag_name": "V1.4.0-Beta",
                     "name": "Beta FW / ETS V1.4.0",
                     "published_at": "2025-01-25T16:29:11Z",
-                    "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/V1.4.0-Beta",
+                    "html_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/tag/V1.4.0-Beta",
                     "body": "Beta FW / ETS V1.4.0\r\n\r\nKNX:                     2.1.2\r\n\r\nCommon:                  1.2.0\r\n\r\nVirtualButton:           0.5.0\r\n\r\nTHPSensor:               0.3.0\r\n- Bugfix negative Temps 2ter DS18B20 #5\r\n- Bugfix 49 Tage Problem bei DS18B20 #6\r\n- Bugfix CRC Error DS18B10 #7\r\n- Bugfix: Faktor 100 beim Luftdruck mit BME280 #4\r\n- bei den BI die M\u00f6glichkeit \"nichts\" zu senden (vorher nur 0 oder 1) #3\r\n- Unterst\u00fctzung f\u00fcr den SHT4x #8\r\n\r\nLogic:                   3.5.2\r\n\r\nFileTransfer:            0.1.0\r\n- Resume nach Fehler\r\n\r\njetzt auch mit ConfigTransfer\r\n\r\nAchtung Beta!!\r\nV1.0.0-Release kommt noch (gleicher Inhalt).\r\n\r\nBinaries Offline genommen, aufgrund erheblicher Fehler.",
                     "assets": []
                 },
@@ -55,7 +55,7 @@
                     "tag_name": "SEN-UP1-8xTH_V00.10",
                     "name": "",
                     "published_at": "2023-10-30T17:33:06Z",
-                    "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/SEN-UP1-8xTH_V00.10",
+                    "html_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/tag/SEN-UP1-8xTH_V00.10",
                     "body": "Hardware V00.10 release",
                     "assets": [
                         {
@@ -63,7 +63,7 @@
                             "size": 87179,
                             "digest": null,
                             "updated_at": "2023-10-30T17:32:17Z",
-                            "browser_download_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/download/SEN-UP1-8xTH_V00.10/SEN-UP1-8xTH_V00.10_gerbers.zip"
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/download/SEN-UP1-8xTH_V00.10/SEN-UP1-8xTH_V00.10_gerbers.zip"
                         }
                     ]
                 },
@@ -72,7 +72,7 @@
                     "tag_name": "V0.1.1-release",
                     "name": "V0.1.1-release",
                     "published_at": "2023-10-27T10:29:07Z",
-                    "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/V0.1.1-release",
+                    "html_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/tag/V0.1.1-release",
                     "body": "[SEN-UP1-8xTH-Release-0.1.1.zip](https://github.com/OpenKNX/SEN-UP1-8xTH/files/13187891/SEN-UP1-8xTH-Release-0.1.1.zip)\r\n\r\nfixed bug that prevented all KOs for absolute humidity, dew point and pressure from beeing sent",
                     "assets": []
                 },
@@ -81,7 +81,7 @@
                     "tag_name": "V0.2.0",
                     "name": "FW / ETS Release V0.2.0",
                     "published_at": "2024-02-18T16:16:46Z",
-                    "html_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/tag/V0.2.0",
+                    "html_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/tag/V0.2.0",
                     "body": "Fix Bug that 2. DS18B20 is not read\r\nUpdate the newest Common / KNX Stack",
                     "assets": [
                         {
@@ -89,12 +89,12 @@
                             "size": 1572804,
                             "digest": null,
                             "updated_at": "2024-02-18T16:16:43Z",
-                            "browser_download_url": "https://github.com/OpenKNX/SEN-UP1-8xTH/releases/download/V0.2.0/SEN-UP1-8xTH-Release-0.2.zip"
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/download/V0.2.0/SEN-UP1-8xTH-Release-0.2.zip"
                         }
                     ]
                 }
             ],
-            "hw_avail_open": 1
+            "hw_avail_open": 0
         },
         "OAM-SensorModule": {
             "repo_url": "https://github.com/OpenKNX/OAM-SensorModule",

@@ -48,6 +48,7 @@ appOrder = [
     # universal sensor hardware
     "OAM-SensorModule",
     "SEN-UP1-8xTH",
+    "OAM-UP1-8xSensor",
 
     # gateways to other systems
     "GW-REG1-Dali",

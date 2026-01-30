@@ -98,6 +98,7 @@
     "XIAO_MINI_V1":                                  "OpenKNXiao V1",
     "firmware@OAM-EnoceanGateway":                   "SmartMF Enocean Gateway (SAMD)",
     "firmware@SEN-UP1-8xTH":                         "OpenKNX UP1 8xSensor",
+    "firmware@OAM-UP1-8xSensor":                     "OpenKNX UP1 8xSensor",
     "firmware_REG1-GW-RS485":                        "OpenKNX REG1 RS485 Gateway",
     "firmware_REG1-SA-4xSELV":                       "OpenKNX REG1 4xSELV Schaltaktor",
     "firmware-RP2040-Breakout-just-for-testers":     "SmartMF-RP2040-Breakout-just-for-testers",

@@ -2580,6 +2580,31 @@
             ],
             "hw_avail_open": 0
         },
+        "OAM-UP1-Taster": {
+            "repo_url": "https://github.com/OpenKNX/OAM-UP1-Taster",
+            "archived": false,
+            "description": null,
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "v0.1.0",
+                    "name": "v0.1.0",
+                    "published_at": "2026-02-03T21:38:26Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-UP1-Taster/releases/tag/v0.1.0",
+                    "body": "Initial Beta Release v0.1.0\r\n\r\nIdentical to v1.7.0-Dev (Developer Release)",
+                    "assets": [
+                        {
+                            "name": "UP1-Taster-Release-0.1.0.zip",
+                            "size": 1921526,
+                            "digest": "sha256:40d75bf0ec0b89aedb5f881d754860b695f0a1b8a5a0588038d3d2e430f61b2b",
+                            "updated_at": "2026-02-03T21:37:44Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-UP1-Taster/releases/download/v0.1.0/UP1-Taster-Release-0.1.0.zip"
+                        }
+                    ]
+                }
+            ],
+            "hw_avail_open": 0
+        },
         "OAM-Aircondition": {
             "repo_url": "https://github.com/OpenKNX/OAM-Aircondition",
             "archived": false,

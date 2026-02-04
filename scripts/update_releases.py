@@ -82,6 +82,7 @@ appOrder = [
     "OAM-TouchRound",
 
     # "boring" hardware
+    "OAM-UP1-Taster",
     "OAM-REG1-Schaltaktor-4x",
     "OAM-SwitchActuator",
     "OAM-BinaryInput",

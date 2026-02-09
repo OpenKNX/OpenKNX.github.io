@@ -29,6 +29,8 @@
     "0xA11F": "OAM-IP-Router / IP-Router-Release",
     "0xA128": "OAM-WeatherWN90LP / WeatherWN90LP-Release",
     "0xA129": "OAM-WeatherWN90LP / WeatherWN90LP-Dev",
+    "0xA132": "OAM-UP1-Taster / UP1-Taster-Release",
+    "0xA133": "OAM-UP1-Taster / UP1-Taster",
     "0xA13C": "OAM-REG1-Schaltaktor-4x / REG1-Schaltaktor-4x-Release",
     "0xA13D": "OAM-REG1-Schaltaktor-4x / REG1-Schaltaktor-4x",
     "0xA201": "OAM-EnoceanGateway_V2 / EnoceanGateway",

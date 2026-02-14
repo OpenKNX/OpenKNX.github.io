@@ -2714,6 +2714,13 @@
             ],
             "hw_avail_open": 1
         },
+        "OAM-BusPowerSupply": {
+            "repo_url": "https://github.com/OpenKNX/OAM-BusPowerSupply",
+            "archived": false,
+            "description": null,
+            "releases": [],
+            "hw_avail_open": 0
+        },
         "OAM-RaumController": {
             "repo_url": "https://github.com/OpenKNX/OAM-RaumController",
             "archived": false,

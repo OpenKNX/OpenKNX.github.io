@@ -1112,6 +1112,23 @@
                 },
                 {
                     "prerelease": true,
+                    "tag_name": "v0.9.6",
+                    "name": "v0.9.6",
+                    "published_at": "2026-02-14T18:33:45Z",
+                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.9.6",
+                    "body": "- added: support for new esp hardware\r\n- fix: websockets",
+                    "assets": [
+                        {
+                            "name": "GW-REG1-Dali-Release-0.9.6.zip",
+                            "size": 2825100,
+                            "digest": "sha256:5d3a1856acc1c6b201d182764a2b49da659ac8dbf6bb9db843b322a79e97fcf2",
+                            "updated_at": "2026-02-14T18:33:37Z",
+                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.9.6/GW-REG1-Dali-Release-0.9.6.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "v0.9.4",
                     "name": "v0.9.4",
                     "published_at": "2025-08-16T11:59:42Z",

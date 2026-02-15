@@ -1095,6 +1095,23 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "v0.9.6",
+                    "name": "v0.9.6",
+                    "published_at": "2026-02-15T10:31:52Z",
+                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.9.6",
+                    "body": "- added: support for new hardware\r\n- fix: websocket handling",
+                    "assets": [
+                        {
+                            "name": "GW-REG1-Dali-Release-0.9.6.zip",
+                            "size": 2783210,
+                            "digest": "sha256:399d980c3927b98907bc0cff81fd847fa3860e815595441702ea83c6cd20966a",
+                            "updated_at": "2026-02-15T10:31:46Z",
+                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.9.6/GW-REG1-Dali-Release-0.9.6.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "v0.9.5",
                     "name": "v0.9.5",
                     "published_at": "2025-08-18T18:47:03Z",
@@ -1107,23 +1124,6 @@
                             "digest": "sha256:64f14b647e1987e463b94505e88df5b9aa2ac9c51b0f6bbd88f242d1febe840c",
                             "updated_at": "2025-08-18T18:46:25Z",
                             "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.9.5/GW-REG1-Dali-Release-0.9.5.zip"
-                        }
-                    ]
-                },
-                {
-                    "prerelease": true,
-                    "tag_name": "v0.9.6",
-                    "name": "v0.9.6",
-                    "published_at": "2026-02-14T18:33:45Z",
-                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.9.6",
-                    "body": "- added: support for new esp hardware\r\n- fix: websockets",
-                    "assets": [
-                        {
-                            "name": "GW-REG1-Dali-Release-0.9.6.zip",
-                            "size": 2825100,
-                            "digest": "sha256:5d3a1856acc1c6b201d182764a2b49da659ac8dbf6bb9db843b322a79e97fcf2",
-                            "updated_at": "2026-02-14T18:33:37Z",
-                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.9.6/GW-REG1-Dali-Release-0.9.6.zip"
                         }
                     ]
                 },
@@ -1162,7 +1162,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 2
+            "hw_avail_open": 0
         },
         "OAM-SmartHomeBridge": {
             "repo_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge",

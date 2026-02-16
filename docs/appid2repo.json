@@ -11,12 +11,12 @@
     "0xA006": "OAM-Dummy / Dummy-Big",
     "0xA010": "OAM-SensorModule / Sensormodul-OneWire",
     "0xA011": [
-      "OAM-RaumController / RaumController",
-      "OAM-SensorModule / Sensormodul"
+      "OAM-SensorModule / Sensormodul",
+      "OAM-RaumController / RaumController"
     ],
     "0xA012": [
-      "OAM-RaumController / RaumController-Release",
-      "OAM-SensorModule / Sensormodul-Big"
+      "OAM-SensorModule / Sensormodul-Big",
+      "OAM-RaumController / RaumController-Release"
     ],
     "0xA030": "OAM-LogicModule / Logikmodul-Release",
     "0xA031": "OAM-LogicModule / Logikmodul",
@@ -54,56 +54,58 @@
     "0xA605": "OAM-BinaryInput / BinaryInputModule-Release",
     "0xA606": "OAM-HeatingActuator / HeatingActuator-Release",
     "0xA607": "OAM-LedDimmer-AB / LedDimmerAB-Release",
+    "0xA608": "OAM-BusPowerSupply / BusPowerSupply-Release",
     "0xAC0D": "OAM-StateEngine / StateEngine-DFA16-Release",
     "0xAC0E": "OAM-StateEngine / StateEngine",
     "0xAC50": "OAM-Homematic / HomematicGW-Release",
     "0xAE29": "OAM-SmartHomeBridge / SmartHomeBridge-Dev",
     "0xAE2A": [
-      "OAM-SmartHomeBridge / SmartHomeBridge-Release",
-      "OAM-SmartHomeBridge / SmartHomeBridge"
+      "OAM-SmartHomeBridge / SmartHomeBridge",
+      "OAM-SmartHomeBridge / SmartHomeBridge-Release"
     ],
     "0xAE2B": "OAM-Sonos / Sonos-Dev",
     "0xAE2C": [
-      "OAM-Sonos / Sonos-Release",
-      "OAM-Sonos / Sonos"
+      "OAM-Sonos / Sonos",
+      "OAM-Sonos / Sonos-Release"
     ],
     "0xAE2D": "OAM-InternetServices / InternetServices-Dev",
     "0xAE2E": [
-      "OAM-InternetServices / InternetServices-Release",
-      "OAM-InternetServices / InternetServices"
+      "OAM-InternetServices / InternetServices",
+      "OAM-InternetServices / InternetServices-Release"
     ],
     "0xAE2F": "OAM-SonosNFCPlayer / SonosNFCPlayer-Dev",
     "0xAE30": [
-      "OAM-SonosNFCPlayer / SonosNFCPlayer-Release",
-      "OAM-SonosNFCPlayer / SonosNFCPlayer"
+      "OAM-SonosNFCPlayer / SonosNFCPlayer",
+      "OAM-SonosNFCPlayer / SonosNFCPlayer-Release"
     ],
     "0xAE31": "OAM-ShutterController / ShutterController-Dev",
     "0xAE32": [
-      "OAM-ShutterController / ShutterController-Release",
-      "OAM-ShutterController / ShutterController"
+      "OAM-ShutterController / ShutterController",
+      "OAM-ShutterController / ShutterController-Release"
     ],
     "0xAE35": "OAM-Aircondition / Aircondition-Dev",
     "0xAE36": [
-      "OAM-Aircondition / Aircondition-Release",
-      "OAM-Aircondition / Aircondition"
+      "OAM-Aircondition / Aircondition",
+      "OAM-Aircondition / Aircondition-Release"
     ],
     "0xAE37": "OAM-Nuki / Nuki-Dev",
     "0xAE38": [
-      "OAM-Nuki / Nuki",
-      "OAM-Nuki / Nuki-Release"
+      "OAM-Nuki / Nuki-Release",
+      "OAM-Nuki / Nuki"
     ],
     "0xAF02": "OAM-SwitchActuator / SwitchActuator",
     "0xAF03": [
-      "OAM-BinaryClock / BinaryClock-Release",
-      "OAM-BinaryClock / BinaryClock"
+      "OAM-BinaryClock / BinaryClock",
+      "OAM-BinaryClock / BinaryClock-Release"
     ],
     "0xAF04": "OAM-TouchRound / TouchRound-Dev",
     "0xAF05": [
-      "OAM-BinaryInput / BinaryInputModule",
-      "OAM-Meter / MeterModule-Dev"
+      "OAM-Meter / MeterModule-Dev",
+      "OAM-BinaryInput / BinaryInputModule"
     ],
     "0xAF06": "OAM-HeatingActuator / HeatingActuator",
     "0xAF07": "OAM-LedDimmer-AB / LedDimmerAB",
+    "0xAF08": "OAM-BusPowerSupply / BusPowerSupply",
     "0xAFC0": "OAM-Homematic / HomematicGW",
     "0xAFFF": "OAM-TestApp / TestApp"
   }

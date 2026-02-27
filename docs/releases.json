@@ -9,6 +9,40 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "v1.10.0-Dev",
+                    "name": "Beta FW / ETS v1.10.0",
+                    "published_at": "2026-02-27T09:40:55Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/tag/v1.10.0-Dev",
+                    "body": "functional identical to v1.0.0",
+                    "assets": [
+                        {
+                            "name": "UP1-8xSensor-Dev-1.10.0.zip",
+                            "size": 1960819,
+                            "digest": "sha256:bb974566c8067478fb655e6224bc34da4487e13cf2355ebe65eead2971f15b5e",
+                            "updated_at": "2026-02-27T09:40:46Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/download/v1.10.0-Dev/UP1-8xSensor-Dev-1.10.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
+                    "tag_name": "v1.0.0",
+                    "name": "FW / ETS Releae v1.0.0",
+                    "published_at": "2026-02-27T09:43:19Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/tag/v1.0.0",
+                    "body": "- update to latest OpenKNX Common, Logic, Filetransfer, Configtransfer\r\n- full support for OneWire DS18B20 sensors (up to 16)",
+                    "assets": [
+                        {
+                            "name": "UP1-8xSensor-Release-1.0.0.zip",
+                            "size": 1960848,
+                            "digest": "sha256:d90690157147717aed368b15276269c90bbd43c4111f686e8a2ad7e0802193f7",
+                            "updated_at": "2026-02-27T09:41:38Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/download/v1.0.0/UP1-8xSensor-Release-1.0.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "v1.5.0-Dev",
                     "name": "v1.5.0-Dev",
                     "published_at": "2025-12-19T07:17:08Z",
@@ -94,7 +128,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 1
+            "hw_avail_open": 0
         },
         "OAM-SensorModule": {
             "repo_url": "https://github.com/OpenKNX/OAM-SensorModule",

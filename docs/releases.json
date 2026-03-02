@@ -1205,11 +1205,28 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "2.1.1",
+                    "name": "Release 2.1.1",
+                    "published_at": "2026-03-02T19:02:13Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/2.1.1",
+                    "body": "- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an\r\n- Die Namen der Gruppenobjekte wurden \u00fcberarbeitet\r\n- Die Funktion der Status LED's ist in der ETS konfigurierbar\r\n\r\n**Smart Home Bridge:**\r\n- 0.4 Benutzerdefinierte Prozentwerte f\u00fcr Dimmer\r\n- 0.4 Ger\u00e4tetype Schloss hinzugef\u00fcgt\r\n- 0.3.1 Fix: Absturz bei deaktivierten Ger\u00e4ten\r\n\r\n**Function Blocks:**\r\n- 0.9 Neuer Functionsblock \"Text Format\"\r\n- 0.9 Startverhalten bei Wert\u00fcberwachung konfigurierbar\r\n- 0.8 Fix: Bennennung Eingang 9 bei FB-\"Anzahl\" nicht m\u00f6glich\r\n- 0.7 Count-Down: Konfigurationsparameter f\u00fcr maximale Laufzeit bei Erh\u00f6hen durch KO\r\n- 0.7 Count-Down: Text Parameter f\u00fcr Stopp\r\n- 0.6.2 Breaking Change: Fix: Ko Verringern/Erh\u00f6hen f\u00fcr Count-Down: 0...Verringern, 1...Erh\u00f6hen\r\n- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause\r\n\r\n**Logik:**\r\nWICHTIG: Die fr\u00fchere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Ger\u00e4tes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bez\u00fcglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).\r\n\r\n- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen\r\n- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskan\u00e4le legen und so LEDs steuern\r\n- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine \u00c4nderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.",
+                    "assets": [
+                        {
+                            "name": "SmartHomeBridge-Release-2.1.1.zip",
+                            "size": 13944399,
+                            "digest": "sha256:85a4c5fc052f090a47e8ee406e46d8cd0694feba2472356fbe76fde41c9d3577",
+                            "updated_at": "2026-03-02T19:01:31Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/download/2.1.1/SmartHomeBridge-Release-2.1.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "2.1.0",
                     "name": "Release 2.1.0",
                     "published_at": "2026-03-01T18:04:33Z",
                     "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/2.1.0",
-                    "body": "- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an\r\n- Die Namen der Gruppenobjekte wurden \u00fcberarbeitet\r\n- Die Funktion der Status LED's ist in der ETS konfigurierbar\r\n\r\n**Smart Home Bridge:**\r\n- 0.4 Benutzerdefinierte Prozentwerte f\u00fcr Dimmer\r\n- 0.4 Ger\u00e4tetype Schloss hinzugef\u00fcgt\r\n- 0.3.1 Fix: Absturz bei deaktivierten Ger\u00e4ten\r\n\r\n**Function Blocks:**\r\n- 0.9 Neuer Functionsblock \"Text Format\"\r\n- 0.9 Startverhalten bei Wert\u00fcberwachung konfigurierbar\r\n- 0.8 Fix: Bennennung Eingang 9 bei FB-\"Anzahl\" nicht m\u00f6glich\r\n- 0.7 Count-Down: Konfigurationsparameter f\u00fcr maximale Laufzeit bei Erh\u00f6hen durch KO\r\n- 0.7 Count-Down: Text Parameter f\u00fcr Stopp\r\n- 0.6.2 Breaking Change: Fix: Ko Verringern/Erh\u00f6hen f\u00fcr Count-Down: 0...Verringern, 1...Erh\u00f6hen\r\n- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause\r\n\r\n**Logik:**\r\nWICHTIG: Die fr\u00fchere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Ger\u00e4tes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bez\u00fcglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).\r\n\r\n- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen\r\n- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskan\u00e4le legen und so LEDs steuern\r\n- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine \u00c4nderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.",
+                    "body": "Diese Version bitte nicht verwendet. Stattdessen die Version 2.1.1 verwenden.",
                     "assets": [
                         {
                             "name": "SmartHomeBridge-Release-2.1.0.zip",
@@ -1969,11 +1986,28 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.7.1",
+                    "name": "",
+                    "published_at": "2026-03-02T18:54:07Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Sonos/releases/tag/0.7.1",
+                    "body": "Diese Version ist bisher mit 4 Sonos Lautsprecher getestet.\r\nBitte um Feedback wie die SW mit mehr Lautsprecher funktioniert.\r\n\r\n- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an\r\n- Die Namen der Gruppenobjekte wurden \u00fcberarbeitet\r\n- Die Funktion der Status LED's ist in der ETS konfigurierbar\r\n\r\n**Function Blocks:**\r\n- 0.9 Neuer Functionsblock \"Text Format\"\r\n- 0.9 Startverhalten bei Wert\u00fcberwachung konfigurierbar\r\n- 0.8 Fix: Bennennung Eingang 9 bei FB-\"Anzahl\" nicht m\u00f6glich\r\n- 0.7 Count-Down: Konfigurationsparameter f\u00fcr maximale Laufzeit bei Erh\u00f6hen durch KO\r\n- 0.7 Count-Down: Text Parameter f\u00fcr Stopp\r\n- 0.6.2 Breaking Change: Fix: Ko Verringern/Erh\u00f6hen f\u00fcr Count-Down: 0...Verringern, 1...Erh\u00f6hen\r\n- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause\r\n\r\n**Logik:**\r\nWICHTIG: Die fr\u00fchere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Ger\u00e4tes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bez\u00fcglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).\r\n\r\n- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen\r\n- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskan\u00e4le legen und so LEDs steuern\r\n- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine \u00c4nderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.",
+                    "assets": [
+                        {
+                            "name": "Sonos-Release-0.7.1.zip",
+                            "size": 9917301,
+                            "digest": "sha256:cdc4900322d27d62d348598d6f77d17330f68bfb54220cdec32995155b002d1b",
+                            "updated_at": "2026-03-02T18:54:03Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Sonos/releases/download/0.7.1/Sonos-Release-0.7.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.7.0",
                     "name": "Release 0.7.0",
                     "published_at": "2026-03-01T17:41:11Z",
                     "html_url": "https://github.com/OpenKNX/OAM-Sonos/releases/tag/0.7.0",
-                    "body": "Diese Version ist bisher mit 4 Sonos Lautsprecher getestet.\r\nBitte um Feedback wie die SW mit mehr Lautsprecher funktioniert.\r\n\r\n- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an\r\n- Die Namen der Gruppenobjekte wurden \u00fcberarbeitet\r\n- Die Funktion der Status LED's ist in der ETS konfigurierbar\r\n\r\n**Function Blocks:**\r\n- 0.9 Neuer Functionsblock \"Text Format\"\r\n- 0.9 Startverhalten bei Wert\u00fcberwachung konfigurierbar\r\n- 0.8 Fix: Bennennung Eingang 9 bei FB-\"Anzahl\" nicht m\u00f6glich\r\n- 0.7 Count-Down: Konfigurationsparameter f\u00fcr maximale Laufzeit bei Erh\u00f6hen durch KO\r\n- 0.7 Count-Down: Text Parameter f\u00fcr Stopp\r\n- 0.6.2 Breaking Change: Fix: Ko Verringern/Erh\u00f6hen f\u00fcr Count-Down: 0...Verringern, 1...Erh\u00f6hen\r\n- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause\r\n\r\n**Logik:**\r\nWICHTIG: Die fr\u00fchere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Ger\u00e4tes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bez\u00fcglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).\r\n\r\n- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen\r\n- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskan\u00e4le legen und so LEDs steuern\r\n- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine \u00c4nderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.",
+                    "body": "Diese Release nicht verwenden. Bitte Release 0.7.1 stattdessen verwenden.",
                     "assets": [
                         {
                             "name": "Sonos-Release-0.7.0.zip",
@@ -2226,11 +2260,28 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.2.1",
+                    "name": "Release 1.2.1",
+                    "published_at": "2026-03-02T18:47:45Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-InternetServices/releases/tag/1.2.1",
+                    "body": "- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an\r\n- Die Namen der Gruppenobjekte wurden \u00fcberarbeitet\r\n- Die Funktion der Status LED's ist in der ETS konfigurierbar\r\n\r\n**Function Blocks:**\r\n- 0.9 Neuer Functionsblock \"Text Format\"\r\n- 0.9 Startverhalten bei Wert\u00fcberwachung konfigurierbar\r\n- 0.8 Fix: Bennennung Eingang 9 bei FB-\"Anzahl\" nicht m\u00f6glich\r\n- 0.7 Count-Down: Konfigurationsparameter f\u00fcr maximale Laufzeit bei Erh\u00f6hen durch KO\r\n- 0.7 Count-Down: Text Parameter f\u00fcr Stopp\r\n- 0.6.2 Breaking Change: Fix: Ko Verringern/Erh\u00f6hen f\u00fcr Count-Down: 0...Verringern, 1...Erh\u00f6hen\r\n- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause\r\n\r\n**Logik:**\r\nWICHTIG: Die fr\u00fchere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Ger\u00e4tes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bez\u00fcglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).\r\n\r\n- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen\r\n- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskan\u00e4le legen und so LEDs steuern\r\n- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine \u00c4nderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.",
+                    "assets": [
+                        {
+                            "name": "InternetServices-Release-1.2.1.zip",
+                            "size": 11361722,
+                            "digest": "sha256:af18c299c1043d99083e21921efa90630bbae18a8a2726cb65d7cdeeee8cb452",
+                            "updated_at": "2026-03-02T18:46:32Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-InternetServices/releases/download/1.2.1/InternetServices-Release-1.2.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "1.2.0",
                     "name": "Release 1.2.0",
                     "published_at": "2026-03-01T17:52:21Z",
                     "html_url": "https://github.com/OpenKNX/OAM-InternetServices/releases/tag/1.2.0",
-                    "body": "- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an\r\n- Die Namen der Gruppenobjekte wurden \u00fcberarbeitet\r\n- Die Funktion der Status LED's ist in der ETS konfigurierbar\r\n\r\n**Function Blocks:**\r\n- 0.9 Neuer Functionsblock \"Text Format\"\r\n- 0.9 Startverhalten bei Wert\u00fcberwachung konfigurierbar\r\n- 0.8 Fix: Bennennung Eingang 9 bei FB-\"Anzahl\" nicht m\u00f6glich\r\n- 0.7 Count-Down: Konfigurationsparameter f\u00fcr maximale Laufzeit bei Erh\u00f6hen durch KO\r\n- 0.7 Count-Down: Text Parameter f\u00fcr Stopp\r\n- 0.6.2 Breaking Change: Fix: Ko Verringern/Erh\u00f6hen f\u00fcr Count-Down: 0...Verringern, 1...Erh\u00f6hen\r\n- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause\r\n\r\n**Logik:**\r\nWICHTIG: Die fr\u00fchere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Ger\u00e4tes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bez\u00fcglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).\r\n\r\n- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen\r\n- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskan\u00e4le legen und so LEDs steuern\r\n- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine \u00c4nderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.",
+                    "body": "This release should not be used. It crashed in 2nd programming. Please use 1.2.1",
                     "assets": [
                         {
                             "name": "InternetServices-Release-1.2.0.zip",
@@ -2268,11 +2319,28 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.5.1",
+                    "name": "Release 1.5.1",
+                    "published_at": "2026-03-02T19:26:29Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.5.1",
+                    "body": "- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an\r\n- Die Namen der Gruppenobjekte wurden \u00fcberarbeitet\r\n- Die Funktion der Status LED's ist in der ETS konfigurierbar\r\n\r\n**Function Blocks:**\r\n- 0.9 Neuer Functionsblock \"Text Format\"\r\n- 0.9 Startverhalten bei Wert\u00fcberwachung konfigurierbar\r\n- 0.8 Fix: Bennennung Eingang 9 bei FB-\"Anzahl\" nicht m\u00f6glich\r\n- 0.7 Count-Down: Konfigurationsparameter f\u00fcr maximale Laufzeit bei Erh\u00f6hen durch KO\r\n- 0.7 Count-Down: Text Parameter f\u00fcr Stopp\r\n- 0.6.2 Breaking Change: Fix: Ko Verringern/Erh\u00f6hen f\u00fcr Count-Down: 0...Verringern, 1...Erh\u00f6hen\r\n- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause\r\n\r\n**Logik:**\r\nWICHTIG: Die fr\u00fchere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Ger\u00e4tes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bez\u00fcglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).\r\n\r\n- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen\r\n- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskan\u00e4le legen und so LEDs steuern\r\n- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine \u00c4nderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.",
+                    "assets": [
+                        {
+                            "name": "ShutterController-Release-1.5.1.zip",
+                            "size": 4211897,
+                            "digest": "sha256:82837599759bb1803bb2677cad478f4b48fc4b4175728038c5eec80481019483",
+                            "updated_at": "2026-03-02T19:26:55Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/download/1.5.1/ShutterController-Release-1.5.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "1.5.0",
                     "name": "Release 1.5.0",
                     "published_at": "2026-03-01T18:32:12Z",
                     "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.5.0",
-                    "body": "- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an\r\n- Die Namen der Gruppenobjekte wurden \u00fcberarbeitet\r\n- Die Funktion der Status LED's ist in der ETS konfigurierbar\r\n\r\n**Function Blocks:**\r\n- 0.9 Neuer Functionsblock \"Text Format\"\r\n- 0.9 Startverhalten bei Wert\u00fcberwachung konfigurierbar\r\n- 0.8 Fix: Bennennung Eingang 9 bei FB-\"Anzahl\" nicht m\u00f6glich\r\n- 0.7 Count-Down: Konfigurationsparameter f\u00fcr maximale Laufzeit bei Erh\u00f6hen durch KO\r\n- 0.7 Count-Down: Text Parameter f\u00fcr Stopp\r\n- 0.6.2 Breaking Change: Fix: Ko Verringern/Erh\u00f6hen f\u00fcr Count-Down: 0...Verringern, 1...Erh\u00f6hen\r\n- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause\r\n\r\n**Logik:**\r\nWICHTIG: Die fr\u00fchere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Ger\u00e4tes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bez\u00fcglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).\r\n\r\n- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen\r\n- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskan\u00e4le legen und so LEDs steuern\r\n- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine \u00c4nderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.",
+                    "body": "Bitte diese Version nicht verwenden. Stattdessen die Release 1.5.1 verwenden.",
                     "assets": [
                         {
                             "name": "ShutterController-Release-1.5.0.zip",

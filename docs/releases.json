@@ -1647,6 +1647,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.7.0",
+                    "name": "",
+                    "published_at": "2026-03-05T18:08:45Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.7.0",
+                    "body": "Changes compared to 0.6.1:\r\n\r\n- fix bug that disabled the answer of ConfigReqs (correct APDU handling, faster tunnel creation)\r\n- Loading Application after firmware update no longer crashes when an old application is on the device\r\n- APDU Property PID_MAX_APDU_LENGTH_ROUTER from 220 to 254\r\n\r\nfunctional identical to 7.5.0-Dev",
+                    "assets": [
+                        {
+                            "name": "IP-Router-Release-0.7.0.zip",
+                            "size": 2386091,
+                            "digest": "sha256:000157754dce20c1a19c47d0c20248dfe0225477e4eabbbbb1c811db524e375f",
+                            "updated_at": "2026-03-05T18:05:04Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-IP-Router/releases/download/0.7.0/IP-Router-Release-0.7.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.6.1",
                     "name": "",
                     "published_at": "2026-01-18T22:05:19Z",
@@ -2077,11 +2094,20 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.4.2",
+                    "name": "Release 1.4.2",
+                    "published_at": "2026-03-05T17:26:08Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-TouchRound/releases/tag/1.4.2",
+                    "body": "- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an\r\n- Die Namen der Gruppenobjekte wurden \u00fcberarbeitet\r\n- Die Funktion der Status LED's ist in der ETS konfigurierbar\r\n\r\n**Ger\u00e4te**\r\n- Fix: fehlendes Bild beim Schloss wenn eine Sperr-Aktion l\u00e4uft und ein benutzerdefiniertes Bild aktiv ist.\r\n- Fix: Anzeige \"Text\" zeigt den Text aus dem Gruppenobjekt nicht mehr an\r\n\r\n**Touch Round**\r\n- 0.4 Benutzerdefinierte Prozentwerte f\u00fcr Dimmer\r\n- 0.4 Ger\u00e4tetype Schloss hinzugef\u00fcgt\r\n\r\n**Function Blocks:**\r\n- 0.9 Neuer Functionsblock \"Text Format\"\r\n- 0.9 Startverhalten bei Wert\u00fcberwachung konfigurierbar\r\n- 0.8 Fix: Bennennung Eingang 9 bei FB-\"Anzahl\" nicht m\u00f6glich\r\n- 0.7 Count-Down: Konfigurationsparameter f\u00fcr maximale Laufzeit bei Erh\u00f6hen durch KO\r\n- 0.7 Count-Down: Text Parameter f\u00fcr Stopp\r\n- 0.6.2 Breaking Change: Fix: Ko Verringern/Erh\u00f6hen f\u00fcr Count-Down: 0...Verringern, 1...Erh\u00f6hen\r\n- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause\r\n\r\n**Logik:**\r\nWICHTIG: Die fr\u00fchere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Ger\u00e4tes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bez\u00fcglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).\r\n\r\n- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen\r\n- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskan\u00e4le legen und so LEDs steuern\r\n- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine \u00c4nderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.",
+                    "assets": []
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "1.4.1",
                     "name": "Release 1.4.1",
                     "published_at": "2026-03-04T17:26:02Z",
                     "html_url": "https://github.com/OpenKNX/OAM-TouchRound/releases/tag/1.4.1",
-                    "body": "- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an\r\n- Die Namen der Gruppenobjekte wurden \u00fcberarbeitet\r\n- Die Funktion der Status LED's ist in der ETS konfigurierbar\r\n\r\n**Touch Round**\r\n- 0.4 Benutzerdefinierte Prozentwerte f\u00fcr Dimmer\r\n- 0.4 Ger\u00e4tetype Schloss hinzugef\u00fcgt\r\n\r\n**Function Blocks:**\r\n- 0.9 Neuer Functionsblock \"Text Format\"\r\n- 0.9 Startverhalten bei Wert\u00fcberwachung konfigurierbar\r\n- 0.8 Fix: Bennennung Eingang 9 bei FB-\"Anzahl\" nicht m\u00f6glich\r\n- 0.7 Count-Down: Konfigurationsparameter f\u00fcr maximale Laufzeit bei Erh\u00f6hen durch KO\r\n- 0.7 Count-Down: Text Parameter f\u00fcr Stopp\r\n- 0.6.2 Breaking Change: Fix: Ko Verringern/Erh\u00f6hen f\u00fcr Count-Down: 0...Verringern, 1...Erh\u00f6hen\r\n- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause\r\n\r\n**Logik:**\r\nWICHTIG: Die fr\u00fchere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Ger\u00e4tes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bez\u00fcglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).\r\n\r\n- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen\r\n- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskan\u00e4le legen und so LEDs steuern\r\n- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine \u00c4nderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.",
+                    "body": "Bitte diese Version nicht verwenden, statt dessen Release 1.4.2 verwenden",
                     "assets": [
                         {
                             "name": "TouchRound-Release-1.4.1.zip",

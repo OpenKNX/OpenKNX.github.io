@@ -1133,7 +1133,7 @@
                     "name": "v0.9.6",
                     "published_at": "2026-02-15T10:31:52Z",
                     "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.9.6",
-                    "body": "- added: support for new hardware\r\n- fix: websocket handling",
+                    "body": "**Only for ESP!**\r\nFor rp2040 use v0.9.5\r\n\r\n- added: support for new hardware\r\n- fix: websocket handling",
                     "assets": [
                         {
                             "name": "GW-REG1-Dali-Release-0.9.6.zip",

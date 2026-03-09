@@ -1490,7 +1490,7 @@
                     "name": "Release 0.6.7",
                     "published_at": "2024-10-10T15:12:46Z",
                     "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.6.7",
-                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- HW-SUPPORT: Unterst\u00fctzung f\u00fcr [AB-SmartHouse Fingerprint](https://www.ab-smarthouse.com/produkt/openknx-fingerprint-leser/) Hardware-Revision v1.7 und neuer hinzugef\u00fcgt.\r\n\r\n**Hinweis:**\r\nBei einem Update von 0.6.x auf 0.6.7 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich.",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- HW-SUPPORT: Unterst\u00fctzung f\u00fcr AB-SmartHouse Fingerprint Hardware-Revision v1.7 und neuer hinzugef\u00fcgt.\r\n\r\n**Hinweis:**\r\nBei einem Update von 0.6.x auf 0.6.7 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich.",
                     "assets": [
                         {
                             "name": "FingerprintModule-ReleaseR503-0.6.7.zip",
@@ -2265,7 +2265,7 @@
                     "name": "Release 0.2",
                     "published_at": "2025-02-11T18:41:10Z",
                     "html_url": "https://github.com/OpenKNX/OAM-SwitchActuator/releases/tag/0.2",
-                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- NEU: Szenensteuerung hinzugef\u00fcgt.\r\n- NEU: Dokumentation und Kontexthilfe in der ETS hinzugef\u00fcgt.\r\n- CHANGE: Logikmodul auf Version 3.5 aktualisiert.\r\n- FIX: Relais-Schalteingang wird nun auch im noch nicht parametrisierten Zustand korrekt gesetzt.\r\n\r\n**Hinweis:**\r\nDie Firmware Version 0.2 enth\u00e4lt noch keine Unterst\u00fctzung f\u00fcr den strom-messenden Schaltaktor. Dies folgt bald mit Version 0.3. Eine Beta-Firmware steht aber bereits jetzt zur Verf\u00fcgung, dazu bitte eine kurze [E-Mail](mailto:andreas@ab-smarthouse.com) schreiben.",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- NEU: Szenensteuerung hinzugef\u00fcgt.\r\n- NEU: Dokumentation und Kontexthilfe in der ETS hinzugef\u00fcgt.\r\n- CHANGE: Logikmodul auf Version 3.5 aktualisiert.\r\n- FIX: Relais-Schalteingang wird nun auch im noch nicht parametrisierten Zustand korrekt gesetzt.",
                     "assets": [
                         {
                             "name": "SwitchActuator-Release-0.2.zip",
@@ -3117,6 +3117,13 @@
                     ]
                 }
             ],
+            "hw_avail_open": 0
+        },
+        "OAM-ClimateControl": {
+            "repo_url": "https://github.com/OpenKNX/OAM-ClimateControl",
+            "archived": false,
+            "description": null,
+            "releases": [],
             "hw_avail_open": 0
         }
     }

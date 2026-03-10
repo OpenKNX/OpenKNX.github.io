@@ -34,10 +34,11 @@ appSpecialNames = {"SOM-UP", "GW-REG1-Dali", "SEN-UP1-8xTH", "BEM-GardenControl"
 appExclusion = {"OAM-TestApp"}
 appOrder = [
 
-    # virtual only modules
+    # virtual only
     "OAM-LogicModule",
     "OAM-StateEngine",
     "OAM-ShutterController",
+    "OAM-ClimateControl",
 
     # virtual with optional hardware
     "OAM-RaumController",

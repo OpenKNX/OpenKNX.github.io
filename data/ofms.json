@@ -227,6 +227,15 @@
     "type": "gateway",
     "prefix": "SIP"
   },
+  {
+    "name": "OFM-ClimateControl",
+    "title": "Klimasteuerung (HVAC)",
+    "icon": "home-thermometer-outline@.",
+    "ref_oam": "OAM-ClimateControl",
+    "description": "Steuerung von Kühl-/Heizsystemen",
+    "type": "virtual",
+    "prefix": "CLI"
+  },
   { "parent_oam":"GW-REG1-Dali"         , "name": "DaliModule"                                                                                                                                                                                      },
   { "parent_oam":"OAM-Aircondition"     , "name": "AirconditionModule"  , "title": "Klimaanlage"    , "icon": "air-conditioner@."         , "description": "Internes Modul zur Steuerung von Klimaanlagen"        , "type": "???", "prefix": "AIR"  },
   { "parent_oam":"OAM-BinaryClock"      , "name": "BinaryClockModule"                                                                                                                                                                               },

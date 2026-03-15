@@ -2555,6 +2555,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.3",
+                    "name": "Release 0.3",
+                    "published_at": "2026-03-15T21:09:47Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-BinaryInput/releases/tag/0.3",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n- FIX: Alle IOs werden nun auch bereits korrekt initialisiert, auch wenn noch nicht konfiguriert.\r\n- CHANGE: Alle abh\u00e4ngigen OpenKNX-Module auf neueste Version aktualisiert.",
+                    "assets": [
+                        {
+                            "name": "BinaryInputModule-Release-0.3.0.zip",
+                            "size": 4786928,
+                            "digest": "sha256:5cfb2054a6f61a0b944014ad920cdbaaf94e5f0a7ab474455fc3eade12087b0f",
+                            "updated_at": "2026-03-15T21:09:41Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-BinaryInput/releases/download/0.3/BinaryInputModule-Release-0.3.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.2",
                     "name": "Release 0.2",
                     "published_at": "2025-11-20T21:06:14Z",

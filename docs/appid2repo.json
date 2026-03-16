@@ -37,6 +37,7 @@
     "0xA210": "BEM-GardenControl / GardenControl",
     "0xA228": "SOM-UP / SoundModule-Release",
     "0xA229": "SOM-UP / SoundModule-Dev",
+    "0xA230": "OAM-ModbusGateway / ModbusGateway",
     "0xA304": "OAM-Meter / MeterModule",
     "0xA363": "TAS-UP-8xLJ / TAS-UP-8xLJ",
     "0xA400": "OAM-InfraredGateway / InfraredGateway",
@@ -92,6 +93,11 @@
     "0xAE38": [
       "OAM-Nuki / Nuki-Release",
       "OAM-Nuki / Nuki"
+    ],
+    "0xAE39": "OAM-ClimateControl / ClimateControl-Dev",
+    "0xAE3A": [
+      "OAM-ClimateControl / ClimateControl",
+      "OAM-ClimateControl / ClimateControl-Release"
     ],
     "0xAF02": "OAM-SwitchActuator / SwitchActuator",
     "0xAF03": [

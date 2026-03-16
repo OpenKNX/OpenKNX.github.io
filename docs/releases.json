@@ -876,6 +876,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.5-release",
+                    "name": "1.5-release BETA",
+                    "published_at": "2026-03-16T20:10:36Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/tag/1.5-release",
+                    "body": "**Release V1.5 \u2013 BETA**\r\n\r\n**New**\r\n- Added hardware support for Smart-MF_Modbus_RTU_1TE\r\n- Added hardware support for Smart-MF_Modbus_RTU_Aussen\r\n- Updated all additional modules to the latest version\r\n- KNX \u2192 Modbus: new implementation\r\n\r\n**Testing Status**\r\n\r\n- Not all scenarios could be tested\r\n- Tested datapoint types: DPT9, DPT14\r\n- Basic KNX \u2192 Modbus write tests have been performed\r\n- Further testing was not possible due to missing hardware.\r\n\r\n**Compatibility**\r\n\r\n- Smart-MF_Modbus_RTU_2TE remains fully supported.\r\n\r\n**Feedback**\r\n\r\n- As this is a beta release, bugs may still occur.\r\n- If you encounter any issues, please report them.",
+                    "assets": [
+                        {
+                            "name": "ModbusModule-Beta-1.5.0.zip",
+                            "size": 1850538,
+                            "digest": "sha256:0f2e5ddfcaa5428fab470da92aa5dc32c207e0acc5ee531cc0e0629bf52b0bc5",
+                            "updated_at": "2026-03-16T20:10:24Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ModbusGateway/releases/download/1.5-release/ModbusModule-Beta-1.5.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "1.4-release",
                     "name": "1.4-release",
                     "published_at": "2024-12-14T14:10:00Z",

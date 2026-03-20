@@ -3040,7 +3040,25 @@
             "repo_url": "https://github.com/OpenKNX/OAM-BusPowerSupply",
             "archived": false,
             "description": null,
-            "releases": [],
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1",
+                    "name": "Release 0.1",
+                    "published_at": "2026-03-20T18:56:40Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-BusPowerSupply/releases/tag/0.1",
+                    "body": "Initiales Firmware-Release.\r\n\r\n_Known Issue:_\r\nKO zur Busauslastung gibt unrealistische Werte aus.",
+                    "assets": [
+                        {
+                            "name": "BusPowerSupply-Release-0.1.0.zip",
+                            "size": 4245830,
+                            "digest": "sha256:04f7ed110ef918779139285c7af842e4e7ee5310e880fa7b803d5fa06cd46621",
+                            "updated_at": "2026-03-20T18:56:36Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-BusPowerSupply/releases/download/0.1/BusPowerSupply-Release-0.1.0.zip"
+                        }
+                    ]
+                }
+            ],
             "hw_avail_open": 0
         },
         "OAM-RaumController": {

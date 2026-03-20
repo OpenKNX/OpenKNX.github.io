@@ -2520,8 +2520,26 @@
             "repo_url": "https://github.com/OpenKNX/OAM-Homematic",
             "archived": false,
             "description": "Homematic-Gateway zur Integration in KNX",
-            "releases": [],
-            "hw_avail_open": 0
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "v0.3.0-ALPHA",
+                    "name": "v0.3.0 First Public Alpha",
+                    "published_at": "2026-03-20T22:24:01Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Homematic/releases/tag/v0.3.0-ALPHA",
+                    "body": "## Erstes \u00f6ffentliches ALPHA-Release (Experimentell)\r\n\r\nDas Gateway erm\u00f6glicht einen rudiment\u00e4ren lesenden und schreibenden Zugriff auf ausgew\u00e4hlte (und einfache benutzerdefinierte) Homematic-Ger\u00e4te mit Funkschnittstelle und,\r\n\u00fcber eine Zentrale mit XML-RPC-Schnittstelle wie z.B. der Homematic CCU2.\r\nWeitere Module sind zur funktionalen Erg\u00e4nzung erhalten, z.B. zur Aggregation von Ist- und Status-Werten.\r\n\r\n\r\n> ### Achtung ALPHA-STATUS!\r\n>\r\n> **Ein produktiver Einsatz wird zum aktuellen Zeitpunkt *nicht* empfohlen**!\r\n>\r\n> Der vorliegende Stand dient zur technischen Evaluation.\r\n> Mehrere der enthaltenen Module mit Netzwerkzugriff nutzen blockierende HTTP(S)-Requests\r\n> und k\u00f6nnen bzw. werden durch die auftretenden Verz\u00f6gerungen die Bus-Kommunikation \r\n> und die Verarbeitung in anderen Modulen st\u00f6ren.\r\n> M\u00f6gliche Folgen sind eine fehlende Reaktion auf Telegramme, fehlendes Update von KOs, unerwartetes Zeitverhalten, \r\n> sowie ggf. weitere nicht aufgef\u00fchrte Effekte.\r\n> Die Steuerung und Wertabruf der Homematic-Thermostate sind grunds\u00e4tzlich m\u00f6glich, \r\n> Logikkan\u00e4le und Funktionsbl\u00f6cke sollten jedoch ausschlie\u00dflich ohne externe Abh\u00e4ngigkeiten\r\n> und Zeitabh\u00e4ngigem Verhalten eingesetzt werden.     \r\n>\r\n> Inkompatible \u00c4nderungen k\u00f6nnen ohne Vorank\u00fcndigung erfolgen\r\n\r\n\r\n### Funktionen und Module\r\n \r\n*  **Konfigurationstransfer:** \u00dcbertragung von Einstellungen\r\n* **HomeMatic:** Anbindung von Homematic-Ger\u00e4ten \u00fcber eine CCU\r\n* **Internet Wetter:** Bereitstellung von Wetterdaten aus dem Internet\r\n* **Logiken:** Flexible Universallogiken und Zeitschaltuhren mit Feiertagsberechnung\r\n* **Funktionsbl\u00f6cke:** Vordefinierte Funktionsbausteine, u.A. zur Aggregation mehrerer Werte\r\n* **Filetransfer** (***unsichtbar in ETS***): Firmware-Updates \u00fcber KNX\r\n\r\n\r\n### Hardware-Unterst\u00fctzung\r\n\r\n| Hardware (Architektur)                                                        | Status     | Anmerkung |\r\n|-------------------------------------------------------------------------------|------------|-----------|\r\n| [OpenKNX Reg1-ETH](https://github.com/OpenKNX/OpenKNX/wiki/REG1-Eth) (RP2040) | Alpha      |           |\r\n| OpenKNX-REG1-LAN-TP-Base (ESP32)                                              | ungetestet |           |",
+                    "assets": [
+                        {
+                            "name": "HomematicGW-Release-0.3.0-ALPHA.zip",
+                            "size": 5616184,
+                            "digest": "sha256:66cc55c9e3807d6a0cef4c0ac5d51031913c5bc79084ff6406305dfb9cad3709",
+                            "updated_at": "2026-03-20T22:21:39Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Homematic/releases/download/v0.3.0-ALPHA/HomematicGW-Release-0.3.0-ALPHA.zip"
+                        }
+                    ]
+                }
+            ],
+            "hw_avail_open": 2
         },
         "OAM-WeatherWN90LP": {
             "repo_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP",

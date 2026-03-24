@@ -2939,7 +2939,7 @@
                     "name": "Beta 0.8.0",
                     "published_at": "2026-03-14T19:40:33Z",
                     "html_url": "https://github.com/OpenKNX/OAM-Aircondition/releases/tag/0.8.0",
-                    "body": "- Spannungs\u00fcberwachung des Klimager\u00e4tes\r\n- Umbenennung der Gruppenobjekte entsprechend dem OpenKNX Standard\r\n- Aktualisierung aller Module\r\n- Daiking Support",
+                    "body": "- Spannungs\u00fcberwachung des Klimager\u00e4tes\r\n- Umbenennung der Gruppenobjekte entsprechend dem OpenKNX Standard\r\n- Aktualisierung aller Module\r\n- Daikin Support",
                     "assets": [
                         {
                             "name": "Aircondition-Beta-0.8.0.zip",

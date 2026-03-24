@@ -2548,6 +2548,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "v0.3.0",
+                    "name": "v0.3.0-Beta",
+                    "published_at": "2026-03-24T20:29:48Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP/releases/tag/v0.3.0",
+                    "body": "- Update auf Common 1.7.2\r\n- fix UV-Index (/10)\r\n- neuer Parameter f\u00fcr H\u00f6henkorrektur beim Luftdruck\r\n- StatusLED-Support und Statusanzeige f\u00fcr Wetter (nur f\u00fcr REG1-GW-RS485)\r\n- Status KO f\u00fcr die Wetterstation (erreichbar ja/nein)\r\n- Regenmenge \u00dcberlauf wird erkannt und gehandhabt, incl. diverse Reset-Szenarien\r\n- KO (bool) f\u00fcr Regen\r\n- Regenmenge pro h wird nun gesendet\r\n- 2. KO f\u00fcr Regenmenge als 4-Byte float (DPT 14) weil DPT 9 zu ungenau\r\n- 2 KOs f\u00fcr die Regenmenge als Rohwert (so wie es die Station sendet, ohne \u00dcberlauf etc..)\r\n- 2 KOs um die Regenmenge auf Wert x zu setzen (DPT 14) bzw auf 0 zu setzen (bool) ",
+                    "assets": [
+                        {
+                            "name": "WeatherWN90LP-Release-0.3.0.zip",
+                            "size": 2278067,
+                            "digest": "sha256:2fc7cb95ef078e714d21aa4eef639fe7e0aa8e66e440f2dfd38a0f6c3e6f3dc4",
+                            "updated_at": "2026-03-24T20:28:26Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-WeatherWN90LP/releases/download/v0.3.0/WeatherWN90LP-Release-0.3.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "v0.2.0",
                     "name": "v0.2.0-Beta",
                     "published_at": "2025-12-14T10:43:09Z",

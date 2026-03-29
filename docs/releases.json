@@ -1314,6 +1314,23 @@
             "description": "State Machines for KNX configurable via ETS",
             "releases": [
                 {
+                    "prerelease": true,
+                    "tag_name": "v0.8.0",
+                    "name": "v0.8.0 (Bedingter Start-Zustand + OpenKNX Updates)",
+                    "published_at": "2026-03-29T21:11:53Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.8.0",
+                    "body": "<!-- ## v0.8.0: 2026-03-12 (Bedingter Start-Zustand + OpenKNX Updates)  -->\r\n\r\nDas Update liefert eine Erweiterung der Zustandsautomaten um bedingte \u00dcberg\u00e4nge zur Ermittlung des Startzugangs, stellt um auf die neue OpenKNX-LED-Implementierung und konsistentere KO-Benennung.\r\n\r\n## Update-Hinweise\r\n\r\n### Wichtig f\u00fcr Nutzer von v0.1 (Public Beta \"StateEngineDFA16\")\r\n\r\n> Wie bereits f\u00fcr v0.5, v0.6 und v0.7.x:\r\n>> 1. Die Ger\u00e4teadresse (PA) muss erneut zugewiesen werden, da sich das interne Speicherformat im Stack ver\u00e4ndert hat.\r\n>> 2. KO-Nummern im Bereich 2 bis 19 haben sich ver\u00e4ndert.\r\n>>    Ggf. vorhandene interne Referenzen m\u00fcssen manuell angepasst werde.\r\n>>    Zur \u00dcbersicht siehe Tabelle [\u00c4nderung von zentralen Kommunikationsobjekten](#\u00e4nderung-von-zentralen-kommunikationsobjekten) unten.\r\n\r\n### F\u00fcr Nutzer von **OpenKNX REG1-Base und Version v0.6 oder v0.7.x**\r\n \r\n> Die Unterscheidung in verschiedene Firmware-Versionen entf\u00e4llt, \r\n> da die Zeit-Status-Anzeige nun per ETS konfiguriert werden kann.\r\n> Beide Verhaltensweisen k\u00f6nnen jetzt \u00fcber die einheitliche Firmware `OpenKNX-REG1-Base` dargestellt werden.\r\n> Ausgehend von der alten Firmware wird folgendes Vorgehen zur Migration empfohlen:\r\n> * `firmware-OpenKNX-REG1-Base___no-time-led` - hier ist *keine* gesonderte Konfiguration erforderlich\r\n> * `firmware-OpenKNX-REG1-Base___time-led3` - Auswahl der Funktion **Zeitstatus** in der ETS-Applikation unter OpenKNX / Info LEDs / LED \"Info {1,2,3}\". \r\n\r\n## \u00c4nderungen\r\n\r\n* Update OFM-**DFA** auf 0.8 (von 0.7.1; [Changes](https://github.com/OpenKNX/OFM-DFA/blob/v1/CHANGELOG.md))\r\n  * Neues Feature: Starten mit bedingtem Zustands\u00fcbergang (als Option)\r\n  * Update: KO-Bezeichner (Name und Objektfunktion) entsprechend neuer einheitlicher Konventionen f\u00fcr OpenKNX-Module\r\n* Update anderer OpenKNX-Module:\r\n  * **knx** (Stack) auf 2.3.0\r\n  * OGM-**Common** auf 1.7.2 (von 1.5.1; [Changes](https://github.com/OpenKNX/OGM-Common/blob/v1/CHANGELOG.md#172-2026-03-02))\r\n    * Neues Feature: Status-LEDs-Konfiguration \r\n    * Hinweis: Synchronisation von Modul-Support bleibt deaktiviert, da keine hardwareabh\u00e4ngigkeit vorhanden\r\n  * OFM-**ConfigTransfer** auf 0.5 (von 0.4; [Changelog](https://github.com/OpenKNX/OFM-ConfigTransfer/blob/v1/CHANGELOG.md#050-log-patches-2026-02-24))\r\n  * OFM-**LogicModule** auf 4.0.1 (von 3.7.3; [\u00c4nderungshistorie](https://github.com/OpenKNX/OFM-LogicModule/blob/v1/doc/Applikationsbeschreibung-Logik.md#%C3%A4nderungshistorie))\r\n    * Neues Feature: Steuerung von Status-LEDs\r\n  * OFM-**FileTransfer**Module auf 0.1.5\r\n  * OGM-HardwareConfig auf Stand 2026-02-23\r\n\r\n## F\u00fcr Entwickler\r\n\r\n* **Wichtig:** Update auf OpenKNXproducer 4.0.1 erforderlich\r\n",
+                    "assets": [
+                        {
+                            "name": "StateEngine-DFA16-Release-0.8.0.zip",
+                            "size": 8260867,
+                            "digest": "sha256:e8d51da3e7757104759369c256d52d6311e34eae723c0bdcb3462668274a2f9d",
+                            "updated_at": "2026-03-29T20:47:23Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/download/v0.8.0/StateEngine-DFA16-Release-0.8.0.zip"
+                        }
+                    ]
+                },
+                {
                     "prerelease": false,
                     "tag_name": "v0.7.1",
                     "name": "v0.7.1 (Bedingte Zustands\u00fcberg\u00e4nge)",
@@ -1392,7 +1409,7 @@
                     "assets": []
                 }
             ],
-            "hw_avail_open": 7
+            "hw_avail_open": 6
         },
         "OAM-AccessControl": {
             "repo_url": "https://github.com/OpenKNX/OAM-AccessControl",

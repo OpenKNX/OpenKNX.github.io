@@ -87,7 +87,7 @@ if __name__ == "__main__":
     appid_to_repo = OrderedDict()
     for app_id, info in id_app_to_repo.items():
         for app_number, info2 in info.items():
-            appid_to_repo["0x%04X" % ((app_id << 8) | app_number)] = info2[0] if len(info2) == 1 else info2
+            appid_to_repo["0x%04X" % ((app_id << 8) | app_number)] = info2[0] if len(info2) == 1 else info2.sort()
 
 
     # Ausgabe

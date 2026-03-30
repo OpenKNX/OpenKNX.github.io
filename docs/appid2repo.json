@@ -10,14 +10,8 @@
     "0xA005": "OAM-Dummy / Dummy-Small",
     "0xA006": "OAM-Dummy / Dummy-Big",
     "0xA010": "OAM-SensorModule / Sensormodul-OneWire",
-    "0xA011": [
-      "OAM-RaumController / RaumController",
-      "OAM-SensorModule / Sensormodul"
-    ],
-    "0xA012": [
-      "OAM-RaumController / RaumController-Release",
-      "OAM-SensorModule / Sensormodul-Big"
-    ],
+    "0xA011": null,
+    "0xA012": null,
     "0xA030": "OAM-LogicModule / Logikmodul-Release",
     "0xA031": "OAM-LogicModule / Logikmodul",
     "0xA032": "OAM-LogicModule / Logikmodul-IP",
@@ -41,17 +35,10 @@
     "0xA304": "OAM-Meter / MeterModule",
     "0xA363": "TAS-UP-8xLJ / TAS-UP-8xLJ",
     "0xA400": "OAM-InfraredGateway / InfraredGateway",
-    "0xA600": [
-      "OAM-AccessControl / AccessControl-ReleaseR503Pro",
-      "OAM-AccessControl / AccessControl-ReleaseR503",
-      "OAM-ElectricDoorDrive / DoorControllerModule"
-    ],
+    "0xA600": null,
     "0xA601": "OAM-AccessControl / AccessControl",
     "0xA602": "OAM-SwitchActuator / SwitchActuator-Release",
-    "0xA604": [
-      "OAM-TouchRound / TouchRound",
-      "OAM-TouchRound / TouchRound-Release"
-    ],
+    "0xA604": null,
     "0xA605": "OAM-BinaryInput / BinaryInputModule-Release",
     "0xA606": "OAM-HeatingActuator / HeatingActuator-Release",
     "0xA607": "OAM-LedDimmer-AB / LedDimmerAB-Release",
@@ -60,59 +47,20 @@
     "0xAC0E": "OAM-StateEngine / StateEngine",
     "0xAC50": "OAM-Homematic / HomematicGW-Release",
     "0xAE29": "OAM-SmartHomeBridge / SmartHomeBridge-Dev",
-    "0xAE2A": [
-      "OAM-SmartHomeBridge / SmartHomeBridge-Release",
-      "OAM-SmartHomeBridge / SmartHomeBridge"
-    ],
+    "0xAE2A": null,
     "0xAE2B": "OAM-Sonos / Sonos-Dev",
-    "0xAE2C": [
-      "OAM-Sonos / Sonos-Release",
-      "OAM-Sonos / Sonos"
-    ],
+    "0xAE2C": null,
     "0xAE2D": "OAM-InternetServices / InternetServices-Dev",
-    "0xAE2E": [
-      "OAM-InternetServices / InternetServices-Release",
-      "OAM-InternetServices / InternetServices"
-    ],
+    "0xAE2E": null,
     "0xAE2F": "OAM-SonosNFCPlayer / SonosNFCPlayer-Dev",
-    "0xAE30": [
-      "OAM-SonosNFCPlayer / SonosNFCPlayer",
-      "OAM-SonosNFCPlayer / SonosNFCPlayer-Release"
-    ],
+    "0xAE30": null,
     "0xAE31": "OAM-ShutterController / ShutterController-Dev",
-    "0xAE32": [
-      "OAM-ShutterController / ShutterController",
-      "OAM-ShutterController / ShutterController-Release"
-    ],
+    "0xAE32": null,
     "0xAE35": "OAM-Aircondition / Aircondition-Dev",
-    "0xAE36": [
-      "OAM-Aircondition / Aircondition",
-      "OAM-Aircondition / Aircondition-Release"
-    ],
+    "0xAE36": null,
     "0xAE37": "OAM-Nuki / Nuki-Dev",
-    "0xAE38": [
-      "OAM-Nuki / Nuki-Release",
-      "OAM-Nuki / Nuki"
-    ],
+    "0xAE38": null,
     "0xAE39": "OAM-ClimateControl / ClimateControl-Dev",
-    "0xAE3A": [
-      "OAM-ClimateControl / ClimateControl",
-      "OAM-ClimateControl / ClimateControl-Release"
-    ],
-    "0xAF02": "OAM-SwitchActuator / SwitchActuator",
-    "0xAF03": [
-      "OAM-BinaryClock / BinaryClock",
-      "OAM-BinaryClock / BinaryClock-Release"
-    ],
-    "0xAF04": "OAM-TouchRound / TouchRound-Dev",
-    "0xAF05": [
-      "OAM-Meter / MeterModule-Dev",
-      "OAM-BinaryInput / BinaryInputModule"
-    ],
-    "0xAF06": "OAM-HeatingActuator / HeatingActuator",
-    "0xAF07": "OAM-LedDimmer-AB / LedDimmerAB",
-    "0xAF08": "OAM-BusPowerSupply / BusPowerSupply",
-    "0xAFC0": "OAM-Homematic / HomematicGW",
-    "0xAFFF": "OAM-TestApp / TestApp"
+    "0xAE3A": null
   }
 }

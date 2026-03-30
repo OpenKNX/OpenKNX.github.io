@@ -3137,6 +3137,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "v5.4.3",
+                    "name": "v5.4.3",
+                    "published_at": "2026-03-30T14:41:44Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-RaumController/releases/tag/v5.4.3",
+                    "body": "So, hier ist die n\u00e4chste Version von meinem RaumController.\r\n\r\nDiesmal gibt es viele Detailverbesserungen, interne Performanceoptimierungen und wenige neue Features. Erstmal die neuen Features:\r\n- Es gibt ein neues Status-LED Modul. Damit kann man bei Ger\u00e4ten, die Status LEDs haben, diese \u00fcber KO steuern. \r\n- Es gibt die M\u00f6glichkeit, das default-Verhalten der Ger\u00e4te-LEDs \u00fcber das Logikmodul zu beeinflussen\r\n- F\u00fcr Ger\u00e4te mit einem Buzzer oder einem Vibrationsmotor (haptisches Feedback) gibt es ein Modul, mit dem man diese auch \u00fcber KO steuern kann.\r\n\r\nDas bedeutet aber auch, dass all diejenigen, die mit der Sensormodul-Hardware von SmartMF \u00fcber das Logikmodul den Buzzer bzw. die RGB-Led gesteuert haben, nach einem Update den Buzzer bzw. die RGB-LED neu parametrisieren m\u00fcssen.\r\n\r\nDie ETS-Unterst\u00fctzung ist wieder mal besser geworden! Die Programmierzeiten sind bei vollst\u00e4ndigem Programmieren um ca, 20%, bei Partieller Programmierung um ca. 40% besser geworden. \r\nAb der ETS 6.3 wird jetzt wird in JavaScript passend zur aktuellen APDU mit dem Ger\u00e4t kommuniziert. Bei \u00e4lteren ETS immer mit der APDU 15. Davon profitieren erstmal das Logikmodul und das Pr\u00e4senzmodul. So ist jetzt das Pr\u00fcfen von Benutzerformeln (Logik) oder das Durchf\u00fchren von Stichproben (HF-PM) auch mit \u00e4lteren IP-Schnittstellen oder Linienkopplern oder gar mit USB-Schnittstellen m\u00f6glich.\r\n\r\nDie ganzen Detailverbesserungen innerhalb der Module k\u00f6nnen in deren Applikationsbeschreibungen oder deren Release Infos gelesen werden, das w\u00fcrde den Rahmen hier sprengen, alle \u00c4nderungen aufzuf\u00fchren. \r\nIch wurde gebeten, explizit auf die Release Info vom [ShutterController](https://github.com/OpenKNX/OFM-ShutterControllerModule/blob/v1/ReleaseNotes.md) und von den [FunctionBlocks](https://github.com/[OpenKNX/OFM-FunctionBlocks](https://github.com/OpenKNX/OFM-FunctionBlocks?tab=readme-ov-file#release-notes)?tab=readme-ov-file#release-notes) hinzuweisen.\r\n\r\nNach dem Update in der ETS wird die Liste der ausgeblendeten Module zur\u00fcckgesetzt und die ausgeblendeten Module erscheinen wieder. Sie m\u00fcssen also manuell erneut ausgeblendet werden. \r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "RaumController-Release-5.4.3.zip",
+                            "size": 14422468,
+                            "digest": "sha256:4ae8e9f3666929add786de58988419596d3f02d3b7b3fcec88bb9bdcd662a172",
+                            "updated_at": "2026-03-30T14:20:59Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-RaumController/releases/download/v5.4.3/RaumController-Release-5.4.3.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "v5.1.13",
                     "name": "v5.1.13",
                     "published_at": "2026-01-20T13:49:20Z",
@@ -3196,7 +3213,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 7
+            "hw_avail_open": 8
         },
         "OAM-SonosNFCPlayer": {
             "repo_url": "https://github.com/OpenKNX/OAM-SonosNFCPlayer",

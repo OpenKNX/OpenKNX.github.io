@@ -89,7 +89,7 @@ if __name__ == "__main__":
         for app_number, info2 in info.items():
             app_full_id = ((app_id << 8) | app_number)
             if app_id != 0xAF: # exclude apps in private id range
-                appid_to_repo["0x%04X" % app_full_id] = info2[0] if len(info2) == 1 else info2.sort()
+                appid_to_repo["0x%04X" % app_full_id] = info2[0] if len(info2) == 1 else sorted(info2)
             else:
                 print("INFO: ignore apps in private id range [0x%04X]" % app_full_id)
 

@@ -1315,6 +1315,23 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "v0.8.2",
+                    "name": "v0.8.2 (Bedingter Start-Zustand + Fixes + OpenKNX Updates)",
+                    "published_at": "2026-04-05T21:24:05Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.8.2",
+                    "body": "Dieses Bugfix-Release enth\u00e4lt verschiedene Korrekturen f\u00fcr nicht durch Nutzer gemeldete Fehler. Details siehe unten\r\n\r\n## Update-Hinweise\r\n\r\n### Wichtig f\u00fcr Nutzer von v0.1 (Public Beta \"StateEngineDFA16\")\r\n\r\n> Wie bereits f\u00fcr v0.5, v0.6, v0.7.x und 0.8:\r\n>> 1. Die Ger\u00e4teadresse (PA) muss erneut zugewiesen werden, da sich das interne Speicherformat im Stack ver\u00e4ndert hat.\r\n>> 2. KO-Nummern im Bereich 2 bis 19 haben sich ver\u00e4ndert.\r\n>>    Ggf. vorhandene interne Referenzen m\u00fcssen manuell angepasst werde.\r\n>>    Zur \u00dcbersicht siehe Tabelle [\u00c4nderung von zentralen Kommunikationsobjekten](#\u00e4nderung-von-zentralen-kommunikationsobjekten) unten.\r\n\r\n### F\u00fcr Nutzer von **OpenKNX REG1-Base und Version v0.6 oder v0.7.x**\r\n \r\n> Die Unterscheidung in verschiedene Firmware-Versionen entf\u00e4llt, \r\n> da die Zeit-Status-Anzeige nun per ETS konfiguriert werden kann.\r\n> Beide Verhaltensweisen k\u00f6nnen jetzt \u00fcber die einheitliche Firmware `OpenKNX-REG1-Base` dargestellt werden.\r\n> Ausgehend von der alten Firmware wird folgendes Vorgehen zur Migration empfohlen:\r\n> * `firmware-OpenKNX-REG1-Base___no-time-led` - hier ist *keine* gesonderte Konfiguration erforderlich\r\n> * `firmware-OpenKNX-REG1-Base___time-led3` - Auswahl der Funktion **Zeitstatus** in der ETS-Applikation unter OpenKNX / Info LEDs / LED \"Info {1,2,3}\". \r\n\r\n## \u00c4nderungen\r\n\r\n* Fix-Update OFM-**DFA** auf 0.8.0 (von 0.8.2; [Changes](https://github.com/OpenKNX/OFM-DFA/blob/v0.8.2/CHANGELOG.md))\r\n  * Fixes Eing\u00e4nge\r\n    * Fix: *Bestehendes KO* nutzte falsche KO-Nummer\r\n    * Fix: *Eingang Symbol T* funktionierte nicht (oder fehlerhaft) \u00fcber KO\r\n  * Fixes: Rekonstruktionsfunktion\r\n    * Fix: Es h\u00e4tte ein falscher Rest-Timeout rekonstuiert werden k\u00f6nnen, nach Shutdown fast zeitgleich zum Ende\r\n    * Fix: Verhalten bei zuvor inaktiven Kan\u00e4len in Verbindung mit Pausieren \r\n\r\n## F\u00fcr Entwickler\r\n\r\n* **Wichtig:** Update auf OpenKNXproducer 4.0.1 erforderlich\r\n\r\n\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "StateEngine-DFA16-Release-0.8.2.zip",
+                            "size": 7865099,
+                            "digest": "sha256:94d509a8f3444651ac15e10a1d2bbeae0d9da1e21d6f5b1abd6ed208ede8523b",
+                            "updated_at": "2026-04-05T21:16:14Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-StateEngine/releases/download/v0.8.2/StateEngine-DFA16-Release-0.8.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "v0.8.0",
                     "name": "v0.8.0 (Bedingter Start-Zustand + OpenKNX Updates)",
                     "published_at": "2026-03-29T21:11:53Z",

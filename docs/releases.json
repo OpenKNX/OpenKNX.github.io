@@ -3232,6 +3232,31 @@
             ],
             "hw_avail_open": 8
         },
+        "OAM-NeoPixel": {
+            "repo_url": "https://github.com/OpenKNX/OAM-NeoPixel",
+            "archived": false,
+            "description": null,
+            "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "0.1.0-Dev",
+                    "name": "NeoPixel Dev 0.1.0",
+                    "published_at": "2026-04-17T13:43:48Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-NeoPixel/releases/tag/0.1.0-Dev",
+                    "body": "Initial development release. Not for production use.",
+                    "assets": [
+                        {
+                            "name": "NeoPixel-Dev-0.1.0.zip",
+                            "size": 10094477,
+                            "digest": "sha256:b22e45e7db390c4fd313c749e131f975ea037e437c0ec77bda8451996f0d9d33",
+                            "updated_at": "2026-04-17T13:43:47Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-NeoPixel/releases/download/0.1.0-Dev/NeoPixel-Dev-0.1.0.zip"
+                        }
+                    ]
+                }
+            ],
+            "hw_avail_open": 11
+        },
         "OAM-SonosNFCPlayer": {
             "repo_url": "https://github.com/OpenKNX/OAM-SonosNFCPlayer",
             "archived": false,

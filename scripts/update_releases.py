@@ -77,6 +77,7 @@ appOrder = [
 
     # special hardware
     "OAM-WeatherWN90LP",
+    "OAM-NeoPixel",
     "SOM-UP",
     "OAM-AccessControl",
     "BEM-GardenControl",

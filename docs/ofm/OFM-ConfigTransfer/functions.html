@@ -37,7 +37,6 @@
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(29):hover) tr > :nth-child(29).colHover,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(30):hover) tr > :nth-child(30).colHover,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(31):hover) tr > :nth-child(31).colHover,
-        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(32):hover) tr > :nth-child(32).colHover,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
@@ -71,8 +70,7 @@
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(28):hover) thead th.rotate45:nth-child(28) div span,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(29):hover) thead th.rotate45:nth-child(29) div span,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(30):hover) thead th.rotate45:nth-child(30) div span,
-        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(31):hover) thead th.rotate45:nth-child(31) div span,
-        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(32):hover) thead th.rotate45:nth-child(32) div span
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(31):hover) thead th.rotate45:nth-child(31) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -111,6 +109,8 @@
         
         <col data-dev="OpenKNX UP1 Präsenzmelder+" />
         
+        <col data-dev="OpenKNX UP1 Taster" />
+        
         <col data-dev="OpenKNX UP1 UART Gateway" />
         
         <col data-dev="OpenKNXiao Mini ESP32 V1" />
@@ -125,7 +125,7 @@
       <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
         
-        <th class="before-new-cols" colspan="16">Unterstützte Geräte</th>
+        <th class="before-new-cols" colspan="17">Unterstützte Geräte</th>
       </tr>
       <tr class="hoverTrigger">
         <th class="before-new-cols"></th>
@@ -155,6 +155,8 @@
         <th class="rotate45" data-dev="OpenKNX REG2 PiPico V1"><div><span>REG2 PiPico V1</span></div></th>
         
         <th class="rotate45" data-dev="OpenKNX UP1 Präsenzmelder+"><div><span>UP1 Präsenzmelder+</span></div></th>
+        
+        <th class="rotate45" data-dev="OpenKNX UP1 Taster"><div><span>UP1 Taster</span></div></th>
         
         <th class="rotate45" data-dev="OpenKNX UP1 UART Gateway"><div><span>UP1 UART Gateway</span></div></th>
         
@@ -195,6 +197,8 @@
         <th data-dev="OpenKNX REG2 PiPico V1" class="colHover"></th>
         
         <th data-dev="OpenKNX UP1 Präsenzmelder+" class="colHover"></th>
+        
+        <th data-dev="OpenKNX UP1 Taster" class="colHover"></th>
         
         <th data-dev="OpenKNX UP1 UART Gateway" class="colHover"></th>
         
@@ -242,6 +246,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -291,6 +297,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover">&#9724;</td>
@@ -338,6 +346,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -387,6 +397,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -435,6 +447,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover">&#9724;</td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover">&#9724;</td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -442,7 +456,6 @@
         <td data-dev="OpenKNXiao Mini RP2040 V1" class="isPart colHover"></td>
         
         <td class="left">
-                <span data-dev="(???)-OpenKNX-UP1-TAS-4x"><span class="isPart">&#9724;</span>&nbsp;(???)-OpenKNX-UP1-TAS-4x</span>
         </td>
 
         
@@ -483,6 +496,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -531,6 +546,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -582,6 +599,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover">&#9724;</td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -629,6 +648,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -678,6 +699,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -725,6 +748,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -774,6 +799,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -821,6 +848,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover">&#9724;</td>
         
@@ -873,6 +902,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover">&#9724;</td>
@@ -920,6 +951,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -969,6 +1002,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -1016,6 +1051,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -1065,6 +1102,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -1113,6 +1152,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -1160,6 +1201,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -1210,6 +1253,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover">&#9724;</td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover">&#9724;</td>
         
@@ -1266,6 +1311,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -1313,6 +1360,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -1362,6 +1411,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -1409,6 +1460,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -1458,6 +1511,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover">&#9724;</td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -1465,7 +1520,6 @@
         <td data-dev="OpenKNXiao Mini RP2040 V1" class="isPart colHover"></td>
         
         <td class="left">
-                <span data-dev="OpenKNX UP1 Taster"><span class="isPart">&#9724;</span>&nbsp;UP1 Taster</span>
         </td>
 
         
@@ -1506,6 +1560,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -1556,6 +1612,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -1603,6 +1661,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
@@ -1652,6 +1712,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -1700,6 +1762,8 @@
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
         
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
+        
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         
         <td data-dev="OpenKNXiao Mini ESP32 V1" class="isPart colHover"></td>
@@ -1747,6 +1811,8 @@
         <td data-dev="OpenKNX REG2 PiPico V1" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 Präsenzmelder+" class="isPart colHover"></td>
+        
+        <td data-dev="OpenKNX UP1 Taster" class="isPart colHover"></td>
         
         <td data-dev="OpenKNX UP1 UART Gateway" class="isPart colHover"></td>
         

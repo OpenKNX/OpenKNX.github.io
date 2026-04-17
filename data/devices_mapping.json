@@ -66,6 +66,7 @@
     "OpenKNX-UP1-GW-UART":                           "OpenKNX UP1 UART Gateway",
     "OpenKNX-UP1-PM-HF":                             "OpenKNX UP1 Präsenzmelder+",
     "OpenKNX-UP1-SEN-8x":                            "OpenKNX UP1 8xSensor",
+    "OpenKNX-UP1-TAS-4x":                            "OpenKNX UP1 Taster",
     "OpenKNX-XIAO-KNeoPiX-RP2040_V1":                "OpenKNXiao KNeoPiX RP2040 V1",
     "OpenKNX-XIAO-KNeoPiX-RP2350_V1":                "OpenKNXiao KNeoPiX RP2350 V1",
     "OpenKNX-XIAO-RP2040-Mini_V1":                   "OpenKNXiao Mini RP2040 V1",

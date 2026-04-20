@@ -59,6 +59,8 @@
     "0xAC0D": "OAM-StateEngine / StateEngine-DFA16-Release",
     "0xAC0E": "OAM-StateEngine / StateEngine",
     "0xAC50": "OAM-Homematic / HomematicGW-Release",
+    "0xAD00": "OAM-NeoPixel / NeoPixel-Release",
+    "0xAD01": "OAM-NeoPixel / NeoPixel-Dev",
     "0xAE29": "OAM-SmartHomeBridge / SmartHomeBridge-Dev",
     "0xAE2A": [
       "OAM-SmartHomeBridge / SmartHomeBridge",

@@ -783,6 +783,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "v1.1.0-release",
+                    "name": "1.1.0-release",
+                    "published_at": "2026-04-28T19:34:56Z",
+                    "html_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/tag/v1.1.0-release",
+                    "body": "Offizielles Release.\r\n\r\nRelease Notes:\r\n\r\n- Kleine allgemeine Optimierungen \r\n- Alle Module(Logik, DFA, ...) wurden auf den aktuellen Stand gebracht\r\n\r\nETS ist updatef\u00e4hig (vorher bitte trotzdem ein Backup machen) \r\n\r\nSollte es noch zu Auff\u00e4lligkeiten kommen, dann lasst es mich wissen.\r\nKNX-Forum: User = Masifi\r\nMAIL: info @ smart-mf.de",
+                    "assets": [
+                        {
+                            "name": "GardenControl-Release-1.1.0.zip",
+                            "size": 4229533,
+                            "digest": "sha256:a0f42484ea14b0dde1d5ce63dfabc957cb458d90278fe17b09382044e01d6240",
+                            "updated_at": "2026-04-28T19:34:52Z",
+                            "browser_download_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/download/v1.1.0-release/GardenControl-Release-1.1.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "v0.9.1-release-BETA",
                     "name": "0.9.1-release-BETA",
                     "published_at": "2025-06-01T14:13:06Z",

@@ -783,6 +783,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "v1.2.0-release",
+                    "name": "1.2.0-release",
+                    "published_at": "2026-05-01T23:08:30Z",
+                    "html_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/tag/v1.2.0-release",
+                    "body": "Bugfix:\r\n\r\n- Feature:  4-20mA fixed\r\n\r\nETS ist updatef\u00e4hig (vorher bitte trotzdem ein Backup machen)\r\n\r\nSollte es noch zu Auff\u00e4lligkeiten kommen, dann lasst es mich wissen.\r\nKNX-Forum: User = Masifi\r\nMAIL: info @ smart-mf.de",
+                    "assets": [
+                        {
+                            "name": "GardenControl-Release-1.2.0.zip",
+                            "size": 4229721,
+                            "digest": "sha256:ac7ba235d2ff57fe0b9ffacda3382280ab9e66aae6f9f512d347956c374a7314",
+                            "updated_at": "2026-05-01T23:08:16Z",
+                            "browser_download_url": "https://github.com/OpenKNX/BEM-GardenControl/releases/download/v1.2.0-release/GardenControl-Release-1.2.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "v1.1.0-release",
                     "name": "1.1.0-release",
                     "published_at": "2026-04-28T19:34:56Z",

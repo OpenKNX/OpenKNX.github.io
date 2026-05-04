@@ -31,6 +31,17 @@
             ]
         },
         {
+            "Repository": "OAM-Meter",
+            "HelpThread": "https://knx-user-forum.de/forum/projektforen/openknx/1765082-openknx-logikmodul-release",
+            "Description": "Zähler Modul.",
+            "Apps": [
+                {
+                    "AppId": "$A304",
+                    "Label": "release"
+                }
+            ]
+        },
+        {
             "Repository": "OAM-StateEngine",
             "HelpThread": "https://knx-user-forum.de/forum/projektforen/openknx/2024474-openknx-stateengine-universelle-zustandsautomaten-in-knx",
             "Description": "Abbildung von zustandsabhängigem Verhalten in KNX",

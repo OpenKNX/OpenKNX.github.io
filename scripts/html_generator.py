@@ -167,6 +167,7 @@ class HTMLGenerator:
                 ofm_data=ofm_data,
                 showModules=showModules,
                 showDevices=showDevices,
+                function_device_to_pathname=PathManager.to_device_pathname,
             )
 
         # create overview-page for each OAM
@@ -235,6 +236,7 @@ class HTMLGenerator:
                                           ofm_data=ofm_data,
                                           showModules=False,
                                           showDevices=True,
+                                          function_device_to_pathname = PathManager.to_device_pathname,
                                           )
         # create ofm index-list
         logging.info(f"Create OFM Index")

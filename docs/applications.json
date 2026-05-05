@@ -31,21 +31,6 @@
             ]
         },
         {
-            "Repository": "OAM-RaumController",
-            "HelpThread": "https://knx-user-forum.de/forum/projektforen/openknx/2060692-openknx-raumcontroller-release-oder-aus-dem-sensormodul-wird-ein-raumcontroller",
-            "Description": "OpenKNX Applikation mit allen notwendigen Modulen, um einen Raum in einem Haus zu automatisieren.",
-            "Apps": [
-                {
-                    "AppId": "$A011",
-                    "Label": "dev"
-                },
-                {
-                    "AppId": "$A012",
-                    "Label": "release"
-                }
-            ]
-        },
-        {
             "Repository": "OAM-Meter",
             "HelpThread": "https://knx-user-forum.de/forum/projektforen/openknx/1765082-openknx-logikmodul-release",
             "Description": "Zähler Modul.",

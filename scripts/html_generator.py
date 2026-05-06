@@ -50,15 +50,7 @@ class HTMLGenerator:
         :return:
         """
         logging.info(f"Creating HTML for repository {oam}")
-        latest_release = None
-        latest_prerelease = None
-        for release in oam_releases:
-            if not release["prerelease"]:
-                if latest_release is None or release["published_at"] > latest_release["published_at"]:
-                    latest_release = release
-            else:
-                if latest_prerelease is None or release["published_at"] > latest_prerelease["published_at"]:
-                    latest_prerelease = release
+        latest_prerelease, latest_release = self.releases_extract_latest(oam_releases)
 
         # create release info for this repo
         output_filename = self.path_manager.get_oam_path(oam, filename='releases_latest.html')
@@ -76,6 +68,19 @@ class HTMLGenerator:
                                       latest_release=latest_release,
                                       latest_prerelease=latest_prerelease
                                       )
+
+    # TODO check moving to better place
+    def releases_extract_latest(self, oam_releases):
+        latest_release = None
+        latest_prerelease = None
+        for release in oam_releases:
+            if not release["prerelease"]:
+                if latest_release is None or release["published_at"] > latest_release["published_at"]:
+                    latest_release = release
+            else:
+                if latest_prerelease is None or release["published_at"] > latest_prerelease["published_at"]:
+                    latest_prerelease = release
+        return latest_prerelease, latest_release
 
     def update_html(self, releases_data):
         logging.info("Updating HTML with release data")

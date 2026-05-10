@@ -1,5 +1,5 @@
 # Collect AppIDs used by OAMs
-# (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
+# (C) 2025-2026 Cornelius Köpp; For Usage in OpenKNX-Project only
 import os
 import re
 import xml.etree.ElementTree as ET
@@ -7,7 +7,7 @@ from pathlib import Path
 from collections import defaultdict, OrderedDict
 
 
-def extract_attributes_from_xml_tree(root_dir):
+def extract_attributes_from_xml_tree(root_dir) -> dict(str, dict(str, dict(str, str))):
     """
     Durchsucht alle XML-Dateien in einem Verzeichnisbaum und extrahiert
     die Attribute `OpenKnxId` und `ApplicationNumber` aus dem Element `op:ETS`.

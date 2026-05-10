@@ -1,5 +1,5 @@
 # Quick and Dirty Wrapper for Access to GitHub API with Minimalistic Error Handling
-# (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
+# (C) 2025-2026 Cornelius Köpp; For Usage in OpenKNX-Project only
 
 import logging
 import sys
@@ -41,7 +41,7 @@ class GitHubClient:
     def get_json_response(self, url):
         return self.get_response(url).json()
 
-    def fetch_org_repos_page(self, repos_list, per_page=100, page=1):
+    def _fetch_org_repos_page(self, repos_list: list, per_page:int=100, page:int=1) -> int:
         logging.info(f"Repo-list: Read page {page} ...")
         repos_url = f"{self.base_url}/orgs/{self.org_name}/repos?per_page={per_page}&type=public&page={page}"
         repos_data = self.get_json_response(repos_url)
@@ -52,7 +52,7 @@ class GitHubClient:
         per_page = 100
         page = 1
         all_repos = []
-        while self.fetch_org_repos_page(all_repos, per_page, page) is per_page:
+        while self._fetch_org_repos_page(all_repos, per_page, page) is per_page:
             page += 1
         logging.info(f"Found {len(all_repos)} repos on {page} pages")
         return all_repos

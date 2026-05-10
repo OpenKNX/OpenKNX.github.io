@@ -14,6 +14,7 @@ from devices_helper import DeviceHelper
 from github_client import GitHubClient
 from html_generator import HTMLGenerator
 from model.oam_data import OamData
+from model.oam_releases import OamReleasesData
 from release_manager import ReleaseManager
 
 # Initialize logging
@@ -106,7 +107,7 @@ html_generator = HTMLGenerator(device_helper)
 
 
 
-def process_release_zip(zip_url):
+def process_release_zip(zip_url: str) -> tuple[list, AppSizingStat]:
     content_xml_paths = ['data\\content.xml', 'data/content.xml']
 
     response = client.get_response(zip_url)
@@ -155,7 +156,7 @@ def process_release_zip(zip_url):
     return hardware_info, app_stat
 
 
-def process_releases(releases_data):
+def process_releases(releases_data: dict[str, OamReleasesData]) -> tuple[dict[str, list[str]], dict[str, AppSizingStat]]:
     hardware_mapping = {}
     oam_stat = {}
     for oam, oam_data in releases_data.items():
@@ -210,7 +211,7 @@ def process_releases(releases_data):
     return hardware_mapping, oam_stat
 
 
-def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
+def generate_oam_data(oam_dependencies, oam_hardware, oam_details: dict[str, OamReleasesData]) -> dict[str, OamData]:
     logging.debug(f"OAM Hardware {oam_hardware}")
 
     # TODO find better place to define, as long not extracted from OAMs

@@ -13,7 +13,7 @@ class ReleaseManager:
         self.app_special_names = app_special_names
         self.app_exclusion = app_exclusion
 
-    def _check_include_repo(self, repo):
+    def _check_include_repo(self, repo: dict[str, str]) -> bool:
         rn = repo["name"]
         return (rn.startswith(self.app_prefix) or rn in self.app_special_names) and rn not in self.app_exclusion
 

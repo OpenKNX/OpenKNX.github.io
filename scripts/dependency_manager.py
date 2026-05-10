@@ -1,5 +1,5 @@
 # Collect OFMs used by OAMs
-# (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
+# (C) 2025-2026 Cornelius Köpp; For Usage in OpenKNX-Project only
 
 import json
 import logging
@@ -67,7 +67,7 @@ class DependencyManager:
 
         return dependencies_map
 
-    def _is_module_to_include(self, dep_name):
+    def _is_module_to_include(self, dep_name: str) -> bool:
         if dep_name == 'OFM-SmartMF':  ## ignore this module, no function for user
             return False
         return dep_name.startswith('OFM-') or dep_name.startswith('OGM-') or dep_name == 'knx'

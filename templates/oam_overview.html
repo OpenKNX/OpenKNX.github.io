@@ -14,7 +14,7 @@
 
 <h1>{{ oamName }}</h1>
 <p><a href="../">&nwarr; Liste der OpenKNX-Applikationen</a></p>
-<p>{{ oam_details.description }}</p>
+<p>{{ oam_details.description or "" }}</p>
 <h2>Enthaltene Module</h2>
 <ul>
     {% for module in oam_details['modules_internal'] %}

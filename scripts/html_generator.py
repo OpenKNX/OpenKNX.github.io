@@ -5,7 +5,7 @@ import logging
 
 from jinja2 import Environment, FileSystemLoader
 
-from model import OamReleasesData
+from model.oam_releases import OamReleasesData
 from path_manager import PathManager
 
 

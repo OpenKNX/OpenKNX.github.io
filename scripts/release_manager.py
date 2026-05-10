@@ -3,7 +3,7 @@
 
 import logging
 
-from model import ReleaseAsset, OamReleaseData, OamReleasesData
+from model.oam_releases import ReleaseAsset, OamReleaseData, OamReleasesData
 
 
 class ReleaseManager:

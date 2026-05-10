@@ -22,6 +22,9 @@ class OamReleaseData:
     body: str
     assets: list[ReleaseAsset] = field(default_factory=list)
 
+    def is_newer(self, other):
+        return other is None or self.published_at > other.published_at
+
 @dataclass
 class OamReleasesData:
     # name: str
@@ -37,9 +40,9 @@ class OamReleasesData:
         latest_prerelease = None
         for release in self.releases:
             if not release.prerelease:
-                if latest_release is None or release.published_at > latest_release.published_at:
+                if release.is_newer(latest_release):
                     latest_release = release
             else:
-                if latest_prerelease is None or release.published_at > latest_prerelease.published_at:
+                if release.is_newer(latest_prerelease):
                     latest_prerelease = release
         return latest_prerelease, latest_release

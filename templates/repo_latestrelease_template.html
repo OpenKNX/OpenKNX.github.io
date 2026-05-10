@@ -12,7 +12,7 @@
     {% if latest_release %}
     <li>Neustes Release: <a href="{{ latest_release.html_url }}">{{ latest_release.name }} ({{ latest_release.tag_name }})</a></li>
     {% endif %}
-    {% if latest_prerelease and (latest_release is none or latest_prerelease.published_at > latest_release.published_at) %}
+    {% if latest_prerelease and latest_prerelease.is_newer(latest_release) %}
     <li>[PRERELEASE] Neustes Pre-Release: <a href="{{ latest_prerelease.html_url }}">{{ latest_prerelease.name }} ({{ latest_prerelease.tag_name }})</a></li>
     {% endif %}
 </ul>

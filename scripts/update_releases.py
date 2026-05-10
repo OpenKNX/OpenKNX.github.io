@@ -158,14 +158,14 @@ def process_releases(releases_data):
     hardware_mapping = {}
     oam_stat = {}
     for oam, oam_data in releases_data.items():
-        oam_releases = oam_data["releases"]
+        oam_releases = oam_data.releases
         if not oam_releases or not isinstance(oam_releases, list) or len(oam_releases) == 0:
             logging.warning(f"No releases found for {oam}")
             continue
         latest_release = oam_releases[0]
-        for asset in latest_release.get('assets', []):
+        for asset in latest_release.assets:
             ## TODO check all?
-            logging.info(f"Fetching release archive {oam} from {asset['browser_download_url']}")
+            logging.info(f"Fetching release archive {oam} from {asset.browser_download_url}")
 
             # cache results of process_release_zip: use filename as key inside of oam-directory:
 
@@ -175,15 +175,11 @@ def process_releases(releases_data):
             # hardware_info, app_stat = process_release_zip(asset['browser_download_url'])
             out_dir = os.path.join("releases_data", oam)
             os.makedirs(out_dir, exist_ok=True)
-            filename = asset.get('digest')
+            filename = asset.digest
             if not filename:
-                logging.warning(f"No digest found for asset {asset['name']} in {oam}!")
+                logging.warning(f"No digest found for asset {asset.name} in {oam}!")
                 # logging.warning(f"asset: {json.dumps(asset, indent=4)}")
-                if asset.get("name", False) and asset.get("updated_at", False) and asset.get("size", False):
-                    filename = f"{asset.get('name')}__{asset.get('updated_at')}__{asset.get('size')}"
-                else:
-                    logging.info("+++")
-                    continue
+                filename = f"{asset.name}__{asset.updated_at}__{asset.size}"
 
             out_path = os.path.join(out_dir, f"{filename.replace(':', '_')}.json")
             if os.path.exists(out_path):
@@ -192,7 +188,7 @@ def process_releases(releases_data):
                 hardware_info = data.get("hardware_info")
                 app_stat = data.get("app_stat")
             else:
-                hardware_info, app_stat = process_release_zip(asset['browser_download_url'])
+                hardware_info, app_stat = process_release_zip(asset.browser_download_url)
                 data = {}
                 if hardware_info:
                     data["hardware_info"] = hardware_info
@@ -234,7 +230,7 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
     oam_data = {}
     for oam, dependencies in oam_dependencies.items():
         oam_data[oam] = {
-            "description": oam_details.get(oam, {}).get("description", "(keine Kurzbeschreibung)"),
+            "description": oam_details.get(oam, {}).description, # TODO check fallback  or "(keine Kurzbeschreibung)"
             "modules": dependencies,
             "modules_internal": internal_modules.get(oam, []),
             "devices": [],  # set empty list for OAMs without releases # TODO check cleanup of data-collection
@@ -298,7 +294,7 @@ def main(force_update=False):
     _write_json_file('hardware_mapping.json', oam_hardware)
 
     for oam, oam_data in oam_releases_data.items():
-        oam_data["hw_avail_open"] = sum(1 for name in oam_hardware.get(oam, []) if device_helper.is_open_device(name))
+        oam_data.hw_avail_open = sum(1 for name in oam_hardware.get(oam, []) if device_helper.is_open_device(name))
 
     # write releases.json for openknx-toolbox
     write_releases_json(oam_releases_data)

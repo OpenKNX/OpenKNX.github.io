@@ -1,5 +1,5 @@
 # Create HTML-Files from Collected Data Using Jinja2-Templates
-# (C) 2025 Cornelius Köpp; For Usage in OpenKNX-Project only
+# (C) 2025-2026 Cornelius Köpp; For Usage in OpenKNX-Project only
 
 import logging
 
@@ -74,15 +74,15 @@ class HTMLGenerator:
         latest_release = None
         latest_prerelease = None
         for release in oam_releases:
-            if not release["prerelease"]:
-                if latest_release is None or release["published_at"] > latest_release["published_at"]:
+            if not release.prerelease:
+                if latest_release is None or release.published_at > latest_release.published_at:
                     latest_release = release
             else:
-                if latest_prerelease is None or release["published_at"] > latest_prerelease["published_at"]:
+                if latest_prerelease is None or release.published_at > latest_prerelease.published_at:
                     latest_prerelease = release
         return latest_prerelease, latest_release
 
-    def update_html(self, releases_data):
+    def update_html(self, releases_data: dict[str, OamReleasesData]):
         logging.info("Updating HTML with release data")
 
         output_filename = self.path_manager.create_path(filename='releases_list.html')
@@ -92,7 +92,7 @@ class HTMLGenerator:
 
         # current releases htmls for apps:
         for repo, details in releases_data.items():
-            self.create_html_for_repo(repo, details["releases"])
+            self.create_html_for_repo(repo, details.releases)
 
     def update_overview_tables(self, oam_data, ofm_data):
         # module,devices -> usage_count

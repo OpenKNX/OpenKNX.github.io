@@ -5,6 +5,7 @@ import logging
 
 from jinja2 import Environment, FileSystemLoader
 
+from model import OamReleasesData
 from path_manager import PathManager
 
 
@@ -40,7 +41,7 @@ class HTMLGenerator:
 
         return html_content
 
-    def create_html_for_repo(self, oam, oam_releases):
+    def create_html_for_repo(self, oam: str, oam_releases: OamReleasesData):
         """
         Erzeugt zu jedem Repo eine kleine HTML-Datei mit Ausgabe des aktuellsten Release.
         Ein Pre-Release wird nur dann mit ausgegeben, wenn es neuer ist als das neuste Release, oder noch kein reguläres existiert
@@ -50,7 +51,7 @@ class HTMLGenerator:
         :return:
         """
         logging.info(f"Creating HTML for repository {oam}")
-        latest_prerelease, latest_release = self.releases_extract_latest(oam_releases)
+        latest_prerelease, latest_release = oam_releases.releases_extract_latest()
 
         # create release info for this repo
         output_filename = self.path_manager.get_oam_path(oam, filename='releases_latest.html')
@@ -69,19 +70,6 @@ class HTMLGenerator:
                                       latest_prerelease=latest_prerelease
                                       )
 
-    # TODO check moving to better place
-    def releases_extract_latest(self, oam_releases):
-        latest_release = None
-        latest_prerelease = None
-        for release in oam_releases:
-            if not release.prerelease:
-                if latest_release is None or release.published_at > latest_release.published_at:
-                    latest_release = release
-            else:
-                if latest_prerelease is None or release.published_at > latest_prerelease.published_at:
-                    latest_prerelease = release
-        return latest_prerelease, latest_release
-
     def update_html(self, releases_data: dict[str, OamReleasesData]):
         logging.info("Updating HTML with release data")
 
@@ -92,7 +80,7 @@ class HTMLGenerator:
 
         # current releases htmls for apps:
         for repo, details in releases_data.items():
-            self.create_html_for_repo(repo, details.releases)
+            self.create_html_for_repo(repo, details)
 
     def update_overview_tables(self, oam_data, ofm_data):
         # module,devices -> usage_count

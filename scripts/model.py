@@ -31,4 +31,15 @@ class OamReleasesData:
     description: str
     releases: list[OamReleaseData] = field(default_factory=list)
     hw_avail_open: int = 0
-    # TODO add methode to extract latest_prerelease, latest_release
+
+    def releases_extract_latest(self):
+        latest_release = None
+        latest_prerelease = None
+        for release in self.releases:
+            if not release.prerelease:
+                if latest_release is None or release.published_at > latest_release.published_at:
+                    latest_release = release
+            else:
+                if latest_prerelease is None or release.published_at > latest_prerelease.published_at:
+                    latest_prerelease = release
+        return latest_prerelease, latest_release

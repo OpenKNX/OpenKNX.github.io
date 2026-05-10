@@ -13,6 +13,7 @@ from dependency_manager import DependencyManager
 from devices_helper import DeviceHelper
 from github_client import GitHubClient
 from html_generator import HTMLGenerator
+from model.oam_data import OamData
 from release_manager import ReleaseManager
 
 # Initialize logging
@@ -229,17 +230,17 @@ def generate_oam_data(oam_dependencies, oam_hardware, oam_details):
 
     oam_data = {}
     for oam, dependencies in oam_dependencies.items():
-        oam_data[oam] = {
-            "description": oam_details.get(oam, {}).description, # TODO check fallback  or "(keine Kurzbeschreibung)"
-            "modules": dependencies,
-            "modules_internal": internal_modules.get(oam, []),
-            "devices": [],  # set empty list for OAMs without releases # TODO check cleanup of data-collection
-        }
+        oam_data[oam] = OamData(
+            description = oam_details.get(oam, {}).description, # TODO check fallback  or "(keine Kurzbeschreibung)"
+            modules = dependencies,
+            modules_internal = internal_modules.get(oam, []),
+            devices = [],  # set empty list for OAMs without releases # TODO check cleanup of data-collection
+        )
         if oam not in oam_details:
             logging.warning(f"Missing {oam} in oam_details, present only {oam_details.keys()}")
     for oam, oam_device_list in oam_hardware.items():
         if oam in oam_data:
-            oam_data[oam]["devices"] = oam_device_list
+            oam_data[oam].devices = oam_device_list # TODO define type
         else:
             logging.warning(f"Missing {oam} in oam_data, present only {oam_data.keys()}")
 

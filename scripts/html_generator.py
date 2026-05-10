@@ -5,6 +5,7 @@ import logging
 
 from jinja2 import Environment, FileSystemLoader
 
+from model.oam_data import OamData
 from model.oam_releases import OamReleasesData
 from path_manager import PathManager
 
@@ -82,17 +83,17 @@ class HTMLGenerator:
         for repo, details in releases_data.items():
             self.create_html_for_repo(repo, details)
 
-    def update_overview_tables(self, oam_data, ofm_data):
+    def update_overview_tables(self, oam_data: dict[str, OamData], ofm_data):
         # module,devices -> usage_count
         from collections import defaultdict
         modules_usage_count = defaultdict(int)
         hardware_usage_count = defaultdict(int)
         hardware_other_usage_count = defaultdict(int)
         for oam_details in oam_data.values():
-            for module in oam_details["modules"].keys():
+            for module in oam_details.modules.keys():
                 modules_usage_count[module] += 1
         for oam, oam_details in oam_data.items():
-            hw_list = oam_details["devices"]
+            hw_list = oam_details.devices
             logging.debug(f"Devices for {oam}: {hw_list}")
             for hw in set(hw_list):
                 if self.device_helper.is_open_device(hw):
@@ -195,8 +196,8 @@ class HTMLGenerator:
             dev_usage_count = defaultdict(int)
             for oam, oam_details in oam_data.items():
                 # use supported devices of all oams with this module:
-                if ofmName in oam_details["modules"]:
-                    for dev in oam_details["devices"]:
+                if ofmName in oam_details.modules:
+                    for dev in oam_details.devices:
                         dev_usage_count[dev] += 1
             devs_sorted = sorted(dev_usage_count.items(), key=lambda item: (-item[1], item[0]))
 
@@ -214,12 +215,12 @@ class HTMLGenerator:
 
             oam_data_of_ofm = {
                 oam_name: oam_details
-                for oam_name, oam_details in oam_data.items() if ofmName in oam_details['modules']
+                for oam_name, oam_details in oam_data.items() if ofmName in oam_details.modules
             }
             modules_of_device = {
                 module
                 for oam_details in oam_data_of_ofm.values()
-                for module in oam_details["modules"]
+                for module in oam_details.modules
             }
             self._render_template_to_file('dependencies_template.html',
                                           self.path_manager.get_ofm_path(ofmName, 'functions.html'),
@@ -247,8 +248,8 @@ class HTMLGenerator:
             ofm_usage_count = defaultdict(int)
             for oam, oam_details in oam_data.items():
                 # use supported devices of all oams with this module:
-                if device_name in oam_details["devices"]:
-                    for ofm in oam_details["modules"]:
+                if device_name in oam_details.devices:
+                    for ofm in oam_details.modules:
                         ofm_usage_count[ofm] += 1
             devs_sorted = sorted(ofm_usage_count.items(), key=lambda item: (-item[1], item[0]))
             # TODO use device-id?
@@ -262,12 +263,12 @@ class HTMLGenerator:
 
             oam_data_of_device = {
                 oam_name: oam_details
-                for oam_name, oam_details in oam_data.items() if device_name in oam_details['devices']
+                for oam_name, oam_details in oam_data.items() if device_name in oam_details.devices
             }
             modules_of_device = {
                 module
                 for oam_details in oam_data_of_device.values()
-                for module in oam_details["modules"]
+                for module in oam_details.modules
             }
             modules_sorted_of_device = [module for module in modules_sorted if module[0] in modules_of_device]
             self._render_template_to_file('dependencies_template.html',

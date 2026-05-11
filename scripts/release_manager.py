@@ -8,21 +8,17 @@ from io import BytesIO
 
 from defusedxml import ElementTree as ET
 
+from app_config import OamConfig
 from app_sizing_stat import AppSizingStat
+from github_client import GitHubClient
 from model.oam_data import OamRepo
 from model.oam_releases import ReleaseAsset, OamReleaseData, OamReleasesData
 
 
 class ReleaseManager:
-    def __init__(self, client, app_prefix, app_special_names, app_exclusion):
+    def __init__(self, client: GitHubClient, app_config: OamConfig):
         self.client = client
-        self.app_prefix = app_prefix
-        self.app_special_names = app_special_names
-        self.app_exclusion = app_exclusion
-
-    def _check_include_repo(self, repo: dict[str, str]) -> bool:
-        rn = repo["name"]
-        return (rn.startswith(self.app_prefix) or rn in self.app_special_names) and rn not in self.app_exclusion
+        self.app_config = app_config
 
     def fetch_app_repos(self) -> list[OamRepo]:
         """
@@ -43,7 +39,7 @@ class ReleaseManager:
                 default_branch = repo["default_branch"],
             )
             for repo in repos_data
-            if self._check_include_repo(repo)
+            if self.app_config.include_repo(repo)
         ]
         return app_repos_data
 

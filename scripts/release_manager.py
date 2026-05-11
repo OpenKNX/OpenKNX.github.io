@@ -3,6 +3,7 @@
 
 import logging
 
+from model.oam_data import OamRepo
 from model.oam_releases import ReleaseAsset, OamReleaseData, OamReleasesData
 
 
@@ -17,7 +18,7 @@ class ReleaseManager:
         rn = repo["name"]
         return (rn.startswith(self.app_prefix) or rn in self.app_special_names) and rn not in self.app_exclusion
 
-    def fetch_app_repos(self):
+    def fetch_app_repos(self) -> list[OamRepo]:
         """
         Read the info for all public Application Repos (selected by Name) from API and return full data as List.
 
@@ -25,23 +26,32 @@ class ReleaseManager:
         """
         repos_data = self.client.get_org_repos()
         app_repos_data = [
-            repo
+            OamRepo(
+                name = repo["name"],
+                updated_at = repo["updated_at"],
+                pushed_at = repo["pushed_at"],
+                releases_url = repo["releases_url"],
+                repo_url = repo["html_url"],
+                archived = repo["archived"],
+                description = repo["description"],
+                default_branch = repo["default_branch"],
+            )
             for repo in repos_data
             if self._check_include_repo(repo)
         ]
         return app_repos_data
 
-    def fetch_apps_releases(self, repos_data) -> dict[str, OamReleasesData]:
+    def fetch_apps_releases(self, repos_data: list[OamRepo]) -> dict[str, OamReleasesData]:
         releases_data = {}
         for repo in repos_data:
-            name = repo["name"]
-            url = repo["releases_url"].replace("{/id}", "")
+            name = repo.name
+            url = repo.releases_url.replace("{/id}", "") # TODO define function?
             logging.info(f"Fetching release data {name} from {url}")
             releases = self.client.get_json_response(url)
             releases_data[name] = OamReleasesData(
-                repo_url = repo["html_url"],
-                archived = repo["archived"],
-                description = repo["description"],
+                repo_url = repo.repo_url,
+                archived = repo.archived,
+                description = repo.description,
                 releases = [
                     OamReleaseData(
                         prerelease = release.get("prerelease"),

@@ -4,6 +4,8 @@
 import json
 import logging
 
+from model.oam_data import OamRepo
+
 
 class DependencyManager:
     def __init__(self, client):
@@ -13,8 +15,8 @@ class DependencyManager:
         # TODO check if the exclusion of external libs here is a clean solution
         return url.startswith("https://github.com/OpenKNX/")
 
-    def fetch_dependencies(self, repo):
-        dependencies_url = f"https://raw.githubusercontent.com/OpenKNX/{repo['name']}/{repo['default_branch']}/dependencies.txt"
+    def fetch_dependencies(self, repo: OamRepo):
+        dependencies_url = f"https://raw.githubusercontent.com/OpenKNX/{repo.name}/{repo.default_branch}/dependencies.txt"
         response = self.client.get_response(dependencies_url, True)
         if response is None:
             return {}
@@ -53,17 +55,17 @@ class DependencyManager:
                             # TODO rename to dep_name
                             "depName": dep_name
                         }
-                        logging.warning(f"((>>WORKAROUND<<)) Expect module in {repo['name']} by lib-path only: '{dep_name}'")
+                        logging.warning(f"((>>WORKAROUND<<)) Expect module in {repo.name} by lib-path only: '{dep_name}'")
                     else:
-                        logging.warning(f"Unexpected lib in incomplete dependencies.txt of {repo['name']}: {dep_name}")
+                        logging.warning(f"Unexpected lib in incomplete dependencies.txt of {repo.name}: {dep_name}")
                     incomplete_lines_count += 1
                 else:
                     invalid_lines_count += 1
 
         if incomplete_lines_count > 0:
-            logging.warning(f"Incomplete dependencies.txt format in {repo['name']} ({incomplete_lines_count} of {len(lines)-1} lines)")
+            logging.warning(f"Incomplete dependencies.txt format in {repo.name} ({incomplete_lines_count} of {len(lines)-1} lines)")
         if invalid_lines_count > 0:
-            logging.error(f"Invalid dependencies.txt format in {repo['name']} ({invalid_lines_count} of {len(lines)-1} lines)")
+            logging.error(f"Invalid dependencies.txt format in {repo.name} ({invalid_lines_count} of {len(lines)-1} lines)")
 
         return dependencies_map
 
@@ -72,12 +74,12 @@ class DependencyManager:
             return False
         return dep_name.startswith('OFM-') or dep_name.startswith('OGM-') or dep_name == 'knx'
 
-    def fetch_all_dependencies(self, repos_data):
+    def fetch_all_dependencies(self, repos_data: list[OamRepo]):
         all_dependencies = {}
         for repo in repos_data:
             dependencies = self.fetch_dependencies(repo)
             if dependencies:
-                all_dependencies[repo['name']] = dependencies
+                all_dependencies[repo.name] = dependencies
         with open('dependencies.json', 'w') as outfile:
             json.dump(all_dependencies, outfile, indent=4)
         return all_dependencies

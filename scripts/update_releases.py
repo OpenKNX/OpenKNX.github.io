@@ -233,19 +233,17 @@ def generate_oam_data(oam_dependencies: dict[str, dict[str, OamDependencies]], o
 
     oam_data = {}
     for oam, dependencies in oam_dependencies.items():
+        if oam in oam_hardware:
+            devices = oam_hardware.get(oam)
+        else:
+            devices = []
+            logging.warning(f"Missing {oam} in oam_data, present only {oam_data.keys()}")
         oam_data[oam] = OamData(
-            description = oam_details.get(oam, {}).description, # TODO check fallback  or "(keine Kurzbeschreibung)"
+            description = oam_details.get(oam).description if oam in oam_details.keys() else None, # TODO check fallback  or "(keine Kurzbeschreibung)"
             modules = dependencies,
             modules_internal = internal_modules.get(oam, []),
-            devices = [],  # set empty list for OAMs without releases # TODO check cleanup of data-collection
+            devices = devices
         )
-        if oam not in oam_details:
-            logging.warning(f"Missing {oam} in oam_details, present only {oam_details.keys()}")
-    for oam, oam_device_list in oam_hardware.items():
-        if oam in oam_data:
-            oam_data[oam].devices = oam_device_list # TODO define type
-        else:
-            logging.warning(f"Missing {oam} in oam_data, present only {oam_data.keys()}")
 
     logging.debug(f"oam_data {json.dumps(oam_data, indent=4)}")
 

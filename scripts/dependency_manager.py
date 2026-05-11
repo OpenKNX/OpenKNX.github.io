@@ -5,6 +5,7 @@ import json
 import logging
 
 from model.oam_data import OamRepo
+from model.oam_dependencies import OamDependencies
 
 
 class DependencyManager:
@@ -15,7 +16,7 @@ class DependencyManager:
         # TODO check if the exclusion of external libs here is a clean solution
         return url.startswith("https://github.com/OpenKNX/")
 
-    def fetch_dependencies(self, repo: OamRepo):
+    def fetch_dependencies(self, repo: OamRepo) -> dict[str, OamDependencies]:
         dependencies_url = f"https://raw.githubusercontent.com/OpenKNX/{repo.name}/{repo.default_branch}/dependencies.txt"
         response = self.client.get_response(dependencies_url, True)
         if response is None:
@@ -33,28 +34,26 @@ class DependencyManager:
                     # use part of https://github.com/OpenKNX/{dep_name}.git :
                     dep_name = url.split('/')[-1].replace('.git', '')
                     if self._is_openknx_dependency(url) and self._is_module_to_include(dep_name):
-                        dependencies_map[dep_name] = {
-                            "commit": commit,
-                            "branch": branch,
-                            "path": path,
-                            "url": url,
-                            # TODO rename to dep_name
-                            "depName": dep_name
-                        }
+                        dependencies_map[dep_name] = OamDependencies(
+                            commit = commit,
+                            branch = branch,
+                            path = path,
+                            url = url,
+                            depName = dep_name # TODO rename to dep_name
+                        )
                 elif len(parts) == 3:
                     commit, branch, path = parts
                     # use part after 'lib/'
                     dep_name = path.split('/')[-1]
                     # special: detect by name only
                     if self._is_module_to_include(dep_name):
-                        dependencies_map[dep_name] = {
-                            "commit": commit,
-                            "branch": branch,
-                            "path": path,
-                            "url": f"https://github.com/OpenKNX/{dep_name}.git",
-                            # TODO rename to dep_name
-                            "depName": dep_name
-                        }
+                        dependencies_map[dep_name] = OamDependencies(
+                            commit = commit,
+                            branch = branch,
+                            path = path,
+                            url = f"https://github.com/OpenKNX/{dep_name}.git",
+                            depName = dep_name  # TODO rename to dep_name
+                        )
                         logging.warning(f"((>>WORKAROUND<<)) Expect module in {repo.name} by lib-path only: '{dep_name}'")
                     else:
                         logging.warning(f"Unexpected lib in incomplete dependencies.txt of {repo.name}: {dep_name}")
@@ -74,7 +73,7 @@ class DependencyManager:
             return False
         return dep_name.startswith('OFM-') or dep_name.startswith('OGM-') or dep_name == 'knx'
 
-    def fetch_all_dependencies(self, repos_data: list[OamRepo]):
+    def fetch_all_dependencies(self, repos_data: list[OamRepo]) -> dict[str, dict[str, OamDependencies]]:
         all_dependencies = {}
         for repo in repos_data:
             dependencies = self.fetch_dependencies(repo)

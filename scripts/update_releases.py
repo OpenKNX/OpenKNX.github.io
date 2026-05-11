@@ -14,6 +14,7 @@ from devices_helper import DeviceHelper
 from github_client import GitHubClient
 from html_generator import HTMLGenerator
 from model.oam_data import OamData
+from model.oam_dependencies import OamDependencies
 from model.oam_releases import OamReleasesData
 from release_manager import ReleaseManager
 
@@ -211,7 +212,7 @@ def process_releases(releases_data: dict[str, OamReleasesData]) -> tuple[dict[st
     return hardware_mapping, oam_stat
 
 
-def generate_oam_data(oam_dependencies, oam_hardware, oam_details: dict[str, OamReleasesData]) -> dict[str, OamData]:
+def generate_oam_data(oam_dependencies: dict[str, dict[str, OamDependencies]], oam_hardware, oam_details: dict[str, OamReleasesData]) -> dict[str, OamData]:
     logging.debug(f"OAM Hardware {oam_hardware}")
 
     # TODO find better place to define, as long not extracted from OAMs

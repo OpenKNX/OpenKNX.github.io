@@ -3382,7 +3382,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 0
+            "hw_avail_open": 1
         },
         "OAM-ClimateControl": {
             "repo_url": "https://github.com/OpenKNX/OAM-ClimateControl",

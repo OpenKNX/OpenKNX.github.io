@@ -107,10 +107,47 @@ class HTMLGenerator:
                 else:
                     hardware_other_usage_count[hw] += 1
 
+        def ofm_sort_key(item):
+            PRIORITY_OFM_ORDER = [
+                "knx",
+                "OGM-HardwareConfig",
+                "OGM-Common",
+                "OFM-FileTransferModule",
+                "OFM-Network",
+                "OFM-UsbExchange",
+                "OFM-ConfigTransfer",
+                "OFM-LogicModule",
+                "OFM-FunctionBlocks",
+                "OFM-DFA",
+            ]
+            name, count = item
+            priority = len(PRIORITY_OFM_ORDER)
+            if name in PRIORITY_OFM_ORDER:
+                priority = PRIORITY_OFM_ORDER.index(name)
+            return (priority, -count, name)
+
+        def dev_sort_key(item):
+            PRIORITY_DEV_PREFIX_ORDER = [
+                "OpenKNX PiPico",
+                "OpenKNX REG1",
+                "OpenKNX UP1",
+                "OpenKNX REG2",
+                "OpenKNXiao",
+                "OpenKNX Adafruit",
+                "OpenKNX AZDelivery",
+            ]
+            name, count = item
+            priority = len(PRIORITY_DEV_PREFIX_ORDER)
+            for p in PRIORITY_DEV_PREFIX_ORDER:
+                if name.startswith(p):
+                    priority = PRIORITY_DEV_PREFIX_ORDER.index(p)
+                    break;
+            return (priority, -count, name)
+
         # Sort keys by their occurrence count, then alphabetically
-        modules_sorted = sorted(modules_usage_count.items(), key=lambda item: (-item[1], item[0]))
-        devices_sorted = sorted(hardware_usage_count.items(), key=lambda item: (-item[1], item[0]))
-        devices_other_sorted = sorted(hardware_other_usage_count.items(), key=lambda item: (-item[1], item[0]))
+        modules_sorted = sorted(modules_usage_count.items(), key=ofm_sort_key)
+        devices_sorted = sorted(hardware_usage_count.items(), key=dev_sort_key)
+        devices_other_sorted = sorted(hardware_other_usage_count.items(), key=dev_sort_key)
 
         logging.debug(f"Modules sorted: {modules_sorted}")
         logging.debug(f"Devices (OpenKNX) sorted: {devices_sorted}")

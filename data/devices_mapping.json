@@ -77,6 +77,7 @@
     "PiPico_BCU_Connector":                          "OpenKNX PiPico BCU Connector",
     "REG1-Dali":                                     "OpenKNX REG1 Dali Gateway",
     "REG1-LAN-TP-2xDali":                            "OpenKNX REG1 2x DALI LAN Gateway",
+    "REG1-LAN-TP-Dali":                              "OpenKNX REG1 Dali Gateway LAN",
     "REG1-esp32":                                    "OpenKNX REG1 Basismodul LAN+TP Devboard V00.02 (ESP32)",
     "REG1-rp2040-v1":                                "OpenKNX REG1 Dali Gateway",
     "REG1-v0":                                       "OpenKNX REG1 Dali Gateway V0",

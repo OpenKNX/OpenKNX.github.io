@@ -1214,6 +1214,23 @@
                 },
                 {
                     "prerelease": true,
+                    "tag_name": "v0.9.7",
+                    "name": "v0.9.7",
+                    "published_at": "2026-05-13T07:05:57Z",
+                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.9.7",
+                    "body": "**WARNING!**\r\nThis Update is incompatible with v0.9.6 and lower.\r\n\r\nNew in this Release:\r\n- Dali GW is now using the latest Common\r\n- Includes now 5 logic channels\r\n- ConfigTransfer included but **not working**\r\n- fixes for scanning with ETS",
+                    "assets": [
+                        {
+                            "name": "DaliGateway-Beta-0.9.7.zip",
+                            "size": 3244316,
+                            "digest": "sha256:93071f6c1e953a0fae0a87c66dba70fda3db8c08037f88f3064a31bf1010d94c",
+                            "updated_at": "2026-05-13T07:04:37Z",
+                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.9.7/DaliGateway-Beta-0.9.7.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "v0.9.4",
                     "name": "v0.9.4",
                     "published_at": "2025-08-16T11:59:42Z",

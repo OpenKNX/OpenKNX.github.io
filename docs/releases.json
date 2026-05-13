@@ -1180,6 +1180,23 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "v0.10.0",
+                    "name": "v0.10.0",
+                    "published_at": "2026-05-13T12:11:55Z",
+                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.10.0",
+                    "body": "**Warning!**\r\nThis firmware can not be upgraded from 0.9.6 or earlier.\r\n\r\nFixes:\r\n- Scan Dali bus from ETS https://github.com/OpenKNX/OFM-Dali/pull/1 and https://github.com/OpenKNX/dali/pull/2\r\n- Fix knxprod and add identification for evgs https://github.com/OpenKNX/OFM-Dali/pull/2\r\n- Memory leak in dali lib https://github.com/OpenKNX/dali/pull/3",
+                    "assets": [
+                        {
+                            "name": "DaliGateway-Beta-0.10.0.zip",
+                            "size": 3244524,
+                            "digest": "sha256:bde3732a84f3ebe9f7d6f7e159626478d8774f3901e308122ba8ae864fdfc31e",
+                            "updated_at": "2026-05-13T12:11:42Z",
+                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.10.0/DaliGateway-Beta-0.10.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "v0.9.6",
                     "name": "v0.9.6",
                     "published_at": "2026-02-15T10:31:52Z",
@@ -1209,23 +1226,6 @@
                             "digest": "sha256:64f14b647e1987e463b94505e88df5b9aa2ac9c51b0f6bbd88f242d1febe840c",
                             "updated_at": "2025-08-18T18:46:25Z",
                             "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.9.5/GW-REG1-Dali-Release-0.9.5.zip"
-                        }
-                    ]
-                },
-                {
-                    "prerelease": true,
-                    "tag_name": "v0.9.7",
-                    "name": "v0.9.7",
-                    "published_at": "2026-05-13T07:05:57Z",
-                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.9.7",
-                    "body": "**WARNING!**\r\nThis Update is incompatible with v0.9.6 and lower.\r\n\r\nNew in this Release:\r\n- Dali GW is now using the latest Common\r\n- Includes now 5 logic channels\r\n- ConfigTransfer included but **not working**\r\n- fixes for scanning with ETS",
-                    "assets": [
-                        {
-                            "name": "DaliGateway-Beta-0.9.7.zip",
-                            "size": 3244316,
-                            "digest": "sha256:93071f6c1e953a0fae0a87c66dba70fda3db8c08037f88f3064a31bf1010d94c",
-                            "updated_at": "2026-05-13T07:04:37Z",
-                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.9.7/DaliGateway-Beta-0.9.7.zip"
                         }
                     ]
                 },
@@ -1264,7 +1264,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 0
+            "hw_avail_open": 1
         },
         "OAM-SmartHomeBridge": {
             "repo_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge",

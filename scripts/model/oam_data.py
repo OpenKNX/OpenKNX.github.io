@@ -29,3 +29,13 @@ class OamRepo:
                or
                (now - datetime.strptime(self.pushed_at, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)) <= delta
        )
+
+    @classmethod
+    def get_updated_within(cls, oam_repos: list["OamRepo"], delta: timedelta) -> dict[str, str]:
+        now = datetime.now(timezone.utc)
+        return {
+            repo.name: repo.updated_at
+            for repo in oam_repos
+            if repo.changed_within(delta, now)
+        }
+

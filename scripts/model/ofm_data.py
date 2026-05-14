@@ -29,7 +29,7 @@ class OfmData:
             if icon_repo == '.':
                 icon_repo = self.full_name.split('/')[0] # for internal modules the format is OAM/module
             icon_repo_ref = icon_repo_def[1] if len(icon_repo_def)==2 else "v1"
-            self.icon_url = f"https://raw.githubusercontent.com/OpenKNX/{icon_repo}/refs/heads/{icon_repo_ref}/src/Baggages/Icons/{icon_name}.png"
+            self.icon_url = f"https://raw.githubusercontent.com/OpenKNX/{icon_repo}/refs/heads/{icon_repo_ref}/src/Baggages/{'icons' if self.name == 'SonosNFCPlayerModule' else 'Icons'}/{icon_name}.png"
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> "OfmData":

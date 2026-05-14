@@ -2,6 +2,7 @@
 # (C) 2025-2026 Cornelius Köpp; For Usage in OpenKNX-Project only
 
 import logging
+from datetime import date, timedelta
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -291,3 +292,30 @@ class HTMLGenerator:
                                       devices_sorted=devices_sorted,
                                       function_device_to_pathname=PathManager.to_device_pathname,
                                       )
+
+        logging.info(f"New Releases")
+        all_latest:list[tuple[OamData, OamReleasesData]] = []
+        for oam, oam_details in oam_data.items():
+            pre, regular = oam_details.releases.releases_extract_latest()
+            if pre and pre.is_newer(regular):
+                all_latest.append((oam, pre))
+            if regular:
+                all_latest.append((oam, regular))
+        all_latest.sort(key=lambda r: r[1].published_at, reverse = True)
+
+        all_latest_grouped = defaultdict(list)
+        for release in all_latest:
+            all_latest_grouped[release[1].published_at.split('T')[0]].append(release)
+
+        # for day, releases in all_latest_grouped.items():
+        #     logging.info(f"{day}")
+        #     for oam, release in releases:
+        #         logging.info(f"* {oam}: {release.name}")
+
+        self._render_template_to_file('all_latestrelease_template.html',
+                                      self.path_manager.create_path(filename='all_latest_releases.html'),
+                                      #'all_latest_releases.html',
+                                      all_latest_grouped=all_latest_grouped,
+                                      dayNew=(date.today() - timedelta(days=14)).isoformat()
+                                      )
+

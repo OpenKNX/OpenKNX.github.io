@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenKNX Applikationen - Die neusten Releases</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .date_new::after {
+            content: "NEU";
+            background-color: green;
+            color: white;
+            margin-left:1ex;
+            padding:0.2ex 0.5ex;
+            font-size:0.8em;
+            border-radius:0.1ex;
+        }
+    </style>
+    {% if style_filename %}<link rel="stylesheet" href="/css/{{ style_filename }}.css">{% endif %}
+</head>
+<body>
+
+<h1>OpenKNX Applikationen - Die neusten Releases</h1>
+
+{% for day, releases in all_latest_grouped.items() %}
+    <h2 class="{% if day >= dayNew %}date_new{% endif %}">{{ day }}</h2>
+    {% for oam, release in releases %}
+        <details>
+            <summary>
+                {{ oam }}:
+                {% if release.prerelease %} <small>[PRERELEASE]</small> {% endif %}
+                <a href="{{ release.html_url }}">{{ release.name }}{% if release.tag_name not in release.name %} ({{ release.tag_name }}){% endif %}</a>
+            </summary>
+            <p style="white-space:pre-line;">{{ release.body | replace('\r\n', '\n') }}</p>
+        </details>
+        <h3></h3>
+    {% endfor %}
+{% endfor %}
+
+</body>
+</html>
+
+

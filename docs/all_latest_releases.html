@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenKNX Applikationen - Die neusten Releases</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+    
+</head>
+<body>
+
+<h1>OpenKNX Applikationen - Die neusten Releases</h1>
+
+
+    <h2>2026-05-13 </h2>
+    
+        <details>
+            <summary>
+                GW-REG1-Dali:
+                 <small>[PRERELEASE]</small> 
+                <a href="https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.10.0">v0.10.0</a>
+            </summary>
+            <p style="white-space:pre-line;">**Warning!**
+This firmware can not be upgraded from 0.9.6 or earlier.
+
+Fixes:
+- Scan Dali bus from ETS https://github.com/OpenKNX/OFM-Dali/pull/1 and https://github.com/OpenKNX/dali/pull/2
+- Fix knxprod and add identification for evgs https://github.com/OpenKNX/OFM-Dali/pull/2
+- Memory leak in dali lib https://github.com/OpenKNX/dali/pull/3</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-05-01 </h2>
+    
+        <details>
+            <summary>
+                BEM-GardenControl:
+                
+                <a href="https://github.com/OpenKNX/BEM-GardenControl/releases/tag/v1.2.0-release">1.2.0-release (v1.2.0-release)</a>
+            </summary>
+            <p style="white-space:pre-line;">Bugfix:
+
+- Feature:  4-20mA fixed
+
+ETS ist updatefähig (vorher bitte trotzdem ein Backup machen)
+
+Sollte es noch zu Auffälligkeiten kommen, dann lasst es mich wissen.
+KNX-Forum: User = Masifi
+MAIL: info @ smart-mf.de</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-04-17 </h2>
+    
+        <details>
+            <summary>
+                OAM-NeoPixel:
+                 <small>[PRERELEASE]</small> 
+                <a href="https://github.com/OpenKNX/OAM-NeoPixel/releases/tag/0.1.0-Dev">NeoPixel Dev 0.1.0 (0.1.0-Dev)</a>
+            </summary>
+            <p style="white-space:pre-line;">Initial development release. Not for production use.</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-04-05 </h2>
+    
+        <details>
+            <summary>
+                OAM-StateEngine:
+                
+                <a href="https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.8.2">v0.8.2 (Bedingter Start-Zustand + Fixes + OpenKNX Updates)</a>
+            </summary>
+            <p style="white-space:pre-line;">Dieses Bugfix-Release enthält verschiedene Korrekturen für nicht durch Nutzer gemeldete Fehler. Details siehe unten
+
+## Update-Hinweise
+
+### Wichtig für Nutzer von v0.1 (Public Beta "StateEngineDFA16")
+
+> Wie bereits für v0.5, v0.6, v0.7.x und 0.8:
+>> 1. Die Geräteadresse (PA) muss erneut zugewiesen werden, da sich das interne Speicherformat im Stack verändert hat.
+>> 2. KO-Nummern im Bereich 2 bis 19 haben sich verändert.
+>>    Ggf. vorhandene interne Referenzen müssen manuell angepasst werde.
+>>    Zur Übersicht siehe Tabelle [Änderung von zentralen Kommunikationsobjekten](#änderung-von-zentralen-kommunikationsobjekten) unten.
+
+### Für Nutzer von **OpenKNX REG1-Base und Version v0.6 oder v0.7.x**
+ 
+> Die Unterscheidung in verschiedene Firmware-Versionen entfällt, 
+> da die Zeit-Status-Anzeige nun per ETS konfiguriert werden kann.
+> Beide Verhaltensweisen können jetzt über die einheitliche Firmware `OpenKNX-REG1-Base` dargestellt werden.
+> Ausgehend von der alten Firmware wird folgendes Vorgehen zur Migration empfohlen:
+> * `firmware-OpenKNX-REG1-Base___no-time-led` - hier ist *keine* gesonderte Konfiguration erforderlich
+> * `firmware-OpenKNX-REG1-Base___time-led3` - Auswahl der Funktion **Zeitstatus** in der ETS-Applikation unter OpenKNX / Info LEDs / LED "Info {1,2,3}". 
+
+## Änderungen
+
+* Fix-Update OFM-**DFA** auf 0.8.0 (von 0.8.2; [Changes](https://github.com/OpenKNX/OFM-DFA/blob/v0.8.2/CHANGELOG.md))
+  * Fixes Eingänge
+    * Fix: *Bestehendes KO* nutzte falsche KO-Nummer
+    * Fix: *Eingang Symbol T* funktionierte nicht (oder fehlerhaft) über KO
+  * Fixes: Rekonstruktionsfunktion
+    * Fix: Es hätte ein falscher Rest-Timeout rekonstuiert werden können, nach Shutdown fast zeitgleich zum Ende
+    * Fix: Verhalten bei zuvor inaktiven Kanälen in Verbindung mit Pausieren 
+
+## Für Entwickler
+
+* **Wichtig:** Update auf OpenKNXproducer 4.0.1 erforderlich
+
+
+
+</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-03-30 </h2>
+    
+        <details>
+            <summary>
+                OAM-RaumController:
+                
+                <a href="https://github.com/OpenKNX/OAM-RaumController/releases/tag/v5.4.3">v5.4.3</a>
+            </summary>
+            <p style="white-space:pre-line;">So, hier ist die nächste Version von meinem RaumController.
+
+Diesmal gibt es viele Detailverbesserungen, interne Performanceoptimierungen und wenige neue Features. Erstmal die neuen Features:
+- Es gibt ein neues Status-LED Modul. Damit kann man bei Geräten, die Status LEDs haben, diese über KO steuern. 
+- Es gibt die Möglichkeit, das default-Verhalten der Geräte-LEDs über das Logikmodul zu beeinflussen
+- Für Geräte mit einem Buzzer oder einem Vibrationsmotor (haptisches Feedback) gibt es ein Modul, mit dem man diese auch über KO steuern kann.
+
+Das bedeutet aber auch, dass all diejenigen, die mit der Sensormodul-Hardware von SmartMF über das Logikmodul den Buzzer bzw. die RGB-Led gesteuert haben, nach einem Update den Buzzer bzw. die RGB-LED neu parametrisieren müssen.
+
+Die ETS-Unterstützung ist wieder mal besser geworden! Die Programmierzeiten sind bei vollständigem Programmieren um ca, 20%, bei Partieller Programmierung um ca. 40% besser geworden. 
+Ab der ETS 6.3 wird jetzt wird in JavaScript passend zur aktuellen APDU mit dem Gerät kommuniziert. Bei älteren ETS immer mit der APDU 15. Davon profitieren erstmal das Logikmodul und das Präsenzmodul. So ist jetzt das Prüfen von Benutzerformeln (Logik) oder das Durchführen von Stichproben (HF-PM) auch mit älteren IP-Schnittstellen oder Linienkopplern oder gar mit USB-Schnittstellen möglich.
+
+Die ganzen Detailverbesserungen innerhalb der Module können in deren Applikationsbeschreibungen oder deren Release Infos gelesen werden, das würde den Rahmen hier sprengen, alle Änderungen aufzuführen. 
+Ich wurde gebeten, explizit auf die Release Info vom [ShutterController](https://github.com/OpenKNX/OFM-ShutterControllerModule/blob/v1/ReleaseNotes.md) und von den [FunctionBlocks](https://github.com/[OpenKNX/OFM-FunctionBlocks](https://github.com/OpenKNX/OFM-FunctionBlocks?tab=readme-ov-file#release-notes)?tab=readme-ov-file#release-notes) hinzuweisen.
+
+Nach dem Update in der ETS wird die Liste der ausgeblendeten Module zurückgesetzt und die ausgeblendeten Module erscheinen wieder. Sie müssen also manuell erneut ausgeblendet werden. 
+
+</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-03-25 </h2>
+    
+        <details>
+            <summary>
+                OAM-WeatherWN90LP:
+                
+                <a href="https://github.com/OpenKNX/OAM-WeatherWN90LP/releases/tag/v0.4.0">v0.4.0-Beta</a>
+            </summary>
+            <p style="white-space:pre-line;">- Fix 100fach zu hohe Regenleistung
+- Fix Flash Daten Version nicht geändert, alte ungültige Daten eingelesen
+- Fix ComObject Größe und Typ</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-03-20 </h2>
+    
+        <details>
+            <summary>
+                OAM-Homematic:
+                 <small>[PRERELEASE]</small> 
+                <a href="https://github.com/OpenKNX/OAM-Homematic/releases/tag/v0.3.0-ALPHA">v0.3.0 First Public Alpha (v0.3.0-ALPHA)</a>
+            </summary>
+            <p style="white-space:pre-line;">## Erstes öffentliches ALPHA-Release (Experimentell)
+
+Das Gateway ermöglicht einen rudimentären lesenden und schreibenden Zugriff auf ausgewählte (und einfache benutzerdefinierte) Homematic-Geräte mit Funkschnittstelle und,
+über eine Zentrale mit XML-RPC-Schnittstelle wie z.B. der Homematic CCU2.
+Weitere Module sind zur funktionalen Ergänzung erhalten, z.B. zur Aggregation von Ist- und Status-Werten.
+
+
+> ### Achtung ALPHA-STATUS!
+>
+> **Ein produktiver Einsatz wird zum aktuellen Zeitpunkt *nicht* empfohlen**!
+>
+> Der vorliegende Stand dient zur technischen Evaluation.
+> Mehrere der enthaltenen Module mit Netzwerkzugriff nutzen blockierende HTTP(S)-Requests
+> und können bzw. werden durch die auftretenden Verzögerungen die Bus-Kommunikation 
+> und die Verarbeitung in anderen Modulen stören.
+> Mögliche Folgen sind eine fehlende Reaktion auf Telegramme, fehlendes Update von KOs, unerwartetes Zeitverhalten, 
+> sowie ggf. weitere nicht aufgeführte Effekte.
+> Die Steuerung und Wertabruf der Homematic-Thermostate sind grundsätzlich möglich, 
+> Logikkanäle und Funktionsblöcke sollten jedoch ausschließlich ohne externe Abhängigkeiten
+> und Zeitabhängigem Verhalten eingesetzt werden.     
+>
+> Inkompatible Änderungen können ohne Vorankündigung erfolgen
+
+
+### Funktionen und Module
+ 
+*  **Konfigurationstransfer:** Übertragung von Einstellungen
+* **HomeMatic:** Anbindung von Homematic-Geräten über eine CCU
+* **Internet Wetter:** Bereitstellung von Wetterdaten aus dem Internet
+* **Logiken:** Flexible Universallogiken und Zeitschaltuhren mit Feiertagsberechnung
+* **Funktionsblöcke:** Vordefinierte Funktionsbausteine, u.A. zur Aggregation mehrerer Werte
+* **Filetransfer** (***unsichtbar in ETS***): Firmware-Updates über KNX
+
+
+### Hardware-Unterstützung
+
+| Hardware (Architektur)                                                        | Status     | Anmerkung |
+|-------------------------------------------------------------------------------|------------|-----------|
+| [OpenKNX Reg1-ETH](https://github.com/OpenKNX/OpenKNX/wiki/REG1-Eth) (RP2040) | Alpha      |           |
+| OpenKNX-REG1-LAN-TP-Base (ESP32)                                              | ungetestet |           |</p>
+        </details>
+        <h3></h3>
+    
+        <details>
+            <summary>
+                OAM-BusPowerSupply:
+                
+                <a href="https://github.com/OpenKNX/OAM-BusPowerSupply/releases/tag/0.1">Release 0.1</a>
+            </summary>
+            <p style="white-space:pre-line;">Initiales Firmware-Release.
+
+_Known Issue:_
+KO zur Busauslastung gibt unrealistische Werte aus.</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-03-16 </h2>
+    
+        <details>
+            <summary>
+                OAM-ModbusGateway:
+                
+                <a href="https://github.com/OpenKNX/OAM-ModbusGateway/releases/tag/1.5-release">1.5-release BETA</a>
+            </summary>
+            <p style="white-space:pre-line;">**Release V1.5 – BETA**
+
+**New**
+- Added hardware support for Smart-MF_Modbus_RTU_1TE
+- Added hardware support for Smart-MF_Modbus_RTU_Aussen
+- Updated all additional modules to the latest version
+- KNX → Modbus: new implementation
+
+**Testing Status**
+
+- Not all scenarios could be tested
+- Tested datapoint types: DPT9, DPT14
+- Basic KNX → Modbus write tests have been performed
+- Further testing was not possible due to missing hardware.
+
+**Compatibility**
+
+- Smart-MF_Modbus_RTU_2TE remains fully supported.
+
+**Feedback**
+
+- As this is a beta release, bugs may still occur.
+- If you encounter any issues, please report them.</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-03-15 </h2>
+    
+        <details>
+            <summary>
+                OAM-BinaryInput:
+                
+                <a href="https://github.com/OpenKNX/OAM-BinaryInput/releases/tag/0.3">Release 0.3</a>
+            </summary>
+            <p style="white-space:pre-line;">Folgenden Änderungen in diesem Release:
+- FIX: Alle IOs werden nun auch bereits korrekt initialisiert, auch wenn noch nicht konfiguriert.
+- CHANGE: Alle abhängigen OpenKNX-Module auf neueste Version aktualisiert.</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-03-14 </h2>
+    
+        <details>
+            <summary>
+                OAM-Aircondition:
+                
+                <a href="https://github.com/OpenKNX/OAM-Aircondition/releases/tag/0.8.0">Beta 0.8.0</a>
+            </summary>
+            <p style="white-space:pre-line;">- Spannungsüberwachung des Klimagerätes
+- Umbenennung der Gruppenobjekte entsprechend dem OpenKNX Standard
+- Aktualisierung aller Module
+- Daikin Support</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-03-11 </h2>
+    
+        <details>
+            <summary>
+                OAM-SonosNFCPlayer:
+                
+                <a href="https://github.com/OpenKNX/OAM-SonosNFCPlayer/releases/tag/0.4.0">Release 0.4.0</a>
+            </summary>
+            <p style="white-space:pre-line;">- New versions of common, knx, logic, function blocks, file transfer
+- NFC-Tag cache</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-03-05 </h2>
+    
+        <details>
+            <summary>
+                OAM-IP-Router:
+                
+                <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.7.0"> (0.7.0)</a>
+            </summary>
+            <p style="white-space:pre-line;">Changes compared to 0.6.1:
+
+- fix bug that disabled the answer of ConfigReqs (correct APDU handling, faster tunnel creation)
+- Loading Application after firmware update no longer crashes when an old application is on the device
+- APDU Property PID_MAX_APDU_LENGTH_ROUTER from 220 to 254
+
+functional identical to 7.5.0-Dev</p>
+        </details>
+        <h3></h3>
+    
+        <details>
+            <summary>
+                OAM-TouchRound:
+                
+                <a href="https://github.com/OpenKNX/OAM-TouchRound/releases/tag/1.4.2">Release 1.4.2</a>
+            </summary>
+            <p style="white-space:pre-line;">- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an
+- Die Namen der Gruppenobjekte wurden überarbeitet
+- Die Funktion der Status LED's ist in der ETS konfigurierbar
+
+**Geräte**
+- Fix: fehlendes Bild beim Schloss wenn eine Sperr-Aktion läuft und ein benutzerdefiniertes Bild aktiv ist.
+- Fix: Anzeige "Text" zeigt den Text aus dem Gruppenobjekt nicht mehr an
+
+**Touch Round**
+- 0.4 Benutzerdefinierte Prozentwerte für Dimmer
+- 0.4 Gerätetype Schloss hinzugefügt
+
+**Function Blocks:**
+- 0.9 Neuer Functionsblock "Text Format"
+- 0.9 Startverhalten bei Wertüberwachung konfigurierbar
+- 0.8 Fix: Bennennung Eingang 9 bei FB-"Anzahl" nicht möglich
+- 0.7 Count-Down: Konfigurationsparameter für maximale Laufzeit bei Erhöhen durch KO
+- 0.7 Count-Down: Text Parameter für Stopp
+- 0.6.2 Breaking Change: Fix: Ko Verringern/Erhöhen für Count-Down: 0...Verringern, 1...Erhöhen
+- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause
+
+**Logik:**
+WICHTIG: Die frühere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Gerätes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bezüglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).
+
+- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen
+- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskanäle legen und so LEDs steuern
+- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine Änderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-03-02 </h2>
+    
+        <details>
+            <summary>
+                OAM-ShutterController:
+                
+                <a href="https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.5.1">Release 1.5.1</a>
+            </summary>
+            <p style="white-space:pre-line;">- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an
+- Die Namen der Gruppenobjekte wurden überarbeitet
+- Die Funktion der Status LED's ist in der ETS konfigurierbar
+
+**Function Blocks:**
+- 0.9 Neuer Functionsblock "Text Format"
+- 0.9 Startverhalten bei Wertüberwachung konfigurierbar
+- 0.8 Fix: Bennennung Eingang 9 bei FB-"Anzahl" nicht möglich
+- 0.7 Count-Down: Konfigurationsparameter für maximale Laufzeit bei Erhöhen durch KO
+- 0.7 Count-Down: Text Parameter für Stopp
+- 0.6.2 Breaking Change: Fix: Ko Verringern/Erhöhen für Count-Down: 0...Verringern, 1...Erhöhen
+- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause
+
+**Logik:**
+WICHTIG: Die frühere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Gerätes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bezüglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).
+
+- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen
+- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskanäle legen und so LEDs steuern
+- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine Änderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.</p>
+        </details>
+        <h3></h3>
+    
+        <details>
+            <summary>
+                OAM-SmartHomeBridge:
+                
+                <a href="https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/2.1.1">Release 2.1.1</a>
+            </summary>
+            <p style="white-space:pre-line;">- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an
+- Die Namen der Gruppenobjekte wurden überarbeitet
+- Die Funktion der Status LED's ist in der ETS konfigurierbar
+
+**Smart Home Bridge:**
+- 0.4 Benutzerdefinierte Prozentwerte für Dimmer
+- 0.4 Gerätetype Schloss hinzugefügt
+- 0.3.1 Fix: Absturz bei deaktivierten Geräten
+
+**Function Blocks:**
+- 0.9 Neuer Functionsblock "Text Format"
+- 0.9 Startverhalten bei Wertüberwachung konfigurierbar
+- 0.8 Fix: Bennennung Eingang 9 bei FB-"Anzahl" nicht möglich
+- 0.7 Count-Down: Konfigurationsparameter für maximale Laufzeit bei Erhöhen durch KO
+- 0.7 Count-Down: Text Parameter für Stopp
+- 0.6.2 Breaking Change: Fix: Ko Verringern/Erhöhen für Count-Down: 0...Verringern, 1...Erhöhen
+- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause
+
+**Logik:**
+WICHTIG: Die frühere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Gerätes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bezüglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).
+
+- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen
+- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskanäle legen und so LEDs steuern
+- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine Änderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.</p>
+        </details>
+        <h3></h3>
+    
+        <details>
+            <summary>
+                OAM-Sonos:
+                
+                <a href="https://github.com/OpenKNX/OAM-Sonos/releases/tag/0.7.1"> (0.7.1)</a>
+            </summary>
+            <p style="white-space:pre-line;">Diese Version ist bisher mit 4 Sonos Lautsprecher getestet.
+Bitte um Feedback wie die SW mit mehr Lautsprecher funktioniert.
+
+- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an
+- Die Namen der Gruppenobjekte wurden überarbeitet
+- Die Funktion der Status LED's ist in der ETS konfigurierbar
+
+**Function Blocks:**
+- 0.9 Neuer Functionsblock "Text Format"
+- 0.9 Startverhalten bei Wertüberwachung konfigurierbar
+- 0.8 Fix: Bennennung Eingang 9 bei FB-"Anzahl" nicht möglich
+- 0.7 Count-Down: Konfigurationsparameter für maximale Laufzeit bei Erhöhen durch KO
+- 0.7 Count-Down: Text Parameter für Stopp
+- 0.6.2 Breaking Change: Fix: Ko Verringern/Erhöhen für Count-Down: 0...Verringern, 1...Erhöhen
+- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause
+
+**Logik:**
+WICHTIG: Die frühere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Gerätes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bezüglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).
+
+- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen
+- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskanäle legen und so LEDs steuern
+- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine Änderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.</p>
+        </details>
+        <h3></h3>
+    
+        <details>
+            <summary>
+                OAM-InternetServices:
+                
+                <a href="https://github.com/OpenKNX/OAM-InternetServices/releases/tag/1.2.1">Release 1.2.1</a>
+            </summary>
+            <p style="white-space:pre-line;">- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an
+- Die Namen der Gruppenobjekte wurden überarbeitet
+- Die Funktion der Status LED's ist in der ETS konfigurierbar
+
+**Function Blocks:**
+- 0.9 Neuer Functionsblock "Text Format"
+- 0.9 Startverhalten bei Wertüberwachung konfigurierbar
+- 0.8 Fix: Bennennung Eingang 9 bei FB-"Anzahl" nicht möglich
+- 0.7 Count-Down: Konfigurationsparameter für maximale Laufzeit bei Erhöhen durch KO
+- 0.7 Count-Down: Text Parameter für Stopp
+- 0.6.2 Breaking Change: Fix: Ko Verringern/Erhöhen für Count-Down: 0...Verringern, 1...Erhöhen
+- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause
+
+**Logik:**
+WICHTIG: Die frühere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Gerätes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bezüglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).
+
+- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen
+- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskanäle legen und so LEDs steuern
+- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine Änderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-02-27 </h2>
+    
+        <details>
+            <summary>
+                OAM-UP1-8xSensor:
+                
+                <a href="https://github.com/OpenKNX/OAM-UP1-8xSensor/releases/tag/v1.0.0">FW / ETS Releae v1.0.0</a>
+            </summary>
+            <p style="white-space:pre-line;">- update to latest OpenKNX Common, Logic, Filetransfer, Configtransfer
+- full support for OneWire DS18B20 sensors (up to 16)</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-02-23 </h2>
+    
+        <details>
+            <summary>
+                OAM-Dummy:
+                
+                <a href="https://github.com/OpenKNX/OAM-Dummy/releases/tag/1.1-Release">1.1-Release</a>
+            </summary>
+            <p style="white-space:pre-line;">Keine Funktionale Änderung der Applikation.
+
+Nur das Auslieferungspakte hat sich geändert, da das bisherige Dummy mit dem neusten OpenKNXproducer nicht mehr gebaut werden konnte.
+
+</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-02-03 </h2>
+    
+        <details>
+            <summary>
+                OAM-UP1-Taster:
+                
+                <a href="https://github.com/OpenKNX/OAM-UP1-Taster/releases/tag/v0.1.0">v0.1.0</a>
+            </summary>
+            <p style="white-space:pre-line;">Initial Beta Release v0.1.0
+
+Identical to v1.7.0-Dev (Developer Release)</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2026-01-25 </h2>
+    
+        <details>
+            <summary>
+                OAM-Nuki:
+                
+                <a href="https://github.com/OpenKNX/OAM-Nuki/releases/tag/0.9.0">0.9.0 Beta</a>
+            </summary>
+            <p style="white-space:pre-line;">- Release based on Common v1dev
+- Only supported HW: "OpenKNXiao V1 Mini ESP32S3"
+- Adafruit Feather V2 not linkable (to less interrupt memory)
+- Breaking Change: Changed behavior of Lock/Unlock. Use Unlock=1 , Lock = 0 telegrams</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2025-12-10 </h2>
+    
+        <details>
+            <summary>
+                OAM-LedDimmer-AB:
+                 <small>[PRERELEASE]</small> 
+                <a href="https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.12.1">Pre-Release 0.12.1</a>
+            </summary>
+            <p style="white-space:pre-line;">Folgenden Änderungen in diesem Pre-Release:
+
+- FIX: KO-Ausgabe der gemessenen Netzteilspannung korrigiert.
+
+_Hinweis:_
+Bei einem Update von 0.12 auf 0.12.1 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich. Alle Einstellungen bleiben erhalten.</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2025-10-24 </h2>
+    
+        <details>
+            <summary>
+                SOM-UP:
+                
+                <a href="https://github.com/OpenKNX/SOM-UP/releases/tag/1.2.3">Release Version 1.2.3</a>
+            </summary>
+            <p style="white-space:pre-line;">Es wurde auf die neust Common 1.5.1 und die neue ESP8266Audio geupdated.
+
+Relevante Änderungen aus den Libraries
+
+* Datenübertragen per KNX deutlich stabilder
+* Verbessertes Abspielen von MP3
+
+Außerdem wurden die Hilfe etwas überarbeitet. </p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2025-09-20 </h2>
+    
+        <details>
+            <summary>
+                OAM-AccessControl:
+                
+                <a href="https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.10.2">0.10.2</a>
+            </summary>
+            <p style="white-space:pre-line;">Folgenden Änderungen in diesem Release:
+
+- Unterstützung für UP1 8xSensor (UP1-SEN-8x / SEN-UP1-8xTH)
+
+Hinweis:
+Bei einem Update von 0.10.x auf 0.10.2 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich.</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2025-08-23 </h2>
+    
+        <details>
+            <summary>
+                OAM-REG1-Schaltaktor-4x:
+                 <small>[PRERELEASE]</small> 
+                <a href="https://github.com/OpenKNX/OAM-REG1-Schaltaktor-4x/releases/tag/0.2.0-Beta"> (0.2.0-Beta)</a>
+            </summary>
+            <p style="white-space:pre-line;">Erstes Beta Release - ETS-Applikation updatebar in der ETS auf spätere Release Versionen.</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2025-07-04 </h2>
+    
+        <details>
+            <summary>
+                OAM-Meter:
+                
+                <a href="https://github.com/OpenKNX/OAM-Meter/releases/tag/0.6.0">0.6 Beta (0.6.0)</a>
+            </summary>
+            <p style="white-space:pre-line;">**Achtung: Aufgrund des neuen KNX-Stack kann es sein, dass die PA neu programmiert werden muss!**
+
+Diverse Updates der verwendeten Libraries:
+
+* OGM-Common 1.4.0
+* OFM-Network 0.5
+* OGM-Logkmodul 3.7.0
+* OFM-ConfigTransfer 0.4.0
+
+Außerdem wurde der KNXIP-Support integriert, so dass zukünfitge Geräte auch über IP statt TP angebunden werden können.</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2025-04-29 </h2>
+    
+        <details>
+            <summary>
+                OAM-InfraredGateway:
+                
+                <a href="https://github.com/OpenKNX/OAM-InfraredGateway/releases/tag/0.3.2">0.3.2 Beta</a>
+            </summary>
+            <p style="white-space:pre-line;">**Full Changelog**: https://github.com/OpenKNX/OAM-InfraredGateway/compare/0.2.1...0.3.2</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2025-04-17 </h2>
+    
+        <details>
+            <summary>
+                OAM-EnoceanGateway_V2:
+                
+                <a href="https://github.com/OpenKNX/OAM-EnoceanGateway_V2/releases/tag/0.1-release">0.1-release</a>
+            </summary>
+            <p style="white-space:pre-line;">first release for the RP2040 Hardware version
+
+only take over from the SAMD HW-version with no changes </p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2025-03-10 </h2>
+    
+        <details>
+            <summary>
+                OAM-SensorModule:
+                
+                <a href="https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v4.2.5-Release">v4.2.5-Release</a>
+            </summary>
+            <p style="white-space:pre-line;">Änderungen seit dem letzten Release:
+
+* FIX: Die Ausgabe vom Luftdruck wurde fälschlicherweise in hPa ausgegeben, obwohl der DPT Pa ist. Dies ist nun korrigiert.
+* NEU: Die Firmware unterstützt jetzt auch Analogeingänge, verfügbar im neusten Sensormodul von Smart-MF
+* FIX: Der BMP280 kann nur Temperatur und Luftdruck messen, nicht wie initial angenommen, Temperatur und Luftfeuchte. Das ist jetzt korrigiert
+* FIX: Durch einen Konfigurationsfehler beim erstellen der Firmware war das Präsenzmodul (VPM) in letzten Release auf folgenden Geräten nicht verfügbar, das ist jetzt korrigiert:
+  * REG1-Base-V1
+  * REG1-Base-V0
+  * PiPico-Connector
+* NEU: Die Firmware ist jetzt auch für den UP1-PM-HF (UP1-Präsenzmelder-Plus) verfügbar
+* FIX: Externe Werte, für gewichtete Auswertung: Hier war nur 1 Wert möglich, wenn man 2 Werte ausgewählt hat, wurde fälschlicherweise ein KO deaktiviert.
+
+* Das enthaltene Präsenzmodul hat jetzt die Version 3.6.4
+  * FIX: Beim Wechsel der Tagesphase während einer Sperre wird jetzt nicht mehr geschaltet
+  * FIX: Wenn ein PM-Kanal später startet und vorher die Tagesphase an das entsprechende KO gesendet wurde, wird jetzt diese Tagesphase als Startphase genommen (wurde bisher ignoriert)
+
+* Die enthaltene Logik hat jetzt die Version 3.5.3
+  * FIX: Hysterese/Differenzhysterese mit invertiertem Eingang führte beim Schreiben von Werten im Hysteresebereich zu Toggeln des Ausgangs.
+
+Auch dieses Release ist noch OHNE 1-Wire Implementierung. 
+
+</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2025-02-11 </h2>
+    
+        <details>
+            <summary>
+                OAM-SwitchActuator:
+                
+                <a href="https://github.com/OpenKNX/OAM-SwitchActuator/releases/tag/0.2">Release 0.2</a>
+            </summary>
+            <p style="white-space:pre-line;">Folgenden Änderungen in diesem Release:
+
+- NEU: Szenensteuerung hinzugefügt.
+- NEU: Dokumentation und Kontexthilfe in der ETS hinzugefügt.
+- CHANGE: Logikmodul auf Version 3.5 aktualisiert.
+- FIX: Relais-Schalteingang wird nun auch im noch nicht parametrisierten Zustand korrekt gesetzt.</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2024-12-12 </h2>
+    
+        <details>
+            <summary>
+                OAM-PresenceModule:
+                
+                <a href="https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/3.6.2-Release">3.6.2-Release</a>
+            </summary>
+            <p style="white-space:pre-line;">Hier ein neues Release des Präsenzmoduls. Neuerungen sind primär beim neuen HF-Sensor HLK-LD2420. Das Release 3.6 löst direkt das 3.5 ab. Release 3.5 sollte nicht mehr verwendet werden und durch 3.6 aktualisiert werden, da 3.5 (auch das leider fehlerhafte Logikmodul 3.4 enthält). Des weiteren wurde die Robustheit erhöht beim Update über den KNX-Bus und das Skript zur Erzeugung der knxpord bei Verwendung der ETS 6.3 wurde aktualisiert.
+
+>Wichtig: Falls nur die ETS 6.3.0 installiert ist, muss das Update mit der OpenKNX-Toolbox 1.0.3 erfolgen. Bei älteren Toolbox-Versionen kommt die Meldung "knxprod konnte nicht erstellt werden".
+
+>Anmerkung: Für alle, die neu anfangen wollen und darüber Nachdenken, nur das Logikmodul oder nur das Präsenzmodul zu installieren, ist von mir die Empfehlung, das Sensormodul zu nehmen. Die Teile, die nicht gebraucht werden, muss man nicht nutzen und sie belasten auch das System nicht. Und langfristig besteht der Plan, dass das Präsenzmodul komplett im Sensormodul aufgeht. Und dann erspart man sich den Umzug von der einen auf die andere Applikation.
+
+07.12.2024: Firmware 3.6.2, Applikation 3.6
+
+* FIX: Fix für das Logikmodul mit Auswirkungen auf das Präsenzmodul (Das neue Sendeverhalten am Ausgang und der Wiederholungsfilter haben sich leider gegenseitig beeinflusst und zu unerwarteten Ergebnissen geführt, die Logiken kaputt machen konnten. Deswegen ein Hotfix)
+* NEU: Firmware-Update über den KNX-Bus lastet den Bus weniger aus (weniger Telegrammwiederholungen)
+* NEU: Die Erzeugung der ETS-Produktdatenbank (knxprod) funktioniert jetzt auch mit der ETS 6.3
+
+* Die enthaltene Logik hat jetzt die Version 3.5
+
+01.12.2024: Firmware 3.5, Applikation 3.5
+
+* NEU: Für den HLK2420 wurde statt der Kalibrierung eine komplett neue Einstellungsseite entwickelt
+* NEU: Diagnose für den HLK2420 berücksichtigt die neuen Einstellungsmöglichkeiten
+* FIX: Der RealPresence hat bei 2 Usern nicht funktioniert, weil sie eine andere Hardware-Variante hatten, dies ist jetzt korrigiert.
+* FIX: Wenn nur PIR aktiviert war, wurde dessen Stromversorgung nicht eingeschaltet.
+* NEU: Große Doku-Erweiterung für die Einstellungsmöglichkeiten vom HLK-Sensor
+* NEU: Alle Firmware-Varianten haben ein neues Skript zum KNX-Firmware-Update bekommen, das einen Upload über den KNX-Bus erlaubt.
+
+* Die enthaltene Logik hat jetzt die Version 3.4
+* Der enthaltene Konfigurations-Transfer hat jetzt die Version 0.2
+* Das enthaltene Taster-Modul hat jetzt die Version 0.5
+
+Es gibt noch keine IP-Version, diese wird nachgereicht. </p>
+        </details>
+        <h3></h3>
+    
+        <details>
+            <summary>
+                OAM-LogicModule:
+                
+                <a href="https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.5.2-Release">3.5.2-Release</a>
+            </summary>
+            <p style="white-space:pre-line;">Das neuste Logikmodul mit vielen neuen Funktionen und einigen kleinen Bugfixes. Das Release 3.5 löst direkt das 3.4 ab. Release 3.4 sollte nicht mehr verwendet werden und durch 3.5 aktualisiert werden, da 3.4 einen Fehler beim Wiederholfilter in der Ausgangspipeline hat, der zu unerwarteten AUS-Wiederholungen führen kann. Des weiteren wurde die Robustheit erhöht beim Update über den KNX-Bus und das Skript zur Erzeugung der knxpord bei Verwendung der ETS 6.3 wurde aktualisiert.
+
+>Wichtig: Falls nur die ETS 6.3.0 installiert ist, muss das Update mit der OpenKNX-Toolbox 1.0.3 erfolgen. Bei älteren Toolbox-Versionen kommt die Meldung "knxprod konnte nicht erstellt werden".
+
+>Anmerkung: Für alle, die neu anfangen wollen und darüber Nachdenken, nur das Logikmodul oder nur das Präsenzmodul zu installieren, ist von mir die Empfehlung, das Sensormodul zu nehmen. Die Teile, die nicht gebraucht werden, muss man nicht nutzen und sie belasten auch das System nicht. Und langfristig besteht der Plan, dass das Präsenzmodul komplett im Sensormodul aufgeht. Und dann erspart man sich den Umzug von der einen auf die andere Applikation.
+
+07.12.2024: Firmware 3.5.2, Applikation 3.5
+
+* FIX: Das neue Sendeverhalten am Ausgang und der Wiederholungsfilter haben sich leider gegenseitig beeinflusst und zu unerwarteten Ergebnissen geführt, die Logiken kaputt machen konnten. Deswegen ein Hotfix. 
+* NEU: Firmware-Update über den KNX-Bus lastet den Bus weniger aus (weniger Telegrammwiederholungen)
+* NEU: Die Erzeugung der ETS-Produktdatenbank (knxprod) funktioniert jetzt auch mit der ETS 6.3
+
+01.12.2024: Firmware 3.4, Applikation 3.4
+
+* NEU: Standardfunktion A = ABS(E1) (Betrag von E1) und A = ABS(E2) (Betrag von E2)
+* NEU: Standardfunktion A = -E1 (Negiere E1) und A = -E2 (Negiere E2)
+* NEU: Sendeverhalten für den Ausgang: Wertwiederholungen können jetzt unterdrückt werden
+* NEU: Alle internen KO-Verknüpfungen können auch relativ zum eigenen KO angegeben werden
+* NEU: Alle internen Eingänge können auch relativ zum eigenen Kanal angegeben werden
+* NEU: Die Feiertage Totensonntag und Schweizer Nationalfeiertag sind neu
+* NEU: Zeitschaltuhren können jetzt neben einem binären Wert auch einen Zahlenwert (1 Byte) enthalten, der als "Wert vom Eingang 1" im Ausgangskonverter genutzt werden kann 
+* NEU: Zeitschaltuhren können jetzt über mehrere Logikkanäle verbunden werden (sowohl relativ wie auch absolut). Sie werden dann wie eine Zeitschaltuhr behandelt. Das ist vor allem wichtig, wenn man bei Neustart Schaltzeiten nachholen will, erlaubt aber auch mehr als 8 Schaltzeiten pro Zeitschaltuhr 
+* NEU: Jahres- und Tageszeitschaltuhren können verbunden werden und somit wie eine Zeitschaltuhr fungieren. Ermöglicht eine Kombination von Tages- und Jahresschaltungen in einer Zeitschaltuhr.
+* FIX: Zeitschaltuhren mit "Feiertage wie Sonntage behandeln" haben (leider) nicht immer zu den Sonntags-Schaltzeiten geschaltet.
+* FIX: Zeitschaltuhren (und verbundene Zeitschaltuhren) werden jetzt korrekt in der "Übersicht interner Verknüpfungen" angezeigt. 
+* FIX: Bei Zeitschaltuhren, die im Urlaub schalten sollen, kann man nicht mehr die Einstellung "Schaltzeiten nachholen" vornehmen. Das Feld was schon immer funktionslos, da noch nie Urlaubs-Schaltzeiten nachgeholt werden konnten.
+* NEU: Interne Eingänge können jetzt auch als Trigger definiert werden 
+* NEU: Alle Firmware-Varianten haben ein neues Skript zum KNX-Firmware-Update bekommen, das einen Upload über den KNX-Bus erlaubt.
+
+Wie immer ist das Logikmodul Update-Fähig. Die IP-Variante wird nachgereicht, diese ist noch nicht fertiggestellt.
+</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2024-09-06 </h2>
+    
+        <details>
+            <summary>
+                OAM-BinaryClock:
+                
+                <a href="https://github.com/OpenKNX/OAM-BinaryClock/releases/tag/0.1">Release 0.1</a>
+            </summary>
+            <p style="white-space:pre-line;">Initiales Firmware-Release.</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2023-08-31 </h2>
+    
+        <details>
+            <summary>
+                OAM-EnoceanGateway:
+                
+                <a href="https://github.com/OpenKNX/OAM-EnoceanGateway/releases/tag/1.9-release">1.9-release</a>
+            </summary>
+            <p style="white-space:pre-line;">* improved robustness of underlying knx-stack
+* updated to LogicModule v1.5.1
+* FIX: DPT9 was sending a 0 for all numbers of the form 2^n/100, n>10 (i.e. 20,48; 40,96; 163,84; ...)
+
+**you should upgrade, if you are sending DPT9 values on the knx bus**
+</p>
+        </details>
+        <h3></h3>
+    
+
+    <h2>2023-02-06 </h2>
+    
+        <details>
+            <summary>
+                OAM-VirtualButton:
+                 <small>[PRERELEASE]</small> 
+                <a href="https://github.com/OpenKNX/OAM-VirtualButton/releases/tag/0.2.0">Beta 0.2.0</a>
+            </summary>
+            <p style="white-space:pre-line;">Small optmations on knxprod
+Fixes processInputKo for channels > 1</p>
+        </details>
+        <h3></h3>
+    
+
+
+</body>
+</html>
+

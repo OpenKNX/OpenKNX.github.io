@@ -7,6 +7,7 @@ from jinja2 import Environment, FileSystemLoader
 
 from model.oam_data import OamData
 from model.oam_releases import OamReleasesData
+from model.ofm_data import OfmData
 from path_manager import PathManager
 
 
@@ -83,7 +84,7 @@ class HTMLGenerator:
         for repo, details in releases_data.items():
             self.create_html_for_repo(repo, details)
 
-    def update_overview_tables(self, oam_data: dict[str, OamData], ofm_data):
+    def update_overview_tables(self, oam_data: dict[str, OamData], ofm_data: dict[str, OfmData]):
         # module,devices -> usage_count
         from collections import defaultdict
         modules_usage_count = defaultdict(int)
@@ -176,6 +177,7 @@ class HTMLGenerator:
                                           oamName=oamName,
                                           oam_details=oam_details,
                                           # same order as in large overview table. TODO Reversed might be better for modules
+                                          ofm_data=ofm_data,
                                           modules_sorted=modules_sorted,
                                           devices_sorted=devices_sorted,
                                           devices_other_sorted=devices_other_sorted,

@@ -65,7 +65,8 @@ def generate_oam_data(oam_dependencies: dict[str, dict[str, OamDependencies]], o
             description = oam_details.get(oam).description if oam in oam_details.keys() else None, # TODO check fallback  or "(keine Kurzbeschreibung)"
             modules = dependencies,
             modules_internal = internal_modules.get(oam, []),
-            devices = devices
+            devices = devices,
+            releases = oam_details.get(oam)
         )
 
     logging.debug(f"oam_data {json.dumps(oam_data, indent=4)}")

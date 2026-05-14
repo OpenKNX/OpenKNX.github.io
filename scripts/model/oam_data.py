@@ -4,6 +4,8 @@
 from dataclasses import dataclass, field
 from datetime import datetime, timezone, timedelta
 
+from model.oam_releases import OamReleasesData
+
 
 @dataclass()
 class OamData:
@@ -11,6 +13,7 @@ class OamData:
     modules: list[str] # TODO = field(default_factory=list)
     modules_internal: list[str] # TODO = field(default_factory=list)
     devices: []  # set empty list for OAMs without releases # TODO check cleanup of data-collection
+    releases: OamReleasesData
 
 @dataclass()
 class OamRepo:

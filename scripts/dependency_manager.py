@@ -6,6 +6,7 @@ import logging
 
 from model.oam_data import OamRepo
 from model.oam_dependencies import OamDependencies
+from model.helper import ensure_json_convertable
 
 
 class DependencyManager:
@@ -80,5 +81,5 @@ class DependencyManager:
             if dependencies:
                 all_dependencies[repo.name] = dependencies
         with open('dependencies.json', 'w') as outfile:
-            json.dump(all_dependencies, outfile, indent=4)
+            json.dump(ensure_json_convertable(all_dependencies), outfile, indent=4)
         return all_dependencies

@@ -10,6 +10,7 @@ from dependency_manager import DependencyManager
 from devices_helper import DeviceHelper
 from github_client import GitHubClient
 from html_generator import HTMLGenerator
+from model.helper import ensure_json_convertable
 from model.oam_data import OamData, OamRepo
 from model.oam_dependencies import OamDependencies
 from model.oam_releases import OamReleasesData
@@ -69,14 +70,14 @@ def generate_oam_data(oam_dependencies: dict[str, dict[str, OamDependencies]], o
             releases = oam_details.get(oam)
         )
 
-    logging.debug(f"oam_data {json.dumps(oam_data, indent=4)}")
+    logging.debug(f"oam_data {json.dumps(ensure_json_convertable(oam_data), indent=4)}")
 
     return appConfig.sort(oam_data) # Sort based on given order, all others at end
 
 
 def _write_json_file(filename, data):
     with open(filename, 'w', encoding='utf-8') as outfile:
-        json.dump(data, outfile, indent=4)
+        json.dump(ensure_json_convertable(data), outfile, indent=4) # , ensure_ascii=False
 
 
 def write_releases_json(oam_releases_data):

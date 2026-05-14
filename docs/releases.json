@@ -3138,6 +3138,15 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.12.0",
+                    "name": "0.12.0 Beta",
+                    "published_at": "2026-05-14T14:42:07Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Nuki/releases/tag/0.12.0",
+                    "body": "- Works with XIAO ESP32S3 with TP only power supply",
+                    "assets": []
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.9.0",
                     "name": "0.9.0 Beta",
                     "published_at": "2026-01-25T13:25:51Z",
@@ -3171,7 +3180,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 1
+            "hw_avail_open": 0
         },
         "OAM-BusPowerSupply": {
             "repo_url": "https://github.com/OpenKNX/OAM-BusPowerSupply",
@@ -3288,6 +3297,23 @@
             "archived": false,
             "description": null,
             "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "NeoPixel-Dev-0.2.0",
+                    "name": "NeoPixel-Dev-0.2.0",
+                    "published_at": "2026-05-14T10:52:04Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-NeoPixel/releases/tag/NeoPixel-Dev-0.2.0",
+                    "body": null,
+                    "assets": [
+                        {
+                            "name": "NeoPixel-Dev-0.2.0.zip",
+                            "size": 34974209,
+                            "digest": "sha256:a9f6fb3b7b9ddebc13c19315c5e05cce522f54e9fec436fcb33cbea2b56e3412",
+                            "updated_at": "2026-05-14T10:52:03Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-NeoPixel/releases/download/NeoPixel-Dev-0.2.0/NeoPixel-Dev-0.2.0.zip"
+                        }
+                    ]
+                },
                 {
                     "prerelease": true,
                     "tag_name": "0.1.0-Dev",

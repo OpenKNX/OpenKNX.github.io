@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenKNX Module</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,8 +18,9 @@
 <ul>
     {% for module, ofm_usage_count in modules_sorted %}
     <li data-ofm="{{module}}">
-        (<a href="https://github.com/OpenKNX/{{ module }}">GitHub</a>)
+        {# (<a href="https://github.com/OpenKNX/{{ module }}">GitHub</a>) #}
         <a href="{{ module }}/">{{ module }}</a>
+        {% if module in ofm_data %} - {{ofm_data[module].description}}{% endif %}
     </li>
     {% endfor %}
 </ul>

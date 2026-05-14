@@ -241,6 +241,7 @@ class HTMLGenerator:
         self._render_template_to_file('ofm_all_index.html',
                                       self.path_manager.get_ofm_path(None, 'index.html'),
                                       modules_sorted=modules_sorted,
+                                      ofm_data=ofm_data
                                       )
 
         # create overview- and function-page for each device

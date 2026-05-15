@@ -8,6 +8,17 @@
         body {
             font-family: sans-serif;
         }
+        .ofm_icon {
+            width: 16px;
+            height: 16px;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        table /*.openknxTitleTable*/ tbody tr:nth-child(2n+1) {
+             background-color: #f8f8f8;
+        }
+
     </style>
 </head>
 <body>
@@ -15,15 +26,24 @@
 <h1>OpenKNX Module</h1>
 <p>{# TODO description #}</p>
 
-<ul>
+<table>
+<thead>
+        <th>Modul</th>
+        <th colspan="2">Anzeige in ETS</th>
+        <th>Kurzbeschreibung</th>
+</thead>
+<tbody>
     {% for module, ofm_usage_count in modules_sorted %}
-    <li data-ofm="{{module}}">
-        {# (<a href="https://github.com/OpenKNX/{{ module }}">GitHub</a>) #}
-        <a href="{{ module }}/">{{ module }}</a>
-        {% if module in ofm_data %} - {{ofm_data[module].description}}{% endif %}
-    </li>
+    {% set ofmIconUrl = ofm_data[module].icon_url if ofm_data[module] else "" %}
+    <tr data-ofm="{{module}}">
+        <td><a href="{{ module }}/">{{ module }}</a></td>
+        <td>{% if ofmIconUrl %}<img src="{{ofmIconUrl}}" class="ofm_icon"/>{% endif %}</td>
+        <td>{% if module in ofm_data %}{{ofm_data[module].title}}{% endif %}</td>
+        <td>{% if module in ofm_data %}{{ofm_data[module].description}}{% endif %}</td>
+    </tr>
     {% endfor %}
-</ul>
+</tbody>
+</table>
 
 </body>
 </html>

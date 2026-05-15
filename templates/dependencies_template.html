@@ -51,15 +51,15 @@
         <th class="before-new-cols"></th>
 
        {% if showModules %}
-        {% for module, count in modules_sorted if count > 1 %}{% set ofmUrl = "/ofm/" ~ module %}
-        <th class="rotate45" data-ofm="{{module}}"><div><span><a href="{{ofmUrl}}">{{ module }}</a></span></div></th>
+        {% for module, count in modules_sorted if count > 1 %}
+        <th class="rotate45" data-ofm="{{module}}"><div><span><a href="{{url_mapper.for_module(module)}}">{{ module }}</a></span></div></th>
         {% endfor %}
         <th class="singleModules before-new-cols" data-ofm="*special*">Nur in dieser Applikation:</th>
        {% endif %}
 
        {% if showDevices %}
-        {% for device, count in devices_sorted if count > 1 %}{% set devUrl = "/devices/" ~ function_device_to_pathname(device) %}
-        <th class="rotate45" data-dev="{{device}}"><div><span><a href="{{devUrl}}">{{ device | device_without_openknx }}</a></span></div></th>
+        {% for device, count in devices_sorted if count > 1 %}
+        <th class="rotate45" data-dev="{{device}}"><div><span><a href="{{url_mapper.for_device(device)}}">{{ device | device_without_openknx }}</a></span></div></th>
         {% endfor %}
         <th class="singleModules" data-dev="*special*">Spezielle Geräte:</th>
         <th class="rotate90 before-new-cols" data-dev="*other*"><div><span>Sonstige Geräte</span></div></th>
@@ -96,9 +96,8 @@
     {%- set oamInternalModules = oam_details['modules_internal'] %}
     {% set oamDevices = oam_details['devices'] %}
     {% set oamDescription = oam_details['description'] %}
-    {% set oamUrl = "/oam/" ~ oamName %}
     <tr data-oam="{{oamName}}" class="hoverTrigger">
-        <th class="before-new-cols"><a href="{{oamUrl}}">{{ oamName }}</a>{% if oamDescription %}<div class="oam-details">{{ oamDescription }}</div>{% endif %}</th>
+        <th class="before-new-cols"><a href="{{url_mapper.for_oam(oamName)}}">{{ oamName }}</a>{% if oamDescription %}<div class="oam-details">{{ oamDescription }}</div>{% endif %}</th>
 
        {% if showModules %}
         {% for module, count in modules_sorted if count > 1 %}
@@ -108,7 +107,7 @@
             {%- for module in modules_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamModules) %}
                 {% set ofmIconUrl = ofm_data[module]['icon_url'] if ofm_data[module] else "" %}
                 {%- set ofmDescripton = ofm_data[module]['description'] if ofm_data[module] else "" -%}
-                <span data-ofm="{{module}}"><span class="isPart">&#9724;</span>&nbsp;{% if ofmIconUrl %}<img src="{{ofmIconUrl}}" title="{{ofmDescripton}}" />&nbsp;{% endif %}<a href="https://github.com/OpenKNX/{{ module }}">{{ module }}</a></span>{% if not loop.last or ((oamInternalModules | length) > 0)  %}, {% endif %}
+                <span data-ofm="{{module}}"><span class="isPart">&#9724;</span>&nbsp;{% if ofmIconUrl %}<img src="{{ofmIconUrl}}" title="{{ofmDescripton}}" />&nbsp;{% endif %}<a href="{{ url_mapper.for_module(module) }}">{{ module }}</a></span>{% if not loop.last or ((oamInternalModules | length) > 0)  %}, {% endif %}
             {%- endfor %}
             {%- for internal_module in oamInternalModules %}
                 {% set module = oamName ~ "/" ~ internal_module %}
@@ -124,8 +123,8 @@
         <td data-dev="{{device}}" class="isPart colHover">{% if device in oamDevices %}&#9724;{% endif %}</td>
         {% endfor %}
         <td class="left">
-            {%- for device in devices_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamDevices) %}{% set devUrl = "/devices/" ~ function_device_to_pathname(device) %}
-                <span data-dev="{{device}}"><span class="isPart">&#9724;</span>&nbsp;<a href="{{devUrl}}">{{ device | device_without_openknx }}</a></span>{% if not loop.last %}, {% endif %}
+            {%- for device in devices_sorted | selectattr('1', 'equalto', 1) | map(attribute='0') | select('in', oamDevices) %}
+                <span data-dev="{{device}}"><span class="isPart">&#9724;</span>&nbsp;<a href="{{ url_mapper.for_device(device) }}">{{ device | device_without_openknx }}</a></span>{% if not loop.last %}, {% endif %}
             {%- endfor %}
         </td>
 

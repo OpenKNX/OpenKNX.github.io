@@ -10,6 +10,7 @@ from model.oam_data import OamData
 from model.oam_releases import OamReleasesData
 from model.ofm_data import OfmData
 from path_manager import PathManager
+from url_manager import PageUrlMapper, WikiUrlMapper
 
 
 class HTMLGenerator:
@@ -167,7 +168,7 @@ class HTMLGenerator:
                 ofm_data=ofm_data,
                 showModules=showModules,
                 showDevices=showDevices,
-                function_device_to_pathname=PathManager.to_device_pathname,
+                url_mapper=PageUrlMapper(),
             )
 
         # create overview-page for each OAM
@@ -236,7 +237,7 @@ class HTMLGenerator:
                                           ofm_data=ofm_data,
                                           showModules=False,
                                           showDevices=True,
-                                          function_device_to_pathname = PathManager.to_device_pathname,
+                                          url_mapper=WikiUrlMapper(),
                                           )
         # create ofm index-list
         logging.info(f"Create OFM Index")
@@ -284,6 +285,7 @@ class HTMLGenerator:
                                           ofm_data=ofm_data,
                                           showModules=True,
                                           showDevices=False,
+                                          url_mapper=PageUrlMapper(),
                                           )
 
         # create devices index-list

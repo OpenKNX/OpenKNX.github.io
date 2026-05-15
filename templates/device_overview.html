@@ -1,59 +1,63 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ name }} | OpenKNX Gerät | Übersicht</title>
-    <style>
-        body {
-            font-family: sans-serif;
-        }
-        .relations {
-            display: flex;
-        }
-        .relations section {
-            max-width: 30%;
-            margin-right: 3em;
-        }
-        .related_modules a img {
-            width: 16px;
-            height: 16px;
-        }
-        .related_modules a .noicon {
-            width: 16px;
-            height: 16px;
-            display: inline-block;
-        }
-    </style>
+{% extends "dependencies_template.html" %}
 
-</head>
-<body>
-
+{% block content %}
 <p><a href="../">&nwarr; Liste der OpenKNX-Geräte</a></p>
-<h1>{{ name }}</h1>
-<p>{# TODO description #}</p>
-<p><a href="functions.html">Übersichtstabelle mit verfügbaren OpenKNX-Applikationen und Modulen</a></p>
 
-<div class="relations">
-    <section class="related_oams">
-        <h2>Verfügbare Applikationen</h2>
-        <ul>
-            {% for oamName, oam_details in oam_data.items() if name in oam_details.devices %}
-            <li data-oam="{{oamName}}">
-                <a href="../../oam/{{oamName}}/">{{ oamName }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </section>
-    <section class="related_modules">
-        <h2>In Applikationen verfügbare Module</h2>
-        <ul>
-            {%- for module, count in ofm_sorted %}
-            <li data-ofm="{{module}}">
-                <a href="../../ofm/{{ module }}/">{{ module }}</a>
-            </li>
-            {%- endfor %}
-        </ul>
-    </section>
-</body>
-</html>
+<h1>{{ name }}</h1>
+
+{#
+<img src="{{ device.image_url }}" />
+<p>{{ device.description }}</p>
+#}
+
+<h2>Weitere Informationen</h2>
+<ul>
+    <li><a href="">Github-Repository</a></li>
+    <li><a href="">Thread im KNX-User-Forum</a></li>
+    <li><a href="">Hardwaredetails</a></li>
+    <li><a href="">Aufbauanleitung</a></li>
+</ul>
+
+<h2>Übersicht</h2>
+<table>
+    <tbody>
+        <tr>
+            <th>Anbieter</th>
+            <td>OpenKNX</td>
+        </tr>
+        <tr>
+            <th>Gerätebezeichnung</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>OpenKNX Geräte-ID</th>
+            <td>{# REG1-... #}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>FERTIG</td>
+        </tr>
+        <tr>
+            <th>Mikrocontroller</th>
+            <td>RP2040</td>
+        </tr>
+        <tr>
+            <th>Geräteplattform</th>
+            <td>REG1</td>
+        </tr>
+        <tr>
+            <th>{# Spezifische Eigenschaften #}DALI-Anschlüsse</th>
+            <td>{# Anzahl Kanäle u.s.w. #}</td>
+        </tr>
+        <tr>
+            <th>Verfügbarkeit</th>
+            <td>OpenKNX, BAUSATZ, PCB</td>
+        </tr>
+        <tr>
+            <th>Bezugsquelle</th>
+            <td><a href="...">...</a></td></tr>
+    </tbody>
+</table>
+
+<h2>Nutzungsmöglichkeiten</h2>
+{% endblock %}

@@ -259,14 +259,7 @@ class HTMLGenerator:
                         ofm_usage_count[ofm] += 1
             devs_sorted = sorted(ofm_usage_count.items(), key=lambda item: (-item[1], item[0]))
             # TODO use device-id?
-            file = self.path_manager.get_device_path(device_name, filename="index.html")
             logging.info(f"Create Device Overview in {file}")
-            self._render_template_to_file('device_overview.html', file,
-                                          name=device_name,
-                                          oam_data=oam_data,
-                                          ofm_sorted=devs_sorted
-                                          )
-
             oam_data_of_device = {
                 oam_name: oam_details
                 for oam_name, oam_details in oam_data.items() if device_name in oam_details.devices
@@ -276,10 +269,14 @@ class HTMLGenerator:
                 for oam_details in oam_data_of_device.values()
                 for module in oam_details.modules
             }
+            file = self.path_manager.get_device_path(device_name, filename="index.html")
             modules_sorted_of_device = [module for module in modules_sorted if module[0] in modules_of_device]
-            self._render_template_to_file('dependencies_template.html',
-                                          self.path_manager.get_device_path(device_name, 'functions.html'),
-                                          title=f"{device_name}: Nutzungsmöglichkeiten",
+            self._render_template_to_file('device_overview.html', file,
+                                          name=device_name,
+                                          # oam_data=oam_data,
+                                          ofm_sorted=devs_sorted,
+
+                                          # title=f"{device_name}: Nutzungsmöglichkeiten",
                                           modules_sorted=modules_sorted_of_device,
                                           # devices_sorted=devices_sorted,
                                           # devices_other_sorted=devices_other_sorted,
@@ -288,6 +285,7 @@ class HTMLGenerator:
                                           showModules=True,
                                           showDevices=False,
                                           )
+
         # create devices index-list
         logging.info(f"Create Devices Index")
         self._render_template_to_file('device_all_index.html',

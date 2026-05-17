@@ -2463,6 +2463,23 @@
             "description": null,
             "releases": [
                 {
+                    "prerelease": true,
+                    "tag_name": "1.6.0",
+                    "name": "Prerelase 1.6.0",
+                    "published_at": "2026-05-17T20:05:44Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.6.0",
+                    "body": "",
+                    "assets": [
+                        {
+                            "name": "ShutterController-Beta-1.6.0.zip",
+                            "size": 4329430,
+                            "digest": "sha256:98c0dcacc5e8f20e52fd6e2f79c0dd69f33ff7eeec2cd73023d35ab1f54f440e",
+                            "updated_at": "2026-05-17T20:06:07Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/download/1.6.0/ShutterController-Beta-1.6.0.zip"
+                        }
+                    ]
+                },
+                {
                     "prerelease": false,
                     "tag_name": "1.5.1",
                     "name": "Release 1.5.1",

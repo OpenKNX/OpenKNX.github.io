@@ -3,114 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>OAM-SensorModule | OpenKNX Applikation | Übersicht</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .oam_relations {
+            display: flex;
+        }
+        .oam_relations section {
+            max-width: 30%;
+            margin-right: 3em;
+        }
+        .latest_releases summary {
+            font-weight: bold;
+        }
+        .related_modules a img {
+            width: 16px;
+            height: 16px;
+        }
+        .related_modules a .noicon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
 
 
 
-
-
-<h1>OAM-SensorModule</h1>
 <p><a href="../">&nwarr; Liste der OpenKNX-Applikationen</a></p>
+<h1>OAM-SensorModule</h1>
+<p><a href="https://github.com/OpenKNX/OAM-SensorModule">GitHub</a></p>
 <p>Allows sending sensor values to the KNX Bus </p>
-<h2>Enthaltene Module</h2>
-<ul>
-    
-    <li data-ofm="knx">
-        (<a href="https://github.com/OpenKNX/knx">GitHub</a>)
-        <a href="../../ofm/knx/">knx</a>
-    </li>
-    
-    <li data-ofm="OGM-Common">
-        (<a href="https://github.com/OpenKNX/OGM-Common">GitHub</a>)
-        <a href="../../ofm/OGM-Common/">OGM-Common</a>
-    </li>
-    
-    <li data-ofm="OFM-FileTransferModule">
-        (<a href="https://github.com/OpenKNX/OFM-FileTransferModule">GitHub</a>)
-        <a href="../../ofm/OFM-FileTransferModule/">OFM-FileTransferModule</a>
-    </li>
-    
-    <li data-ofm="OFM-ConfigTransfer">
-        (<a href="https://github.com/OpenKNX/OFM-ConfigTransfer">GitHub</a>)
-        <a href="../../ofm/OFM-ConfigTransfer/">OFM-ConfigTransfer</a>
-    </li>
-    
-    <li data-ofm="OFM-LogicModule">
-        (<a href="https://github.com/OpenKNX/OFM-LogicModule">GitHub</a>)
-        <a href="../../ofm/OFM-LogicModule/">OFM-LogicModule</a>
-    </li>
-    
-    <li data-ofm="OFM-VirtualButton">
-        (<a href="https://github.com/OpenKNX/OFM-VirtualButton">GitHub</a>)
-        <a href="../../ofm/OFM-VirtualButton/">OFM-VirtualButton</a>
-    </li>
-    
-    <li data-ofm="OFM-BinaryInput">
-        (<a href="https://github.com/OpenKNX/OFM-BinaryInput">GitHub</a>)
-        <a href="../../ofm/OFM-BinaryInput/">OFM-BinaryInput</a>
-    </li>
-    
-    <li data-ofm="OGM-SensorDevices">
-        (<a href="https://github.com/OpenKNX/OGM-SensorDevices">GitHub</a>)
-        <a href="../../ofm/OGM-SensorDevices/">OGM-SensorDevices</a>
-    </li>
-    
-    <li data-ofm="OFM-SensorModule">
-        (<a href="https://github.com/OpenKNX/OFM-SensorModule">GitHub</a>)
-        <a href="../../ofm/OFM-SensorModule/">OFM-SensorModule</a>
-    </li>
-    
-    <li data-ofm="OFM-OneWireModule">
-        (<a href="https://github.com/OpenKNX/OFM-OneWireModule">GitHub</a>)
-        <a href="../../ofm/OFM-OneWireModule/">OFM-OneWireModule</a>
-    </li>
-    
-    <li data-ofm="OFM-PresenceModule">
-        (<a href="https://github.com/OpenKNX/OFM-PresenceModule">GitHub</a>)
-        <a href="../../ofm/OFM-PresenceModule/">OFM-PresenceModule</a>
-    </li>
-    
-    <li data-ofm="OFM-ADCInput">
-        (<a href="https://github.com/OpenKNX/OFM-ADCInput">GitHub</a>)
-        <a href="../../ofm/OFM-ADCInput/">OFM-ADCInput</a>
-    </li>
-    
-</ul>
+<p></p>
 
-<h2>Unterstützte Geräte</h2>
-<h3>OpenKNX</h3>
-<ul>
-    
-    <li data-dev="OpenKNX PiPico BCU Connector"><a href="../../devices/OpenKNX_PiPico_BCU_Connector/">OpenKNX PiPico BCU Connector</a></li>
-    
-    <li data-dev="OpenKNX REG1 Basismodul"><a href="../../devices/OpenKNX_REG1_Basismodul/">OpenKNX REG1 Basismodul</a></li>
-    
-    <li data-dev="OpenKNX REG1 Basismodul V0"><a href="../../devices/OpenKNX_REG1_Basismodul_V0/">OpenKNX REG1 Basismodul V0</a></li>
-    
-    <li data-dev="OpenKNX UP1 8xSensor"><a href="../../devices/OpenKNX_UP1_8xSensor/">OpenKNX UP1 8xSensor</a></li>
-    
-    <li data-dev="OpenKNX UP1 Präsenzmelder+"><a href="../../devices/OpenKNX_UP1_Praesenzmelder_/">OpenKNX UP1 Präsenzmelder+</a></li>
-    
-</ul>
-<h3>Andere Geräte</h3>
-<ul>
-    
-    <li data-dev="SmartMF-1TE-RP2040">SmartMF-1TE-RP2040</li>
-    
-    <li data-dev="SmartMF-Sensormodul-v4.x-RP2040">SmartMF-Sensormodul-v4.x-RP2040</li>
-    
-    <li data-dev="AB-SmartHouse-PresenceMR16">AB-SmartHouse-PresenceMR16</li>
-    
-    <li data-dev="AB-SmartHouse-PresenceMultiSensor">AB-SmartHouse-PresenceMultiSensor</li>
-    
-    <li data-dev="AB-SmartHouse-PresenceWall">AB-SmartHouse-PresenceWall</li>
-    
-    <li data-dev="SmartMF RealPresence">SmartMF RealPresence</li>
-    
-</ul>
+<div class="oam_relations">
+    <section class="related_modules">
+        <h2>Enthaltene Module*</h2>
+        <ul>
+            
+            
+            <li data-ofm="OFM-ADCInput">
+                
+                <a href="../../ofm/OFM-ADCInput/"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ADCInput/refs/heads/v1/src/Baggages/Icons/alpha-v-circle-outline.png" /> OFM-ADCInput</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-PresenceModule">
+                
+                <a href="../../ofm/OFM-PresenceModule/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/panorama-sphere-outline.png" /> OFM-PresenceModule</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-OneWireModule">
+                
+                <a href="../../ofm/OFM-OneWireModule/"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-OneWireModule/refs/heads/v1/src/Baggages/Icons/vector-polyline.png" /> OFM-OneWireModule</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-SensorModule">
+                
+                <a href="../../ofm/OFM-SensorModule/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/gauge.png" /> OFM-SensorModule</a>
+            </li>
+            
+            
+            <li data-ofm="OGM-SensorDevices">
+                
+                <a href="../../ofm/OGM-SensorDevices/"><span class="noicon"> </span> OGM-SensorDevices</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-BinaryInput">
+                
+                <a href="../../ofm/OFM-BinaryInput/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/arrow-right-circle-outline.png" /> OFM-BinaryInput</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-VirtualButton">
+                
+                <a href="../../ofm/OFM-VirtualButton/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/button-pointer.png" /> OFM-VirtualButton</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-LogicModule">
+                
+                <a href="../../ofm/OFM-LogicModule/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/blur.png" /> OFM-LogicModule</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-ConfigTransfer">
+                
+                <a href="../../ofm/OFM-ConfigTransfer/"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ConfigTransfer/refs/heads/v1/src/Baggages/Icons/ofm-configtransfer.png" /> OFM-ConfigTransfer</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-FileTransferModule">
+                
+                <a href="../../ofm/OFM-FileTransferModule/"><span class="noicon"> </span> OFM-FileTransferModule</a>
+            </li>
+            
+            
+            <li data-ofm="OGM-Common">
+                
+                <a href="../../ofm/OGM-Common/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/openknx.png" /> OGM-Common</a>
+            </li>
+            
+            
+            <li data-ofm="knx">
+                
+                <a href="../../ofm/knx/"><span class="noicon"> </span> knx</a>
+            </li>
+            
+        </ul>
+    </section>
+    <section class="related_devices">
+        <h2>Unterstützte Geräte*</h2>
+        <ul>
+            
+            <li data-dev="OpenKNX PiPico BCU Connector"><a href="../../devices/OpenKNX_PiPico_BCU_Connector/">OpenKNX PiPico BCU Connector</a></li>
+            
+            <li data-dev="OpenKNX REG1 Basismodul"><a href="../../devices/OpenKNX_REG1_Basismodul/">OpenKNX REG1 Basismodul</a></li>
+            
+            <li data-dev="OpenKNX REG1 Basismodul V0"><a href="../../devices/OpenKNX_REG1_Basismodul_V0/">OpenKNX REG1 Basismodul V0</a></li>
+            
+            <li data-dev="OpenKNX UP1 8xSensor"><a href="../../devices/OpenKNX_UP1_8xSensor/">OpenKNX UP1 8xSensor</a></li>
+            
+            <li data-dev="OpenKNX UP1 Präsenzmelder+"><a href="../../devices/OpenKNX_UP1_Praesenzmelder_/">OpenKNX UP1 Präsenzmelder+</a></li>
+            
+        </ul>
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+        <details>
+            <summary>Andere Geräte</summary>
+            <ul>
+                
+                <li data-dev="SmartMF-1TE-RP2040">SmartMF-1TE-RP2040</li>
+                
+                <li data-dev="SmartMF-Sensormodul-v4.x-RP2040">SmartMF-Sensormodul-v4.x-RP2040</li>
+                
+                <li data-dev="AB-SmartHouse-PresenceMR16">AB-SmartHouse-PresenceMR16</li>
+                
+                <li data-dev="AB-SmartHouse-PresenceMultiSensor">AB-SmartHouse-PresenceMultiSensor</li>
+                
+                <li data-dev="AB-SmartHouse-PresenceWall">AB-SmartHouse-PresenceWall</li>
+                
+                <li data-dev="SmartMF RealPresence">SmartMF RealPresence</li>
+                
+            </ul>
+        </details>
+        
+    </section>
+    <section class="oam_releases">
+        <h2>Releases</h2>
+        
+        
+        
+        
+            <details class="latest_releases">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v4.2.5-Release">v4.2.5-Release (v4.2.5-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Änderungen seit dem letzten Release:
 
+* FIX: Die Ausgabe vom Luftdruck wurde fälschlicherweise in hPa ausgegeben, obwohl der DPT Pa ist. Dies ist nun korrigiert.
+* NEU: Die Firmware unterstützt jetzt auch Analogeingänge, verfügbar im neusten Sensormodul von Smart-MF
+* FIX: Der BMP280 kann nur Temperatur und Luftdruck messen, nicht wie initial angenommen, Temperatur und Luftfeuchte. Das ist jetzt korrigiert
+* FIX: Durch einen Konfigurationsfehler beim erstellen der Firmware war das Präsenzmodul (VPM) in letzten Release auf folgenden Geräten nicht verfügbar, das ist jetzt korrigiert:
+  * REG1-Base-V1
+  * REG1-Base-V0
+  * PiPico-Connector
+* NEU: Die Firmware ist jetzt auch für den UP1-PM-HF (UP1-Präsenzmelder-Plus) verfügbar
+* FIX: Externe Werte, für gewichtete Auswertung: Hier war nur 1 Wert möglich, wenn man 2 Werte ausgewählt hat, wurde fälschlicherweise ein KO deaktiviert.
+
+* Das enthaltene Präsenzmodul hat jetzt die Version 3.6.4
+  * FIX: Beim Wechsel der Tagesphase während einer Sperre wird jetzt nicht mehr geschaltet
+  * FIX: Wenn ein PM-Kanal später startet und vorher die Tagesphase an das entsprechende KO gesendet wurde, wird jetzt diese Tagesphase als Startphase genommen (wurde bisher ignoriert)
+
+* Die enthaltene Logik hat jetzt die Version 3.5.3
+  * FIX: Hysterese/Differenzhysterese mit invertiertem Eingang führte beim Schreiben von Werten im Hysteresebereich zu Toggeln des Ausgangs.
+
+Auch dieses Release ist noch OHNE 1-Wire Implementierung. 
+
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v4.0.2-Release">4.0.2-Release (v4.0.2-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Die neuste Version vom Sensormodul, verfügbar auch auf neuer Hardware. 
+
+Das Release 4.0 löst direkt das 3.15 ab. Release 3.15 sollte nicht mehr verwendet werden und durch 4.0 aktualisiert werden, da 3.15 einen Fehler in der enthaltenen Logik hat. Des weiteren wurde die Robustheit erhöht beim Update über den KNX-Bus und das Skript zur Erzeugung der knxpord bei Verwendung der ETS 6.3 wurde aktualisiert.
+
+>Wichtig: Falls nur die ETS 6.3.0 installiert ist, muss das Update mit der OpenKNX-Toolbox 1.0.3 erfolgen. Bei älteren Toolbox-Versionen kommt die Meldung "knxprod konnte nicht erstellt werden".
+
+Das Release 4.0 ist auch für alle NOTWENDIG, die den neuen HLK2420 Präsenzsensor verwenden.
+
+>Anmerkung: Für alle, die neu anfangen wollen und darüber Nachdenken, nur das Logikmodul oder nur das Präsenzmodul zu installieren, ist von mir die Empfehlung, das Sensormodul zu nehmen. Die Teile, die nicht gebraucht werden, muss man nicht nutzen und sie belasten auch das System nicht. Und langfristig besteht der Plan, dass das Präsenzmodul komplett im Sensormodul aufgeht. Und dann erspart man sich den Umzug von der einen auf die andere Applikation.
+
+07.12.2024: Firmware 4.0.2, Applikation 4.0
+
+* FIX: Fix für das Logikmodul mit Auswirkungen auf das Sensormodul (Das neue Sendeverhalten am Ausgang und der Wiederholungsfilter haben sich leider gegenseitig beeinflusst und zu unerwarteten Ergebnissen geführt, die Logiken kaputt machen konnten. Deswegen ein Hotfix)
+* FIX: Die fehlende Kontexthilfe auf der Seite "Allgemein" wurde ergänzt.
+* NEU: Der Sensor BMP280 (ohne Luftdruck) wird jetzt auch unterstützt.
+* NEU: Firmware-Update über den KNX-Bus lastet den Bus weniger aus (weniger Telegrammwiederholungen)
+* NEU: Die Erzeugung der ETS-Produktdatenbank (knxprod) funktioniert jetzt auch mit der ETS 6.3
+
+* Die enthaltene Logik hat jetzt die Version 3.5
+* Das enthaltene Präsenzmodul hat jetzt die Version 3.6
+
+01.12.2024: Firmware 3.15, Applikation 3.15
+
+* NEU: Es wird jetzt auch der REG1-BASE-V1 (und auch der REG1-BASE-V0) von Ing-Dom als Hardware unterstützt. Damit können auch die vom Sensormodul unterstützten I²C-Sensoren an dem herausgeführten I²C-Kanal ausgewertet werden.
+* NEU: Beim AB-Smarthouse Multi Sensor von AB-SmartHouse werden jetzt auch die beiden Binäreingänge unterstützt.
+* NEU: Neue Einstellungsseite zum HF-Sensor HLK-LK2420, siehe Applikatonsbeschreibung Präsenz
+* NEU: Der Füllstandssensor VL53L1X (auch als TOF400 bekannt) wir jetzt 2 mal pro Sekunde abgefragt und kann deswegen auch als Näherungssensor oder als Lichtschranke genutzt werden.
+* NEU: Alle Firmware-Varianten haben ein neues Skript zum KNX-Firmware-Update bekommen, das einen Upload über den KNX-Bus erlaubt.
+
+* Die enthaltene Logik hat jetzt die Version 3.4
+* Das enthaltene Präsenz-Modul hat jetzt die Version 3.5
+* Der enthaltene Konfigurations-Transfer hat jetzt die Version 0.2
+* Das enthaltene Taster-Modul hat jetzt die Version 0.5
+
+>WICHTIG: Das 1-Wire-Modul ist leider immer noch nicht Re-Implementiert!
+
+>WICHTIG: Falls man ein Update von der Version 3.2 macht und das KO 27 mit einer GA verbunden ist, muss diese GA vor dem Update der Applikation getrennt werden. Sonst kommt ein Fehler: Das Gruppenobjekt ist nicht aktiv. Gruppenadressen können nur aktiven Gruppenobjekten zugewiesen werden.
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v3.2.11-Release">v3.2.11-Release (v3.2.11-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">* NEU: Es wird jetzt auch der [SEN-UP1-8xTH](https://github.com/OpenKNX/OpenKNX/wiki/SEN-UP1-8xTH) von [Ing-Dom](https://muster.ing-dom.de) als Hardware unterstützt. Kanal E ist dann der I²C-Eingang und Kanal C und D können als 4 Binäreingänge fungieren. 
+
+Dieses Release enthält keinerlei Funktionalitäsverbesserungen, es macht das Sensormodul auf weiterer Hardware verfügbar. Es gibt keinerlei Grund zu aktualisieren, sofern man eine andere Hardware verwendet. Natürlich funktioniert das Release mit jeglicher unterstützder Hardware.
+
+Es gilt weiterhin alles, was unter Release 3.1.1 beschrieben wurde. Unbedingt beachten!!!
+
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v3.2.10-Release">v3.2.10-Release (v3.2.10-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">* FIX: Konfigurationstransfer konnte das PM-Modul vom SensorModule-Vpm-1.6.2 nicht importieren.
+* NEU: Alle Erkenntnisse aus verschiedenen Tests mit dem neuen HLK-HF-Sensor sind in dessen Implementierung eingeflossen.
+* Konfigurationstransfer ist auf Version 0.2 aktualisiert.
+
+Alle, die von einer älteren 1.x -Vpm oder -Wire Version migrieren wollen, sollten diese Version als Zielversion einsetzen.
+Alle, die den Presence-Multisensor von AB-SmartHouse.com benutzen, sollten unbedingt auf diese Version aktualisieren.
+
+Wichtig: Es gibt noch immer keiner 1-Wire-Unterstützung.
+
+Es gilt weiterhiin das im Release 3.1.1 gesagte bezüglich SAMD-Unterstützung.
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v3.1.1-Release">v3.1.1-Release (v3.1.1-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Das Release 3.1.1 vom Sensormodul ist verfügbar. Für die Sensormodul-Funktionen ist es großteils ein Bugfix-Release, trotzdem gibt es insgesamt viel neues:
+
+**ACHTUNG: Diese Firmware enthält noch keine Unterstützung für OneWire!**
+**Ein Upgrade einer Big-Version, die OneWire verwendet, sollte in der ETS nicht funktionieren. Bitte trotzdem nicht versuchen, da es hier keine Sicherheit gibt. Die Funktionalität von OneWire wird noch nachgereicht. Wer derzeit OneWire nutzt, sollte kein Update machen!**
+
+* Die Applikation unterstützt jetzt unseren neuen Konfigurationstransfer
+* Verbesserter knx-Stack: Durch asynchrones Sende- und Empfangshandling werden Botschaften auch bei sehr hoher Buslast sicher übertragen
+* Das Logikmodul wurde auf die Version 3.3.1 angehoben
+* Das Präsenzmodul wurde auf die Version 3.2.1 angehoben.
+* Das Modul mit virtuellen Tastern wurde zugefügt in Version 0.5
+* Es werden bis zu 4 Binäreingänge unterstützt (Hardware Sensormodul-4.x von smart-mf.de)
+* Update über den KNX-Bus ist jetzt möglich
+* Die Möglichkeiten der ETS für Icons werden genutzt
+* Es wird bei (fast) allen Eingabefeldern eine Kontextsensitive Hilfe angeboten
+* Es gibt ein generelles UI-Redesign, dass alle OpenKNX-Applikationen wiedererkennbar macht
+* Es wird jetzt auch der Presence-Multisensor von AB-SmartHouse.com unterstützt
+* Beim SCD41 kann man nun das Messintervall bestimmen
+
+Genaue Änderungen/Fixes an der Fimware findet man im Changelog der Applikationsbeschreibung
+
+Um auf das Release 3.1.1 aktualisieren zu können, muss erstmal die ETS auf die Version 2.15 aktualisiert werden. Diese Version ist gleichzeitig verfügbar mit der 3.1.1. Der Weg ist 1.5.2 -> 2.15 -> 3.1.1. Für die 2.15 gibt es keine Firmware, es ist ein reines ETS-Zwischenrelease. Die Version SensorModule-Big-2.15 ist der einfachheit halber auch diesem Relese beigefügt.
+
+Ich habe mich schweren Herzens dazu entschlossen, das Sensormodul nicht mehr auf der SAMD-Firmware weiterzuentwickeln. Deshalb gibt es das Release 3.1.1 nur als Big-Version, die schon immer nur für dei RP2040-Hardware verfügbar war.
+
+Wer die (stark abgespeckten) Versionen Vpm und OneWire nutzt und diese auf der RP2040-Hardware verwendet hat, bekommt eine halbautomatische Unterstützung für die Migration auf die Big-Version. Dazu muss man die gleichzeitig erscheinende Vpm- bzw OneWire-Version 1.6.2 nutzen. Diese enthält die Version 1.5.2, ergänzt um den Konfigurationstransfer. Mit dem kann man dann alle Sensor-, PM- und Logik-Einstellungen auf die Big-Version migrieren, Das geht auf jeden Fall schneller und komfortabler, als alles manuell abzutippen.
+
+Für die SAMD-Benutzer bleibt die Version 1.5.2 weiterhin nutzbar, sie wird aber nicht mehr weiterentwickelt. Der SAMD ist einfach am Limit seiner Möglichkeiten und kann keine der neuen Funktoinalitäten leisten, die OpenKNX mitbringt.</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-SensorModule/releases/tag/2.15-Release">v2.15-Release (2.15-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Spezeilles Release (nicht verwenden, bevor 3.0-Release verfügbar ist):
+
+Notwendiges Zwischenrelease, um die ETS-Kompatibilität von Releases vor 2.15 zu den folgenden Releases 3.0 und später zu wahren.
+Dieses Release hat keine Firmware. Man muss wie üblich eine knxprod bauen, diese in die ETS importieren und ein Update der alten Applikation machen.
+
+Danach muss man sofort das Nächste Update auf das neuste Release 3.0 oder später machen. Dieses neue Release enthält dann wieder eine Applikation und eine Firmware, die man wie üblich aktualisieren kann. Erst danach ist das Gerät wieder funktionsfähig.
+
+Ohne dieses Zwischenrelease sind die Applikationen 3.0 oder neuer nicht kompatibel zu den Applikationen vor 2.15 und müssen manuell neu konfiguriert werden. Da das sehr viel Arbeit sein kann, wird dringend geraten, dieses Zwischen-Release zu machen.
+
+Dieses Release hat keine Funktoinalität, es weist nur die ETS an, Kompatibilitätseinstellungen im Projekt vorzunehmen.
+
+Dieses Release ist nur für die Applikation "SensorModule-Big" verfügbar.
+
+Die Applikationen "SensorModule-Vpm" und "SensorModule-OneWire" werden aufgeteilt:
+
+Für alle, die diese Applikation auf RP2040-basierter Hardware nutzen, wird noch ein Migrationspfad auf SensorModule-Big angeboten.
+Für SAMD-basierte Hardware wird die Applikation und Firmware nicht mehr weiter entwickelt, da der SAMD nicht die Ressourcen hat, die neuen Features der Applikation zu prozessieren. Natürlich funktionieren die SAMD-basierten Geräte weiterhin wie bisher.</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v1.6.2">v1.6.2-Release (v1.6.2)</a>
+                </summary>
+                <p style="white-space:pre-line;">Dieses Release ist eine reine ETS-Applikation, die mit der Firmware 1.5.2 funktioniert. Sie hat den vollen Umfang von 1.5.2, erweitert um den neuen OpenKNX-Konfigurationstransfer.
+
+Die Applikation gibt es in 2 Varianten: SensorModule-Vpm-1.6.2 und SensorModule-OneWire-1.6.2, als Nachfolgeapplikationen für die entsprechenden 1.5.2 Releases.
+
+Mit diesem ist es möglich, halbautomatisch von der Release-Applikation auf die Big-Applikation zu migrieren, sofern man die Release-Applikation auf der RP2040-Hardware nutzt und in Zukunft die 3.0-Applikation Big nutzen möchte.
+
+Auch SAMD-Benutzer können diese Applikation nutzen, um Funktionen wie Kanalkopie zu nutzen und so die Arbeit mit Logikkanälen und Präsenzkanälen zu vereinfachen. Und man kann so auch Logiken auf ein anderel Modul migrieren und dort vielleicht neue Logikfunktionen nutzen.
+
+Diese Applikation wird wie jede andere in der ETS importiert und zum Update der aktuellen 1.5.2 verwendet. Man muss keine Firmware aktualisieren, aber einmal das existierende Gerät programmieren.
+
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v1.5.2">v1.5.2 (v1.5.2)</a>
+                </summary>
+                <p style="white-space:pre-line;">OpenKNX SensorModul Applikation (as Ersatz für das bisherige [Sensomodul v3.8](https://github.com/mumpf/knx-sensor).
+
+Hier ist die [Produktbeschreibung](https://github.com/OpenKNX/OpenKNX/wiki/Produktinfo-Sensormodul) samt Featureliste und [Applikationsbeschreibung](../main/doc/Applikationsbeschreibung-Sensor.md) samt detailliertem Änderungsverzeichnis.
+
+Die Applikation gibt es in 3 Varianten:
+- Als Sensor-, 1-Wire- und Logik-Applikation (SensorModule-OneWire)
+- Als Sensor-, Vpm- und Logik-Applikation (SensorModule-Vpm)
+- Als Sensor-, Vpm-, 1-Wire- und Logik-Applikation (SensorModule-Big)
+
+Die ersten beiden sind vornehmlich dafür da, auf einem SAMD-Sensormodul zu laufen.
+SensorModule-Big sollte für alle RP2040-Varianten benutzt werden.
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-SensorModule/releases/tag/v1.1.3">v1.1.3 (v1.1.3)</a>
+                </summary>
+                <p style="white-space:pre-line;">OpenKNX SensorModul Applikation (as Ersatz für das bisherige [Sensomodul v3.8](https://github.com/mumpf/knx-sensor).
+
+Hier ist die [Produktbeschreibung](https://github.com/OpenKNX/OpenKNX/wiki/Produktinfo-Sensormodul) samt Featureliste und [Applikationsbeschreibung](../main/doc/Applikationsbeschreibung-Sensor.md) samt detailliertem Änderungsverzeichnis.
+
+Die Applikation gibt es in 3 Varianten:
+- Als Sensor-, 1-Wire- und Logik-Applikation (SensorModule-OneWire)
+- Als Sensor-, Vpm- und Logik-Applikation (SensorModule-Vpm)
+- Als Sensor-, Vpm-, 1-Wire- und Logik-Applikation (SensorModule-Big)
+
+Die ersten beiden sind vornehmlich dafür da, auf einem SAMD-Sensormodul zu laufen.
+SensorModule-Big sollte für alle RP2040-Varianten benutzt werden.
+</p>
+            </details>
+        
+    </section>
+</div>
+<footer>
+<p><strong>*</strong>: automatisch ermittelt aus aktuellem Release. Nicht jedes Gerät wird zwingend den vollen Funktionsumfang unterstützen bzw. können Module bestimmte Hardware-Fähigkeiten zur Nutzung erfordern.</p>
+</footer>
 </body>
 </html>

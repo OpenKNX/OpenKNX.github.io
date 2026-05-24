@@ -3,93 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenKNX Adafruit ESP32 Feather V2 (TP)</title>
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(2):hover) tr > :nth-child(2).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(3):hover) tr > :nth-child(3).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(4):hover) tr > :nth-child(4).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(5):hover) tr > :nth-child(5).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(6):hover) tr > :nth-child(6).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(7):hover) tr > :nth-child(7).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(8):hover) tr > :nth-child(8).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(9):hover) tr > :nth-child(9).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(10):hover) tr > :nth-child(10).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(11):hover) tr > :nth-child(11).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(12):hover) tr > :nth-child(12).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(13):hover) tr > :nth-child(13).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(14):hover) tr > :nth-child(14).colHover,
+        
+        table.openknxTitleTable tbody tr:hover {
+            background-color: #dfd;
+        }
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(2):hover) thead th.rotate45:nth-child(2) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(3):hover) thead th.rotate45:nth-child(3) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(4):hover) thead th.rotate45:nth-child(4) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(5):hover) thead th.rotate45:nth-child(5) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(6):hover) thead th.rotate45:nth-child(6) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(7):hover) thead th.rotate45:nth-child(7) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(8):hover) thead th.rotate45:nth-child(8) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(9):hover) thead th.rotate45:nth-child(9) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(10):hover) thead th.rotate45:nth-child(10) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(11):hover) thead th.rotate45:nth-child(11) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(12):hover) thead th.rotate45:nth-child(12) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(13):hover) thead th.rotate45:nth-child(13) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(14):hover) thead th.rotate45:nth-child(14) div span
+        
+        {
+            border-bottom: 2px solid #9f9;
+        }
+    </style>
 </head>
 <body>
 
-<h1>OpenKNX Adafruit ESP32 Feather V2 (TP)</h1>
 <p><a href="../">&nwarr; Liste der OpenKNX-Geräte</a></p>
-<p></p>
-<p><a href="functions.html">Übersichtstabelle mit verfügbaren OpenKNX-Applikationen und Modulen</a></p>
-<h2>Verfügbare Applikationen</h2>
+
+<h1>OpenKNX Adafruit ESP32 Feather V2 (TP)</h1>
+
+
+
+<h2>Weitere Informationen</h2>
 <ul>
-    
-    <li data-oam="OAM-Aircondition">
-        (<a href="https://github.com/OpenKNX/OAM-Aircondition">GitHub</a>)
-        <a href="../../oam/OAM-Aircondition/">OAM-Aircondition</a>
-    </li>
-    
-    <li data-oam="OAM-Sonos">
-        (<a href="https://github.com/OpenKNX/OAM-Sonos">GitHub</a>)
-        <a href="../../oam/OAM-Sonos/">OAM-Sonos</a>
-    </li>
-    
-    <li data-oam="OAM-SmartHomeBridge">
-        (<a href="https://github.com/OpenKNX/OAM-SmartHomeBridge">GitHub</a>)
-        <a href="../../oam/OAM-SmartHomeBridge/">OAM-SmartHomeBridge</a>
-    </li>
-    
-    <li data-oam="OAM-InternetServices">
-        (<a href="https://github.com/OpenKNX/OAM-InternetServices">GitHub</a>)
-        <a href="../../oam/OAM-InternetServices/">OAM-InternetServices</a>
-    </li>
-    
+    <li><a href="">Github-Repository</a></li>
+    <li><a href="">Thread im KNX-User-Forum</a></li>
+    <li><a href="">Hardwaredetails</a></li>
+    <li><a href="">Aufbauanleitung</a></li>
 </ul>
 
-<h2>In Applikationen verfügbare Module</h2>
-<ul>
-    <li data-ofm="OFM-ConfigTransfer">
-        (<a href="https://github.com/OpenKNX/OFM-ConfigTransfer">GitHub</a>)
-        <a href="../../ofm/OFM-ConfigTransfer/">OFM-ConfigTransfer</a>
-    </li>
-    <li data-ofm="OFM-FileTransferModule">
-        (<a href="https://github.com/OpenKNX/OFM-FileTransferModule">GitHub</a>)
-        <a href="../../ofm/OFM-FileTransferModule/">OFM-FileTransferModule</a>
-    </li>
-    <li data-ofm="OFM-FunctionBlocks">
-        (<a href="https://github.com/OpenKNX/OFM-FunctionBlocks">GitHub</a>)
-        <a href="../../ofm/OFM-FunctionBlocks/">OFM-FunctionBlocks</a>
-    </li>
-    <li data-ofm="OFM-LogicModule">
-        (<a href="https://github.com/OpenKNX/OFM-LogicModule">GitHub</a>)
-        <a href="../../ofm/OFM-LogicModule/">OFM-LogicModule</a>
-    </li>
-    <li data-ofm="OFM-Network">
-        (<a href="https://github.com/OpenKNX/OFM-Network">GitHub</a>)
-        <a href="../../ofm/OFM-Network/">OFM-Network</a>
-    </li>
-    <li data-ofm="OGM-Common">
-        (<a href="https://github.com/OpenKNX/OGM-Common">GitHub</a>)
-        <a href="../../ofm/OGM-Common/">OGM-Common</a>
-    </li>
-    <li data-ofm="OGM-HardwareConfig">
-        (<a href="https://github.com/OpenKNX/OGM-HardwareConfig">GitHub</a>)
-        <a href="../../ofm/OGM-HardwareConfig/">OGM-HardwareConfig</a>
-    </li>
-    <li data-ofm="knx">
-        (<a href="https://github.com/OpenKNX/knx">GitHub</a>)
-        <a href="../../ofm/knx/">knx</a>
-    </li>
-    <li data-ofm="OFM-InternetWeatherModule">
-        (<a href="https://github.com/OpenKNX/OFM-InternetWeatherModule">GitHub</a>)
-        <a href="../../ofm/OFM-InternetWeatherModule/">OFM-InternetWeatherModule</a>
-    </li>
-    <li data-ofm="OFM-SIPClientModule">
-        (<a href="https://github.com/OpenKNX/OFM-SIPClientModule">GitHub</a>)
-        <a href="../../ofm/OFM-SIPClientModule/">OFM-SIPClientModule</a>
-    </li>
-    <li data-ofm="OFM-SmartHomeBridge">
-        (<a href="https://github.com/OpenKNX/OFM-SmartHomeBridge">GitHub</a>)
-        <a href="../../ofm/OFM-SmartHomeBridge/">OFM-SmartHomeBridge</a>
-    </li>
-    <li data-ofm="OFM-Sonos">
-        (<a href="https://github.com/OpenKNX/OFM-Sonos">GitHub</a>)
-        <a href="../../ofm/OFM-Sonos/">OFM-Sonos</a>
-    </li>
-    <li data-ofm="OFM-UsbExchange">
-        (<a href="https://github.com/OpenKNX/OFM-UsbExchange">GitHub</a>)
-        <a href="../../ofm/OFM-UsbExchange/">OFM-UsbExchange</a>
-    </li>
-</ul>
+<h2>Übersicht</h2>
+<table>
+    <tbody>
+        <tr>
+            <th>Anbieter</th>
+            <td>OpenKNX</td>
+        </tr>
+        <tr>
+            <th>Gerätebezeichnung</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>OpenKNX Geräte-ID</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>FERTIG</td>
+        </tr>
+        <tr>
+            <th>Mikrocontroller</th>
+            <td>RP2040</td>
+        </tr>
+        <tr>
+            <th>Geräteplattform</th>
+            <td>REG1</td>
+        </tr>
+        <tr>
+            <th>DALI-Anschlüsse</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Verfügbarkeit</th>
+            <td>OpenKNX, BAUSATZ, PCB</td>
+        </tr>
+        <tr>
+            <th>Bezugsquelle</th>
+            <td><a href="...">...</a></td></tr>
+    </tbody>
+</table>
+
+<h2>Nutzungsmöglichkeiten</h2>
+
+<table class="openknxTitleTable">
+    <caption></caption>
+    <colgroup>
+        <col class="before-new-cols" />
+
+       
+        
+        <col data-ofm="knx" />
+        
+        <col data-ofm="OGM-HardwareConfig" />
+        
+        <col data-ofm="OGM-Common" />
+        
+        <col data-ofm="OFM-FileTransferModule" />
+        
+        <col data-ofm="OFM-Network" />
+        
+        <col data-ofm="OFM-UsbExchange" />
+        
+        <col data-ofm="OFM-ConfigTransfer" />
+        
+        <col data-ofm="OFM-LogicModule" />
+        
+        <col data-ofm="OFM-FunctionBlocks" />
+        
+        <col data-ofm="OFM-InternetWeatherModule" />
+        
+        <col data-ofm="OFM-SmartHomeBridge" />
+        
+        <col data-ofm="OFM-Sonos" />
+        
+        <col data-ofm="*special*" />
+       
+
+       
+    </colgroup>
+    <thead>
+      <tr class="colGroupTitle">
+        <th class="before-new-cols">Applikation</th>
+        <th class="before-new-cols" colspan="13">Enthaltene Module</th>
+        
+      </tr>
+      <tr class="hoverTrigger">
+        <th class="before-new-cols"></th>
+
+       
+        
+        <th class="rotate45" data-ofm="knx"><div><span><a href="/ofm/knx">knx</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OGM-HardwareConfig"><div><span><a href="/ofm/OGM-HardwareConfig">OGM-HardwareConfig</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OGM-Common"><div><span><a href="/ofm/OGM-Common">OGM-Common</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-FileTransferModule"><div><span><a href="/ofm/OFM-FileTransferModule">OFM-FileTransferModule</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-Network"><div><span><a href="/ofm/OFM-Network">OFM-Network</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-UsbExchange"><div><span><a href="/ofm/OFM-UsbExchange">OFM-UsbExchange</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-ConfigTransfer"><div><span><a href="/ofm/OFM-ConfigTransfer">OFM-ConfigTransfer</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-LogicModule"><div><span><a href="/ofm/OFM-LogicModule">OFM-LogicModule</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-FunctionBlocks"><div><span><a href="/ofm/OFM-FunctionBlocks">OFM-FunctionBlocks</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-InternetWeatherModule"><div><span><a href="/ofm/OFM-InternetWeatherModule">OFM-InternetWeatherModule</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-SmartHomeBridge"><div><span><a href="/ofm/OFM-SmartHomeBridge">OFM-SmartHomeBridge</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-Sonos"><div><span><a href="/ofm/OFM-Sonos">OFM-Sonos</a></span></div></th>
+        
+        <th class="singleModules before-new-cols" data-ofm="*special*">Nur in dieser Applikation:</th>
+       
+
+       
+
+      </tr>
+      <tr class="iconRow hoverTrigger">
+        <th class="before-new-cols"></th>
+
+       
+        <th data-ofm="knx" class="colHover" title="">|</th>
+        <th data-ofm="OGM-HardwareConfig" class="colHover" title="">|</th>
+        <th data-ofm="OGM-Common" class="colHover" title="OpenKNX: OpenKNX Common (Basisfunktionen)"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/openknx.png" /></th>
+        <th data-ofm="OFM-FileTransferModule" class="colHover" title="">|</th>
+        <th data-ofm="OFM-Network" class="colHover" title="Netzwerk: Netzwerkeinstellungen"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/ethernet.png" /></th>
+        <th data-ofm="OFM-UsbExchange" class="colHover" title="">|</th>
+        <th data-ofm="OFM-ConfigTransfer" class="colHover" title="Konfigurationstransfer: Kopieren, Import, Export von ETS-Einstellungen"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ConfigTransfer/refs/heads/v1/src/Baggages/Icons/ofm-configtransfer.png" /></th>
+        <th data-ofm="OFM-LogicModule" class="colHover" title="Logiken: Logikfunktionen, Wertekonvertierung und Zeitschaltuhren"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/blur.png" /></th>
+        <th data-ofm="OFM-FunctionBlocks" class="colHover" title="Funktionsblöcke: Bausteine mit verschiedenen Standardfunktionen"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-FunctionBlocks/refs/heads/v1/src/Baggages/Icons/texture-box.png" /></th>
+        <th data-ofm="OFM-InternetWeatherModule" class="colHover" title="Internet Wetter: Wetterdaten von Internetdiensten"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-InternetWeatherModule/refs/heads/v1/src/Baggages/Icons/weather-partly-cloudy.png" /></th>
+        <th data-ofm="OFM-SmartHomeBridge" class="colHover" title="Bridge: SmartHomeBridge"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/shape.png" /></th>
+        <th data-ofm="OFM-Sonos" class="colHover" title="Sonos Tonquellen: Steuerung von Sonos-Lautsprechern"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-Sonos/refs/heads/v1/src/Baggages/Icons/waveform.png" /></th>
+        
+        <th class="before-new-cols" data-ofm="*special*"></th>
+       
+
+       
+
+      </tr>
+    </thead>
+    <tbody>
+    
+    
+    
+    
+    <tr data-oam="OAM-Aircondition" class="hoverTrigger">
+        <th class="before-new-cols"><a href="/oam/OAM-Aircondition">OAM-Aircondition</a></th>
+
+       
+        
+        <td data-ofm="knx" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OGM-HardwareConfig" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OGM-Common" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-FileTransferModule" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-Network" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-UsbExchange" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-ConfigTransfer" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-LogicModule" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td class="left before-new-cols" data-ofm="*special*">
+                <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9723;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OAM-Aircondition/refs/heads/v1/src/Baggages/Icons/air-conditioner.png" title="Internes Modul zur Steuerung von Klimaanlagen" />&nbsp;AirconditionModule</span>
+        </td>
+       
+
+       
+
+    </tr>
+    
+    
+    
+    
+    <tr data-oam="OAM-Sonos" class="hoverTrigger">
+        <th class="before-new-cols"><a href="/oam/OAM-Sonos">OAM-Sonos</a><div class="oam-details">Sonos Steuerung über KNX</div></th>
+
+       
+        
+        <td data-ofm="knx" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OGM-HardwareConfig" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OGM-Common" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-FileTransferModule" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-Network" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-UsbExchange" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-ConfigTransfer" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-LogicModule" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-Sonos" class="isPart colHover">&#9724;</td>
+        
+        <td class="left before-new-cols" data-ofm="*special*">
+        </td>
+       
+
+       
+
+    </tr>
+    
+    
+    
+    
+    <tr data-oam="OAM-SmartHomeBridge" class="hoverTrigger">
+        <th class="before-new-cols"><a href="/oam/OAM-SmartHomeBridge">OAM-SmartHomeBridge</a></th>
+
+       
+        
+        <td data-ofm="knx" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OGM-HardwareConfig" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OGM-Common" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-FileTransferModule" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-Network" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-UsbExchange" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-ConfigTransfer" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-LogicModule" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td class="left before-new-cols" data-ofm="*special*">
+        </td>
+       
+
+       
+
+    </tr>
+    
+    
+    
+    
+    <tr data-oam="OAM-InternetServices" class="hoverTrigger">
+        <th class="before-new-cols"><a href="/oam/OAM-InternetServices">OAM-InternetServices</a></th>
+
+       
+        
+        <td data-ofm="knx" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OGM-HardwareConfig" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OGM-Common" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-FileTransferModule" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-Network" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-UsbExchange" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-ConfigTransfer" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-LogicModule" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td class="left before-new-cols" data-ofm="*special*">
+                <span data-ofm="OFM-SIPClientModule"><span class="isPart">&#9724;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OFM-SIPClientModule/refs/heads/v1/src/Baggages/Icons/phone-forward-outline.png" title="Anrufe über SIP starten" />&nbsp;<a href="/ofm/OFM-SIPClientModule">OFM-SIPClientModule</a></span>
+        </td>
+       
+
+       
+
+    </tr>
+    
+    </tbody>
+</table>
 </body>
 </html>

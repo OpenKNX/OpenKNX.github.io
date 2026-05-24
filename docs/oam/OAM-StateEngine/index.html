@@ -3,81 +3,411 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>OAM-StateEngine | OpenKNX Applikation | Übersicht</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .oam_relations {
+            display: flex;
+        }
+        .oam_relations section {
+            max-width: 30%;
+            margin-right: 3em;
+        }
+        .latest_releases summary {
+            font-weight: bold;
+        }
+        .related_modules a img {
+            width: 16px;
+            height: 16px;
+        }
+        .related_modules a .noicon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
 
 
 
-
-
-<h1>OAM-StateEngine</h1>
 <p><a href="../">&nwarr; Liste der OpenKNX-Applikationen</a></p>
+<h1>OAM-StateEngine</h1>
+<p><a href="https://github.com/OpenKNX/OAM-StateEngine">GitHub</a></p>
 <p>State Machines for KNX configurable via ETS</p>
-<h2>Enthaltene Module</h2>
-<ul>
-    
-    <li data-ofm="knx">
-        (<a href="https://github.com/OpenKNX/knx">GitHub</a>)
-        <a href="../../ofm/knx/">knx</a>
-    </li>
-    
-    <li data-ofm="OGM-HardwareConfig">
-        (<a href="https://github.com/OpenKNX/OGM-HardwareConfig">GitHub</a>)
-        <a href="../../ofm/OGM-HardwareConfig/">OGM-HardwareConfig</a>
-    </li>
-    
-    <li data-ofm="OGM-Common">
-        (<a href="https://github.com/OpenKNX/OGM-Common">GitHub</a>)
-        <a href="../../ofm/OGM-Common/">OGM-Common</a>
-    </li>
-    
-    <li data-ofm="OFM-FileTransferModule">
-        (<a href="https://github.com/OpenKNX/OFM-FileTransferModule">GitHub</a>)
-        <a href="../../ofm/OFM-FileTransferModule/">OFM-FileTransferModule</a>
-    </li>
-    
-    <li data-ofm="OFM-ConfigTransfer">
-        (<a href="https://github.com/OpenKNX/OFM-ConfigTransfer">GitHub</a>)
-        <a href="../../ofm/OFM-ConfigTransfer/">OFM-ConfigTransfer</a>
-    </li>
-    
-    <li data-ofm="OFM-LogicModule">
-        (<a href="https://github.com/OpenKNX/OFM-LogicModule">GitHub</a>)
-        <a href="../../ofm/OFM-LogicModule/">OFM-LogicModule</a>
-    </li>
-    
-    <li data-ofm="OFM-DFA">
-        (<a href="https://github.com/OpenKNX/OFM-DFA">GitHub</a>)
-        <a href="../../ofm/OFM-DFA/">OFM-DFA</a>
-    </li>
-    
-</ul>
+<p></p>
 
-<h2>Unterstützte Geräte</h2>
-<h3>OpenKNX</h3>
-<ul>
-    
-    <li data-dev="OpenKNX PiPico BCU Connector"><a href="../../devices/OpenKNX_PiPico_BCU_Connector/">OpenKNX PiPico BCU Connector</a></li>
-    
-    <li data-dev="OpenKNX REG1 Basismodul"><a href="../../devices/OpenKNX_REG1_Basismodul/">OpenKNX REG1 Basismodul</a></li>
-    
-    <li data-dev="OpenKNX REG1 Basismodul V0"><a href="../../devices/OpenKNX_REG1_Basismodul_V0/">OpenKNX REG1 Basismodul V0</a></li>
-    
-    <li data-dev="OpenKNX REG2 PiPico V1"><a href="../../devices/OpenKNX_REG2_PiPico_V1/">OpenKNX REG2 PiPico V1</a></li>
-    
-    <li data-dev="OpenKNXiao Mini RP2040 V1"><a href="../../devices/OpenKNXiao_Mini_RP2040_V1/">OpenKNXiao Mini RP2040 V1</a></li>
-    
-    <li data-dev="OpenKNXiao Mini ESP32 V1"><a href="../../devices/OpenKNXiao_Mini_ESP32_V1/">OpenKNXiao Mini ESP32 V1</a></li>
-    
-</ul>
-<h3>Andere Geräte</h3>
-<ul>
-    
-    <li data-dev="SmartMF-1TE-RP2040">SmartMF-1TE-RP2040</li>
-    
-</ul>
+<div class="oam_relations">
+    <section class="related_modules">
+        <h2>Enthaltene Module*</h2>
+        <ul>
+            
+            
+            <li data-ofm="OFM-DFA">
+                
+                <a href="../../ofm/OFM-DFA/"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-DFA/refs/heads/v1/src/Baggages/Icons/ofm-dfa.png" /> OFM-DFA</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-LogicModule">
+                
+                <a href="../../ofm/OFM-LogicModule/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/blur.png" /> OFM-LogicModule</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-ConfigTransfer">
+                
+                <a href="../../ofm/OFM-ConfigTransfer/"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ConfigTransfer/refs/heads/v1/src/Baggages/Icons/ofm-configtransfer.png" /> OFM-ConfigTransfer</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-FileTransferModule">
+                
+                <a href="../../ofm/OFM-FileTransferModule/"><span class="noicon"> </span> OFM-FileTransferModule</a>
+            </li>
+            
+            
+            <li data-ofm="OGM-Common">
+                
+                <a href="../../ofm/OGM-Common/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/openknx.png" /> OGM-Common</a>
+            </li>
+            
+            
+            <li data-ofm="OGM-HardwareConfig">
+                
+                <a href="../../ofm/OGM-HardwareConfig/"><span class="noicon"> </span> OGM-HardwareConfig</a>
+            </li>
+            
+            
+            <li data-ofm="knx">
+                
+                <a href="../../ofm/knx/"><span class="noicon"> </span> knx</a>
+            </li>
+            
+        </ul>
+    </section>
+    <section class="related_devices">
+        <h2>Unterstützte Geräte*</h2>
+        <ul>
+            
+            <li data-dev="OpenKNX PiPico BCU Connector"><a href="../../devices/OpenKNX_PiPico_BCU_Connector/">OpenKNX PiPico BCU Connector</a></li>
+            
+            <li data-dev="OpenKNX REG1 Basismodul"><a href="../../devices/OpenKNX_REG1_Basismodul/">OpenKNX REG1 Basismodul</a></li>
+            
+            <li data-dev="OpenKNX REG1 Basismodul V0"><a href="../../devices/OpenKNX_REG1_Basismodul_V0/">OpenKNX REG1 Basismodul V0</a></li>
+            
+            <li data-dev="OpenKNX REG2 PiPico V1"><a href="../../devices/OpenKNX_REG2_PiPico_V1/">OpenKNX REG2 PiPico V1</a></li>
+            
+            <li data-dev="OpenKNXiao Mini RP2040 V1"><a href="../../devices/OpenKNXiao_Mini_RP2040_V1/">OpenKNXiao Mini RP2040 V1</a></li>
+            
+            <li data-dev="OpenKNXiao Mini ESP32 V1"><a href="../../devices/OpenKNXiao_Mini_ESP32_V1/">OpenKNXiao Mini ESP32 V1</a></li>
+            
+        </ul>
+        
+        
+            
+        
+        
+        <details>
+            <summary>Andere Geräte</summary>
+            <ul>
+                
+                <li data-dev="SmartMF-1TE-RP2040">SmartMF-1TE-RP2040</li>
+                
+            </ul>
+        </details>
+        
+    </section>
+    <section class="oam_releases">
+        <h2>Releases</h2>
+        
+        
+        
+        
+            <details class="latest_releases">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.8.2">v0.8.2 (Bedingter Start-Zustand + Fixes + OpenKNX Updates) (v0.8.2)</a>
+                </summary>
+                <p style="white-space:pre-line;">Dieses Bugfix-Release enthält verschiedene Korrekturen für nicht durch Nutzer gemeldete Fehler. Details siehe unten
 
+## Update-Hinweise
+
+### Wichtig für Nutzer von v0.1 (Public Beta "StateEngineDFA16")
+
+> Wie bereits für v0.5, v0.6, v0.7.x und 0.8:
+>> 1. Die Geräteadresse (PA) muss erneut zugewiesen werden, da sich das interne Speicherformat im Stack verändert hat.
+>> 2. KO-Nummern im Bereich 2 bis 19 haben sich verändert.
+>>    Ggf. vorhandene interne Referenzen müssen manuell angepasst werde.
+>>    Zur Übersicht siehe Tabelle [Änderung von zentralen Kommunikationsobjekten](#änderung-von-zentralen-kommunikationsobjekten) unten.
+
+### Für Nutzer von **OpenKNX REG1-Base und Version v0.6 oder v0.7.x**
+ 
+> Die Unterscheidung in verschiedene Firmware-Versionen entfällt, 
+> da die Zeit-Status-Anzeige nun per ETS konfiguriert werden kann.
+> Beide Verhaltensweisen können jetzt über die einheitliche Firmware `OpenKNX-REG1-Base` dargestellt werden.
+> Ausgehend von der alten Firmware wird folgendes Vorgehen zur Migration empfohlen:
+> * `firmware-OpenKNX-REG1-Base___no-time-led` - hier ist *keine* gesonderte Konfiguration erforderlich
+> * `firmware-OpenKNX-REG1-Base___time-led3` - Auswahl der Funktion **Zeitstatus** in der ETS-Applikation unter OpenKNX / Info LEDs / LED "Info {1,2,3}". 
+
+## Änderungen
+
+* Fix-Update OFM-**DFA** auf 0.8.0 (von 0.8.2; [Changes](https://github.com/OpenKNX/OFM-DFA/blob/v0.8.2/CHANGELOG.md))
+  * Fixes Eingänge
+    * Fix: *Bestehendes KO* nutzte falsche KO-Nummer
+    * Fix: *Eingang Symbol T* funktionierte nicht (oder fehlerhaft) über KO
+  * Fixes: Rekonstruktionsfunktion
+    * Fix: Es hätte ein falscher Rest-Timeout rekonstuiert werden können, nach Shutdown fast zeitgleich zum Ende
+    * Fix: Verhalten bei zuvor inaktiven Kanälen in Verbindung mit Pausieren 
+
+## Für Entwickler
+
+* **Wichtig:** Update auf OpenKNXproducer 4.0.1 erforderlich
+
+
+
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.8.0">v0.8.0 (Bedingter Start-Zustand + OpenKNX Updates) (v0.8.0)</a>
+                </summary>
+                <p style="white-space:pre-line;"><!-- ## v0.8.0: 2026-03-12 (Bedingter Start-Zustand + OpenKNX Updates)  -->
+
+Das Update liefert eine Erweiterung der Zustandsautomaten um bedingte Übergänge zur Ermittlung des Startzugangs, stellt um auf die neue OpenKNX-LED-Implementierung und konsistentere KO-Benennung.
+
+## Update-Hinweise
+
+### Wichtig für Nutzer von v0.1 (Public Beta "StateEngineDFA16")
+
+> Wie bereits für v0.5, v0.6 und v0.7.x:
+>> 1. Die Geräteadresse (PA) muss erneut zugewiesen werden, da sich das interne Speicherformat im Stack verändert hat.
+>> 2. KO-Nummern im Bereich 2 bis 19 haben sich verändert.
+>>    Ggf. vorhandene interne Referenzen müssen manuell angepasst werde.
+>>    Zur Übersicht siehe Tabelle [Änderung von zentralen Kommunikationsobjekten](#änderung-von-zentralen-kommunikationsobjekten) unten.
+
+### Für Nutzer von **OpenKNX REG1-Base und Version v0.6 oder v0.7.x**
+ 
+> Die Unterscheidung in verschiedene Firmware-Versionen entfällt, 
+> da die Zeit-Status-Anzeige nun per ETS konfiguriert werden kann.
+> Beide Verhaltensweisen können jetzt über die einheitliche Firmware `OpenKNX-REG1-Base` dargestellt werden.
+> Ausgehend von der alten Firmware wird folgendes Vorgehen zur Migration empfohlen:
+> * `firmware-OpenKNX-REG1-Base___no-time-led` - hier ist *keine* gesonderte Konfiguration erforderlich
+> * `firmware-OpenKNX-REG1-Base___time-led3` - Auswahl der Funktion **Zeitstatus** in der ETS-Applikation unter OpenKNX / Info LEDs / LED "Info {1,2,3}". 
+
+## Änderungen
+
+* Update OFM-**DFA** auf 0.8 (von 0.7.1; [Changes](https://github.com/OpenKNX/OFM-DFA/blob/v1/CHANGELOG.md))
+  * Neues Feature: Starten mit bedingtem Zustandsübergang (als Option)
+  * Update: KO-Bezeichner (Name und Objektfunktion) entsprechend neuer einheitlicher Konventionen für OpenKNX-Module
+* Update anderer OpenKNX-Module:
+  * **knx** (Stack) auf 2.3.0
+  * OGM-**Common** auf 1.7.2 (von 1.5.1; [Changes](https://github.com/OpenKNX/OGM-Common/blob/v1/CHANGELOG.md#172-2026-03-02))
+    * Neues Feature: Status-LEDs-Konfiguration 
+    * Hinweis: Synchronisation von Modul-Support bleibt deaktiviert, da keine hardwareabhängigkeit vorhanden
+  * OFM-**ConfigTransfer** auf 0.5 (von 0.4; [Changelog](https://github.com/OpenKNX/OFM-ConfigTransfer/blob/v1/CHANGELOG.md#050-log-patches-2026-02-24))
+  * OFM-**LogicModule** auf 4.0.1 (von 3.7.3; [Änderungshistorie](https://github.com/OpenKNX/OFM-LogicModule/blob/v1/doc/Applikationsbeschreibung-Logik.md#%C3%A4nderungshistorie))
+    * Neues Feature: Steuerung von Status-LEDs
+  * OFM-**FileTransfer**Module auf 0.1.5
+  * OGM-HardwareConfig auf Stand 2026-02-23
+
+## Für Entwickler
+
+* **Wichtig:** Update auf OpenKNXproducer 4.0.1 erforderlich
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.7.1">v0.7.1 (Bedingte Zustandsübergänge) (v0.7.1)</a>
+                </summary>
+                <p style="white-space:pre-line;">> *Anmerkung:* Das Versions-Schema weicht vom Konzept der semantischen Versionierung ([SemVer](https://semver.org/)) ab!
+> Dies ist aufgrund von technischen Limitationen der ETS erforderlich.
+
+> Wichtige Update-Hinweise **für Nutzer der Version v0.1 Public Beta "StateEngineDFA16"**:
+>
+> Wie bereits für v0.5, v0.6 und v0.7:
+>> 1. Die Geräteadresse (PA) muss erneut zugewiesen werden, da sich das interne Speicherformat im Stack verändert hat.
+>> 2. KO-Nummern im Bereich 2 bis 19 haben sich verändert. Ggf. vorhandene interne Referenzen müssen manuell angepasst werde. Siehe dazu Hinweis in Release-Notes zu v0.6.
+
+## v0.7.1: 2025-11-09 (Bedingte Zustandsübergänge + Updates + FAQs)
+
+* Update OFM-**DFA** auf 0.7.1 mit u.A. (Details siehe [Changelog v0.7.0](https://github.com/OpenKNX/OFM-DFA/blob/v1/CHANGELOG.md#2025-11-02-v070-bedingte-zustands%C3%BCberg%C3%A4nge) und [Changelog v0.7.1](https://github.com/OpenKNX/OFM-DFA/blob/v1/CHANGELOG.md#2025-11-09-v071-bedingte-zustands%C3%BCberg%C3%A4nge)):
+  * Feature (Umfangreiche Funktionserweiterung): **Bedingte Zustandsübergänge**
+  * Feature: Direktes Auslösen von Timeouts über KO
+  * Diverse Detail-Verbesserungen in der ETS-App und Kommandos für Diagnose.
+* Update anderer OpenKNX-Module:
+  * **knx** auf 2.2.2
+  * OGM-**Common** auf 1.5.1
+    * Hinweis: Synchronisation von Modul-Support wurde deaktiviert, da keine hardwareabhängigkeit vorhanden
+  * OFM-**LogicModule** auf 3.7.3
+  * OFM-**FileTransfer**Module auf 0.1.4
+  * OGM-HardwareConfig auf Stand 2025-10-24
+* Update auf OpenKNXproducer 3.12.2 mit Anpassung Versionskonfiguration
+
+
+<!--
+## v0.7.1: 2025-11-09 (Bedingte Zustände + Updates + FAQs)
+
+* Update OFM-**DFA** auf Fix-Version 0.7.1:
+  * Fix: Kommando-Verarbeitung `history` und `*TEST*`
+  * Refactor: Kommando-Vorverarbeitung
+
+
+## v0.7.0: 2025-11-02 (Bedingte Zustände + OpenKNX Updates)
+
+* Update OFM-**DFA** auf 0.7 mit u.A.:
+  * Feature (Umfangreiche Funktionserweiterung): **Bedingte Zustände**
+  * Feature: Direktes Auslösen von Timeouts über KO
+  * Diverse Detail-Verbesserungen in der ETS-App und Kommandos für Diagnose.
+* Update anderer OpenKNX-Module:
+  * **knx** auf 2.2.2
+  * OGM-**Common** auf 1.5.1
+    * Hinweis: Synchronisation von Modul-Support wurde deaktiviert, da keine hardwareabhängigkeit vorhanden
+  * OFM-**LogicModule** auf 3.7.3
+  * OFM-**FileTransfer**Module auf 0.1.4
+  * OGM-HardwareConfig auf Stand 2025-10-24
+* Update auf OpenKNXproducer 3.12.2 mit Anpassung Versionskonfiguration
+--></p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.6">v0.6 (Fix Ausgänge + Hardware-Support + Updates/Fixes) (v0.6)</a>
+                </summary>
+                <p style="white-space:pre-line;">## v0.6: 2025-09-18 (Fix Outputs + OpenKNX Updates)
+
+> **Wichtige Update-Hinweise<!-- für Nutzer der Version v0.1 Public Beta "StateEngineDFA16"-->:**
+> 1. Die Geräteadresse (PA) muss erneut zugewiesen werden, da sich das interne Speicherformat im Stack verändert hat.
+> 2. Eine Rekonstruktion wird u.U. nicht funktionieren, beim Update von älteren Versionen (<v0.4)
+> 3. KO-Nummern im Bereich 2 bis 19 haben sich verändert.
+>    Ggf. vorhandene interne Referenzen müssen manuell angepasst werde.
+>    Zur Übersicht siehe Tabelle [Änderung von zentralen Kommunikationsobjekten](#änderung-von-zentralen-kommunikationsobjekten) unten.
+
+* Fixes/Update: OFM-DFA auf 0.6
+  * Behebt Fehler bei Ausgängen mit DPT 8,9,13,14
+  * Fix: Diagnose-Kommandos im Modul wurden auch angezeigt und verarbeitet, wenn das Gerät nicht konfiguriert ist
+  * Details siehe [Changelog](https://github.com/OpenKNX/OFM-DFA/blob/v1/CHANGELOG.md)
+* Unterstützung von Status-Anzeige für neue Zeitimplementierung für REG1-Base.<br />Die Firmware wird in zwei Varianten bereitstellt:
+  * `firmware-OpenKNX-REG1-Base___time-led3` - mit dauerhaft blinkender LED bei bekannter Zeit
+  * `firmware-OpenKNX-REG1-Base___no-time-led` - ohne LED für Zeit
+* Fix für abweichendes Projekt-Encoding:
+  Bisher wurden Sonderzeichen wie Umlaute fehlerhaft auf dem Bus ausgegeben, 
+  falls das Projekt-Encoding in der ETS auf UTF-8 eingestellt wurde (wie von manchen Herstellern gefordert).
+  Durch explizite Angabe des Encodings für die Applikation mit Nutzung des Producers v3.9 tritt dieses Problem nicht mehr auf. 
+* Update auf den neuen stabilen Stand 2025-08 (einschlißlich Fixes für neue Zeitimplementierung):
+  * **knx** auf auf 2.2.1
+  * OGM-**Common** auf 1.4.3
+  * OFM-**ConfigTransfer** auf 0.4
+  * OFM-**Logic**Module auf 3.7.2
+  * OFM-**FileTransferModule** auf 0.1.1
+  * OGM-**HardwareConfig** auf Stand 2025-08-01 (7dad5ab82a44ab893d6df64f79f39f9d0a76ece2)
+* Fix #8: Falsches Speicherlayout (16MiB statt 2MiB) war für einige Geräte definiert.<br />Betroffene Geräte:
+  * *OpenKNX REG2 PiPico V1*
+  * *OpenKNXiao Mini V1*
+* Erweiterte Hardware-Unterstützung:
+  * *SmartMF 1TE REG*
+  * Experimentell: *OpenKNXiao Mini ESP32 V1*
+* Dokumentation erweitert
+<!--
+* Erweiterungen in Entwicklungsumgebung
+  * Build-Action to Check Full Project 
+  * Add Tasks for Git-Updates
+-->
+
+<!--
+## v0.5 2025-08 (nicht veröffentlicht)
+## v0.4: 2025-07-11 (kein öffentliches Release)
+-->
+
+
+### Änderung von zentralen Kommunikationsobjekten
+
+| KO                           | alt | neu | Kommentar                                |
+|------------------------------|-----|-----|------------------------------------------|
+| In Betrieb                   | 1   | 1   | (unverändert)                            |
+| Uhrzeit                      | 2 * | 2   | KO war bislang geteilt mit Uhrzeit/Datum |
+| Datum                        | 3   | 3   | (unverändert)                            |
+| Uhrzeit/Datum                | 2 * | 4   | Separiert von KO 2 Uhrzeit.              |
+| Sommerzeit aktiv             | 10  | 5   |                                          |
+| Speichern                    | 11  | 6   |                                          |
+| Diagnose                     | 7   | 7   | (unverändert)                            |
+| Urlaub                       | 4   | 15  |                                          |
+| Welcher Feiertag ist heute?  | 5   | 16  |                                          |
+| Welcher Feiertag ist morgen? | 6   | 17  |                                          |
+<!--
+| LED sperren                  | 8   | 18  | (nicht in State-Engine enthalten)        |
+| Buzzer sperren               | 9   | 19  | (nicht in State-Engine enthalten)        |
+-->
+
+\*: Doppelbelegung der KO-Nummer. Einblendung war abhängig von Konfiguration. 
+
+<!-- 368ec839e345da067f9dfd225b1431884033d5080d2ada36063f785df30fd1d6 *StateEngine-DFA16-Release-0.6.zip --></p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-StateEngine/releases/tag/DFA16/v0.1-beta">DFA16 v0.1 Public Beta (DFA16/v0.1-beta)</a>
+                </summary>
+                <p style="white-space:pre-line;"># Erste öffentliche Beta-Version der OpenKNX StateEngine
+
+Abbildung von zustandsabhängigem Verhalten in KNX, konfigurierbar über die ETS, durch das erstmalige Bereitstellung des neue OpenKNX-Moduls für [Zustandsautomaten](https://github.com/OpenKNX/OFM-DFA). Ebenfalls enthalten sind das OpenKNX [Logik-Modul](https://github.com/OpenKNX/OFM-LogicModule), sowie OpenKNX [Konfigurationstansfer](https://github.com/OpenKNX/OFM-ConfigTransfer) und OpenKNX [Dateitransfer](https://github.com/OpenKNX/OFM-FileTransferModule).
+
+Die enthaltene Firmware ist auf einer Vielzahl von generischen OpenKNX-Geräten ausführbar: [OpenKNX REG1-Base](https://github.com/OpenKNX/OpenKNX/wiki/REG1-Base) (V1), [OpenKNX REG1-Base V0](https://github.com/OpenKNX/OpenKNX/wiki/REG1-Base-V0), [OpenKNX PiPico-BCU-Connector](https://github.com/OpenKNX/OpenKNX/wiki/PiPico-BCU-Connector), OpenKNX REG2 und OpenKNXiao RP2040.
+
+## Kurzbeschreibung Zustandsautomaten (OAM-DFA / DFA16)
+* **16 Zustände**; Ausgabe des aktuellen Zustands über KO, optional auch direkter Aufruf des Zustands über separates oder gemeinsames KO.
+* **8 Eingabesymbole (A bis H)**, die durch bis zu 8 unabhängige DPT1 Eingabe-KOs oder Logikausgänge erzeugt werden; bei Eingang von 1 und/oder 0. Durch optionale Konfiguration als Eingabesymbolpaar kann z.B. ohne weiter Vorverarbeitung auf das Auftreten oder den Wegfall von erkannter Präsenz reagiert werden.
+* Ein **Timeout-Eingabesymbol T** wird erzeugt, wenn innerhalb eines zustands-spezifisch konfigurierten Zeitintervalls keine Eingabe erfolgt (bzw. kein anderes Ereignis eingetreten) ist.
+* Für jede Kombination aus Zustand und Eingabesymbol/ Ereignis/ kann ein Nachfolgezustand festgelegt werden.
+*  **4 Ausgabekanäle (O1 bis O4)** mit gängigen DPTs, darunter auch ein Kanal mit Text. Für jede Kombination aus Zustand und Ausgang kann ein Wert und ein Sendeverhalten definiert werden.
+* Eine **Rekonstruktionsfunktion** ermöglicht auf Wunsch beim Neustart eine Fortsetzung in dem letzten gespeicherten Zustand/Status.
+* Optionale **Pausefunktion** zur Unterbrechnung der Ausführung per KO.
+
+## Neuerungen in diesem Release
+* Neue unabhängige Applikation **StateEngine-DFA16 mit 16xDFA16 + 48xLOG**: Reduktion von 32 auf 16 Zustände, und Halbierung Kanal-Anzahl zur Vermeidung sehr langer Programmierzeiten (Bisher >6 Minuten bei jedem 10 Programmiervorgang)
+* Update OFM-**DFA** auf 0.4.0-dev (mit Detail-Verbesserungen aus PROD Beta-Test)
+* Erweiterung Hardware-Support: Unterstützung von *OpenKNXiao Mini* Hardware</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.2-beta">(DFA32) v0.2 Beta (v0.2-beta)</a>
+                </summary>
+                <p style="white-space:pre-line;"></p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.1-beta">(DFA32) v0.1 Internal Beta (v0.1-beta)</a>
+                </summary>
+                <p style="white-space:pre-line;"></p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-StateEngine/releases/tag/v0.0-alpha">v0.0 First Alpha (v0.0-alpha)</a>
+                </summary>
+                <p style="white-space:pre-line;">Alpha-version for first testing.
+
+ETS v0.0 alpha</p>
+            </details>
+        
+    </section>
+</div>
+<footer>
+<p><strong>*</strong>: automatisch ermittelt aus aktuellem Release. Nicht jedes Gerät wird zwingend den vollen Funktionsumfang unterstützen bzw. können Module bestimmte Hardware-Fähigkeiten zur Nutzung erfordern.</p>
+</footer>
 </body>
 </html>

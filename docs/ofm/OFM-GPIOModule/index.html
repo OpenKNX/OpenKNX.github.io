@@ -3,37 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OFM-GPIOModule</title>
+    <title>OFM-GPIOModule | OpenKNX Modul | Übersicht</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .ofm_relations {
+            display: flex;
+        }
+        .ofm_relations section {
+            max-width: 30%;
+            margin-right: 3em;
+        }
+    </style>
 </head>
 <body>
 
-<h1>OFM-GPIOModule</h1>
 <p><a href="../">&nwarr; Liste der OpenKNX-Module</a></p>
+<h1>OFM-GPIOModule</h1>
+<p><a href="https://github.com/OpenKNX/OFM-GPIOModule">GitHub</a></p>
 <p></p>
 <p><a href="functions.html">Übersichtstabelle mit verfügbaren OpenKNX-Applikationen und unterstützten Geräten</a></p>
-<h2>Verfügbar in Applikationen</h2>
-<ul>
-    
-    <li data-oam="OAM-SwitchActuator">
-        (<a href="https://github.com/OpenKNX/OAM-SwitchActuator">GitHub</a>)
-        <a href="../../oam/OAM-SwitchActuator/">OAM-SwitchActuator</a>
-    </li>
-    
-    <li data-oam="OAM-HeatingActuator">
-        (<a href="https://github.com/OpenKNX/OAM-HeatingActuator">GitHub</a>)
-        <a href="../../oam/OAM-HeatingActuator/">OAM-HeatingActuator</a>
-    </li>
-    
-</ul>
 
-<h2>Verfügbar in Firmware für folgende Geräte</h2>
-<h3>OpenKNX</h3>
-<ul>
-</ul>
-<h3>Andere Geräte</h3>
-<ul>
-    <li data-dev="AB-SmartHouse-SwitchActuator-REG6-8CH">AB-SmartHouse-SwitchActuator-REG6-8CH</li>
-</ul>
+<div class="ofm_relations">
+    <section class="related_oams">
+        <h2>Verfügbar in Applikationen</h2>
+        <ul>
+            
+            <li data-oam="OAM-SwitchActuator">
+                <a href="../../oam/OAM-SwitchActuator/">OAM-SwitchActuator</a>
+            </li>
+            
+            <li data-oam="OAM-HeatingActuator">
+                <a href="../../oam/OAM-HeatingActuator/">OAM-HeatingActuator</a>
+            </li>
+            
+        </ul>
+    </section>
+    <section class="related_devices">
+        <h2>Verfügbar in Firmware für folgende Geräte</h2>
+        <ul>
+        </ul>
+        <details>
+            <summary>Andere Geräte</summary>
+            <ul>
+                <li data-dev="AB-SmartHouse-SwitchActuator-REG6-8CH">AB-SmartHouse-SwitchActuator-REG6-8CH</li>
+            </ul>
+        </details>
+    </section>
+
 
 </body>
 </html>

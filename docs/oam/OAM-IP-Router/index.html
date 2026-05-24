@@ -3,66 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>OAM-IP-Router | OpenKNX Applikation | Übersicht</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .oam_relations {
+            display: flex;
+        }
+        .oam_relations section {
+            max-width: 30%;
+            margin-right: 3em;
+        }
+        .latest_releases summary {
+            font-weight: bold;
+        }
+        .related_modules a img {
+            width: 16px;
+            height: 16px;
+        }
+        .related_modules a .noicon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
 
 
 
-
-
-<h1>OAM-IP-Router</h1>
 <p><a href="../">&nwarr; Liste der OpenKNX-Applikationen</a></p>
+<h1>OAM-IP-Router</h1>
+<p><a href="https://github.com/OpenKNX/OAM-IP-Router">GitHub</a></p>
 <p>OpenKNX IP-Router Application</p>
-<h2>Enthaltene Module</h2>
-<ul>
-    
-    <li data-ofm="knx">
-        (<a href="https://github.com/OpenKNX/knx">GitHub</a>)
-        <a href="../../ofm/knx/">knx</a>
-    </li>
-    
-    <li data-ofm="OGM-HardwareConfig">
-        (<a href="https://github.com/OpenKNX/OGM-HardwareConfig">GitHub</a>)
-        <a href="../../ofm/OGM-HardwareConfig/">OGM-HardwareConfig</a>
-    </li>
-    
-    <li data-ofm="OGM-Common">
-        (<a href="https://github.com/OpenKNX/OGM-Common">GitHub</a>)
-        <a href="../../ofm/OGM-Common/">OGM-Common</a>
-    </li>
-    
-    <li data-ofm="OFM-FileTransferModule">
-        (<a href="https://github.com/OpenKNX/OFM-FileTransferModule">GitHub</a>)
-        <a href="../../ofm/OFM-FileTransferModule/">OFM-FileTransferModule</a>
-    </li>
-    
-    <li data-ofm="OFM-Network">
-        (<a href="https://github.com/OpenKNX/OFM-Network">GitHub</a>)
-        <a href="../../ofm/OFM-Network/">OFM-Network</a>
-    </li>
-    
-    <li data-ofm="OFM-UsbExchange">
-        (<a href="https://github.com/OpenKNX/OFM-UsbExchange">GitHub</a>)
-        <a href="../../ofm/OFM-UsbExchange/">OFM-UsbExchange</a>
-    </li>
-    
-</ul>
+<p></p>
 
-<h2>Unterstützte Geräte</h2>
-<h3>OpenKNX</h3>
-<ul>
-    
-    <li data-dev="OpenKNX REG1 Basismodul LAN+TP"><a href="../../devices/OpenKNX_REG1_Basismodul_LAN_TP/">OpenKNX REG1 Basismodul LAN+TP</a></li>
-    
-    <li data-dev="OpenKNX REG1 LAN Gateway"><a href="../../devices/OpenKNX_REG1_LAN_Gateway/">OpenKNX REG1 LAN Gateway</a></li>
-    
-</ul>
-<h3>Andere Geräte</h3>
-<ul>
-    
-</ul>
+<div class="oam_relations">
+    <section class="related_modules">
+        <h2>Enthaltene Module*</h2>
+        <ul>
+            
+            
+            <li data-ofm="OFM-UsbExchange">
+                
+                <a href="../../ofm/OFM-UsbExchange/"><span class="noicon"> </span> OFM-UsbExchange</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-Network">
+                
+                <a href="../../ofm/OFM-Network/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/ethernet.png" /> OFM-Network</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-FileTransferModule">
+                
+                <a href="../../ofm/OFM-FileTransferModule/"><span class="noicon"> </span> OFM-FileTransferModule</a>
+            </li>
+            
+            
+            <li data-ofm="OGM-Common">
+                
+                <a href="../../ofm/OGM-Common/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/openknx.png" /> OGM-Common</a>
+            </li>
+            
+            
+            <li data-ofm="OGM-HardwareConfig">
+                
+                <a href="../../ofm/OGM-HardwareConfig/"><span class="noicon"> </span> OGM-HardwareConfig</a>
+            </li>
+            
+            
+            <li data-ofm="knx">
+                
+                <a href="../../ofm/knx/"><span class="noicon"> </span> knx</a>
+            </li>
+            
+        </ul>
+    </section>
+    <section class="related_devices">
+        <h2>Unterstützte Geräte*</h2>
+        <ul>
+            
+            <li data-dev="OpenKNX REG1 Basismodul LAN+TP"><a href="../../devices/OpenKNX_REG1_Basismodul_LAN_TP/">OpenKNX REG1 Basismodul LAN+TP</a></li>
+            
+            <li data-dev="OpenKNX REG1 LAN Gateway"><a href="../../devices/OpenKNX_REG1_LAN_Gateway/">OpenKNX REG1 LAN Gateway</a></li>
+            
+        </ul>
+        
+        
+        
+    </section>
+    <section class="oam_releases">
+        <h2>Releases</h2>
+        
+        
+        
+        
+            <details class="latest_releases">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.7.0"> (0.7.0)</a>
+                </summary>
+                <p style="white-space:pre-line;">Changes compared to 0.6.1:
 
+- fix bug that disabled the answer of ConfigReqs (correct APDU handling, faster tunnel creation)
+- Loading Application after firmware update no longer crashes when an old application is on the device
+- APDU Property PID_MAX_APDU_LENGTH_ROUTER from 220 to 254
+
+functional identical to 7.5.0-Dev</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.6.1"> (0.6.1)</a>
+                </summary>
+                <p style="white-space:pre-line;">functional identical to 6.0.1-Dev</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.6.0"> (0.6.0)</a>
+                </summary>
+                <p style="white-space:pre-line;">Changes compared to 0.4.0:
+- new Feature: configurable StatusLEDs
+- optimized tunnel handling: Device Managament Connections do not anymore consume one of the 16 Tunnel Connections and their PA
+- fix bug in network stack that caused crashes at high load (RP2040)
+
+functional identical to 6.0.0-Dev
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.4.0">0.4.0 (0.4.0)</a>
+                </summary>
+                <p style="white-space:pre-line;">Changes compared to 0.3.0
+
+- changed beviour of forwarding of incoming telegrams from a tunnel connection: in 0.3.0, incoming physical addressed telegrams which were not adressed to the line or segment were not sent to KNX-TP - only to KNX-IP over primary interface if routing rules allowed that. In 0.4.0, all incoming physical addressed telegrams are forwared to KNX-TP (except those addressed to a Tunnel PA of this device)
+- fixes error in PA assignment over TP (and unicast handling in unconfigured state in general)
+- fixes repeat flag set falsely in KNX-IP and Tunneling telegrams
+- functional idential to 5.4.0-Dev</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/5.2.2-Beta">5.2.2-Beta (5.2.2-Beta)</a>
+                </summary>
+                <p style="white-space:pre-line;">- fixes error in PA assignment over TP (and unicast handling in unconfigured state in general)
+- fixes repeat flag set falsely in KNX-IP and Tunneling telegrams</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/5.2.0-Beta">5.2.0-Beta (5.2.0-Beta)</a>
+                </summary>
+                <p style="white-space:pre-line;">- usage of new DataLinkLayer Library OpenKNX/TPUart
+- usage of OpenKNX Common V1.4.1</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.3.0">0.3.0 (0.3.0)</a>
+                </summary>
+                <p style="white-space:pre-line;">Changes compared to 0.1.3:
+- Support new Device; REG1-LAN-TP-Base (ESP32-based)
+- support up to 16 Tunnels
+- ip based tunnel reservation feature
+- a lot of minor bugfixes and improvements
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/5.0.2-Beta">5.0.2-Beta (5.0.2-Beta)</a>
+                </summary>
+                <p style="white-space:pre-line;">- fix bug in Tunneling (wrong port selected)
+- for ESP32-based HW (REG1-LAN-TP-Base) [OpenKNXProducer >= V3.6.0](https://github.com/OpenKNX/OpenKNXproducer/releases/tag/v3.6.0) is needed</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/5.0.1-Beta">5.0.1-Beta (5.0.1-Beta)</a>
+                </summary>
+                <p style="white-space:pre-line;"></p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/2.12.3-Beta">2.12.3-Beta (2.12.3-Beta)</a>
+                </summary>
+                <p style="white-space:pre-line;">Beta 2.12.3 identisch zu Release 0.1.3
+
+Gefixte Bugs:
+#11 
+#12 </p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.1.3">0.1.3 (0.1.3)</a>
+                </summary>
+                <p style="white-space:pre-line;">Beta 2.12.3 identisch zu Release 0.1.3
+
+Gefixte Bugs:
+#11 
+#12 </p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/2.12.2-Beta">2.12.2-Beta (2.12.2-Beta)</a>
+                </summary>
+                <p style="white-space:pre-line;">Beta 2.12.2 identisch zu Release 0.1.2
+
+Gefixte Bugs:
+#5 
+#8 
+#9
+#10 </p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.1.2">0.1.2 (0.1.2)</a>
+                </summary>
+                <p style="white-space:pre-line;">Release 0.1.2 identisch zu 2.12.2-Beta
+
+Gefixte Bugs:
+#5 
+#8 
+#9
+#10 </p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/2.12.1-Beta">Beta 2.12.1 (2.12.1-Beta)</a>
+                </summary>
+                <p style="white-space:pre-line;">fix #1 </p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.1.1">0.1.1 Release (0.1.1)</a>
+                </summary>
+                <p style="white-space:pre-line;">fix #1 </p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/2.12.0-Beta">Beta 2.12.0 (2.12.0-Beta)</a>
+                </summary>
+                <p style="white-space:pre-line;">Beta 2.12.0 identisch zu Release 0.1.0
+
+Bekannte Bugs:
+- Tunnelverbindung EXPERIMENTAL
+
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-IP-Router/releases/tag/0.1.0">0.1.0 Release (0.1.0)</a>
+                </summary>
+                <p style="white-space:pre-line;">Release 0.1.0 identisch zu Beta 2.12.0
+
+Bekannte Bugs:
+- Tunnelverbindung EXPERIMENTAL</p>
+            </details>
+        
+    </section>
+</div>
+<footer>
+<p><strong>*</strong>: automatisch ermittelt aus aktuellem Release. Nicht jedes Gerät wird zwingend den vollen Funktionsumfang unterstützen bzw. können Module bestimmte Hardware-Fähigkeiten zur Nutzung erfordern.</p>
+</footer>
 </body>
 </html>

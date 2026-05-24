@@ -3,98 +3,365 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>OAM-PresenceModule | OpenKNX Applikation | Übersicht</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .oam_relations {
+            display: flex;
+        }
+        .oam_relations section {
+            max-width: 30%;
+            margin-right: 3em;
+        }
+        .latest_releases summary {
+            font-weight: bold;
+        }
+        .related_modules a img {
+            width: 16px;
+            height: 16px;
+        }
+        .related_modules a .noicon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
 
 
 
-
-
-<h1>OAM-PresenceModule</h1>
 <p><a href="../">&nwarr; Liste der OpenKNX-Applikationen</a></p>
+<h1>OAM-PresenceModule</h1>
+<p><a href="https://github.com/OpenKNX/OAM-PresenceModule">GitHub</a></p>
 <p>Implements a presence detection fimware for KNX Bus</p>
-<h2>Enthaltene Module</h2>
-<ul>
-    
-    <li data-ofm="knx">
-        (<a href="https://github.com/OpenKNX/knx">GitHub</a>)
-        <a href="../../ofm/knx/">knx</a>
-    </li>
-    
-    <li data-ofm="OGM-Common">
-        (<a href="https://github.com/OpenKNX/OGM-Common">GitHub</a>)
-        <a href="../../ofm/OGM-Common/">OGM-Common</a>
-    </li>
-    
-    <li data-ofm="OFM-FileTransferModule">
-        (<a href="https://github.com/OpenKNX/OFM-FileTransferModule">GitHub</a>)
-        <a href="../../ofm/OFM-FileTransferModule/">OFM-FileTransferModule</a>
-    </li>
-    
-    <li data-ofm="OFM-Network">
-        (<a href="https://github.com/OpenKNX/OFM-Network">GitHub</a>)
-        <a href="../../ofm/OFM-Network/">OFM-Network</a>
-    </li>
-    
-    <li data-ofm="OFM-UsbExchange">
-        (<a href="https://github.com/OpenKNX/OFM-UsbExchange">GitHub</a>)
-        <a href="../../ofm/OFM-UsbExchange/">OFM-UsbExchange</a>
-    </li>
-    
-    <li data-ofm="OFM-ConfigTransfer">
-        (<a href="https://github.com/OpenKNX/OFM-ConfigTransfer">GitHub</a>)
-        <a href="../../ofm/OFM-ConfigTransfer/">OFM-ConfigTransfer</a>
-    </li>
-    
-    <li data-ofm="OFM-LogicModule">
-        (<a href="https://github.com/OpenKNX/OFM-LogicModule">GitHub</a>)
-        <a href="../../ofm/OFM-LogicModule/">OFM-LogicModule</a>
-    </li>
-    
-    <li data-ofm="OFM-VirtualButton">
-        (<a href="https://github.com/OpenKNX/OFM-VirtualButton">GitHub</a>)
-        <a href="../../ofm/OFM-VirtualButton/">OFM-VirtualButton</a>
-    </li>
-    
-    <li data-ofm="OGM-SensorDevices">
-        (<a href="https://github.com/OpenKNX/OGM-SensorDevices">GitHub</a>)
-        <a href="../../ofm/OGM-SensorDevices/">OGM-SensorDevices</a>
-    </li>
-    
-    <li data-ofm="OFM-PresenceModule">
-        (<a href="https://github.com/OpenKNX/OFM-PresenceModule">GitHub</a>)
-        <a href="../../ofm/OFM-PresenceModule/">OFM-PresenceModule</a>
-    </li>
-    
-</ul>
+<p></p>
 
-<h2>Unterstützte Geräte</h2>
-<h3>OpenKNX</h3>
-<ul>
-    
-    <li data-dev="OpenKNX PiPico BCU Connector"><a href="../../devices/OpenKNX_PiPico_BCU_Connector/">OpenKNX PiPico BCU Connector</a></li>
-    
-    <li data-dev="OpenKNX REG1 Basismodul"><a href="../../devices/OpenKNX_REG1_Basismodul/">OpenKNX REG1 Basismodul</a></li>
-    
-    <li data-dev="OpenKNX REG1 Basismodul V0"><a href="../../devices/OpenKNX_REG1_Basismodul_V0/">OpenKNX REG1 Basismodul V0</a></li>
-    
-</ul>
-<h3>Andere Geräte</h3>
-<ul>
-    
-    <li data-dev="SmartMF-1TE-RP2040">SmartMF-1TE-RP2040</li>
-    
-    <li data-dev="SmartMF-Sensormodul-v4.x-RP2040">SmartMF-Sensormodul-v4.x-RP2040</li>
-    
-    <li data-dev="SmartMF RealPresence">SmartMF RealPresence</li>
-    
-    <li data-dev="SmartMF Entwicklerboard">SmartMF Entwicklerboard</li>
-    
-    <li data-dev="SmartMF RealPresence_v2.0">SmartMF RealPresence_v2.0</li>
-    
-</ul>
+<div class="oam_relations">
+    <section class="related_modules">
+        <h2>Enthaltene Module*</h2>
+        <ul>
+            
+            
+            <li data-ofm="OFM-PresenceModule">
+                
+                <a href="../../ofm/OFM-PresenceModule/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/panorama-sphere-outline.png" /> OFM-PresenceModule</a>
+            </li>
+            
+            
+            <li data-ofm="OGM-SensorDevices">
+                
+                <a href="../../ofm/OGM-SensorDevices/"><span class="noicon"> </span> OGM-SensorDevices</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-VirtualButton">
+                
+                <a href="../../ofm/OFM-VirtualButton/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/button-pointer.png" /> OFM-VirtualButton</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-LogicModule">
+                
+                <a href="../../ofm/OFM-LogicModule/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/blur.png" /> OFM-LogicModule</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-ConfigTransfer">
+                
+                <a href="../../ofm/OFM-ConfigTransfer/"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ConfigTransfer/refs/heads/v1/src/Baggages/Icons/ofm-configtransfer.png" /> OFM-ConfigTransfer</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-UsbExchange">
+                
+                <a href="../../ofm/OFM-UsbExchange/"><span class="noicon"> </span> OFM-UsbExchange</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-Network">
+                
+                <a href="../../ofm/OFM-Network/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/ethernet.png" /> OFM-Network</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-FileTransferModule">
+                
+                <a href="../../ofm/OFM-FileTransferModule/"><span class="noicon"> </span> OFM-FileTransferModule</a>
+            </li>
+            
+            
+            <li data-ofm="OGM-Common">
+                
+                <a href="../../ofm/OGM-Common/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/openknx.png" /> OGM-Common</a>
+            </li>
+            
+            
+            <li data-ofm="knx">
+                
+                <a href="../../ofm/knx/"><span class="noicon"> </span> knx</a>
+            </li>
+            
+        </ul>
+    </section>
+    <section class="related_devices">
+        <h2>Unterstützte Geräte*</h2>
+        <ul>
+            
+            <li data-dev="OpenKNX PiPico BCU Connector"><a href="../../devices/OpenKNX_PiPico_BCU_Connector/">OpenKNX PiPico BCU Connector</a></li>
+            
+            <li data-dev="OpenKNX REG1 Basismodul"><a href="../../devices/OpenKNX_REG1_Basismodul/">OpenKNX REG1 Basismodul</a></li>
+            
+            <li data-dev="OpenKNX REG1 Basismodul V0"><a href="../../devices/OpenKNX_REG1_Basismodul_V0/">OpenKNX REG1 Basismodul V0</a></li>
+            
+        </ul>
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+        <details>
+            <summary>Andere Geräte</summary>
+            <ul>
+                
+                <li data-dev="SmartMF-1TE-RP2040">SmartMF-1TE-RP2040</li>
+                
+                <li data-dev="SmartMF-Sensormodul-v4.x-RP2040">SmartMF-Sensormodul-v4.x-RP2040</li>
+                
+                <li data-dev="SmartMF RealPresence">SmartMF RealPresence</li>
+                
+                <li data-dev="SmartMF Entwicklerboard">SmartMF Entwicklerboard</li>
+                
+                <li data-dev="SmartMF RealPresence_v2.0">SmartMF RealPresence_v2.0</li>
+                
+            </ul>
+        </details>
+        
+    </section>
+    <section class="oam_releases">
+        <h2>Releases</h2>
+        
+        
+        
+        
+            <details class="latest_releases">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/3.6.2-Release">3.6.2-Release (3.6.2-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Hier ein neues Release des Präsenzmoduls. Neuerungen sind primär beim neuen HF-Sensor HLK-LD2420. Das Release 3.6 löst direkt das 3.5 ab. Release 3.5 sollte nicht mehr verwendet werden und durch 3.6 aktualisiert werden, da 3.5 (auch das leider fehlerhafte Logikmodul 3.4 enthält). Des weiteren wurde die Robustheit erhöht beim Update über den KNX-Bus und das Skript zur Erzeugung der knxpord bei Verwendung der ETS 6.3 wurde aktualisiert.
 
+>Wichtig: Falls nur die ETS 6.3.0 installiert ist, muss das Update mit der OpenKNX-Toolbox 1.0.3 erfolgen. Bei älteren Toolbox-Versionen kommt die Meldung "knxprod konnte nicht erstellt werden".
+
+>Anmerkung: Für alle, die neu anfangen wollen und darüber Nachdenken, nur das Logikmodul oder nur das Präsenzmodul zu installieren, ist von mir die Empfehlung, das Sensormodul zu nehmen. Die Teile, die nicht gebraucht werden, muss man nicht nutzen und sie belasten auch das System nicht. Und langfristig besteht der Plan, dass das Präsenzmodul komplett im Sensormodul aufgeht. Und dann erspart man sich den Umzug von der einen auf die andere Applikation.
+
+07.12.2024: Firmware 3.6.2, Applikation 3.6
+
+* FIX: Fix für das Logikmodul mit Auswirkungen auf das Präsenzmodul (Das neue Sendeverhalten am Ausgang und der Wiederholungsfilter haben sich leider gegenseitig beeinflusst und zu unerwarteten Ergebnissen geführt, die Logiken kaputt machen konnten. Deswegen ein Hotfix)
+* NEU: Firmware-Update über den KNX-Bus lastet den Bus weniger aus (weniger Telegrammwiederholungen)
+* NEU: Die Erzeugung der ETS-Produktdatenbank (knxprod) funktioniert jetzt auch mit der ETS 6.3
+
+* Die enthaltene Logik hat jetzt die Version 3.5
+
+01.12.2024: Firmware 3.5, Applikation 3.5
+
+* NEU: Für den HLK2420 wurde statt der Kalibrierung eine komplett neue Einstellungsseite entwickelt
+* NEU: Diagnose für den HLK2420 berücksichtigt die neuen Einstellungsmöglichkeiten
+* FIX: Der RealPresence hat bei 2 Usern nicht funktioniert, weil sie eine andere Hardware-Variante hatten, dies ist jetzt korrigiert.
+* FIX: Wenn nur PIR aktiviert war, wurde dessen Stromversorgung nicht eingeschaltet.
+* NEU: Große Doku-Erweiterung für die Einstellungsmöglichkeiten vom HLK-Sensor
+* NEU: Alle Firmware-Varianten haben ein neues Skript zum KNX-Firmware-Update bekommen, das einen Upload über den KNX-Bus erlaubt.
+
+* Die enthaltene Logik hat jetzt die Version 3.4
+* Der enthaltene Konfigurations-Transfer hat jetzt die Version 0.2
+* Das enthaltene Taster-Modul hat jetzt die Version 0.5
+
+Es gibt noch keine IP-Version, diese wird nachgereicht. </p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/3.2-Release">3.2-Release (3.2-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Dieses Release ist primär für alle, die aus einem alten Release 1.x per Konfigurationstransfer was auf die neue Applikation übertragen wollen, dazu ist ein wichtiger Fix enthalten. Der Rest sind Vorbereitungen auf unseren neuen Präsenzsensor. 
+
+Alles für das Release 3.1 gesagte gilt auch für 3.2, siehe dort.
+
+22.07.2024: Firmware 3.2, Applikation 3.2.1
+
+* FIX: Wenn mit ConfigTransfer die VPM-Basiskonfiguration von einer älteren VPM-Version auf die aktuelle übertragen wurde, konnte das interne KO-Referenzen auf falsche KO zeigen lassen.
+* FIX: Der PIR-Sensor hat beim Neustart fälschlicherweise Präsenz-Signale ausgegeben
+* NEU: Kalibrierung für den HLK-Sensor wurde komplett neu entwickelt
+* NEU: Diagnose für den HKL-Sensor ist komplett neu implementiert
+* FIX: Empfindlichkeitskurve für den PIR-Sensor wurden leicht angepasst
+
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/3.1-Release">3.1-Release (3.1-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Das Release 3.1 vom Präsenzmelder ist verfügbar. Für die Präsenzmelder-Funktionen ist es ein reines Bugfix-Release, trotzdem gibt es insgesamt viel neues:
+
+* Die Applikation unterstützt jetzt unseren neuen Konfigurationstransfer
+* Verbesserter knx-Stack: Durch asynchrones Sende- und Empfangshandling werden Botschaften auch bei sehr hoher Buslast sicher übertragen
+* Das Logikmodul wurde auf die Version 3.3 angehoben
+* Das Modul mit virtuellen Tastern wurde zugefügt in Version 0.5
+* Update über den KNX-Bus ist jetzt möglich
+* Die Möglichkeiten der ETS für Icons werden genutzt
+* Es wird bei (fast) allen Eingabefeldern eine Kontextsensitive Hilfe angeboten
+* Es gibt ein generelles UI-Redesign, dass alle OpenKNX-Applikationen wiedererkennbar macht
+* Genaue Änderungen/Fixes an der Fimware findet man im Changelog der Applikationsbeschreibung
+* Für unser REG1-IP-Gerät ist die Version 3.1 auch ganz neu als IP-Version verfügbar
+
+**Um auf das Release 3.1 aktualisieren zu können, muss erstmal die ETS auf die Version 2.15 aktualisiert werden**. Diese Version ist gleichzeitig verfügbar mit der 3.1. Der Weg ist 1.11.3 -> 2.15 -> 3.1. Für die 2.15 gibt es keine Firmware, es ist ein reines ETS-Zwischenrelease. Die Version PresenceModule-Big-2.15 ist der einfachheit halber auch diesem Relese beigefügt.
+
+Ich habe mich schweren Herzens dazu entschlossen, den Präsenzmelder nicht mehr auf der SAMD-Firmware weiterzuentwickeln. Deshalb gibt es das Release 3.1 nur als Big-Version, die schon immer nur für dei RP2040-Hardware verfügbar war. 
+
+Wer die (stark abgespeckte) Release-Version nutzt und diese auf der RP2040-Hardware verwendet hat, bekommt eine halbautomatische Unterstützung für die Migration auf die Big-Version. Dazu muss man die gleichzeitig erscheinende Release-Version 1.12.3 nutzen. Diese enthält die Version 1.11.3, ergänzt um den Konfigurationstransfer. Mit dem kann man dann alle PM- und Logik-Einstellungen auf die Big-Version migrieren, Das geht auf jeden Fall schneller und komfortabler, als alles manuell abzutippen.
+
+Für die SAMD-Benutzer bleibt die Version 1.11.3 weiterhin nutzbar, sie wird aber nicht mehr weiterentwickelt. Der SAMD ist einfach am Limit seiner Möglichkeiten und kann keine der neuen Funktoinalitäten leisten, die OpenKNX mitbringt.
+
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.12.3-Release">1.12.3-Release (1.12.3-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Dieses Release ist eine reine ETS-Applikation, die mit der Firmware 1.11.3 funktioniert. Sie hat den vollen Umfang von 1.11.3, erweitert um den neuen OpenKNX-Konfigurationstransfer.
+
+Mit diesem ist es möglich, halbautomatisch von der Release-Applikation auf die Big-Applikation zu migrieren, sofern man die Release-Applikation auf der RP2040-Hardware nutzt und in Zukunft die 3.0-Applikation Big nutzen möchte.
+
+Auch SAMD-Benutzer können diese Applikation nutzen, um Funktionen wie Kanalkopie zu nutzen und so die Arbeit mit Logikkanälen und Präsenzkanälen zu vereinfachen. Und man kann so auch Logiken auf ein anderel Modul migrieren und dort vielleicht neue Logikfunktionen nutzen.
+
+Diese Applikation wird wie jede andere in der ETS importiert und zum Update der aktuellen 1.11.3 verwendet. Man muss keine Firmware aktualisieren, aber einmal das existierende Gerät programmieren.
+
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/2.15-Release">2.15-Release (2.15-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Spezeilles Release:
+
+Notwendiges Zwischenrelease, um die ETS-Kompatibilität von Releases vor 2.15 zu den folgenden Releases 3.0 und später zu wahren. 
+Dieses Release hat keine Firmware. Man muss wie üblich eine knxprod bauen, diese in die ETS importieren und ein Update der alten Applikation machen.
+
+Danach muss man sofort das Nächste Update auf das neuste Release 3.0 oder später machen. Dieses neue Release enthält dann wieder eine Applikation und eine Firmware, die man wie üblich aktualisieren kann. Erst danach ist das Gerät wieder funktionsfähig.
+
+Ohne dieses Zwischenrelease sind die Applikationen 3.0 oder neuer nicht kompatibel zu den Applikationen vor 2.15 und müssen manuell neu konfiguriert werden. Da das sehr viel Arbeit sein kann, wird dringend geraten, dieses Zwischen-Release zu machen.
+
+Dieses Release hat keine Funktoinalität, es weist nur die ETS an, Kompatibilitätseinstellungen im Projekt vorzunehmen.
+
+Dieses Release ist nur für die Applikation "PresenceModule-Big" verfügbar. 
+
+Die Applikation "PresenceModule-Release" wird aufgeteilt: 
+
+* Für alle, die diese Applikation auf RP2040-basierter Hardware nutzen, wird noch ein Migrationspfad auf PresenceModule-Big angeboten.
+* Für SAMD-basierte Hardware wird die Applikation und Firmware nicht mehr weiter entwickelt, da der SAMD nicht die Ressourcen hat, die neuen Features der Applikation zu prozessieren. Natürlich funktionieren die SAMD-basierten Geräte weiterhin wie bisher.
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.11.3-Release">1.11.3-Release (1.11.3-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Es gibt einige Detailverbesserungen beim Präsenzmelder:
+
+* Tagesphasenwechsel wertet jetzt erneut Präsenz aus, da sonst bei einem Wechsel von einer Tagesphase, die nicht selbst einschaltet in eine Phase, die selbst einschaltet nicht eingeschaltet worden ist.
+* Man kann beim Ausschalten über Helligkeit als Ausschaltschwelle jetzt auch 0 Lux angeben und es wird bei 0 Lux ausgeschaltet. Bisher musste die Helligkeit > als die Ausschaltschwelle, also größer als 0 sein.
+* Der KNX-Stack ist jetzt wesentlich robuster bei hoch ausgelastetem KNX-Bus. 
+* Einige wenige DPT9-Werte ungleich 0 wurden vom KNX-Stack als 0 gesendet. Das ist gelöst. Es waren Werte der Form &pm;(2<sup>n</sup>)/100 für n>10, also z.B. &pm;20.48, &pm;40.96, &pm;81.92, &pm;163.84, &pm;327.68, &pm;655.36 usw. 
+* Dieses Release profitiert primär von den Stabilitätsverbesserungen des KNX-Stack 
+
+Außerdem wurde das Logikmodul auf die Version 1.5.3 aktualisiert.
+
+Hier ist die [Produktbeschreibung](https://github.com/OpenKNX/OpenKNX/wiki/Produktinfo-Präsenzmodul) samt Featureliste und [Applikationsbeschreibung](../main/doc/Applikationbeschreibung-Praesenz.md) samt detailliertem Änderungsverzeichnis.
+
+PresenceModule-Big wird für RP2040 basierte Hardware empfohlen, PresenceModule-Release für SAMD basierte Hardware.</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.7.6-Release">1.7.6-Release (1.7.6-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Dieses Release enthält nur Verbesserungen, die durch das enthaltene Logikmodul 1.4.2 erfolgt sind. Wer keine der neuen Features im Logikmodul braucht, muss kein update machen.
+
+Das Änderungsprotokoll ist wie immer in der [Applikationsbeschreibung](../main/doc/Applikationbeschreibung-Praesenz.md) zu finden.</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.5-Release">1.5-Release (1.5-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Das aktuelle Release Behebt wie immer einige in der Zwischenzeit gefundene Probleme.
+
+Dieses Release behebt auch ein generelles Problem, das bei einem Stromausfall für das Vergessen der PA sorgen kann. Aus diesem Grunde sollte unbedingt dieses Release verwendet werden.
+
+* WICHTIG: Die enthaltene Logik hat den Firmware-Stand 1.0.3 und ermöglicht damit das Speichern der Logikeingänge im nichtflüchtigen Speicher.
+* FIX: Option "gesperrt (0) / nicht gesperrt (1)" bei Sperreinstellungen wurde nicht ausgewertet.
+* FIX: Option "Zeit bis das Gerät nach einem Neustart aktiv wird" wurde mit einer falschen Zeitbasis ausgeführt (Millisekunden statt Sekunden)
+* FIX: Der Schalter "Automatik übersteuern = AUS heißt Raum verlassen" wurde nicht ausgewertet. Sobald "Raum verlassen" konfiguriert ist, wurde es immer genutzt. Das ist jetzt korrigiert.
+* FIX: Die Diagnose für "Raum verlassen" gab nicht den Modus aus, der eingestellt war.
+* FIX: Rückfallzeit für Sperre funktionierte nicht, ist jetzt korrigiert.
+* NEU: Tagesphasen kann man jetzt auch über die Szenensteuerung wechseln,
+* NEU: Über die Szenensteuerung kann man jetzt auch den Manuellmodus aktivieren und deaktivieren (wie bei Eintastensteuerung).
+* NEU: Über die Szenensteuerung kann man jetzt alle Sperrmodi (unabhängig von der Konfiguration der Sperre) setzen und zurücksetzen.
+* FIX: Sperre hat jetzt auch ein Ü-Flag
+
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-PresenceModule/releases/tag/1.4-Release">1.4-Release (1.4-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Ein paar Feature-Abrundungen und Bugfixes
+
+* FIX: Rückfallzeit für Sperre funktionierte nicht, ist jetzt korrigiert.
+* NEU: Tagesphasen kann man jetzt auch über die Szenensteuerung wechseln,
+* NEU: Über die Szenensteuerung kann man jetzt auch den Manuellmodus aktivieren und deaktivieren (wie bei Eintastensteuerung). 
+* NEU: Über die Szenensteuerung kann man jetzt alle Sperrmodi (unabhängig von der Konfiguration der Sperre) setzen und zurücksetzen. 
+* FIX: Sperre hat jetzt auch ein Ü-Flag
+
+Ab diesem Release wird folgende Hardware unterstützt:
+
+* **Smart-MF Sensormodul** [www.smart-mf.de](https://www.smart-mf.de), als virtueller Präsenzmelder, um die Applikationen von alten oder unzuverlässigen Präsenzmeldern zu verbessern
+* **PiPico-BCU-Connector** [OpenKNX-Wiki](https://github.com/OpenKNX/OpenKNX/wiki/PiPico-BCU-Connector), als virtueller Präsenzmelder
+* **1TE-RP2040-Smart-MF** [www.smart-mf.de](https://www.smart-mf.de), als virtueller Präsenzmelder auf allen Varianten lauffähig
+* **OpenKNX-REG1-System** [OpenKNX-Wiki](https://github.com/OpenKNX/OpenKNX/wiki/OpenKNX-REG1), als virtueller Präsenzmelder auf allen Varianten lauffähig
+* **Smart-MF RealPresence** [www.smart-mf.de](https://www.smart-mf.de), als vollständiger Präsenzmelder, der auch Personen ohne Bewegung zuverlässig erkennt.
+
+
+</p>
+            </details>
+        
+    </section>
+</div>
+<footer>
+<p><strong>*</strong>: automatisch ermittelt aus aktuellem Release. Nicht jedes Gerät wird zwingend den vollen Funktionsumfang unterstützen bzw. können Module bestimmte Hardware-Fähigkeiten zur Nutzung erfordern.</p>
+</footer>
 </body>
 </html>

@@ -3,67 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>OAM-Nuki | OpenKNX Applikation | Übersicht</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .oam_relations {
+            display: flex;
+        }
+        .oam_relations section {
+            max-width: 30%;
+            margin-right: 3em;
+        }
+        .latest_releases summary {
+            font-weight: bold;
+        }
+        .related_modules a img {
+            width: 16px;
+            height: 16px;
+        }
+        .related_modules a .noicon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
 
 
 
-
-
-<h1>OAM-Nuki</h1>
 <p><a href="../">&nwarr; Liste der OpenKNX-Applikationen</a></p>
+<h1>OAM-Nuki</h1>
+<p><a href="https://github.com/OpenKNX/OAM-Nuki">GitHub</a></p>
 <p></p>
-<h2>Enthaltene Module</h2>
-<ul>
-    
-    <li data-ofm="knx">
-        (<a href="https://github.com/OpenKNX/knx">GitHub</a>)
-        <a href="../../ofm/knx/">knx</a>
-    </li>
-    
-    <li data-ofm="OGM-HardwareConfig">
-        (<a href="https://github.com/OpenKNX/OGM-HardwareConfig">GitHub</a>)
-        <a href="../../ofm/OGM-HardwareConfig/">OGM-HardwareConfig</a>
-    </li>
-    
-    <li data-ofm="OGM-Common">
-        (<a href="https://github.com/OpenKNX/OGM-Common">GitHub</a>)
-        <a href="../../ofm/OGM-Common/">OGM-Common</a>
-    </li>
-    
-    <li data-ofm="OFM-ConfigTransfer">
-        (<a href="https://github.com/OpenKNX/OFM-ConfigTransfer">GitHub</a>)
-        <a href="../../ofm/OFM-ConfigTransfer/">OFM-ConfigTransfer</a>
-    </li>
-    
-    <li data-ofm="OFM-LogicModule">
-        (<a href="https://github.com/OpenKNX/OFM-LogicModule">GitHub</a>)
-        <a href="../../ofm/OFM-LogicModule/">OFM-LogicModule</a>
-    </li>
-    
-    <li data-ofm="OFM-FunctionBlocks">
-        (<a href="https://github.com/OpenKNX/OFM-FunctionBlocks">GitHub</a>)
-        <a href="../../ofm/OFM-FunctionBlocks/">OFM-FunctionBlocks</a>
-    </li>
-    
-    <li data-ofm="OFM-Nuki">
-        (<a href="https://github.com/OpenKNX/OFM-Nuki">GitHub</a>)
-        <a href="../../ofm/OFM-Nuki/">OFM-Nuki</a>
-    </li>
-    
-</ul>
+<p></p>
 
-<h2>Unterstützte Geräte</h2>
-<h3>OpenKNX</h3>
-<ul>
-    
-</ul>
-<h3>Andere Geräte</h3>
-<ul>
-    
-</ul>
-
+<div class="oam_relations">
+    <section class="related_modules">
+        <h2>Enthaltene Module*</h2>
+        <ul>
+            
+            
+            <li data-ofm="OFM-Nuki">
+                
+                <a href="../../ofm/OFM-Nuki/"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-Nuki/refs/heads/v1/src/Baggages/Icons/lock-outline.png" /> OFM-Nuki</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-FunctionBlocks">
+                
+                <a href="../../ofm/OFM-FunctionBlocks/"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-FunctionBlocks/refs/heads/v1/src/Baggages/Icons/texture-box.png" /> OFM-FunctionBlocks</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-LogicModule">
+                
+                <a href="../../ofm/OFM-LogicModule/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/blur.png" /> OFM-LogicModule</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-ConfigTransfer">
+                
+                <a href="../../ofm/OFM-ConfigTransfer/"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ConfigTransfer/refs/heads/v1/src/Baggages/Icons/ofm-configtransfer.png" /> OFM-ConfigTransfer</a>
+            </li>
+            
+            
+            <li data-ofm="OGM-Common">
+                
+                <a href="../../ofm/OGM-Common/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/openknx.png" /> OGM-Common</a>
+            </li>
+            
+            
+            <li data-ofm="OGM-HardwareConfig">
+                
+                <a href="../../ofm/OGM-HardwareConfig/"><span class="noicon"> </span> OGM-HardwareConfig</a>
+            </li>
+            
+            
+            <li data-ofm="knx">
+                
+                <a href="../../ofm/knx/"><span class="noicon"> </span> knx</a>
+            </li>
+            
+        </ul>
+    </section>
+    <section class="related_devices">
+        <h2>Unterstützte Geräte*</h2>
+        <ul>
+            
+        </ul>
+        
+        
+        
+    </section>
+    <section class="oam_releases">
+        <h2>Releases</h2>
+        
+        
+        
+        
+            <details class="latest_releases">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-Nuki/releases/tag/0.12.0">0.12.0 Beta (0.12.0)</a>
+                </summary>
+                <p style="white-space:pre-line;">- Works with XIAO ESP32S3 with TP only power supply</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-Nuki/releases/tag/0.9.0">0.9.0 Beta (0.9.0)</a>
+                </summary>
+                <p style="white-space:pre-line;">- Release based on Common v1dev
+- Only supported HW: "OpenKNXiao V1 Mini ESP32S3"
+- Adafruit Feather V2 not linkable (to less interrupt memory)
+- Breaking Change: Changed behavior of Lock/Unlock. Use Unlock=1 , Lock = 0 telegrams</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-Nuki/releases/tag/0.8.4">0.8.4 Beta (0.8.4)</a>
+                </summary>
+                <p style="white-space:pre-line;">- Beta version for Adfruit-FeatherV2 board</p>
+            </details>
+        
+    </section>
+</div>
+<footer>
+<p><strong>*</strong>: automatisch ermittelt aus aktuellem Release. Nicht jedes Gerät wird zwingend den vollen Funktionsumfang unterstützen bzw. können Module bestimmte Hardware-Fähigkeiten zur Nutzung erfordern.</p>
+</footer>
 </body>
 </html>

@@ -3,86 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>OAM-LogicModule | OpenKNX Applikation | Übersicht</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .oam_relations {
+            display: flex;
+        }
+        .oam_relations section {
+            max-width: 30%;
+            margin-right: 3em;
+        }
+        .latest_releases summary {
+            font-weight: bold;
+        }
+        .related_modules a img {
+            width: 16px;
+            height: 16px;
+        }
+        .related_modules a .noicon {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
 
 
 
-
-
-<h1>OAM-LogicModule</h1>
 <p><a href="../">&nwarr; Liste der OpenKNX-Applikationen</a></p>
+<h1>OAM-LogicModule</h1>
+<p><a href="https://github.com/OpenKNX/OAM-LogicModule">GitHub</a></p>
 <p>Implements a simple logic engine for KNX Bus</p>
-<h2>Enthaltene Module</h2>
-<ul>
-    
-    <li data-ofm="knx">
-        (<a href="https://github.com/OpenKNX/knx">GitHub</a>)
-        <a href="../../ofm/knx/">knx</a>
-    </li>
-    
-    <li data-ofm="OGM-HardwareConfig">
-        (<a href="https://github.com/OpenKNX/OGM-HardwareConfig">GitHub</a>)
-        <a href="../../ofm/OGM-HardwareConfig/">OGM-HardwareConfig</a>
-    </li>
-    
-    <li data-ofm="OGM-Common">
-        (<a href="https://github.com/OpenKNX/OGM-Common">GitHub</a>)
-        <a href="../../ofm/OGM-Common/">OGM-Common</a>
-    </li>
-    
-    <li data-ofm="OFM-FileTransferModule">
-        (<a href="https://github.com/OpenKNX/OFM-FileTransferModule">GitHub</a>)
-        <a href="../../ofm/OFM-FileTransferModule/">OFM-FileTransferModule</a>
-    </li>
-    
-    <li data-ofm="OFM-Network">
-        (<a href="https://github.com/OpenKNX/OFM-Network">GitHub</a>)
-        <a href="../../ofm/OFM-Network/">OFM-Network</a>
-    </li>
-    
-    <li data-ofm="OFM-UsbExchange">
-        (<a href="https://github.com/OpenKNX/OFM-UsbExchange">GitHub</a>)
-        <a href="../../ofm/OFM-UsbExchange/">OFM-UsbExchange</a>
-    </li>
-    
-    <li data-ofm="OFM-ConfigTransfer">
-        (<a href="https://github.com/OpenKNX/OFM-ConfigTransfer">GitHub</a>)
-        <a href="../../ofm/OFM-ConfigTransfer/">OFM-ConfigTransfer</a>
-    </li>
-    
-    <li data-ofm="OFM-LogicModule">
-        (<a href="https://github.com/OpenKNX/OFM-LogicModule">GitHub</a>)
-        <a href="../../ofm/OFM-LogicModule/">OFM-LogicModule</a>
-    </li>
-    
-</ul>
+<p></p>
 
-<h2>Unterstützte Geräte</h2>
-<h3>OpenKNX</h3>
-<ul>
-    
-    <li data-dev="OpenKNX PiPico BCU Connector"><a href="../../devices/OpenKNX_PiPico_BCU_Connector/">OpenKNX PiPico BCU Connector</a></li>
-    
-    <li data-dev="OpenKNX REG1 Basismodul"><a href="../../devices/OpenKNX_REG1_Basismodul/">OpenKNX REG1 Basismodul</a></li>
-    
-    <li data-dev="OpenKNX REG1 Basismodul V0"><a href="../../devices/OpenKNX_REG1_Basismodul_V0/">OpenKNX REG1 Basismodul V0</a></li>
-    
-</ul>
-<h3>Andere Geräte</h3>
-<ul>
-    
-    <li data-dev="SmartMF-1TE-RP2040">SmartMF-1TE-RP2040</li>
-    
-    <li data-dev="SmartMF-Sensormodul-v4.x-RP2040">SmartMF-Sensormodul-v4.x-RP2040</li>
-    
-    <li data-dev="SmartMF-Sensormodul-v3.0-SAMD">SmartMF-Sensormodul-v3.0-SAMD</li>
-    
-    <li data-dev="SmartMF-Sensormodul-v3.1-SAMD">SmartMF-Sensormodul-v3.1-SAMD</li>
-    
-</ul>
+<div class="oam_relations">
+    <section class="related_modules">
+        <h2>Enthaltene Module*</h2>
+        <ul>
+            
+            
+            <li data-ofm="OFM-LogicModule">
+                
+                <a href="../../ofm/OFM-LogicModule/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/blur.png" /> OFM-LogicModule</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-ConfigTransfer">
+                
+                <a href="../../ofm/OFM-ConfigTransfer/"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ConfigTransfer/refs/heads/v1/src/Baggages/Icons/ofm-configtransfer.png" /> OFM-ConfigTransfer</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-UsbExchange">
+                
+                <a href="../../ofm/OFM-UsbExchange/"><span class="noicon"> </span> OFM-UsbExchange</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-Network">
+                
+                <a href="../../ofm/OFM-Network/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/ethernet.png" /> OFM-Network</a>
+            </li>
+            
+            
+            <li data-ofm="OFM-FileTransferModule">
+                
+                <a href="../../ofm/OFM-FileTransferModule/"><span class="noicon"> </span> OFM-FileTransferModule</a>
+            </li>
+            
+            
+            <li data-ofm="OGM-Common">
+                
+                <a href="../../ofm/OGM-Common/"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/openknx.png" /> OGM-Common</a>
+            </li>
+            
+            
+            <li data-ofm="OGM-HardwareConfig">
+                
+                <a href="../../ofm/OGM-HardwareConfig/"><span class="noicon"> </span> OGM-HardwareConfig</a>
+            </li>
+            
+            
+            <li data-ofm="knx">
+                
+                <a href="../../ofm/knx/"><span class="noicon"> </span> knx</a>
+            </li>
+            
+        </ul>
+    </section>
+    <section class="related_devices">
+        <h2>Unterstützte Geräte*</h2>
+        <ul>
+            
+            <li data-dev="OpenKNX PiPico BCU Connector"><a href="../../devices/OpenKNX_PiPico_BCU_Connector/">OpenKNX PiPico BCU Connector</a></li>
+            
+            <li data-dev="OpenKNX REG1 Basismodul"><a href="../../devices/OpenKNX_REG1_Basismodul/">OpenKNX REG1 Basismodul</a></li>
+            
+            <li data-dev="OpenKNX REG1 Basismodul V0"><a href="../../devices/OpenKNX_REG1_Basismodul_V0/">OpenKNX REG1 Basismodul V0</a></li>
+            
+        </ul>
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+        <details>
+            <summary>Andere Geräte</summary>
+            <ul>
+                
+                <li data-dev="SmartMF-1TE-RP2040">SmartMF-1TE-RP2040</li>
+                
+                <li data-dev="SmartMF-Sensormodul-v4.x-RP2040">SmartMF-Sensormodul-v4.x-RP2040</li>
+                
+                <li data-dev="SmartMF-Sensormodul-v3.0-SAMD">SmartMF-Sensormodul-v3.0-SAMD</li>
+                
+                <li data-dev="SmartMF-Sensormodul-v3.1-SAMD">SmartMF-Sensormodul-v3.1-SAMD</li>
+                
+            </ul>
+        </details>
+        
+    </section>
+    <section class="oam_releases">
+        <h2>Releases</h2>
+        
+        
+        
+        
+            <details class="latest_releases">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.5.2-Release">3.5.2-Release (3.5.2-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Das neuste Logikmodul mit vielen neuen Funktionen und einigen kleinen Bugfixes. Das Release 3.5 löst direkt das 3.4 ab. Release 3.4 sollte nicht mehr verwendet werden und durch 3.5 aktualisiert werden, da 3.4 einen Fehler beim Wiederholfilter in der Ausgangspipeline hat, der zu unerwarteten AUS-Wiederholungen führen kann. Des weiteren wurde die Robustheit erhöht beim Update über den KNX-Bus und das Skript zur Erzeugung der knxpord bei Verwendung der ETS 6.3 wurde aktualisiert.
 
+>Wichtig: Falls nur die ETS 6.3.0 installiert ist, muss das Update mit der OpenKNX-Toolbox 1.0.3 erfolgen. Bei älteren Toolbox-Versionen kommt die Meldung "knxprod konnte nicht erstellt werden".
+
+>Anmerkung: Für alle, die neu anfangen wollen und darüber Nachdenken, nur das Logikmodul oder nur das Präsenzmodul zu installieren, ist von mir die Empfehlung, das Sensormodul zu nehmen. Die Teile, die nicht gebraucht werden, muss man nicht nutzen und sie belasten auch das System nicht. Und langfristig besteht der Plan, dass das Präsenzmodul komplett im Sensormodul aufgeht. Und dann erspart man sich den Umzug von der einen auf die andere Applikation.
+
+07.12.2024: Firmware 3.5.2, Applikation 3.5
+
+* FIX: Das neue Sendeverhalten am Ausgang und der Wiederholungsfilter haben sich leider gegenseitig beeinflusst und zu unerwarteten Ergebnissen geführt, die Logiken kaputt machen konnten. Deswegen ein Hotfix. 
+* NEU: Firmware-Update über den KNX-Bus lastet den Bus weniger aus (weniger Telegrammwiederholungen)
+* NEU: Die Erzeugung der ETS-Produktdatenbank (knxprod) funktioniert jetzt auch mit der ETS 6.3
+
+01.12.2024: Firmware 3.4, Applikation 3.4
+
+* NEU: Standardfunktion A = ABS(E1) (Betrag von E1) und A = ABS(E2) (Betrag von E2)
+* NEU: Standardfunktion A = -E1 (Negiere E1) und A = -E2 (Negiere E2)
+* NEU: Sendeverhalten für den Ausgang: Wertwiederholungen können jetzt unterdrückt werden
+* NEU: Alle internen KO-Verknüpfungen können auch relativ zum eigenen KO angegeben werden
+* NEU: Alle internen Eingänge können auch relativ zum eigenen Kanal angegeben werden
+* NEU: Die Feiertage Totensonntag und Schweizer Nationalfeiertag sind neu
+* NEU: Zeitschaltuhren können jetzt neben einem binären Wert auch einen Zahlenwert (1 Byte) enthalten, der als "Wert vom Eingang 1" im Ausgangskonverter genutzt werden kann 
+* NEU: Zeitschaltuhren können jetzt über mehrere Logikkanäle verbunden werden (sowohl relativ wie auch absolut). Sie werden dann wie eine Zeitschaltuhr behandelt. Das ist vor allem wichtig, wenn man bei Neustart Schaltzeiten nachholen will, erlaubt aber auch mehr als 8 Schaltzeiten pro Zeitschaltuhr 
+* NEU: Jahres- und Tageszeitschaltuhren können verbunden werden und somit wie eine Zeitschaltuhr fungieren. Ermöglicht eine Kombination von Tages- und Jahresschaltungen in einer Zeitschaltuhr.
+* FIX: Zeitschaltuhren mit "Feiertage wie Sonntage behandeln" haben (leider) nicht immer zu den Sonntags-Schaltzeiten geschaltet.
+* FIX: Zeitschaltuhren (und verbundene Zeitschaltuhren) werden jetzt korrekt in der "Übersicht interner Verknüpfungen" angezeigt. 
+* FIX: Bei Zeitschaltuhren, die im Urlaub schalten sollen, kann man nicht mehr die Einstellung "Schaltzeiten nachholen" vornehmen. Das Feld was schon immer funktionslos, da noch nie Urlaubs-Schaltzeiten nachgeholt werden konnten.
+* NEU: Interne Eingänge können jetzt auch als Trigger definiert werden 
+* NEU: Alle Firmware-Varianten haben ein neues Skript zum KNX-Firmware-Update bekommen, das einen Upload über den KNX-Bus erlaubt.
+
+Wie immer ist das Logikmodul Update-Fähig. Die IP-Variante wird nachgereicht, diese ist noch nicht fertiggestellt.
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.3.1-Release">3.3.1-Release (3.3.1-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Kleines Bugfix-Release zu 3.3, alles für 3.3 gesagte ist genauso gültig:
+
+* Der Konfigurationstransfer ist verfügbar. Ist kein Teil der Loigk, aber ein Teil der Logik-Applikation. Vereinfacht das Arbeiten mit mehreren Loigkkanälen und Logiken auf mehreren Geräten.
+* Benutzerformeln können jezt in der ETS editiert werden und müssen nicht mehr in der Firmware implementiert werden.
+* Endlosschliefenerkennung durch sich selbst aufrufende Logiken verhindert potentielle "Hänger"
+* Es gibt neue Standardfunktionen, die den aktuellen Ausgangswert berücksichtigen - erlaubt eine einfachere Definition von z.B. Zählern
+* Eine Übersichtsseite mit allen internen KO-Verknüpfungen erlaubt ein einfacheres Arbeiten mit internen KO
+* Bevor auf die Version 3.3 aktualisiert werden kann, muss eine Aktualisierung auf die Version 3.1 erfolgen
+
+Eine Regression gibt es allerdings: 
+
+* Wer die in Version 3.1 neu eingeführten mehrzeiligen Kommentare verwendet, sollte diese vorher speichern. Durch ein Update auf die 3.3 gehen leider alle Kommentare verloren. Dies wird in Zukunft nicht mehr passieren und ist einmalig.
+
+Das sind die Änderungen im Detail:
+
+24.07.2024: Firmware 3.3.1, Applikation 3.3
+
+* FIX: Ausgangskonverter Zahl->String (irgendein Zahl-DPT nach DPT16) ist jetzt implementiert.
+
+02.07.2024: Firmware 3.3, Applikation 3.3
+
+* NEU: Benutzerformeln sind nun in der ETS-Applikation definierbar, dies löst mittelfristig die bisher verfügbaren Benutzerfunktionen ab.
+* NEU: Es kann nun in der ETS getestet werden, ob die Ergebnisse von Benutzerformeln korrekt sind.
+* NEU: Die mathematische Funktion "Potenz" ist jetzt bei den Standardformeln auch verfügbar.
+* NEU: Durch die Logik verursachte Endlosschleifen werden jetzt erkannt und die entsprechenden Logikkanäle deaktiviert 
+* NEU: Es sind neue mathematische Funktionen hinzugekommen, die Logikkanäle vereinfachen können 
+  * Inkrementieren und Dekrementieren, damit der Aufbau von Zählern einfacher wird.
+  * Erhöhen und erniedrigen des Ausgangs um Eingangswerte
+  * Bit-Shifts um 1-Bit
+  * Min/Max unter Einbeziehung des Ausgangs
+
+26.03.2024: Firmware 3.2, Applikation 3.2
+
+* NEU: Übersichtsseite mit allen internen KO-Verknüpfungen hinzugefügt
+* FIX: TOR wurde nicht korrekt getriggert, wenn nur Eingang 2 als Trigger ausgewählt worden ist
+* FIX: Differenzhysterese funktionierte seit der Einführung von DPT12, DPT13 und DPT14 nicht mehr
+
+* Logik verwendet jetzt den neusten KNX-Stack, der auch bei hoher momentaner Buslast keine Telegramme mehr verpassen kann. Somit ist die Robustheit der Logik nochmal verbessert worden
+
+Um in der ETS ein Update der Logik von einer Version vor 3.1 auf die 3.2 vornehmen zu können, muss man erst ein Update auf die 3.1 machen. Anschließend funktioniert ein Update auf die 3.2. Die Firmware kann gleich auf die 3.3.1 aktualisiert werden.
+
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.3-Release">3.3-Release (3.3-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Dieses Release enthält Neuerungen, die das Arbeiten vereinfachen und das Logikmodul aufwerten:
+
+* Der Konfigurationstransfer ist verfügbar. Ist kein Teil der Loigk, aber ein Teil der Logik-Applikation. Vereinfacht das Arbeiten mit mehreren Loigkkanälen und Logiken auf mehreren Geräten.
+* Benutzerformeln können jezt in der ETS editiert werden und müssen nicht mehr in der Firmware implementiert werden.
+* Endlosschliefenerkennung durch sich selbst aufrufende Logiken verhindert potentielle "Hänger"
+* Es gibt neue Standardfunktionen, die den aktuellen Ausgangswert berücksichtigen - erlaubt eine einfachere Definition von z.B. Zählern
+* Eine Übersichtsseite mit allen internen KO-Verknüpfungen erlaubt ein einfacheres Arbeiten mit internen KO
+* Bevor auf die Version 3.3 aktualisiert werden kann, muss eine Aktualisierung auf die Version 3.1 erfolgen
+
+Eine Regression gibt es allerdings: 
+
+* Wer die in Version 3.1 neu eingeführten mehrzeiligen Kommentare verwendet, sollte diese vorher speichern. Durch ein Update auf die 3.3 gehen leider alle Kommentare verloren. Dies wird in Zukunft nicht mehr passieren und ist einmalig.
+
+Das sind die Änderungen im Detail:
+
+02.07.2024: Firmware 3.3, Applikation 3.3
+
+* NEU: Benutzerformeln sind nun in der ETS-Applikation definierbar, dies löst mittelfristig die bisher verfügbaren Benutzerfunktionen ab.
+* NEU: Es kann nun in der ETS getestet werden, ob die Ergebnisse von Benutzerformeln korrekt sind.
+* NEU: Die mathematische Funktion "Potenz" ist jetzt bei den Standardformeln auch verfügbar.
+* NEU: Durch die Logik verursachte Endlosschleifen werden jetzt erkannt und die entsprechenden Logikkanäle deaktiviert 
+* NEU: Es sind neue mathematische Funktionen hinzugekommen, die Logikkanäle vereinfachen können 
+  * Inkrementieren und Dekrementieren, damit der Aufbau von Zählern einfacher wird.
+  * Erhöhen und erniedrigen des Ausgangs um Eingangswerte
+  * Bit-Shifts um 1-Bit
+  * Min/Max unter Einbeziehung des Ausgangs
+
+26.03.2024: Firmware 3.2, Applikation 3.2
+
+* NEU: Übersichtsseite mit allen internen KO-Verknüpfungen hinzugefügt
+* FIX: TOR wurde nicht korrekt getriggert, wenn nur Eingang 2 als Trigger ausgewählt worden ist
+* FIX: Differenzhysterese funktionierte seit der Einführung von DPT12, DPT13 und DPT14 nicht mehr
+
+* Logik verwendet jetzt den neusten KNX-Stack, der auch bei hoher momentaner Buslast keine Telegramme mehr verpassen kann. Somit ist die Robustheit der Logik nochmal verbessert worden
+
+Um in der ETS ein Update der Logik von einer Version vor 3.1 auf die 3.2 vornehmen zu können, muss man erst ein Update auf die 3.1 machen. Anschließend funktioniert ein Update auf die 3.2. Die Firmware kann gleich auf die 3.2 aktualisiert werden.
+
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-LogicModule/releases/tag/3.1.4-release">3.1.4-Release (3.1.4-release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Dieses Release ist technisch auf eine neue Basis gesetzt. Dadurch sind viele neue Möglichkeiten in der ETS (Applikationsgestaltung) und in der Firmware (Robustheit) entstanden. Dazu zählen:
+
+* Kontextsensitive Hilfe in der ETS
+* Icons und Bilder in der ETS
+* Update über den KNX-Bus (nur RP2040)
+* Reine KNX-IP-Geräte (derzeit noch Beta, hier kann es noch Stabilitätsprobleme geben)
+
+Diese neue Infrastruktur wird auch die Basis sein für zukünftige Module und Releases.
+
+
+Korrekturen und Verbesserungen seit dem letzten Release:
+
+04.02.2024: Firmware 3.1.4, Applikation 3.1
+
+* FIX: Zeitschaltuhren haben bei hoher Auslastung des Gerätes sporadisch ihre Schaltzeiten "verpasst". Das ist korrigiert.
+* FIX: Wenn man Befehle im Diagnoseobjekt falsch oder unvollständig geschrieben hat, konnte das zum Aufhängen des Gerätes führen.
+* NEU: Der Befehl "logic help" ist jetzt nicht nur in der Console, sondern auch im Diagnoseobjekt verfügbar.
+
+25.01.2024: Firmware 3.1.3, Applikation 3.1
+
+* ACHTUNG: Falls ein Update einer früheren Firmware versagt, liegt das daran, dass bei einer internen KO-Verbindung vom Eingang 2 eines Logikkanals auch das "eigene" KO des Eingang 2 mit einer GA belegt wurde. Der Eingang 2 ist definiert als: Externe KO-Verknüpfung, DPT5.001, Eingangskonverter ist ungleich "Wertintervall". 
+* ACHTUNG: Nach einem Update müssen alle Zeitschaltuhren, deren Schaltzeiten durch "Sonnenauf-/-untergang plus/minus Zeitversatz" definiert sind, neu definiert werden! Der Stunden-Zeitversatz geht durch das Update verloren und steht auf 0 Stunden.
+* NEU: Ein Logikausgang kann jetzt auch seinen Wert zusätzlich über ein internes KO versenden
+* NEU: Jede Logik kann jetzt auch einen mehrzeiligen Langtext (bis 512 Zeichen) als Kommentar enthalten
+* NEU: Ein Eingangskonverter für DPT1 erlaubt jetzt auch die Auswertung eines DPT1-Telegramms als Trigger
+* NEU: Die Anzahl der verfügbaren Kanäle kann jetzt in der Applikation reduziert werden. Dies dient der Übersicht.
+* FIX: Man kann bei Logiken einstellen, dass sie erst ausgewertet werden, wenn alle Eingänge gültig sind. Die Prüfung, dass ein Eingang gültig ist, konnte schon erfolgreich sein, obwohl noch keine Antwort von einem ReadRequest eingegangen ist. Dies war ein seltener Fehler, der jetzt korrigiert ist.
+* FIX: Die Prüfung, ob ein Eingang einen gültigen Wert hat, konnte bei komplexeren Logiken versagen. Auch dies ist jetzt korrigiert.
+
+27.12.2023: Firmware 3.0.9, Applikation 3.0 (nur zum Betatest genutzt)
+
+* NEU: Die Firmware kann jetzt über den KNX-Bus aktualisiert werden (nur bei RP2040-Prozessor aka Raspberry Pi Pico)
+* NEU: Die Firmware kann jetzt auch auf reinen IP-Geräten eingesetzt werden und als Logikmodul-IP genutzt werden
+* NEU: Output Converter "Wert eines KO senden" eingeführt
+* NEU: Zusätzliche Infoboxen, die erklären, wie "nur bei geändertem Ergebnis" zu verstehen ist.
+* FIX: Textanpassung von "Kanalausgang X/Y zu Interner Eingang 3/4"
+* FIX: Zeitschaltuhren Sonnenauf-/-untergang mit Zeitversatz erlauben jetzt nur einen Zeitversatz von &pm;6 Stunden und 59 Minuten. Der früher mögliche Zeitbereich konnte nicht funktionieren. 
+* FIX: Bei internen KO-Verknüpfungen konnte man immer noch "Vom Bus zyklisch lesen" einstellen. Diese Option ist an der stelle falsch und kann nicht mehr ausgewählt werden.
+
+Hier ist die [Produktbeschreibung](https://github.com/OpenKNX/OpenKNX/wiki/Produktinfo-Logikmodul) samt Featureliste und [Applikationsbeschreibung](https://github.com/OpenKNX/OFM-LogicModule/blob/v1/doc/Applikationsbeschreibung-Logik.md) samt detailliertem Änderungsverzeichnis.
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-LogicModule/releases/tag/1.5.3-release">1.5.3-release (1.5.3-release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Korrekturen und Verbesserungen seit dem letzten Release:
+
+* Der Delta-Input-Converter hat beim Start keinen ReadRequest auf einem Eingang gesendet, wenn auf dem anderen Eingang ein Wert empfangen wurde.
+* TOR hat jetzt einen Tri-State-Eingang zum öffnen vom Tor: Das Tor ist beim Neustart weder offen noch geschlossen und agiert somit beim ersten Telegramm erwartungskonform
+* TOR ist bei Neustart am Ausgang undefiniert und wird mit dem ersten öffnen/schließen erst initialisiert.
+* Mathematische Funktion "Glättung" von Werten eingeführt
+* Zeitschaltuhren Sonnenauf-/untergang mit Zeitversatz konnten intern zu ungültigen Zeiten führen und schalteten dann unerwartet oder gar nicht.
+* Beim nachholen von Schaltzeiten wurde die Sommerzeit nicht beachtet.
+* Der KNX-Stack ist jetzt wesentlich robuster bei hoch ausgelastetem KNX-Bus. Das hat direkte Auswirkungen auf die Logik, die früher bei Hochlast Telegramme ausgelassen wurden, die dann als Trigger für Logiken fehlten.
+* Einige wenige DPT9-Werte ungleich 0 wurden vom KNX-Stack als 0 gesendet. Das ist gelöst. Es waren Werte der Form ±(2^n)/100 für n>10, also z.B. ±20.48, ±40.96, ±81.92, ±163.84, ±327.68, ±655.36 usw.
+
+Hier ist die [Produktbeschreibung](https://github.com/OpenKNX/OpenKNX/wiki/Produktinfo-Logikmodul) samt Featureliste und [Applikationsbeschreibung](../main/doc/Applikationsbeschreibung-Logik.md) samt detailliertem Änderungsverzeichnis.
+
+**Man sollte ein update machen, wenn man DPT9-Werte auf den knx-Bus sendet**</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-LogicModule/releases/tag/1.4.2-Release">1.4.2-Release (1.4.2-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Weitere Verbesserungen der Logikmodul-Firmware:
+
+- Das Logikmodul kann jetzt mit 4-Byte-Werten DPT12, DPT13, DPT14 umgehen, sowohl am Eingang wie auch am Ausgang.
+- Datum/Zeit kann jetzt auch über ein kombiniertes KO empfangen werden (DPT19)
+- Berechnung von Sonnenauf- und -untergang ist stark verbessert
+- Es werden alle Zeitzonen unterstützt
+- Zeitschaltuhren können jetzt auch anhand des Sonnenstands (Elevation, Winkel über dem Horizont) schalten.
+
+Detailliertes Änderungsverzeichnis ist wie immer in der [Applikationsbeschreibung](../main/doc/Applikationsbeschreibung-Logik.md) zu finden.</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
+                    <a href="https://github.com/OpenKNX/OAM-LogicModule/releases/tag/1.0-Release">1.0-Release (1.0-Release)</a>
+                </summary>
+                <p style="white-space:pre-line;">Die Version hat viele Detailverbesserungen im internen Datenfluss und einige Fehlerbehebungen. Es wird dringend empfohlen, ein Update auf diese Version zu machen. 
+
+Das speichern der KO-Werte war die letzte noch fehlende Funktionalität zum früheren Logikmodul. Ab sofort wird das alte Logikmodul nicht mehr weiter gewartet.
+
+Änderungshistorie:
+
+* NEU: Kein EEPROM mehr nötig, KO-Werte werden im Flash gespeichert
+* NEU: Das Logikmodul kann jetzt auch ein "Gerät zurücksetzen" an sich selbst senden (also mit der eigenen PA).
+* NEU: Technisch ist es notwendig, dass die **minimale** Zeit, bis das Gerät nach einem Neustart aktiv wird, auf 1 Sekunde erhöht wird (früher 0). Die 0 wurde in der Vergangenheit sowieso nicht erreicht, lag aber bei < 500 ms. 
+* NEU: Im Flash gespeicherte KO (Eingänge) können ihre Werte nicht nur über einen Ausgang, sondern auch sendend bereitstellen
+* FIX: DPT9 in Formeln wird jetzt korrekt berechnet, bisher konnte es passieren, dass der Wert um Faktor 10 oder gar 100 zu groß wurde.
+* FIX: Binärfunktionen (Bit-AND, Bit-OR, ...) rechnen jetzt korrekt. Bisher konnte es durch eine interne Wandlung zu einer Fliesskommazahl zu Rundungsproblemen und damit zu Bitverschiebungen kommen und dadurch zu falschen Ergebnissen.
+</p>
+            </details>
+        
+    </section>
+</div>
+<footer>
+<p><strong>*</strong>: automatisch ermittelt aus aktuellem Release. Nicht jedes Gerät wird zwingend den vollen Funktionsumfang unterstützen bzw. können Module bestimmte Hardware-Fähigkeiten zur Nutzung erfordern.</p>
+</footer>
 </body>
 </html>

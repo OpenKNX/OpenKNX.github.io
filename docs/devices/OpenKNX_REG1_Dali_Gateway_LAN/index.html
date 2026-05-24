@@ -3,38 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenKNX REG1 Dali Gateway LAN</title>
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(2):hover) tr > :nth-child(2).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(3):hover) tr > :nth-child(3).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(4):hover) tr > :nth-child(4).colHover,
+        
+        table.openknxTitleTable tbody tr:hover {
+            background-color: #dfd;
+        }
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(2):hover) thead th.rotate45:nth-child(2) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(3):hover) thead th.rotate45:nth-child(3) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(4):hover) thead th.rotate45:nth-child(4) div span
+        
+        {
+            border-bottom: 2px solid #9f9;
+        }
+    </style>
 </head>
 <body>
 
-<h1>OpenKNX REG1 Dali Gateway LAN</h1>
 <p><a href="../">&nwarr; Liste der OpenKNX-Geräte</a></p>
-<p></p>
-<p><a href="functions.html">Übersichtstabelle mit verfügbaren OpenKNX-Applikationen und Modulen</a></p>
-<h2>Verfügbare Applikationen</h2>
+
+<h1>OpenKNX REG1 Dali Gateway LAN</h1>
+
+
+
+<h2>Weitere Informationen</h2>
 <ul>
-    
-    <li data-oam="GW-REG1-Dali">
-        (<a href="https://github.com/OpenKNX/GW-REG1-Dali">GitHub</a>)
-        <a href="../../oam/GW-REG1-Dali/">GW-REG1-Dali</a>
-    </li>
-    
+    <li><a href="">Github-Repository</a></li>
+    <li><a href="">Thread im KNX-User-Forum</a></li>
+    <li><a href="">Hardwaredetails</a></li>
+    <li><a href="">Aufbauanleitung</a></li>
 </ul>
 
-<h2>In Applikationen verfügbare Module</h2>
-<ul>
-    <li data-ofm="OFM-FileTransferModule">
-        (<a href="https://github.com/OpenKNX/OFM-FileTransferModule">GitHub</a>)
-        <a href="../../ofm/OFM-FileTransferModule/">OFM-FileTransferModule</a>
-    </li>
-    <li data-ofm="OGM-Common">
-        (<a href="https://github.com/OpenKNX/OGM-Common">GitHub</a>)
-        <a href="../../ofm/OGM-Common/">OGM-Common</a>
-    </li>
-    <li data-ofm="knx">
-        (<a href="https://github.com/OpenKNX/knx">GitHub</a>)
-        <a href="../../ofm/knx/">knx</a>
-    </li>
-</ul>
+<h2>Übersicht</h2>
+<table>
+    <tbody>
+        <tr>
+            <th>Anbieter</th>
+            <td>OpenKNX</td>
+        </tr>
+        <tr>
+            <th>Gerätebezeichnung</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>OpenKNX Geräte-ID</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>FERTIG</td>
+        </tr>
+        <tr>
+            <th>Mikrocontroller</th>
+            <td>RP2040</td>
+        </tr>
+        <tr>
+            <th>Geräteplattform</th>
+            <td>REG1</td>
+        </tr>
+        <tr>
+            <th>DALI-Anschlüsse</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Verfügbarkeit</th>
+            <td>OpenKNX, BAUSATZ, PCB</td>
+        </tr>
+        <tr>
+            <th>Bezugsquelle</th>
+            <td><a href="...">...</a></td></tr>
+    </tbody>
+</table>
+
+<h2>Nutzungsmöglichkeiten</h2>
+
+<table class="openknxTitleTable">
+    <caption></caption>
+    <colgroup>
+        <col class="before-new-cols" />
+
+       
+        
+        <col data-ofm="knx" />
+        
+        <col data-ofm="OGM-Common" />
+        
+        <col data-ofm="OFM-FileTransferModule" />
+        
+        <col data-ofm="*special*" />
+       
+
+       
+    </colgroup>
+    <thead>
+      <tr class="colGroupTitle">
+        <th class="before-new-cols">Applikation</th>
+        <th class="before-new-cols" colspan="4">Enthaltene Module</th>
+        
+      </tr>
+      <tr class="hoverTrigger">
+        <th class="before-new-cols"></th>
+
+       
+        
+        <th class="rotate45" data-ofm="knx"><div><span><a href="/ofm/knx">knx</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OGM-Common"><div><span><a href="/ofm/OGM-Common">OGM-Common</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-FileTransferModule"><div><span><a href="/ofm/OFM-FileTransferModule">OFM-FileTransferModule</a></span></div></th>
+        
+        <th class="singleModules before-new-cols" data-ofm="*special*">Nur in dieser Applikation:</th>
+       
+
+       
+
+      </tr>
+      <tr class="iconRow hoverTrigger">
+        <th class="before-new-cols"></th>
+
+       
+        <th data-ofm="knx" class="colHover" title="">|</th>
+        <th data-ofm="OGM-Common" class="colHover" title="OpenKNX: OpenKNX Common (Basisfunktionen)"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/openknx.png" /></th>
+        <th data-ofm="OFM-FileTransferModule" class="colHover" title="">|</th>
+        
+        <th class="before-new-cols" data-ofm="*special*"></th>
+       
+
+       
+
+      </tr>
+    </thead>
+    <tbody>
+    
+    
+    
+    
+    <tr data-oam="GW-REG1-Dali" class="hoverTrigger">
+        <th class="before-new-cols"><a href="/oam/GW-REG1-Dali">GW-REG1-Dali</a></th>
+
+       
+        
+        <td data-ofm="knx" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OGM-Common" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-FileTransferModule" class="isPart colHover">&#9724;</td>
+        
+        <td class="left before-new-cols" data-ofm="*special*">
+                <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9723;</span>&nbsp;DaliModule</span>
+        </td>
+       
+
+       
+
+    </tr>
+    
+    </tbody>
+</table>
 </body>
 </html>

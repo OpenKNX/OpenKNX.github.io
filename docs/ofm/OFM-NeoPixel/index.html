@@ -3,53 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OFM-NeoPixel</title>
+    <title>OFM-NeoPixel | OpenKNX Modul | Übersicht</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .ofm_relations {
+            display: flex;
+        }
+        .ofm_relations section {
+            max-width: 30%;
+            margin-right: 3em;
+        }
+    </style>
 </head>
 <body>
 
-<h1>OFM-NeoPixel</h1>
 <p><a href="../">&nwarr; Liste der OpenKNX-Module</a></p>
+<h1>OFM-NeoPixel</h1>
+<p><a href="https://github.com/OpenKNX/OFM-NeoPixel">GitHub</a></p>
 <p></p>
 <p><a href="functions.html">Übersichtstabelle mit verfügbaren OpenKNX-Applikationen und unterstützten Geräten</a></p>
-<h2>Verfügbar in Applikationen</h2>
-<ul>
-    
-    <li data-oam="OAM-NeoPixel">
-        (<a href="https://github.com/OpenKNX/OAM-NeoPixel">GitHub</a>)
-        <a href="../../oam/OAM-NeoPixel/">OAM-NeoPixel</a>
-    </li>
-    
-</ul>
 
-<h2>Verfügbar in Firmware für folgende Geräte</h2>
-<h3>OpenKNX</h3>
-<ul>
-    <li data-dev="OpenKNX PiPico BCU Connector"><a href="../../devices/OpenKNX_PiPico_BCU_Connector/">OpenKNX PiPico BCU Connector</a></li>
-    <li data-dev="OpenKNX PiPico BCU Connector (RP2350)"><a href="../../devices/OpenKNX_PiPico_BCU_Connector__RP2350_/">OpenKNX PiPico BCU Connector (RP2350)</a></li>
-    <li data-dev="OpenKNX UP1 UART Gateway"><a href="../../devices/OpenKNX_UP1_UART_Gateway/">OpenKNX UP1 UART Gateway</a></li>
-    <li data-dev="OpenKNX REG2 PiPico V1"><a href="../../devices/OpenKNX_REG2_PiPico_V1/">OpenKNX REG2 PiPico V1</a></li>
-    <li data-dev="OpenKNX REG2 PiPico2 V1"><a href="../../devices/OpenKNX_REG2_PiPico2_V1/">OpenKNX REG2 PiPico2 V1</a></li>
-    <li data-dev="OpenKNX REG2 PiPico2W V1"><a href="../../devices/OpenKNX_REG2_PiPico2W_V1/">OpenKNX REG2 PiPico2W V1</a></li>
-    <li data-dev="OpenKNX REG2 PiPicoW V1"><a href="../../devices/OpenKNX_REG2_PiPicoW_V1/">OpenKNX REG2 PiPicoW V1</a></li>
-    <li data-dev="OpenKNXiao Mini RP2040 V1"><a href="../../devices/OpenKNXiao_Mini_RP2040_V1/">OpenKNXiao Mini RP2040 V1</a></li>
-    <li data-dev="OpenKNXiao KNeoPiX RP2040 V1"><a href="../../devices/OpenKNXiao_KNeoPiX_RP2040_V1/">OpenKNXiao KNeoPiX RP2040 V1</a></li>
-    <li data-dev="OpenKNXiao KNeoPiX RP2350 V1"><a href="../../devices/OpenKNXiao_KNeoPiX_RP2350_V1/">OpenKNXiao KNeoPiX RP2350 V1</a></li>
-    <li data-dev="OpenKNXiao Mini RP2350 V1"><a href="../../devices/OpenKNXiao_Mini_RP2350_V1/">OpenKNXiao Mini RP2350 V1</a></li>
-</ul>
-<h3>Andere Geräte</h3>
-<ul>
-    <li data-dev="(???)-Gledopto-GL-C-309WL-ESP32">(???)-Gledopto-GL-C-309WL-ESP32</li>
-    <li data-dev="(???)-QuinLED-Dig-Next-2">(???)-QuinLED-Dig-Next-2</li>
-    <li data-dev="(???)-QuinLED-Dig-Octa-32-8L-Ethernet">(???)-QuinLED-Dig-Octa-32-8L-Ethernet</li>
-    <li data-dev="(???)-QuinLED-Dig-Octa-32-8L-WiFi">(???)-QuinLED-Dig-Octa-32-8L-WiFi</li>
-    <li data-dev="(???)-QuinLED-Dig-Quad-V3-Ethernet">(???)-QuinLED-Dig-Quad-V3-Ethernet</li>
-    <li data-dev="(???)-QuinLED-Dig-Quad-V3-WiFi">(???)-QuinLED-Dig-Quad-V3-WiFi</li>
-    <li data-dev="(???)-QuinLED-Dig-Quad-V3-WiFi-AE-Plus">(???)-QuinLED-Dig-Quad-V3-WiFi-AE-Plus</li>
-    <li data-dev="(???)-QuinLED-Dig-Uno-V3-Ethernet">(???)-QuinLED-Dig-Uno-V3-Ethernet</li>
-    <li data-dev="(???)-QuinLED-Dig-Uno-V3-WiFi">(???)-QuinLED-Dig-Uno-V3-WiFi</li>
-    <li data-dev="(???)-QuinLED-Dig-Uno-V3-WiFi-AE-Plus">(???)-QuinLED-Dig-Uno-V3-WiFi-AE-Plus</li>
-    <li data-dev="(???)-QuinLED-Dig2Go">(???)-QuinLED-Dig2Go</li>
-</ul>
+<div class="ofm_relations">
+    <section class="related_oams">
+        <h2>Verfügbar in Applikationen</h2>
+        <ul>
+            
+            <li data-oam="OAM-NeoPixel">
+                <a href="../../oam/OAM-NeoPixel/">OAM-NeoPixel</a>
+            </li>
+            
+        </ul>
+    </section>
+    <section class="related_devices">
+        <h2>Verfügbar in Firmware für folgende Geräte</h2>
+        <ul>
+            <li data-dev="OpenKNX PiPico BCU Connector"><a href="../../devices/OpenKNX_PiPico_BCU_Connector/">OpenKNX PiPico BCU Connector</a></li>
+            <li data-dev="OpenKNX PiPico BCU Connector (RP2350)"><a href="../../devices/OpenKNX_PiPico_BCU_Connector__RP2350_/">OpenKNX PiPico BCU Connector (RP2350)</a></li>
+            <li data-dev="OpenKNX UP1 UART Gateway"><a href="../../devices/OpenKNX_UP1_UART_Gateway/">OpenKNX UP1 UART Gateway</a></li>
+            <li data-dev="OpenKNX REG2 PiPico V1"><a href="../../devices/OpenKNX_REG2_PiPico_V1/">OpenKNX REG2 PiPico V1</a></li>
+            <li data-dev="OpenKNX REG2 PiPico2 V1"><a href="../../devices/OpenKNX_REG2_PiPico2_V1/">OpenKNX REG2 PiPico2 V1</a></li>
+            <li data-dev="OpenKNX REG2 PiPico2W V1"><a href="../../devices/OpenKNX_REG2_PiPico2W_V1/">OpenKNX REG2 PiPico2W V1</a></li>
+            <li data-dev="OpenKNX REG2 PiPicoW V1"><a href="../../devices/OpenKNX_REG2_PiPicoW_V1/">OpenKNX REG2 PiPicoW V1</a></li>
+            <li data-dev="OpenKNXiao Mini RP2040 V1"><a href="../../devices/OpenKNXiao_Mini_RP2040_V1/">OpenKNXiao Mini RP2040 V1</a></li>
+            <li data-dev="OpenKNXiao KNeoPiX RP2040 V1"><a href="../../devices/OpenKNXiao_KNeoPiX_RP2040_V1/">OpenKNXiao KNeoPiX RP2040 V1</a></li>
+            <li data-dev="OpenKNXiao KNeoPiX RP2350 V1"><a href="../../devices/OpenKNXiao_KNeoPiX_RP2350_V1/">OpenKNXiao KNeoPiX RP2350 V1</a></li>
+            <li data-dev="OpenKNXiao Mini RP2350 V1"><a href="../../devices/OpenKNXiao_Mini_RP2350_V1/">OpenKNXiao Mini RP2350 V1</a></li>
+        </ul>
+        <details>
+            <summary>Andere Geräte</summary>
+            <ul>
+                <li data-dev="(???)-Gledopto-GL-C-309WL-ESP32">(???)-Gledopto-GL-C-309WL-ESP32</li>
+                <li data-dev="(???)-QuinLED-Dig-Next-2">(???)-QuinLED-Dig-Next-2</li>
+                <li data-dev="(???)-QuinLED-Dig-Octa-32-8L-Ethernet">(???)-QuinLED-Dig-Octa-32-8L-Ethernet</li>
+                <li data-dev="(???)-QuinLED-Dig-Octa-32-8L-WiFi">(???)-QuinLED-Dig-Octa-32-8L-WiFi</li>
+                <li data-dev="(???)-QuinLED-Dig-Quad-V3-Ethernet">(???)-QuinLED-Dig-Quad-V3-Ethernet</li>
+                <li data-dev="(???)-QuinLED-Dig-Quad-V3-WiFi">(???)-QuinLED-Dig-Quad-V3-WiFi</li>
+                <li data-dev="(???)-QuinLED-Dig-Quad-V3-WiFi-AE-Plus">(???)-QuinLED-Dig-Quad-V3-WiFi-AE-Plus</li>
+                <li data-dev="(???)-QuinLED-Dig-Uno-V3-Ethernet">(???)-QuinLED-Dig-Uno-V3-Ethernet</li>
+                <li data-dev="(???)-QuinLED-Dig-Uno-V3-WiFi">(???)-QuinLED-Dig-Uno-V3-WiFi</li>
+                <li data-dev="(???)-QuinLED-Dig-Uno-V3-WiFi-AE-Plus">(???)-QuinLED-Dig-Uno-V3-WiFi-AE-Plus</li>
+                <li data-dev="(???)-QuinLED-Dig2Go">(???)-QuinLED-Dig2Go</li>
+            </ul>
+        </details>
+    </section>
+
 
 </body>
 </html>

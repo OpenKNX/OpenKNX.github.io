@@ -3,62 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OFM-SwitchActuator</title>
+    <title>OFM-SwitchActuator | OpenKNX Modul | Übersicht</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .ofm_relations {
+            display: flex;
+        }
+        .ofm_relations section {
+            max-width: 30%;
+            margin-right: 3em;
+        }
+    </style>
 </head>
 <body>
 
-<h1>OFM-SwitchActuator</h1>
 <p><a href="../">&nwarr; Liste der OpenKNX-Module</a></p>
+<h1>OFM-SwitchActuator</h1>
+<p><a href="https://github.com/OpenKNX/OFM-SwitchActuator">GitHub</a></p>
 <p></p>
 <p><a href="functions.html">Übersichtstabelle mit verfügbaren OpenKNX-Applikationen und unterstützten Geräten</a></p>
-<h2>Verfügbar in Applikationen</h2>
-<ul>
-    
-    <li data-oam="OAM-AccessControl">
-        (<a href="https://github.com/OpenKNX/OAM-AccessControl">GitHub</a>)
-        <a href="../../oam/OAM-AccessControl/">OAM-AccessControl</a>
-    </li>
-    
-    <li data-oam="OAM-TouchRound">
-        (<a href="https://github.com/OpenKNX/OAM-TouchRound">GitHub</a>)
-        <a href="../../oam/OAM-TouchRound/">OAM-TouchRound</a>
-    </li>
-    
-    <li data-oam="OAM-REG1-Schaltaktor-4x">
-        (<a href="https://github.com/OpenKNX/OAM-REG1-Schaltaktor-4x">GitHub</a>)
-        <a href="../../oam/OAM-REG1-Schaltaktor-4x/">OAM-REG1-Schaltaktor-4x</a>
-    </li>
-    
-    <li data-oam="OAM-SwitchActuator">
-        (<a href="https://github.com/OpenKNX/OAM-SwitchActuator">GitHub</a>)
-        <a href="../../oam/OAM-SwitchActuator/">OAM-SwitchActuator</a>
-    </li>
-    
-    <li data-oam="OAM-LedDimmer-AB">
-        (<a href="https://github.com/OpenKNX/OAM-LedDimmer-AB">GitHub</a>)
-        <a href="../../oam/OAM-LedDimmer-AB/">OAM-LedDimmer-AB</a>
-    </li>
-    
-</ul>
 
-<h2>Verfügbar in Firmware für folgende Geräte</h2>
-<h3>OpenKNX</h3>
-<ul>
-    <li data-dev="OpenKNX REG1 4xSELV Schaltaktor"><a href="../../devices/OpenKNX_REG1_4xSELV_Schaltaktor/">OpenKNX REG1 4xSELV Schaltaktor</a></li>
-    <li data-dev="OpenKNX UP1 8xSensor"><a href="../../devices/OpenKNX_UP1_8xSensor/">OpenKNX UP1 8xSensor</a></li>
-</ul>
-<h3>Andere Geräte</h3>
-<ul>
-    <li data-dev="AB-AccessControl">AB-AccessControl</li>
-    <li data-dev="AB-SmartHouse-SwitchActuator-REG6-8CH">AB-SmartHouse-SwitchActuator-REG6-8CH</li>
-    <li data-dev="AB-SmartHouse_CC_REG_12CH">AB-SmartHouse_CC_REG_12CH</li>
-    <li data-dev="AB-SmartHouse_CC_UP_16CH">AB-SmartHouse_CC_UP_16CH</li>
-    <li data-dev="AB-SmartHouse_CC_UP_8CH">AB-SmartHouse_CC_UP_8CH</li>
-    <li data-dev="AB-SmartHouse_CV_REG_12CH">AB-SmartHouse_CV_REG_12CH</li>
-    <li data-dev="AB-SmartHouse_CV_REG_12CH_CS">AB-SmartHouse_CV_REG_12CH_CS</li>
-    <li data-dev="AB-SmartHouse_CV_UP_6CH">AB-SmartHouse_CV_UP_6CH</li>
-    <li data-dev="AB-SmartHouse_CV_UP_6CH_CS">AB-SmartHouse_CV_UP_6CH_CS</li>
-</ul>
+<div class="ofm_relations">
+    <section class="related_oams">
+        <h2>Verfügbar in Applikationen</h2>
+        <ul>
+            
+            <li data-oam="OAM-AccessControl">
+                <a href="../../oam/OAM-AccessControl/">OAM-AccessControl</a>
+            </li>
+            
+            <li data-oam="OAM-TouchRound">
+                <a href="../../oam/OAM-TouchRound/">OAM-TouchRound</a>
+            </li>
+            
+            <li data-oam="OAM-REG1-Schaltaktor-4x">
+                <a href="../../oam/OAM-REG1-Schaltaktor-4x/">OAM-REG1-Schaltaktor-4x</a>
+            </li>
+            
+            <li data-oam="OAM-SwitchActuator">
+                <a href="../../oam/OAM-SwitchActuator/">OAM-SwitchActuator</a>
+            </li>
+            
+            <li data-oam="OAM-LedDimmer-AB">
+                <a href="../../oam/OAM-LedDimmer-AB/">OAM-LedDimmer-AB</a>
+            </li>
+            
+        </ul>
+    </section>
+    <section class="related_devices">
+        <h2>Verfügbar in Firmware für folgende Geräte</h2>
+        <ul>
+            <li data-dev="OpenKNX REG1 4xSELV Schaltaktor"><a href="../../devices/OpenKNX_REG1_4xSELV_Schaltaktor/">OpenKNX REG1 4xSELV Schaltaktor</a></li>
+            <li data-dev="OpenKNX UP1 8xSensor"><a href="../../devices/OpenKNX_UP1_8xSensor/">OpenKNX UP1 8xSensor</a></li>
+        </ul>
+        <details>
+            <summary>Andere Geräte</summary>
+            <ul>
+                <li data-dev="AB-AccessControl">AB-AccessControl</li>
+                <li data-dev="AB-SmartHouse-SwitchActuator-REG6-8CH">AB-SmartHouse-SwitchActuator-REG6-8CH</li>
+                <li data-dev="AB-SmartHouse_CC_REG_12CH">AB-SmartHouse_CC_REG_12CH</li>
+                <li data-dev="AB-SmartHouse_CC_UP_16CH">AB-SmartHouse_CC_UP_16CH</li>
+                <li data-dev="AB-SmartHouse_CC_UP_8CH">AB-SmartHouse_CC_UP_8CH</li>
+                <li data-dev="AB-SmartHouse_CV_REG_12CH">AB-SmartHouse_CV_REG_12CH</li>
+                <li data-dev="AB-SmartHouse_CV_REG_12CH_CS">AB-SmartHouse_CV_REG_12CH_CS</li>
+                <li data-dev="AB-SmartHouse_CV_UP_6CH">AB-SmartHouse_CV_UP_6CH</li>
+                <li data-dev="AB-SmartHouse_CV_UP_6CH_CS">AB-SmartHouse_CV_UP_6CH_CS</li>
+            </ul>
+        </details>
+    </section>
+
 
 </body>
 </html>

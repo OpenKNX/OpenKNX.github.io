@@ -23,6 +23,8 @@
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(15):hover) tr > :nth-child(15).colHover,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(16):hover) tr > :nth-child(16).colHover,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(17):hover) tr > :nth-child(17).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(18):hover) tr > :nth-child(18).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(19):hover) tr > :nth-child(19).colHover,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
@@ -42,7 +44,9 @@
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(14):hover) thead th.rotate45:nth-child(14) div span,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(15):hover) thead th.rotate45:nth-child(15) div span,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(16):hover) thead th.rotate45:nth-child(16) div span,
-        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(17):hover) thead th.rotate45:nth-child(17) div span
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(17):hover) thead th.rotate45:nth-child(17) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(18):hover) thead th.rotate45:nth-child(18) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(19):hover) thead th.rotate45:nth-child(19) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -133,6 +137,10 @@
         
         <col data-ofm="OFM-FunctionBlocks" />
         
+        <col data-ofm="OGM-SensorDevices" />
+        
+        <col data-ofm="OFM-SensorModule" />
+        
         <col data-ofm="OFM-InternetWeatherModule" />
         
         <col data-ofm="OFM-SmartHomeBridge" />
@@ -147,7 +155,7 @@
     <thead>
       <tr class="colGroupTitle">
         <th class="before-new-cols">Applikation</th>
-        <th class="before-new-cols" colspan="13">Enthaltene Module</th>
+        <th class="before-new-cols" colspan="15">Enthaltene Module</th>
         
       </tr>
       <tr class="hoverTrigger">
@@ -172,6 +180,10 @@
         <th class="rotate45" data-ofm="OFM-LogicModule"><div><span><a href="/ofm/OFM-LogicModule">OFM-LogicModule</a></span></div></th>
         
         <th class="rotate45" data-ofm="OFM-FunctionBlocks"><div><span><a href="/ofm/OFM-FunctionBlocks">OFM-FunctionBlocks</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OGM-SensorDevices"><div><span><a href="/ofm/OGM-SensorDevices">OGM-SensorDevices</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-SensorModule"><div><span><a href="/ofm/OFM-SensorModule">OFM-SensorModule</a></span></div></th>
         
         <th class="rotate45" data-ofm="OFM-InternetWeatherModule"><div><span><a href="/ofm/OFM-InternetWeatherModule">OFM-InternetWeatherModule</a></span></div></th>
         
@@ -198,6 +210,8 @@
         <th data-ofm="OFM-ConfigTransfer" class="colHover" title="Konfigurationstransfer: Kopieren, Import, Export von ETS-Einstellungen"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ConfigTransfer/refs/heads/v1/src/Baggages/Icons/ofm-configtransfer.png" /></th>
         <th data-ofm="OFM-LogicModule" class="colHover" title="Logiken: Logikfunktionen, Wertekonvertierung und Zeitschaltuhren"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/blur.png" /></th>
         <th data-ofm="OFM-FunctionBlocks" class="colHover" title="Funktionsblöcke: Bausteine mit verschiedenen Standardfunktionen"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-FunctionBlocks/refs/heads/v1/src/Baggages/Icons/texture-box.png" /></th>
+        <th data-ofm="OGM-SensorDevices" class="colHover" title="">|</th>
+        <th data-ofm="OFM-SensorModule" class="colHover" title="Sensoren: Hardware-Umweltsensoren"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/gauge.png" /></th>
         <th data-ofm="OFM-InternetWeatherModule" class="colHover" title="Internet Wetter: Wetterdaten von Internetdiensten"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-InternetWeatherModule/refs/heads/v1/src/Baggages/Icons/weather-partly-cloudy.png" /></th>
         <th data-ofm="OFM-SmartHomeBridge" class="colHover" title="Bridge: SmartHomeBridge"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/shape.png" /></th>
         <th data-ofm="OFM-Sonos" class="colHover" title="Sonos Tonquellen: Steuerung von Sonos-Lautsprechern"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-Sonos/refs/heads/v1/src/Baggages/Icons/waveform.png" /></th>
@@ -236,6 +250,10 @@
         <td data-ofm="OFM-LogicModule" class="isPart colHover">&#9724;</td>
         
         <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OGM-SensorDevices" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-SensorModule" class="isPart colHover">&#9724;</td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
@@ -278,6 +296,10 @@
         
         <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9724;</td>
         
+        <td data-ofm="OGM-SensorDevices" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-SensorModule" class="isPart colHover"></td>
+        
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
@@ -318,6 +340,10 @@
         
         <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9724;</td>
         
+        <td data-ofm="OGM-SensorDevices" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-SensorModule" class="isPart colHover"></td>
+        
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover">&#9724;</td>
@@ -357,6 +383,10 @@
         <td data-ofm="OFM-LogicModule" class="isPart colHover">&#9724;</td>
         
         <td data-ofm="OFM-FunctionBlocks" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OGM-SensorDevices" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-SensorModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover">&#9724;</td>
         

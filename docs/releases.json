@@ -3087,6 +3087,23 @@
             "description": null,
             "releases": [
                 {
+                    "prerelease": true,
+                    "tag_name": "0.9.0",
+                    "name": "0.9.0",
+                    "published_at": "2026-05-27T16:04:40Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Aircondition/releases/tag/0.9.0",
+                    "body": "Neue Features gegen\u00fcber 0.8.0:\r\n\r\n- Unterst\u00fctzung f\u00fcr Daikin\r\n- Unterst\u00fctzung f\u00fcr Mitsubishi\r\n- Viele kleine Bugfixes",
+                    "assets": [
+                        {
+                            "name": "Aircondition-Release-0.9.0.zip",
+                            "size": 12781624,
+                            "digest": "sha256:56bfa8b5b293d87df9f0a9677d84205476e3b54d9a285b146e1f614b8e9bcee2",
+                            "updated_at": "2026-05-27T16:04:37Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Aircondition/releases/download/0.9.0/Aircondition-Release-0.9.0.zip"
+                        }
+                    ]
+                },
+                {
                     "prerelease": false,
                     "tag_name": "0.8.0",
                     "name": "Beta 0.8.0",

@@ -3401,6 +3401,15 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.6.0",
+                    "name": "Release 0.6.0",
+                    "published_at": "2026-05-30T17:25:11Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SonosNFCPlayer/releases/tag/0.6.0",
+                    "body": "New Features:\r\n\r\n- Sonos Online Check with Ping\r\n- Refactoring of Sonos Benachrichtigungen, diese wurden nun in ein Modul ausgelagert, damit sind mehr verschiedene Benachrichtigungsquelle m\u00f6glich. \r\nBreaking Change: Leider gibt es dadurch ein Breaking Change, wenn bisher mehr als eine Benachrichtigungsquelle konfiguriert war, muss die Konfiguration anpassen, es gibt nun keine Schalt-KO's mehr um jede Benachrichtigung auszul\u00f6sen. Statt dessen kann man \u00fcber den neuen KO \"Benachrichtigungs Nr starten\" die M\u00f6glichkeit \u00fcber einen numerischen Wert direkt eine Benachrichtigungsquelle zu starten. \u00dcber das Logikmodul kann aber leicht das alte Verhalten mit einem Schaltkanal nachgebaut werden. Ein Schaltkanal steht au\u00dferdem pro Kanal weiterhin zur Verf\u00fcgung, in der Anwendung stellt man dann die Quelle eine, die damit abgespielt wird.",
+                    "assets": []
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.4.0",
                     "name": "Release 0.4.0",
                     "published_at": "2026-03-11T18:22:10Z",
@@ -3468,7 +3477,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 1
+            "hw_avail_open": 0
         },
         "OAM-ClimateControl": {
             "repo_url": "https://github.com/OpenKNX/OAM-ClimateControl",

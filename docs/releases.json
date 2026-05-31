@@ -2196,6 +2196,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.5.0",
+                    "name": "Release 1.5.0",
+                    "published_at": "2026-05-31T13:38:41Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-TouchRound/releases/tag/1.5.0",
+                    "body": "- Update alle Module auf die neueste Version",
+                    "assets": [
+                        {
+                            "name": "TouchRound-Release-1.5.0.zip",
+                            "size": 4009682,
+                            "digest": "sha256:4ffbfd9c2fa2da0da9f4598997b2a08dc2821d18d3f9d4967ed91d358fda3d38",
+                            "updated_at": "2026-05-31T13:36:50Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-TouchRound/releases/download/1.5.0/TouchRound-Release-1.5.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "1.4.2",
                     "name": "Release 1.4.2",
                     "published_at": "2026-03-05T17:26:08Z",
@@ -2479,6 +2496,23 @@
             "archived": false,
             "description": null,
             "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "1.6.1",
+                    "name": "Release 1.6.1",
+                    "published_at": "2026-05-31T13:17:34Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.6.1",
+                    "body": "\r\n- Fix: Offenes Fenster blockiert Beschattung\r\n- Fix: Speicher\u00fcberlappung in knxprod\r\n- Feature: Benutzerdefinierte Position nach Beschattungsende anfahren\r\n- Refactor: \"Helligkeit\" (bool) + \"Weitere Helligkeitssensoren\" (count) zusammengefasst zu \"Helligkeitssensoren\" (Enum: Nein/1-5 Sensoren)\r\n- Rename: \"Helligkeit Sensor 1..5\" -> \"Ausrichtung Sensor 1..5\"\r\n- Breaking: Offset 19 Semantik geaendert (SHC_VerifyVersion 0.5 -> 0.6)\r\n- Feature: Dachflaeche bevorzugt unzugeordnete Helligkeitssensoren (z.B. Dachsensor)\r\n- Feature: Wiederherstellung der vorherigen Position nach Fenster offen/gekippt\r\n- Fix: Azimut-/Helligkeit-UI klarer (Helligkeit Sensor 1..5, \"Keine Himmelsrichtung (Azimut-Auswertung aus)\")\r\n- Fix: Schreibfehler und Himmelsrichtungsbezeichnungen korrigiert\r\n- Doc: Help-Context und Applikationsbeschreibung aktualisiert\r\n",
+                    "assets": [
+                        {
+                            "name": "ShutterController-Beta-1.6.1.zip",
+                            "size": 4329947,
+                            "digest": "sha256:54953555bba9695bb31211e7d24224fc8ee1d7343316667a276d97964c997b7a",
+                            "updated_at": "2026-05-31T13:15:15Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/download/1.6.1/ShutterController-Beta-1.6.1.zip"
+                        }
+                    ]
+                },
                 {
                     "prerelease": true,
                     "tag_name": "1.6.0",
@@ -3092,7 +3126,7 @@
                     "name": "0.10.0",
                     "published_at": "2026-05-29T19:13:44Z",
                     "html_url": "https://github.com/OpenKNX/OAM-Aircondition/releases/tag/0.10.0",
-                    "body": "Neue Features gegen\u00fcber 0.10.0:\r\n\r\n- Unterst\u00fctzung f\u00fcr Mitsubishi\r\n- Viele kleine Bugfixes\r\n\r\nFolgende Funktion ist eine fr\u00fche Betaversion und nur f\u00fcr WLAN Ger\u00e4te mit mind. 8MB Flash verf\u00fcgbar:\r\n\r\n- Web-Ger\u00e4teseite\r\n- WebConsole\r\n\r\nzum Aktivieren muss unter \"Netzwerk\" im Tab \"Allgemein\" der \"Webserver (BETA)\" ausgew\u00e4hlt werden.\r\n\r\nACHTUNG: beim Update von v0.8.0 zu v.0.9.0 und von v0.9.0 zu v0.10.0 geht die Szenenkonfiguration verloren\r\nDer Update von v0.8.0 direkt zu v0.10.0 funktioniert ohne Datenverlust",
+                    "body": "Neue Features gegen\u00fcber 0.8.0:\r\n\r\n- Unterst\u00fctzung f\u00fcr Mitsubishi\r\n- Viele kleine Bugfixes\r\n\r\nFolgende Funktion ist eine fr\u00fche Betaversion und nur f\u00fcr WLAN Ger\u00e4te mit mind. 8MB Flash verf\u00fcgbar:\r\n\r\n- Web-Ger\u00e4teseite\r\n- WebConsole\r\n\r\nzum Aktivieren muss unter \"Netzwerk\" im Tab \"Allgemein\" der \"Webserver (BETA)\" ausgew\u00e4hlt werden.\r\n\r\nACHTUNG: beim Update von v0.8.0 zu v.0.9.0 und von v0.9.0 zu v0.10.0 geht die Szenenkonfiguration verloren\r\nDer Update von v0.8.0 direkt zu v0.10.0 funktioniert ohne Datenverlust",
                     "assets": [
                         {
                             "name": "Aircondition-Release-0.10.0.zip",
@@ -3203,7 +3237,15 @@
                     "published_at": "2026-05-14T14:42:07Z",
                     "html_url": "https://github.com/OpenKNX/OAM-Nuki/releases/tag/0.12.0",
                     "body": "- Works with XIAO ESP32S3 with TP only power supply",
-                    "assets": []
+                    "assets": [
+                        {
+                            "name": "Nuki-Beta-0.12.0.zip",
+                            "size": 4586881,
+                            "digest": "sha256:8f4c6985d3e90e4a482066c768265ae1ac7ddf1424dfed4169ed5b4d2a2a4ddf",
+                            "updated_at": "2026-05-31T13:19:02Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Nuki/releases/download/0.12.0/Nuki-Beta-0.12.0.zip"
+                        }
+                    ]
                 },
                 {
                     "prerelease": false,

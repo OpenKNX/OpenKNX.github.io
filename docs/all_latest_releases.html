@@ -25,6 +25,41 @@
 <h1>OpenKNX Applikationen - Die neusten Releases</h1>
 
 
+    <h2 class="date_new">2026-05-31</h2>
+    
+        <details>
+            <summary>
+                OAM-TouchRound:
+                
+                <a href="https://github.com/OpenKNX/OAM-TouchRound/releases/tag/1.5.0">Release 1.5.0</a>
+            </summary>
+            <p style="white-space:pre-line;">- Update alle Module auf die neueste Version</p>
+        </details>
+        <h3></h3>
+    
+        <details>
+            <summary>
+                OAM-ShutterController:
+                 <small>[PRERELEASE]</small> 
+                <a href="https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.6.1">Release 1.6.1</a>
+            </summary>
+            <p style="white-space:pre-line;">
+- Fix: Offenes Fenster blockiert Beschattung
+- Fix: Speicherüberlappung in knxprod
+- Feature: Benutzerdefinierte Position nach Beschattungsende anfahren
+- Refactor: "Helligkeit" (bool) + "Weitere Helligkeitssensoren" (count) zusammengefasst zu "Helligkeitssensoren" (Enum: Nein/1-5 Sensoren)
+- Rename: "Helligkeit Sensor 1..5" -> "Ausrichtung Sensor 1..5"
+- Breaking: Offset 19 Semantik geaendert (SHC_VerifyVersion 0.5 -> 0.6)
+- Feature: Dachflaeche bevorzugt unzugeordnete Helligkeitssensoren (z.B. Dachsensor)
+- Feature: Wiederherstellung der vorherigen Position nach Fenster offen/gekippt
+- Fix: Azimut-/Helligkeit-UI klarer (Helligkeit Sensor 1..5, "Keine Himmelsrichtung (Azimut-Auswertung aus)")
+- Fix: Schreibfehler und Himmelsrichtungsbezeichnungen korrigiert
+- Doc: Help-Context und Applikationsbeschreibung aktualisiert
+</p>
+        </details>
+        <h3></h3>
+    
+
     <h2 class="date_new">2026-05-30</h2>
     
         <details>
@@ -50,7 +85,7 @@ Breaking Change: Leider gibt es dadurch ein Breaking Change, wenn bisher mehr al
                  <small>[PRERELEASE]</small> 
                 <a href="https://github.com/OpenKNX/OAM-Aircondition/releases/tag/0.10.0">0.10.0</a>
             </summary>
-            <p style="white-space:pre-line;">Neue Features gegenüber 0.10.0:
+            <p style="white-space:pre-line;">Neue Features gegenüber 0.8.0:
 
 - Unterstützung für Mitsubishi
 - Viele kleine Bugfixes
@@ -93,19 +128,6 @@ Der Update von v0.8.0 direkt zu v0.10.0 funktioniert ohne Datenverlust</p>
 - Neues Modul "PV Preis" (Danke an Steffen!)
 - Neues Modul "Net Bridge" mit "Ping (ICMP" Funktion (Danke an Marco für die Basisimplementierung in Network, Danke an die KI für das Modul)
 - Webserver Funktion in Betatest. Im Network Tab lässt unter "Allgemein" ein Webserver einschalten. Dieser ist aktuell noch in frühen Beta-Stadium. Bei Aktivierung bekommt stellt das Gerät eine Webseite bereit mit den wichtigsten Geräteinfos und einer Remote Console. (Danke an Marco und viel AI)</p>
-        </details>
-        <h3></h3>
-    
-
-    <h2 class="date_new">2026-05-17</h2>
-    
-        <details>
-            <summary>
-                OAM-ShutterController:
-                 <small>[PRERELEASE]</small> 
-                <a href="https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.6.0">Prerelase 1.6.0</a>
-            </summary>
-            <p style="white-space:pre-line;"></p>
         </details>
         <h3></h3>
     
@@ -398,42 +420,6 @@ KO zur Busauslastung gibt unrealistische Werte aus.</p>
 - APDU Property PID_MAX_APDU_LENGTH_ROUTER from 220 to 254
 
 functional identical to 7.5.0-Dev</p>
-        </details>
-        <h3></h3>
-    
-        <details>
-            <summary>
-                OAM-TouchRound:
-                
-                <a href="https://github.com/OpenKNX/OAM-TouchRound/releases/tag/1.4.2">Release 1.4.2</a>
-            </summary>
-            <p style="white-space:pre-line;">- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an
-- Die Namen der Gruppenobjekte wurden überarbeitet
-- Die Funktion der Status LED's ist in der ETS konfigurierbar
-
-**Geräte**
-- Fix: fehlendes Bild beim Schloss wenn eine Sperr-Aktion läuft und ein benutzerdefiniertes Bild aktiv ist.
-- Fix: Anzeige "Text" zeigt den Text aus dem Gruppenobjekt nicht mehr an
-
-**Touch Round**
-- 0.4 Benutzerdefinierte Prozentwerte für Dimmer
-- 0.4 Gerätetype Schloss hinzugefügt
-
-**Function Blocks:**
-- 0.9 Neuer Functionsblock "Text Format"
-- 0.9 Startverhalten bei Wertüberwachung konfigurierbar
-- 0.8 Fix: Bennennung Eingang 9 bei FB-"Anzahl" nicht möglich
-- 0.7 Count-Down: Konfigurationsparameter für maximale Laufzeit bei Erhöhen durch KO
-- 0.7 Count-Down: Text Parameter für Stopp
-- 0.6.2 Breaking Change: Fix: Ko Verringern/Erhöhen für Count-Down: 0...Verringern, 1...Erhöhen
-- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause
-
-**Logik:**
-WICHTIG: Die frühere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Gerätes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bezüglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).
-
-- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen
-- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskanäle legen und so LEDs steuern
-- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine Änderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.</p>
         </details>
         <h3></h3>
     

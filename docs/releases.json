@@ -2196,6 +2196,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.6.0",
+                    "name": "Release 1.6.0",
+                    "published_at": "2026-05-31T21:59:46Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-TouchRound/releases/tag/1.6.0",
+                    "body": "- Fix: Garage Door (Danke an Max Arndt))\r\n- Update aller Module auf die neueste Version",
+                    "assets": [
+                        {
+                            "name": "TouchRound-Release-1.6.0.zip",
+                            "size": 4009687,
+                            "digest": "sha256:160daca9400b4c569963989809c5c2333bddaab6d506f3ac5c5b959b29d63acd",
+                            "updated_at": "2026-05-31T14:14:39Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-TouchRound/releases/download/1.6.0/TouchRound-Release-1.6.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "1.5.0",
                     "name": "Release 1.5.0",
                     "published_at": "2026-05-31T13:38:41Z",
@@ -2421,12 +2438,12 @@
             "description": null,
             "releases": [
                 {
-                    "prerelease": true,
+                    "prerelease": false,
                     "tag_name": "1.6.0",
                     "name": "Release 1.6.0",
                     "published_at": "2026-05-25T11:28:19Z",
                     "html_url": "https://github.com/OpenKNX/OAM-InternetServices/releases/tag/1.6.0",
-                    "body": "- Neues Modul \"Strompreis\" (Danke an Steffen!)\r\n- Neues Modul \"PV Preis\" (Danke an Steffen!)\r\n- Neues Modul \"Net Bridge\" mit \"Ping (ICMP\" Funktion (Danke an Marco f\u00fcr die Basisimplementierung in Network, Danke an die KI f\u00fcr das Modul)\r\n- Webserver Funktion in Betatest. Im Network Tab l\u00e4sst unter \"Allgemein\" ein Webserver einschalten. Dieser ist aktuell noch in fr\u00fchen Beta-Stadium. Bei Aktivierung bekommt stellt das Ger\u00e4t eine Webseite bereit mit den wichtigsten Ger\u00e4teinfos und einer Remote Console. (Danke an Marco und viel AI)",
+                    "body": "- Neues Modul \"Strompreis\" (Danke an Steffen Rittmeier)\r\n- Neues Modul \"PV Preis\" (Danke an Steffen Rittmeier)\r\n- Neues Modul \"Net Bridge\" mit \"Ping (ICMP\" Funktion (Danke an Marco f\u00fcr die Basisimplementierung in Network, Danke an die KI f\u00fcr das Modul)\r\n- Webserver Funktion in Betatest. Im Network Tab l\u00e4sst unter \"Allgemein\" ein Webserver einschalten. Dieser ist aktuell noch in fr\u00fchen Beta-Stadium. Bei Aktivierung bekommt stellt das Ger\u00e4t eine Webseite bereit mit den wichtigsten Ger\u00e4teinfos und einer Remote Console. (Danke an Marco und viel AI)",
                     "assets": [
                         {
                             "name": "InternetServices-Release-1.6.0.zip",
@@ -2497,12 +2514,12 @@
             "description": null,
             "releases": [
                 {
-                    "prerelease": true,
+                    "prerelease": false,
                     "tag_name": "1.6.1",
                     "name": "Release 1.6.1",
                     "published_at": "2026-05-31T13:17:34Z",
                     "html_url": "https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.6.1",
-                    "body": "\r\n- Fix: Offenes Fenster blockiert Beschattung\r\n- Fix: Speicher\u00fcberlappung in knxprod\r\n- Feature: Benutzerdefinierte Position nach Beschattungsende anfahren\r\n- Refactor: \"Helligkeit\" (bool) + \"Weitere Helligkeitssensoren\" (count) zusammengefasst zu \"Helligkeitssensoren\" (Enum: Nein/1-5 Sensoren)\r\n- Rename: \"Helligkeit Sensor 1..5\" -> \"Ausrichtung Sensor 1..5\"\r\n- Breaking: Offset 19 Semantik geaendert (SHC_VerifyVersion 0.5 -> 0.6)\r\n- Feature: Dachflaeche bevorzugt unzugeordnete Helligkeitssensoren (z.B. Dachsensor)\r\n- Feature: Wiederherstellung der vorherigen Position nach Fenster offen/gekippt\r\n- Fix: Azimut-/Helligkeit-UI klarer (Helligkeit Sensor 1..5, \"Keine Himmelsrichtung (Azimut-Auswertung aus)\")\r\n- Fix: Schreibfehler und Himmelsrichtungsbezeichnungen korrigiert\r\n- Doc: Help-Context und Applikationsbeschreibung aktualisiert\r\n",
+                    "body": "- Fix: Offenes Fenster blockiert Beschattung\r\n- Fix: Speicher\u00fcberlappung in knxprod\r\n- Feature: Benutzerdefinierte Position nach Beschattungsende anfahren\r\n- Refactor: \"Helligkeit\" (bool) + \"Weitere Helligkeitssensoren\" (count) zusammengefasst zu \"Helligkeitssensoren\" (Enum: Nein/1-5 Sensoren)\r\n- Rename: \"Helligkeit Sensor 1..5\" -> \"Ausrichtung Sensor 1..5\"\r\n- Breaking: Offset 19 Semantik geaendert (SHC_VerifyVersion 0.5 -> 0.6)\r\n- Feature: Dachflaeche bevorzugt unzugeordnete Helligkeitssensoren (z.B. Dachsensor)\r\n- Feature: Wiederherstellung der vorherigen Position nach Fenster offen/gekippt\r\n- Fix: Azimut-/Helligkeit-UI klarer (Helligkeit Sensor 1..5, \"Keine Himmelsrichtung (Azimut-Auswertung aus)\")\r\n- Fix: Schreibfehler und Himmelsrichtungsbezeichnungen korrigiert\r\n- Doc: Help-Context und Applikationsbeschreibung aktualisiert\r\n",
                     "assets": [
                         {
                             "name": "ShutterController-Beta-1.6.1.zip",
@@ -3121,7 +3138,7 @@
             "description": null,
             "releases": [
                 {
-                    "prerelease": true,
+                    "prerelease": false,
                     "tag_name": "0.10.0",
                     "name": "Release 0.10.0",
                     "published_at": "2026-05-29T19:13:44Z",
@@ -3448,7 +3465,15 @@
                     "published_at": "2026-05-30T17:25:11Z",
                     "html_url": "https://github.com/OpenKNX/OAM-SonosNFCPlayer/releases/tag/0.6.0",
                     "body": "New Features:\r\n\r\n- Sonos Online Check with Ping\r\n- Refactoring of Sonos Benachrichtigungen, diese wurden nun in ein Modul ausgelagert, damit sind mehr verschiedene Benachrichtigungsquelle m\u00f6glich. \r\nBreaking Change: Leider gibt es dadurch ein Breaking Change, wenn bisher mehr als eine Benachrichtigungsquelle konfiguriert war, muss die Konfiguration anpassen, es gibt nun keine Schalt-KO's mehr um jede Benachrichtigung auszul\u00f6sen. Statt dessen kann man \u00fcber den neuen KO \"Benachrichtigungs Nr starten\" die M\u00f6glichkeit \u00fcber einen numerischen Wert direkt eine Benachrichtigungsquelle zu starten. \u00dcber das Logikmodul kann aber leicht das alte Verhalten mit einem Schaltkanal nachgebaut werden. Ein Schaltkanal steht au\u00dferdem pro Kanal weiterhin zur Verf\u00fcgung, in der Anwendung stellt man dann die Quelle eine, die damit abgespielt wird.",
-                    "assets": []
+                    "assets": [
+                        {
+                            "name": "SonosNFCPlayer-Release-0.6.0.zip",
+                            "size": 4506233,
+                            "digest": "sha256:8726524990c9e50f8ec83d7a1c334c4094059eb3556fa8315802510c42133f98",
+                            "updated_at": "2026-05-31T22:06:26Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SonosNFCPlayer/releases/download/0.6.0/SonosNFCPlayer-Release-0.6.0.zip"
+                        }
+                    ]
                 },
                 {
                     "prerelease": false,
@@ -3519,14 +3544,32 @@
                     ]
                 }
             ],
-            "hw_avail_open": 0
+            "hw_avail_open": 1
         },
         "OAM-ClimateControl": {
             "repo_url": "https://github.com/OpenKNX/OAM-ClimateControl",
             "archived": false,
             "description": null,
-            "releases": [],
-            "hw_avail_open": 0
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.7.0",
+                    "name": "Release 0.7.0",
+                    "published_at": "2026-05-31T22:09:01Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-ClimateControl/releases/tag/0.7.0",
+                    "body": "Diese Modul erlaubt die Steuerung von zwei Heizsysteme \u00fcber ein HVAC Gruppenobjekt. Z.B. kann damit eine Klimaanlage zum K\u00fchlen und Entfeuchten verwendet werden, w\u00e4hrend zum Heizen die Fu\u00dfbodenheizung verwendet wird.\r\n\r\n**Features:**\r\n\r\n- Zwei Heizsysteme \u00fcber ein HVAC Gruppenobjekt\r\n- Intelligenter Fenster offen Modus\r\n- Tagesdurchschnitttemperaturberechnung\r\n- Automatische Winter- Sommerbetrieb Umschaltung\r\n- Zwei getrennte Sollwerte f\u00fcr Heiz- und K\u00fchlbetrieb\r\n- Automatikbetrieb zur Umschaltung vom Klimager\u00e4t zur Fu\u00dfbodenheizung\r\n\r\n**Ansteuerung der Heizsysteme**\r\n\r\n- Regelung durch den Heizungsaktor\r\n- Regelung durch den Klimaanlage\r\n- Regelung durch OpenKNX durch Stellwertvorgabe\r\n- Regelung durch OpenKNX durch Sollwertvorgabe (Damit kann z.B. ein KNX Temperatursensor verwendet werden und die Klimaanlage damit zu Steuern\r\n- OpenKNX Regelung mit Pulsweitenmodulation, damit k\u00f6nnten Thermoelektrischeventile \u00fcber einen beliebigen Schaltaktor geregelt werden",
+                    "assets": [
+                        {
+                            "name": "ClimateControl-Release-0.7.0.zip",
+                            "size": 4292158,
+                            "digest": "sha256:2c9f45dd7d30f68f5181daf8b99b1ac9c8bfe1adfee05a0b186cbc1de940e7fb",
+                            "updated_at": "2026-05-31T14:43:42Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-ClimateControl/releases/download/0.7.0/ClimateControl-Release-0.7.0.zip"
+                        }
+                    ]
+                }
+            ],
+            "hw_avail_open": 3
         }
     }
 }

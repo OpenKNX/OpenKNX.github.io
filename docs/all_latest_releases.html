@@ -29,22 +29,49 @@
     
         <details>
             <summary>
+                OAM-ClimateControl:
+                
+                <a href="https://github.com/OpenKNX/OAM-ClimateControl/releases/tag/0.7.0">Release 0.7.0</a>
+            </summary>
+            <p style="white-space:pre-line;">Diese Modul erlaubt die Steuerung von zwei Heizsysteme über ein HVAC Gruppenobjekt. Z.B. kann damit eine Klimaanlage zum Kühlen und Entfeuchten verwendet werden, während zum Heizen die Fußbodenheizung verwendet wird.
+
+**Features:**
+
+- Zwei Heizsysteme über ein HVAC Gruppenobjekt
+- Intelligenter Fenster offen Modus
+- Tagesdurchschnitttemperaturberechnung
+- Automatische Winter- Sommerbetrieb Umschaltung
+- Zwei getrennte Sollwerte für Heiz- und Kühlbetrieb
+- Automatikbetrieb zur Umschaltung vom Klimagerät zur Fußbodenheizung
+
+**Ansteuerung der Heizsysteme**
+
+- Regelung durch den Heizungsaktor
+- Regelung durch den Klimaanlage
+- Regelung durch OpenKNX durch Stellwertvorgabe
+- Regelung durch OpenKNX durch Sollwertvorgabe (Damit kann z.B. ein KNX Temperatursensor verwendet werden und die Klimaanlage damit zu Steuern
+- OpenKNX Regelung mit Pulsweitenmodulation, damit könnten Thermoelektrischeventile über einen beliebigen Schaltaktor geregelt werden</p>
+        </details>
+        <h3></h3>
+    
+        <details>
+            <summary>
                 OAM-TouchRound:
                 
-                <a href="https://github.com/OpenKNX/OAM-TouchRound/releases/tag/1.5.0">Release 1.5.0</a>
+                <a href="https://github.com/OpenKNX/OAM-TouchRound/releases/tag/1.6.0">Release 1.6.0</a>
             </summary>
-            <p style="white-space:pre-line;">- Update alle Module auf die neueste Version</p>
+            <p style="white-space:pre-line;">- Fix: Garage Door (Danke an Max Arndt))
+- Update aller Module auf die neueste Version</p>
         </details>
         <h3></h3>
     
         <details>
             <summary>
                 OAM-ShutterController:
-                 <small>[PRERELEASE]</small> 
+                
                 <a href="https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.6.1">Release 1.6.1</a>
             </summary>
-            <p style="white-space:pre-line;">
-- Fix: Offenes Fenster blockiert Beschattung
+            <p style="white-space:pre-line;">- Fix: Offenes Fenster blockiert Beschattung
 - Fix: Speicherüberlappung in knxprod
 - Feature: Benutzerdefinierte Position nach Beschattungsende anfahren
 - Refactor: "Helligkeit" (bool) + "Weitere Helligkeitssensoren" (count) zusammengefasst zu "Helligkeitssensoren" (Enum: Nein/1-5 Sensoren)
@@ -82,7 +109,7 @@ Breaking Change: Leider gibt es dadurch ein Breaking Change, wenn bisher mehr al
         <details>
             <summary>
                 OAM-Aircondition:
-                 <small>[PRERELEASE]</small> 
+                
                 <a href="https://github.com/OpenKNX/OAM-Aircondition/releases/tag/0.10.0">Release 0.10.0</a>
             </summary>
             <p style="white-space:pre-line;">Neue Features gegenüber 0.8.0:
@@ -103,29 +130,16 @@ Der Update von v0.8.0 direkt zu v0.10.0 funktioniert ohne Datenverlust</p>
         <h3></h3>
     
 
-    <h2 class="date_new">2026-05-27</h2>
-    
-        <details>
-            <summary>
-                OAM-Aircondition:
-                
-                <a href="https://github.com/OpenKNX/OAM-Aircondition/releases/tag/0.9.0">0.9.0 (Do not use)</a>
-            </summary>
-            <p style="white-space:pre-line;">Leider gehen mit dieser Version beim Update die Szenenkonfigurationen verloren, daher habe ich die Version zurückgezogen.</p>
-        </details>
-        <h3></h3>
-    
-
     <h2 class="date_new">2026-05-25</h2>
     
         <details>
             <summary>
                 OAM-InternetServices:
-                 <small>[PRERELEASE]</small> 
+                
                 <a href="https://github.com/OpenKNX/OAM-InternetServices/releases/tag/1.6.0">Release 1.6.0</a>
             </summary>
-            <p style="white-space:pre-line;">- Neues Modul "Strompreis" (Danke an Steffen!)
-- Neues Modul "PV Preis" (Danke an Steffen!)
+            <p style="white-space:pre-line;">- Neues Modul "Strompreis" (Danke an Steffen Rittmeier)
+- Neues Modul "PV Preis" (Danke an Steffen Rittmeier)
 - Neues Modul "Net Bridge" mit "Ping (ICMP" Funktion (Danke an Marco für die Basisimplementierung in Network, Danke an die KI für das Modul)
 - Webserver Funktion in Betatest. Im Network Tab lässt unter "Allgemein" ein Webserver einschalten. Dieser ist aktuell noch in frühen Beta-Stadium. Bei Aktivierung bekommt stellt das Gerät eine Webseite bereit mit den wichtigsten Geräteinfos und einer Remote Console. (Danke an Marco und viel AI)</p>
         </details>
@@ -428,34 +442,6 @@ functional identical to 7.5.0-Dev</p>
     
         <details>
             <summary>
-                OAM-ShutterController:
-                
-                <a href="https://github.com/OpenKNX/OAM-ShutterController/releases/tag/1.5.1">Release 1.5.1</a>
-            </summary>
-            <p style="white-space:pre-line;">- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an
-- Die Namen der Gruppenobjekte wurden überarbeitet
-- Die Funktion der Status LED's ist in der ETS konfigurierbar
-
-**Function Blocks:**
-- 0.9 Neuer Functionsblock "Text Format"
-- 0.9 Startverhalten bei Wertüberwachung konfigurierbar
-- 0.8 Fix: Bennennung Eingang 9 bei FB-"Anzahl" nicht möglich
-- 0.7 Count-Down: Konfigurationsparameter für maximale Laufzeit bei Erhöhen durch KO
-- 0.7 Count-Down: Text Parameter für Stopp
-- 0.6.2 Breaking Change: Fix: Ko Verringern/Erhöhen für Count-Down: 0...Verringern, 1...Erhöhen
-- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause
-
-**Logik:**
-WICHTIG: Die frühere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Gerätes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bezüglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).
-
-- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen
-- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskanäle legen und so LEDs steuern
-- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine Änderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.</p>
-        </details>
-        <h3></h3>
-    
-        <details>
-            <summary>
                 OAM-SmartHomeBridge:
                 
                 <a href="https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/2.1.1">Release 2.1.1</a>
@@ -497,34 +483,6 @@ WICHTIG: Die frühere Steuerung von Buzzer und LED wurde aus dem Logikmodul entf
 Bitte um Feedback wie die SW mit mehr Lautsprecher funktioniert.
 
 - Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an
-- Die Namen der Gruppenobjekte wurden überarbeitet
-- Die Funktion der Status LED's ist in der ETS konfigurierbar
-
-**Function Blocks:**
-- 0.9 Neuer Functionsblock "Text Format"
-- 0.9 Startverhalten bei Wertüberwachung konfigurierbar
-- 0.8 Fix: Bennennung Eingang 9 bei FB-"Anzahl" nicht möglich
-- 0.7 Count-Down: Konfigurationsparameter für maximale Laufzeit bei Erhöhen durch KO
-- 0.7 Count-Down: Text Parameter für Stopp
-- 0.6.2 Breaking Change: Fix: Ko Verringern/Erhöhen für Count-Down: 0...Verringern, 1...Erhöhen
-- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause
-
-**Logik:**
-WICHTIG: Die frühere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Gerätes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bezüglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).
-
-- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen
-- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskanäle legen und so LEDs steuern
-- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine Änderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.</p>
-        </details>
-        <h3></h3>
-    
-        <details>
-            <summary>
-                OAM-InternetServices:
-                
-                <a href="https://github.com/OpenKNX/OAM-InternetServices/releases/tag/1.2.1">Release 1.2.1</a>
-            </summary>
-            <p style="white-space:pre-line;">- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an
 - Die Namen der Gruppenobjekte wurden überarbeitet
 - Die Funktion der Status LED's ist in der ETS konfigurierbar
 

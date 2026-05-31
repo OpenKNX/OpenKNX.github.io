@@ -3123,7 +3123,7 @@
                 {
                     "prerelease": true,
                     "tag_name": "0.10.0",
-                    "name": "0.10.0",
+                    "name": "Release 0.10.0",
                     "published_at": "2026-05-29T19:13:44Z",
                     "html_url": "https://github.com/OpenKNX/OAM-Aircondition/releases/tag/0.10.0",
                     "body": "Neue Features gegen\u00fcber 0.8.0:\r\n\r\n- Unterst\u00fctzung f\u00fcr Mitsubishi\r\n- Viele kleine Bugfixes\r\n\r\nFolgende Funktion ist eine fr\u00fche Betaversion und nur f\u00fcr WLAN Ger\u00e4te mit mind. 8MB Flash verf\u00fcgbar:\r\n\r\n- Web-Ger\u00e4teseite\r\n- WebConsole\r\n\r\nzum Aktivieren muss unter \"Netzwerk\" im Tab \"Allgemein\" der \"Webserver (BETA)\" ausgew\u00e4hlt werden.\r\n\r\nACHTUNG: beim Update von v0.8.0 zu v.0.9.0 und von v0.9.0 zu v0.10.0 geht die Szenenkonfiguration verloren\r\nDer Update von v0.8.0 direkt zu v0.10.0 funktioniert ohne Datenverlust",

@@ -1180,6 +1180,23 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "0.11.0",
+                    "name": "v0.11.0",
+                    "published_at": "2026-06-17T09:43:11Z",
+                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/0.11.0",
+                    "body": "- fix: ConfigTransfer works now\r\n- fix: HCL handling https://github.com/OpenKNX/OFM-Dali/pull/4\r\n- fix: pin daliMaster loop task to core 1 with elevated priority https://github.com/OpenKNX/GW-REG1-Dali/pull/20\r\n- new: webserver with webconsole",
+                    "assets": [
+                        {
+                            "name": "DaliGateway-Beta-0.11.0.zip",
+                            "size": 3381638,
+                            "digest": "sha256:01bfb975f7a2b40ff517bd6e553be42788915a85d618ef11f31ed387ff2e54e4",
+                            "updated_at": "2026-06-17T09:40:46Z",
+                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/0.11.0/DaliGateway-Beta-0.11.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "v0.10.0",
                     "name": "v0.10.0",
                     "published_at": "2026-05-13T12:11:55Z",

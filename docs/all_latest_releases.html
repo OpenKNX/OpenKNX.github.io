@@ -29,6 +29,20 @@
     
         <details>
             <summary>
+                OAM-Sonos:
+                
+                <a href="https://github.com/OpenKNX/OAM-Sonos/releases/tag/0.9.0">Release 0.9.0</a>
+            </summary>
+            <p style="white-space:pre-line;">New Features:
+
+- Sonos Online Check with Ping
+- Refactoring of Sonos Benachrichtigungen, diese wurden nun in ein Modul ausgelagert, damit sind mehr verschiedene Benachrichtigungsquelle möglich.
+- Breaking Change: Leider gibt es dadurch ein Breaking Change, wenn bisher mehr als eine Benachrichtigungsquelle konfiguriert war, muss die Konfiguration anpassen, es gibt nun keine Schalt-KO's mehr um jede Benachrichtigung auszulösen. Statt dessen kann man über den neuen KO "Benachrichtigungs Nr starten" die Möglichkeit über einen numerischen Wert direkt eine - --Benachrichtigungsquelle zu starten. Über das Logikmodul kann aber leicht das alte Verhalten mit einem Schaltkanal nachgebaut werden. Ein Schaltkanal steht außerdem pro Kanal weiterhin zur Verfügung, in der Anwendung stellt man dann die Quelle eine, die damit abgespielt wird.</p>
+        </details>
+        <h3></h3>
+    
+        <details>
+            <summary>
                 OAM-SonosNFCPlayer:
                 
                 <a href="https://github.com/OpenKNX/OAM-SonosNFCPlayer/releases/tag/0.7.0">Release 0.7.0</a>
@@ -450,37 +464,6 @@ functional identical to 7.5.0-Dev</p>
 - 0.4 Benutzerdefinierte Prozentwerte für Dimmer
 - 0.4 Gerätetype Schloss hinzugefügt
 - 0.3.1 Fix: Absturz bei deaktivierten Geräten
-
-**Function Blocks:**
-- 0.9 Neuer Functionsblock "Text Format"
-- 0.9 Startverhalten bei Wertüberwachung konfigurierbar
-- 0.8 Fix: Bennennung Eingang 9 bei FB-"Anzahl" nicht möglich
-- 0.7 Count-Down: Konfigurationsparameter für maximale Laufzeit bei Erhöhen durch KO
-- 0.7 Count-Down: Text Parameter für Stopp
-- 0.6.2 Breaking Change: Fix: Ko Verringern/Erhöhen für Count-Down: 0...Verringern, 1...Erhöhen
-- 0.6.1 Breaking Change: Fix: Ko Pause/Fortsetzten ist nun richtiggestellt: 1...Fortsetzten, 0...Pause
-
-**Logik:**
-WICHTIG: Die frühere Steuerung von Buzzer und LED wurde aus dem Logikmodul entfernt - zugunsten der neuen Module LED-Status und Buzzer/Vibration. Dies kann zu manuellen Nacharbeiten nach einem Update des Gerätes notwendig machen (siehe [Besonderheiten ab der Version 4.0 bezüglich Update und Konfigurationstransfer](https://github.com/OpenKNX/OAM-InternetServices/releases/new#besonderheiten-ab-der-version-40-bez%C3%BCglich-update-und-konfigurationstransfer)).
-
-- NEU: Der Status von LEDs kann in der Logik als interner Eingang dienen
-- NEU: Das Logikmodul kann jetzt den Ausgang auf Statuskanäle legen und so LEDs steuern
-- FIX: DPT2 am Ausgang sendet wieder korrekte Werte, ist wohl in der Vergangenheit durch eine Änderung am KNX-Stack kaputt gegangen und wurde erst jetzt gemerkt.</p>
-        </details>
-        <h3></h3>
-    
-        <details>
-            <summary>
-                OAM-Sonos:
-                
-                <a href="https://github.com/OpenKNX/OAM-Sonos/releases/tag/0.7.1"> (0.7.1)</a>
-            </summary>
-            <p style="white-space:pre-line;">Diese Version ist bisher mit 4 Sonos Lautsprecher getestet.
-Bitte um Feedback wie die SW mit mehr Lautsprecher funktioniert.
-
-- Prog LED zeigt nicht vorhanden Physical Address (PA) durch 2 mal aufblitzen alle 3 Sekunden und fehlende ETS Konfiguration durch einmal aufblitzen alle 3 Sekunden an
-- Die Namen der Gruppenobjekte wurden überarbeitet
-- Die Funktion der Status LED's ist in der ETS konfigurierbar
 
 **Function Blocks:**
 - 0.9 Neuer Functionsblock "Text Format"

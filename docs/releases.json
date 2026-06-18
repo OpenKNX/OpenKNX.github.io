@@ -3477,6 +3477,15 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.7.0",
+                    "name": "Release 0.7.0",
+                    "published_at": "2026-06-18T15:56:03Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SonosNFCPlayer/releases/tag/0.7.0",
+                    "body": "- Fix: Abst\u00fcrze mit Reboot Loop\r\n- Fix: Memory Leak bei fehlerhaften http Antworten\r\n- Fix: Deaktiverte Sonos Online \u00dcberwachung ist trotzdem aktiv\r\n- Debug: Verbessertes Logging",
+                    "assets": []
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.6.0",
                     "name": "Release 0.6.0",
                     "published_at": "2026-05-30T17:25:11Z",
@@ -3561,7 +3570,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 1
+            "hw_avail_open": 0
         },
         "OAM-ClimateControl": {
             "repo_url": "https://github.com/OpenKNX/OAM-ClimateControl",

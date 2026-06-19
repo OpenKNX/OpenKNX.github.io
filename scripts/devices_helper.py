@@ -23,4 +23,4 @@ class DeviceHelper:
             return self.device_name_map[hw_text]
         else:
             logging.warning(f"Unknown Device Name in '{oam}': {hw_text}")
-            return f"(???)-{hw_text}"
+            return f"{hw_text} [?]"

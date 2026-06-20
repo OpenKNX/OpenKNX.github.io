@@ -49,6 +49,7 @@
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(41):hover) tr > :nth-child(41).colHover,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(42):hover) tr > :nth-child(42).colHover,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(43):hover) tr > :nth-child(43).colHover,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(44):hover) tr > :nth-child(44).colHover,
         
         table.openknxTitleTable tbody tr:hover {
             background-color: #dfd;
@@ -94,7 +95,8 @@
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(40):hover) thead th.rotate45:nth-child(40) div span,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(41):hover) thead th.rotate45:nth-child(41) div span,
         table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(42):hover) thead th.rotate45:nth-child(42) div span,
-        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(43):hover) thead th.rotate45:nth-child(43) div span
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(43):hover) thead th.rotate45:nth-child(43) div span,
+        table.openknxTitleTable:has(tr.hoverTrigger > :nth-child(44):hover) thead th.rotate45:nth-child(44) div span
         
         {
             border-bottom: 2px solid #9f9;
@@ -146,19 +148,19 @@
         
         <col data-ofm="OFM-PresenceModule" />
         
-        <col data-ofm="OFM-ADCInput" />
+        <col data-ofm="OFM-ShutterControllerModule" />
         
-        <col data-ofm="OFM-GPIOModule" />
+        <col data-ofm="OFM-ADCInput" />
         
         <col data-ofm="OFM-InternetWeatherModule" />
         
         <col data-ofm="OFM-NetworkBridge" />
         
-        <col data-ofm="OFM-ShutterControllerModule" />
-        
         <col data-ofm="OFM-SmartHomeBridge" />
         
         <col data-ofm="OFM-Sonos" />
+        
+        <col data-ofm="OFM-StatusLED" />
         
         <col data-ofm="*special*" />
        
@@ -212,19 +214,19 @@
         
         <th class="rotate45" data-ofm="OFM-PresenceModule"><div><span><a href="/ofm/OFM-PresenceModule">OFM-PresenceModule</a></span></div></th>
         
-        <th class="rotate45" data-ofm="OFM-ADCInput"><div><span><a href="/ofm/OFM-ADCInput">OFM-ADCInput</a></span></div></th>
+        <th class="rotate45" data-ofm="OFM-ShutterControllerModule"><div><span><a href="/ofm/OFM-ShutterControllerModule">OFM-ShutterControllerModule</a></span></div></th>
         
-        <th class="rotate45" data-ofm="OFM-GPIOModule"><div><span><a href="/ofm/OFM-GPIOModule">OFM-GPIOModule</a></span></div></th>
+        <th class="rotate45" data-ofm="OFM-ADCInput"><div><span><a href="/ofm/OFM-ADCInput">OFM-ADCInput</a></span></div></th>
         
         <th class="rotate45" data-ofm="OFM-InternetWeatherModule"><div><span><a href="/ofm/OFM-InternetWeatherModule">OFM-InternetWeatherModule</a></span></div></th>
         
         <th class="rotate45" data-ofm="OFM-NetworkBridge"><div><span><a href="/ofm/OFM-NetworkBridge">OFM-NetworkBridge</a></span></div></th>
         
-        <th class="rotate45" data-ofm="OFM-ShutterControllerModule"><div><span><a href="/ofm/OFM-ShutterControllerModule">OFM-ShutterControllerModule</a></span></div></th>
-        
         <th class="rotate45" data-ofm="OFM-SmartHomeBridge"><div><span><a href="/ofm/OFM-SmartHomeBridge">OFM-SmartHomeBridge</a></span></div></th>
         
         <th class="rotate45" data-ofm="OFM-Sonos"><div><span><a href="/ofm/OFM-Sonos">OFM-Sonos</a></span></div></th>
+        
+        <th class="rotate45" data-ofm="OFM-StatusLED"><div><span><a href="/ofm/OFM-StatusLED">OFM-StatusLED</a></span></div></th>
         
         <th class="singleModules before-new-cols" data-ofm="*special*">Nur in dieser Applikation:</th>
        
@@ -254,13 +256,13 @@
         <th data-ofm="OFM-Meter" class="colHover" title="Zähler: Auswertung von Zählern"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/counter.png" /></th>
         <th data-ofm="OFM-OneWireModule" class="colHover" title="1-Wire: Kommunikation mit 1-Wire-Geräten"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-OneWireModule/refs/heads/v1/src/Baggages/Icons/vector-polyline.png" /></th>
         <th data-ofm="OFM-PresenceModule" class="colHover" title="Präsenzmelder: Virtueller Präsenzmelder"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/panorama-sphere-outline.png" /></th>
+        <th data-ofm="OFM-ShutterControllerModule" class="colHover" title="Jalousiensteuerung: Steuerung von Rollläden und Jalousien"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ShutterControllerModule/refs/heads/v1/src/Baggages/Icons/blinds-horizontal.png" /></th>
         <th data-ofm="OFM-ADCInput" class="colHover" title="Analogeingänge: Eingänge für analoge Signale"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ADCInput/refs/heads/v1/src/Baggages/Icons/alpha-v-circle-outline.png" /></th>
-        <th data-ofm="OFM-GPIOModule" class="colHover" title="">|</th>
         <th data-ofm="OFM-InternetWeatherModule" class="colHover" title="Internet Wetter: Wetterdaten von Internetdiensten"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-InternetWeatherModule/refs/heads/v1/src/Baggages/Icons/weather-partly-cloudy.png" /></th>
         <th data-ofm="OFM-NetworkBridge" class="colHover" title="">|</th>
-        <th data-ofm="OFM-ShutterControllerModule" class="colHover" title="Jalousiensteuerung: Steuerung von Rollläden und Jalousien"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-ShutterControllerModule/refs/heads/v1/src/Baggages/Icons/blinds-horizontal.png" /></th>
         <th data-ofm="OFM-SmartHomeBridge" class="colHover" title="Bridge: SmartHomeBridge"><img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/shape.png" /></th>
         <th data-ofm="OFM-Sonos" class="colHover" title="Sonos Tonquellen: Steuerung von Sonos-Lautsprechern"><img src="https://raw.githubusercontent.com/OpenKNX/OFM-Sonos/refs/heads/v1/src/Baggages/Icons/waveform.png" /></th>
+        <th data-ofm="OFM-StatusLED" class="colHover" title="">|</th>
         
         <th class="before-new-cols" data-ofm="*special*"></th>
        
@@ -315,19 +317,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -381,19 +383,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -447,19 +449,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover">&#9724;</td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover">&#9724;</td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -513,19 +515,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-ClimateControl"><span class="isPart">&#9724;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OFM-ClimateControl/refs/heads/v1/src/Baggages/Icons/home-thermometer-outline.png" title="Steuerung von Kühl-/Heizsystemen" />&nbsp;<a href="/ofm/OFM-ClimateControl">OFM-ClimateControl</a></span>
@@ -580,21 +582,22 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover">&#9724;</td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover">&#9724;</td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover">&#9724;</td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover">&#9724;</td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover">&#9724;</td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
         
+        <td data-ofm="OFM-StatusLED" class="isPart colHover">&#9724;</td>
+        
         <td class="left before-new-cols" data-ofm="*special*">
+                <span data-ofm="OFM-Feedback"><span class="isPart">&#9724;</span>&nbsp;<a href="/ofm/OFM-Feedback">OFM-Feedback</a></span>
         </td>
        
 
@@ -646,19 +649,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover">&#9724;</td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -712,19 +715,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -778,19 +781,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-SML"><span class="isPart">&#9724;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OFM-SML/refs/heads/v1/src/Baggages/Icons/meter-electric-outline.png" title="Auslesen von Smartmetern mit SML-Schnittstelle" />&nbsp;<a href="/ofm/OFM-SML">OFM-SML</a></span>
@@ -845,19 +848,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover">&#9724;</td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover">&#9724;</td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover">&#9724;</td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -911,19 +914,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-THPSensorModule"><span class="isPart">&#9724;</span>&nbsp;<a href="/ofm/OFM-THPSensorModule">OFM-THPSensorModule</a></span>
@@ -978,19 +981,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9723;</span>&nbsp;DaliModule</span>
@@ -1045,19 +1048,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-Infrared"><span class="isPart">&#9724;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OFM-Infrared/refs/heads/v1/src/Baggages/Icons/led-on.png" title="" />&nbsp;<a href="/ofm/OFM-Infrared">OFM-Infrared</a></span>
@@ -1112,19 +1115,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -1178,19 +1181,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -1244,19 +1247,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9723;</span>&nbsp;EnOcean</span>
@@ -1311,19 +1314,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -1377,19 +1380,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9723;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OAM-Aircondition/refs/heads/v1/src/Baggages/Icons/air-conditioner.png" title="Internes Modul zur Steuerung von Klimaanlagen" />&nbsp;AirconditionModule</span>
@@ -1444,19 +1447,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-Nuki"><span class="isPart">&#9724;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OFM-Nuki/refs/heads/v1/src/Baggages/Icons/lock-outline.png" title="Steuerung von bis zu 10 Nuki Smart Locks oder Nuki Openern in Bluetooth-Reichweite" />&nbsp;<a href="/ofm/OFM-Nuki">OFM-Nuki</a></span>
@@ -1511,19 +1514,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9723;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OAM-SonosNFCPlayer/refs/heads/v1dev/src/Baggages/icons/disc-player.png" title="Internes Modul zur Auswahl einer Audio-Quelle via NFC" />&nbsp;SonosNFCPlayerModule</span>
@@ -1578,19 +1581,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover">&#9724;</td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -1644,19 +1647,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover">&#9724;</td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-Homematic"><span class="isPart">&#9724;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OFM-Homematic/refs/heads/v1/src/Baggages/Icons/crop-square--square-medium.png" title="Gateway zur Anbindung von Homematic-Geräten" />&nbsp;<a href="/ofm/OFM-Homematic">OFM-Homematic</a></span>
@@ -1711,19 +1714,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover">&#9724;</td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover">&#9724;</td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -1777,19 +1780,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover">&#9724;</td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover">&#9724;</td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-EnergyPriceModule"><span class="isPart">&#9724;</span>&nbsp;<a href="/ofm/OFM-EnergyPriceModule">OFM-EnergyPriceModule</a></span>, 
@@ -1846,19 +1849,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -1912,19 +1915,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -1978,19 +1981,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9723;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/weather-partly-snowy-rainy.png" title="Internes Modul zur Nutzung der Wetterstation" />&nbsp;WN90LPModule</span>
@@ -2045,19 +2048,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-LightManager"><span class="isPart">&#9724;</span>&nbsp;<a href="/ofm/OFM-LightManager">OFM-LightManager</a></span>, 
@@ -2113,19 +2116,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9723;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OGM-Common/refs/heads/v1/src/Baggages/Icons/speaker.png" title="Internes Modul zur Soundausgabe" />&nbsp;SoundModule</span>
@@ -2180,19 +2183,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-AccessControl"><span class="isPart">&#9724;</span>&nbsp;<a href="/ofm/OFM-AccessControl">OFM-AccessControl</a></span>
@@ -2247,19 +2250,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -2313,19 +2316,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover">&#9724;</td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-TouchDisplay"><span class="isPart">&#9724;</span>&nbsp;<a href="/ofm/OFM-TouchDisplay">OFM-TouchDisplay</a></span>
@@ -2380,22 +2383,21 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
         
+        <td data-ofm="OFM-StatusLED" class="isPart colHover">&#9724;</td>
+        
         <td class="left before-new-cols" data-ofm="*special*">
-                <span data-ofm="OFM-StatusLED"><span class="isPart">&#9724;</span>&nbsp;<a href="/ofm/OFM-StatusLED">OFM-StatusLED</a></span>
         </td>
        
 
@@ -2447,19 +2449,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
         </td>
@@ -2513,21 +2515,22 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover">&#9724;</td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
         
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
+        
         <td class="left before-new-cols" data-ofm="*special*">
+                <span data-ofm="OFM-GPIOModule"><span class="isPart">&#9724;</span>&nbsp;<a href="/ofm/OFM-GPIOModule">OFM-GPIOModule</a></span>
         </td>
        
 
@@ -2579,19 +2582,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9723;</span>&nbsp;BinaryInputModule</span>
@@ -2646,19 +2649,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover">&#9724;</td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover">&#9724;</td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-HeatingActuator"><span class="isPart">&#9724;</span>&nbsp;<a href="/ofm/OFM-HeatingActuator">OFM-HeatingActuator</a></span>
@@ -2713,19 +2716,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-LedModule"><span class="isPart">&#9724;</span>&nbsp;<img src="https://raw.githubusercontent.com/OpenKNX/OFM-LedModule/refs/heads/v1/src/Baggages/Icons/ceiling-light-multiple.png" title="Multi-Kanal LED-Dimmer" />&nbsp;<a href="/ofm/OFM-LedModule">OFM-LedModule</a></span>
@@ -2780,19 +2783,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9723;</span>&nbsp;DoorControllerModule</span>
@@ -2847,19 +2850,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="" title="Internes Modul"><span class="isInternalModule">&#9723;</span>&nbsp;BinaryClockModule</span>
@@ -2914,19 +2917,19 @@
         
         <td data-ofm="OFM-PresenceModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
+        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-GPIOModule" class="isPart colHover"></td>
+        <td data-ofm="OFM-ADCInput" class="isPart colHover"></td>
         
         <td data-ofm="OFM-InternetWeatherModule" class="isPart colHover"></td>
         
         <td data-ofm="OFM-NetworkBridge" class="isPart colHover"></td>
         
-        <td data-ofm="OFM-ShutterControllerModule" class="isPart colHover"></td>
-        
         <td data-ofm="OFM-SmartHomeBridge" class="isPart colHover"></td>
         
         <td data-ofm="OFM-Sonos" class="isPart colHover"></td>
+        
+        <td data-ofm="OFM-StatusLED" class="isPart colHover"></td>
         
         <td class="left before-new-cols" data-ofm="*special*">
                 <span data-ofm="OFM-BusPowerSupply"><span class="isPart">&#9724;</span>&nbsp;<a href="/ofm/OFM-BusPowerSupply">OFM-BusPowerSupply</a></span>

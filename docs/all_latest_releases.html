@@ -25,6 +25,38 @@
 <h1>OpenKNX Applikationen - Die neusten Releases</h1>
 
 
+    <h2 class="date_new">2026-06-21</h2>
+    
+        <details>
+            <summary>
+                OAM-RaumController:
+                
+                <a href="https://github.com/OpenKNX/OAM-RaumController/releases/tag/v5.5.0">v5.5.0</a>
+            </summary>
+            <p style="white-space:pre-line;">Diese Version vom RaumController enthält primär updates der enthaltenen Module.
+
+Hier werden nur wesentliche Neuerungen aufgelistet: 
+
+- NEU: Beim Logikmodul können jetzt einzelne Kanäle gesperrt werden.
+- NEU: Beim Präsenzmelder kann der PIR-Sensor alleine verwendet werden, ohne HF-Sensor.
+- NEU: Bei der Jalousiesteuerung kann man jetzt Fassaden auswählen.
+- NEU: Als Hardware wird jetzt auch der Taster für Gira-Wippen von AB-SmartHouse unterstützt.
+
+Folgende Module wurden aktualisiert:
+
+- Netzwerk auf Version 0.6
+- Präsenzmelder auf Version 3.10
+- Jalousiesteuerung auf Version 0.8
+- Buzzer/Vibration auf Version 0.3
+- Zähler auf Version 0.6
+- Logiken auf Version 4.3
+
+Die jeweiligen Detail-Änderungen der Module kann man jeweils in deren Applikationen bzw. den zugehörigen Changelogs nachlesen.
+</p>
+        </details>
+        <h3></h3>
+    
+
     <h2 class="date_new">2026-06-18</h2>
     
         <details>
@@ -263,36 +295,6 @@ MAIL: info @ smart-mf.de</p>
 * **Wichtig:** Update auf OpenKNXproducer 4.0.1 erforderlich
 
 
-
-</p>
-        </details>
-        <h3></h3>
-    
-
-    <h2 class="">2026-03-30</h2>
-    
-        <details>
-            <summary>
-                OAM-RaumController:
-                
-                <a href="https://github.com/OpenKNX/OAM-RaumController/releases/tag/v5.4.3">v5.4.3</a>
-            </summary>
-            <p style="white-space:pre-line;">So, hier ist die nächste Version von meinem RaumController.
-
-Diesmal gibt es viele Detailverbesserungen, interne Performanceoptimierungen und wenige neue Features. Erstmal die neuen Features:
-- Es gibt ein neues Status-LED Modul. Damit kann man bei Geräten, die Status LEDs haben, diese über KO steuern. 
-- Es gibt die Möglichkeit, das default-Verhalten der Geräte-LEDs über das Logikmodul zu beeinflussen
-- Für Geräte mit einem Buzzer oder einem Vibrationsmotor (haptisches Feedback) gibt es ein Modul, mit dem man diese auch über KO steuern kann.
-
-Das bedeutet aber auch, dass all diejenigen, die mit der Sensormodul-Hardware von SmartMF über das Logikmodul den Buzzer bzw. die RGB-Led gesteuert haben, nach einem Update den Buzzer bzw. die RGB-LED neu parametrisieren müssen.
-
-Die ETS-Unterstützung ist wieder mal besser geworden! Die Programmierzeiten sind bei vollständigem Programmieren um ca, 20%, bei Partieller Programmierung um ca. 40% besser geworden. 
-Ab der ETS 6.3 wird jetzt wird in JavaScript passend zur aktuellen APDU mit dem Gerät kommuniziert. Bei älteren ETS immer mit der APDU 15. Davon profitieren erstmal das Logikmodul und das Präsenzmodul. So ist jetzt das Prüfen von Benutzerformeln (Logik) oder das Durchführen von Stichproben (HF-PM) auch mit älteren IP-Schnittstellen oder Linienkopplern oder gar mit USB-Schnittstellen möglich.
-
-Die ganzen Detailverbesserungen innerhalb der Module können in deren Applikationsbeschreibungen oder deren Release Infos gelesen werden, das würde den Rahmen hier sprengen, alle Änderungen aufzuführen. 
-Ich wurde gebeten, explizit auf die Release Info vom [ShutterController](https://github.com/OpenKNX/OFM-ShutterControllerModule/blob/v1/ReleaseNotes.md) und von den [FunctionBlocks](https://github.com/[OpenKNX/OFM-FunctionBlocks](https://github.com/OpenKNX/OFM-FunctionBlocks?tab=readme-ov-file#release-notes)?tab=readme-ov-file#release-notes) hinzuweisen.
-
-Nach dem Update in der ETS wird die Liste der ausgeblendeten Module zurückgesetzt und die ausgeblendeten Module erscheinen wieder. Sie müssen also manuell erneut ausgeblendet werden. 
 
 </p>
         </details>

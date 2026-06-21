@@ -3367,6 +3367,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "v5.5.0",
+                    "name": "v5.5.0",
+                    "published_at": "2026-06-21T15:17:40Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-RaumController/releases/tag/v5.5.0",
+                    "body": "Diese Version vom RaumController enth\u00e4lt prim\u00e4r updates der enthaltenen Module.\r\n\r\nHier werden nur wesentliche Neuerungen aufgelistet: \r\n\r\n- NEU: Beim Logikmodul k\u00f6nnen jetzt einzelne Kan\u00e4le gesperrt werden.\r\n- NEU: Beim Pr\u00e4senzmelder kann der PIR-Sensor alleine verwendet werden, ohne HF-Sensor.\r\n- NEU: Bei der Jalousiesteuerung kann man jetzt Fassaden ausw\u00e4hlen.\r\n- NEU: Als Hardware wird jetzt auch der Taster f\u00fcr Gira-Wippen von AB-SmartHouse unterst\u00fctzt.\r\n\r\nFolgende Module wurden aktualisiert:\r\n\r\n- Netzwerk auf Version 0.6\r\n- Pr\u00e4senzmelder auf Version 3.10\r\n- Jalousiesteuerung auf Version 0.8\r\n- Buzzer/Vibration auf Version 0.3\r\n- Z\u00e4hler auf Version 0.6\r\n- Logiken auf Version 4.3\r\n\r\nDie jeweiligen Detail-\u00c4nderungen der Module kann man jeweils in deren Applikationen bzw. den zugeh\u00f6rigen Changelogs nachlesen.\r\n",
+                    "assets": [
+                        {
+                            "name": "RaumController-Release-5.5.0.zip",
+                            "size": 16027865,
+                            "digest": "sha256:b050e15222a1060bad89d75cd5b0ab5e5ea9b37c42565515265504ed503a3df0",
+                            "updated_at": "2026-06-21T15:01:15Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-RaumController/releases/download/v5.5.0/RaumController-Release-5.5.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "v5.4.3",
                     "name": "v5.4.3",
                     "published_at": "2026-03-30T14:41:44Z",

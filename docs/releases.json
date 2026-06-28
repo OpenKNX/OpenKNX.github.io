@@ -2431,6 +2431,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.3",
+                    "name": "Release 0.3",
+                    "published_at": "2026-06-28T08:12:49Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SwitchActuator/releases/tag/0.3",
+                    "body": "Folgenden \u00c4nderungen in diesem Release:\r\n\r\n- ADD: Unterst\u00fctzung f\u00fcr strom-messenden REG x6 Schaltaktor von AB-SmartHouse hinzugef\u00fcgt.\r\n- ADD: Frontbedienung kann nun deaktiviert werden.\r\n- FIX: Verschiedene Bugs in Zusammenhang mit Status-Ausgaben korrigiert.",
+                    "assets": [
+                        {
+                            "name": "SwitchActuator-Release-0.3.0.zip",
+                            "size": 4671988,
+                            "digest": "sha256:d9a888ec318493b48e5f000c5350b93000d51778272d4ab391db6cd0657bbb24",
+                            "updated_at": "2026-06-28T08:12:33Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SwitchActuator/releases/download/0.3/SwitchActuator-Release-0.3.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.2",
                     "name": "Release 0.2",
                     "published_at": "2025-02-11T18:41:10Z",
@@ -2917,6 +2934,23 @@
             "archived": false,
             "description": null,
             "releases": [
+                {
+                    "prerelease": true,
+                    "tag_name": "0.13",
+                    "name": "Pre-Release 0.13",
+                    "published_at": "2026-06-28T07:08:38Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.13",
+                    "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- FIX: Status-Ausgaben erfolgten manchmal sehr h\u00e4ufig (hohe Busauslastung).\r\n- FIX: Bei Status-Ausgaben wird jetzt immer auch der letzte Wert eines Dimmvorgangs gesendet.\r\n- FIX: Einige Parameter aus der ETS wurden nicht korrekt \u00fcbernommen/ber\u00fccksichtigt.\r\n- ADD: Zentralobjekte hinzugef\u00fcgt.\r\n\r\nDar\u00fcber hinaus sind eine Vielzahl interne Verbesserungen und \u00dcberarbeitungen erhalten.\r\n\r\n_Hinweis:_\r\nAufgrund gr\u00f6\u00dferer \"Aufr\u00e4umarbeiten\" in Vorbereitung eines ersten Releases ist dieses Pre-Release-Update leider in der ETS nicht update-f\u00e4hig. W\u00e4hrend Pre-Releases kann dies hin und wieder vorkommen. Nach einem ersten, finalen Release werden alle Updates selbstverst\u00e4ndlich auch in der ETS update-f\u00e4hig bleiben.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.13.0.zip",
+                            "size": 7666993,
+                            "digest": "sha256:0e6837eac680c2c562f5a2434ee06257c3e821b906e3b3497ca5b6a58e6a9095",
+                            "updated_at": "2026-06-28T07:07:11Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.13/LedDimmerAB-Release-0.13.0.zip"
+                        }
+                    ]
+                },
                 {
                     "prerelease": true,
                     "tag_name": "0.12.1",

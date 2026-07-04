@@ -1503,6 +1503,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "0.15.0",
+                    "name": "0.15.0",
+                    "published_at": "2026-07-04T15:47:01Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/tag/0.15.0",
+                    "body": "Dieses Release bietet neue Features:\r\n\r\n- NEU: Unterst\u00fctzung von Codetastaturen (Keypads)\r\n  - [Keypad f\u00fcr GIRA](https://openknx.atlassian.net/wiki/spaces/OpenKNX/pages/7208973/AB-SmartHouse+Zutrittskontrolle) von AB-SmartHouse\r\n  - Keypad 4x3 f\u00fcr den [UP1-SEN-8x](http://device.openknx.de/UP1-SEN-8x) \r\n- NEU: Buzzer-Modul f\u00fcr akustisches Feedback beim Tastendruck bzw. Fehleingabe\r\n  - muss die Hardware unterst\u00fctzen (beim UP1-SEN-8x kann ein Buzzer angeschlossen werden)\r\n\r\n",
+                    "assets": [
+                        {
+                            "name": "AccessControl-ReleaseR503-0.15.0.zip",
+                            "size": 4811256,
+                            "digest": "sha256:cff55914463671c9ae658d93b503382f292b48d4cb37880b7922c164f7236f97",
+                            "updated_at": "2026-07-04T15:46:26Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-AccessControl/releases/download/0.15.0/AccessControl-ReleaseR503-0.15.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.10.2",
                     "name": "0.10.2",
                     "published_at": "2025-09-20T13:20:34Z",

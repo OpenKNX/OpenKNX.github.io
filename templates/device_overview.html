@@ -11,19 +11,22 @@
 #}
 
 <h2>Weitere Informationen</h2>
+{% if false %}
 <ul>
     <li><a href="">Github-Repository</a></li>
     <li><a href="">Thread im KNX-User-Forum</a></li>
     <li><a href="">Hardwaredetails</a></li>
     <li><a href="">Aufbauanleitung</a></li>
 </ul>
+{% endif %}
 
 <h2>Übersicht</h2>
+{% if false %}
 <table>
     <tbody>
         <tr>
             <th>Anbieter</th>
-            <td>OpenKNX</td>
+            <td>{# OpenKNX #}</td>
         </tr>
         <tr>
             <th>Gerätebezeichnung</th>
@@ -35,29 +38,30 @@
         </tr>
         <tr>
             <th>Status</th>
-            <td>FERTIG</td>
+            <td>{# FERTIG #}</td>
         </tr>
         <tr>
             <th>Mikrocontroller</th>
-            <td>RP2040</td>
+            <td>{# RP2040 #}</td>
         </tr>
         <tr>
             <th>Geräteplattform</th>
-            <td>REG1</td>
+            <td>{# REG1 #}</td>
         </tr>
         <tr>
-            <th>{# Spezifische Eigenschaften #}DALI-Anschlüsse</th>
+            <th>{# Spezifische Eigenschaften z.B DALI-Anschlüsse#}</th>
             <td>{# Anzahl Kanäle u.s.w. #}</td>
         </tr>
         <tr>
             <th>Verfügbarkeit</th>
-            <td>OpenKNX, BAUSATZ, PCB</td>
+            <td>{# OpenKNX, BAUSATZ, PCB #}</td>
         </tr>
         <tr>
             <th>Bezugsquelle</th>
-            <td><a href="...">...</a></td></tr>
+            <td>{# <a href="...">...</a></td> #}</tr>
     </tbody>
 </table>
+{% endif %}
 
 <h2>Nutzungsmöglichkeiten</h2>
 {% endblock %}

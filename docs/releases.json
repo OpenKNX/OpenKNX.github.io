@@ -1289,6 +1289,23 @@
             "description": null,
             "releases": [
                 {
+                    "prerelease": true,
+                    "tag_name": "2.4.0",
+                    "name": "Beta 2.4.0",
+                    "published_at": "2026-07-09T17:46:15Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/tag/2.4.0",
+                    "body": "- Module Net Brigde hinzugef\u00fcgt (Ping)\r\n- Beta Version des WebServers mit WebConsole\r\n- Fix: Garage Door (Danke an Max Arndt)",
+                    "assets": [
+                        {
+                            "name": "SmartHomeBridge-Release-2.4.0.zip",
+                            "size": 14535360,
+                            "digest": "sha256:22c71c467f51928a4ae088aaede6427e9eed880d40c8d2ebd61e603ee4b48c74",
+                            "updated_at": "2026-05-31T21:24:25Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-SmartHomeBridge/releases/download/2.4.0/SmartHomeBridge-Release-2.4.0.zip"
+                        }
+                    ]
+                },
+                {
                     "prerelease": false,
                     "tag_name": "2.1.1",
                     "name": "Release 2.1.1",

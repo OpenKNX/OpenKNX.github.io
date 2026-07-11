@@ -3674,6 +3674,20 @@
             ],
             "hw_avail_open": 0
         },
+        "OAM-LeakageSensor": {
+            "repo_url": "https://github.com/OpenKNX/OAM-LeakageSensor",
+            "archived": false,
+            "description": "Leakage Sensor",
+            "releases": [],
+            "hw_avail_open": 0
+        },
+        "OAM-GuideLight": {
+            "repo_url": "https://github.com/OpenKNX/OAM-GuideLight",
+            "archived": false,
+            "description": "Guide Light",
+            "releases": [],
+            "hw_avail_open": 0
+        },
         "OAM-ClimateControl": {
             "repo_url": "https://github.com/OpenKNX/OAM-ClimateControl",
             "archived": false,

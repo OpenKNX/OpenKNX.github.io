@@ -3678,14 +3678,50 @@
             "repo_url": "https://github.com/OpenKNX/OAM-LeakageSensor",
             "archived": false,
             "description": "Leakage Sensor",
-            "releases": [],
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1",
+                    "name": "Release 0.1",
+                    "published_at": "2026-07-11T17:24:45Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LeakageSensor/releases/tag/0.1",
+                    "body": "Initiales Release.",
+                    "assets": [
+                        {
+                            "name": "LeakageSensor-Release-0.1.0.zip",
+                            "size": 4330308,
+                            "digest": "sha256:8166c351c1505470c4731dfcc9468b684d4fe402a3a66cb9815f21f26c47420f",
+                            "updated_at": "2026-07-11T17:24:42Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LeakageSensor/releases/download/0.1/LeakageSensor-Release-0.1.0.zip"
+                        }
+                    ]
+                }
+            ],
             "hw_avail_open": 0
         },
         "OAM-GuideLight": {
             "repo_url": "https://github.com/OpenKNX/OAM-GuideLight",
             "archived": false,
             "description": "Guide Light",
-            "releases": [],
+            "releases": [
+                {
+                    "prerelease": false,
+                    "tag_name": "0.1",
+                    "name": "Release 0.1",
+                    "published_at": "2026-07-11T16:31:27Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-GuideLight/releases/tag/0.1",
+                    "body": "Initiales Release.",
+                    "assets": [
+                        {
+                            "name": "GuideLight-Release-0.1.0.zip",
+                            "size": 4689782,
+                            "digest": "sha256:0e539fa352cb703f09395c8ad3f0cf244cf6df739e948dfe626030f7ac09ea94",
+                            "updated_at": "2026-07-11T16:31:03Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-GuideLight/releases/download/0.1/GuideLight-Release-0.1.0.zip"
+                        }
+                    ]
+                }
+            ],
             "hw_avail_open": 0
         },
         "OAM-ClimateControl": {

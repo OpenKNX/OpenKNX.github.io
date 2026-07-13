@@ -56,6 +56,8 @@
     "0xA606": "OAM-HeatingActuator / HeatingActuator-Release",
     "0xA607": "OAM-LedDimmer-AB / LedDimmerAB-Release",
     "0xA608": "OAM-BusPowerSupply / BusPowerSupply-Release",
+    "0xA609": "OAM-GuideLight / GuideLight-Release",
+    "0xA60A": "OAM-LeakageSensor / LeakageSensor-Release",
     "0xAC0D": "OAM-StateEngine / StateEngine-DFA16-Release",
     "0xAC0E": "OAM-StateEngine / StateEngine",
     "0xAC50": "OAM-Homematic / HomematicGW-Release",

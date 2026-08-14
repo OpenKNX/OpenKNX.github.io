@@ -2097,6 +2097,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.0.0",
+                    "name": "1.0.0",
+                    "published_at": "2026-08-14T20:27:44Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Meter/releases/tag/1.0.0",
+                    "body": "\n*(seit 0.6.0, ver\u00f6ffentlicht am 4. Juli 2025)*\n\n### \u26a0\ufe0f Breaking Change: Anschlussbelegung beim UP1 8xSensor ge\u00e4ndert\n\nBeim **OpenKNX UP1 8xSensor** wurden die Anschl\u00fcsse **A, B und C** von\nBin\u00e4reing\u00e4ngen zu SML-Z\u00e4hleranschl\u00fcssen umgewidmet (n\u00f6tig, damit dort\nPlatz f\u00fcr Wireless M-Bus entsteht). Die verbleibenden Bin\u00e4reing\u00e4nge\nliegen jetzt auf den Anschl\u00fcssen **G und H** (4 statt vorher 5\nEing\u00e4nge). Wer an diesem Ger\u00e4t bereits Bin\u00e4reing\u00e4nge \u00fcber A/B/C\nverkabelt hat, **muss diese auf G/H umklemmen**, bevor das Update\neingespielt wird \u2014 sonst funktionieren die betroffenen Eing\u00e4nge nicht\nmehr.\n\n### Neue Ger\u00e4te\n\n- **OpenKNX REG1 868MHz-Gateway** (neu): Zwei SML-Z\u00e4hleranschl\u00fcsse plus\n  Funkempfang f\u00fcr Wireless M-Bus (Wasser-/W\u00e4rmemengenz\u00e4hler) in einem\n  Ger\u00e4t.\n- **OpenKNX UP1 8xSensor**: kann jetzt zus\u00e4tzlich Wireless-M-Bus-Z\u00e4hler\n  per Funk einlesen.\n- **OpenKNX REG1 MultiSensor**: jetzt auch als LAN- und WLAN-Variante\n  erh\u00e4ltlich (statt nur klassisch \u00fcber den KNX-Bus).\n\n### Neue Funktionen\n\n- **Wireless M-Bus**: Wasser- und W\u00e4rmemengenz\u00e4hler lassen sich jetzt\n  komplett kabellos per Funk auslesen (bis zu 9 Z\u00e4hler gleichzeitig,\n  verschl\u00fcsselte Telegramme werden automatisch entschl\u00fcsselt).\n- **Status-LEDs \u00fcberarbeitet**: Modul- und Kanal-LEDs f\u00fcr SML und\n  Wireless M-Bus zeigen jetzt nach einem einheitlichen Schema an, ob\n  alles ok ist, ein Z\u00e4hler nicht antwortet oder ein Fehler vorliegt \u2014\n  und tun das auch direkt nach einem Neustart zuverl\u00e4ssig (vorher\n  blieben sie bis zum ersten Z\u00e4hlerwert dunkel).\n- **SML-Diagnose**: \u00dcber einen einfachen Befehl l\u00e4sst sich jetzt direkt\n  am Ger\u00e4t ablesen, was ein angeschlossener Z\u00e4hler tats\u00e4chlich liefert\n  (Z\u00e4hlertyp, Tarife, verf\u00fcgbare Messwerte) \u2014 praktisch bei der\n  Inbetriebnahme, ohne vorher etwas in der ETS einstellen zu m\u00fcssen.\n- **Z\u00e4hler-Kan\u00e4le lassen sich einzeln suspendieren** (SML und Wireless\n  M-Bus), ohne die komplette Konfiguration zu ver\u00e4ndern.\n- **MQTT-Unterst\u00fctzung** f\u00fcr die LAN/WLAN-Ger\u00e4te.\n\n### Verbesserungen\n\n- SML-Empfang ist robuster gegen\u00fcber gest\u00f6rten oder unvollst\u00e4ndigen\n  Z\u00e4hlertelegrammen, der Empfangspuffer wurde vergr\u00f6\u00dfert, damit auch\n  gr\u00f6\u00dfere Telegramme sicher ankommen.\n- Z\u00e4hlerst\u00e4nde und Referenzwerte im Meter-Modul wurden an mehreren\n  Stellen genauer berechnet (u. a. Rundung, Vorzeichenbehandlung,\n  Impulsdauer-Begrenzung).\n\n### Aktualisierte Module\n\n| Modul                     | vorher | jetzt       |\n| ------------------------- | ------ | ----------- |\n| OGM-Common (Basis)        | 1.4.0  | 1.9.1       |\n| SML                       | 0.1.1  | 1.0.0       |\n| Wireless M-Bus            | \u2014      | 0.1.0 (neu) |\n| Meter                     | 0.5.0  | 1.0.0       |\n| Netzwerk                  | 0.5.0  | 0.7.0       |\n| Logikmodul                | 3.7.0  | 4.4.1       |\n| Bin\u00e4reingang              | 0.2.1  | 0.4.0       |\n| Virtuelle Taster          | 0.5.1  | 0.7.0       |\n| Konfigurationstransfer    | 0.4.0  | 0.5.0       |\n",
+                    "assets": [
+                        {
+                            "name": "MeterModule-Release-1.0.0.zip",
+                            "size": 11497735,
+                            "digest": "sha256:764361fca93d25166bac184e5af0781644abead62b2978519356c948b486db7b",
+                            "updated_at": "2026-08-14T20:27:43Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Meter/releases/download/1.0.0/MeterModule-Release-1.0.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "0.6.0",
                     "name": "0.6 Beta",
                     "published_at": "2025-07-04T21:59:12Z",
@@ -2147,7 +2164,7 @@
                     ]
                 }
             ],
-            "hw_avail_open": 7
+            "hw_avail_open": 10
         },
         "OAM-Sonos": {
             "repo_url": "https://github.com/OpenKNX/OAM-Sonos",

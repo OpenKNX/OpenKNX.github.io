@@ -3800,6 +3800,13 @@
                 }
             ],
             "hw_avail_open": 3
+        },
+        "OAM-FanControl": {
+            "repo_url": "https://github.com/OpenKNX/OAM-FanControl",
+            "archived": false,
+            "description": null,
+            "releases": [],
+            "hw_avail_open": 0
         }
     }
 }

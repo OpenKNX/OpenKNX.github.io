@@ -63,6 +63,7 @@ appConfig = OamConfig(
         "OAM-ModbusGateway",
         "OAM-Aircondition",
         "OAM-Nuki",
+        "OAM-IOHomeControl",
 
         # gateway with ip + direct hardware control
         "OAM-SonosNFCPlayer",

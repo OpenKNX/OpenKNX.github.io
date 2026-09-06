@@ -3818,6 +3818,13 @@
             ],
             "hw_avail_open": 3
         },
+        "OAM-IOHomeControl": {
+            "repo_url": "https://github.com/OpenKNX/OAM-IOHomeControl",
+            "archived": false,
+            "description": null,
+            "releases": [],
+            "hw_avail_open": 0
+        },
         "OAM-FanControl": {
             "repo_url": "https://github.com/OpenKNX/OAM-FanControl",
             "archived": false,

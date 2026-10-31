@@ -3039,6 +3039,23 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "0.13.1",
+                    "name": "Pre-Release 0.13.1",
+                    "published_at": "2026-10-31T18:53:49Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.13.1",
+                    "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- FIX: Farbszenen bei RGB-Kan\u00e4len haben die Helligkeit fast auf 0 gesetzt, Farbton- und S\u00e4ttigungsszenen wurden falsch umgerechnet.\r\n- FIX: Relatives Dimmen hat Minimum/Maximum bei wiederholten Telegrammen nie ganz erreicht (Status blieb z.B. bei 1 % oder 99 % stehen).\r\n- FIX: Helligkeitsstatus wird jetzt korrekt gerundet und meldet bei eingeschaltetem Licht nie 0 %.\r\n- FIX: Absolute Farbtemperatur hat RGB-Kan\u00e4le eingeschaltet bzw. einen laufenden Dimmvorgang unterbrochen.\r\n- FIX: Szenen \u00fcber Zentralobjekte hatten keine Wirkung.\r\n- FIX: Farbtemperaturen zwischen ca. 6500 und 6800 K wurden bei RGB-Kan\u00e4len falsch (gelblich) dargestellt.\r\n- FIX: Farbtemperatur-Status von RGB-Kan\u00e4len war bei gedimmter Helligkeit falsch.\r\n- CHANGE: Relatives Dimmen l\u00e4uft jetzt mit konstanter Geschwindigkeit und ber\u00fccksichtigt die Schrittweite des Telegramms.\r\n- CHANGE: Relative Farbtemperatur\u00e4nderung bei RGB-Kan\u00e4len funktioniert jetzt stufenlos inkl. Stopp (sprang bisher direkt auf den Endwert).\r\n- CHANGE: Berechnung des Farbtemperatur-Status von RGB-Kan\u00e4len deutlich beschleunigt.\r\n\r\n_Hinweis:_\r\nBei einem Update von 0.13 auf 0.13.1 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich. Alle Einstellungen bleiben erhalten.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.13.1.zip",
+                            "size": 7705980,
+                            "digest": "sha256:8f69b98c539be95fab4a1bac3f431c89226fc3eec62471cdc123ef5101c08cf5",
+                            "updated_at": "2026-10-31T18:53:26Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.13.1/LedDimmerAB-Release-0.13.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "0.13",
                     "name": "Pre-Release 0.13",
                     "published_at": "2026-06-28T07:08:38Z",

@@ -3395,6 +3395,23 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "0.4.0-Beta",
+                    "name": "",
+                    "published_at": "2026-10-31T14:25:29Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-REG1-Schaltaktor-4x/releases/tag/0.4.0-Beta",
+                    "body": "- Update auf die aktuelen OpenKNX Module\r\n- LED-Functions: Info-Leds konfigurierbar",
+                    "assets": [
+                        {
+                            "name": "REG1-Schaltaktor-4x-Release-0.4.0.zip",
+                            "size": 1813650,
+                            "digest": "sha256:a86e6c4f3d56ecec20874069c2e5e95c2a4f1b0f5bd25ae43fad49957d9a92b6",
+                            "updated_at": "2026-10-31T14:24:26Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-REG1-Schaltaktor-4x/releases/download/0.4.0-Beta/REG1-Schaltaktor-4x-Release-0.4.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "0.2.0-Beta",
                     "name": "",
                     "published_at": "2025-08-23T08:59:47Z",

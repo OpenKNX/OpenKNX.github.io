@@ -172,6 +172,25 @@
             <details class="">
                 <summary>
                     <small>[PRERELEASE]</small> 
+                    <a href="https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.13.2">Pre-Release 0.13.2 (0.13.2)</a>
+                </summary>
+                <p style="white-space:pre-line;">Folgenden Änderungen in diesem Pre-Release:
+
+- FIX: Beim CV UP 6CH mit Hardware-Version 2 hat Kanal A nicht funktioniert.
+- FIX: Die Anforderung des externen Netzteil-Relais wurde ohne Rückmeldung des Schaltaktors endlos wiederholt (hohe Busauslastung).
+- FIX: Das Ausschalten des externen Netzteil-Relais wurde ohne Rückmeldung wiederholt gesendet.
+- FIX: Das externe Netzteil-Relais wurde während der manuellen Bedienung über die Fronttasten ausgeschaltet.
+- CHANGE: Das Netzteil wird jetzt über die gemessene Spannung erkannt, eine Rückmeldung des Schaltaktors ist nicht mehr zwingend erforderlich (z.B. wenn das Relais beim Start bereits eingeschaltet ist).
+- CHANGE: Die Anforderung des Netzteil-Relais wird jetzt höchstens 3-mal wiederholt.
+- CHANGE: Erkennung der Hardware-Version beim CV UP 6CH robuster gemacht.
+
+_Hinweis:_
+Bei einem Update von 0.13.1 auf 0.13.2 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich. Alle Einstellungen bleiben erhalten.</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    <small>[PRERELEASE]</small> 
                     <a href="https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.13.1">Pre-Release 0.13.1 (0.13.1)</a>
                 </summary>
                 <p style="white-space:pre-line;">Folgenden Änderungen in diesem Pre-Release:

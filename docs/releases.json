@@ -3039,6 +3039,23 @@
             "releases": [
                 {
                     "prerelease": true,
+                    "tag_name": "0.13.2",
+                    "name": "Pre-Release 0.13.2",
+                    "published_at": "2026-11-01T21:18:38Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.13.2",
+                    "body": "Folgenden \u00c4nderungen in diesem Pre-Release:\r\n\r\n- FIX: Beim CV UP 6CH mit Hardware-Version 2 hat Kanal A nicht funktioniert.\r\n- FIX: Die Anforderung des externen Netzteil-Relais wurde ohne R\u00fcckmeldung des Schaltaktors endlos wiederholt (hohe Busauslastung).\r\n- FIX: Das Ausschalten des externen Netzteil-Relais wurde ohne R\u00fcckmeldung wiederholt gesendet.\r\n- FIX: Das externe Netzteil-Relais wurde w\u00e4hrend der manuellen Bedienung \u00fcber die Fronttasten ausgeschaltet.\r\n- CHANGE: Das Netzteil wird jetzt \u00fcber die gemessene Spannung erkannt, eine R\u00fcckmeldung des Schaltaktors ist nicht mehr zwingend erforderlich (z.B. wenn das Relais beim Start bereits eingeschaltet ist).\r\n- CHANGE: Die Anforderung des Netzteil-Relais wird jetzt h\u00f6chstens 3-mal wiederholt.\r\n- CHANGE: Erkennung der Hardware-Version beim CV UP 6CH robuster gemacht.\r\n\r\n_Hinweis:_\r\nBei einem Update von 0.13.1 auf 0.13.2 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich. Alle Einstellungen bleiben erhalten.",
+                    "assets": [
+                        {
+                            "name": "LedDimmerAB-Release-0.13.2.zip",
+                            "size": 7706575,
+                            "digest": "sha256:c175f4b077bc9ab518afe91b69967e8085af01d6fdcde0e26e62cadb8557f94d",
+                            "updated_at": "2026-11-01T21:18:35Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/download/0.13.2/LedDimmerAB-Release-0.13.2.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "0.13.1",
                     "name": "Pre-Release 0.13.1",
                     "published_at": "2026-10-31T18:53:49Z",

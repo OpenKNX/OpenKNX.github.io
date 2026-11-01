@@ -25,31 +25,31 @@
 <h1>OpenKNX Applikationen - Die neusten Releases</h1>
 
 
-    <h2 class="date_new">2026-10-31</h2>
+    <h2 class="date_new">2026-11-01</h2>
     
         <details>
             <summary>
                 OAM-LedDimmer-AB:
                  <small>[PRERELEASE]</small> 
-                <a href="https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.13.1">Pre-Release 0.13.1</a>
+                <a href="https://github.com/OpenKNX/OAM-LedDimmer-AB/releases/tag/0.13.2">Pre-Release 0.13.2</a>
             </summary>
             <p style="white-space:pre-line;">Folgenden Änderungen in diesem Pre-Release:
 
-- FIX: Farbszenen bei RGB-Kanälen haben die Helligkeit fast auf 0 gesetzt, Farbton- und Sättigungsszenen wurden falsch umgerechnet.
-- FIX: Relatives Dimmen hat Minimum/Maximum bei wiederholten Telegrammen nie ganz erreicht (Status blieb z.B. bei 1 % oder 99 % stehen).
-- FIX: Helligkeitsstatus wird jetzt korrekt gerundet und meldet bei eingeschaltetem Licht nie 0 %.
-- FIX: Absolute Farbtemperatur hat RGB-Kanäle eingeschaltet bzw. einen laufenden Dimmvorgang unterbrochen.
-- FIX: Szenen über Zentralobjekte hatten keine Wirkung.
-- FIX: Farbtemperaturen zwischen ca. 6500 und 6800 K wurden bei RGB-Kanälen falsch (gelblich) dargestellt.
-- FIX: Farbtemperatur-Status von RGB-Kanälen war bei gedimmter Helligkeit falsch.
-- CHANGE: Relatives Dimmen läuft jetzt mit konstanter Geschwindigkeit und berücksichtigt die Schrittweite des Telegramms.
-- CHANGE: Relative Farbtemperaturänderung bei RGB-Kanälen funktioniert jetzt stufenlos inkl. Stopp (sprang bisher direkt auf den Endwert).
-- CHANGE: Berechnung des Farbtemperatur-Status von RGB-Kanälen deutlich beschleunigt.
+- FIX: Beim CV UP 6CH mit Hardware-Version 2 hat Kanal A nicht funktioniert.
+- FIX: Die Anforderung des externen Netzteil-Relais wurde ohne Rückmeldung des Schaltaktors endlos wiederholt (hohe Busauslastung).
+- FIX: Das Ausschalten des externen Netzteil-Relais wurde ohne Rückmeldung wiederholt gesendet.
+- FIX: Das externe Netzteil-Relais wurde während der manuellen Bedienung über die Fronttasten ausgeschaltet.
+- CHANGE: Das Netzteil wird jetzt über die gemessene Spannung erkannt, eine Rückmeldung des Schaltaktors ist nicht mehr zwingend erforderlich (z.B. wenn das Relais beim Start bereits eingeschaltet ist).
+- CHANGE: Die Anforderung des Netzteil-Relais wird jetzt höchstens 3-mal wiederholt.
+- CHANGE: Erkennung der Hardware-Version beim CV UP 6CH robuster gemacht.
 
 _Hinweis:_
-Bei einem Update von 0.13 auf 0.13.1 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich. Alle Einstellungen bleiben erhalten.</p>
+Bei einem Update von 0.13.1 auf 0.13.2 muss lediglich die Firmware aktualisiert werden, in der ETS ist kein Update erforderlich. Alle Einstellungen bleiben erhalten.</p>
         </details>
         <h3></h3>
+    
+
+    <h2 class="date_new">2026-10-31</h2>
     
         <details>
             <summary>

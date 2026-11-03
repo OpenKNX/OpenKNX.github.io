@@ -2097,6 +2097,23 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "1.0.1",
+                    "name": "1.0.1",
+                    "published_at": "2026-11-02T18:54:28Z",
+                    "html_url": "https://github.com/OpenKNX/OAM-Meter/releases/tag/1.0.1",
+                    "body": "\n*(seit 1.0.0)*\n\n### Fehlerbehebungen\n\n- **OpenKNX UP1 8xSensor**: Der zweite SML-Z\u00e4hleranschluss (Sensor B)\n  wurde f\u00e4lschlich erneut an SML-Kanal A gebunden und \u00fcberschrieb dessen\n  Schnittstelle, sodass SML-Kanal B keine Daten empfing. Sensor B ist\n  jetzt korrekt an SML-Kanal B gebunden. (Danke an Vando-sketch, PR #2)\n\n- **OpenKNX REG1 MultiSensor LAN**: Die drei Bin\u00e4reing\u00e4nge\n  (6er Schraubklemme A\u2013C) funktionieren in 1.0.0 nicht \u2014 sie waren in\n  der ETS sichtbar, in der Firmware aber nicht eingebunden.\n",
+                    "assets": [
+                        {
+                            "name": "MeterModule-Release-1.0.1.zip",
+                            "size": 11502136,
+                            "digest": "sha256:2d459cd74ed683128ba6e38c8bc8723a32f9c59379333c049cb61ce1c5d43bc6",
+                            "updated_at": "2026-11-02T18:54:36Z",
+                            "browser_download_url": "https://github.com/OpenKNX/OAM-Meter/releases/download/1.0.1/MeterModule-Release-1.0.1.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": false,
                     "tag_name": "1.0.0",
                     "name": "1.0.0",
                     "published_at": "2026-08-14T20:27:44Z",

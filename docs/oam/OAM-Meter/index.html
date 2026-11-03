@@ -178,6 +178,27 @@
             <details class="latest_releases">
                 <summary>
                     
+                    <a href="https://github.com/OpenKNX/OAM-Meter/releases/tag/1.0.1">1.0.1 (1.0.1)</a>
+                </summary>
+                <p style="white-space:pre-line;">
+*(seit 1.0.0)*
+
+### Fehlerbehebungen
+
+- **OpenKNX UP1 8xSensor**: Der zweite SML-Zähleranschluss (Sensor B)
+  wurde fälschlich erneut an SML-Kanal A gebunden und überschrieb dessen
+  Schnittstelle, sodass SML-Kanal B keine Daten empfing. Sensor B ist
+  jetzt korrekt an SML-Kanal B gebunden. (Danke an Vando-sketch, PR #2)
+
+- **OpenKNX REG1 MultiSensor LAN**: Die drei Binäreingänge
+  (6er Schraubklemme A–C) funktionieren in 1.0.0 nicht — sie waren in
+  der ETS sichtbar, in der Firmware aber nicht eingebunden.
+</p>
+            </details>
+        
+            <details class="">
+                <summary>
+                    
                     <a href="https://github.com/OpenKNX/OAM-Meter/releases/tag/1.0.0">1.0.0 (1.0.0)</a>
                 </summary>
                 <p style="white-space:pre-line;">

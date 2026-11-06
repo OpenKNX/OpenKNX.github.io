@@ -1,0 +1,23 @@
+# catalog.openknx.de (zusammen mit update.php aus diesem Ordner)
+
+# nur HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Zustands- und Sperrdateien von update.php nicht ausliefern
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Abruf aus Browsern anderer Seiten (Wiki, Webseiten) erlauben
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+# devices.json kurz cachen; Bilder lange, ihre URL ändert sich mit dem Inhalt (?v=)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType application/json "access plus 10 minutes"
+    ExpiresByType image/jpeg "access plus 30 days"
+</IfModule>

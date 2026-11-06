@@ -1,0 +1,83 @@
+# Device-Registry: Gerätebilder prüfen und docs/catalog/ (devices.json, Bilder) erzeugen
+# Gerätedateien: OpenKNX/OGM-HardwareConfig (Branch v1, devices/*.json); Bilder: data/devices/img/
+# catalog.openknx.de holt docs/catalog/ selbst (scripts/catalog/webspace/update.php, Cronjob); nach einer Änderung
+# stößt diese Action den Abgleich an. Keine Zugangsdaten nötig.
+
+name: Update Device Catalog
+
+on:
+  pull_request:
+    paths:
+      - "data/devices/**"
+      - "scripts/catalog/**"
+      - ".github/workflows/update_device_catalog.yml"
+  push:
+    branches:
+      - v1
+      - v1-registry
+    paths:
+      - "data/devices/**"
+      - "scripts/catalog/**"
+      - ".github/workflows/update_device_catalog.yml"
+  repository_dispatch:
+    types: [device-registry]  # von OGM-HardwareConfig nach einem Merge in v1
+  schedule:
+    - cron: '47 */2 * * *'
+  workflow_dispatch:
+
+jobs:
+  catalog:
+    name: Bilder prüfen und Katalog erzeugen
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Checkout OGM-HardwareConfig (Device-Registry)
+        uses: actions/checkout@v6
+        with:
+          repository: OpenKNX/OGM-HardwareConfig
+          # auf v1-registry gegen den gleichnamigen Branch von OGM-HardwareConfig bauen, sonst v1
+          ref: ${{ github.ref_name == 'v1-registry' && 'v1-registry' || 'v1' }}
+          path: _registry
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: pip install Pillow
+
+      - name: Bilder prüfen
+        run: python scripts/catalog/check_images.py --registry _registry
+
+      - name: Katalog erzeugen
+        if: github.event_name != 'pull_request'
+        run: python scripts/catalog/build_catalog.py --registry _registry
+
+      - name: Commit and push changes
+        id: commit
+        if: github.event_name != 'pull_request'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add docs/catalog/
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            histlen=$(git rev-list --count HEAD)
+            git commit -m "Update ~ $histlen: Device Catalog"
+            git pull --rebase
+            git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Abgleich auf catalog.openknx.de anstoßen
+        if: steps.commit.outputs.pushed == 'true' && (github.ref_name == 'v1' || github.ref_name == 'v1-registry')
+        run: |
+          curl -fsS -m 120 https://catalog.openknx.de/update.php \
+            || echo "::warning::catalog.openknx.de nicht erreicht, der Cronjob dort holt die Änderung nach"

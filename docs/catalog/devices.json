@@ -1,0 +1,646 @@
+{
+  "OpenKnxContentType": "OpenKNX/Devices",
+  "OpenKnxFormatVersion": "v1.0.0",
+  "generated": "2026-11-09T12:22:12Z",
+  "source": "https://github.com/OpenKNX/OGM-HardwareConfig/tree/aa6e2e5d68549e918c0ff0811b11fbe76e4c46fd/devices",
+  "data": {
+    "PiPico-BCU-Connector": {
+      "name": "OpenKNX PiPico BCU Connector",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "other",
+      "formFactor": {
+        "type": "other"
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "stable",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "Der PiPico BCU Connector ist eine Adapter-Platine, die ein Raspberry Pi Pico Mikrocontroller-Board mit einer NanoBCU (oder MicroBCU) verbindet. Sie verfügt über einen KNX-Anschluss, einen Reset- und Prog-Taster sowie eine Prog-LED.",
+      "links": {
+        "source": "https://muster.ing-dom.de/Zubehoer/PiPico-BCU-Connector.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/1805071-pipico-bcu-connector",
+        "hardware": "https://github.com/OpenKNX/OpenKNX/tree/main/Hardware/OpenKNX/PiPico_BCU_Connector",
+        "wiki": "https://device.openknx.de/PiPico-BCU-Connector"
+      },
+      "image": "https://catalog.openknx.de/devices/img/PiPico-BCU-Connector.jpg?v=f9df4e11"
+    },
+    "REG1-Base-IP": {
+      "name": "OpenKNX REG1 Basismodul IP",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "universal",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "network": [
+        "lan"
+      ],
+      "ip": true,
+      "power": [
+        "dc"
+      ],
+      "status": "deprecated",
+      "availability": [
+        "opensource"
+      ],
+      "description": "KNX-IP Reiheneinbaugerät für 35mm Hutschiene. Ideale Basis für Applikationen mit hohem Datenaufkommen und ohne IO-Bedarf. Auch für Anwendung abseits KNX anwendbar.",
+      "links": {
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-Base-IP.jpg?v=8e6e3252"
+    },
+    "REG1-Base-V0": {
+      "name": "OpenKNX REG1 Basismodul V0",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "universal",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "deprecated",
+      "availability": [
+        "opensource"
+      ],
+      "description": "KNX-TP1 Reiheneinbaugerät für 35mm Hutschiene. Ideale Basis für Applikationen mit keinem oder wenig IO-Bedarf.\n1x 4Pin Sensoranschluss UART/I2C incl. 3.3V Versorgung auf steckbarer 3.5mm Schraubklemme",
+      "links": {
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1",
+        "wiki": "https://device.openknx.de/REG1-Base-V0"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-Base-V0.jpg?v=a180a55a"
+    },
+    "REG1-Base": {
+      "name": "OpenKNX REG1 Basismodul",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "universal",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "stable",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP1 Reiheneinbaugerät für 35mm Hutschiene. Ideale Basis für Applikationen mit keinem oder wenig IO-Bedarf.\n1x 4Pin Sensoranschluss UART/I2C incl. 3.3V Versorgung auf steckbarer 3.5mm Schraubklemme",
+      "links": {
+        "source": "https://muster.ing-dom.de/KNX-Geraete/OpenKNX-REG1-Base-Komplettbausatz.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/1813112-openknx-reg1-erweiterbare-1te-hutschienenger%C3%A4te-powered-by-rp2040",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1",
+        "wiki": "https://device.openknx.de/REG1-Base"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-Base.jpg?v=b567a921"
+    },
+    "REG1-Dali": {
+      "name": "OpenKNX REG1 Dali Gateway",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "gateway",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "stable",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP Reiheneinbaugerät für 35mm Hutschiene.\nREG1-App-Dali Erweiterung für den Einsatz als KNX / Dali Gateway.",
+      "links": {
+        "source": "https://muster.ing-dom.de/KNX-Geraete/OpenKNX-REG1-Dali-Komplettbausatz.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/1914525-beta-openknx-dali-gateway-powered-by-reg1",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1",
+        "wiki": "https://device.openknx.de/REG1-Dali"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-Dali.jpg?v=20a9a742"
+    },
+    "REG1-Eth": {
+      "name": "OpenKNX REG1 LAN Gateway",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "gateway",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp",
+        "lan"
+      ],
+      "ip": true,
+      "power": [
+        "bus"
+      ],
+      "status": "stable",
+      "availability": [
+        "opensource",
+        "pcb"
+      ],
+      "description": "KNX-TP Reiheneinbaugerät für 35mm Hutschiene und REG1-App-Eth Erweiterung mit 10/100Base-T Ethernet. Komplett busversorgt. Ideale Basis für Interoperabilität zwischen KNX und IP-Welt.",
+      "links": {
+        "source": "https://muster.ing-dom.de/OpenKNX-REG1/",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/1917749-openknx-ip-router",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1",
+        "wiki": "https://device.openknx.de/REG1-Eth"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-Eth.jpg?v=47a7bf2d"
+    },
+    "REG1-GW-RF868M": {
+      "name": "OpenKNX REG1 868MHz-Gateway",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "gateway",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "alpha",
+      "availability": [
+        "opensource"
+      ],
+      "description": "KNX-TP1 Reiheneinbaugerät für 35mm Hutschiene mit 868MHz-Funkschnittstelle.\nWireless-M-Bus-Gateway zur Anbindung von Wasser- und Wärmemengenzählern, zusätzlich zwei SML-Schnittstellen für Stromzähler des Netzbetreibers.",
+      "links": {
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/1988477-openknx-z%C3%A4hlermodul-sml",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1",
+        "wiki": "https://device.openknx.de/REG1-GW-RF868M"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-GW-RF868M.jpg?v=2d619249"
+    },
+    "REG1-GW-RS485": {
+      "name": "OpenKNX REG1 RS485 Gateway",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "gateway",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "beta",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP1 Reiheneinbaugerät für 35mm Hutschiene mit RS485 Schnittstelle.\nRS485 / Modbus RTU Gateway - RS485 galvanisch von KNX getrennt und komplett busversorgt.\nVier isolierte Binäreingänge für potentialfreie Kontakte - z.B. S0\nI2C/UART Sensoranschluss für versch. Sensoren (u.A. SML)",
+      "links": {
+        "source": "https://muster.ing-dom.de/OpenKNX-REG1/OpenKNX-REG1-GW-RS485-Komplettbausatz.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2059817-openknx-rs485-gateway-up1-gw-rs485-und-reg1-gw-rs485",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1",
+        "wiki": "https://device.openknx.de/REG1-GW-RS485"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-GW-RS485.jpg?v=0d1d0e10"
+    },
+    "REG1-LAN-Base": {
+      "name": "OpenKNX REG1 Basismodul LAN",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "universal",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "ESP32",
+      "network": [
+        "lan"
+      ],
+      "ip": true,
+      "power": [
+        "dc"
+      ],
+      "status": "beta",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-IP Reiheneinbaugerät für 35mm Hutschiene mit 10/100Base-T Ethernet.\nIdeale Basis für Interoperabilität zwischen KNX und IP-Welt.",
+      "links": {
+        "source": "https://muster.ing-dom.de/OpenKNX-REG1/OpenKNX-REG1-LAN-Base-Komplettbausatz.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2016368-openknx-reg1-goes-esp32",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1",
+        "wiki": "https://device.openknx.de/REG1-LAN-Base"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-LAN-Base.jpg?v=48d83035"
+    },
+    "REG1-LAN-SEN-Multi": {
+      "name": "OpenKNX REG1 Multisensor LAN",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "sensor",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "ESP32",
+      "network": [
+        "lan"
+      ],
+      "ip": true,
+      "power": [
+        "dc"
+      ],
+      "status": "beta",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-IP Reiheneinbaugerät für 35mm Hutschiene mit 10/100Base-T Ethernet und Multi-Sensor Erweiterungsplatine.\n2x 4Pin Sensoranschluss UART/I2C incl. 3.3V Versorgung RJ10/RJ22\n3x galvanisch getrennte Binäreingänge für potentialfreie Kontakte (S0, Taster, Magnetkontakte etc..) auf steckbarer 3.5mm Schraubklemme",
+      "links": {
+        "source": "https://samples.ing-dom.de/produkt/openknx-reg1-lan-sen-multi-komplettbausatz/",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2112409-openknx-reg1-multisensor-lan-reg1-lan-sen-multi-reg-f%C3%BCr-div-sensoren-mit-bin%C3%A4reing%C3%A4ngen",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1",
+        "wiki": "https://device.openknx.de/REG1-LAN-SEN-Multi"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-LAN-SEN-Multi.jpg?v=50af0c7b"
+    },
+    "REG1-LAN-TP-Base": {
+      "name": "OpenKNX REG1 Basismodul LAN+TP",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "gateway",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "ESP32",
+      "network": [
+        "knx-tp",
+        "lan"
+      ],
+      "ip": true,
+      "power": [
+        "bus"
+      ],
+      "status": "beta",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP Reiheneinbaugerät für 35mm Hutschiene mit 10/100Base-T Ethernet. Komplett busversorgt. Ideale Basis für Interoperabilität zwischen KNX und IP-Welt.",
+      "links": {
+        "source": "https://samples.ing-dom.de/produkt/openknx-reg1-lan-tp-base-komplettbausatz/",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2016368-openknx-reg1-goes-esp32",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1",
+        "wiki": "https://device.openknx.de/REG1-LAN-TP-Base"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-LAN-TP-Base.jpg?v=2c2a7662"
+    },
+    "REG1-LAN-TP-Dali": {
+      "name": "OpenKNX REG1 Dali Gateway LAN+TP",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "gateway",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "ESP32",
+      "network": [
+        "knx-tp",
+        "lan"
+      ],
+      "ip": true,
+      "power": [
+        "bus"
+      ],
+      "status": "beta",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP Reiheneinbaugerät für 35mm Hutschiene mit 10/100Base-T Ethernet. Komplett busversorgt.\nMit Dali Erweiterungsplatine für den Einsatz als KNX / Dali Gateway.",
+      "links": {
+        "source": "https://muster.ing-dom.de/OpenKNX-REG1/OpenKNX-REG1-LAN-TP-Dali-Komplettbausatz.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/1914525-beta-openknx-dali-gateway-powered-by-reg1",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1",
+        "wiki": "https://device.openknx.de/REG1-LAN-TP-Dali"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-LAN-TP-Dali.jpg?v=651d61f6"
+    },
+    "REG1-SA-4xSELV": {
+      "name": "OpenKNX REG1 Schaltaktor 4xSELV",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "actuator",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "beta",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP1 Reiheneinbaugerät für 35mm Hutschiene.\n4x bistabile Wechsler-Relais (NC, NO, COM) für SELV-Stromkreise (2A bis 30VDC, 1A bis 50VAC) auf steckbarer 3.5mm Schraubklemme\n4Pin Sensoranschluss UART/I2C incl. 3.3V Versorgung auf steckbarer 3.5mm Schraubklemme",
+      "links": {
+        "source": "https://muster.ing-dom.de/KNX-Geraete/OpenKNX-REG1-SA-4xSELV-Komplettbausatz.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2007767-openknx-reg1-schaltaktor-4xselv-reg1-sa-4xselv",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1",
+        "wiki": "https://device.openknx.de/REG1-SA-4xSELV"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-SA-4xSELV.jpg?v=3905decb"
+    },
+    "REG1-SEN-Multi": {
+      "name": "OpenKNX REG1 Multisensor",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "sensor",
+      "platform": "REG1",
+      "formFactor": {
+        "type": "REG",
+        "units": 1
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "stable",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP Reiheneinbaugerät für 35mm Hutschiene und Multi-Sensor Erweiterungsplatine.\n1x 4Pin Sensoranschluss UART/I2C incl. 3.3V Versorgung auf steckbarer 3.5mm Schraubklemme\n2x 4Pin Sensoranschluss UART/I2C incl. 3.3V Versorgung RJ10/RJ22\n3x galvanisch getrennte Binäreingänge für potentialfreie Kontakte (S0, Taster, Magnetkontakte etc..) auf steckbarer 3.5mm Schraubklemme",
+      "links": {
+        "source": "https://muster.ing-dom.de/OpenKNX-REG1/OpenKNX-REG1-SEN-Multi-Komplettbausatz.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2016953-openknx-reg1-multisensor-reg1-sen-multi-reg-f%C3%BCr-div-sensoren-mit-bin%C3%A4reing%C3%A4ngen",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-REG1",
+        "wiki": "https://device.openknx.de/REG1-SEN-Multi"
+      },
+      "image": "https://catalog.openknx.de/devices/img/REG1-SEN-Multi.jpg?v=f5db924f"
+    },
+    "UP1-GW-IR": {
+      "name": "OpenKNX UP1 Infrarot Gateway",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "gateway",
+      "platform": "UP1",
+      "formFactor": {
+        "type": "UP"
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "beta",
+      "availability": [
+        "opensource"
+      ],
+      "description": "Ein Infrarot Gateway basierend auf dem OpenKNX UP1 System, welches das Senden und Empfangen von IR-Signalen unterstützt.",
+      "links": {
+        "hardware": "https://github.com/OpenKNX/OAM-InfraredGateway/tree/v1/doc/Hardware",
+        "wiki": "https://device.openknx.de/UP1-GW-IR"
+      },
+      "image": "https://catalog.openknx.de/devices/img/UP1-GW-IR.jpg?v=295f34de"
+    },
+    "UP1-GW-RS485": {
+      "name": "OpenKNX UP1 RS485 Gateway",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "gateway",
+      "platform": "UP1",
+      "formFactor": {
+        "type": "UP"
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "beta",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP1 Unterputz-Gerät mit RS485 Schnittstelle.\nRS485 / Modbus RTU Gateway - RS485 galvanisch von KNX getrennt und komplett busversorgt.\nEin isolierter Binäreingang für potentialfreie Kontakte.\nI2C Sensoranschluss für separaten Temp/Feuchtesensor.",
+      "links": {
+        "source": "https://muster.ing-dom.de/OpenKNX-UP1/OpenKNX-UP1-GW-RS485.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2059817-openknx-rs485-gateway-up1-gw-rs485-und-reg1-gw-rs485",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-UP1",
+        "wiki": "https://device.openknx.de/UP1-GW-RS485"
+      },
+      "image": "https://catalog.openknx.de/devices/img/UP1-GW-RS485.jpg?v=7ff2594a"
+    },
+    "UP1-GW-UART": {
+      "name": "OpenKNX UP1 UART Gateway",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "gateway",
+      "platform": "UP1",
+      "formFactor": {
+        "type": "UP"
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "beta",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP1 Unterputz-Gerät mit isolierter UART / Universal Schnittstelle.\nIsolierte Universal-Schnittstelle mit 1 Eingang und 2 Ausgängen, geeignet für u.A. TTL UART Kommunikation oder Neopixel.\nI2C Sensoranschluss für separaten Temp/Feuchtesensor.",
+      "links": {
+        "source": "https://muster.ing-dom.de/OpenKNX-UP1/OpenKNX-UP1-GW-UART.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2085279-openknx-up1-uart-gateway-up1-gw-uart",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-UP1",
+        "wiki": "https://device.openknx.de/UP1-GW-UART"
+      },
+      "image": "https://catalog.openknx.de/devices/img/UP1-GW-UART.jpg?v=7ff2594a"
+    },
+    "UP1-PM-HF": {
+      "name": "OpenKNX UP1 Präsenzmelder+",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "sensor",
+      "platform": "UP1",
+      "formFactor": {
+        "type": "UP"
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "stable",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP1 Unterputz-Präsenzmelder für die Montage auf 60mm UP-Dosen und Integration in 55mm Programme.\nFront: HLK-LD2420 HF/Radarsensor, VEML7700 Lichtsensor, TOF400 Entfernungsmesser für Lichtschrankenfunktion, Touch-Taste und Status-LED (RGB)\nRückseite: 4 Binäreingänge, Anschlussmöglichkeit für abgesetzten Temp/Feuchte-Sensor (z.B. SHT31)",
+      "links": {
+        "source": "https://muster.ing-dom.de/OpenKNX-UP1/OpenKNX-UP1-PM-HF.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2011772-openknx-up1-pr%C3%A4senzmelder-up1-pm-hf-neuer-pr%C3%A4senzmelder-u-a-f%C3%BCr-die-wandmontage",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-UP1",
+        "wiki": "https://device.openknx.de/UP1-PM-HF"
+      },
+      "image": "https://catalog.openknx.de/devices/img/UP1-PM-HF.jpg?v=a9461547"
+    },
+    "UP1-SEN-8x": {
+      "name": "OpenKNX UP1 8xSensor",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "sensor",
+      "platform": "UP1",
+      "formFactor": {
+        "type": "UP"
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "stable",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP1 Unterputz-Sensormodul mit 8 herausgeführten I2C-Kanälen, 3.3V und GND. Technisch sind 16 ESD-geschützte GPIOs mit optionalen PullUps auf den externen Klemmen verfügbar.",
+      "links": {
+        "source": "https://muster.ing-dom.de/KNX-Geraete/OpenKNX-UP1-SEN-8x.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/1804897-sen-up1-8xth-8fach-sensormodul-f%C3%BCr-temperatur-luftfeuchte-und-luftdrucksensoren",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-UP1",
+        "wiki": "https://device.openknx.de/UP1-SEN-8x"
+      },
+      "image": "https://catalog.openknx.de/devices/img/UP1-SEN-8x.jpg?v=885a8b15"
+    },
+    "UP1-TAS-4x": {
+      "name": "OpenKNX UP1 Taster",
+      "vendor": "OpenKNX",
+      "kind": "openknx",
+      "category": "control",
+      "platform": "UP1",
+      "formFactor": {
+        "type": "UP"
+      },
+      "mcu": "RP2040",
+      "network": [
+        "knx-tp"
+      ],
+      "ip": false,
+      "power": [
+        "bus"
+      ],
+      "status": "beta",
+      "availability": [
+        "opensource",
+        "kit",
+        "pcb"
+      ],
+      "description": "KNX-TP1 Gerät für die Montage auf 60mm UP-Dosen und Integration in 55mm Programme mit handelsüblichen Tastwippen mit oder ohne Status-LED.\nErweiterbar mit einer Taster-Extension für ein weiteres 55mm Feld mit Tastwippen (insgesamt 8 Taster und 4 Status-LED).\n2 Binäreingänge sowie I2C Sensoranschluss für separaten Temp/Feuchtesensor (z.B. SHT31).",
+      "links": {
+        "source": "https://muster.ing-dom.de/OpenKNX-UP1/OpenKNX-UP1-TAS-4x.html",
+        "forum": "https://knx-user-forum.de/forum/projektforen/openknx/2030358-openknx-4fach-taster-mit-2-rgb-statusleuchten",
+        "hardware": "https://github.com/OpenKNX/OpenKNX-UP1",
+        "wiki": "https://device.openknx.de/UP1-TAS-4x"
+      },
+      "image": "https://catalog.openknx.de/devices/img/UP1-TAS-4x.jpg?v=9cb9955d"
+    }
+  }
+}

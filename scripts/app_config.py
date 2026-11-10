@@ -69,6 +69,7 @@ appConfig = OamConfig(
         "OAM-SonosNFCPlayer",
         # gateways with ip
         "OAM-Sonos",
+        "OAM-HueGateway",
         "OAM-Homematic",
         "OAM-SmartHomeBridge",
 

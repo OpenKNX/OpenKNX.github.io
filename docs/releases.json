@@ -3910,6 +3910,13 @@
             "releases": [],
             "hw_avail_open": 0
         },
+        "OAM-HueGateway": {
+            "repo_url": "https://github.com/OpenKNX/OAM-HueGateway",
+            "archived": false,
+            "description": null,
+            "releases": [],
+            "hw_avail_open": 0
+        },
         "OAM-FanControl": {
             "repo_url": "https://github.com/OpenKNX/OAM-FanControl",
             "archived": false,

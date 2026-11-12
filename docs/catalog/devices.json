@@ -1,8 +1,8 @@
 {
   "OpenKnxContentType": "OpenKNX/Devices",
   "OpenKnxFormatVersion": "v1.0.0",
-  "generated": "2026-11-09T12:22:12Z",
-  "source": "https://github.com/OpenKNX/OGM-HardwareConfig/tree/aa6e2e5d68549e918c0ff0811b11fbe76e4c46fd/devices",
+  "generated": "2026-11-12T07:27:38Z",
+  "source": "https://github.com/OpenKNX/OGM-HardwareConfig/tree/31af680fc89206caf5787e7c34f4e74b06dbd9a3/devices",
   "data": {
     "PiPico-BCU-Connector": {
       "name": "OpenKNX PiPico BCU Connector",
@@ -23,7 +23,6 @@
       "status": "stable",
       "availability": [
         "opensource",
-        "kit",
         "pcb"
       ],
       "description": "Der PiPico BCU Connector ist eine Adapter-Platine, die ein Raspberry Pi Pico Mikrocontroller-Board mit einer NanoBCU (oder MicroBCU) verbindet. Sie verfügt über einen KNX-Anschluss, einen Reset- und Prog-Taster sowie eine Prog-LED.",
@@ -42,7 +41,7 @@
       "category": "universal",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "RP2040",
@@ -70,7 +69,7 @@
       "category": "universal",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "RP2040",
@@ -99,7 +98,7 @@
       "category": "universal",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "RP2040",
@@ -132,7 +131,7 @@
       "category": "gateway",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "RP2040",
@@ -165,7 +164,7 @@
       "category": "gateway",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "RP2040",
@@ -198,7 +197,7 @@
       "category": "gateway",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "RP2040",
@@ -228,7 +227,7 @@
       "category": "gateway",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "RP2040",
@@ -261,7 +260,7 @@
       "category": "universal",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "ESP32",
@@ -294,7 +293,7 @@
       "category": "sensor",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "ESP32",
@@ -327,7 +326,7 @@
       "category": "gateway",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "ESP32",
@@ -361,7 +360,7 @@
       "category": "gateway",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "ESP32",
@@ -395,7 +394,7 @@
       "category": "actuator",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "RP2040",
@@ -428,7 +427,7 @@
       "category": "sensor",
       "platform": "REG1",
       "formFactor": {
-        "type": "REG",
+        "type": "reg",
         "units": 1
       },
       "mcu": "RP2040",
@@ -461,7 +460,8 @@
       "category": "gateway",
       "platform": "UP1",
       "formFactor": {
-        "type": "UP"
+        "type": "up",
+        "frame": false
       },
       "mcu": "RP2040",
       "network": [
@@ -489,7 +489,8 @@
       "category": "gateway",
       "platform": "UP1",
       "formFactor": {
-        "type": "UP"
+        "type": "up",
+        "frame": false
       },
       "mcu": "RP2040",
       "network": [
@@ -521,7 +522,8 @@
       "category": "gateway",
       "platform": "UP1",
       "formFactor": {
-        "type": "UP"
+        "type": "up",
+        "frame": false
       },
       "mcu": "RP2040",
       "network": [
@@ -553,7 +555,8 @@
       "category": "sensor",
       "platform": "UP1",
       "formFactor": {
-        "type": "UP"
+        "type": "up",
+        "frame": true
       },
       "mcu": "RP2040",
       "network": [
@@ -585,7 +588,8 @@
       "category": "sensor",
       "platform": "UP1",
       "formFactor": {
-        "type": "UP"
+        "type": "up",
+        "frame": false
       },
       "mcu": "RP2040",
       "network": [
@@ -617,7 +621,8 @@
       "category": "control",
       "platform": "UP1",
       "formFactor": {
-        "type": "UP"
+        "type": "up",
+        "frame": true
       },
       "mcu": "RP2040",
       "network": [

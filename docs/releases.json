@@ -1180,11 +1180,28 @@
             "releases": [
                 {
                     "prerelease": false,
+                    "tag_name": "v0.12",
+                    "name": "v0.12",
+                    "published_at": "2026-11-14T09:37:59Z",
+                    "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/v0.12",
+                    "body": "Trotz fehlendem Tag ist dies ein **Pre-Release**.\r\n\r\nThis release has (compared to v0.11) only updated the knxprod.\r\nIf your hardware runs v0.11 you only need to import the new knxprod into the ets.\r\n\r\n- fix: Configtransfer export group settings",
+                    "assets": [
+                        {
+                            "name": "DaliGateway-Beta-0.12.0.zip",
+                            "size": 3284466,
+                            "digest": "sha256:306baccac081bb2db0fc088413a3f741683901500b8df3e9579e4afeb2d456ee",
+                            "updated_at": "2026-11-14T09:37:46Z",
+                            "browser_download_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/download/v0.12/DaliGateway-Beta-0.12.0.zip"
+                        }
+                    ]
+                },
+                {
+                    "prerelease": true,
                     "tag_name": "0.11.0",
                     "name": "v0.11.0",
                     "published_at": "2026-06-17T09:43:11Z",
                     "html_url": "https://github.com/OpenKNX/GW-REG1-Dali/releases/tag/0.11.0",
-                    "body": "Trotz fehlendem Tag ist dies ein Pre-Release\r\n\r\n- fix: ConfigTransfer works now\r\n- fix: HCL handling https://github.com/OpenKNX/OFM-Dali/pull/4\r\n- fix: pin daliMaster loop task to core 1 with elevated priority https://github.com/OpenKNX/GW-REG1-Dali/pull/20\r\n- new: webserver with webconsole",
+                    "body": "- fix: ConfigTransfer works now\r\n- fix: HCL handling https://github.com/OpenKNX/OFM-Dali/pull/4\r\n- fix: pin daliMaster loop task to core 1 with elevated priority https://github.com/OpenKNX/GW-REG1-Dali/pull/20\r\n- new: webserver with webconsole",
                     "assets": [
                         {
                             "name": "DaliGateway-Beta-0.11.0.zip",
